@@ -12,12 +12,16 @@ Some third party libraries may be linked too.
 
 ## Coq:
 
+This is basically a binary distribution of Coq, its license applies.
+
 ````
 (* The Coq Proof Assistant  /  The Coq Development Team     *)
 (* INRIA - CNRS - LIX - LRI - PPS - Copyright 1999-2015     *)
 ````
 
 ## js_of_ocaml
+
+js_of_ocaml is linked to allow dynamic cma to js compilation.
 
 ````
 (* Js_of_ocaml compiler
@@ -28,19 +32,21 @@ Some third party libraries may be linked too.
 
 ## JsCoq
 
-See JsCoq's license for more details
+See JsCoq's license for more details:
 
 ````
 License: AGPL-3+ (Parts CC-BY 3.0)
 Copyright: 2015, MINES ParisTech
 ````
 
-External parts are under their own license.
+External parts distributed with JsCoq are under their own license, see
+the JsCoq repository for more information.
 
-## Ssreflect
+# License of Coq packages:
+
+## Math-Comp
 
 ````
 (* (c) Copyright 2006-2015 Microsoft Corporation and Inria.                  *)
 (* Distributed under the terms of CeCILL-B.                                  *)
 ````
-
