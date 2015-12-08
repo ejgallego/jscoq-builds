@@ -1,5 +1,44 @@
 [
   {
+    "pkg_id": [ "mathcomp", "algebra" ],
+    "vo_files": [
+      "ssrnum.vo", "ssralg.vo", "poly.vo", "polydiv.vo", "intdiv.vo",
+      "polyXY.vo", "mxpoly.vo", "zmodp.vo", "ssrint.vo", "all_algebra.vo",
+      "interval.vo", "finalg.vo", "mxalgebra.vo", "fraction.vo", "vector.vo",
+      "matrix.vo", "ring_quotient.vo", "rat.vo"
+    ],
+    "cma_files": []
+  },
+  {
+    "pkg_id": [ "mathcomp", "fingroup" ],
+    "vo_files": [
+      "quotient.vo", "presentation.vo", "gproduct.vo", "action.vo",
+      "morphism.vo", "fingroup.vo", "automorphism.vo", "perm.vo",
+      "all_fingroup.vo"
+    ],
+    "cma_files": []
+  },
+  {
+    "pkg_id": [ "mathcomp", "solvable" ],
+    "vo_files": [
+      "sylow.vo", "gseries.vo", "extraspecial.vo", "hall.vo", "frobenius.vo",
+      "commutator.vo", "gfunctor.vo", "extremal.vo", "cyclic.vo",
+      "finmodule.vo", "alt.vo", "pgroup.vo", "abelian.vo", "all_solvable.vo",
+      "center.vo", "jordanholder.vo", "primitive_action.vo", "maximal.vo",
+      "nilpotent.vo"
+    ],
+    "cma_files": []
+  },
+  {
+    "pkg_id": [ "mathcomp", "field" ],
+    "vo_files": [
+      "algC.vo", "algnum.vo", "galois.vo", "closed_field.vo", "countalg.vo",
+      "fieldext.vo", "falgebra.vo", "separable.vo",
+      "algebraics_fundamentals.vo", "cyclotomic.vo"
+    ],
+    "cma_files": []
+  },
+  {
     "pkg_id": [ "Coq", "setoid_ring" ],
     "vo_files": [
       "BinList.vo", "Field.vo", "Ncring_tac.vo", "Field_tac.vo",
@@ -158,45 +197,6 @@
       "ZLt.vo", "ZMaxMin.vo", "ZBits.vo", "ZProperties.vo", "ZMul.vo",
       "ZAxioms.vo", "ZDivEucl.vo", "ZAddOrder.vo", "ZMulOrder.vo", "ZAdd.vo",
       "ZDivFloor.vo", "ZGcd.vo", "ZPow.vo"
-    ],
-    "cma_files": []
-  },
-  {
-    "pkg_id": [ "mathcomp", "algebra" ],
-    "vo_files": [
-      "ssrnum.vo", "ssralg.vo", "poly.vo", "polydiv.vo", "intdiv.vo",
-      "polyXY.vo", "mxpoly.vo", "zmodp.vo", "ssrint.vo", "all_algebra.vo",
-      "interval.vo", "finalg.vo", "mxalgebra.vo", "fraction.vo", "vector.vo",
-      "matrix.vo", "ring_quotient.vo", "rat.vo"
-    ],
-    "cma_files": []
-  },
-  {
-    "pkg_id": [ "mathcomp", "fingroup" ],
-    "vo_files": [
-      "quotient.vo", "presentation.vo", "gproduct.vo", "action.vo",
-      "morphism.vo", "fingroup.vo", "automorphism.vo", "perm.vo",
-      "all_fingroup.vo"
-    ],
-    "cma_files": []
-  },
-  {
-    "pkg_id": [ "mathcomp", "solvable" ],
-    "vo_files": [
-      "sylow.vo", "gseries.vo", "extraspecial.vo", "hall.vo", "frobenius.vo",
-      "commutator.vo", "gfunctor.vo", "extremal.vo", "cyclic.vo",
-      "finmodule.vo", "alt.vo", "pgroup.vo", "abelian.vo", "all_solvable.vo",
-      "center.vo", "jordanholder.vo", "primitive_action.vo", "maximal.vo",
-      "nilpotent.vo"
-    ],
-    "cma_files": []
-  },
-  {
-    "pkg_id": [ "mathcomp", "field" ],
-    "vo_files": [
-      "algC.vo", "algnum.vo", "galois.vo", "closed_field.vo", "countalg.vo",
-      "fieldext.vo", "falgebra.vo", "separable.vo",
-      "algebraics_fundamentals.vo", "cyclotomic.vo"
     ],
     "cma_files": []
   }

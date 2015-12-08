@@ -1,0 +1,16 @@
+[
+  {
+    "pkg_id": [ "SF" ],
+    "vo_files": [
+      "Typechecking.vo", "Poly.vo", "SfLib.vo", "Norm.vo", "Induction.vo",
+      "Rel.vo", "ImpParser.vo", "PropL.vo", "HoareAsLogic.vo", "StlcProp.vo",
+      "Logic.vo", "References.vo", "Basics.vo", "MoreCoq.vo",
+      "ProofObjects.vo", "Sub.vo", "Symbols.vo", "MoreLogic.vo",
+      "Smallstep.vo", "Equiv.vo", "MoreStlc.vo", "Imp.vo", "Hoare2.vo",
+      "Preface.vo", "Lists.vo", "Records.vo", "RecordSub.vo",
+      "Extraction.vo", "Stlc.vo", "Types.vo", "ImpCEvalFun.vo", "Hoare.vo",
+      "Auto.vo", "MoreInd.vo"
+    ],
+    "cma_files": []
+  }
+]

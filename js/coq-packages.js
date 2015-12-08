@@ -4,9 +4,9 @@ var PackagesManager;
 
     "use strict";
 
-    PackagesManager = function(definitions_url, base_url, panel) {
+    PackagesManager = function(pkg_list, panel) {
 
-        this.base_url = base_url;
+        this.base_url = "coq-fs/";
         this.panel    = panel;
 
         // XXX: Use a promise.
@@ -23,7 +23,7 @@ var PackagesManager;
                              });
     };
 
-    // XXX: We are going to port this to angular or some true UI thingy.
+    // XXX: We are going to port this to angular or some UI thingy.
     PackagesManager.prototype.displayDefinitions = function(req) {
 
         // Add a div for each package.
@@ -46,6 +46,8 @@ var PackagesManager;
                .text(d => d.pkg_id.join('.'));
         });
     };
+
+    // PackagesManager.prototype.sendCoqPkg = function() {
 
     // XXX: Use a closure to replace the parentNode.
     PackagesManager.prototype.downloadPackage = function() {

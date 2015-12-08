@@ -1,0 +1,36 @@
+[
+  {
+    "pkg_id": [ "Coq", "fourier" ],
+    "vo_files": [ "Fourier_util.vo", "Fourier.vo" ],
+    "cma_files": [ "fourier_plugin.cma" ]
+  },
+  {
+    "pkg_id": [ "Coq", "omega" ],
+    "vo_files": [
+      "OmegaPlugin.vo", "OmegaLemmas.vo", "PreOmega.vo", "Omega.vo",
+      "OmegaTactic.vo"
+    ],
+    "cma_files": [ "omega_plugin.cma" ]
+  },
+  {
+    "pkg_id": [ "Coq", "Reals" ],
+    "vo_files": [
+      "Rlogic.vo", "Ratan.vo", "Rbasic_fun.vo", "Rsqrt_def.vo", "DiscrR.vo",
+      "R_sqrt.vo", "MVT.vo", "Rtrigo_calc.vo", "R_Ifp.vo", "SeqSeries.vo",
+      "Rtrigo1.vo", "RiemannInt.vo", "Rtrigo_alt.vo", "Rseries.vo",
+      "Raxioms.vo", "Rtrigo.vo", "Reals.vo", "Integration.vo",
+      "Ranalysis4.vo", "Rpower.vo", "Exp_prop.vo", "Rtopology.vo",
+      "Rtrigo_reg.vo", "Machin.vo", "Sqrt_reg.vo", "Alembert.vo",
+      "RiemannInt_SF.vo", "Ranalysis5.vo", "Binomial.vo", "Rtrigo_fun.vo",
+      "PartSum.vo", "Rdefinitions.vo", "Rsigma.vo", "ROrderedType.vo",
+      "Ranalysis.vo", "ArithProp.vo", "R_sqr.vo", "SplitAbsolu.vo",
+      "Rpow_def.vo", "Rlimit.vo", "Rprod.vo", "Cauchy_prod.vo",
+      "Rcomplete.vo", "Rbase.vo", "Rfunctions.vo", "Ranalysis3.vo",
+      "Cos_rel.vo", "Cos_plus.vo", "RList.vo", "Rtrigo_def.vo",
+      "NewtonInt.vo", "Ranalysis2.vo", "Rderiv.vo", "AltSeries.vo",
+      "SplitRmult.vo", "RIneq.vo", "Ranalysis_reg.vo", "PSeries_reg.vo",
+      "Rminmax.vo", "SeqProp.vo", "Rgeom.vo", "Ranalysis1.vo"
+    ],
+    "cma_files": []
+  }
+]

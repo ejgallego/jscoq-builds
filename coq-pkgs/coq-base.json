@@ -1,0 +1,81 @@
+[
+  {
+    "pkg_id": [ "Coq", "Logic" ],
+    "vo_files": [
+      "Description.vo", "Eqdep_dec.vo", "Berardi.vo", "Hurkens.vo",
+      "FunctionalExtensionality.vo", "ProofIrrelevance.vo",
+      "IndefiniteDescription.vo", "RelationalChoice.vo",
+      "ExtensionalityFacts.vo", "ClassicalFacts.vo", "JMeq.vo",
+      "Classical_Prop.vo", "WKL.vo", "EqdepFacts.vo", "Diaconescu.vo",
+      "Epsilon.vo", "WeakFan.vo", "ClassicalUniqueChoice.vo", "FinFun.vo",
+      "ChoiceFacts.vo", "Decidable.vo", "SetIsType.vo", "Eqdep.vo",
+      "ClassicalEpsilon.vo", "ClassicalChoice.vo", "ClassicalDescription.vo",
+      "ProofIrrelevanceFacts.vo", "ConstructiveEpsilon.vo", "Classical.vo",
+      "Classical_Pred_Type.vo"
+    ],
+    "cma_files": []
+  },
+  {
+    "pkg_id": [ "Coq", "Program" ],
+    "vo_files": [
+      "Equality.vo", "Tactics.vo", "Combinators.vo", "Program.vo",
+      "Basics.vo", "Subset.vo", "Utils.vo", "Wf.vo", "Syntax.vo"
+    ],
+    "cma_files": []
+  },
+  {
+    "pkg_id": [ "Coq", "Classes" ],
+    "vo_files": [
+      "CEquivalence.vo", "SetoidClass.vo", "RelationClasses.vo",
+      "EquivDec.vo", "Equivalence.vo", "Morphisms_Relations.vo",
+      "CMorphisms.vo", "SetoidTactics.vo", "Morphisms.vo",
+      "RelationPairs.vo", "DecidableClass.vo", "Init.vo",
+      "CRelationClasses.vo", "Morphisms_Prop.vo", "SetoidDec.vo"
+    ],
+    "cma_files": []
+  },
+  {
+    "pkg_id": [ "Coq", "Structures" ],
+    "vo_files": [
+      "DecidableType.vo", "OrdersTac.vo", "OrdersLists.vo",
+      "EqualitiesFacts.vo", "OrdersEx.vo", "OrderedType.vo",
+      "OrderedTypeAlt.vo", "Equalities.vo", "OrderedTypeEx.vo", "Orders.vo",
+      "OrdersAlt.vo", "DecidableTypeEx.vo", "GenericMinMax.vo",
+      "OrdersFacts.vo"
+    ],
+    "cma_files": []
+  },
+  {
+    "pkg_id": [ "Coq", "Relations" ],
+    "vo_files": [
+      "Relation_Operators.vo", "Operators_Properties.vo", "Relations.vo",
+      "Relation_Definitions.vo"
+    ],
+    "cma_files": []
+  },
+  {
+    "pkg_id": [ "Coq", "Setoids" ],
+    "vo_files": [ "Setoid.vo" ],
+    "cma_files": []
+  },
+  {
+    "pkg_id": [ "Coq", "Lists" ],
+    "vo_files": [
+      "ListSet.vo", "ListTactics.vo", "Streams.vo", "List.vo", "ListDec.vo",
+      "SetoidPermutation.vo", "StreamMemo.vo", "SetoidList.vo"
+    ],
+    "cma_files": []
+  },
+  {
+    "pkg_id": [ "Coq", "Vectors" ],
+    "vo_files": [
+      "VectorEq.vo", "Fin.vo", "VectorSpec.vo", "VectorDef.vo", "Vector.vo"
+    ],
+    "cma_files": []
+  },
+  {
+    "pkg_id": [ "Coq", "Strings" ],
+    "vo_files": [ "String.vo", "Ascii.vo" ],
+    "cma_files": []
+  }
+]

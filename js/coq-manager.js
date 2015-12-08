@@ -31,8 +31,8 @@ function dumpCache () {
 
 var COQ_LOG_LEVELS = {
     DEBUG : 'debug',
-    INFO : 'info',
-    WARN : 'warn',
+    INFO  : 'info',
+    WARN  : 'warn',
     ERROR : 'error'
 };
 
@@ -86,7 +86,7 @@ var COQ_LOG_LEVELS = {
         d3.select(this.query)
             .append('div')
             .attr('class', level)
-            .text(text)
+            .html(text)
             .node()
             .scrollIntoView();
     };
@@ -230,9 +230,13 @@ var COQ_LOG_LEVELS = {
         this.provider = new ProviderContainer(elems);
 
         // XXX: This needs to be initalized when Coq is ready.
-        this.packages = new PackagesManager('coq_pkg.json',
-                                            'coq-fs/',
-                                             document.getElementById('packages-panel'));
+        var coq_packages = ['math-comp', 'coq-base', 'coq-arith', 'coq-reals',
+                            'coquelicot', 'flocq', 'tlc', 'sf'];
+
+    /*
+        this.packages = new PackagesManager(coq_packages,
+                                            document.getElementById('packages-panel'));
+    */
 
         this.provider.onInvalidate = stm => {
 
@@ -289,8 +293,17 @@ var COQ_LOG_LEVELS = {
 
         };
 
+        this.coq.onPkgLoad = pkg => {
+            console.log("pkg load called for: " + pkg);
+        };
+
+        this.coq.onPkgProgress = pkg => {
+            console.log("pkg progress called for: " + pkg[1] + " @ " + pkg[2].toString());
+        };
+
         // Hacks, we should refine...
         this.coq.onLog = e => {
+
             var level = COQ_LOG_LEVELS.DEBUG;
             var msg = e.toString();
 
@@ -306,13 +319,26 @@ var COQ_LOG_LEVELS = {
                 level = COQ_LOG_LEVELS.INFO;
             }
 
-            this.panel.log(msg, level);
+            // if(level != COQ_LOG_LEVELS.DEBUG) {
+                msg = msg.replace(/(?:\r\n|\r|\n)/g, '<br />');
+                this.panel.log(msg, level);
+            // }
         };
 
         this.coq.onInit = e => {
             // Enable the IDE.
             this.panel.proof.textContent += "\n===> JsCoq filesystem initalized with success!\n===> Loading additional packages in the background...";
             this.enable();
+            this.coq.add_pkg("coq-base");
+            this.coq.add_pkg("coq-arith");
+            this.coq.add_pkg("coq-reals");
+            this.coq.add_pkg("coquelicot");
+            this.coq.add_pkg("flocq");
+            this.coq.add_pkg("tlc");
+            this.coq.add_pkg("sf");
+            // this.coq.add_pkg("math-comp");
+            // this.coq.add_("coq-base");
+            // this.coq.add_("coq-arith");
         };
 
         // Initial coq state.

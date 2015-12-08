@@ -1,0 +1,91 @@
+[
+  {
+    "pkg_id": [ "Coq", "setoid_ring" ],
+    "vo_files": [
+      "Ncring_tac.vo", "Field_theory.vo", "ArithRing.vo", "Field.vo",
+      "Ncring_polynom.vo", "Ring_theory.vo", "Ring_base.vo",
+      "Ncring_initial.vo", "Ncring.vo", "Ring_polynom.vo", "Ring.vo",
+      "RealField.vo", "Rings_Z.vo", "NArithRing.vo", "Rings_Q.vo",
+      "Rings_R.vo", "Cring.vo", "Algebra_syntax.vo", "ZArithRing.vo",
+      "Integral_domain.vo", "Ring_tac.vo", "InitialRing.vo", "BinList.vo",
+      "Field_tac.vo"
+    ],
+    "cma_files": [ "newring_plugin.cma" ]
+  },
+  {
+    "pkg_id": [ "Coq", "Arith" ],
+    "vo_files": [
+      "Wf_nat.vo", "Peano_dec.vo", "Max.vo", "Arith.vo", "Even.vo",
+      "Between.vo", "Plus.vo", "Le.vo", "Euclid.vo", "Lt.vo",
+      "Compare_dec.vo", "Div2.vo", "Arith_base.vo", "Min.vo", "Factorial.vo",
+      "Gt.vo", "PeanoNat.vo", "Compare.vo", "Minus.vo", "EqNat.vo",
+      "Mult.vo", "Bool_nat.vo"
+    ],
+    "cma_files": []
+  },
+  {
+    "pkg_id": [ "Coq", "PArith" ],
+    "vo_files": [
+      "POrderedType.vo", "PArith.vo", "BinPosDef.vo", "Pnat.vo", "BinPos.vo"
+    ],
+    "cma_files": []
+  },
+  {
+    "pkg_id": [ "Coq", "NArith" ],
+    "vo_files": [
+      "Nnat.vo", "Ndist.vo", "BinNatDef.vo", "NArith.vo", "Nsqrt_def.vo",
+      "Ndec.vo", "BinNat.vo", "Ndigits.vo", "Ngcd_def.vo", "Ndiv_def.vo"
+    ],
+    "cma_files": []
+  },
+  {
+    "pkg_id": [ "Coq", "ZArith" ],
+    "vo_files": [
+      "ZArith_dec.vo", "Int.vo", "Zeven.vo", "Zdiv.vo", "Zeuclid.vo",
+      "Zquot.vo", "Zpow_facts.vo", "Wf_Z.vo", "Znat.vo", "Zabs.vo",
+      "Znumtheory.vo", "Zdigits.vo", "Zsqrt_compat.vo", "Zlogarithm.vo",
+      "Zpow_alt.vo", "auxiliary.vo", "Zmin.vo", "BinIntDef.vo", "Zbool.vo",
+      "Zcomplements.vo", "Zwf.vo", "Zminmax.vo", "BinInt.vo", "Zhints.vo",
+      "Zmax.vo", "Zcompare.vo", "ZArith_base.vo", "ZArith.vo", "Zpow_def.vo",
+      "Zmisc.vo", "Zgcd_alt.vo", "Zpower.vo", "Zorder.vo"
+    ],
+    "cma_files": []
+  },
+  {
+    "pkg_id": [ "Coq", "Numbers" ],
+    "vo_files": [
+      "NaryFunctions.vo", "NumPrelude.vo", "BinNums.vo", "BigNumPrelude.vo"
+    ],
+    "cma_files": []
+  },
+  {
+    "pkg_id": [ "Coq", "Numbers", "NatInt" ],
+    "vo_files": [
+      "NZLog.vo", "NZAdd.vo", "NZProperties.vo", "NZPow.vo", "NZSqrt.vo",
+      "NZOrder.vo", "NZMul.vo", "NZBase.vo", "NZDiv.vo", "NZMulOrder.vo",
+      "NZAxioms.vo", "NZBits.vo", "NZParity.vo", "NZDomain.vo", "NZGcd.vo",
+      "NZAddOrder.vo"
+    ],
+    "cma_files": []
+  },
+  {
+    "pkg_id": [ "Coq", "Numbers", "Natural", "Abstract" ],
+    "vo_files": [
+      "NOrder.vo", "NLog.vo", "NDefOps.vo", "NStrongRec.vo", "NAddOrder.vo",
+      "NSub.vo", "NMaxMin.vo", "NAdd.vo", "NBase.vo", "NDiv.vo", "NLcm.vo",
+      "NIso.vo", "NGcd.vo", "NAxioms.vo", "NPow.vo", "NBits.vo",
+      "NProperties.vo", "NParity.vo", "NMulOrder.vo", "NSqrt.vo"
+    ],
+    "cma_files": []
+  },
+  {
+    "pkg_id": [ "Coq", "Numbers", "Integer", "Abstract" ],
+    "vo_files": [
+      "ZAxioms.vo", "ZPow.vo", "ZMulOrder.vo", "ZBase.vo", "ZGcd.vo",
+      "ZDivEucl.vo", "ZMul.vo", "ZProperties.vo", "ZSgnAbs.vo",
+      "ZDivFloor.vo", "ZMaxMin.vo", "ZDivTrunc.vo", "ZParity.vo", "ZLt.vo",
+      "ZAddOrder.vo", "ZBits.vo", "ZLcm.vo", "ZAdd.vo"
+    ],
+    "cma_files": []
+  }
+]
