@@ -16,6 +16,7 @@ function get_build_name {
   COQH=`git --git-dir ${COQ_DIR}/.git log --pretty=format:"%h" -n 1`
   JSCOQH=`git --git-dir ${JSCOQ_DIR}/.git log --pretty=format:"%h" -n 1`
   echo "Build: $JSCOQH/$COQH"
+  echo
 }
 
 get_build_name
