@@ -44,9 +44,9 @@ Copyright: 2015, MINES ParisTech
 External parts distributed with JsCoq are under their own license, see
 the JsCoq repository for more information.
 
-# License of Coq addons packages we distribute:
+## License of Coq addons packages we distribute:
 
-## Math-Comp
+### Math-Comp
 
 https://github.com/math-comp/math-comp
 
@@ -55,7 +55,7 @@ https://github.com/math-comp/math-comp
 (* Distributed under the terms of CeCILL-B.                                  *)
 ````
 
-## Coquelicot
+### Coquelicot
 
 http://coquelicot.saclay.inria.fr/
 
@@ -68,7 +68,7 @@ License as published by the Free Software Foundation; either
 version 3 of the License, or (at your option) any later version.
 ````
 
-## Flocq
+### Flocq
 
 http://flocq.gforge.inria.fr/
 
@@ -81,7 +81,7 @@ License as published by the Free Software Foundation; either
 version 3 of the License, or (at your option) any later version.
 ````
 
-## TLC
+### TLC
 
 From http://www.chargueraud.org/softs/tlc/
 
@@ -91,7 +91,7 @@ From http://www.chargueraud.org/softs/tlc/
 % CeCILL B license (the French equivalent of the BSD license).
 ````
 
-## Software Foundations
+### Software Foundations
 
 From https://www.cis.upenn.edu/~bcpierce/sf/
 
