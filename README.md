@@ -116,3 +116,47 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ````
+
+### CPDT
+
+Most of it is non-free but distributable. We include here only the
+free files:
+
+* `CpdtTactics.v`
+* `MoreSpecif.v`
+* `DepList.v`
+
+````
+~~~~~~~~~~~
+BSD LICENSE
+~~~~~~~~~~~
+
+Copyright (c) 2006-2013, Adam Chlipala
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+- Redistributions of source code must retain the above copyright notice,
+  this list of conditions and the following disclaimer.
+- Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+- The names of contributors may not be used to endorse or promote products
+  derived from this software without specific prior written permission.
+ it here verbatim for demonstration purposes.
+````
+
+The rest of CPDT is CC-BY-NC-ND, so at some point we could consider
+shipping it too.
+
+````
+(* Copyright (c) 2008-2012, 2015, Adam Chlipala
+ *
+ * This work is licensed under a
+ * Creative Commons Attribution-Noncommercial-No Derivative Works 3.0
+ * Unported License.
+ * The license text is available at:
+ *   http://creativecommons.org/licenses/by-nc-nd/3.0/
+ *)
+````

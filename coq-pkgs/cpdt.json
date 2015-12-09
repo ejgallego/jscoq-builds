@@ -1,0 +1,7 @@
+[
+  {
+    "pkg_id": [ "Cpdt" ],
+    "vo_files": [ "MoreSpecif.vo", "CpdtTactics.vo" ],
+    "cma_files": []
+  }
+]
