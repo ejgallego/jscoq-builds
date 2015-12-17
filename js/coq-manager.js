@@ -151,7 +151,7 @@ var COQ_LOG_LEVELS = {
             cm.editor.on('focus', evt => { this.currentFocus = cm; });
 
             // Track invalidate
-            cm.onInvalidate = (smt) => { this.onInvalidate(smt); };
+            cm.onInvalidate = smt => { this.onInvalidate(smt); };
 
             // XXX: We use a strong assumption for now: the cursor is
             // at the invalid region, so we just do goCursor().
@@ -163,34 +163,38 @@ var COQ_LOG_LEVELS = {
 
     // Get the next candidate and mark it.
     ProviderContainer.prototype.getNext = function(prev) {
+
         var spr, next;
-        // First element
+
+        // If we have no previous element start with the first
+        // snippet, else get the current one.
         if (!prev) {
             spr  = this.snippets[0];
             next = spr.getNext(null);
+        } else {
+            spr  = prev.sp;
+            next = spr.getNext(prev);
+        }
+
+        // We got a snippet!
+        if (next) {
             next.sp = spr;
             return next;
         } else {
-            // Try next on the current snippet.
-            spr  = prev.sp;
-            next = spr.getNext(prev);
-
-            if (next) {
-                next.sp = spr;
-                return next;
-            } else {
-                // go to next snippet.
-                var idx = this.snippets.indexOf(spr);
-                if (idx >= this.snippets.length - 1) {
-                    // No next snippet.
-                    return null;
-                } else {
-                    spr  = this.snippets[idx+1];
-                    next = spr.getNext(null);
+            // Try the next snippet.
+            var idx = this.snippets.indexOf(spr);
+            while (idx < this.snippets.length - 1) {
+                spr  = this.snippets[idx+1];
+                next = spr.getNext(null);
+                if (next) {
                     next.sp = spr;
                     return next;
+                } else {
+                    idx = this.snippets.indexOf(spr);
                 }
-            }
+            } // while
+            // No next snippet :( !
+            return null;
         }
     };
 
@@ -209,9 +213,6 @@ var COQ_LOG_LEVELS = {
     ProviderContainer.prototype.getAtPoint = function() {
         return this.currentFocus.getAtPoint();
     };
-
-
-
 
     /***********************************************************************/
     /* CoqManager coordinates the coq code objects, the panel, and the coq */
@@ -402,7 +403,7 @@ var COQ_LOG_LEVELS = {
                 break;
 
             case 'down' :
-                this.goNext();
+                this.goNext(true);
                 break;
         }
     };
@@ -439,7 +440,7 @@ var COQ_LOG_LEVELS = {
     };
 
     // Return if we had success.
-    CoqManager.prototype.goNext = function () {
+    CoqManager.prototype.goNext = function (update_focus) {
 
         var next = this.provider.getNext(this.sentences.last());
 
@@ -454,6 +455,11 @@ var COQ_LOG_LEVELS = {
             this.provider.mark(next, "processing");
         }
 
+        // We focus the new snippet.
+        if(update_focus) {
+            this.currentFocus = next.sp;
+            this.currentFocus.focus();
+        }
         // We should be fully event driven here...
 
         // Two things can happen: a parsing error (thus we will never get a sid),
@@ -524,13 +530,13 @@ var COQ_LOG_LEVELS = {
                 this.panel.show();
             } else { // We need to go next!
                 console.log("Schedule goNext!");
-                if (this.goNext()) {
+                if (this.goNext(false)) {
                     setTimeout(() => { this.goCursor(); }, 100);
                 }
             }
         } else {
             console.log("No cur at point! Trying a heuristic");
-            if (this.goNext()) {
+            if (this.goNext(false)) {
                 setTimeout(() => { this.goCursor(); }, 50);
             }
         }

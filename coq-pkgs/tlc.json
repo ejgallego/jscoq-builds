@@ -11,7 +11,7 @@
       "LibTactics.vo", "LibFixDemos.vo", "LibBag.vo", "LibStruct.vo",
       "LibInt.vo", "LibOrder.vo", "LibSum.vo", "LibCore.vo", "LibUnit.vo",
       "LibBool.vo", "LibTacticsDemos.vo", "LibPrelude.vo", "LibMin.vo",
-      "LibEnv.vo", "LibList.vo", "LibListSorted.vo", "LibHeap.vo"
+      "LibEnv.vo", "LibList.vo", "LibListSorted.vo"
     ],
     "cma_files": []
   }
