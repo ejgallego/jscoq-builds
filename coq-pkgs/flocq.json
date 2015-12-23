@@ -7,10 +7,10 @@
   {
     "pkg_id": [ "Flocq", "Core" ],
     "vo_files": [
-      "Fcore_float_prop.vo", "Fcore_FLX.vo", "Fcore_rnd.vo", "Fcore_defs.vo",
-      "Fcore_digits.vo", "Fcore_rnd_ne.vo", "Fcore_FTZ.vo",
-      "Fcore_generic_fmt.vo", "Fcore_FLT.vo", "Fcore_Zaux.vo",
-      "Fcore_Raux.vo", "Fcore.vo", "Fcore_FIX.vo", "Fcore_ulp.vo"
+      "Fcore.vo", "Fcore_Raux.vo", "Fcore_defs.vo", "Fcore_FLT.vo",
+      "Fcore_ulp.vo", "Fcore_FTZ.vo", "Fcore_FIX.vo", "Fcore_rnd.vo",
+      "Fcore_generic_fmt.vo", "Fcore_digits.vo", "Fcore_rnd_ne.vo",
+      "Fcore_float_prop.vo", "Fcore_Zaux.vo", "Fcore_FLX.vo"
     ],
     "cma_files": []
   }

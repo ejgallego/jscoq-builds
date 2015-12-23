@@ -2,52 +2,52 @@
   {
     "pkg_id": [ "Coq", "setoid_ring" ],
     "vo_files": [
-      "BinList.vo", "Field.vo", "Ncring_tac.vo", "Field_tac.vo",
-      "InitialRing.vo", "Ring.vo", "Rings_R.vo", "ArithRing.vo",
-      "Ring_theory.vo", "Ring_base.vo", "Rings_Z.vo", "Rings_Q.vo",
-      "Ncring_initial.vo", "Integral_domain.vo", "Ncring_polynom.vo",
-      "Algebra_syntax.vo", "RealField.vo", "Cring.vo", "Ncring.vo",
-      "ZArithRing.vo", "Field_theory.vo", "NArithRing.vo", "Ring_tac.vo",
-      "Ring_polynom.vo"
+      "Ncring_tac.vo", "Field_theory.vo", "ArithRing.vo", "Field.vo",
+      "Ncring_polynom.vo", "Ring_theory.vo", "Ring_base.vo",
+      "Ncring_initial.vo", "Ncring.vo", "Ring_polynom.vo", "Ring.vo",
+      "RealField.vo", "Rings_Z.vo", "NArithRing.vo", "Rings_Q.vo",
+      "Rings_R.vo", "Cring.vo", "Algebra_syntax.vo", "ZArithRing.vo",
+      "Integral_domain.vo", "Ring_tac.vo", "InitialRing.vo", "BinList.vo",
+      "Field_tac.vo"
     ],
     "cma_files": [ "newring_plugin.cma" ]
   },
   {
     "pkg_id": [ "Coq", "Arith" ],
     "vo_files": [
-      "Le.vo", "Plus.vo", "Bool_nat.vo", "Even.vo", "Factorial.vo",
-      "Wf_nat.vo", "Max.vo", "Lt.vo", "Between.vo", "Arith_base.vo",
-      "Min.vo", "Minus.vo", "PeanoNat.vo", "Arith.vo", "Div2.vo", "EqNat.vo",
-      "Mult.vo", "Peano_dec.vo", "Gt.vo", "Euclid.vo", "Compare_dec.vo",
-      "Compare.vo"
+      "Wf_nat.vo", "Peano_dec.vo", "Max.vo", "Arith.vo", "Even.vo",
+      "Between.vo", "Plus.vo", "Le.vo", "Euclid.vo", "Lt.vo",
+      "Compare_dec.vo", "Div2.vo", "Arith_base.vo", "Min.vo", "Factorial.vo",
+      "Gt.vo", "PeanoNat.vo", "Compare.vo", "Minus.vo", "EqNat.vo",
+      "Mult.vo", "Bool_nat.vo"
     ],
     "cma_files": []
   },
   {
     "pkg_id": [ "Coq", "PArith" ],
     "vo_files": [
-      "POrderedType.vo", "BinPosDef.vo", "Pnat.vo", "BinPos.vo", "PArith.vo"
+      "POrderedType.vo", "PArith.vo", "BinPosDef.vo", "Pnat.vo", "BinPos.vo"
     ],
     "cma_files": []
   },
   {
     "pkg_id": [ "Coq", "NArith" ],
     "vo_files": [
-      "Nsqrt_def.vo", "Ndist.vo", "Ndigits.vo", "Ndec.vo", "BinNat.vo",
-      "Nnat.vo", "Ndiv_def.vo", "BinNatDef.vo", "NArith.vo", "Ngcd_def.vo"
+      "Nnat.vo", "Ndist.vo", "BinNatDef.vo", "NArith.vo", "Nsqrt_def.vo",
+      "Ndec.vo", "BinNat.vo", "Ndigits.vo", "Ngcd_def.vo", "Ndiv_def.vo"
     ],
     "cma_files": []
   },
   {
     "pkg_id": [ "Coq", "ZArith" ],
     "vo_files": [
-      "Zpow_facts.vo", "ZArith_dec.vo", "Zpow_def.vo", "Zdiv.vo", "Zmisc.vo",
-      "BinInt.vo", "Zmax.vo", "Zminmax.vo", "Zsqrt_compat.vo",
-      "BinIntDef.vo", "Znat.vo", "Zgcd_alt.vo", "Zpow_alt.vo", "Zorder.vo",
-      "Zcomplements.vo", "Zcompare.vo", "ZArith_base.vo", "auxiliary.vo",
-      "ZArith.vo", "Int.vo", "Zeven.vo", "Zpower.vo", "Znumtheory.vo",
-      "Zabs.vo", "Zwf.vo", "Zbool.vo", "Zhints.vo", "Zquot.vo",
-      "Zlogarithm.vo", "Zeuclid.vo", "Wf_Z.vo", "Zdigits.vo", "Zmin.vo"
+      "ZArith_dec.vo", "Int.vo", "Zeven.vo", "Zdiv.vo", "Zeuclid.vo",
+      "Zquot.vo", "Zpow_facts.vo", "Wf_Z.vo", "Znat.vo", "Zabs.vo",
+      "Znumtheory.vo", "Zdigits.vo", "Zsqrt_compat.vo", "Zlogarithm.vo",
+      "Zpow_alt.vo", "auxiliary.vo", "Zmin.vo", "BinIntDef.vo", "Zbool.vo",
+      "Zcomplements.vo", "Zwf.vo", "Zminmax.vo", "BinInt.vo", "Zhints.vo",
+      "Zmax.vo", "Zcompare.vo", "ZArith_base.vo", "ZArith.vo", "Zpow_def.vo",
+      "Zmisc.vo", "Zgcd_alt.vo", "Zpower.vo", "Zorder.vo"
     ],
     "cma_files": []
   },
@@ -61,30 +61,30 @@
   {
     "pkg_id": [ "Coq", "Numbers", "NatInt" ],
     "vo_files": [
-      "NZProperties.vo", "NZGcd.vo", "NZPow.vo", "NZMul.vo", "NZDiv.vo",
-      "NZOrder.vo", "NZAddOrder.vo", "NZBase.vo", "NZSqrt.vo", "NZAxioms.vo",
-      "NZAdd.vo", "NZLog.vo", "NZParity.vo", "NZMulOrder.vo", "NZDomain.vo",
-      "NZBits.vo"
+      "NZLog.vo", "NZAdd.vo", "NZProperties.vo", "NZPow.vo", "NZSqrt.vo",
+      "NZOrder.vo", "NZMul.vo", "NZBase.vo", "NZDiv.vo", "NZMulOrder.vo",
+      "NZAxioms.vo", "NZBits.vo", "NZParity.vo", "NZDomain.vo", "NZGcd.vo",
+      "NZAddOrder.vo"
     ],
     "cma_files": []
   },
   {
     "pkg_id": [ "Coq", "Numbers", "Natural", "Abstract" ],
     "vo_files": [
-      "NAddOrder.vo", "NOrder.vo", "NLcm.vo", "NSub.vo", "NAxioms.vo",
-      "NProperties.vo", "NMaxMin.vo", "NIso.vo", "NSqrt.vo", "NParity.vo",
-      "NGcd.vo", "NBase.vo", "NBits.vo", "NAdd.vo", "NMulOrder.vo",
-      "NLog.vo", "NDiv.vo", "NDefOps.vo", "NPow.vo", "NStrongRec.vo"
+      "NLog.vo", "NDefOps.vo", "NStrongRec.vo", "NAddOrder.vo", "NSub.vo",
+      "NMaxMin.vo", "NAdd.vo", "NBase.vo", "NDiv.vo", "NLcm.vo", "NIso.vo",
+      "NGcd.vo", "NAxioms.vo", "NPow.vo", "NBits.vo", "NProperties.vo",
+      "NParity.vo", "NMulOrder.vo", "NSqrt.vo"
     ],
     "cma_files": []
   },
   {
     "pkg_id": [ "Coq", "Numbers", "Integer", "Abstract" ],
     "vo_files": [
-      "ZSgnAbs.vo", "ZBase.vo", "ZParity.vo", "ZLcm.vo", "ZDivTrunc.vo",
-      "ZLt.vo", "ZMaxMin.vo", "ZBits.vo", "ZProperties.vo", "ZMul.vo",
-      "ZAxioms.vo", "ZDivEucl.vo", "ZAddOrder.vo", "ZMulOrder.vo", "ZAdd.vo",
-      "ZDivFloor.vo", "ZGcd.vo", "ZPow.vo"
+      "ZAxioms.vo", "ZPow.vo", "ZMulOrder.vo", "ZBase.vo", "ZGcd.vo",
+      "ZDivEucl.vo", "ZMul.vo", "ZProperties.vo", "ZSgnAbs.vo",
+      "ZDivFloor.vo", "ZMaxMin.vo", "ZDivTrunc.vo", "ZParity.vo", "ZLt.vo",
+      "ZAddOrder.vo", "ZBits.vo", "ZLcm.vo", "ZAdd.vo"
     ],
     "cma_files": []
   }

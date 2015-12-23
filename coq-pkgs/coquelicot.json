@@ -2,12 +2,12 @@
   {
     "pkg_id": [ "Coquelicot" ],
     "vo_files": [
-      "Equiv.vo", "Seq_fct.vo", "RInt_analysis.vo", "SF_seq.vo",
-      "Derive_2d.vo", "Coquelicot.vo", "KHInt.vo", "Markov.vo", "PSeries.vo",
-      "Continuity.vo", "Complex.vo", "RInt.vo", "Rbar.vo", "RInt_gen.vo",
-      "Lim_seq.vo", "AutoDerive.vo", "Compactness.vo", "Lub.vo",
-      "ElemFct.vo", "Series.vo", "Iter.vo", "Hierarchy.vo",
-      "Rcomplements.vo", "Derive.vo"
+      "ElemFct.vo", "KHInt.vo", "SF_seq.vo", "Lim_seq.vo", "Complex.vo",
+      "Series.vo", "Compactness.vo", "Coquelicot.vo", "Derive.vo",
+      "Markov.vo", "RInt.vo", "RInt_gen.vo", "Iter.vo", "Equiv.vo",
+      "RInt_analysis.vo", "Continuity.vo", "Seq_fct.vo", "Lub.vo",
+      "Derive_2d.vo", "Hierarchy.vo", "AutoDerive.vo", "Rcomplements.vo",
+      "Rbar.vo", "PSeries.vo"
     ],
     "cma_files": []
   }
