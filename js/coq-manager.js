@@ -251,10 +251,7 @@ var COQ_LOG_LEVELS = {
         // Setup our providers of Coq statements.
         this.provider = new ProviderContainer(elems);
 
-    /*
-        this.packages = new PackagesManager(coq_packages,
-                                            document.getElementById('packages-panel'));
-    */
+        this.packages = new PackagesManager(document.getElementById('packages-panel'));
 
         this.provider.onInvalidate = stm => {
 
