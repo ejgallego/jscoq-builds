@@ -1,0 +1,164 @@
+--- js/coq-packages.js
++++ js/coq-packages.js
+@@ -4,15 +4,13 @@ var PackagesManager;
+ 
+     "use strict";
+ 
+-    PackagesManager = function(pkg_list, panel) {
+-
+-        this.base_url = "coq-fs/";
+-        this.panel    = panel;
++    PackagesManager = function(panel) {
++        this.panel = panel;
+ 
+         // XXX: Use a promise.
+-        // Initialize from definitions_url
++        var package_index_url = 'packages-index.json';
+         var req = new XMLHttpRequest();
+-        req.open('GET', definitions_url);
++        req.open('GET', package_index_url);
+         req.send(null);
+ 
+         req.addEventListener('readystatechange',
+@@ -25,54 +23,36 @@ var PackagesManager;
+ 
+     // XXX: We are going to port this to angular or some UI thingy.
+     PackagesManager.prototype.displayDefinitions = function(req) {
+-
+-        // Add a div for each package.
+         var rows = d3.select(this.panel).selectAll('div')
+-                     .data(JSON.parse(req.responseText))
+-                     .enter()
+-                     .append('div');
++            .data(JSON.parse(req.responseText))
++            .enter()
++            .append('div');
+ 
+-        // Build the package UI for each DIV:
+         var self = this;
+-        rows.each(function (rdiv) {
+-
++        rows.each(function () {
+             var row = d3.select(this);
+-
+             row.append('img')
+-               .attr('src', 'images/dl.png')
+-               .on('click', () => {self.downloadPackage();});
++                .attr('src', 'images/dl.png')
++                .on('click', () => {self.sendCoqPkg();});
+ 
+             row.append('span')
+-               .text(d => d.pkg_id.join('.'));
++                .text(d => d.label);
+         });
+     };
+ 
+-    // PackagesManager.prototype.sendCoqPkg = function() {
+-
+-    // XXX: Use a closure to replace the parentNode.
+-    PackagesManager.prototype.downloadPackage = function() {
+-        var row = d3.select(d3.event.target.parentNode);
+-        var dl  = new PackageDowloader(this.base_url, row);
+-        dl.download();
++     PackagesManager.prototype.sendCoqPkg = function() {
++         var row = d3.select(d3.event.target.parentNode);
++         if(this.dl && this.dl.progress !== 1)
++             return; // hack to avoid parallel downloads
++         this.dl  = new PackageDowloader(row);
++         this.dl.download();
+     };
+ 
+-    var PackageDowloader = function(base_url, row) {
+-        this.base_url = base_url;
++    var PackageDowloader = function(row) {
+         this.row = row;
+         this.bar = null;
+         this.egg = null;
+-
+-        var pkg_info = row.datum();
+-        var pkg_base_url = base_url + pkg_info.pkg_id.join('_') + '/';
+-        this.urls = [];
+-
+-        // Add all the urls to the task list.
+-        pkg_info.vo_files.forEach(f => this.urls.push(pkg_base_url + f));
+-        pkg_info.cma_files.forEach(f => this.urls.push(pkg_base_url + f));
+-
+-        // Init progress parameters.
+-        this.steps_cpt = this.urls.length;
+-        this.steps_done = 0;
++        this.pkg_name = row.datum().name;
+         this.progress = 0; // percent
+     };
+ 
+@@ -88,46 +68,40 @@ var PackagesManager;
+             .attr('src', 'images/egg.png')
+             .attr('class', 'progress-egg');
+ 
+-        // XXX: This should call the Coq method.
+-        this.downloadNext();
+-    };
+-
+-    PackageDowloader.prototype.downloadNext = function() {
+-
+-        var url = this.urls.shift();
+-        if(!url)
+-            return this.finishDownload();
+-
++        var pkg_json_url = 'coq-pkgs/' + this.pkg_name + '.json';
+         var req = new XMLHttpRequest();
+-        req.addEventListener('progress', evt => this.onFileDlProgress(evt));
+-        req.addEventListener('load',     evt => this.onFileDlFinished(evt));
+-        req.open('GET', url);
++        req.open('GET', pkg_json_url);
++        req.onreadystatechange = () => {
++            if (req.readyState === 4) {
++                if (req.status === 200)
++                    this._download(JSON.parse(req.responseText));
++                // XXX by design we could not access CoqPanel.log
++                // TODO: else log error message
++            }
++        };
+         req.send(null);
+     };
+ 
+-    // Event called for a progress report.
+-    PackageDowloader.prototype.onFileDlProgress = function(evt) {
+-        //console.log(evt);
+-        this.progress = (this.steps_done / this.steps_cpt +
+-                         evt.loaded / evt.total / this.steps_cpt) * 100;
+-        this.updateProgress();
+-    };
+-
+-    // Event called for a finished report.
+-    // Main event to call from Coq.
+-    PackageDowloader.prototype.onFileDlFinished = function(evt) {
+-        //console.log(evt);
+-        this.steps_done++;
+-        this.progress = this.steps_done / this.steps_cpt * 100;
+-        this.updateProgress();
+-        this.downloadNext();
++    PackageDowloader.prototype._download = function(json) {
++        var files_total_length = 0;
++        var files_loaded_cpt = 0;
++        for(var i=0 ; i<json.length ; i++)
++            files_total_length += json[i].vo_files.length + json[i].cma_files.length;
++
++        jsCoq.onPkgProgress = (evt) => {
++            this.progress = ++files_loaded_cpt / files_total_length;
++            this.updateProgress();
++            if (files_loaded_cpt === files_total_length)
++                this.finishDownload();
++        };
++        jsCoq.add_pkg(this.pkg_name);
+     };
+ 
+     // UI thingy
+     PackageDowloader.prototype.updateProgress = function() {
+-        var angle = (this.progress / 100 * 360 * 15) % 360;
++        var angle = (this.progress * 360 * 15) % 360;
+         this.egg.style('transform', 'rotate(' + angle + 'deg)');
+-        this.bar.style('width', this.progress + '%');
++        this.bar.style('width', this.progress * 100 + '%');
+     };
+ 
+     // Mark the download as done.
