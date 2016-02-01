@@ -338,18 +338,24 @@ var COQ_LOG_LEVELS = {
                 level = COQ_LOG_LEVELS.ERROR;
                 msg = msg.replace(/^.*ErrorMsg:/, '');
             }
+            else if (msg.indexOf("pre-loading") != -1) {
+                level = COQ_LOG_LEVELS.INFO;
+            }
+            else if (msg.indexOf("stderr:") != -1) {
+                level = COQ_LOG_LEVELS.WARN;
+            }
+            else if (msg.indexOf("stdout:") != -1) {
+                level = COQ_LOG_LEVELS.INFO;
+            }
             else if(msg.indexOf("Msg:") != -1) {
                 level = COQ_LOG_LEVELS.INFO;
                 msg = msg.toString().replace(/^.*Msg:/, '');
             }
-            else if (msg.indexOf("pre-loading") != -1) {
-                level = COQ_LOG_LEVELS.INFO;
-            }
 
-            if(level != COQ_LOG_LEVELS.DEBUG) {
+            // if(level != COQ_LOG_LEVELS.DEBUG) {
                 msg = msg.replace(/(?:\r\n|\r|\n)/g, '<br />');
                 this.panel.log(msg, level);
-            }
+            // }
         };
 
         this.coq.onInit = e => {
