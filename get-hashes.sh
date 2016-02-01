@@ -8,6 +8,10 @@ function get_hg_hash {
   git --git-dir ${2}/.git log --pretty=format:"+ ${1}: %s%n  %H" -n 1
 }
 
+function get_svn {
+  echo "+ ${1}: rev `svnversion ${2}`"
+}
+
 JSCOQ_DIR=~/research/jscoq/
 COQ_DIR=~/external/coq-git/
 MC_DIR=~/external/coq/math-comp/
@@ -16,6 +20,7 @@ FLOCQ_DIR=~/external/coq/flocq/
 CT_DIR=~/external/coq/coquelicot/
 TLC_DIR=~/external/coq/tlc/
 SF_TAR=~/external/coq/sf.tar.gz
+COLOR_DIR=~/external/coq/CoLoR
 
 function get_build_name {
   COQH=`git --git-dir ${COQ_DIR}/.git log --pretty=format:"%h" -n 1`
@@ -37,4 +42,5 @@ get_hash "math-comp"  $MC_DIR
 get_hash "flocq"      $FLOCQ_DIR
 get_hash "coquelicot" $CT_DIR
 get_hash "tlc"        $TLC_DIR
+get_svn  "color"      $COLOR_DIR
 get_date "sf"         $SF_TAR
