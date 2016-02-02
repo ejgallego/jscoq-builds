@@ -45,41 +45,56 @@ var COQ_LOG_LEVELS = {
     /* The CoqPanel object contains the goal and the query buffer          */
     CoqPanel = function(jsCoq) {
 
-        // Our copy of the jsCoq object.
+        // Our reference to the jsCoq object.
         this.coq = jsCoq;
 
-        // Proof display & query buffer.
+        // Our reference to the IDE, goal display & query buffer.
+        this.ide   = document.getElementById('ide-wrapper');
         this.proof = document.getElementById("goal-text");
         this.query = document.getElementById("query-panel");
+
         this.log_css_rules = document.styleSheets[0].cssRules;
+
         var flex_container = document.getElementById('panel-wrapper').getElementsByClassName('flex-container')[0];
         flex_container.addEventListener('click', evt => {this.panelClickHandler(evt);});
+
         d3.select('select[name=msg_filter]')
             .on('change', () => this.filterLog(d3.event.target));
     };
 
+    CoqPanel.prototype.adjustWidth = function() {
+
+        setTimeout(() => {
+
+            // Set Printing Width... Far from perfect (XXX: Update on resize)
+            var pxSize  = parseFloat(getComputedStyle(this.query)['font-size']);
+            // A correction of almost 2.0 is needed here ... !!!
+            var emWidth = Math.floor(this.query.offsetWidth / pxSize * 1.65);
+            console.log("Setting printing width to: " + emWidth );
+
+            // XXX: What if the panel is toogled from the start...!
+            this.coq.set_printing_width(emWidth);
+        }, 500);
+    }
+
     CoqPanel.prototype.show = function() {
-        document.getElementById('ide-wrapper').classList.remove('toggled');
-
-        // Set Printing Width... Far from perfect (XXX: Update on resize)
-        var pxSize  = parseFloat(getComputedStyle(this.panel.query)['font-size']);
-        var emWidth = Math.floor(this.panel.query.offsetWidth / pxSize * 1.5);
-        console.log("Setting printing width to: " + emWidth );
-
-        // XXX: What if the panel is toogled from the start...!
-        this.coq.set_printing_width(emWidth);
+        this.ide.classList.remove('toggled');
+        this.adjustWidth();
     };
 
     CoqPanel.prototype.hide = function() {
-        document.getElementById('ide-wrapper').classList.add('toggled');
+        this.ide.classList.add('toggled');
     };
 
     CoqPanel.prototype.toggle = function() {
-        var ide = document.getElementById('ide-wrapper');
-        if (ide.classList.contains('toggled'))
-            ide.classList.remove('toggled');
+
+        if (this.ide.classList.contains('toggled')) {
+            this.ide.classList.remove('toggled');
+            this.adjustWidth();
+        }
         else
-            ide.classList.add('toggled');
+            this.ide.classList.add('toggled');
+
     };
 
     // Call jsCoq to get the info.
@@ -91,6 +106,7 @@ var COQ_LOG_LEVELS = {
 
     // Add a log event received from Coq.
     CoqPanel.prototype.log = function(text, level) {
+
         d3.select(this.query)
             .append('div')
             .attr('class', level)
@@ -320,8 +336,8 @@ var COQ_LOG_LEVELS = {
         };
 
         this.coq.onPkgLoadInfo = pkg_info => {
-            console.log("pkg info called for: ");
-            console.log(pkg_info);
+            // console.log("pkg info called for: ");
+            // console.log(pkg_info);
         };
 
         this.coq.onPkgLoadStart = pkg => {
@@ -329,11 +345,11 @@ var COQ_LOG_LEVELS = {
         };
 
         this.coq.onPkgLoad = pkg => {
-            console.log("pkg load called for: " + pkg);
+            // console.log("pkg load called for: " + pkg);
         };
 
         this.coq.onPkgProgress = pkg => {
-            console.log("pkg progress called for: " + pkg[1] + " @ " + pkg[2].toString());
+            // console.log("pkg progress called for: " + pkg[1] + " @ " + pkg[2].toString());
         };
 
         // Hacks, we should refine...
@@ -348,12 +364,15 @@ var COQ_LOG_LEVELS = {
             }
             else if (msg.indexOf("pre-loading") != -1) {
                 level = COQ_LOG_LEVELS.INFO;
+                msg = msg.toString().replace(/^.*stderr:/, '');
             }
             else if (msg.indexOf("stderr:") != -1) {
                 level = COQ_LOG_LEVELS.WARN;
+                msg = msg.toString().replace(/^.*stderr:/, '');
             }
             else if (msg.indexOf("stdout:") != -1) {
                 level = COQ_LOG_LEVELS.INFO;
+                msg = msg.toString().replace(/^.*stdout:/, '');
             }
             else if(msg.indexOf("Msg:") != -1) {
                 level = COQ_LOG_LEVELS.INFO;
@@ -361,7 +380,7 @@ var COQ_LOG_LEVELS = {
             }
 
             // if(level != COQ_LOG_LEVELS.DEBUG) {
-                msg = msg.replace(/(?:\r\n|\r|\n)/g, '<br />');
+                // msg = msg.replace(/(?:\r\n|\r|\n)/g, '<br />');
                 this.panel.log(msg, level);
             // }
         };
@@ -431,6 +450,11 @@ var COQ_LOG_LEVELS = {
     };
 
     CoqManager.prototype.enable = function() {
+
+        // Set Printing Width
+        window.addEventListener('resise', evt => { this.panel.adjustWidth(); } );
+
+        // Enable the buttons.
         this.buttons.addEventListener('click', evt => { this.toolbarClickHandler(evt); } );
         this.buttons.style.display = 'inline-block';
         this.buttons.style.opacity = 1;
