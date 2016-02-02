@@ -60,6 +60,14 @@ var COQ_LOG_LEVELS = {
 
     CoqPanel.prototype.show = function() {
         document.getElementById('ide-wrapper').classList.remove('toggled');
+
+        // Set Printing Width... Far from perfect (XXX: Update on resize)
+        var pxSize  = parseFloat(getComputedStyle(this.panel.query)['font-size']);
+        var emWidth = Math.floor(this.panel.query.offsetWidth / pxSize * 1.5);
+        console.log("Setting printing width to: " + emWidth );
+
+        // XXX: What if the panel is toogled from the start...!
+        this.coq.set_printing_width(emWidth);
     };
 
     CoqPanel.prototype.hide = function() {
@@ -359,6 +367,7 @@ var COQ_LOG_LEVELS = {
         };
 
         this.coq.onInit = e => {
+
             // Enable the IDE.
             this.panel.proof.textContent += "\n===> JsCoq filesystem initalized with success!\n===> Loading additional packages in the background...";
 

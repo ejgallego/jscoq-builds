@@ -3,9 +3,9 @@
     "pkg_id": [ "Coq", "syntax" ],
     "vo_files": [],
     "cma_files": [
-      "numbers_syntax_plugin.cma", "string_syntax_plugin.cma",
-      "r_syntax_plugin.cma", "z_syntax_plugin.cma",
-      "ascii_syntax_plugin.cma", "nat_syntax_plugin.cma"
+      "z_syntax_plugin.cma", "nat_syntax_plugin.cma",
+      "string_syntax_plugin.cma", "r_syntax_plugin.cma",
+      "numbers_syntax_plugin.cma", "ascii_syntax_plugin.cma"
     ]
   },
   {
@@ -26,12 +26,12 @@
   {
     "pkg_id": [ "Coq", "extraction" ],
     "vo_files": [
-      "ExtrHaskellZNum.vo", "ExtrHaskellString.vo", "ExtrHaskellBasic.vo",
-      "ExtrOcamlBigIntConv.vo", "ExtrHaskellNatInteger.vo",
-      "ExtrOcamlNatInt.vo", "ExtrHaskellZInteger.vo", "ExtrHaskellNatInt.vo",
-      "ExtrOcamlZBigInt.vo", "ExtrHaskellNatNum.vo", "ExtrOcamlNatBigInt.vo",
-      "ExtrOcamlIntConv.vo", "ExtrOcamlZInt.vo", "ExtrOcamlBasic.vo",
-      "ExtrHaskellZInt.vo", "ExtrOcamlString.vo"
+      "ExtrHaskellZInt.vo", "ExtrOcamlBigIntConv.vo", "ExtrOcamlIntConv.vo",
+      "ExtrOcamlBasic.vo", "ExtrHaskellNatInt.vo", "ExtrHaskellString.vo",
+      "ExtrHaskellBasic.vo", "ExtrHaskellNatNum.vo", "ExtrOcamlZBigInt.vo",
+      "ExtrOcamlZInt.vo", "ExtrOcamlString.vo", "ExtrHaskellZInteger.vo",
+      "ExtrHaskellNatInteger.vo", "ExtrHaskellZNum.vo",
+      "ExtrOcamlNatBigInt.vo", "ExtrOcamlNatInt.vo"
     ],
     "cma_files": [ "extraction_plugin.cma" ]
   },
@@ -48,32 +48,32 @@
   {
     "pkg_id": [ "Coq", "Init" ],
     "vo_files": [
-      "Prelude.vo", "Specif.vo", "Nat.vo", "Peano.vo", "Tactics.vo",
-      "Logic_Type.vo", "Notations.vo", "Logic.vo", "Wf.vo", "Datatypes.vo"
+      "Tactics.vo", "Logic_Type.vo", "Prelude.vo", "Logic.vo", "Specif.vo",
+      "Wf.vo", "Notations.vo", "Peano.vo", "Nat.vo", "Datatypes.vo"
     ],
     "cma_files": []
   },
   {
     "pkg_id": [ "Coq", "Bool" ],
     "vo_files": [
-      "Bool.vo", "BoolEq.vo", "DecBool.vo", "Sumbool.vo", "Bvector.vo",
-      "Zerob.vo", "IfProp.vo"
+      "IfProp.vo", "DecBool.vo", "Sumbool.vo", "Zerob.vo", "Bvector.vo",
+      "Bool.vo", "BoolEq.vo"
     ],
     "cma_files": []
   },
   {
     "pkg_id": [ "Coq", "Unicode" ],
-    "vo_files": [ "Utf8.vo", "Utf8_core.vo" ],
+    "vo_files": [ "Utf8_core.vo", "Utf8.vo" ],
     "cma_files": []
   },
   {
     "pkg_id": [ "mathcomp", "ssreflect" ],
     "vo_files": [
-      "seq.vo", "prime.vo", "ssreflect.vo", "choice.vo", "div.vo",
-      "binomial.vo", "bigop.vo", "ssrbool.vo", "path.vo", "fingraph.vo",
-      "generic_quotient.vo", "tuple.vo", "eqtype.vo", "fintype.vo",
-      "finset.vo", "all_ssreflect.vo", "ssrnat.vo", "ssrmatching.vo",
-      "finfun.vo", "ssrfun.vo"
+      "tuple.vo", "bigop.vo", "ssrmatching.vo", "fintype.vo", "seq.vo",
+      "generic_quotient.vo", "finset.vo", "finfun.vo", "path.vo",
+      "ssrfun.vo", "ssrnat.vo", "all_ssreflect.vo", "choice.vo",
+      "binomial.vo", "eqtype.vo", "ssrbool.vo", "ssreflect.vo", "div.vo",
+      "fingraph.vo", "prime.vo"
     ],
     "cma_files": [ "ssreflect.cma" ]
   }
