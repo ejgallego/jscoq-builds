@@ -1,0 +1,20 @@
+[
+    {"name": "math-comp",
+     "label": "Math Comp"},
+    {"name": "coq-base",
+     "label": "Coq.Base"},
+    {"name": "coq-arith",
+     "label": "Coq.Arith"},
+    {"name": "coq-reals",
+     "label": "Coq.Reals"},
+    {"name": "coquelicot",
+     "label": "Coquelicot"},
+    {"name": "cpdt",
+     "label": "CPDT"},
+    {"name": "flocq",
+     "label": "Flocq"},
+    {"name": "sf",
+     "label": "SF"},
+    {"name": "tlc",
+     "label": "TLC"}
+]
