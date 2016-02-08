@@ -275,10 +275,7 @@ var COQ_LOG_LEVELS = {
         // Setup our providers of Coq statements.
         this.provider = new ProviderContainer(elems);
 
-    /*
-        this.packages = new PackagesManager(coq_packages,
-                                            document.getElementById('packages-panel'));
-    */
+        this.packages = new PackagesManager(document.getElementById('packages-panel'));
 
         this.provider.onInvalidate = stm => {
 
@@ -336,20 +333,23 @@ var COQ_LOG_LEVELS = {
         };
 
         this.coq.onPkgLoadInfo = pkg_info => {
-            // console.log("pkg info called for: ");
-            // console.log(pkg_info);
+            console.log("pkg info called for: ");
+            console.log(pkg_info);
         };
 
-        this.coq.onPkgLoadStart = pkg => {
-            console.log("pkg start called for: " + pkg[1] + " @ " + pkg[2].toString());
+        this.coq.onPkgLoadStart = progress => {
+            console.log("pkg start called for: ");
+            console.log(progress);
+        };
+
+        this.coq.onPkgProgress = progress => {
+            console.log("pkg progress called for: ");
+            console.log(progress);
         };
 
         this.coq.onPkgLoad = pkg => {
-            // console.log("pkg load called for: " + pkg);
-        };
-
-        this.coq.onPkgProgress = pkg => {
-            // console.log("pkg progress called for: " + pkg[1] + " @ " + pkg[2].toString());
+            console.log("pkg load called for: ");
+            console.log(pkg);
         };
 
         // Hacks, we should refine...
@@ -405,12 +405,13 @@ var COQ_LOG_LEVELS = {
 
             this.enable();
 
+            // We don't load the packages for now.
             // Load the packages.
-            this.options.coq_packages.forEach( pkg => {
-                console.log('Adding pkg: ', pkg);
-                this.coq.add_pkg(pkg);
-            });
-
+            // this.options.coq_packages.forEach( pkg => {
+            //     console.log('Adding pkg: ', pkg);
+            //     this.coq.add_pkg(pkg);
+            // });
+            this.packages.setup();
         };
 
         // Initial coq state.

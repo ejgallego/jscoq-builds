@@ -2,15 +2,15 @@
   {
     "pkg_id": [ "SF" ],
     "vo_files": [
-      "Typechecking.vo", "Poly.vo", "SfLib.vo", "Norm.vo", "PE.vo",
-      "Induction.vo", "Rel.vo", "ImpParser.vo", "PropL.vo",
-      "HoareAsLogic.vo", "UseAuto.vo", "LibTactics.vo", "StlcProp.vo",
-      "UseTactics.vo", "Logic.vo", "References.vo", "Basics.vo",
-      "MoreCoq.vo", "ProofObjects.vo", "Sub.vo", "Symbols.vo",
-      "MoreLogic.vo", "Smallstep.vo", "Equiv.vo", "MoreStlc.vo", "Imp.vo",
-      "Hoare2.vo", "Preface.vo", "Lists.vo", "Records.vo", "RecordSub.vo",
-      "Postscript.vo", "Extraction.vo", "Stlc.vo", "Types.vo",
-      "ImpCEvalFun.vo", "Hoare.vo", "Auto.vo", "MoreInd.vo"
+      "Equiv.vo", "Symbols.vo", "MoreStlc.vo", "Postscript.vo", "PropL.vo",
+      "MoreInd.vo", "Stlc.vo", "Auto.vo", "Poly.vo", "Rel.vo", "Norm.vo",
+      "Smallstep.vo", "PE.vo", "Lists.vo", "HoareAsLogic.vo", "ImpParser.vo",
+      "ProofObjects.vo", "Hoare.vo", "Sub.vo", "MoreLogic.vo",
+      "ImpCEvalFun.vo", "Records.vo", "MoreCoq.vo", "StlcProp.vo",
+      "UseAuto.vo", "Basics.vo", "Imp.vo", "Induction.vo", "UseTactics.vo",
+      "Hoare2.vo", "SfLib.vo", "References.vo", "Extraction.vo",
+      "LibTactics.vo", "Preface.vo", "RecordSub.vo", "Types.vo", "Logic.vo",
+      "Typechecking.vo"
     ],
     "cma_files": []
   }
