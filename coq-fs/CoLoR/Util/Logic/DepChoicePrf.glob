@@ -1,0 +1,103 @@
+DIGEST afdd730cb69adcaa53de31aab4c4e398
+FCoLoR.Util.Logic.DepChoicePrf
+R233:247 Coq.Logic.ClassicalChoice <> <> lib
+R249:255 CoLoR.Util.Relation.RelUtil <> <> lib
+R257:265 CoLoR.Util.Logic.LogicUtil <> <> lib
+sec 277:277 <> S
+var 294:294 S A
+var 305:305 S a
+var 313:313 S R
+var 330:330 S h
+R309:309 CoLoR.Util.Logic.DepChoicePrf <> A var
+R317:324 Coq.Relations.Relation_Definitions <> relation def
+R326:326 CoLoR.Util.Logic.DepChoicePrf <> A var
+R334:343 CoLoR.Util.Relation.RelUtil <> left_total def
+R345:345 CoLoR.Util.Logic.DepChoicePrf <> R var
+def 363:370 <> next_elt
+R377:385 Coq.Init.Specif <> proj1_sig def
+R388:388 CoLoR.Util.Logic.DepChoicePrf <> S.h var
+R390:390 CoLoR.Util.Logic.DepChoicePrf <> x var
+ind 407:407 <> G
+constr 435:436 <> G0
+constr 450:451 <> GS
+R414:417 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R419:422 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R418:418 CoLoR.Util.Logic.DepChoicePrf <> S.A var
+R411:413 Coq.Init.Datatypes <> nat ind
+R440:440 CoLoR.Util.Logic.DepChoicePrf <> G ind
+R444:444 CoLoR.Util.Logic.DepChoicePrf <> S.a var
+R472:475 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R476:476 CoLoR.Util.Logic.DepChoicePrf <> G ind
+R485:492 CoLoR.Util.Logic.DepChoicePrf <> next_elt def
+R494:494 CoLoR.Util.Logic.DepChoicePrf <> x var
+R479:479 Coq.Init.Datatypes <> S constr
+R481:481 CoLoR.Util.Logic.DepChoicePrf <> i var
+R467:467 CoLoR.Util.Logic.DepChoicePrf <> G ind
+R471:471 CoLoR.Util.Logic.DepChoicePrf <> x var
+R469:469 CoLoR.Util.Logic.DepChoicePrf <> i var
+prf 507:529 <> G_is_classic_left_total
+R533:550 CoLoR.Util.Relation.RelUtil <> classic_left_total def
+R552:552 CoLoR.Util.Logic.DepChoicePrf <> G ind
+R591:591 CoLoR.Util.Logic.DepChoicePrf <> S.a var
+R591:591 CoLoR.Util.Logic.DepChoicePrf <> S.a var
+R600:601 CoLoR.Util.Logic.DepChoicePrf <> G0 constr
+R600:601 CoLoR.Util.Logic.DepChoicePrf <> G0 constr
+R636:643 CoLoR.Util.Logic.DepChoicePrf <> next_elt def
+R636:643 CoLoR.Util.Logic.DepChoicePrf <> next_elt def
+R657:658 CoLoR.Util.Logic.DepChoicePrf <> GS constr
+R657:658 CoLoR.Util.Logic.DepChoicePrf <> GS constr
+prf 680:694 <> G_is_functional
+R698:707 CoLoR.Util.Relation.RelUtil <> functional def
+R709:709 CoLoR.Util.Logic.DepChoicePrf <> G ind
+R733:742 CoLoR.Util.Relation.RelUtil <> functional def
+prf 868:890 <> choice_imply_dep_choice
+R894:900 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R902:903 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R904:905 CoLoR.Util.Relation.RelUtil <> IS def
+R909:909 CoLoR.Util.Logic.DepChoicePrf <> f var
+R907:907 CoLoR.Util.Logic.DepChoicePrf <> S.R var
+R936:941 Coq.Logic.ClassicalChoice <> choice thm
+R945:967 CoLoR.Util.Logic.DepChoicePrf <> G_is_classic_left_total thm
+R943:943 CoLoR.Util.Logic.DepChoicePrf <> G ind
+R936:941 Coq.Logic.ClassicalChoice <> choice thm
+R945:967 CoLoR.Util.Logic.DepChoicePrf <> G_is_classic_left_total thm
+R943:943 CoLoR.Util.Logic.DepChoicePrf <> G ind
+R1019:1022 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1024:1026 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1023:1023 CoLoR.Util.Logic.DepChoicePrf <> x var
+R1029:1029 CoLoR.Util.Logic.DepChoicePrf <> i var
+R1014:1014 CoLoR.Util.Logic.DepChoicePrf <> G ind
+R1018:1018 CoLoR.Util.Logic.DepChoicePrf <> x var
+R1016:1016 CoLoR.Util.Logic.DepChoicePrf <> i var
+R1019:1022 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1024:1026 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1023:1023 CoLoR.Util.Logic.DepChoicePrf <> x var
+R1029:1029 CoLoR.Util.Logic.DepChoicePrf <> i var
+R1014:1014 CoLoR.Util.Logic.DepChoicePrf <> G ind
+R1018:1018 CoLoR.Util.Logic.DepChoicePrf <> x var
+R1016:1016 CoLoR.Util.Logic.DepChoicePrf <> i var
+R1063:1077 CoLoR.Util.Logic.DepChoicePrf <> G_is_functional thm
+R1063:1077 CoLoR.Util.Logic.DepChoicePrf <> G_is_functional thm
+R1102:1104 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1105:1105 CoLoR.Util.Logic.DepChoicePrf <> S.a var
+R1102:1104 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1105:1105 CoLoR.Util.Logic.DepChoicePrf <> S.a var
+R1169:1171 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1165:1165 Coq.Init.Datatypes <> S constr
+R1167:1167 CoLoR.Util.Logic.DepChoicePrf <> i var
+R1172:1179 CoLoR.Util.Logic.DepChoicePrf <> next_elt def
+R1184:1184 CoLoR.Util.Logic.DepChoicePrf <> i var
+R1169:1171 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1165:1165 Coq.Init.Datatypes <> S constr
+R1167:1167 CoLoR.Util.Logic.DepChoicePrf <> i var
+R1172:1179 CoLoR.Util.Logic.DepChoicePrf <> next_elt def
+R1184:1184 CoLoR.Util.Logic.DepChoicePrf <> i var
+R1284:1284 Coq.Init.Datatypes <> S constr
+R1287:1287 Coq.Init.Datatypes <> S constr
+R1284:1284 Coq.Init.Datatypes <> S constr
+R1287:1287 Coq.Init.Datatypes <> S constr
+R1371:1379 Coq.Init.Specif <> proj2_sig def
+R1382:1382 CoLoR.Util.Logic.DepChoicePrf <> S.h var
+R1371:1379 Coq.Init.Specif <> proj2_sig def
+R1382:1382 CoLoR.Util.Logic.DepChoicePrf <> S.h var
+R1405:1405 CoLoR.Util.Logic.DepChoicePrf S <> sec

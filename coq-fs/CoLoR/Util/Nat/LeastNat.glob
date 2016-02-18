@@ -1,0 +1,96 @@
+DIGEST ab6e82d8da2e32967e594b71e254aafd
+FCoLoR.Util.Nat.LeastNat
+R282:295 Coq.Logic.Classical_Prop <> <> lib
+R297:317 Coq.Logic.IndefiniteDescription <> <> lib
+R319:324 Coq.Arith.Wf_nat <> <> lib
+R326:334 Coq.Relations.Relations <> <> lib
+sec 469:470 <> P1
+var 487:487 P1 P
+var 505:507 P1 exP
+R494:497 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R491:493 Coq.Init.Datatypes <> nat ind
+R511:517 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R519:520 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R521:521 CoLoR.Util.Nat.LeastNat <> P var
+R523:523 CoLoR.Util.Nat.LeastNat <> n var
+prf 536:547 <> ch_min_proof
+R551:574 Coq.Arith.Wf_nat <> has_unique_least_element def
+R579:579 CoLoR.Util.Nat.LeastNat <> P1.P var
+R576:577 Coq.Init.Peano <> le ind
+R602:644 Coq.Arith.Wf_nat <> dec_inh_nat_subset_has_unique_least_element thm
+R602:644 Coq.Arith.Wf_nat <> dec_inh_nat_subset_has_unique_least_element thm
+R671:677 Coq.Logic.Classical_Prop <> classic prfax
+R671:677 Coq.Logic.Classical_Prop <> classic prfax
+def 701:706 <> ch_min
+R711:745 Coq.Logic.IndefiniteDescription <> constructive_indefinite_description prfax
+R749:760 CoLoR.Util.Nat.LeastNat <> ch_min_proof thm
+prf 772:778 <> ch_minP
+R782:782 CoLoR.Util.Nat.LeastNat <> P1.P var
+R785:793 Coq.Init.Specif <> proj1_sig def
+R795:800 CoLoR.Util.Nat.LeastNat <> ch_min def
+R824:832 Coq.Init.Specif <> proj2_sig def
+R834:839 CoLoR.Util.Nat.LeastNat <> ch_min def
+R824:832 Coq.Init.Specif <> proj2_sig def
+R834:839 CoLoR.Util.Nat.LeastNat <> ch_min def
+prf 884:892 <> is_min_ch
+R909:912 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R929:932 Coq.Init.Peano <> :nat_scope:x_'<='_x not
+R913:921 Coq.Init.Specif <> proj1_sig def
+R923:928 CoLoR.Util.Nat.LeastNat <> ch_min def
+R933:933 CoLoR.Util.Nat.LeastNat <> n var
+R906:906 CoLoR.Util.Nat.LeastNat <> P1.P var
+R908:908 CoLoR.Util.Nat.LeastNat <> n var
+R960:968 Coq.Init.Specif <> proj2_sig def
+R970:975 CoLoR.Util.Nat.LeastNat <> ch_min def
+R960:968 Coq.Init.Specif <> proj2_sig def
+R970:975 CoLoR.Util.Nat.LeastNat <> ch_min def
+R1036:1037 CoLoR.Util.Nat.LeastNat P1 <> sec
+R1060:1065 CoLoR.Util.Nat.LeastNat <> ch_min def
+sec 1180:1181 <> P2
+var 1198:1199 P2 P2
+var 1218:1221 P2 exP2
+R1203:1210 Coq.Relations.Relation_Definitions <> relation def
+R1212:1214 Coq.Init.Datatypes <> nat ind
+R1235:1241 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R1243:1244 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R1245:1246 CoLoR.Util.Nat.LeastNat <> P2 var
+R1250:1250 CoLoR.Util.Nat.LeastNat <> n var
+R1248:1248 CoLoR.Util.Nat.LeastNat <> m var
+def 1266:1275 <> rec_ch_min
+R1281:1283 Coq.Init.Datatypes <> nat ind
+R1298:1298 CoLoR.Util.Nat.LeastNat <> n var
+R1313:1313 Coq.Init.Datatypes <> S constr
+R1321:1329 Coq.Init.Specif <> proj1_sig def
+R1332:1337 CoLoR.Util.Nat.LeastNat <> ch_min def
+R1340:1343 CoLoR.Util.Nat.LeastNat <> P2.exP2 var
+R1346:1346 Coq.Init.Datatypes <> S constr
+R1349:1358 CoLoR.Util.Nat.LeastNat <> rec_ch_min def
+R1380:1388 Coq.Init.Specif <> proj1_sig def
+R1391:1396 CoLoR.Util.Nat.LeastNat <> ch_min def
+R1399:1402 CoLoR.Util.Nat.LeastNat <> P2.exP2 var
+prf 1426:1436 <> rec_ch_minP
+R1450:1451 CoLoR.Util.Nat.LeastNat <> P2.P2 var
+R1473:1482 CoLoR.Util.Nat.LeastNat <> rec_ch_min def
+R1485:1485 Coq.Init.Datatypes <> S constr
+R1487:1487 CoLoR.Util.Nat.LeastNat <> i var
+R1454:1454 Coq.Init.Datatypes <> S constr
+R1457:1466 CoLoR.Util.Nat.LeastNat <> rec_ch_min def
+R1468:1468 CoLoR.Util.Nat.LeastNat <> i var
+R1523:1529 CoLoR.Util.Nat.LeastNat <> ch_minP thm
+R1523:1529 CoLoR.Util.Nat.LeastNat <> ch_minP thm
+prf 1546:1558 <> is_min_rec_ch
+R1601:1604 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1605:1605 Coq.Init.Peano <> :nat_scope:x_'<='_x not
+R1622:1626 Coq.Init.Peano <> :nat_scope:x_'<='_x not
+R1606:1615 CoLoR.Util.Nat.LeastNat <> rec_ch_min def
+R1618:1618 Coq.Init.Datatypes <> S constr
+R1620:1620 CoLoR.Util.Nat.LeastNat <> i var
+R1627:1627 CoLoR.Util.Nat.LeastNat <> n var
+R1578:1579 CoLoR.Util.Nat.LeastNat <> P2.P2 var
+R1600:1600 CoLoR.Util.Nat.LeastNat <> n var
+R1582:1582 Coq.Init.Datatypes <> S constr
+R1585:1594 CoLoR.Util.Nat.LeastNat <> rec_ch_min def
+R1596:1596 CoLoR.Util.Nat.LeastNat <> i var
+R1661:1669 CoLoR.Util.Nat.LeastNat <> is_min_ch thm
+R1661:1669 CoLoR.Util.Nat.LeastNat <> is_min_ch thm
+R1688:1689 CoLoR.Util.Nat.LeastNat P2 <> sec

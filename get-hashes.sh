@@ -20,7 +20,7 @@ FLOCQ_DIR=~/external/coq/flocq/
 CT_DIR=~/external/coq/coquelicot/
 TLC_DIR=~/external/coq/tlc/
 SF_TAR=~/external/coq/sf.tar.gz
-COLOR_DIR=~/external/coq/CoLoR
+COLOR_DIR=~/external/coq/CoLoR-8.5
 
 function get_build_name {
   COQH=`git --git-dir ${COQ_DIR}/.git log --pretty=format:"%h" -n 1`

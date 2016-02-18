@@ -1,0 +1,142 @@
+DIGEST 529ab59f24227596e16540db6e252180
+FCoLoR.Coccinelle.basis.decidable_set
+R824:843 Coq.Relations.Relation_Definitions <> <> lib
+R861:866 Coq.Setoids.Setoid <> <> lib
+R884:887 Coq.Bool.Bool <> <> lib
+R905:909 Coq.Arith.Arith <> <> lib
+modtype 925:925 <> S
+ax 939:939 S A
+ax 959:965 S eq_bool
+R970:973 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R975:978 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R979:982 Coq.Init.Datatypes <> bool ind
+R974:974 CoLoR.Coccinelle.basis.decidable_set S A defax
+R969:969 CoLoR.Coccinelle.basis.decidable_set S A defax
+ax 995:1004 S eq_bool_ok
+R1028:1034 CoLoR.Coccinelle.basis.decidable_set S eq_bool defax
+R1039:1040 CoLoR.Coccinelle.basis.decidable_set <> a2 var
+R1036:1037 CoLoR.Coccinelle.basis.decidable_set <> a1 var
+R1047:1050 Coq.Init.Datatypes <> true constr
+R1057:1059 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1055:1056 CoLoR.Coccinelle.basis.decidable_set <> a1 var
+R1060:1061 CoLoR.Coccinelle.basis.decidable_set <> a2 var
+R1065:1069 Coq.Init.Datatypes <> false constr
+R1074:1075 Coq.Init.Logic <> :type_scope:'~'_x not
+R1078:1080 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1076:1077 CoLoR.Coccinelle.basis.decidable_set <> a1 var
+R1081:1082 CoLoR.Coccinelle.basis.decidable_set <> a2 var
+R1094:1094 CoLoR.Coccinelle.basis.decidable_set S <> modtype
+modtype 1110:1111 <> ES
+ax 1125:1125 ES A
+ax 1145:1148 ES eq_A
+R1152:1159 Coq.Relations.Relation_Definitions <> relation def
+R1161:1161 CoLoR.Coccinelle.basis.decidable_set ES A defax
+ax 1174:1180 ES eq_bool
+R1185:1188 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1190:1193 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1194:1197 Coq.Init.Datatypes <> bool ind
+R1189:1189 CoLoR.Coccinelle.basis.decidable_set ES A defax
+R1184:1184 CoLoR.Coccinelle.basis.decidable_set ES A defax
+ax 1210:1219 ES eq_bool_ok
+R1243:1249 CoLoR.Coccinelle.basis.decidable_set ES eq_bool defax
+R1254:1255 CoLoR.Coccinelle.basis.decidable_set <> a2 var
+R1251:1252 CoLoR.Coccinelle.basis.decidable_set <> a1 var
+R1262:1265 Coq.Init.Datatypes <> true constr
+R1270:1273 CoLoR.Coccinelle.basis.decidable_set ES eq_A defax
+R1278:1279 CoLoR.Coccinelle.basis.decidable_set <> a2 var
+R1275:1276 CoLoR.Coccinelle.basis.decidable_set <> a1 var
+R1283:1287 Coq.Init.Datatypes <> false constr
+R1292:1292 Coq.Init.Logic <> :type_scope:'~'_x not
+R1293:1296 CoLoR.Coccinelle.basis.decidable_set ES eq_A defax
+R1301:1302 CoLoR.Coccinelle.basis.decidable_set <> a2 var
+R1298:1299 CoLoR.Coccinelle.basis.decidable_set <> a1 var
+ax 1320:1327 ES eq_proof
+R1331:1341 Coq.Relations.Relation_Definitions <> equivalence rec
+R1345:1348 CoLoR.Coccinelle.basis.decidable_set ES eq_A defax
+R1343:1343 CoLoR.Coccinelle.basis.decidable_set ES A defax
+R1369:1372 CoLoR.Coccinelle.basis.decidable_set ES eq_A defax
+R1367:1367 CoLoR.Coccinelle.basis.decidable_set ES A defax
+R1369:1372 CoLoR.Coccinelle.basis.decidable_set ES eq_A defax
+R1367:1367 CoLoR.Coccinelle.basis.decidable_set ES A defax
+R1401:1410 Coq.Relations.Relation_Definitions <> equiv_refl proj
+R1416:1423 CoLoR.Coccinelle.basis.decidable_set ES eq_proof defax
+R1369:1372 CoLoR.Coccinelle.basis.decidable_set ES eq_A defax
+R1367:1367 CoLoR.Coccinelle.basis.decidable_set ES A defax
+R1451:1459 Coq.Relations.Relation_Definitions <> equiv_sym proj
+R1465:1472 CoLoR.Coccinelle.basis.decidable_set ES eq_proof defax
+R1369:1372 CoLoR.Coccinelle.basis.decidable_set ES eq_A defax
+R1367:1367 CoLoR.Coccinelle.basis.decidable_set ES A defax
+R1506:1516 Coq.Relations.Relation_Definitions <> equiv_trans proj
+R1522:1529 CoLoR.Coccinelle.basis.decidable_set ES eq_proof defax
+R1369:1372 CoLoR.Coccinelle.basis.decidable_set ES eq_A defax
+R1367:1367 CoLoR.Coccinelle.basis.decidable_set ES A defax
+R1401:1410 Coq.Relations.Relation_Definitions <> equiv_refl proj
+R1416:1423 CoLoR.Coccinelle.basis.decidable_set ES eq_proof defax
+R1451:1459 Coq.Relations.Relation_Definitions <> equiv_sym proj
+R1465:1472 CoLoR.Coccinelle.basis.decidable_set ES eq_proof defax
+R1506:1516 Coq.Relations.Relation_Definitions <> equiv_trans proj
+R1522:1529 CoLoR.Coccinelle.basis.decidable_set ES eq_proof defax
+R1545:1546 CoLoR.Coccinelle.basis.decidable_set ES <> modtype
+R1571:1571 CoLoR.Coccinelle.basis.decidable_set S <> mod
+R1580:1581 CoLoR.Coccinelle.basis.decidable_set ES <> mod
+R1604:1607 CoLoR.Coccinelle.basis.decidable_set DS A defax
+R1641:1642 Coq.Init.Logic <> eq ind
+R1644:1647 CoLoR.Coccinelle.basis.decidable_set DS A defax
+mod 1557:1563 <> Convert
+def 1662:1662 Convert A
+R1667:1670 CoLoR.Coccinelle.basis.decidable_set DS A defax
+def 1684:1687 Convert eq_A
+R1693:1694 Coq.Init.Logic <> eq ind
+R1696:1696 CoLoR.Coccinelle.basis.decidable_set Convert A def
+def 1710:1716 Convert eq_bool
+R1721:1730 CoLoR.Coccinelle.basis.decidable_set DS eq_bool defax
+def 1744:1753 Convert eq_bool_ok
+R1758:1770 CoLoR.Coccinelle.basis.decidable_set DS eq_bool_ok defax
+prf 1780:1787 Convert eq_proof
+R1791:1801 Coq.Relations.Relation_Definitions <> equivalence rec
+R1805:1808 CoLoR.Coccinelle.basis.decidable_set Convert eq_A def
+R1803:1803 CoLoR.Coccinelle.basis.decidable_set Convert A def
+R1825:1828 CoLoR.Coccinelle.basis.decidable_set Convert eq_A def
+R1965:1968 CoLoR.Coccinelle.basis.decidable_set Convert eq_A def
+R1963:1963 CoLoR.Coccinelle.basis.decidable_set Convert A def
+R1965:1968 CoLoR.Coccinelle.basis.decidable_set Convert eq_A def
+R1963:1963 CoLoR.Coccinelle.basis.decidable_set Convert A def
+R1996:2026 Coq.Relations.Relation_Definitions <> equiv_refl proj
+R2035:2042 CoLoR.Coccinelle.basis.decidable_set Convert eq_proof thm
+R2030:2033 CoLoR.Coccinelle.basis.decidable_set Convert eq_A def
+R2028:2028 CoLoR.Coccinelle.basis.decidable_set Convert A def
+R1965:1968 CoLoR.Coccinelle.basis.decidable_set Convert eq_A def
+R1963:1963 CoLoR.Coccinelle.basis.decidable_set Convert A def
+R2069:2098 Coq.Relations.Relation_Definitions <> equiv_sym proj
+R2107:2114 CoLoR.Coccinelle.basis.decidable_set Convert eq_proof thm
+R2102:2105 CoLoR.Coccinelle.basis.decidable_set Convert eq_A def
+R2100:2100 CoLoR.Coccinelle.basis.decidable_set Convert A def
+R1965:1968 CoLoR.Coccinelle.basis.decidable_set Convert eq_A def
+R1963:1963 CoLoR.Coccinelle.basis.decidable_set Convert A def
+R2147:2178 Coq.Relations.Relation_Definitions <> equiv_trans proj
+R2184:2191 CoLoR.Coccinelle.basis.decidable_set Convert eq_proof thm
+R1965:1968 CoLoR.Coccinelle.basis.decidable_set Convert eq_A def
+R1963:1963 CoLoR.Coccinelle.basis.decidable_set Convert A def
+R1996:2026 Coq.Relations.Relation_Definitions <> equiv_refl proj
+R2035:2042 CoLoR.Coccinelle.basis.decidable_set Convert eq_proof thm
+R2030:2033 CoLoR.Coccinelle.basis.decidable_set Convert eq_A def
+R2028:2028 CoLoR.Coccinelle.basis.decidable_set Convert A def
+R2069:2098 Coq.Relations.Relation_Definitions <> equiv_sym proj
+R2107:2114 CoLoR.Coccinelle.basis.decidable_set Convert eq_proof thm
+R2102:2105 CoLoR.Coccinelle.basis.decidable_set Convert eq_A def
+R2100:2100 CoLoR.Coccinelle.basis.decidable_set Convert A def
+R2147:2178 Coq.Relations.Relation_Definitions <> equiv_trans proj
+R2184:2191 CoLoR.Coccinelle.basis.decidable_set Convert eq_proof thm
+R2207:2213 CoLoR.Coccinelle.basis.decidable_set Convert <> mod
+prf 2223:2232 <> beq_nat_ok
+R2253:2259 Coq.Arith.EqNat <> beq_nat syndef
+R2264:2265 CoLoR.Coccinelle.basis.decidable_set <> n2 var
+R2261:2262 CoLoR.Coccinelle.basis.decidable_set <> n1 var
+R2287:2290 Coq.Init.Logic <> :type_scope:x_'<>'_x not
+R2285:2286 CoLoR.Coccinelle.basis.decidable_set <> n1 var
+R2291:2292 CoLoR.Coccinelle.basis.decidable_set <> n2 var
+R2274:2276 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2272:2273 CoLoR.Coccinelle.basis.decidable_set <> n1 var
+R2277:2278 CoLoR.Coccinelle.basis.decidable_set <> n2 var
+R2412:2418 Coq.Arith.EqNat <> beq_nat syndef
+R2412:2418 Coq.Arith.EqNat <> beq_nat syndef

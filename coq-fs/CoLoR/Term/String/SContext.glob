@@ -1,0 +1,58 @@
+DIGEST 5dedb6af5cbe5a0cb1811cf31710d57a
+FCoLoR.Term.String.SContext
+R188:196 CoLoR.Util.Logic.LogicUtil <> <> lib
+R214:223 CoLoR.Term.Varyadic.VSignature <> <> lib
+R225:228 Coq.Lists.List <> <> lib
+sec 240:240 <> S
+var 253:255 S Sig
+R259:267 CoLoR.Term.Varyadic.VSignature <> Signature rec
+syndef 280:285 <> string
+R291:294 Coq.Init.Datatypes <> list ind
+R296:298 CoLoR.Term.String.SContext <> S.Sig var
+constr 447:455 <> mkContext
+rec 429:435 <> context
+proj 459:461 <> lft
+proj 473:475 <> rgt
+R465:470 CoLoR.Term.String.SContext <> string syndef
+R479:484 CoLoR.Term.String.SContext <> string syndef
+def 501:504 <> fill
+R518:521 Coq.Init.Datatypes <> :list_scope:x_'++'_x not
+R513:515 CoLoR.Term.String.SContext <> lft proj
+R517:517 CoLoR.Term.String.SContext <> c var
+R523:526 Coq.Init.Datatypes <> :list_scope:x_'++'_x not
+R522:522 CoLoR.Term.String.SContext <> s var
+R527:529 CoLoR.Term.String.SContext <> rgt proj
+R531:531 CoLoR.Term.String.SContext <> c var
+def 648:651 <> comp
+R660:668 CoLoR.Term.String.SContext <> mkContext constr
+R693:696 Coq.Init.Datatypes <> :list_scope:x_'++'_x not
+R688:690 CoLoR.Term.String.SContext <> rgt proj
+R692:692 CoLoR.Term.String.SContext <> d var
+R697:699 CoLoR.Term.String.SContext <> rgt proj
+R701:701 CoLoR.Term.String.SContext <> c var
+R676:679 Coq.Init.Datatypes <> :list_scope:x_'++'_x not
+R671:673 CoLoR.Term.String.SContext <> lft proj
+R675:675 CoLoR.Term.String.SContext <> c var
+R680:682 CoLoR.Term.String.SContext <> lft proj
+R684:684 CoLoR.Term.String.SContext <> d var
+prf 712:720 <> fill_fill
+R755:757 Coq.Init.Logic <> :type_scope:x_'='_x not
+R738:741 CoLoR.Term.String.SContext <> fill def
+R746:749 CoLoR.Term.String.SContext <> fill def
+R753:753 CoLoR.Term.String.SContext <> u var
+R751:751 CoLoR.Term.String.SContext <> d var
+R743:743 CoLoR.Term.String.SContext <> c var
+R758:761 CoLoR.Term.String.SContext <> fill def
+R774:774 CoLoR.Term.String.SContext <> u var
+R764:767 CoLoR.Term.String.SContext <> comp def
+R771:771 CoLoR.Term.String.SContext <> d var
+R769:769 CoLoR.Term.String.SContext <> c var
+R824:827 CoLoR.Term.String.SContext <> fill def
+R846:852 Coq.Lists.List <> app_ass syndef
+R846:852 Coq.Lists.List <> app_ass syndef
+R846:852 Coq.Lists.List <> app_ass syndef
+R846:852 Coq.Lists.List <> app_ass syndef
+R846:852 Coq.Lists.List <> app_ass syndef
+R846:852 Coq.Lists.List <> app_ass syndef
+R871:871 CoLoR.Term.String.SContext S <> sec
+R894:902 CoLoR.Term.String.SContext <> mkContext constr

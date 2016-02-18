@@ -105,7 +105,7 @@
     cm.setSelections(extended);
   };
 
-  map["Shift-" + ctrl + "K"] = "deleteLine";
+  map["Shift-Ctrl-K"] = "deleteLine";
 
   function insertLine(cm, above) {
     if (cm.isReadOnly()) return CodeMirror.Pass
@@ -243,7 +243,7 @@
     });
   };
 
-  map[ctrl + "/"] = function(cm) {
+  cmds[map[ctrl + "/"] = "toggleCommentIndented"] = function(cm) {
     cm.toggleComment({ indent: true });
   }
 

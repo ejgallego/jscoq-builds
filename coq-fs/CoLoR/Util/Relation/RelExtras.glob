@@ -1,0 +1,296 @@
+DIGEST 5ab2f5d2351d8691e7dda54c38d1cd1e
+FCoLoR.Util.Relation.RelExtras
+R300:306 CoLoR.Util.Relation.RelUtil <> <> lib
+R308:316 CoLoR.Util.Logic.LogicUtil <> <> lib
+R318:320 Coq.Arith.Max <> <> lib
+R322:326 Coq.Arith.Arith <> <> lib
+R328:333 Coq.Setoids.Setoid <> <> lib
+R335:343 Coq.Classes.Morphisms <> <> lib
+R345:350 Coq.Program.Basics <> <> lib
+sec 457:467 <> StrictOrder
+var 484:484 StrictOrder A
+var 495:495 StrictOrder R
+R499:506 Coq.Relations.Relation_Definitions <> relation def
+R508:508 CoLoR.Util.Relation.RelExtras <> A var
+rec 522:533 <> strict_order
+proj 551:560 <> sord_trans
+proj 582:592 <> sord_irrefl
+R564:573 Coq.Relations.Relation_Definitions <> transitive def
+R575:575 CoLoR.Util.Relation.RelExtras <> StrictOrder.R var
+R596:606 CoLoR.Util.Relation.RelUtil <> irreflexive def
+R608:608 CoLoR.Util.Relation.RelExtras <> StrictOrder.R var
+var 625:626 StrictOrder so
+R630:641 CoLoR.Util.Relation.RelExtras <> strict_order rec
+prf 653:668 <> so_not_symmetric
+R689:692 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R698:701 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R702:706 Coq.Init.Logic <> False ind
+R693:693 CoLoR.Util.Relation.RelExtras <> StrictOrder.R var
+R697:697 CoLoR.Util.Relation.RelExtras <> a var
+R695:695 CoLoR.Util.Relation.RelExtras <> b var
+R684:684 CoLoR.Util.Relation.RelExtras <> StrictOrder.R var
+R688:688 CoLoR.Util.Relation.RelExtras <> b var
+R686:686 CoLoR.Util.Relation.RelExtras <> a var
+R730:732 Coq.Init.Logic <> not def
+R766:776 CoLoR.Util.Relation.RelExtras <> sord_irrefl proj
+R782:791 CoLoR.Util.Relation.RelExtras <> sord_trans proj
+R793:794 CoLoR.Util.Relation.RelExtras <> StrictOrder.so var
+R778:779 CoLoR.Util.Relation.RelExtras <> StrictOrder.so var
+R766:776 CoLoR.Util.Relation.RelExtras <> sord_irrefl proj
+R782:791 CoLoR.Util.Relation.RelExtras <> sord_trans proj
+R793:794 CoLoR.Util.Relation.RelExtras <> StrictOrder.so var
+R778:779 CoLoR.Util.Relation.RelExtras <> StrictOrder.so var
+var 828:829 StrictOrder eq
+var 858:867 StrictOrder Req_compat
+var 915:928 StrictOrder eq_Equivalence
+R833:840 Coq.Relations.Relation_Definitions <> relation def
+R842:842 CoLoR.Util.Relation.RelExtras <> StrictOrder.A var
+R871:876 Coq.Classes.Morphisms <> Proper class
+R899:899 CoLoR.Util.Relation.RelExtras <> StrictOrder.R var
+R881:885 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R879:880 CoLoR.Util.Relation.RelExtras <> eq var
+R888:892 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R886:887 CoLoR.Util.Relation.RelExtras <> eq var
+R893:896 Coq.Program.Basics <> impl def
+R932:942 Coq.Classes.RelationClasses <> Equivalence class
+R944:945 CoLoR.Util.Relation.RelExtras <> eq var
+prf 1027:1035 <> so_strict
+R1057:1060 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1061:1061 Coq.Init.Logic <> :type_scope:'~'_x not
+R1062:1062 CoLoR.Util.Relation.RelExtras <> StrictOrder.R var
+R1066:1066 CoLoR.Util.Relation.RelExtras <> y var
+R1064:1064 CoLoR.Util.Relation.RelExtras <> x var
+R1051:1052 CoLoR.Util.Relation.RelExtras <> StrictOrder.eq var
+R1056:1056 CoLoR.Util.Relation.RelExtras <> y var
+R1054:1054 CoLoR.Util.Relation.RelExtras <> x var
+R1112:1122 CoLoR.Util.Relation.RelExtras <> sord_irrefl proj
+R1112:1122 CoLoR.Util.Relation.RelExtras <> sord_irrefl proj
+R1140:1150 CoLoR.Util.Relation.RelExtras StrictOrder <> sec
+modtype 1297:1300 <> SetA
+ax 1315:1315 SetA A
+R1329:1332 CoLoR.Util.Relation.RelExtras SetA <> modtype
+modtype 1348:1352 <> Eqset
+ax 1368:1368 Eqset A
+ax 1391:1393 Eqset eqA
+R1397:1404 Coq.Relations.Relation_Definitions <> relation def
+R1406:1406 CoLoR.Util.Relation.RelExtras Eqset A defax
+R1434:1436 CoLoR.Util.Relation.RelExtras Eqset eqA defax
+not 1420:1420 Eqset ::x_'=A='_x
+inst 1478:1492 Eqset eqA_Equivalence
+R1496:1506 Coq.Classes.RelationClasses <> Equivalence class
+R1508:1510 CoLoR.Util.Relation.RelExtras Eqset eqA defax
+R1530:1537 Coq.Setoids.Setoid <> Seq_refl def
+R1546:1560 CoLoR.Util.Relation.RelExtras Eqset eqA_Equivalence prfax
+R1542:1544 CoLoR.Util.Relation.RelExtras Eqset eqA defax
+R1540:1540 CoLoR.Util.Relation.RelExtras Eqset A defax
+R1587:1595 Coq.Setoids.Setoid <> Seq_trans def
+R1603:1617 CoLoR.Util.Relation.RelExtras Eqset eqA_Equivalence prfax
+R1599:1601 CoLoR.Util.Relation.RelExtras Eqset eqA defax
+R1597:1597 CoLoR.Util.Relation.RelExtras Eqset A defax
+R1644:1650 Coq.Setoids.Setoid <> Seq_sym def
+R1660:1674 CoLoR.Util.Relation.RelExtras Eqset eqA_Equivalence prfax
+R1656:1658 CoLoR.Util.Relation.RelExtras Eqset eqA defax
+R1654:1654 CoLoR.Util.Relation.RelExtras Eqset A defax
+R1690:1694 CoLoR.Util.Relation.RelExtras Eqset <> modtype
+modtype 1710:1718 <> Eqset_dec
+R1751:1755 CoLoR.Util.Relation.RelExtras Eqset <> mod
+mod 1746:1747 <> Eqset_dec.Eq
+ax 1771:1777 Eqset_dec eqA_dec
+R1793:1793 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R1801:1805 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R1814:1814 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R1795:1799 CoLoR.Util.Relation.RelExtras Eqset ::x_'=A='_x not
+R1794:1794 CoLoR.Util.Relation.RelExtras <> x var
+R1800:1800 CoLoR.Util.Relation.RelExtras <> y var
+R1806:1806 Coq.Init.Logic <> :type_scope:'~'_x not
+R1808:1812 CoLoR.Util.Relation.RelExtras Eqset ::x_'=A='_x not
+R1807:1807 CoLoR.Util.Relation.RelExtras <> x var
+R1813:1813 CoLoR.Util.Relation.RelExtras <> y var
+R1822:1830 CoLoR.Util.Relation.RelExtras Eqset_dec <> modtype
+R1856:1859 CoLoR.Util.Relation.RelExtras SetA <> mod
+R1865:1869 CoLoR.Util.Relation.RelExtras Eqset <> mod
+mod 1841:1849 <> Eqset_def
+def 1886:1886 Eqset_def A
+R1891:1893 CoLoR.Util.Relation.RelExtras A A defax
+def 1910:1912 Eqset_def eqA
+R1917:1918 Coq.Init.Logic <> eq ind
+R1924:1924 CoLoR.Util.Relation.RelExtras Eqset_def A def
+inst 1940:1954 Eqset_def eqA_Equivalence
+R1958:1968 Coq.Classes.RelationClasses <> Equivalence class
+R1970:1972 CoLoR.Util.Relation.RelExtras Eqset_def eqA def
+R1992:1994 CoLoR.Util.Relation.RelExtras Eqset_def eqA def
+R2026:2033 Coq.Setoids.Setoid <> Seq_refl def
+R2042:2056 CoLoR.Util.Relation.RelExtras Eqset_def eqA_Equivalence inst
+R2038:2040 CoLoR.Util.Relation.RelExtras Eqset_def eqA def
+R2036:2036 CoLoR.Util.Relation.RelExtras Eqset_def A def
+R2083:2091 Coq.Setoids.Setoid <> Seq_trans def
+R2099:2113 CoLoR.Util.Relation.RelExtras Eqset_def eqA_Equivalence inst
+R2095:2097 CoLoR.Util.Relation.RelExtras Eqset_def eqA def
+R2093:2093 CoLoR.Util.Relation.RelExtras Eqset_def A def
+R2140:2146 Coq.Setoids.Setoid <> Seq_sym def
+R2156:2170 CoLoR.Util.Relation.RelExtras Eqset_def eqA_Equivalence inst
+R2152:2154 CoLoR.Util.Relation.RelExtras Eqset_def eqA def
+R2150:2150 CoLoR.Util.Relation.RelExtras Eqset_def A def
+R2186:2194 CoLoR.Util.Relation.RelExtras Eqset_def <> mod
+sec 2321:2344 <> Eqset_def_gtA_eqA_compat
+var 2361:2361 Eqset_def_gtA_eqA_compat A
+var 2372:2374 Eqset_def_gtA_eqA_compat gtA
+R2378:2385 Coq.Relations.Relation_Definitions <> relation def
+R2387:2387 CoLoR.Util.Relation.RelExtras <> A var
+inst 2403:2426 <> Eqset_def_gtA_eqA_compat
+R2430:2435 Coq.Classes.Morphisms <> Proper class
+R2458:2460 CoLoR.Util.Relation.RelExtras <> Eqset_def_gtA_eqA_compat.gtA var
+R2440:2444 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R2438:2439 Coq.Init.Logic <> eq ind
+R2447:2451 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R2445:2446 Coq.Init.Logic <> eq ind
+R2452:2455 Coq.Program.Basics <> impl def
+R2556:2579 CoLoR.Util.Relation.RelExtras Eqset_def_gtA_eqA_compat <> sec
+modtype 2595:2597 <> Ord
+ax 2613:2613 Ord A
+R2652:2656 CoLoR.Util.Relation.RelExtras Eqset <> mod
+R2679:2679 CoLoR.Util.Relation.RelExtras Ord A defax
+mod 2648:2648 <> Ord.S
+ax 2695:2697 Ord gtA
+R2701:2708 Coq.Relations.Relation_Definitions <> relation def
+R2710:2710 CoLoR.Util.Relation.RelExtras Ord.S A defax
+R2737:2739 CoLoR.Util.Relation.RelExtras Ord gtA defax
+not 2724:2724 Ord ::x_'>A'_x
+inst 2781:2794 Ord gtA_eqA_compat
+R2798:2803 Coq.Classes.Morphisms <> Proper class
+R2828:2830 CoLoR.Util.Relation.RelExtras Ord gtA defax
+R2809:2813 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R2806:2808 CoLoR.Util.Relation.RelExtras Ord.S eqA defax
+R2817:2821 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R2814:2816 CoLoR.Util.Relation.RelExtras Ord.S eqA defax
+R2822:2825 Coq.Program.Basics <> impl def
+R2877:2879 CoLoR.Util.Relation.RelExtras Ord <> modtype
+R2912:2914 CoLoR.Util.Relation.RelExtras Ord <> mod
+mod 2890:2898 <> OrdLemmas
+def 2932:2934 OrdLemmas ltA
+R2939:2944 Coq.Relations.Relation_Operators <> transp def
+R2946:2948 CoLoR.Util.Relation.RelExtras P gtA defax
+def 2964:2966 OrdLemmas geA
+R2975:2976 Coq.Init.Logic <> :type_scope:'~'_x not
+R2977:2979 CoLoR.Util.Relation.RelExtras OrdLemmas ltA def
+R2983:2983 CoLoR.Util.Relation.RelExtras <> y var
+R2981:2981 CoLoR.Util.Relation.RelExtras <> x var
+def 2999:3001 OrdLemmas leA
+R3010:3011 Coq.Init.Logic <> :type_scope:'~'_x not
+R3012:3014 CoLoR.Util.Relation.RelExtras P gtA defax
+R3018:3018 CoLoR.Util.Relation.RelExtras <> y var
+R3016:3016 CoLoR.Util.Relation.RelExtras <> x var
+def 3034:3037 OrdLemmas AccA
+R3042:3044 Coq.Init.Wf <> Acc ind
+R3046:3048 CoLoR.Util.Relation.RelExtras OrdLemmas ltA def
+R3076:3078 CoLoR.Util.Relation.RelExtras OrdLemmas ltA def
+not 3063:3063 OrdLemmas ::x_'<A'_x
+R3125:3127 CoLoR.Util.Relation.RelExtras OrdLemmas geA def
+not 3111:3111 OrdLemmas ::x_'>=A'_x
+R3174:3176 CoLoR.Util.Relation.RelExtras OrdLemmas leA def
+not 3160:3160 OrdLemmas ::x_'<=A'_x
+R3213:3215 CoLoR.Util.Relation.RelExtras OrdLemmas ltA def
+R3217:3219 CoLoR.Util.Relation.RelExtras OrdLemmas geA def
+R3221:3223 CoLoR.Util.Relation.RelExtras OrdLemmas leA def
+R3225:3228 CoLoR.Util.Relation.RelExtras OrdLemmas AccA def
+inst 3262:3270 OrdLemmas gtA_morph
+R3274:3279 Coq.Classes.Morphisms <> Proper class
+R3303:3305 CoLoR.Util.Relation.RelExtras P gtA defax
+R3285:3289 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R3282:3284 CoLoR.Util.Relation.RelExtras P.S eqA defax
+R3293:3297 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R3290:3292 CoLoR.Util.Relation.RelExtras P.S eqA defax
+R3298:3300 Coq.Init.Logic <> iff def
+R3353:3366 CoLoR.Util.Relation.RelExtras P gtA_eqA_compat prfax
+R3353:3366 CoLoR.Util.Relation.RelExtras P gtA_eqA_compat prfax
+R3353:3366 CoLoR.Util.Relation.RelExtras P gtA_eqA_compat prfax
+inst 3414:3422 OrdLemmas ltA_morph
+R3426:3431 Coq.Classes.Morphisms <> Proper class
+R3455:3457 CoLoR.Util.Relation.RelExtras OrdLemmas ltA def
+R3437:3441 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R3434:3436 CoLoR.Util.Relation.RelExtras P.S eqA defax
+R3445:3449 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R3442:3444 CoLoR.Util.Relation.RelExtras P.S eqA defax
+R3450:3452 Coq.Init.Logic <> iff def
+R3505:3518 CoLoR.Util.Relation.RelExtras P gtA_eqA_compat prfax
+R3505:3518 CoLoR.Util.Relation.RelExtras P gtA_eqA_compat prfax
+R3505:3518 CoLoR.Util.Relation.RelExtras P gtA_eqA_compat prfax
+inst 3554:3563 OrdLemmas AccA_morph
+R3567:3572 Coq.Classes.Morphisms <> Proper class
+R3588:3591 CoLoR.Util.Relation.RelExtras OrdLemmas AccA def
+R3578:3582 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R3575:3577 CoLoR.Util.Relation.RelExtras P.S eqA defax
+R3583:3585 Coq.Init.Logic <> iff def
+R3825:3833 CoLoR.Util.Relation.RelExtras OrdLemmas <> mod
+modtype 3849:3853 <> Poset
+ax 3869:3869 Poset A
+R3908:3910 CoLoR.Util.Relation.RelExtras Ord <> mod
+R3933:3933 CoLoR.Util.Relation.RelExtras Poset A defax
+mod 3904:3904 <> Poset.O
+ax 3949:3954 Poset gtA_so
+R3958:3969 CoLoR.Util.Relation.RelExtras Poset strict_order rec
+R3971:3973 CoLoR.Util.Relation.RelExtras Poset.O gtA defax
+R3993:4002 CoLoR.Util.Relation.RelExtras Poset sord_trans proj
+R4004:4009 CoLoR.Util.Relation.RelExtras Poset gtA_so defax
+R4036:4046 CoLoR.Util.Relation.RelExtras Poset sord_irrefl proj
+R4048:4053 CoLoR.Util.Relation.RelExtras Poset gtA_so defax
+R4080:4095 CoLoR.Util.Relation.RelExtras Poset so_not_symmetric thm
+R4097:4102 CoLoR.Util.Relation.RelExtras Poset gtA_so defax
+R4129:4137 CoLoR.Util.Relation.RelExtras Poset so_strict thm
+R4161:4175 CoLoR.Util.Relation.RelExtras Poset.O.S eqA_Equivalence prfax
+R4146:4159 CoLoR.Util.Relation.RelExtras Poset.O gtA_eqA_compat prfax
+R4139:4144 CoLoR.Util.Relation.RelExtras Poset gtA_so defax
+R4191:4195 CoLoR.Util.Relation.RelExtras Poset <> modtype
+R4217:4219 CoLoR.Util.Relation.RelExtras Ord <> mod
+mod 4206:4212 <> nat_ord
+R4242:4245 CoLoR.Util.Relation.RelExtras SetA <> mod
+mod 4232:4237 <> nat_ord.natSet
+def 4263:4263 nat_ord.natSet A
+R4268:4270 Coq.Init.Datatypes <> nat ind
+def 4288:4294 nat_ord.natSet eqA_dec
+R4299:4308 Coq.Arith.Peano_dec <> eq_nat_dec syndef
+R4317:4322 CoLoR.Util.Relation.RelExtras nat_ord.natSet <> mod
+R4340:4348 CoLoR.Util.Relation.RelExtras Eqset_def <> modtype
+R4350:4355 CoLoR.Util.Relation.RelExtras nat_ord.natSet <> modtype
+mod 4335:4335 <> nat_ord.S
+def 4372:4372 nat_ord A
+R4377:4379 Coq.Init.Datatypes <> nat ind
+def 4395:4397 nat_ord gtA
+R4402:4403 Coq.Init.Peano <> gt def
+inst 4418:4431 nat_ord gtA_eqA_compat
+R4435:4440 Coq.Classes.Morphisms <> Proper class
+R4463:4464 Coq.Init.Peano <> gt def
+R4445:4449 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R4443:4444 Coq.Init.Logic <> eq ind
+R4452:4456 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R4450:4451 Coq.Init.Logic <> eq ind
+R4457:4460 Coq.Program.Basics <> impl def
+R4491:4497 CoLoR.Util.Relation.RelExtras nat_ord <> mod
+sec 4605:4610 <> Specif
+ind 4626:4631 <> sigPS2
+constr 4689:4696 <> existPS2
+R4650:4653 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R4649:4649 CoLoR.Util.Relation.RelExtras <> A var
+R4666:4669 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R4665:4665 CoLoR.Util.Relation.RelExtras <> A var
+R4713:4716 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R4720:4723 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R4724:4729 CoLoR.Util.Relation.RelExtras <> sigPS2 ind
+R4719:4719 CoLoR.Util.Relation.RelExtras <> x var
+R4712:4712 CoLoR.Util.Relation.RelExtras <> x var
+R4783:4788 CoLoR.Util.Relation.RelExtras <> sigPS2 ind
+not 4755:4755 Specif :type_scope:'{'_x_':'_x_'#'_x_'&'_x_'}'
+var 4853:4853 Specif A
+var 4864:4864 Specif P
+var 4866:4866 Specif Q
+R4871:4874 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R4870:4870 CoLoR.Util.Relation.RelExtras <> A var
+def 4896:4905 <> proj1_sig2
+R4911:4914 Coq.Init.Specif <> sig2 ind
+R4918:4918 CoLoR.Util.Relation.RelExtras <> Specif.Q var
+R4916:4916 CoLoR.Util.Relation.RelExtras <> Specif.P var
+R4934:4934 CoLoR.Util.Relation.RelExtras <> e var
+R4947:4952 Coq.Init.Specif <> exist2 constr
+R4983:4988 CoLoR.Util.Relation.RelExtras Specif <> sec
+R5113:5117 Coq.Init.Logic <> proj1 thm
+R5157:5161 Coq.Init.Logic <> proj2 thm

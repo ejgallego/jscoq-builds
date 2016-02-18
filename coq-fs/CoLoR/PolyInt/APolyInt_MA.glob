@@ -1,0 +1,223 @@
+DIGEST b76b13308b528e7b10f0d760a887e5dc
+FCoLoR.PolyInt.APolyInt_MA
+R224:231 CoLoR.PolyInt.APolyInt <> <> lib
+R233:239 CoLoR.Term.WithArity.AMonAlg <> <> lib
+R241:245 CoLoR.Util.Integer.ZUtil <> <> lib
+R247:253 CoLoR.Util.Relation.RelUtil <> <> lib
+R255:269 CoLoR.Util.Polynom.PositivePolynom <> <> lib
+R271:274 CoLoR.Term.WithArity.ATrs <> <> lib
+R276:285 CoLoR.Util.List.ListForall <> <> lib
+R289:303 CoLoR.Util.Polynom.MonotonePolynom <> <> lib
+R305:313 CoLoR.Util.Logic.LogicUtil <> <> lib
+R315:322 CoLoR.Util.Bool.BoolUtil <> <> lib
+modtype 338:345 <> TPolyInt
+ax 360:362 TPolyInt sig
+R366:374 CoLoR.Term.WithArity.ASignature <> Signature rec
+ax 389:394 TPolyInt trsInt
+R398:415 CoLoR.PolyInt.APolyInt <> PolyInterpretation def
+R417:419 CoLoR.PolyInt.APolyInt_MA TPolyInt sig defax
+ax 434:442 TPolyInt trsInt_wm
+R446:461 CoLoR.PolyInt.APolyInt <> PolyWeakMonotone def
+R463:468 CoLoR.PolyInt.APolyInt_MA TPolyInt trsInt defax
+R475:482 CoLoR.PolyInt.APolyInt_MA TPolyInt <> modtype
+R514:521 CoLoR.PolyInt.APolyInt_MA TPolyInt <> mod
+mod 493:499 <> PolyInt
+R590:608 CoLoR.Term.WithArity.AMonAlg MonotoneAlgebraType <> mod
+mod 571:585 <> PolyInt.MonotoneAlgebra
+def 627:629 PolyInt.MonotoneAlgebra Sig
+R634:636 CoLoR.PolyInt.APolyInt_MA PI sig defax
+def 659:659 PolyInt.MonotoneAlgebra I
+R664:672 CoLoR.PolyInt.APolyInt <> Int_of_PI def
+R674:682 CoLoR.PolyInt.APolyInt_MA PI trsInt_wm defax
+def 701:704 PolyInt.MonotoneAlgebra succ
+R709:711 CoLoR.Util.Integer.ZUtil <> Dgt def
+def 729:734 PolyInt.MonotoneAlgebra succeq
+R739:741 CoLoR.Util.Integer.ZUtil <> Dge def
+def 760:770 PolyInt.MonotoneAlgebra refl_succeq
+R775:782 CoLoR.Util.Integer.ZUtil <> refl_Dge thm
+def 800:809 PolyInt.MonotoneAlgebra trans_succ
+R814:822 CoLoR.Util.Integer.ZUtil <> trans_Dgt thm
+def 840:851 PolyInt.MonotoneAlgebra trans_succeq
+R856:864 CoLoR.Util.Integer.ZUtil <> trans_Dge thm
+prf 878:892 PolyInt.MonotoneAlgebra monotone_succeq
+R896:922 CoLoR.Term.WithArity.AWFMInterpretation <> monotone def
+R926:931 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra succeq def
+R924:924 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra I def
+R959:959 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra I def
+R968:981 CoLoR.PolyInt.APolyInt <> pi_monotone_eq thm
+R968:981 CoLoR.PolyInt.APolyInt <> pi_monotone_eq thm
+def 1009:1015 PolyInt.MonotoneAlgebra succ_wf
+R1020:1025 CoLoR.Util.Integer.ZUtil <> WF_Dgt thm
+prf 1039:1056 PolyInt.MonotoneAlgebra succ_succeq_compat
+R1060:1071 CoLoR.Util.Relation.RelUtil <> absorbs_left def
+R1078:1083 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra succeq def
+R1073:1076 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra succ def
+R1111:1114 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra succ def
+R1117:1122 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra succeq def
+R1181:1183 CoLoR.Util.Integer.ZUtil <> Dgt def
+R1186:1188 CoLoR.Util.Integer.ZUtil <> Dlt def
+R1191:1196 Coq.Relations.Relation_Operators <> transp def
+R1224:1226 CoLoR.Util.Integer.ZUtil <> val syndef
+R1205:1216 Coq.ZArith.Zorder <> Zlt_le_trans syndef
+R1224:1226 CoLoR.Util.Integer.ZUtil <> val syndef
+R1205:1216 Coq.ZArith.Zorder <> Zlt_le_trans syndef
+def 1263:1273 PolyInt.MonotoneAlgebra rulePoly_gt
+R1282:1292 CoLoR.PolyInt.APolyInt <> rulePoly_gt def
+R1303:1308 CoLoR.Term.WithArity.ATrs <> mkRule constr
+R1316:1316 CoLoR.PolyInt.APolyInt_MA <> r var
+R1314:1314 CoLoR.PolyInt.APolyInt_MA <> l var
+R1310:1312 CoLoR.PolyInt.APolyInt_MA PI sig defax
+R1294:1299 CoLoR.PolyInt.APolyInt_MA PI trsInt defax
+def 1336:1340 PolyInt.MonotoneAlgebra succ'
+R1349:1356 CoLoR.Util.Polynom.PositivePolynom <> coef_pos def
+R1359:1369 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra rulePoly_gt def
+R1373:1373 CoLoR.PolyInt.APolyInt_MA <> r var
+R1371:1371 CoLoR.PolyInt.APolyInt_MA <> l var
+def 1393:1398 PolyInt.MonotoneAlgebra bsucc'
+R1407:1415 CoLoR.Util.Polynom.PositivePolynom <> bcoef_pos def
+R1418:1428 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra rulePoly_gt def
+R1432:1432 CoLoR.PolyInt.APolyInt_MA <> r var
+R1430:1430 CoLoR.PolyInt.APolyInt_MA <> l var
+prf 1447:1455 PolyInt.MonotoneAlgebra bsucc'_ok
+R1488:1492 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R1481:1483 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1471:1476 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra bsucc' def
+R1480:1480 CoLoR.PolyInt.APolyInt_MA <> r var
+R1478:1478 CoLoR.PolyInt.APolyInt_MA <> l var
+R1484:1487 Coq.Init.Datatypes <> true constr
+R1493:1497 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra succ' def
+R1501:1501 CoLoR.PolyInt.APolyInt_MA <> r var
+R1499:1499 CoLoR.PolyInt.APolyInt_MA <> l var
+R1541:1546 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra bsucc' def
+R1549:1553 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra succ' def
+R1562:1573 CoLoR.Util.Polynom.PositivePolynom <> bcoef_pos_ok thm
+R1562:1573 CoLoR.Util.Polynom.PositivePolynom <> bcoef_pos_ok thm
+prf 1596:1604 PolyInt.MonotoneAlgebra succ'_dec
+R1608:1614 CoLoR.Util.Relation.RelMidex <> rel_dec def
+R1616:1620 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra succ' def
+R1660:1664 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra succ' def
+R1674:1676 CoLoR.Util.Bool.BoolUtil <> dec thm
+R1674:1676 CoLoR.Util.Bool.BoolUtil <> dec thm
+R1685:1696 CoLoR.Util.Polynom.PositivePolynom <> bcoef_pos_ok thm
+R1685:1696 CoLoR.Util.Polynom.PositivePolynom <> bcoef_pos_ok thm
+def 1728:1738 PolyInt.MonotoneAlgebra rulePoly_ge
+R1747:1757 CoLoR.PolyInt.APolyInt <> rulePoly_ge def
+R1768:1773 CoLoR.Term.WithArity.ATrs <> mkRule constr
+R1781:1781 CoLoR.PolyInt.APolyInt_MA <> r var
+R1779:1779 CoLoR.PolyInt.APolyInt_MA <> l var
+R1775:1777 CoLoR.PolyInt.APolyInt_MA PI sig defax
+R1759:1764 CoLoR.PolyInt.APolyInt_MA PI trsInt defax
+def 1801:1807 PolyInt.MonotoneAlgebra succeq'
+R1816:1823 CoLoR.Util.Polynom.PositivePolynom <> coef_pos def
+R1826:1836 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra rulePoly_ge def
+R1840:1840 CoLoR.PolyInt.APolyInt_MA <> r var
+R1838:1838 CoLoR.PolyInt.APolyInt_MA <> l var
+def 1860:1867 PolyInt.MonotoneAlgebra bsucceq'
+R1876:1884 CoLoR.Util.Polynom.PositivePolynom <> bcoef_pos def
+R1887:1897 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra rulePoly_ge def
+R1901:1901 CoLoR.PolyInt.APolyInt_MA <> r var
+R1899:1899 CoLoR.PolyInt.APolyInt_MA <> l var
+prf 1916:1926 PolyInt.MonotoneAlgebra bsucceq'_ok
+R1961:1965 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R1954:1956 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1942:1949 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra bsucceq' def
+R1953:1953 CoLoR.PolyInt.APolyInt_MA <> r var
+R1951:1951 CoLoR.PolyInt.APolyInt_MA <> l var
+R1957:1960 Coq.Init.Datatypes <> true constr
+R1966:1972 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra succeq' def
+R1976:1976 CoLoR.PolyInt.APolyInt_MA <> r var
+R1974:1974 CoLoR.PolyInt.APolyInt_MA <> l var
+R2016:2023 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra bsucceq' def
+R2026:2032 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra succeq' def
+R2041:2052 CoLoR.Util.Polynom.PositivePolynom <> bcoef_pos_ok thm
+R2041:2052 CoLoR.Util.Polynom.PositivePolynom <> bcoef_pos_ok thm
+prf 2075:2085 PolyInt.MonotoneAlgebra succeq'_dec
+R2089:2095 CoLoR.Util.Relation.RelMidex <> rel_dec def
+R2097:2103 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra succeq' def
+R2143:2149 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra succeq' def
+R2159:2161 CoLoR.Util.Bool.BoolUtil <> dec thm
+R2159:2161 CoLoR.Util.Bool.BoolUtil <> dec thm
+R2170:2181 CoLoR.Util.Polynom.PositivePolynom <> bcoef_pos_ok thm
+R2170:2181 CoLoR.Util.Polynom.PositivePolynom <> bcoef_pos_ok thm
+prf 2208:2216 PolyInt.MonotoneAlgebra succ'_sub
+R2225:2228 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'<<'_x not
+R2220:2224 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra succ' def
+R2229:2230 CoLoR.Term.WithArity.AWFMInterpretation <> IR def
+R2234:2237 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra succ def
+R2232:2232 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra I def
+R2280:2280 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra I def
+R2283:2286 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra succ def
+R2299:2304 CoLoR.Term.WithArity.ATrs <> mkRule constr
+R2299:2304 CoLoR.Term.WithArity.ATrs <> mkRule constr
+R2333:2335 CoLoR.Term.WithArity.ATrs <> lhs proj
+R2333:2335 CoLoR.Term.WithArity.ATrs <> lhs proj
+R2356:2358 CoLoR.Term.WithArity.ATrs <> rhs proj
+R2356:2358 CoLoR.Term.WithArity.ATrs <> rhs proj
+R2376:2389 CoLoR.PolyInt.APolyInt <> pi_compat_rule thm
+R2376:2389 CoLoR.PolyInt.APolyInt <> pi_compat_rule thm
+prf 2417:2427 PolyInt.MonotoneAlgebra succeq'_sub
+R2438:2441 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'<<'_x not
+R2431:2437 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra succeq' def
+R2442:2443 CoLoR.Term.WithArity.AWFMInterpretation <> IR def
+R2447:2452 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra succeq def
+R2445:2445 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra I def
+R2495:2495 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra I def
+R2498:2501 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra succ def
+R2514:2519 CoLoR.Term.WithArity.ATrs <> mkRule constr
+R2514:2519 CoLoR.Term.WithArity.ATrs <> mkRule constr
+R2548:2550 CoLoR.Term.WithArity.ATrs <> lhs proj
+R2548:2550 CoLoR.Term.WithArity.ATrs <> lhs proj
+R2571:2573 CoLoR.Term.WithArity.ATrs <> rhs proj
+R2571:2573 CoLoR.Term.WithArity.ATrs <> rhs proj
+R2591:2609 CoLoR.PolyInt.APolyInt <> pi_compat_rule_weak thm
+R2591:2609 CoLoR.PolyInt.APolyInt <> pi_compat_rule_weak thm
+sec 2639:2661 PolyInt.MonotoneAlgebra ExtendedMonotoneAlgebra
+prf 2677:2689 PolyInt.MonotoneAlgebra monotone_succ
+R2718:2729 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2730:2756 CoLoR.Term.WithArity.AWFMInterpretation <> monotone def
+R2760:2763 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra succ def
+R2758:2758 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra I def
+R2693:2710 CoLoR.PolyInt.APolyInt <> PolyStrongMonotone def
+R2712:2717 CoLoR.PolyInt.APolyInt_MA PI trsInt defax
+R2795:2795 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra I def
+R2804:2814 CoLoR.PolyInt.APolyInt <> pi_monotone thm
+R2804:2814 CoLoR.PolyInt.APolyInt <> pi_monotone thm
+R2837:2859 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra.ExtendedMonotoneAlgebra <> sec
+R2882:2885 Coq.Lists.List <> <> lib
+sec 2901:2907 PolyInt.MonotoneAlgebra fin_Sig
+var 2926:2927 PolyInt.MonotoneAlgebra.fin_Sig Fs
+R2931:2934 Coq.Init.Datatypes <> list ind
+R2936:2938 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra Sig def
+var 2956:2960 PolyInt.MonotoneAlgebra.fin_Sig Fs_ok
+R2975:2977 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra Sig def
+R2980:2981 Coq.Lists.List <> In def
+R2985:2986 CoLoR.PolyInt.APolyInt_MA <> PolyInt.MonotoneAlgebra.fin_Sig.Fs var
+R2983:2983 CoLoR.PolyInt.APolyInt_MA <> f var
+prf 3002:3018 PolyInt.MonotoneAlgebra fin_monotone_succ
+R3087:3098 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3099:3125 CoLoR.Term.WithArity.AWFMInterpretation <> monotone def
+R3129:3132 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra succ def
+R3127:3127 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra I def
+R3080:3082 Coq.Init.Logic <> :type_scope:x_'='_x not
+R3030:3036 Coq.Lists.List <> forallb def
+R3078:3079 CoLoR.PolyInt.APolyInt_MA <> PolyInt.MonotoneAlgebra.fin_Sig.Fs var
+R3048:3064 CoLoR.Util.Polynom.MonotonePolynom <> bpstrong_monotone def
+R3067:3072 CoLoR.PolyInt.APolyInt_MA PI trsInt defax
+R3074:3074 CoLoR.PolyInt.APolyInt_MA <> f var
+R3083:3086 Coq.Init.Datatypes <> true constr
+R3172:3184 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra monotone_succ thm
+R3172:3184 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra monotone_succ thm
+R3207:3226 CoLoR.Util.Polynom.MonotonePolynom <> bpstrong_monotone_ok thm
+R3207:3226 CoLoR.Util.Polynom.MonotonePolynom <> bpstrong_monotone_ok thm
+R3207:3226 CoLoR.Util.Polynom.MonotonePolynom <> bpstrong_monotone_ok thm
+R3245:3258 Coq.Lists.List <> forallb_forall thm
+R3245:3258 Coq.Lists.List <> forallb_forall thm
+R3245:3258 Coq.Lists.List <> forallb_forall thm
+R3281:3285 CoLoR.PolyInt.APolyInt_MA <> PolyInt.MonotoneAlgebra.fin_Sig.Fs_ok var
+R3281:3285 CoLoR.PolyInt.APolyInt_MA <> PolyInt.MonotoneAlgebra.fin_Sig.Fs_ok var
+R3308:3314 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra.fin_Sig <> sec
+R3324:3338 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra <> mod
+R3465:3481 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra fin_monotone_succ thm
+R3530:3546 CoLoR.Term.WithArity.AWFMInterpretation <> IR_context_closed thm
+R3556:3572 CoLoR.PolyInt.APolyInt_MA PolyInt.MonotoneAlgebra fin_monotone_succ thm
+R3681:3687 CoLoR.PolyInt.APolyInt_MA PolyInt <> mod

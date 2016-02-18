@@ -1,0 +1,131 @@
+DIGEST b6fffe82265ef16d04e62c4a3c830015
+FCoLoR.ProofChecker.IntBasedChecker
+R202:208 Coq.Program.Program <> <> lib
+R210:218 CoLoR.Util.Logic.LogicUtil <> <> lib
+R220:226 CoLoR.Util.Option.OptUtil <> <> lib
+R228:237 CoLoR.Util.List.ListForall <> <> lib
+R239:242 CoLoR.Term.WithArity.ATrs <> <> lib
+R244:255 CoLoR.Util.Function.NaryFunction <> <> lib
+R259:273 CoLoR.Term.WithArity.AInterpretation <> <> lib
+R275:279 CoLoR.ProofChecker.Proof <> <> lib
+R281:288 CoLoR.Util.List.ListUtil <> <> lib
+sec 325:338 <> IntBasedSolver
+var 351:353 IntBasedSolver Sig
+R357:365 CoLoR.Term.WithArity.ASignature <> Signature rec
+var 378:386 IntBasedSolver rawSymInt
+def 408:416 <> rawTrsInt
+R421:426 CoLoR.ProofChecker.Proof <> trsInt def
+R432:440 CoLoR.ProofChecker.IntBasedChecker <> IntBasedSolver.rawSymInt var
+R428:430 CoLoR.ProofChecker.IntBasedChecker <> IntBasedSolver.Sig var
+var 453:460 IntBasedSolver arSymInt
+R467:470 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R464:466 Coq.Init.Datatypes <> nat ind
+var 486:495 IntBasedSolver defaultInt
+R509:516 CoLoR.ProofChecker.IntBasedChecker <> IntBasedSolver.arSymInt var
+R518:518 CoLoR.ProofChecker.IntBasedChecker <> n var
+def 533:538 <> funInt
+R545:547 CoLoR.ProofChecker.IntBasedChecker <> IntBasedSolver.Sig var
+R553:560 CoLoR.ProofChecker.IntBasedChecker <> IntBasedSolver.arSymInt var
+R563:567 CoLoR.Term.WithArity.ASignature <> arity proj
+R569:569 CoLoR.ProofChecker.IntBasedChecker <> f var
+def 584:589 <> symInt
+R594:595 Coq.Init.Specif <> :type_scope:'{'_x_':'_x_'&'_x_'}' not
+R597:599 Coq.Init.Specif <> :type_scope:'{'_x_':'_x_'&'_x_'}' not
+R603:605 Coq.Init.Specif <> :type_scope:'{'_x_':'_x_'&'_x_'}' not
+R614:615 Coq.Init.Specif <> :type_scope:'{'_x_':'_x_'&'_x_'}' not
+R600:602 CoLoR.ProofChecker.IntBasedChecker <> IntBasedSolver.Sig var
+R606:611 CoLoR.ProofChecker.IntBasedChecker <> funInt def
+def 630:648 <> defaultIntForSymbol
+R656:665 CoLoR.ProofChecker.IntBasedChecker <> IntBasedSolver.defaultInt var
+R669:673 CoLoR.Term.WithArity.ASignature <> arity proj
+R679:679 CoLoR.ProofChecker.IntBasedChecker <> f var
+R675:677 CoLoR.ProofChecker.IntBasedChecker <> IntBasedSolver.Sig var
+def 695:705 <> buildSymInt
+R715:720 CoLoR.ProofChecker.IntBasedChecker <> funInt def
+R722:722 CoLoR.ProofChecker.IntBasedChecker <> f var
+R727:732 CoLoR.ProofChecker.IntBasedChecker <> symInt def
+R737:742 Coq.Init.Specif <> existT constr
+R744:745 CoLoR.ProofChecker.IntBasedChecker <> fi var
+var 758:765 IntBasedSolver checkInt
+R772:775 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R785:788 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R789:794 Coq.Init.Datatypes <> option ind
+R796:801 CoLoR.ProofChecker.IntBasedChecker <> symInt def
+R776:784 CoLoR.ProofChecker.IntBasedChecker <> IntBasedSolver.rawSymInt var
+R769:771 CoLoR.ProofChecker.IntBasedChecker <> IntBasedSolver.Sig var
+def 814:823 <> processInt
+R831:839 CoLoR.ProofChecker.IntBasedChecker <> rawTrsInt def
+R844:849 Coq.Init.Datatypes <> option ind
+R852:855 Coq.Init.Datatypes <> list ind
+R857:862 CoLoR.ProofChecker.IntBasedChecker <> symInt def
+R876:877 CoLoR.ProofChecker.IntBasedChecker <> ri var
+R895:898 Coq.Init.Datatypes <> Some constr
+R900:902 Coq.Lists.List <> nil syndef
+R933:940 CoLoR.ProofChecker.IntBasedChecker <> IntBasedSolver.checkInt var
+R951:953 Coq.Init.Datatypes <> snd def
+R943:945 Coq.Init.Datatypes <> fst def
+R971:974 Coq.Init.Datatypes <> None constr
+R979:982 Coq.Init.Datatypes <> None constr
+R992:995 Coq.Init.Datatypes <> Some constr
+R1020:1029 CoLoR.ProofChecker.IntBasedChecker <> processInt def
+R1051:1054 Coq.Init.Datatypes <> None constr
+R1059:1062 Coq.Init.Datatypes <> None constr
+R1076:1079 Coq.Init.Datatypes <> Some constr
+R1088:1091 Coq.Init.Datatypes <> Some constr
+R1096:1099 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+def 1148:1155 <> buildInt
+R1162:1165 Coq.Init.Datatypes <> list ind
+R1167:1172 CoLoR.ProofChecker.IntBasedChecker <> symInt def
+R1187:1192 CoLoR.ProofChecker.IntBasedChecker <> funInt def
+R1194:1194 CoLoR.ProofChecker.IntBasedChecker <> f var
+R1210:1219 CoLoR.Util.List.ListUtil <> lookup_dep def
+R1270:1270 CoLoR.ProofChecker.IntBasedChecker <> i var
+R1250:1268 CoLoR.ProofChecker.IntBasedChecker <> defaultIntForSymbol def
+R1228:1228 CoLoR.ProofChecker.IntBasedChecker <> f var
+R1233:1243 CoLoR.Term.WithArity.ASignature <> eq_symb_dec def
+R1245:1247 CoLoR.ProofChecker.IntBasedChecker <> IntBasedSolver.Sig var
+var 1283:1283 IntBasedSolver P
+R1293:1296 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1287:1292 CoLoR.ProofChecker.IntBasedChecker <> symInt def
+var 1312:1318 IntBasedSolver check_P
+R1334:1339 CoLoR.ProofChecker.IntBasedChecker <> symInt def
+R1343:1348 Coq.Init.Datatypes <> option ind
+R1351:1351 CoLoR.ProofChecker.IntBasedChecker <> IntBasedSolver.P var
+R1353:1353 CoLoR.ProofChecker.IntBasedChecker <> i var
+var 1366:1374 IntBasedSolver default_P
+R1388:1388 CoLoR.ProofChecker.IntBasedChecker <> IntBasedSolver.P var
+R1391:1401 CoLoR.ProofChecker.IntBasedChecker <> buildSymInt def
+R1404:1422 CoLoR.ProofChecker.IntBasedChecker <> defaultIntForSymbol def
+R1424:1424 CoLoR.ProofChecker.IntBasedChecker <> f var
+def 1447:1455 <> checkProp
+R1462:1465 Coq.Init.Datatypes <> list ind
+R1467:1472 CoLoR.ProofChecker.IntBasedChecker <> symInt def
+R1480:1485 Coq.Init.Datatypes <> option ind
+R1498:1498 CoLoR.ProofChecker.IntBasedChecker <> IntBasedSolver.P var
+R1501:1511 CoLoR.ProofChecker.IntBasedChecker <> buildSymInt def
+R1514:1521 CoLoR.ProofChecker.IntBasedChecker <> buildInt def
+R1525:1525 CoLoR.ProofChecker.IntBasedChecker <> f var
+R1523:1523 CoLoR.ProofChecker.IntBasedChecker <> i var
+R1541:1551 CoLoR.Util.Option.OptUtil <> lforall_opt def
+R1563:1563 CoLoR.ProofChecker.IntBasedChecker <> i var
+R1555:1561 CoLoR.ProofChecker.IntBasedChecker <> IntBasedSolver.check_P var
+R1553:1553 CoLoR.ProofChecker.IntBasedChecker <> IntBasedSolver.P var
+R1574:1577 Coq.Init.Datatypes <> None constr
+R1582:1585 Coq.Init.Datatypes <> None constr
+R1591:1594 Coq.Init.Datatypes <> Some constr
+R1601:1604 Coq.Init.Datatypes <> Some constr
+R1642:1656 CoLoR.Util.List.ListUtil <> lookup_dep_prop thm
+R1676:1676 CoLoR.ProofChecker.IntBasedChecker <> IntBasedSolver.P var
+R1679:1689 CoLoR.ProofChecker.IntBasedChecker <> buildSymInt def
+R1691:1692 CoLoR.ProofChecker.IntBasedChecker <> fi var
+R1642:1656 CoLoR.Util.List.ListUtil <> lookup_dep_prop thm
+R1676:1676 CoLoR.ProofChecker.IntBasedChecker <> IntBasedSolver.P var
+R1679:1689 CoLoR.ProofChecker.IntBasedChecker <> buildSymInt def
+R1691:1692 CoLoR.ProofChecker.IntBasedChecker <> fi var
+R1722:1732 CoLoR.Util.Option.OptUtil <> lforall_opt def
+R1722:1732 CoLoR.Util.Option.OptUtil <> lforall_opt def
+R1753:1762 CoLoR.Util.List.ListForall <> lforall_in thm
+R1753:1762 CoLoR.Util.List.ListForall <> lforall_in thm
+R1806:1814 CoLoR.ProofChecker.IntBasedChecker <> IntBasedSolver.default_P var
+R1806:1814 CoLoR.ProofChecker.IntBasedChecker <> IntBasedSolver.default_P var
+R1827:1840 CoLoR.ProofChecker.IntBasedChecker IntBasedSolver <> sec

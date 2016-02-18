@@ -1,17 +1,22 @@
-[
-  {
-    "pkg_id": [ "Coq", "romega" ],
-    "vo_files": [ "ROmega.vo", "ReflOmegaCore.vo" ],
-    "cma_files": [ "romega_plugin.cma" ]
-  },
-  {
-    "pkg_id": [ "Flocq", "Core" ],
-    "vo_files": [
-      "Fcore_float_prop.vo", "Fcore_FLX.vo", "Fcore_rnd.vo", "Fcore_defs.vo",
-      "Fcore_digits.vo", "Fcore_rnd_ne.vo", "Fcore_FTZ.vo",
-      "Fcore_generic_fmt.vo", "Fcore_FLT.vo", "Fcore_Zaux.vo",
-      "Fcore_Raux.vo", "Fcore.vo", "Fcore_FIX.vo", "Fcore_ulp.vo"
-    ],
-    "cma_files": []
-  }
-]
+{
+  "desc": "flocq",
+  "deps": [ "coq-reals" ],
+  "pkgs": [
+    {
+      "pkg_id": [ "Coq", "romega" ],
+      "vo_files": [ "ROmega.vo", "ReflOmegaCore.vo" ],
+      "cma_files": [ "romega_plugin.cma" ]
+    },
+    {
+      "pkg_id": [ "Flocq", "Core" ],
+      "vo_files": [
+        "Fcore_float_prop.vo", "Fcore_FLX.vo", "Fcore_rnd.vo",
+        "Fcore_defs.vo", "Fcore_digits.vo", "Fcore_rnd_ne.vo",
+        "Fcore_FTZ.vo", "Fcore_generic_fmt.vo", "Fcore_FLT.vo",
+        "Fcore_Zaux.vo", "Fcore_Raux.vo", "Fcore.vo", "Fcore_FIX.vo",
+        "Fcore_ulp.vo"
+      ],
+      "cma_files": []
+    }
+  ]
+}

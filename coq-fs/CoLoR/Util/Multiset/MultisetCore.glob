@@ -1,0 +1,267 @@
+DIGEST 71b2d785b7f81523fb055480b705ddab
+FCoLoR.Util.Multiset.MultisetCore
+R285:293 Coq.Relations.Relations <> <> lib
+R295:303 CoLoR.Util.Relation.RelExtras <> <> lib
+R305:307 Coq.Arith.Min <> <> lib
+modtype 323:334 <> MultisetCore
+R368:376 CoLoR.Util.Relation.RelExtras Eqset_dec <> mod
+mod 362:364 <> MultisetCore.Sid
+sec 390:399 MultisetCore Operations
+ax 419:426 MultisetCore Multiset
+ax 451:454 MultisetCore mult
+R459:462 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R471:474 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R475:477 Coq.Init.Datatypes <> nat ind
+R463:470 CoLoR.Util.Multiset.MultisetCore MultisetCore Multiset defax
+R458:458 CoLoR.Util.Multiset.MultisetCore MultisetCore.Sid.Eq A defax
+ax 495:497 MultisetCore meq
+R501:508 Coq.Relations.Relation_Definitions <> relation def
+R510:517 CoLoR.Util.Multiset.MultisetCore MultisetCore Multiset defax
+ax 535:539 MultisetCore empty
+R543:550 CoLoR.Util.Multiset.MultisetCore MultisetCore Multiset defax
+ax 568:576 MultisetCore singleton
+R581:584 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R585:592 CoLoR.Util.Multiset.MultisetCore MultisetCore Multiset defax
+R580:580 CoLoR.Util.Multiset.MultisetCore MultisetCore.Sid.Eq A defax
+ax 610:614 MultisetCore union
+R626:629 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R638:641 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R642:649 CoLoR.Util.Multiset.MultisetCore MultisetCore Multiset defax
+R630:637 CoLoR.Util.Multiset.MultisetCore MultisetCore Multiset defax
+R618:625 CoLoR.Util.Multiset.MultisetCore MultisetCore Multiset defax
+ax 667:678 MultisetCore intersection
+R690:693 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R702:705 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R706:713 CoLoR.Util.Multiset.MultisetCore MultisetCore Multiset defax
+R694:701 CoLoR.Util.Multiset.MultisetCore MultisetCore Multiset defax
+R682:689 CoLoR.Util.Multiset.MultisetCore MultisetCore Multiset defax
+ax 731:734 MultisetCore diff
+R746:749 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R758:761 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R762:769 CoLoR.Util.Multiset.MultisetCore MultisetCore Multiset defax
+R750:757 CoLoR.Util.Multiset.MultisetCore MultisetCore Multiset defax
+R738:745 CoLoR.Util.Multiset.MultisetCore MultisetCore Multiset defax
+R779:788 CoLoR.Util.Multiset.MultisetCore MultisetCore.Operations <> sec
+R819:821 CoLoR.Util.Multiset.MultisetCore MultisetCore meq defax
+not 803:803 MultisetCore :msets_scope:x_'=mul='_x
+R884:884 Coq.Init.Logic <> :type_scope:'~'_x not
+R885:887 CoLoR.Util.Multiset.MultisetCore MultisetCore meq defax
+not 868:868 MultisetCore :msets_scope:x_'<>mul'_x
+R948:956 CoLoR.Util.Multiset.MultisetCore MultisetCore singleton defax
+not 934:934 MultisetCore :msets_scope:'{{'_x_'}}'
+R1012:1016 CoLoR.Util.Multiset.MultisetCore MultisetCore union defax
+not 1000:1000 MultisetCore :msets_scope:x_'+'_x
+R1061:1064 CoLoR.Util.Multiset.MultisetCore MultisetCore diff defax
+not 1049:1049 MultisetCore :msets_scope:x_'-'_x
+R1109:1120 CoLoR.Util.Multiset.MultisetCore MultisetCore intersection defax
+not 1097:1097 MultisetCore :msets_scope:x_'#'_x
+R1199:1202 CoLoR.Util.Multiset.MultisetCore MultisetCore mult defax
+not 1187:1187 MultisetCore :msets_scope:x_'/'_x
+sec 1342:1354 MultisetCore Specification
+var 1373:1373 MultisetCore.Specification M
+var 1375:1375 MultisetCore.Specification N
+var 1377:1377 MultisetCore.Specification P
+var 1392:1392 MultisetCore.Specification x
+var 1394:1394 MultisetCore.Specification y
+var 1396:1396 MultisetCore.Specification z
+var 1404:1404 MultisetCore.Specification n
+R1381:1388 CoLoR.Util.Multiset.MultisetCore MultisetCore Multiset defax
+R1400:1400 CoLoR.Util.Multiset.MultisetCore MultisetCore.Sid.Eq A defax
+R1408:1410 Coq.Init.Datatypes <> nat ind
+ax 1429:1443 MultisetCore mult_eqA_compat
+R1453:1456 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1460:1462 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1458:1458 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'/'_x not
+R1457:1457 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.x var
+R1459:1459 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.M var
+R1464:1464 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'/'_x not
+R1463:1463 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.y var
+R1465:1465 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.M var
+R1447:1451 CoLoR.Util.Relation.RelExtras Eqset ::x_'=A='_x not
+R1446:1446 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.x var
+R1452:1452 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.y var
+ax 1483:1492 MultisetCore meq_multeq
+R1504:1508 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1528:1528 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1522:1524 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1520:1520 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'/'_x not
+R1519:1519 CoLoR.Util.Multiset.MultisetCore <> x var
+R1521:1521 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.M var
+R1526:1526 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'/'_x not
+R1525:1525 CoLoR.Util.Multiset.MultisetCore <> x var
+R1527:1527 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.N var
+R1496:1502 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'=mul='_x not
+R1495:1495 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.M var
+R1503:1503 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.N var
+ax 1546:1555 MultisetCore multeq_meq
+R1558:1558 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1578:1582 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1584:1590 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'=mul='_x not
+R1583:1583 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.M var
+R1591:1591 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.N var
+R1572:1574 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1570:1570 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'/'_x not
+R1569:1569 CoLoR.Util.Multiset.MultisetCore <> x var
+R1571:1571 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.M var
+R1576:1576 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'/'_x not
+R1575:1575 CoLoR.Util.Multiset.MultisetCore <> x var
+R1577:1577 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.N var
+ax 1609:1618 MultisetCore empty_mult
+R1628:1630 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1622:1622 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'/'_x not
+R1621:1621 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.x var
+R1623:1627 CoLoR.Util.Multiset.MultisetCore MultisetCore empty defax
+ax 1649:1658 MultisetCore union_mult
+R1668:1670 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1662:1663 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'/'_x not
+R1667:1667 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'/'_x not
+R1661:1661 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.x var
+R1665:1665 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'+'_x not
+R1664:1664 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.M var
+R1666:1666 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.N var
+R1675:1677 Coq.Init.Peano <> :nat_scope:x_'+'_x not
+R1673:1673 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'/'_x not
+R1672:1672 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.x var
+R1674:1674 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.M var
+R1679:1679 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'/'_x not
+R1678:1678 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.x var
+R1680:1680 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.N var
+ax 1703:1711 MultisetCore diff_mult
+R1721:1723 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1715:1716 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'/'_x not
+R1720:1720 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'/'_x not
+R1714:1714 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.x var
+R1718:1718 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'-'_x not
+R1717:1717 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.M var
+R1719:1719 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.N var
+R1728:1730 Coq.Init.Peano <> :nat_scope:x_'-'_x not
+R1726:1726 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'/'_x not
+R1725:1725 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.x var
+R1727:1727 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.M var
+R1732:1732 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'/'_x not
+R1731:1731 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.x var
+R1733:1733 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.N var
+ax 1756:1772 MultisetCore intersection_mult
+R1782:1784 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1776:1777 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'/'_x not
+R1781:1781 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'/'_x not
+R1775:1775 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.x var
+R1779:1779 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'#'_x not
+R1778:1778 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.M var
+R1780:1780 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.N var
+R1785:1791 Coq.Arith.Min <> min syndef
+R1801:1801 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'/'_x not
+R1800:1800 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.x var
+R1802:1802 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.N var
+R1795:1795 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'/'_x not
+R1794:1794 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.x var
+R1796:1796 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.M var
+ax 1821:1837 MultisetCore singleton_mult_in
+R1847:1850 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1858:1860 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1852:1852 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'/'_x not
+R1851:1851 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.x var
+R1853:1854 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:'{{'_x_'}}' not
+R1856:1857 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:'{{'_x_'}}' not
+R1855:1855 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.y var
+R1841:1845 CoLoR.Util.Relation.RelExtras Eqset ::x_'=A='_x not
+R1840:1840 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.x var
+R1846:1846 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.y var
+ax 1879:1898 MultisetCore singleton_mult_notin
+R1909:1912 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1920:1922 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1914:1914 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'/'_x not
+R1913:1913 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.x var
+R1915:1916 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:'{{'_x_'}}' not
+R1918:1919 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:'{{'_x_'}}' not
+R1917:1917 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.y var
+R1901:1901 Coq.Init.Logic <> :type_scope:'~'_x not
+R1903:1907 CoLoR.Util.Relation.RelExtras Eqset ::x_'=A='_x not
+R1902:1902 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.x var
+R1908:1908 CoLoR.Util.Multiset.MultisetCore <> MultisetCore.Specification.y var
+ax 1941:1953 MultisetCore mset_ind_type
+R1975:1978 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1967:1974 CoLoR.Util.Multiset.MultisetCore MultisetCore Multiset defax
+R2000:2003 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2004:2004 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2037:2041 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2052:2052 CoLoR.Util.Multiset.MultisetCore <> P var
+R2054:2054 CoLoR.Util.Multiset.MultisetCore <> M var
+R2020:2023 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2024:2024 CoLoR.Util.Multiset.MultisetCore <> P var
+R2028:2030 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:x_'+'_x not
+R2027:2027 CoLoR.Util.Multiset.MultisetCore <> M var
+R2031:2032 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:'{{'_x_'}}' not
+R2034:2035 CoLoR.Util.Multiset.MultisetCore MultisetCore :msets_scope:'{{'_x_'}}' not
+R2033:2033 CoLoR.Util.Multiset.MultisetCore <> a var
+R2017:2017 CoLoR.Util.Multiset.MultisetCore <> P var
+R2019:2019 CoLoR.Util.Multiset.MultisetCore <> M var
+R1993:1993 CoLoR.Util.Multiset.MultisetCore <> P var
+R1995:1999 CoLoR.Util.Multiset.MultisetCore MultisetCore empty defax
+R2064:2076 CoLoR.Util.Multiset.MultisetCore MultisetCore.Specification <> sec
+R2372:2381 CoLoR.Util.Multiset.MultisetCore MultisetCore empty_mult defax
+R2398:2407 CoLoR.Util.Multiset.MultisetCore MultisetCore union_mult defax
+R2417:2425 CoLoR.Util.Multiset.MultisetCore MultisetCore diff_mult defax
+R2435:2451 CoLoR.Util.Multiset.MultisetCore MultisetCore intersection_mult defax
+R2485:2496 CoLoR.Util.Multiset.MultisetCore MultisetCore <> modtype
+sec 2508:2540 <> Multiset_IntersectionAsDifference
+var 2561:2561 Multiset_IntersectionAsDifference A
+var 2572:2579 Multiset_IntersectionAsDifference Multiset
+var 2590:2592 Multiset_IntersectionAsDifference meq
+var 2620:2623 Multiset_IntersectionAsDifference mult
+var 2654:2657 Multiset_IntersectionAsDifference diff
+var 2700:2708 Multiset_IntersectionAsDifference diff_mult
+R2596:2603 Coq.Relations.Relation_Definitions <> relation def
+R2605:2612 CoLoR.Util.Multiset.MultisetCore <> Multiset var
+R2628:2631 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2640:2643 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2644:2646 Coq.Init.Datatypes <> nat ind
+R2632:2639 CoLoR.Util.Multiset.MultisetCore <> Multiset var
+R2627:2627 CoLoR.Util.Multiset.MultisetCore <> A var
+R2669:2672 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2681:2684 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2685:2692 CoLoR.Util.Multiset.MultisetCore <> Multiset var
+R2673:2680 CoLoR.Util.Multiset.MultisetCore <> Multiset var
+R2661:2668 CoLoR.Util.Multiset.MultisetCore <> Multiset var
+R2743:2745 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2726:2729 CoLoR.Util.Multiset.MultisetCore <> mult var
+R2734:2737 CoLoR.Util.Multiset.MultisetCore <> diff var
+R2741:2741 CoLoR.Util.Multiset.MultisetCore <> N var
+R2739:2739 CoLoR.Util.Multiset.MultisetCore <> M var
+R2731:2731 CoLoR.Util.Multiset.MultisetCore <> x var
+R2754:2756 Coq.Init.Peano <> :nat_scope:x_'-'_x not
+R2746:2749 CoLoR.Util.Multiset.MultisetCore <> mult var
+R2753:2753 CoLoR.Util.Multiset.MultisetCore <> M var
+R2751:2751 CoLoR.Util.Multiset.MultisetCore <> x var
+R2757:2760 CoLoR.Util.Multiset.MultisetCore <> mult var
+R2764:2764 CoLoR.Util.Multiset.MultisetCore <> N var
+R2762:2762 CoLoR.Util.Multiset.MultisetCore <> x var
+def 2782:2794 <> inter_as_diff
+R2803:2806 CoLoR.Util.Multiset.MultisetCore <> Multiset_IntersectionAsDifference.diff var
+R2811:2814 CoLoR.Util.Multiset.MultisetCore <> Multiset_IntersectionAsDifference.diff var
+R2818:2818 CoLoR.Util.Multiset.MultisetCore <> y var
+R2816:2816 CoLoR.Util.Multiset.MultisetCore <> x var
+R2808:2808 CoLoR.Util.Multiset.MultisetCore <> x var
+prf 2831:2846 <> inter_as_diff_ok
+R2894:2896 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2868:2871 CoLoR.Util.Multiset.MultisetCore <> Multiset_IntersectionAsDifference.mult var
+R2876:2888 CoLoR.Util.Multiset.MultisetCore <> inter_as_diff def
+R2892:2892 CoLoR.Util.Multiset.MultisetCore <> N var
+R2890:2890 CoLoR.Util.Multiset.MultisetCore <> M var
+R2873:2873 CoLoR.Util.Multiset.MultisetCore <> x var
+R2897:2903 Coq.Arith.Min <> min syndef
+R2917:2920 CoLoR.Util.Multiset.MultisetCore <> Multiset_IntersectionAsDifference.mult var
+R2924:2924 CoLoR.Util.Multiset.MultisetCore <> N var
+R2922:2922 CoLoR.Util.Multiset.MultisetCore <> x var
+R2906:2909 CoLoR.Util.Multiset.MultisetCore <> Multiset_IntersectionAsDifference.mult var
+R2913:2913 CoLoR.Util.Multiset.MultisetCore <> M var
+R2911:2911 CoLoR.Util.Multiset.MultisetCore <> x var
+R2963:2975 CoLoR.Util.Multiset.MultisetCore <> inter_as_diff def
+R2987:2995 CoLoR.Util.Multiset.MultisetCore <> Multiset_IntersectionAsDifference.diff_mult var
+R2987:2995 CoLoR.Util.Multiset.MultisetCore <> Multiset_IntersectionAsDifference.diff_mult var
+R2987:2995 CoLoR.Util.Multiset.MultisetCore <> Multiset_IntersectionAsDifference.diff_mult var
+R2987:2995 CoLoR.Util.Multiset.MultisetCore <> Multiset_IntersectionAsDifference.diff_mult var
+R2987:2995 CoLoR.Util.Multiset.MultisetCore <> Multiset_IntersectionAsDifference.diff_mult var
+R3017:3021 Coq.micromega.Psatz <> <> lib
+R3017:3021 Coq.micromega.Psatz <> <> lib
+R3041:3073 CoLoR.Util.Multiset.MultisetCore Multiset_IntersectionAsDifference <> sec

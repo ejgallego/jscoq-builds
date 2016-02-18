@@ -1,0 +1,394 @@
+DIGEST 9b28b28094a53bf48b4754a2f0b9b087
+FCoLoR.HORPO.HorpoExNonTrans
+R143:150 CoLoR.Term.SimpleType.TermsSig <> <> lib
+R152:156 CoLoR.HORPO.Horpo <> <> lib
+R158:164 CoLoR.HORPO.HorpoWf <> <> lib
+R166:174 Coq.Relations.Relations <> <> lib
+R176:184 CoLoR.Util.Relation.RelExtras <> <> lib
+R186:191 Coq.Arith.Wf_nat <> <> lib
+R193:196 Coq.Lists.List <> <> lib
+R198:202 CoLoR.Term.SimpleType.Terms <> <> lib
+R206:214 CoLoR.Util.Logic.LogicUtil <> <> lib
+R231:239 CoLoR.Term.SimpleType.TermsSig BaseTypes <> mod
+mod 225:226 <> BT
+ind 255:266 BT BaseType_aux
+constr 271:274 BT Star
+R275:275 CoLoR.HORPO.HorpoExNonTrans <> BaseType_aux ind
+def 291:298 BT BaseType
+R303:314 CoLoR.HORPO.HorpoExNonTrans BT BaseType_aux ind
+prf 326:340 BT eq_BaseType_dec
+R357:364 CoLoR.HORPO.HorpoExNonTrans BT BaseType def
+R367:367 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R373:377 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R384:384 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R369:371 Coq.Init.Logic <> :type_scope:x_'='_x not
+R368:368 CoLoR.HORPO.HorpoExNonTrans <> A var
+R372:372 CoLoR.HORPO.HorpoExNonTrans <> B var
+R379:382 Coq.Init.Logic <> :type_scope:x_'<>'_x not
+R378:378 CoLoR.HORPO.HorpoExNonTrans <> A var
+R383:383 CoLoR.HORPO.HorpoExNonTrans <> B var
+prf 464:480 BT baseTypesNotEmpty
+R484:491 CoLoR.HORPO.HorpoExNonTrans BT BaseType def
+R503:506 CoLoR.HORPO.HorpoExNonTrans BT Star constr
+R514:515 CoLoR.HORPO.HorpoExNonTrans BT <> mod
+R533:541 CoLoR.Term.SimpleType.TermsSig Signature <> mod
+mod 526:528 <> Sig
+R560:561 CoLoR.HORPO.HorpoExNonTrans BT <> modtype
+mod 554:555 <> Sig.BT
+R587:597 CoLoR.Term.SimpleType.TermsSig SimpleTypes <> modtype
+R599:600 CoLoR.HORPO.HorpoExNonTrans Sig.BT <> modtype
+mod 581:582 <> Sig.ST
+ind 616:633 Sig FunctionSymbol_aux
+constr 638:638 Sig a
+constr 642:642 Sig b
+constr 646:646 Sig c
+R639:639 CoLoR.HORPO.HorpoExNonTrans <> FunctionSymbol_aux ind
+R643:643 CoLoR.HORPO.HorpoExNonTrans <> FunctionSymbol_aux ind
+R647:647 CoLoR.HORPO.HorpoExNonTrans <> FunctionSymbol_aux ind
+def 663:676 Sig FunctionSymbol
+R681:698 CoLoR.HORPO.HorpoExNonTrans Sig FunctionSymbol_aux ind
+prf 710:730 Sig eq_FunctionSymbol_dec
+R751:764 CoLoR.HORPO.HorpoExNonTrans Sig FunctionSymbol def
+R767:767 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R773:777 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R784:784 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R769:771 Coq.Init.Logic <> :type_scope:x_'='_x not
+R768:768 CoLoR.HORPO.HorpoExNonTrans <> f var
+R772:772 CoLoR.HORPO.HorpoExNonTrans <> g var
+R779:782 Coq.Init.Logic <> :type_scope:x_'<>'_x not
+R778:778 CoLoR.HORPO.HorpoExNonTrans <> f var
+R783:783 CoLoR.HORPO.HorpoExNonTrans <> g var
+prf 828:850 Sig functionSymbolsNotEmpty
+R854:867 CoLoR.HORPO.HorpoExNonTrans Sig FunctionSymbol def
+R879:879 CoLoR.HORPO.HorpoExNonTrans Sig a constr
+def 896:901 Sig f_type
+R908:921 CoLoR.HORPO.HorpoExNonTrans Sig FunctionSymbol def
+R937:937 CoLoR.HORPO.HorpoExNonTrans <> f var
+R950:950 CoLoR.HORPO.HorpoExNonTrans Sig a constr
+R955:955 CoLoR.Term.SimpleType.TermsSig SimpleTypes :type_scope:'#'_x not
+R956:959 CoLoR.HORPO.HorpoExNonTrans Sig.BT Star constr
+R967:967 CoLoR.HORPO.HorpoExNonTrans Sig b constr
+R972:972 CoLoR.Term.SimpleType.TermsSig SimpleTypes :type_scope:'#'_x not
+R973:976 CoLoR.HORPO.HorpoExNonTrans Sig.BT Star constr
+R984:984 CoLoR.HORPO.HorpoExNonTrans Sig c constr
+R994:998 CoLoR.Term.SimpleType.TermsSig SimpleTypes :type_scope:x_'-->'_x not
+R989:989 CoLoR.Term.SimpleType.TermsSig SimpleTypes :type_scope:'#'_x not
+R990:993 CoLoR.HORPO.HorpoExNonTrans Sig.BT Star constr
+R999:999 CoLoR.Term.SimpleType.TermsSig SimpleTypes :type_scope:'#'_x not
+R1000:1003 CoLoR.HORPO.HorpoExNonTrans Sig.BT Star constr
+R1019:1021 CoLoR.HORPO.HorpoExNonTrans Sig <> mod
+R1041:1045 CoLoR.Term.SimpleType.Terms Terms <> modtype
+R1047:1049 CoLoR.HORPO.HorpoExNonTrans Sig <> modtype
+mod 1032:1036 <> Terms
+R1065:1074 CoLoR.HORPO.Horpo Precedence <> mod
+mod 1060:1060 <> P
+R1099:1101 CoLoR.HORPO.HorpoExNonTrans Sig <> modtype
+mod 1094:1094 <> P.S
+R1120:1123 CoLoR.Util.Relation.RelExtras SetA <> mod
+mod 1114:1115 <> P.FS
+def 1141:1141 P.FS A
+R1146:1163 CoLoR.HORPO.HorpoExNonTrans Sig FunctionSymbol def
+R1172:1173 CoLoR.HORPO.HorpoExNonTrans P.FS <> mod
+R1202:1210 CoLoR.Util.Relation.RelExtras Eqset_def <> modtype
+R1212:1213 CoLoR.HORPO.HorpoExNonTrans P.FS <> modtype
+mod 1193:1197 <> P.FS_eq
+R1238:1242 CoLoR.Util.Relation.RelExtras Poset <> mod
+mod 1233:1233 <> P.P
+def 1261:1261 P.P A
+R1266:1266 CoLoR.HORPO.HorpoExNonTrans P.FS_eq A def
+R1293:1295 CoLoR.Util.Relation.RelExtras Ord <> mod
+mod 1288:1288 <> P.P.O
+R1317:1321 CoLoR.HORPO.HorpoExNonTrans P.FS_eq <> modtype
+mod 1312:1312 <> P.P.O.S
+def 1342:1342 P.P.O A
+R1347:1347 CoLoR.HORPO.HorpoExNonTrans P.P.O A def
+def 1368:1370 P.P.O gtA
+R1397:1397 CoLoR.HORPO.HorpoExNonTrans <> g var
+R1394:1394 CoLoR.HORPO.HorpoExNonTrans <> f var
+R1414:1414 CoLoR.HORPO.HorpoExNonTrans P.S a constr
+R1417:1417 CoLoR.HORPO.HorpoExNonTrans P.S b constr
+R1422:1425 Coq.Init.Logic <> True ind
+R1445:1449 Coq.Init.Logic <> False ind
+def 1482:1495 P.P.O gtA_eqA_compat
+R1501:1524 CoLoR.Util.Relation.RelExtras <> Eqset_def_gtA_eqA_compat inst
+R1528:1530 CoLoR.HORPO.HorpoExNonTrans P.P.O gtA def
+R1526:1526 CoLoR.HORPO.HorpoExNonTrans P.P.O A def
+R1542:1542 CoLoR.HORPO.HorpoExNonTrans P.P.O <> mod
+prf 1556:1561 P.P gtA_so
+R1565:1576 CoLoR.Util.Relation.RelExtras <> strict_order rec
+R1578:1580 CoLoR.HORPO.HorpoExNonTrans P.P.O gtA def
+R1739:1739 CoLoR.HORPO.HorpoExNonTrans P.P <> mod
+prf 1751:1756 P Ord_wf
+R1760:1771 Coq.Init.Wf <> well_founded def
+R1774:1779 Coq.Relations.Relation_Operators <> transp def
+R1781:1783 CoLoR.HORPO.HorpoExNonTrans P.P.O gtA def
+R1863:1863 CoLoR.HORPO.HorpoExNonTrans <> x var
+R1870:1870 CoLoR.HORPO.HorpoExNonTrans P.S a constr
+R1807:1828 Coq.Arith.Wf_nat <> well_founded_lt_compat thm
+R1863:1863 CoLoR.HORPO.HorpoExNonTrans <> x var
+R1870:1870 CoLoR.HORPO.HorpoExNonTrans P.S a constr
+R1807:1828 Coq.Arith.Wf_nat <> well_founded_lt_compat thm
+prf 1947:1953 P Ord_dec
+R1969:1969 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R1977:1981 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R1990:1990 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R1970:1972 CoLoR.HORPO.HorpoExNonTrans P.P.O gtA def
+R1976:1976 CoLoR.HORPO.HorpoExNonTrans <> b var
+R1974:1974 CoLoR.HORPO.HorpoExNonTrans <> a var
+R1982:1982 Coq.Init.Logic <> :type_scope:'~'_x not
+R1983:1985 CoLoR.HORPO.HorpoExNonTrans P.P.O gtA def
+R1989:1989 CoLoR.HORPO.HorpoExNonTrans <> b var
+R1987:1987 CoLoR.HORPO.HorpoExNonTrans <> a var
+R2085:2085 CoLoR.HORPO.HorpoExNonTrans P <> mod
+R2105:2111 CoLoR.HORPO.HorpoWf HorpoWf <> modtype
+R2113:2115 CoLoR.HORPO.HorpoExNonTrans Sig <> modtype
+R2117:2117 CoLoR.HORPO.HorpoExNonTrans P <> modtype
+mod 2096:2100 <> Horpo
+sec 2296:2308 <> HorpoNotTrans
+def 2325:2327 <> t1p
+R2332:2332 CoLoR.Term.SimpleType.TermsDef TermsDef ::x_'@@'_x not
+R2354:2358 CoLoR.Term.SimpleType.TermsDef TermsDef ::x_'@@'_x not
+R2333:2333 CoLoR.Term.SimpleType.TermsDef TermsDef ::'\'_x_'=>'_x not
+R2339:2343 CoLoR.Term.SimpleType.TermsDef TermsDef ::'\'_x_'=>'_x not
+R2353:2353 CoLoR.Term.SimpleType.TermsDef TermsDef ::'\'_x_'=>'_x not
+R2334:2334 CoLoR.Term.SimpleType.TermsSig SimpleTypes :type_scope:'#'_x not
+R2335:2338 CoLoR.HORPO.HorpoExNonTrans Sig.BT Star constr
+R2346:2348 CoLoR.Term.SimpleType.TermsDef TermsDef ::x_'['_x_']' not
+R2351:2352 CoLoR.Term.SimpleType.TermsDef TermsDef ::x_'['_x_']' not
+R2344:2344 CoLoR.Term.SimpleType.TermsDef TermsDef ::'^'_x not
+R2345:2345 CoLoR.HORPO.HorpoExNonTrans Sig c constr
+R2349:2349 CoLoR.Term.SimpleType.TermsDef TermsDef ::'%'_x not
+R2359:2359 CoLoR.Term.SimpleType.TermsDef TermsDef ::'^'_x not
+R2360:2360 CoLoR.HORPO.HorpoExNonTrans Sig a constr
+def 2376:2378 <> t2p
+R2383:2383 CoLoR.Term.SimpleType.TermsDef TermsDef ::x_'@@'_x not
+R2405:2409 CoLoR.Term.SimpleType.TermsDef TermsDef ::x_'@@'_x not
+R2384:2384 CoLoR.Term.SimpleType.TermsDef TermsDef ::'\'_x_'=>'_x not
+R2390:2394 CoLoR.Term.SimpleType.TermsDef TermsDef ::'\'_x_'=>'_x not
+R2404:2404 CoLoR.Term.SimpleType.TermsDef TermsDef ::'\'_x_'=>'_x not
+R2385:2385 CoLoR.Term.SimpleType.TermsSig SimpleTypes :type_scope:'#'_x not
+R2386:2389 CoLoR.HORPO.HorpoExNonTrans Sig.BT Star constr
+R2397:2399 CoLoR.Term.SimpleType.TermsDef TermsDef ::x_'['_x_']' not
+R2402:2403 CoLoR.Term.SimpleType.TermsDef TermsDef ::x_'['_x_']' not
+R2395:2395 CoLoR.Term.SimpleType.TermsDef TermsDef ::'^'_x not
+R2396:2396 CoLoR.HORPO.HorpoExNonTrans Sig c constr
+R2400:2400 CoLoR.Term.SimpleType.TermsDef TermsDef ::'%'_x not
+R2410:2410 CoLoR.Term.SimpleType.TermsDef TermsDef ::'^'_x not
+R2411:2411 CoLoR.HORPO.HorpoExNonTrans Sig b constr
+def 2427:2429 <> t3p
+R2436:2438 CoLoR.Term.SimpleType.TermsDef TermsDef ::x_'['_x_']' not
+R2441:2442 CoLoR.Term.SimpleType.TermsDef TermsDef ::x_'['_x_']' not
+R2434:2434 CoLoR.Term.SimpleType.TermsDef TermsDef ::'^'_x not
+R2435:2435 CoLoR.HORPO.HorpoExNonTrans Sig c constr
+R2439:2439 CoLoR.Term.SimpleType.TermsDef TermsDef ::'^'_x not
+R2440:2440 CoLoR.HORPO.HorpoExNonTrans Sig b constr
+def 2459:2460 <> t1
+R2467:2470 CoLoR.Term.SimpleType.TermsDef TermsDef ::x_'|-'_x_':='_x not
+R2474:2477 CoLoR.Term.SimpleType.TermsDef TermsDef ::x_'|-'_x_':='_x not
+R2464:2466 Coq.Init.Datatypes <> nil constr
+R2471:2473 CoLoR.HORPO.HorpoExNonTrans <> t1p def
+R2478:2478 CoLoR.Term.SimpleType.TermsSig SimpleTypes :type_scope:'#'_x not
+R2479:2482 CoLoR.HORPO.HorpoExNonTrans Sig.BT Star constr
+def 2528:2529 <> t2
+R2536:2539 CoLoR.Term.SimpleType.TermsDef TermsDef ::x_'|-'_x_':='_x not
+R2543:2546 CoLoR.Term.SimpleType.TermsDef TermsDef ::x_'|-'_x_':='_x not
+R2533:2535 Coq.Init.Datatypes <> nil constr
+R2540:2542 CoLoR.HORPO.HorpoExNonTrans <> t2p def
+R2547:2547 CoLoR.Term.SimpleType.TermsSig SimpleTypes :type_scope:'#'_x not
+R2548:2551 CoLoR.HORPO.HorpoExNonTrans Sig.BT Star constr
+def 2597:2598 <> t3
+R2605:2608 CoLoR.Term.SimpleType.TermsDef TermsDef ::x_'|-'_x_':='_x not
+R2612:2615 CoLoR.Term.SimpleType.TermsDef TermsDef ::x_'|-'_x_':='_x not
+R2602:2604 Coq.Init.Datatypes <> nil constr
+R2609:2611 CoLoR.HORPO.HorpoExNonTrans <> t3p def
+R2616:2616 CoLoR.Term.SimpleType.TermsSig SimpleTypes :type_scope:'#'_x not
+R2617:2620 CoLoR.HORPO.HorpoExNonTrans Sig.BT Star constr
+prf 2661:2675 <> horpo_not_trans
+R2679:2679 Coq.Init.Logic <> :type_scope:'~'_x not
+R2680:2689 Coq.Relations.Relation_Definitions <> transitive def
+R2691:2695 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H horpo ind
+R2721:2729 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA algebraic ind
+R2732:2737 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R2739:2740 CoLoR.HORPO.HorpoExNonTrans <> t1 def
+R2721:2729 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA algebraic ind
+R2732:2737 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R2739:2740 CoLoR.HORPO.HorpoExNonTrans <> t1 def
+R2755:2760 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgApp constr
+R2755:2760 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgApp constr
+R2875:2875 Coq.Init.Logic <> I constr
+R2863:2868 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgAbs constr
+R2875:2875 Coq.Init.Logic <> I constr
+R2863:2868 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgAbs constr
+R2888:2896 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgFunApp constr
+R2888:2896 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgFunApp constr
+R3010:3015 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgVar constr
+R3010:3015 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgVar constr
+R3056:3064 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgFunApp constr
+R3056:3064 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgFunApp constr
+R3109:3117 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA algebraic ind
+R3120:3125 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R3127:3128 CoLoR.HORPO.HorpoExNonTrans <> t2 def
+R3109:3117 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA algebraic ind
+R3120:3125 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R3127:3128 CoLoR.HORPO.HorpoExNonTrans <> t2 def
+R3143:3148 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgApp constr
+R3143:3148 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgApp constr
+R3264:3264 Coq.Init.Logic <> I constr
+R3252:3257 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgAbs constr
+R3264:3264 Coq.Init.Logic <> I constr
+R3252:3257 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgAbs constr
+R3278:3286 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgFunApp constr
+R3278:3286 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgFunApp constr
+R3401:3406 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgVar constr
+R3401:3406 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgVar constr
+R3447:3455 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgFunApp constr
+R3447:3455 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgFunApp constr
+R3500:3508 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA algebraic ind
+R3511:3516 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R3518:3519 CoLoR.HORPO.HorpoExNonTrans <> t3 def
+R3500:3508 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA algebraic ind
+R3511:3516 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R3518:3519 CoLoR.HORPO.HorpoExNonTrans <> t3 def
+R3534:3542 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgFunApp constr
+R3534:3542 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgFunApp constr
+R3655:3663 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgFunApp constr
+R3655:3663 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgFunApp constr
+R3728:3731 CoLoR.HORPO.Horpo Horpo ::x_'>>'_x not
+R3719:3724 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R3726:3727 CoLoR.HORPO.HorpoExNonTrans <> t1 def
+R3732:3737 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R3739:3740 CoLoR.HORPO.HorpoExNonTrans <> t3 def
+R3728:3731 CoLoR.HORPO.Horpo Horpo ::x_'>>'_x not
+R3719:3724 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R3726:3727 CoLoR.HORPO.HorpoExNonTrans <> t1 def
+R3732:3737 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R3739:3740 CoLoR.HORPO.HorpoExNonTrans <> t3 def
+R3968:3970 Coq.Init.Logic <> :type_scope:x_'='_x not
+R3865:3868 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD term proj
+R3871:3875 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL lower def
+R3929:3941 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB beta_lowering thm
+R3944:3949 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R3951:3952 CoLoR.HORPO.HorpoExNonTrans <> t1 def
+R3878:3882 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS subst def
+R3885:3894 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB beta_subst def
+R3897:3902 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R3904:3905 CoLoR.HORPO.HorpoExNonTrans <> t1 def
+R3971:3974 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD term proj
+R3977:3982 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R3984:3985 CoLoR.HORPO.HorpoExNonTrans <> t3 def
+R3968:3970 Coq.Init.Logic <> :type_scope:x_'='_x not
+R3865:3868 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD term proj
+R3871:3875 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL lower def
+R3929:3941 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB beta_lowering thm
+R3944:3949 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R3951:3952 CoLoR.HORPO.HorpoExNonTrans <> t1 def
+R3878:3882 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS subst def
+R3885:3894 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB beta_subst def
+R3897:3902 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R3904:3905 CoLoR.HORPO.HorpoExNonTrans <> t1 def
+R3971:3974 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD term proj
+R3977:3982 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R3984:3985 CoLoR.HORPO.HorpoExNonTrans <> t3 def
+R4002:4011 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL lower_term thm
+R4014:4023 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS subst_term thm
+R4002:4011 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL lower_term thm
+R4002:4011 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL lower_term thm
+R4014:4023 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS subst_term thm
+R4014:4023 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS subst_term thm
+R4103:4108 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R4110:4111 CoLoR.HORPO.HorpoExNonTrans <> t3 def
+R4091:4096 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R4098:4099 CoLoR.HORPO.HorpoExNonTrans <> t2 def
+R4079:4084 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R4086:4087 CoLoR.HORPO.HorpoExNonTrans <> t1 def
+R4103:4108 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R4110:4111 CoLoR.HORPO.HorpoExNonTrans <> t3 def
+R4091:4096 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R4098:4099 CoLoR.HORPO.HorpoExNonTrans <> t2 def
+R4079:4084 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R4086:4087 CoLoR.HORPO.HorpoExNonTrans <> t1 def
+R4151:4154 CoLoR.HORPO.Horpo Horpo ::x_'>>'_x not
+R4129:4136 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB appBodyR def
+R4150:4150 Coq.Init.Logic <> I constr
+R4139:4144 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R4146:4147 CoLoR.HORPO.HorpoExNonTrans <> t1 def
+R4156:4163 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB appBodyR def
+R4177:4177 Coq.Init.Logic <> I constr
+R4166:4171 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R4173:4174 CoLoR.HORPO.HorpoExNonTrans <> t2 def
+R4151:4154 CoLoR.HORPO.Horpo Horpo ::x_'>>'_x not
+R4129:4136 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB appBodyR def
+R4150:4150 Coq.Init.Logic <> I constr
+R4139:4144 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R4146:4147 CoLoR.HORPO.HorpoExNonTrans <> t1 def
+R4156:4163 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB appBodyR def
+R4177:4177 Coq.Init.Logic <> I constr
+R4166:4171 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R4173:4174 CoLoR.HORPO.HorpoExNonTrans <> t2 def
+R4227:4235 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgFunApp constr
+R4227:4235 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgFunApp constr
+R4227:4235 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgFunApp constr
+R4227:4235 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA AlgFunApp constr
+R4275:4275 CoLoR.HORPO.HorpoExNonTrans Sig a constr
+R4277:4277 CoLoR.HORPO.HorpoExNonTrans Sig b constr
+R4265:4268 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H HFun constr
+R4275:4275 CoLoR.HORPO.HorpoExNonTrans Sig a constr
+R4277:4277 CoLoR.HORPO.HorpoExNonTrans Sig b constr
+R4265:4268 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H HFun constr
+R4304:4311 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H HArgsNil constr
+R4304:4311 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H HArgsNil constr
+R4343:4343 Coq.Init.Logic <> I constr
+R4345:4345 Coq.Init.Logic <> I constr
+R4324:4336 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H horpo_app_inv thm
+R4343:4343 Coq.Init.Logic <> I constr
+R4345:4345 Coq.Init.Logic <> I constr
+R4324:4336 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H horpo_app_inv thm
+R4484:4488 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H HBeta constr
+R4484:4488 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H HBeta constr
+R4497:4503 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR RedStep constr
+R4497:4503 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR RedStep constr
+R4516:4521 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R4523:4524 CoLoR.HORPO.HorpoExNonTrans <> t3 def
+R4540:4544 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL lower def
+R4591:4603 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB beta_lowering thm
+R4619:4619 Coq.Init.Logic <> I constr
+R4617:4617 Coq.Init.Logic <> I constr
+R4606:4611 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R4613:4614 CoLoR.HORPO.HorpoExNonTrans <> t2 def
+R4547:4551 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS subst def
+R4554:4563 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB beta_subst def
+R4579:4579 Coq.Init.Logic <> I constr
+R4577:4577 Coq.Init.Logic <> I constr
+R4566:4571 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R4573:4574 CoLoR.HORPO.HorpoExNonTrans <> t2 def
+R4540:4544 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL lower def
+R4591:4603 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB beta_lowering thm
+R4619:4619 Coq.Init.Logic <> I constr
+R4617:4617 Coq.Init.Logic <> I constr
+R4606:4611 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R4613:4614 CoLoR.HORPO.HorpoExNonTrans <> t2 def
+R4547:4551 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS subst def
+R4554:4563 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB beta_subst def
+R4579:4579 Coq.Init.Logic <> I constr
+R4577:4577 Coq.Init.Logic <> I constr
+R4566:4571 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R4573:4574 CoLoR.HORPO.HorpoExNonTrans <> t2 def
+R4516:4521 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS.TD buildT constr
+R4523:4524 CoLoR.HORPO.HorpoExNonTrans <> t3 def
+R4630:4633 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB Beta constr
+R4630:4633 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB Beta constr
+R4646:4652 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS term_eq thm
+R4646:4652 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL.TB.TS term_eq thm
+R4668:4676 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL lower_env thm
+R4679:4687 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS subst_env thm
+R4668:4676 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL lower_env thm
+R4668:4676 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL lower_env thm
+R4679:4687 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS subst_env thm
+R4679:4687 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS subst_env thm
+R4711:4720 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL lower_term thm
+R4723:4732 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS subst_term thm
+R4711:4720 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL lower_term thm
+R4711:4720 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS.TC.TP.TB.TAE.TE.TL lower_term thm
+R4723:4732 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS subst_term thm
+R4723:4732 CoLoR.HORPO.HorpoExNonTrans Horpo.HC.Comp.H.T.TA.TE.TB.TR.TSC.TS subst_term thm
+R4756:4768 CoLoR.HORPO.HorpoExNonTrans HorpoNotTrans <> sec

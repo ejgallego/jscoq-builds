@@ -1,0 +1,499 @@
+DIGEST 154828cdfb692760e2cd01ed9d03fe19
+FCoLoR.MatrixInt.AArcticInt
+R226:240 CoLoR.MatrixInt.AArcticBasedInt <> <> lib
+R242:247 CoLoR.Util.Matrix.Matrix <> <> lib
+R249:259 CoLoR.Util.Algebra.OrdSemiRing <> <> lib
+R261:267 CoLoR.Util.Vector.VecUtil <> <> lib
+R269:275 CoLoR.Term.WithArity.AMonAlg <> <> lib
+R277:278 CoLoR.Util.Relation.SN <> <> lib
+R280:286 CoLoR.Util.Relation.RelUtil <> <> lib
+R290:296 CoLoR.Util.Nat.NatUtil <> <> lib
+R298:315 CoLoR.Term.WithArity.AWFMInterpretation <> <> lib
+R317:325 CoLoR.Util.Logic.LogicUtil <> <> lib
+R327:341 CoLoR.MatrixInt.AMatrixBasedInt <> <> lib
+R343:346 Coq.Bool.Bool <> <> lib
+def 382:390 <> matrixInt
+R396:404 CoLoR.MatrixInt.AMatrixBasedInt <> matrixInt rec
+R408:413 CoLoR.Util.Matrix.Matrix ArcticMatrix matrix def
+R406:406 CoLoR.Util.Algebra.OrdSemiRing ArcticOrdSemiRingT.SR.ES.Eq A def
+def 427:437 <> mkMatrixInt
+R443:453 CoLoR.MatrixInt.AMatrixBasedInt <> mkMatrixInt constr
+R457:462 CoLoR.Util.Matrix.Matrix ArcticMatrix matrix def
+R455:455 CoLoR.Util.Algebra.OrdSemiRing ArcticOrdSemiRingT.SR.ES.Eq A def
+sec 607:622 <> Somewhere_finite
+var 637:639 Somewhere_finite dim
+R643:645 Coq.Init.Datatypes <> nat ind
+var 659:665 Somewhere_finite dim_pos
+R672:674 Coq.Init.Peano <> :nat_scope:x_'>'_x not
+R669:671 CoLoR.MatrixInt.AArcticInt <> Somewhere_finite.dim var
+def 692:707 <> somewhere_finite
+R717:725 CoLoR.MatrixInt.AArcticInt <> matrixInt def
+R731:731 CoLoR.MatrixInt.AArcticInt <> n var
+R727:729 CoLoR.MatrixInt.AArcticInt <> Somewhere_finite.dim var
+R809:816 Coq.Init.Logic <> :type_scope:x_'\/'_x not
+R742:748 CoLoR.Util.Vector.VecUtil <> Vexists def
+R801:804 CoLoR.MatrixInt.AMatrixBasedInt <> args proj
+R806:807 CoLoR.MatrixInt.AArcticInt <> fi var
+R786:789 Coq.Init.Logic <> :type_scope:x_'<>'_x not
+R760:767 CoLoR.Util.Matrix.Matrix ArcticMatrix get_elem def
+R779:785 CoLoR.MatrixInt.AArcticInt <> Somewhere_finite.dim_pos var
+R771:777 CoLoR.MatrixInt.AArcticInt <> Somewhere_finite.dim_pos var
+R769:769 CoLoR.MatrixInt.AArcticInt <> m var
+R790:797 CoLoR.Util.Algebra.SemiRing <> MinusInf constr
+R840:843 Coq.Init.Logic <> :type_scope:x_'<>'_x not
+R817:820 CoLoR.Util.Vector.VecUtil <> Vnth def
+R833:839 CoLoR.MatrixInt.AArcticInt <> Somewhere_finite.dim_pos var
+R823:827 CoLoR.MatrixInt.AMatrixBasedInt <> const proj
+R829:830 CoLoR.MatrixInt.AArcticInt <> fi var
+R844:851 CoLoR.Util.Algebra.SemiRing <> MinusInf constr
+def 868:884 <> bsomewhere_finite
+R894:902 CoLoR.MatrixInt.AArcticInt <> matrixInt def
+R908:908 CoLoR.MatrixInt.AArcticInt <> n var
+R904:906 CoLoR.MatrixInt.AArcticInt <> Somewhere_finite.dim var
+R986:993 Coq.Init.Datatypes <> :bool_scope:x_'||'_x not
+R918:925 CoLoR.Util.Vector.VecUtil <> bVexists def
+R978:981 CoLoR.MatrixInt.AMatrixBasedInt <> args proj
+R983:984 CoLoR.MatrixInt.AArcticInt <> fi var
+R937:945 CoLoR.Util.Algebra.SemiRing <> is_finite def
+R948:955 CoLoR.Util.Matrix.Matrix ArcticMatrix get_elem def
+R967:973 CoLoR.MatrixInt.AArcticInt <> Somewhere_finite.dim_pos var
+R959:965 CoLoR.MatrixInt.AArcticInt <> Somewhere_finite.dim_pos var
+R957:957 CoLoR.MatrixInt.AArcticInt <> m var
+R994:1002 CoLoR.Util.Algebra.SemiRing <> is_finite def
+R1005:1008 CoLoR.Util.Vector.VecUtil <> Vnth def
+R1021:1027 CoLoR.MatrixInt.AArcticInt <> Somewhere_finite.dim_pos var
+R1011:1015 CoLoR.MatrixInt.AMatrixBasedInt <> const proj
+R1017:1018 CoLoR.MatrixInt.AArcticInt <> fi var
+R1049:1056 CoLoR.Util.Bool.BoolUtil <> <> lib
+prf 1068:1087 <> bsomewhere_finite_ok
+R1106:1114 CoLoR.MatrixInt.AArcticInt <> matrixInt def
+R1120:1120 CoLoR.MatrixInt.AArcticInt <> n var
+R1116:1118 CoLoR.MatrixInt.AArcticInt <> Somewhere_finite.dim var
+R1155:1159 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R1148:1150 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1128:1144 CoLoR.MatrixInt.AArcticInt <> bsomewhere_finite def
+R1146:1147 CoLoR.MatrixInt.AArcticInt <> fi var
+R1151:1154 Coq.Init.Datatypes <> true constr
+R1160:1175 CoLoR.MatrixInt.AArcticInt <> somewhere_finite def
+R1177:1178 CoLoR.MatrixInt.AArcticInt <> fi var
+R1210:1226 CoLoR.MatrixInt.AArcticInt <> bsomewhere_finite def
+R1229:1244 CoLoR.MatrixInt.AArcticInt <> somewhere_finite def
+R1259:1264 CoLoR.Util.Bool.BoolUtil <> orb_eq thm
+R1267:1278 CoLoR.Util.Algebra.SemiRing <> is_finite_ok thm
+R1281:1291 CoLoR.Util.Vector.VecUtil <> bVexists_ok thm
+R1259:1264 CoLoR.Util.Bool.BoolUtil <> orb_eq thm
+R1259:1264 CoLoR.Util.Bool.BoolUtil <> orb_eq thm
+R1267:1278 CoLoR.Util.Algebra.SemiRing <> is_finite_ok thm
+R1267:1278 CoLoR.Util.Algebra.SemiRing <> is_finite_ok thm
+R1281:1291 CoLoR.Util.Vector.VecUtil <> bVexists_ok thm
+R1281:1291 CoLoR.Util.Vector.VecUtil <> bVexists_ok thm
+R1281:1291 CoLoR.Util.Vector.VecUtil <> bVexists_ok thm
+R1313:1324 CoLoR.Util.Algebra.SemiRing <> is_finite_ok thm
+R1313:1324 CoLoR.Util.Algebra.SemiRing <> is_finite_ok thm
+var 1346:1348 Somewhere_finite sig
+R1352:1360 CoLoR.Term.WithArity.ASignature <> Signature rec
+var 1374:1379 Somewhere_finite trsInt
+R1394:1396 CoLoR.MatrixInt.AArcticInt <> Somewhere_finite.sig var
+R1399:1407 CoLoR.MatrixInt.AArcticInt <> matrixInt def
+R1414:1418 CoLoR.Term.WithArity.ASignature <> arity proj
+R1420:1420 CoLoR.MatrixInt.AArcticInt <> f var
+R1409:1411 CoLoR.MatrixInt.AArcticInt <> Somewhere_finite.dim var
+R1442:1445 Coq.Lists.List <> <> lib
+R1465:1474 CoLoR.Util.List.ListForall <> <> lib
+var 1489:1490 Somewhere_finite Fs
+R1494:1497 Coq.Init.Datatypes <> list ind
+R1499:1501 CoLoR.MatrixInt.AArcticInt <> Somewhere_finite.sig var
+var 1515:1519 Somewhere_finite Fs_ok
+R1534:1536 CoLoR.MatrixInt.AArcticInt <> Somewhere_finite.sig var
+R1539:1540 Coq.Lists.List <> In def
+R1544:1545 CoLoR.MatrixInt.AArcticInt <> Somewhere_finite.Fs var
+R1542:1542 CoLoR.MatrixInt.AArcticInt <> f var
+prf 1557:1576 <> fin_somewhere_finite
+R1641:1648 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1660:1662 CoLoR.MatrixInt.AArcticInt <> Somewhere_finite.sig var
+R1665:1680 CoLoR.MatrixInt.AArcticInt <> somewhere_finite def
+R1683:1688 CoLoR.MatrixInt.AArcticInt <> Somewhere_finite.trsInt var
+R1690:1690 CoLoR.MatrixInt.AArcticInt <> f var
+R1634:1636 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1584:1590 Coq.Lists.List <> forallb def
+R1632:1633 CoLoR.MatrixInt.AArcticInt <> Somewhere_finite.Fs var
+R1602:1618 CoLoR.MatrixInt.AArcticInt <> bsomewhere_finite def
+R1621:1626 CoLoR.MatrixInt.AArcticInt <> Somewhere_finite.trsInt var
+R1628:1628 CoLoR.MatrixInt.AArcticInt <> f var
+R1637:1640 Coq.Init.Datatypes <> true constr
+R1716:1729 Coq.Lists.List <> forallb_forall thm
+R1716:1729 Coq.Lists.List <> forallb_forall thm
+R1716:1729 Coq.Lists.List <> forallb_forall thm
+R1755:1774 CoLoR.MatrixInt.AArcticInt <> bsomewhere_finite_ok thm
+R1755:1774 CoLoR.MatrixInt.AArcticInt <> bsomewhere_finite_ok thm
+R1755:1774 CoLoR.MatrixInt.AArcticInt <> bsomewhere_finite_ok thm
+R1796:1800 CoLoR.MatrixInt.AArcticInt <> Somewhere_finite.Fs_ok var
+R1796:1800 CoLoR.MatrixInt.AArcticInt <> Somewhere_finite.Fs_ok var
+R1815:1830 CoLoR.MatrixInt.AArcticInt Somewhere_finite <> sec
+R1853:1872 CoLoR.MatrixInt.AArcticInt <> fin_somewhere_finite thm
+R1929:1948 CoLoR.MatrixInt.AArcticInt <> fin_somewhere_finite thm
+modtype 2182:2191 <> TArcticInt
+ax 2207:2209 TArcticInt sig
+R2213:2221 CoLoR.Term.WithArity.ASignature <> Signature rec
+ax 2236:2238 TArcticInt dim
+R2242:2244 Coq.Init.Datatypes <> nat ind
+ax 2259:2265 TArcticInt dim_pos
+R2272:2274 Coq.Init.Peano <> :nat_scope:x_'>'_x not
+R2269:2271 CoLoR.MatrixInt.AArcticInt TArcticInt dim defax
+ax 2290:2295 TArcticInt trsInt
+R2310:2312 CoLoR.MatrixInt.AArcticInt TArcticInt sig defax
+R2315:2323 CoLoR.MatrixInt.AArcticInt TArcticInt matrixInt def
+R2330:2334 CoLoR.Term.WithArity.ASignature <> arity proj
+R2336:2336 CoLoR.MatrixInt.AArcticInt <> f var
+R2325:2327 CoLoR.MatrixInt.AArcticInt TArcticInt dim defax
+ax 2352:2359 TArcticInt trsIntOk
+R2374:2376 CoLoR.MatrixInt.AArcticInt TArcticInt sig defax
+R2379:2394 CoLoR.MatrixInt.AArcticInt TArcticInt somewhere_finite def
+R2405:2410 CoLoR.MatrixInt.AArcticInt TArcticInt trsInt defax
+R2412:2412 CoLoR.MatrixInt.AArcticInt <> f var
+R2396:2402 CoLoR.MatrixInt.AArcticInt TArcticInt dim_pos defax
+R2421:2430 CoLoR.MatrixInt.AArcticInt TArcticInt <> modtype
+R2464:2473 CoLoR.MatrixInt.AArcticInt TArcticInt <> mod
+mod 2441:2449 <> ArcticInt
+R2495:2509 CoLoR.MatrixInt.AArcticBasedInt TArcticBasedInt <> mod
+mod 2489:2490 <> ArcticInt.AB
+R2535:2552 CoLoR.Util.Algebra.OrdSemiRing ArcticOrdSemiRingT <> modtype
+mod 2528:2530 <> ArcticInt.AB.OSR
+R2571:2582 CoLoR.Util.Matrix.Matrix ArcticMatrix <> modtype
+mod 2566:2566 <> ArcticInt.AB.M
+def 2600:2602 ArcticInt.AB sig
+R2607:2609 CoLoR.MatrixInt.AArcticInt AI sig defax
+def 2627:2629 ArcticInt.AB dim
+R2634:2636 CoLoR.MatrixInt.AArcticInt AI dim defax
+def 2654:2660 ArcticInt.AB dim_pos
+R2665:2671 CoLoR.MatrixInt.AArcticInt AI dim_pos defax
+def 2689:2694 ArcticInt.AB trsInt
+R2699:2704 CoLoR.MatrixInt.AArcticInt AI trsInt defax
+R2714:2715 CoLoR.MatrixInt.AArcticInt ArcticInt.AB <> mod
+R2745:2758 CoLoR.MatrixInt.AArcticBasedInt ArcticBasedInt <> modtype
+R2760:2761 CoLoR.MatrixInt.AArcticInt ArcticInt.AB <> modtype
+mod 2735:2740 <> ArcticInt.AIBase
+R2800:2818 CoLoR.Term.WithArity.AMonAlg MonotoneAlgebraType <> mod
+mod 2781:2795 <> ArcticInt.MonotoneAlgebra
+def 2837:2839 ArcticInt.MonotoneAlgebra Sig
+R2844:2846 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase Sig def
+prf 2860:2885 ArcticInt.MonotoneAlgebra mat_times_vec_at0_positive
+R2903:2908 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M matrix def
+R2912:2912 CoLoR.MatrixInt.AArcticInt <> n var
+R2910:2910 CoLoR.MatrixInt.AArcticInt <> n var
+R2927:2932 CoLoR.Util.Vector.VecUtil <> vector syndef
+R2936:2936 CoLoR.MatrixInt.AArcticInt <> n var
+R2934:2934 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.OSRT.SR.ES.Eq A defax
+R2951:2953 Coq.Init.Peano <> :nat_scope:x_'>'_x not
+R2950:2950 CoLoR.MatrixInt.AArcticInt <> n var
+R3002:3014 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3041:3050 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3082:3085 Coq.Init.Logic <> :type_scope:x_'<>'_x not
+R3051:3054 CoLoR.Util.Vector.VecUtil <> Vnth def
+R3075:3081 CoLoR.MatrixInt.AArcticInt <> dim_pos var
+R3057:3068 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M mat_vec_prod def
+R3072:3072 CoLoR.MatrixInt.AArcticInt <> v var
+R3070:3070 CoLoR.MatrixInt.AArcticInt <> m var
+R3086:3093 CoLoR.Util.Algebra.SemiRing <> MinusInf constr
+R3029:3032 Coq.Init.Logic <> :type_scope:x_'<>'_x not
+R3015:3018 CoLoR.Util.Vector.VecUtil <> Vnth def
+R3022:3028 CoLoR.MatrixInt.AArcticInt <> dim_pos var
+R3020:3020 CoLoR.MatrixInt.AArcticInt <> v var
+R3033:3040 CoLoR.Util.Algebra.SemiRing <> MinusInf constr
+R2990:2993 Coq.Init.Logic <> :type_scope:x_'<>'_x not
+R2964:2971 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M get_elem def
+R2983:2989 CoLoR.MatrixInt.AArcticInt <> dim_pos var
+R2975:2981 CoLoR.MatrixInt.AArcticInt <> dim_pos var
+R2973:2973 CoLoR.MatrixInt.AArcticInt <> m var
+R2994:3001 CoLoR.Util.Algebra.SemiRing <> MinusInf constr
+R3164:3169 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M matrix def
+R3201:3212 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M mat_vec_prod def
+R3215:3228 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M col_mat_to_vec def
+R3231:3237 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M get_col def
+R3248:3255 CoLoR.Util.Vector.VecUtil <> Vnth_map thm
+R3248:3255 CoLoR.Util.Vector.VecUtil <> Vnth_map thm
+R3248:3255 CoLoR.Util.Vector.VecUtil <> Vnth_map thm
+R3275:3287 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M mat_mult_spec thm
+R3275:3287 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M mat_mult_spec thm
+R3298:3305 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M get_elem def
+R3308:3314 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M get_row def
+R3354:3358 CoLoR.Util.Vector.VecUtil <> Vhead syndef
+R3354:3358 CoLoR.Util.Vector.VecUtil <> Vhead syndef
+R3371:3381 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.VA dot_product def
+R3406:3415 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.OSR.SR Aplus_comm def
+R3406:3415 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.OSR.SR Aplus_comm def
+R3406:3415 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.OSR.SR Aplus_comm def
+R3424:3446 CoLoR.MatrixInt.AArcticInt ArcticInt.AB.OSR.SR arctic_plus_notInf_left thm
+R3424:3446 CoLoR.MatrixInt.AArcticInt ArcticInt.AB.OSR.SR arctic_plus_notInf_left thm
+R3461:3478 CoLoR.MatrixInt.AArcticInt ArcticInt.AB.OSR.SR arctic_mult_notInf thm
+R3461:3478 CoLoR.MatrixInt.AArcticInt ArcticInt.AB.OSR.SR arctic_mult_notInf thm
+R3512:3519 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M get_elem def
+R3553:3561 CoLoR.Util.Vector.VecUtil <> Vhead_nth thm
+R3568:3574 CoLoR.Util.Vector.VecUtil <> Vnth_eq thm
+R3596:3602 Coq.Arith.Lt <> lt_O_Sn syndef
+R3577:3581 CoLoR.Util.Vector.VecUtil <> Vhead syndef
+R3553:3561 CoLoR.Util.Vector.VecUtil <> Vhead_nth thm
+R3553:3561 CoLoR.Util.Vector.VecUtil <> Vhead_nth thm
+R3568:3574 CoLoR.Util.Vector.VecUtil <> Vnth_eq thm
+R3596:3602 Coq.Arith.Lt <> lt_O_Sn syndef
+R3577:3581 CoLoR.Util.Vector.VecUtil <> Vhead syndef
+R3568:3574 CoLoR.Util.Vector.VecUtil <> Vnth_eq thm
+R3596:3602 Coq.Arith.Lt <> lt_O_Sn syndef
+R3577:3581 CoLoR.Util.Vector.VecUtil <> Vhead syndef
+R3568:3574 CoLoR.Util.Vector.VecUtil <> Vnth_eq thm
+R3596:3602 Coq.Arith.Lt <> lt_O_Sn syndef
+R3577:3581 CoLoR.Util.Vector.VecUtil <> Vhead syndef
+syndef 3670:3682 ArcticInt.MonotoneAlgebra mat_times_vec
+R3689:3700 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M mat_vec_prod def
+R3706:3708 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf dim def
+R3702:3704 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf dim def
+syndef 3725:3728 ArcticInt.MonotoneAlgebra mint
+R3734:3742 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra matrixInt def
+R3744:3746 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf dim def
+R3778:3780 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase gtx def
+not 3764:3764 ArcticInt.MonotoneAlgebra ::x_'>_0'_x
+prf 3813:3827 ArcticInt.MonotoneAlgebra gtx_plus_compat
+R3863:3866 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3875:3878 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3884:3888 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra ::x_'>_0'_x not
+R3880:3882 CoLoR.Util.Algebra.OrdSemiRing ArcticOrdSemiRingT ::x_'+'_x not
+R3879:3879 CoLoR.MatrixInt.AArcticInt <> m var
+R3883:3883 CoLoR.MatrixInt.AArcticInt <> n var
+R3891:3893 CoLoR.Util.Algebra.OrdSemiRing ArcticOrdSemiRingT ::x_'+'_x not
+R3889:3890 CoLoR.MatrixInt.AArcticInt <> m' var
+R3894:3895 CoLoR.MatrixInt.AArcticInt <> n' var
+R3868:3872 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra ::x_'>_0'_x not
+R3867:3867 CoLoR.MatrixInt.AArcticInt <> n var
+R3873:3874 CoLoR.MatrixInt.AArcticInt <> n' var
+R3856:3860 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra ::x_'>_0'_x not
+R3855:3855 CoLoR.MatrixInt.AArcticInt <> m var
+R3861:3862 CoLoR.MatrixInt.AArcticInt <> m' var
+R3967:3980 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.OSRT plus_gt_compat defax
+R3967:3980 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.OSRT plus_gt_compat defax
+R4024:4032 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.OSR.SR Aplus_0_r thm
+R4024:4032 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.OSR.SR Aplus_0_r thm
+R4024:4032 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.OSR.SR Aplus_0_r thm
+R4024:4032 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.OSR.SR Aplus_0_r thm
+R4024:4032 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.OSR.SR Aplus_0_r thm
+R4080:4088 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.OSR.SR Aplus_0_l def
+R4080:4088 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.OSR.SR Aplus_0_l def
+R4080:4088 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.OSR.SR Aplus_0_l def
+R4080:4088 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.OSR.SR Aplus_0_l def
+R4080:4088 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.OSR.SR Aplus_0_l def
+prf 4116:4130 ArcticInt.MonotoneAlgebra gtx_mult_compat
+R4166:4169 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R4178:4181 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R4187:4191 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra ::x_'>_0'_x not
+R4183:4185 CoLoR.Util.Algebra.OrdSemiRing ArcticOrdSemiRingT ::x_'*'_x not
+R4182:4182 CoLoR.MatrixInt.AArcticInt <> m var
+R4186:4186 CoLoR.MatrixInt.AArcticInt <> n var
+R4194:4196 CoLoR.Util.Algebra.OrdSemiRing ArcticOrdSemiRingT ::x_'*'_x not
+R4192:4193 CoLoR.MatrixInt.AArcticInt <> m' var
+R4197:4198 CoLoR.MatrixInt.AArcticInt <> n' var
+R4171:4175 CoLoR.Util.Algebra.OrdSemiRing ArcticOrdSemiRingT ::x_'>>='_x not
+R4170:4170 CoLoR.MatrixInt.AArcticInt <> n var
+R4176:4177 CoLoR.MatrixInt.AArcticInt <> n' var
+R4159:4163 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra ::x_'>_0'_x not
+R4158:4158 CoLoR.MatrixInt.AArcticInt <> m var
+R4164:4165 CoLoR.MatrixInt.AArcticInt <> m' var
+prf 4587:4602 ArcticInt.MonotoneAlgebra eval_some_notInf
+R4621:4624 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra mint syndef
+R4626:4626 CoLoR.MatrixInt.AArcticInt <> n var
+R4634:4639 CoLoR.Util.Vector.VecUtil <> vector syndef
+R4645:4645 CoLoR.MatrixInt.AArcticInt <> n var
+R4641:4643 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI dom def
+R4722:4731 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R4851:4854 Coq.Init.Logic <> :type_scope:x_'<>'_x not
+R4732:4745 CoLoR.Util.Vector.VecUtil <> Vfold_left_rev def
+R4763:4766 CoLoR.Util.Vector.VecUtil <> Vmap def
+R4803:4807 CoLoR.Util.Vector.VecUtil <> Vmap2 def
+R4834:4837 CoLoR.Util.Vector.VecUtil <> Vmap def
+R4847:4847 CoLoR.MatrixInt.AArcticInt <> v var
+R4839:4845 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI dom2vec def
+R4824:4827 CoLoR.MatrixInt.AMatrixBasedInt <> args proj
+R4829:4830 CoLoR.MatrixInt.AArcticInt <> mi var
+R4809:4821 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra mat_times_vec syndef
+R4778:4781 CoLoR.Util.Vector.VecUtil <> Vnth def
+R4785:4791 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf dim_pos def
+R4783:4783 CoLoR.MatrixInt.AArcticInt <> v var
+R4753:4754 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.OSRT.SR A0 defax
+R4747:4751 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.OSRT.SR Aplus defax
+R4855:4862 CoLoR.Util.Algebra.SemiRing <> MinusInf constr
+R4655:4661 CoLoR.Util.Vector.VecUtil <> Vexists def
+R4714:4717 CoLoR.MatrixInt.AMatrixBasedInt <> args proj
+R4719:4720 CoLoR.MatrixInt.AArcticInt <> mi var
+R4699:4702 Coq.Init.Logic <> :type_scope:x_'<>'_x not
+R4673:4680 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M get_elem def
+R4692:4698 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf dim_pos def
+R4684:4690 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf dim_pos def
+R4682:4682 CoLoR.MatrixInt.AArcticInt <> m var
+R4703:4710 CoLoR.Util.Algebra.SemiRing <> MinusInf constr
+R5030:5039 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.OSR.SR Aplus_comm def
+R5030:5039 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.OSR.SR Aplus_comm def
+R5030:5039 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.OSR.SR Aplus_comm def
+R5048:5070 CoLoR.MatrixInt.AArcticInt ArcticInt.AB.OSR.SR arctic_plus_notInf_left thm
+R5048:5070 CoLoR.MatrixInt.AArcticInt ArcticInt.AB.OSR.SR arctic_plus_notInf_left thm
+R5085:5110 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra mat_times_vec_at0_positive thm
+R5085:5110 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra mat_times_vec_at0_positive thm
+R5151:5155 CoLoR.Util.Vector.VecUtil <> Vhead syndef
+R5151:5155 CoLoR.Util.Vector.VecUtil <> Vhead syndef
+R5175:5187 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf vec_invariant def
+R5190:5201 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf vec_at0 def
+R5234:5251 CoLoR.MatrixInt.AArcticInt ArcticInt.AB.OSR ge_A1_not_minusInf thm
+R5234:5251 CoLoR.MatrixInt.AArcticInt ArcticInt.AB.OSR ge_A1_not_minusInf thm
+R5271:5293 CoLoR.MatrixInt.AArcticInt ArcticInt.AB.OSR.SR arctic_plus_notInf_left thm
+R5271:5293 CoLoR.MatrixInt.AArcticInt ArcticInt.AB.OSR.SR arctic_plus_notInf_left thm
+R5314:5322 CoLoR.Util.Vector.VecUtil <> Vmap_tail thm
+R5314:5322 CoLoR.Util.Vector.VecUtil <> Vmap_tail thm
+R5314:5322 CoLoR.Util.Vector.VecUtil <> Vmap_tail thm
+R5343:5353 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra mkMatrixInt def
+R5362:5366 CoLoR.Util.Vector.VecUtil <> Vtail syndef
+R5343:5353 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra mkMatrixInt def
+R5362:5366 CoLoR.Util.Vector.VecUtil <> Vtail syndef
+prf 5402:5412 ArcticInt.MonotoneAlgebra mi_eval_at0
+R5431:5439 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra matrixInt def
+R5445:5445 CoLoR.MatrixInt.AArcticInt <> n var
+R5441:5443 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf dim def
+R5453:5458 CoLoR.Util.Vector.VecUtil <> vector syndef
+R5464:5464 CoLoR.MatrixInt.AArcticInt <> n var
+R5460:5462 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI dom def
+R5501:5510 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R5552:5555 Coq.Init.Logic <> :type_scope:x_'<>'_x not
+R5511:5517 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI vec_at0 def
+R5520:5530 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI mi_eval_aux def
+R5536:5539 CoLoR.Util.Vector.VecUtil <> Vmap def
+R5549:5549 CoLoR.MatrixInt.AArcticInt <> v var
+R5541:5547 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI dom2vec def
+R5532:5533 CoLoR.MatrixInt.AArcticInt <> mi var
+R5556:5563 CoLoR.Util.Algebra.SemiRing <> MinusInf constr
+R5474:5489 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra somewhere_finite def
+R5499:5500 CoLoR.MatrixInt.AArcticInt <> mi var
+R5491:5497 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf dim_pos def
+R5599:5609 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI mi_eval_aux def
+R5612:5618 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI vec_at0 def
+R5636:5650 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.VA vector_plus_nth thm
+R5636:5650 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.VA vector_plus_nth thm
+R5636:5650 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.VA vector_plus_nth thm
+R5679:5693 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.VA add_vectors_nth thm
+R5679:5693 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.VA add_vectors_nth thm
+R5679:5693 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.VA add_vectors_nth thm
+R5702:5724 CoLoR.MatrixInt.AArcticInt ArcticInt.AB.OSR.SR arctic_plus_notInf_left thm
+R5702:5724 CoLoR.MatrixInt.AArcticInt ArcticInt.AB.OSR.SR arctic_plus_notInf_left thm
+R5739:5754 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra eval_some_notInf thm
+R5739:5754 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra eval_some_notInf thm
+R5776:5785 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.OSR.SR Aplus_comm def
+R5776:5785 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.OSR.SR Aplus_comm def
+R5776:5785 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.M.VA.OSR.SR Aplus_comm def
+R5794:5816 CoLoR.MatrixInt.AArcticInt ArcticInt.AB.OSR.SR arctic_plus_notInf_left thm
+R5794:5816 CoLoR.MatrixInt.AArcticInt ArcticInt.AB.OSR.SR arctic_plus_notInf_left thm
+prf 5844:5853 ArcticInt.MonotoneAlgebra mi_eval_ok
+R5875:5887 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf vec_invariant def
+R5890:5900 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI mi_eval_aux def
+R5914:5917 CoLoR.Util.Vector.VecUtil <> Vmap def
+R5927:5927 CoLoR.MatrixInt.AArcticInt <> v var
+R5919:5925 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI dom2vec def
+R5903:5908 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf trsInt def
+R5910:5910 CoLoR.MatrixInt.AArcticInt <> f var
+R5965:5977 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf vec_invariant def
+R5980:5991 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf vec_at0 def
+R6007:6024 CoLoR.MatrixInt.AArcticInt ArcticInt.AB.OSR not_minusInf_ge_A1 thm
+R6007:6024 CoLoR.MatrixInt.AArcticInt ArcticInt.AB.OSR not_minusInf_ge_A1 thm
+R6043:6053 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra mi_eval_at0 thm
+R6043:6053 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra mi_eval_at0 thm
+R6064:6070 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI vec_at0 def
+R6099:6106 CoLoR.MatrixInt.AArcticInt AI trsIntOk defax
+R6099:6106 CoLoR.MatrixInt.AArcticInt AI trsIntOk defax
+def 6134:6134 ArcticInt.MonotoneAlgebra I
+R6139:6139 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI I def
+R6141:6150 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra mi_eval_ok thm
+def 6169:6172 ArcticInt.MonotoneAlgebra succ
+R6177:6187 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase succ def
+def 6205:6209 ArcticInt.MonotoneAlgebra succ'
+R6214:6225 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase succ' def
+def 6243:6251 ArcticInt.MonotoneAlgebra succ'_sub
+R6257:6272 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase succ'_sub def
+R6312:6321 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra mi_eval_ok thm
+R6290:6304 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra gtx_mult_compat thm
+R6274:6288 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra gtx_plus_compat thm
+def 6339:6347 ArcticInt.MonotoneAlgebra succ'_dec
+R6352:6367 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase succ'_dec def
+def 6386:6391 ArcticInt.MonotoneAlgebra succeq
+R6396:6405 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI succeq def
+def 6423:6429 ArcticInt.MonotoneAlgebra succeq'
+R6434:6444 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI succeq' def
+def 6462:6472 ArcticInt.MonotoneAlgebra succeq'_sub
+R6478:6492 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI succeq'_sub def
+R6494:6503 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra mi_eval_ok thm
+def 6521:6531 ArcticInt.MonotoneAlgebra succeq'_dec
+R6536:6550 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI succeq'_dec def
+def 6569:6579 ArcticInt.MonotoneAlgebra refl_succeq
+R6584:6598 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI refl_succeq inst
+def 6616:6630 ArcticInt.MonotoneAlgebra monotone_succeq
+R6636:6654 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI monotone_succeq thm
+R6656:6665 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra mi_eval_ok thm
+def 6683:6694 ArcticInt.MonotoneAlgebra trans_succeq
+R6699:6714 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI trans_succeq inst
+def 6732:6741 ArcticInt.MonotoneAlgebra trans_succ
+R6746:6762 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase trans_succ inst
+def 6781:6798 ArcticInt.MonotoneAlgebra succ_succeq_compat
+R6803:6827 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase succ_succeq_compat thm
+R6829:6836 CoLoR.MatrixInt.AArcticInt ArcticInt.AB.OSR ge_gt_eq thm
+prf 6850:6856 ArcticInt.MonotoneAlgebra succ_wf
+R6860:6861 CoLoR.Util.Relation.SN <> WF def
+R6863:6866 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra succ def
+R6946:6949 CoLoR.Util.Algebra.OrdSemiRing ArcticOrdSemiRingT ::x_'>>'_x not
+R6927:6933 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI vec_at0 def
+R6936:6942 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI dom2vec def
+R6944:6944 CoLoR.MatrixInt.AArcticInt <> x var
+R6950:6956 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI vec_at0 def
+R6959:6965 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI dom2vec def
+R6967:6967 CoLoR.MatrixInt.AArcticInt <> y var
+R6893:6899 CoLoR.Util.Relation.SN <> WF_incl inst
+R6946:6949 CoLoR.Util.Algebra.OrdSemiRing ArcticOrdSemiRingT ::x_'>>'_x not
+R6927:6933 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI vec_at0 def
+R6936:6942 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI dom2vec def
+R6944:6944 CoLoR.MatrixInt.AArcticInt <> x var
+R6950:6956 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI vec_at0 def
+R6959:6965 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI dom2vec def
+R6967:6967 CoLoR.MatrixInt.AArcticInt <> y var
+R6893:6899 CoLoR.Util.Relation.SN <> WF_incl inst
+R7010:7026 CoLoR.Util.Vector.VecUtil <> Vforall2_elim_nth thm
+R7064:7070 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf dim_pos def
+R7051:7057 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI dom2vec def
+R7039:7045 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI dom2vec def
+R7032:7034 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase gtx def
+R7010:7026 CoLoR.Util.Vector.VecUtil <> Vforall2_elim_nth thm
+R7064:7070 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf dim_pos def
+R7051:7057 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI dom2vec def
+R7039:7045 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI dom2vec def
+R7032:7034 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase gtx def
+R7147:7149 Coq.Init.Logic <> :type_scope:x_'='_x not
+R7133:7136 CoLoR.Util.Vector.VecUtil <> Vnth def
+R7140:7146 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf dim_pos def
+R7150:7151 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.OSRT.SR A0 defax
+R7147:7149 Coq.Init.Logic <> :type_scope:x_'='_x not
+R7133:7136 CoLoR.Util.Vector.VecUtil <> Vnth def
+R7140:7146 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf dim_pos def
+R7150:7151 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.OSRT.SR A0 defax
+R7167:7184 CoLoR.MatrixInt.AArcticInt ArcticInt.AB.OSR ge_A1_not_minusInf thm
+R7167:7184 CoLoR.MatrixInt.AArcticInt ArcticInt.AB.OSR ge_A1_not_minusInf thm
+R7210:7212 CoLoR.Util.Relation.RelUtil <> Rof def
+R7233:7239 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI vec_at0 def
+R7242:7248 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI dom2vec def
+R7250:7250 CoLoR.MatrixInt.AArcticInt <> v var
+R7220:7221 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.OSRT gt defax
+R7218:7218 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.OSRT.SR.ES.Eq A defax
+R7214:7216 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI dom def
+R7210:7212 CoLoR.Util.Relation.RelUtil <> Rof def
+R7233:7239 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI vec_at0 def
+R7242:7248 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI dom2vec def
+R7250:7250 CoLoR.MatrixInt.AArcticInt <> v var
+R7220:7221 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.OSRT gt defax
+R7218:7218 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.Conf.OSRT.SR.ES.Eq A defax
+R7214:7216 CoLoR.MatrixInt.AArcticInt ArcticInt.AIBase.MBI dom def
+R7268:7277 CoLoR.Util.Relation.SN <> WF_inverse thm
+R7268:7277 CoLoR.Util.Relation.SN <> WF_inverse thm
+R7286:7290 CoLoR.MatrixInt.AArcticInt ArcticInt.AB.OSR gt_WF thm
+R7286:7290 CoLoR.MatrixInt.AArcticInt ArcticInt.AB.OSR gt_WF thm
+R7311:7325 CoLoR.MatrixInt.AArcticInt ArcticInt.MonotoneAlgebra <> mod
+R7440:7448 CoLoR.MatrixInt.AArcticInt ArcticInt <> mod

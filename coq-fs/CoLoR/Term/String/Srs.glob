@@ -1,0 +1,307 @@
+DIGEST fe5c34880140cc49d4731d361637d4d7
+FCoLoR.Term.String.Srs
+R187:195 CoLoR.Util.Logic.LogicUtil <> <> lib
+R197:203 CoLoR.Util.Relation.RelUtil <> <> lib
+R205:212 CoLoR.Util.List.ListUtil <> <> lib
+R214:221 CoLoR.Util.Bool.BoolUtil <> <> lib
+R223:228 CoLoR.Util.Logic.EqUtil <> <> lib
+R230:236 CoLoR.Util.List.ListDec <> <> lib
+R254:261 CoLoR.Term.String.SContext <> <> lib
+sec 363:372 <> definition
+var 385:387 definition Sig
+R391:399 CoLoR.Term.Varyadic.VSignature <> Signature rec
+def 414:419 <> string
+R424:427 Coq.Init.Datatypes <> list ind
+R429:431 CoLoR.Term.String.Srs <> definition.Sig var
+def 446:455 <> beq_string
+R460:467 CoLoR.Util.List.ListDec <> beq_list def
+R471:478 CoLoR.Term.Varyadic.VSignature <> beq_symb proj
+R480:482 CoLoR.Term.String.Srs <> definition.Sig var
+def 497:509 <> beq_string_ok
+R514:524 CoLoR.Util.List.ListDec <> beq_list_ok thm
+R528:538 CoLoR.Term.Varyadic.VSignature <> beq_symb_ok proj
+R540:542 CoLoR.Term.String.Srs <> definition.Sig var
+constr 657:662 <> mkRule
+rec 642:645 <> rule
+proj 666:668 <> lhs
+proj 680:682 <> rhs
+R672:677 CoLoR.Term.String.Srs <> string def
+R686:691 CoLoR.Term.String.Srs <> string def
+def 706:713 <> beq_rule
+R724:727 CoLoR.Term.String.Srs <> rule rec
+R732:735 Coq.Init.Datatypes <> bool ind
+R757:758 CoLoR.Term.String.Srs <> a1 var
+R778:779 CoLoR.Term.String.Srs <> a2 var
+R804:807 Coq.Init.Datatypes <> :bool_scope:x_'&&'_x not
+R788:797 CoLoR.Term.String.Srs <> beq_string def
+R802:803 CoLoR.Term.String.Srs <> l2 var
+R799:800 CoLoR.Term.String.Srs <> l1 var
+R808:817 CoLoR.Term.String.Srs <> beq_string def
+R822:823 CoLoR.Term.String.Srs <> r2 var
+R819:820 CoLoR.Term.String.Srs <> r1 var
+prf 833:843 <> beq_rule_ok
+R882:886 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R875:877 Coq.Init.Logic <> :type_scope:x_'='_x not
+R861:868 CoLoR.Term.String.Srs <> beq_rule def
+R873:874 CoLoR.Term.String.Srs <> a2 var
+R870:871 CoLoR.Term.String.Srs <> a1 var
+R878:881 Coq.Init.Datatypes <> true constr
+R889:891 Coq.Init.Logic <> :type_scope:x_'='_x not
+R887:888 CoLoR.Term.String.Srs <> a1 var
+R892:893 CoLoR.Term.String.Srs <> a2 var
+R978:984 CoLoR.Util.Bool.BoolUtil <> andb_eq thm
+R988:1000 CoLoR.Term.String.Srs <> beq_string_ok def
+R978:984 CoLoR.Util.Bool.BoolUtil <> andb_eq thm
+R978:984 CoLoR.Util.Bool.BoolUtil <> andb_eq thm
+R988:1000 CoLoR.Term.String.Srs <> beq_string_ok def
+R988:1000 CoLoR.Term.String.Srs <> beq_string_ok def
+R988:1000 CoLoR.Term.String.Srs <> beq_string_ok def
+R988:1000 CoLoR.Term.String.Srs <> beq_string_ok def
+R1063:1070 CoLoR.Util.Logic.EqUtil <> beq_refl thm
+R1072:1084 CoLoR.Term.String.Srs <> beq_string_ok def
+R1063:1070 CoLoR.Util.Logic.EqUtil <> beq_refl thm
+R1072:1084 CoLoR.Term.String.Srs <> beq_string_ok def
+R1063:1070 CoLoR.Util.Logic.EqUtil <> beq_refl thm
+R1072:1084 CoLoR.Term.String.Srs <> beq_string_ok def
+R1063:1070 CoLoR.Util.Logic.EqUtil <> beq_refl thm
+R1072:1084 CoLoR.Term.String.Srs <> beq_string_ok def
+R1063:1070 CoLoR.Util.Logic.EqUtil <> beq_refl thm
+R1072:1084 CoLoR.Term.String.Srs <> beq_string_ok def
+def 1111:1115 <> rules
+R1120:1123 Coq.Init.Datatypes <> list ind
+R1125:1128 CoLoR.Term.String.Srs <> rule rec
+def 1235:1237 <> red
+R1243:1250 Coq.Relations.Relation_Definitions <> relation def
+R1252:1257 CoLoR.Term.String.Srs <> string def
+R1277:1283 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R1285:1286 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R1287:1293 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R1295:1296 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R1297:1303 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R1305:1310 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R1328:1331 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R1311:1312 Coq.Lists.List <> In def
+R1327:1327 CoLoR.Term.String.Srs <> R var
+R1315:1320 CoLoR.Term.String.Srs <> mkRule constr
+R1324:1324 CoLoR.Term.String.Srs <> r var
+R1322:1322 CoLoR.Term.String.Srs <> l var
+R1345:1348 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R1334:1336 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1332:1333 CoLoR.Term.String.Srs <> s1 var
+R1337:1340 CoLoR.Term.String.SContext <> fill def
+R1344:1344 CoLoR.Term.String.Srs <> l var
+R1342:1342 CoLoR.Term.String.Srs <> c var
+R1351:1353 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1349:1350 CoLoR.Term.String.Srs <> s2 var
+R1354:1357 CoLoR.Term.String.SContext <> fill def
+R1361:1361 CoLoR.Term.String.Srs <> r var
+R1359:1359 CoLoR.Term.String.Srs <> c var
+def 1376:1382 <> red_mod
+R1398:1400 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'@'_x not
+R1396:1397 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'#' not
+R1391:1393 CoLoR.Term.String.Srs <> red def
+R1395:1395 CoLoR.Term.String.Srs <> E var
+R1401:1403 CoLoR.Term.String.Srs <> red def
+R1405:1405 CoLoR.Term.String.Srs <> R var
+R1413:1422 CoLoR.Term.String.Srs definition <> sec
+R1445:1450 CoLoR.Term.String.Srs <> mkRule constr
+R1600:1602 CoLoR.Term.String.Srs <> red def
+R1600:1602 CoLoR.Term.String.Srs <> red def
+R1816:1822 CoLoR.Term.String.Srs <> red_mod def
+R1816:1822 CoLoR.Term.String.Srs <> red_mod def
+R1748:1750 CoLoR.Term.String.Srs <> red def
+sec 1986:1986 <> S
+var 1999:2001 S Sig
+R2005:2013 CoLoR.Term.Varyadic.VSignature <> Signature rec
+syndef 2026:2031 <> string
+R2037:2042 CoLoR.Term.String.Srs <> string def
+R2044:2046 CoLoR.Term.String.Srs <> S.Sig var
+syndef 2059:2063 <> rules
+R2069:2073 CoLoR.Term.String.Srs <> rules def
+R2075:2077 CoLoR.Term.String.Srs <> S.Sig var
+sec 2090:2092 S red
+var 2105:2105 S.red R
+R2109:2113 CoLoR.Term.String.Srs <> rules syndef
+prf 2123:2130 <> red_rule
+R2167:2170 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2171:2173 CoLoR.Term.String.Srs <> red def
+R2189:2192 CoLoR.Term.String.SContext <> fill def
+R2196:2196 CoLoR.Term.String.Srs <> r var
+R2194:2194 CoLoR.Term.String.Srs <> c var
+R2178:2181 CoLoR.Term.String.SContext <> fill def
+R2185:2185 CoLoR.Term.String.Srs <> l var
+R2183:2183 CoLoR.Term.String.Srs <> c var
+R2175:2175 CoLoR.Term.String.Srs <> S.red.R var
+R2150:2151 Coq.Lists.List <> In def
+R2166:2166 CoLoR.Term.String.Srs <> S.red.R var
+R2154:2159 CoLoR.Term.String.Srs <> mkRule constr
+R2163:2163 CoLoR.Term.String.Srs <> r var
+R2161:2161 CoLoR.Term.String.Srs <> l var
+R2223:2225 CoLoR.Term.String.Srs <> red def
+prf 2276:2287 <> red_rule_top
+R2320:2325 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2326:2328 CoLoR.Term.String.Srs <> red def
+R2334:2334 CoLoR.Term.String.Srs <> r var
+R2332:2332 CoLoR.Term.String.Srs <> l var
+R2330:2330 CoLoR.Term.String.Srs <> S.red.R var
+R2303:2304 Coq.Lists.List <> In def
+R2319:2319 CoLoR.Term.String.Srs <> S.red.R var
+R2307:2312 CoLoR.Term.String.Srs <> mkRule constr
+R2316:2316 CoLoR.Term.String.Srs <> r var
+R2314:2314 CoLoR.Term.String.Srs <> l var
+R2388:2396 CoLoR.Term.String.SContext <> mkContext constr
+R2402:2404 Coq.Init.Datatypes <> nil constr
+R2398:2400 Coq.Init.Datatypes <> nil constr
+R2388:2396 CoLoR.Term.String.SContext <> mkContext constr
+R2402:2404 Coq.Init.Datatypes <> nil constr
+R2398:2400 Coq.Init.Datatypes <> nil constr
+R2432:2435 CoLoR.Term.String.SContext <> fill def
+R2467:2477 Coq.Lists.List <> app_nil_end thm
+R2467:2477 Coq.Lists.List <> app_nil_end thm
+R2467:2477 Coq.Lists.List <> app_nil_end thm
+R2467:2477 Coq.Lists.List <> app_nil_end thm
+R2467:2477 Coq.Lists.List <> app_nil_end thm
+prf 2502:2509 <> red_fill
+R2536:2539 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2540:2542 CoLoR.Term.String.Srs <> red def
+R2558:2561 CoLoR.Term.String.SContext <> fill def
+R2565:2565 CoLoR.Term.String.Srs <> u var
+R2563:2563 CoLoR.Term.String.Srs <> c var
+R2547:2550 CoLoR.Term.String.SContext <> fill def
+R2554:2554 CoLoR.Term.String.Srs <> t var
+R2552:2552 CoLoR.Term.String.Srs <> c var
+R2544:2544 CoLoR.Term.String.Srs <> S.red.R var
+R2527:2529 CoLoR.Term.String.Srs <> red def
+R2535:2535 CoLoR.Term.String.Srs <> u var
+R2533:2533 CoLoR.Term.String.Srs <> t var
+R2531:2531 CoLoR.Term.String.Srs <> S.red.R var
+R2600:2602 CoLoR.Term.String.Srs <> red def
+R2633:2636 CoLoR.Term.String.SContext <> comp def
+R2633:2636 CoLoR.Term.String.SContext <> comp def
+R2666:2674 CoLoR.Term.String.SContext <> fill_fill thm
+R2666:2674 CoLoR.Term.String.SContext <> fill_fill thm
+R2666:2674 CoLoR.Term.String.SContext <> fill_fill thm
+R2666:2674 CoLoR.Term.String.SContext <> fill_fill thm
+R2666:2674 CoLoR.Term.String.SContext <> fill_fill thm
+prf 2695:2706 <> rtc_red_fill
+R2737:2740 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2746:2747 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'#' not
+R2741:2743 CoLoR.Term.String.Srs <> red def
+R2745:2745 CoLoR.Term.String.Srs <> S.red.R var
+R2761:2764 CoLoR.Term.String.SContext <> fill def
+R2768:2768 CoLoR.Term.String.Srs <> u var
+R2766:2766 CoLoR.Term.String.Srs <> c var
+R2750:2753 CoLoR.Term.String.SContext <> fill def
+R2757:2757 CoLoR.Term.String.Srs <> t var
+R2755:2755 CoLoR.Term.String.Srs <> c var
+R2731:2732 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'#' not
+R2726:2728 CoLoR.Term.String.Srs <> red def
+R2730:2730 CoLoR.Term.String.Srs <> S.red.R var
+R2736:2736 CoLoR.Term.String.Srs <> u var
+R2734:2734 CoLoR.Term.String.Srs <> t var
+R2799:2805 Coq.Relations.Relation_Operators <> rt_step constr
+R2799:2805 Coq.Relations.Relation_Operators <> rt_step constr
+R2814:2821 CoLoR.Term.String.Srs <> red_fill thm
+R2814:2821 CoLoR.Term.String.Srs <> red_fill thm
+R2835:2841 Coq.Relations.Relation_Operators <> rt_refl constr
+R2835:2841 Coq.Relations.Relation_Operators <> rt_refl constr
+R2865:2868 CoLoR.Term.String.SContext <> fill def
+R2850:2857 Coq.Relations.Relation_Operators <> rt_trans constr
+R2865:2868 CoLoR.Term.String.SContext <> fill def
+R2850:2857 Coq.Relations.Relation_Operators <> rt_trans constr
+prf 2893:2899 <> red_nil
+R2916:2921 CoLoR.Term.String.Srs <> string syndef
+R2935:2938 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2940:2942 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2939:2939 CoLoR.Term.String.Srs <> x var
+R2943:2943 CoLoR.Term.String.Srs <> y var
+R2924:2926 CoLoR.Term.String.Srs <> red def
+R2934:2934 CoLoR.Term.String.Srs <> y var
+R2932:2932 CoLoR.Term.String.Srs <> x var
+R2928:2930 Coq.Init.Datatypes <> nil constr
+R2961:2963 CoLoR.Term.String.Srs <> red def
+prf 3009:3019 <> red_nil_rtc
+R3036:3041 CoLoR.Term.String.Srs <> string syndef
+R3057:3060 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3062:3064 Coq.Init.Logic <> :type_scope:x_'='_x not
+R3061:3061 CoLoR.Term.String.Srs <> x var
+R3065:3065 CoLoR.Term.String.Srs <> y var
+R3051:3052 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'#' not
+R3044:3046 CoLoR.Term.String.Srs <> red def
+R3048:3050 Coq.Init.Datatypes <> nil constr
+R3056:3056 CoLoR.Term.String.Srs <> y var
+R3054:3054 CoLoR.Term.String.Srs <> x var
+R3095:3101 CoLoR.Term.String.Srs <> red_nil thm
+R3095:3101 CoLoR.Term.String.Srs <> red_nil thm
+prf 3145:3166 <> red_mod_empty_incl_red
+R3183:3186 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'<<'_x not
+R3170:3176 CoLoR.Term.String.Srs <> red_mod def
+R3182:3182 CoLoR.Term.String.Srs <> S.red.R var
+R3178:3180 Coq.Init.Datatypes <> nil constr
+R3187:3189 CoLoR.Term.String.Srs <> red def
+R3191:3191 CoLoR.Term.String.Srs <> S.red.R var
+R3209:3217 Coq.Relations.Relation_Definitions <> inclusion def
+R3241:3251 CoLoR.Term.String.Srs <> red_nil_rtc thm
+R3241:3251 CoLoR.Term.String.Srs <> red_nil_rtc thm
+R3270:3277 CoLoR.Term.String.Srs <> red_rule thm
+R3270:3277 CoLoR.Term.String.Srs <> red_rule thm
+prf 3302:3323 <> red_incl_red_mod_empty
+R3332:3335 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'<<'_x not
+R3327:3329 CoLoR.Term.String.Srs <> red def
+R3331:3331 CoLoR.Term.String.Srs <> S.red.R var
+R3336:3342 CoLoR.Term.String.Srs <> red_mod def
+R3348:3348 CoLoR.Term.String.Srs <> S.red.R var
+R3344:3346 Coq.Init.Datatypes <> nil constr
+R3366:3374 Coq.Relations.Relation_Definitions <> inclusion def
+R3408:3414 Coq.Relations.Relation_Operators <> rt_refl constr
+R3408:3414 Coq.Relations.Relation_Operators <> rt_refl constr
+prf 3438:3450 <> red_mod_empty
+R3467:3470 CoLoR.Util.Relation.RelUtil <> ::x_'=='_x not
+R3454:3460 CoLoR.Term.String.Srs <> red_mod def
+R3466:3466 CoLoR.Term.String.Srs <> S.red.R var
+R3462:3464 Coq.Init.Datatypes <> nil constr
+R3471:3473 CoLoR.Term.String.Srs <> red def
+R3475:3475 CoLoR.Term.String.Srs <> S.red.R var
+R3499:3520 CoLoR.Term.String.Srs <> red_mod_empty_incl_red thm
+R3499:3520 CoLoR.Term.String.Srs <> red_mod_empty_incl_red thm
+R3529:3550 CoLoR.Term.String.Srs <> red_incl_red_mod_empty thm
+R3529:3550 CoLoR.Term.String.Srs <> red_incl_red_mod_empty thm
+R3563:3565 CoLoR.Term.String.Srs S.red <> sec
+sec 3577:3583 S red_mod
+var 3597:3597 S.red_mod E
+var 3599:3599 S.red_mod R
+R3603:3607 CoLoR.Term.String.Srs <> rules syndef
+prf 3617:3628 <> red_mod_fill
+R3663:3666 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3667:3673 CoLoR.Term.String.Srs <> red_mod def
+R3691:3694 CoLoR.Term.String.SContext <> fill def
+R3698:3698 CoLoR.Term.String.Srs <> u var
+R3696:3696 CoLoR.Term.String.Srs <> c var
+R3680:3683 CoLoR.Term.String.SContext <> fill def
+R3687:3687 CoLoR.Term.String.Srs <> t var
+R3685:3685 CoLoR.Term.String.Srs <> c var
+R3677:3677 CoLoR.Term.String.Srs <> S.red_mod.R var
+R3675:3675 CoLoR.Term.String.Srs <> S.red_mod.E var
+R3648:3654 CoLoR.Term.String.Srs <> red_mod def
+R3662:3662 CoLoR.Term.String.Srs <> u var
+R3660:3660 CoLoR.Term.String.Srs <> t var
+R3658:3658 CoLoR.Term.String.Srs <> S.red_mod.R var
+R3656:3656 CoLoR.Term.String.Srs <> S.red_mod.E var
+R3743:3746 CoLoR.Term.String.SContext <> fill def
+R3743:3746 CoLoR.Term.String.SContext <> fill def
+R3767:3778 CoLoR.Term.String.Srs <> rtc_red_fill thm
+R3767:3778 CoLoR.Term.String.Srs <> rtc_red_fill thm
+R3792:3799 CoLoR.Term.String.Srs <> red_fill thm
+R3792:3799 CoLoR.Term.String.Srs <> red_fill thm
+R3817:3823 CoLoR.Term.String.Srs S.red_mod <> sec
+R3831:3831 CoLoR.Term.String.Srs S <> sec
+R3940:3941 CoLoR.Util.Relation.SN <> <> lib
+R3993:4005 CoLoR.Term.String.Srs <> red_mod_empty thm
+R4130:4131 CoLoR.Util.Relation.SN <> WF def
+R4134:4140 CoLoR.Term.String.Srs <> red_mod def
+R4130:4131 CoLoR.Util.Relation.SN <> WF def
+R4134:4140 CoLoR.Term.String.Srs <> red_mod def
+R4184:4186 CoLoR.Util.Relation.RelUtil <> EIS def
+R4189:4195 CoLoR.Term.String.Srs <> red_mod def
+R4184:4186 CoLoR.Util.Relation.RelUtil <> EIS def
+R4189:4195 CoLoR.Term.String.Srs <> red_mod def

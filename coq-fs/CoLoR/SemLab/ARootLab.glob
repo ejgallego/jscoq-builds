@@ -1,0 +1,160 @@
+DIGEST abb6e52c4320c83d56ecc6bf05f66ba6
+FCoLoR.SemLab.ARootLab
+R247:250 CoLoR.Term.WithArity.ATrs <> <> lib
+R252:260 CoLoR.Util.Logic.LogicUtil <> <> lib
+R262:269 CoLoR.Util.List.ListUtil <> <> lib
+R271:277 CoLoR.Util.Vector.VecUtil <> <> lib
+R279:286 CoLoR.Util.Bool.BoolUtil <> <> lib
+R288:293 CoLoR.Util.Logic.EqUtil <> <> lib
+R295:301 CoLoR.SemLab.ASemLab <> <> lib
+R303:304 CoLoR.Util.Relation.SN <> <> lib
+R308:314 CoLoR.Util.Nat.NatUtil <> <> lib
+R316:322 CoLoR.Util.Relation.RelUtil <> <> lib
+R324:341 CoLoR.Term.WithArity.AWFMInterpretation <> <> lib
+modtype 475:481 <> RootLab
+ax 497:499 RootLab Sig
+R503:511 CoLoR.Term.WithArity.ASignature <> Signature rec
+ax 526:536 RootLab some_symbol
+R540:542 CoLoR.SemLab.ARootLab RootLab Sig defax
+ax 558:559 RootLab Fs
+R563:566 Coq.Init.Datatypes <> list ind
+R568:570 CoLoR.SemLab.ARootLab RootLab Sig defax
+ax 585:589 RootLab Fs_ok
+R604:606 CoLoR.SemLab.ARootLab RootLab Sig defax
+R609:615 Coq.Lists.List <> In def
+R619:620 CoLoR.SemLab.ARootLab RootLab Fs defax
+R617:617 CoLoR.SemLab.ARootLab <> x var
+R628:634 CoLoR.SemLab.ARootLab RootLab <> modtype
+R765:771 CoLoR.SemLab.ARootLab RootLab <> mod
+R777:785 CoLoR.SemLab.ASemLab FinSemLab <> mod
+mod 742:751 <> RootSemLab
+syndef 800:810 RootSemLab beq_symb_ok
+R817:827 CoLoR.Term.WithArity.ASignature <> beq_symb_ok proj
+R829:831 CoLoR.SemLab.ARootLab R Sig defax
+syndef 846:856 RootSemLab eq_symb_dec
+R863:873 CoLoR.Term.WithArity.ASignature <> eq_symb_dec def
+R875:877 CoLoR.SemLab.ARootLab R Sig defax
+syndef 893:896 RootSemLab term
+R902:905 CoLoR.Term.WithArity.ATerm <> term ind
+R907:909 CoLoR.SemLab.ARootLab R Sig defax
+syndef 922:926 RootSemLab terms
+R932:937 CoLoR.Util.Vector.VecUtil <> vector syndef
+R939:942 CoLoR.SemLab.ARootLab RootSemLab term syndef
+syndef 957:960 RootSemLab rule
+R966:969 CoLoR.Term.WithArity.ATrs <> rule rec
+R971:973 CoLoR.SemLab.ARootLab R Sig defax
+syndef 986:990 RootSemLab rules
+R996:1000 CoLoR.Term.WithArity.ATrs <> rules def
+R1002:1004 CoLoR.SemLab.ARootLab R Sig defax
+def 1022:1024 RootSemLab Sig
+R1029:1031 CoLoR.SemLab.ARootLab R Sig defax
+def 1048:1048 RootSemLab I
+R1053:1068 CoLoR.Term.WithArity.AInterpretation <> mkInterpretation constr
+R1094:1094 CoLoR.SemLab.ARootLab <> f var
+R1070:1080 CoLoR.SemLab.ARootLab R some_symbol defax
+def 1112:1112 RootSemLab L
+R1119:1121 CoLoR.SemLab.ARootLab RootSemLab Sig def
+R1127:1132 CoLoR.Util.Vector.VecUtil <> vector syndef
+R1139:1143 CoLoR.Term.WithArity.ASignature <> arity proj
+R1145:1145 CoLoR.SemLab.ARootLab <> f var
+R1134:1136 CoLoR.SemLab.ARootLab RootSemLab Sig def
+def 1163:1165 RootSemLab beq
+R1176:1176 CoLoR.SemLab.ARootLab RootSemLab L def
+R1178:1178 CoLoR.SemLab.ARootLab <> f var
+R1186:1186 CoLoR.SemLab.ARootLab RootSemLab L def
+R1188:1188 CoLoR.SemLab.ARootLab <> g var
+R1194:1200 CoLoR.Util.Vector.VecUtil <> beq_vec def
+R1220:1220 CoLoR.SemLab.ARootLab <> m var
+R1218:1218 CoLoR.SemLab.ARootLab <> l var
+R1204:1211 CoLoR.Term.WithArity.ASignature <> beq_symb proj
+R1213:1215 CoLoR.SemLab.ARootLab RootSemLab Sig def
+prf 1232:1237 RootSemLab beq_ok
+R1259:1259 CoLoR.SemLab.ARootLab RootSemLab L def
+R1261:1261 CoLoR.SemLab.ARootLab <> f var
+R1281:1285 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R1274:1276 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1265:1267 CoLoR.SemLab.ARootLab RootSemLab beq def
+R1272:1273 CoLoR.SemLab.ARootLab <> l2 var
+R1269:1270 CoLoR.SemLab.ARootLab <> l1 var
+R1277:1280 Coq.Init.Datatypes <> true constr
+R1288:1290 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1286:1287 CoLoR.SemLab.ARootLab <> l1 var
+R1291:1292 CoLoR.SemLab.ARootLab <> l2 var
+R1331:1340 CoLoR.Util.Vector.VecUtil <> beq_vec_ok thm
+R1331:1340 CoLoR.Util.Vector.VecUtil <> beq_vec_ok thm
+R1350:1360 CoLoR.SemLab.ARootLab RootSemLab beq_symb_ok syndef
+R1350:1360 CoLoR.SemLab.ARootLab RootSemLab beq_symb_ok syndef
+def 1384:1385 RootSemLab pi
+R1392:1394 CoLoR.SemLab.ARootLab RootSemLab Sig def
+R1402:1407 CoLoR.Util.Vector.VecUtil <> vector syndef
+R1414:1418 CoLoR.Term.WithArity.ASignature <> arity proj
+R1420:1420 CoLoR.SemLab.ARootLab <> f var
+R1409:1411 CoLoR.SemLab.ARootLab RootSemLab Sig def
+R1427:1427 CoLoR.SemLab.ARootLab <> v var
+def 1444:1447 RootSemLab beqI
+R1456:1459 CoLoR.SemLab.ARootLab RootSemLab term syndef
+R1478:1478 CoLoR.SemLab.ARootLab <> u var
+R1475:1475 CoLoR.SemLab.ARootLab <> t var
+R1493:1495 CoLoR.Term.WithArity.ATerm <> Var constr
+R1500:1502 CoLoR.Term.WithArity.ATerm <> Var constr
+R1509:1515 CoLoR.Util.Nat.NatUtil <> beq_nat def
+R1529:1531 CoLoR.Term.WithArity.ATerm <> Fun constr
+R1538:1540 CoLoR.Term.WithArity.ATerm <> Fun constr
+R1549:1556 CoLoR.Term.WithArity.ASignature <> beq_symb proj
+R1578:1582 Coq.Init.Datatypes <> false constr
+prf 1602:1608 RootSemLab beqI_ok
+R1628:1631 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'<<'_x not
+R1612:1622 CoLoR.Util.Relation.RelUtil <> rel_of_bool def
+R1624:1627 CoLoR.SemLab.ARootLab RootSemLab beqI def
+R1632:1633 CoLoR.Term.WithArity.AWFMInterpretation <> IR def
+R1639:1640 Coq.Init.Logic <> eq ind
+R1642:1642 CoLoR.SemLab.ARootLab RootSemLab I def
+R1635:1635 CoLoR.SemLab.ARootLab RootSemLab I def
+R1679:1689 CoLoR.Util.Relation.RelUtil <> rel_of_bool def
+R1758:1767 CoLoR.Util.Nat.NatUtil <> beq_nat_ok thm
+R1758:1767 CoLoR.Util.Nat.NatUtil <> beq_nat_ok thm
+R1758:1767 CoLoR.Util.Nat.NatUtil <> beq_nat_ok thm
+R1807:1817 CoLoR.SemLab.ARootLab RootSemLab beq_symb_ok syndef
+R1807:1817 CoLoR.SemLab.ARootLab RootSemLab beq_symb_ok syndef
+R1807:1817 CoLoR.SemLab.ARootLab RootSemLab beq_symb_ok syndef
+def 1866:1867 RootSemLab Fs
+R1872:1873 CoLoR.SemLab.ARootLab R Fs defax
+def 1889:1893 RootSemLab Fs_ok
+R1898:1902 CoLoR.SemLab.ARootLab R Fs_ok defax
+def 1919:1920 RootSemLab Is
+R1925:1926 CoLoR.SemLab.ARootLab RootSemLab Fs def
+def 1942:1946 RootSemLab Is_ok
+R1951:1955 CoLoR.SemLab.ARootLab RootSemLab Fs_ok def
+def 1972:1973 RootSemLab Ls
+R1980:1982 CoLoR.SemLab.ARootLab RootSemLab Sig def
+R1988:1997 CoLoR.SemLab.ASemLab <> enum_tuple def
+R2005:2009 CoLoR.Term.WithArity.ASignature <> arity proj
+R2011:2011 CoLoR.SemLab.ARootLab <> f var
+R2001:2002 CoLoR.SemLab.ARootLab RootSemLab Is def
+R1999:1999 CoLoR.SemLab.ARootLab RootSemLab I def
+prf 2024:2028 RootSemLab Ls_ok
+R2046:2046 CoLoR.SemLab.ARootLab RootSemLab L def
+R2048:2048 CoLoR.SemLab.ARootLab <> f var
+R2052:2058 Coq.Lists.List <> In def
+R2063:2064 CoLoR.SemLab.ARootLab RootSemLab Ls def
+R2066:2066 CoLoR.SemLab.ARootLab <> f var
+R2060:2060 CoLoR.SemLab.ARootLab <> x var
+R2103:2104 CoLoR.SemLab.ARootLab RootSemLab Ls def
+R2114:2132 CoLoR.SemLab.ASemLab <> enum_tuple_complete thm
+R2136:2140 CoLoR.SemLab.ARootLab RootSemLab Is_ok def
+R2134:2134 CoLoR.SemLab.ARootLab RootSemLab I def
+R2114:2132 CoLoR.SemLab.ASemLab <> enum_tuple_complete thm
+R2136:2140 CoLoR.SemLab.ARootLab RootSemLab Is_ok def
+R2134:2134 CoLoR.SemLab.ARootLab RootSemLab I def
+R2156:2165 CoLoR.SemLab.ARootLab RootSemLab <> mod
+R2195:2201 CoLoR.SemLab.ARootLab RootLab <> mod
+mod 2176:2187 <> RootLabProps
+R2222:2231 CoLoR.SemLab.ARootLab RootSemLab <> modtype
+R2233:2234 CoLoR.SemLab.ARootLab RL <> modtype
+mod 2215:2217 <> RootLabProps.FSL
+R2256:2269 CoLoR.SemLab.ASemLab FinSemLabProps <> modtype
+R2271:2273 CoLoR.SemLab.ARootLab RootLabProps.FSL <> modtype
+mod 2247:2251 <> RootLabProps.Props
+R2296:2307 CoLoR.SemLab.ARootLab RootLabProps.Props.LabSig <> modtype
+mod 2286:2291 <> RootLabProps.LabSig
+R2348:2359 CoLoR.SemLab.ARootLab RootLabProps <> mod

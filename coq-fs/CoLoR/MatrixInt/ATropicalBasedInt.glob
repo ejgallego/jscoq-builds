@@ -1,0 +1,643 @@
+DIGEST 0fa9509a897be5866909a0ca388a847f
+FCoLoR.MatrixInt.ATropicalBasedInt
+R186:194 Coq.Classes.Morphisms <> <> lib
+R196:202 CoLoR.Term.WithArity.AMonAlg <> <> lib
+R204:209 CoLoR.Util.Matrix.Matrix <> <> lib
+R211:221 CoLoR.Util.Algebra.OrdSemiRing <> <> lib
+R223:229 CoLoR.Util.Vector.VecUtil <> <> lib
+R231:232 CoLoR.Util.Relation.SN <> <> lib
+R234:240 CoLoR.Util.Relation.RelUtil <> <> lib
+R244:252 CoLoR.Util.Logic.LogicUtil <> <> lib
+R254:259 Coq.Setoids.Setoid <> <> lib
+R261:275 CoLoR.MatrixInt.AMatrixBasedInt <> <> lib
+modtype 363:379 <> TTropicalBasedInt
+R413:427 CoLoR.Util.Algebra.OrdSemiRing OrdSemiRingType <> mod
+mod 407:409 <> TTropicalBasedInt.OSR
+R452:457 CoLoR.Util.Matrix.Matrix Matrix <> modtype
+R459:461 CoLoR.MatrixInt.ATropicalBasedInt TTropicalBasedInt.OSR <> modtype
+mod 447:447 <> TTropicalBasedInt.M
+ax 477:479 TTropicalBasedInt sig
+R483:491 CoLoR.Term.WithArity.ASignature <> Signature rec
+ax 506:508 TTropicalBasedInt dim
+R512:514 Coq.Init.Datatypes <> nat ind
+ax 529:535 TTropicalBasedInt dim_pos
+R542:544 Coq.Init.Peano <> :nat_scope:x_'>'_x not
+R539:541 CoLoR.MatrixInt.ATropicalBasedInt TTropicalBasedInt dim defax
+ax 560:565 TTropicalBasedInt trsInt
+R580:582 CoLoR.MatrixInt.ATropicalBasedInt TTropicalBasedInt sig defax
+R585:593 CoLoR.MatrixInt.AMatrixBasedInt <> matrixInt rec
+R609:613 CoLoR.Term.WithArity.ASignature <> arity proj
+R615:615 CoLoR.MatrixInt.ATropicalBasedInt <> f var
+R604:606 CoLoR.MatrixInt.ATropicalBasedInt TTropicalBasedInt dim defax
+R597:602 CoLoR.MatrixInt.ATropicalBasedInt TTropicalBasedInt.M matrix def
+R595:595 CoLoR.MatrixInt.ATropicalBasedInt TTropicalBasedInt.OSR.SR.ES.Eq A defax
+R624:640 CoLoR.MatrixInt.ATropicalBasedInt TTropicalBasedInt <> modtype
+R682:698 CoLoR.MatrixInt.ATropicalBasedInt TTropicalBasedInt <> mod
+mod 651:666 <> TropicalBasedInt
+R720:735 CoLoR.MatrixInt.AMatrixBasedInt MatrixMethodConf <> mod
+mod 712:715 <> TropicalBasedInt.Conf
+R762:766 CoLoR.MatrixInt.ATropicalBasedInt TBI.M <> modtype
+mod 757:757 <> TropicalBasedInt.Conf.M
+R795:801 CoLoR.MatrixInt.ATropicalBasedInt TBI.OSR <> modtype
+mod 787:790 <> TropicalBasedInt.Conf.OSRT
+def 820:822 TropicalBasedInt.Conf sig
+R827:829 CoLoR.MatrixInt.ATropicalBasedInt TBI sig defax
+def 847:849 TropicalBasedInt.Conf dim
+R854:856 CoLoR.MatrixInt.ATropicalBasedInt TBI dim defax
+def 874:880 TropicalBasedInt.Conf dim_pos
+R885:891 CoLoR.MatrixInt.ATropicalBasedInt TBI dim_pos defax
+def 910:915 TropicalBasedInt.Conf trsInt
+R920:925 CoLoR.MatrixInt.ATropicalBasedInt TBI trsInt defax
+syndef 941:943 TropicalBasedInt.Conf vec
+R949:951 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M vec syndef
+R953:955 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf dim def
+def 974:980 TropicalBasedInt.Conf vec_at0
+R987:989 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf vec syndef
+R995:998 CoLoR.Util.Vector.VecUtil <> Vnth def
+R1002:1008 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf dim_pos def
+R1000:1000 CoLoR.MatrixInt.ATropicalBasedInt <> v var
+def 1222:1234 TropicalBasedInt.Conf vec_invariant
+R1241:1243 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf vec syndef
+R1251:1254 CoLoR.Util.Algebra.OrdSemiRing OrdSemiRingType ::x_'>>'_x not
+R1249:1250 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.OSRT.SR A0 defax
+R1255:1261 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf vec_at0 def
+R1263:1263 CoLoR.MatrixInt.ATropicalBasedInt <> v var
+var 1280:1287 TropicalBasedInt.Conf A0_gt_A1
+R1293:1296 CoLoR.Util.Algebra.OrdSemiRing OrdSemiRingType ::x_'>>'_x not
+R1291:1292 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.OSRT.SR A0 defax
+R1297:1298 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.OSRT.SR A1 defax
+prf 1312:1324 TropicalBasedInt.Conf inv_id_matrix
+R1335:1347 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf vec_invariant def
+R1350:1357 CoLoR.Util.Vector.VecUtil <> Vreplace def
+R1383:1384 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.OSRT.SR A1 defax
+R1375:1381 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf dim_pos def
+R1360:1365 CoLoR.Util.Vector.VecUtil <> Vconst syndef
+R1370:1372 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf dim def
+R1367:1368 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.OSRT.SR A0 defax
+R1413:1425 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf vec_invariant def
+R1428:1434 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf vec_at0 def
+R1445:1456 CoLoR.Util.Vector.VecUtil <> Vnth_replace thm
+R1445:1456 CoLoR.Util.Vector.VecUtil <> Vnth_replace thm
+R1445:1456 CoLoR.Util.Vector.VecUtil <> Vnth_replace thm
+R1465:1472 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf A0_gt_A1 defax
+R1465:1472 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf A0_gt_A1 defax
+R1491:1494 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf <> mod
+R1521:1534 CoLoR.MatrixInt.AMatrixBasedInt MatrixBasedInt <> modtype
+R1536:1539 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf <> modtype
+mod 1514:1516 <> TropicalBasedInt.MBI
+sec 1553:1555 TropicalBasedInt ABI
+syndef 1572:1580 TropicalBasedInt matrixInt
+R1586:1594 CoLoR.MatrixInt.AMatrixBasedInt <> matrixInt rec
+R1598:1603 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M matrix def
+R1596:1596 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.OSRT.SR.ES.Eq A defax
+syndef 1620:1623 TropicalBasedInt mint
+R1629:1637 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt matrixInt syndef
+R1639:1641 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf dim def
+syndef 1658:1660 TropicalBasedInt mat
+R1666:1671 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M matrix def
+R1677:1679 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf dim def
+R1673:1675 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf dim def
+def 1699:1701 TropicalBasedInt Sig
+R1706:1708 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf sig def
+syndef 1724:1730 TropicalBasedInt PlusInf
+R1735:1736 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.OSRT.SR A0 defax
+var 1753:1758 TropicalBasedInt.ABI A0_min
+R1773:1777 CoLoR.Util.Algebra.OrdSemiRing OrdSemiRingType ::x_'>>='_x not
+R1772:1772 CoLoR.MatrixInt.ATropicalBasedInt <> x var
+R1778:1784 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt PlusInf syndef
+var 1800:1807 TropicalBasedInt.ABI ge_gt_eq
+R1830:1833 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1840:1843 Coq.Init.Logic <> :type_scope:x_'\/'_x not
+R1835:1838 CoLoR.Util.Algebra.OrdSemiRing OrdSemiRingType ::x_'>>'_x not
+R1834:1834 CoLoR.MatrixInt.ATropicalBasedInt <> x var
+R1839:1839 CoLoR.MatrixInt.ATropicalBasedInt <> y var
+R1845:1849 CoLoR.Util.Relation.RelExtras Eqset ::x_'=A='_x not
+R1844:1844 CoLoR.MatrixInt.ATropicalBasedInt <> x var
+R1850:1850 CoLoR.MatrixInt.ATropicalBasedInt <> y var
+R1824:1828 CoLoR.Util.Algebra.OrdSemiRing OrdSemiRingType ::x_'>>='_x not
+R1823:1823 CoLoR.MatrixInt.ATropicalBasedInt <> x var
+R1829:1829 CoLoR.MatrixInt.ATropicalBasedInt <> y var
+def 1869:1871 TropicalBasedInt gtx
+R1886:1890 Coq.Init.Logic <> :type_scope:x_'\/'_x not
+R1921:1921 Coq.Init.Logic <> :type_scope:x_'\/'_x not
+R1881:1884 CoLoR.Util.Algebra.OrdSemiRing OrdSemiRingType ::x_'>>'_x not
+R1880:1880 CoLoR.MatrixInt.ATropicalBasedInt <> x var
+R1885:1885 CoLoR.MatrixInt.ATropicalBasedInt <> y var
+R1904:1907 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R1892:1896 CoLoR.Util.Relation.RelExtras Eqset ::x_'=A='_x not
+R1891:1891 CoLoR.MatrixInt.ATropicalBasedInt <> x var
+R1897:1903 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt PlusInf syndef
+R1909:1913 CoLoR.Util.Relation.RelExtras Eqset ::x_'=A='_x not
+R1908:1908 CoLoR.MatrixInt.ATropicalBasedInt <> y var
+R1914:1920 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt PlusInf syndef
+R1951:1953 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx def
+not 1937:1937 TropicalBasedInt.ABI ::x_'>_0'_x
+inst 1996:2002 TropicalBasedInt gtx_mor
+R2006:2011 Coq.Classes.Morphisms <> Proper class
+R2035:2037 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx def
+R2017:2021 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R2014:2016 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.OSRT.SR.ES.Eq eqA defax
+R2025:2029 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R2022:2024 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.OSRT.SR.ES.Eq eqA defax
+R2030:2032 Coq.Init.Logic <> iff def
+R2091:2093 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx def
+inst 2311:2319 TropicalBasedInt gtx_trans
+R2323:2332 Coq.Classes.RelationClasses <> Transitive class
+R2334:2336 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx def
+R2364:2366 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx def
+R2412:2423 CoLoR.MatrixInt.ATropicalBasedInt TBI.OSR gt_trans prfax
+R2412:2423 CoLoR.MatrixInt.ATropicalBasedInt TBI.OSR gt_trans prfax
+def 2546:2553 TropicalBasedInt succ_vec
+R2562:2569 CoLoR.Util.Vector.VecUtil <> Vforall2 def
+R2579:2579 CoLoR.MatrixInt.ATropicalBasedInt <> n var
+R2571:2573 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx def
+def 2598:2601 TropicalBasedInt succ
+R2610:2612 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI dom def
+R2618:2625 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt succ_vec def
+R2640:2646 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI dom2vec def
+R2648:2648 CoLoR.MatrixInt.ATropicalBasedInt <> y var
+R2628:2634 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI dom2vec def
+R2636:2636 CoLoR.MatrixInt.ATropicalBasedInt <> x var
+R2678:2681 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt succ def
+not 2665:2665 TropicalBasedInt.ABI ::x_'>v'_x
+inst 2724:2733 TropicalBasedInt succ_trans
+R2737:2746 Coq.Classes.RelationClasses <> Transitive class
+R2748:2751 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt succ def
+R2780:2789 Coq.Classes.RelationClasses <> Transitive class
+R2792:2794 CoLoR.Util.Relation.RelUtil <> Rof def
+R2805:2811 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI dom2vec def
+R2796:2803 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt succ_vec def
+R2780:2789 Coq.Classes.RelationClasses <> Transitive class
+R2792:2794 CoLoR.Util.Relation.RelUtil <> Rof def
+R2805:2811 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI dom2vec def
+R2796:2803 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt succ_vec def
+R2822:2830 CoLoR.Util.Relation.RelUtil <> Rof_trans thm
+R2822:2830 CoLoR.Util.Relation.RelUtil <> Rof_trans thm
+R2846:2853 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt succ_vec def
+prf 2905:2917 TropicalBasedInt ge_gtx_compat
+R2942:2945 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2953:2956 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2958:2962 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.ABI ::x_'>_0'_x not
+R2957:2957 CoLoR.MatrixInt.ATropicalBasedInt <> x var
+R2963:2963 CoLoR.MatrixInt.ATropicalBasedInt <> z var
+R2947:2951 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.ABI ::x_'>_0'_x not
+R2946:2946 CoLoR.MatrixInt.ATropicalBasedInt <> y var
+R2952:2952 CoLoR.MatrixInt.ATropicalBasedInt <> z var
+R2936:2940 CoLoR.Util.Algebra.OrdSemiRing OrdSemiRingType ::x_'>>='_x not
+R2935:2935 CoLoR.MatrixInt.ATropicalBasedInt <> x var
+R2941:2941 CoLoR.MatrixInt.ATropicalBasedInt <> y var
+R2991:2993 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx def
+R3019:3030 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.OSRT ge_gt_compat defax
+R3019:3030 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.OSRT ge_gt_compat defax
+R3090:3097 CoLoR.MatrixInt.ATropicalBasedInt <> TropicalBasedInt.ABI.ge_gt_eq var
+R3090:3097 CoLoR.MatrixInt.ATropicalBasedInt <> TropicalBasedInt.ABI.ge_gt_eq var
+var 3137:3143 TropicalBasedInt.ABI succ_wf
+R3147:3148 CoLoR.Util.Relation.SN <> WF def
+R3150:3153 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt succ def
+var 3170:3184 TropicalBasedInt.ABI gtx_plus_compat
+R3220:3223 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3232:3235 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3241:3245 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.ABI ::x_'>_0'_x not
+R3237:3239 CoLoR.Util.Algebra.SemiRing SemiRingType ::x_'+'_x not
+R3236:3236 CoLoR.MatrixInt.ATropicalBasedInt <> m var
+R3240:3240 CoLoR.MatrixInt.ATropicalBasedInt <> n var
+R3248:3250 CoLoR.Util.Algebra.SemiRing SemiRingType ::x_'+'_x not
+R3246:3247 CoLoR.MatrixInt.ATropicalBasedInt <> m' var
+R3251:3252 CoLoR.MatrixInt.ATropicalBasedInt <> n' var
+R3225:3229 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.ABI ::x_'>_0'_x not
+R3224:3224 CoLoR.MatrixInt.ATropicalBasedInt <> n var
+R3230:3231 CoLoR.MatrixInt.ATropicalBasedInt <> n' var
+R3213:3217 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.ABI ::x_'>_0'_x not
+R3212:3212 CoLoR.MatrixInt.ATropicalBasedInt <> m var
+R3218:3219 CoLoR.MatrixInt.ATropicalBasedInt <> m' var
+var 3269:3283 TropicalBasedInt.ABI gtx_mult_compat
+R3319:3322 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3331:3334 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3340:3344 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.ABI ::x_'>_0'_x not
+R3336:3338 CoLoR.Util.Algebra.SemiRing SemiRingType ::x_'*'_x not
+R3335:3335 CoLoR.MatrixInt.ATropicalBasedInt <> m var
+R3339:3339 CoLoR.MatrixInt.ATropicalBasedInt <> n var
+R3347:3349 CoLoR.Util.Algebra.SemiRing SemiRingType ::x_'*'_x not
+R3345:3346 CoLoR.MatrixInt.ATropicalBasedInt <> m' var
+R3350:3351 CoLoR.MatrixInt.ATropicalBasedInt <> n' var
+R3324:3328 CoLoR.Util.Algebra.OrdSemiRing OrdSemiRingType ::x_'>>='_x not
+R3323:3323 CoLoR.MatrixInt.ATropicalBasedInt <> n var
+R3329:3330 CoLoR.MatrixInt.ATropicalBasedInt <> n' var
+R3312:3316 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.ABI ::x_'>_0'_x not
+R3311:3311 CoLoR.MatrixInt.ATropicalBasedInt <> m var
+R3317:3318 CoLoR.MatrixInt.ATropicalBasedInt <> m' var
+prf 3365:3382 TropicalBasedInt succ_succeq_compat
+R3386:3397 CoLoR.Util.Relation.RelUtil <> absorbs_left def
+R3404:3409 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI succeq def
+R3399:3402 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt succ def
+R3487:3490 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt succ def
+R3493:3500 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt succ_vec def
+R3509:3526 CoLoR.Util.Vector.VecUtil <> Vforall2_intro_nth thm
+R3509:3526 CoLoR.Util.Vector.VecUtil <> Vforall2_intro_nth thm
+R3569:3572 CoLoR.Util.Vector.VecUtil <> Vnth def
+R3575:3581 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI dom2vec def
+R3549:3561 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt ge_gtx_compat thm
+R3569:3572 CoLoR.Util.Vector.VecUtil <> Vnth def
+R3575:3581 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI dom2vec def
+R3549:3561 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt ge_gtx_compat thm
+R3603:3619 CoLoR.Util.Vector.VecUtil <> Vforall2_elim_nth thm
+R3603:3619 CoLoR.Util.Vector.VecUtil <> Vforall2_elim_nth thm
+R3639:3655 CoLoR.Util.Vector.VecUtil <> Vforall2_elim_nth thm
+R3639:3655 CoLoR.Util.Vector.VecUtil <> Vforall2_elim_nth thm
+prf 3683:3689 TropicalBasedInt gtx_dec
+R3693:3699 CoLoR.Util.Relation.RelMidex <> rel_dec def
+R3701:3703 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx def
+R3746:3751 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.OSRT gt_dec defax
+R3746:3751 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.OSRT gt_dec defax
+R3798:3804 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.OSRT.SR.ES eqA_dec defax
+R3808:3814 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt PlusInf syndef
+R3798:3804 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.OSRT.SR.ES eqA_dec defax
+R3808:3814 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt PlusInf syndef
+R3834:3840 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.OSRT.SR.ES eqA_dec defax
+R3844:3850 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt PlusInf syndef
+R3834:3840 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.OSRT.SR.ES eqA_dec defax
+R3844:3850 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt PlusInf syndef
+R3899:3901 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx def
+R3935:3937 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx def
+prf 3975:3982 TropicalBasedInt succ_dec
+R3986:3992 CoLoR.Util.Relation.RelMidex <> rel_dec def
+R3994:3997 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt succ def
+R4039:4042 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt succ def
+R4058:4069 CoLoR.Util.Vector.VecUtil <> Vforall2_dec thm
+R4092:4098 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI dom2vec def
+R4080:4086 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI dom2vec def
+R4071:4077 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx_dec thm
+R4058:4069 CoLoR.Util.Vector.VecUtil <> Vforall2_dec thm
+R4092:4098 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI dom2vec def
+R4080:4086 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI dom2vec def
+R4071:4077 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx_dec thm
+var 4132:4141 TropicalBasedInt.ABI mi_eval_ok
+R4163:4175 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf vec_invariant def
+R4178:4188 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI mi_eval_aux def
+R4202:4205 CoLoR.Util.Vector.VecUtil <> Vmap def
+R4215:4215 CoLoR.MatrixInt.ATropicalBasedInt <> v var
+R4207:4213 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI dom2vec def
+R4191:4196 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf trsInt def
+R4198:4198 CoLoR.MatrixInt.ATropicalBasedInt <> f var
+syndef 4234:4234 TropicalBasedInt I
+R4240:4244 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI I def
+R4246:4255 CoLoR.MatrixInt.ATropicalBasedInt <> TropicalBasedInt.ABI.mi_eval_ok var
+syndef 4272:4278 TropicalBasedInt IR_succ
+R4284:4285 CoLoR.Term.WithArity.AWFMInterpretation <> IR def
+R4289:4292 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt succ def
+R4287:4287 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt I syndef
+def 4312:4317 TropicalBasedInt mat_gt
+R4322:4332 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M mat_forall2 def
+R4351:4353 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf dim def
+R4342:4344 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf dim def
+R4334:4336 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx def
+def 4372:4377 TropicalBasedInt vec_gt
+R4382:4389 CoLoR.Util.Vector.VecUtil <> Vforall2 def
+R4399:4401 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf dim def
+R4391:4393 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx def
+def 4421:4427 TropicalBasedInt mint_gt
+R4438:4441 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt mint syndef
+R4443:4443 CoLoR.MatrixInt.ATropicalBasedInt <> n var
+R4489:4492 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R4456:4463 CoLoR.Util.Vector.VecUtil <> Vforall2 def
+R4482:4485 CoLoR.MatrixInt.AMatrixBasedInt <> args proj
+R4487:4487 CoLoR.MatrixInt.ATropicalBasedInt <> r var
+R4473:4476 CoLoR.MatrixInt.AMatrixBasedInt <> args proj
+R4478:4478 CoLoR.MatrixInt.ATropicalBasedInt <> l var
+R4465:4470 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt mat_gt def
+R4493:4498 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt vec_gt def
+R4511:4515 CoLoR.MatrixInt.AMatrixBasedInt <> const proj
+R4517:4517 CoLoR.MatrixInt.ATropicalBasedInt <> r var
+R4501:4505 CoLoR.MatrixInt.AMatrixBasedInt <> const proj
+R4507:4507 CoLoR.MatrixInt.ATropicalBasedInt <> l var
+def 4537:4543 TropicalBasedInt term_gt
+R4548:4558 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI term_gt def
+R4560:4566 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt mint_gt def
+prf 4580:4589 TropicalBasedInt mat_gt_dec
+R4593:4599 CoLoR.Util.Relation.RelMidex <> rel_dec def
+R4601:4606 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt mat_gt def
+R4634:4639 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt mat_gt def
+R4648:4662 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M mat_forall2_dec thm
+R4648:4662 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M mat_forall2_dec thm
+R4671:4677 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx_dec thm
+R4671:4677 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx_dec thm
+prf 4704:4713 TropicalBasedInt vec_gt_dec
+R4717:4723 CoLoR.Util.Relation.RelMidex <> rel_dec def
+R4725:4730 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt vec_gt def
+R4764:4769 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt vec_gt def
+R4772:4778 CoLoR.Util.Relation.RelMidex <> rel_dec def
+R4787:4798 CoLoR.Util.Vector.VecUtil <> Vforall2_dec thm
+R4787:4798 CoLoR.Util.Vector.VecUtil <> Vforall2_dec thm
+R4807:4813 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx_dec thm
+R4807:4813 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx_dec thm
+prf 4840:4850 TropicalBasedInt mint_gt_dec
+R4864:4870 CoLoR.Util.Relation.RelMidex <> rel_dec def
+R4874:4880 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt mint_gt def
+R4882:4882 CoLoR.MatrixInt.ATropicalBasedInt <> n var
+R4931:4937 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt mint_gt def
+R4956:4967 CoLoR.Util.Vector.VecUtil <> Vforall2_dec thm
+R4990:4993 CoLoR.MatrixInt.AMatrixBasedInt <> args proj
+R4981:4984 CoLoR.MatrixInt.AMatrixBasedInt <> args proj
+R4969:4978 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt mat_gt_dec thm
+R4956:4967 CoLoR.Util.Vector.VecUtil <> Vforall2_dec thm
+R4990:4993 CoLoR.MatrixInt.AMatrixBasedInt <> args proj
+R4981:4984 CoLoR.MatrixInt.AMatrixBasedInt <> args proj
+R4969:4978 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt mat_gt_dec thm
+R5036:5045 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt vec_gt_dec thm
+R5058:5062 CoLoR.MatrixInt.AMatrixBasedInt <> const proj
+R5048:5052 CoLoR.MatrixInt.AMatrixBasedInt <> const proj
+R5036:5045 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt vec_gt_dec thm
+R5058:5062 CoLoR.MatrixInt.AMatrixBasedInt <> const proj
+R5048:5052 CoLoR.MatrixInt.AMatrixBasedInt <> const proj
+prf 5110:5130 TropicalBasedInt Vfold_left_gtx_compat
+R5151:5156 CoLoR.Util.Vector.VecUtil <> vector syndef
+R5160:5160 CoLoR.MatrixInt.ATropicalBasedInt <> n var
+R5158:5158 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.OSRT.SR.ES.Eq A defax
+R5170:5170 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R5217:5227 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R5253:5257 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.ABI ::x_'>_0'_x not
+R5228:5241 CoLoR.Util.Vector.VecUtil <> Vfold_left_rev def
+R5252:5252 CoLoR.MatrixInt.ATropicalBasedInt <> v var
+R5249:5250 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.OSRT.SR A0 defax
+R5243:5247 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.OSRT.SR Aplus defax
+R5258:5271 CoLoR.Util.Vector.VecUtil <> Vfold_left_rev def
+R5282:5283 CoLoR.MatrixInt.ATropicalBasedInt <> v' var
+R5279:5280 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.OSRT.SR A0 defax
+R5273:5277 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.OSRT.SR Aplus defax
+R5186:5188 Coq.Init.Peano <> :nat_scope:x_'<'_x not
+R5185:5185 CoLoR.MatrixInt.ATropicalBasedInt <> i var
+R5189:5189 CoLoR.MatrixInt.ATropicalBasedInt <> n var
+R5202:5206 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.ABI ::x_'>_0'_x not
+R5193:5196 CoLoR.Util.Vector.VecUtil <> Vnth def
+R5200:5201 CoLoR.MatrixInt.ATropicalBasedInt <> ip var
+R5198:5198 CoLoR.MatrixInt.ATropicalBasedInt <> v var
+R5207:5210 CoLoR.Util.Vector.VecUtil <> Vnth def
+R5215:5216 CoLoR.MatrixInt.ATropicalBasedInt <> ip var
+R5212:5213 CoLoR.MatrixInt.ATropicalBasedInt <> v' var
+R5400:5414 CoLoR.MatrixInt.ATropicalBasedInt <> TropicalBasedInt.ABI.gtx_plus_compat var
+R5400:5414 CoLoR.MatrixInt.ATropicalBasedInt <> TropicalBasedInt.ABI.gtx_plus_compat var
+R5455:5471 CoLoR.Util.Vector.VecUtil <> Vforall2_elim_nth thm
+R5455:5471 CoLoR.Util.Vector.VecUtil <> Vforall2_elim_nth thm
+R5489:5493 CoLoR.Util.Vector.VecUtil <> Vtail syndef
+R5496:5500 CoLoR.Util.Vector.VecUtil <> Vcons syndef
+R5489:5493 CoLoR.Util.Vector.VecUtil <> Vtail syndef
+R5496:5500 CoLoR.Util.Vector.VecUtil <> Vcons syndef
+R5522:5534 CoLoR.Util.Vector.VecUtil <> Vforall2_tail thm
+R5522:5534 CoLoR.Util.Vector.VecUtil <> Vforall2_tail thm
+R5543:5560 CoLoR.Util.Vector.VecUtil <> Vforall2_intro_nth thm
+R5543:5560 CoLoR.Util.Vector.VecUtil <> Vforall2_intro_nth thm
+R5589:5593 CoLoR.Util.Vector.VecUtil <> Vhead syndef
+R5596:5600 CoLoR.Util.Vector.VecUtil <> Vcons syndef
+R5589:5593 CoLoR.Util.Vector.VecUtil <> Vhead syndef
+R5596:5600 CoLoR.Util.Vector.VecUtil <> Vcons syndef
+R5618:5626 CoLoR.Util.Vector.VecUtil <> Vhead_nth thm
+R5618:5626 CoLoR.Util.Vector.VecUtil <> Vhead_nth thm
+R5618:5626 CoLoR.Util.Vector.VecUtil <> Vhead_nth thm
+R5618:5626 CoLoR.Util.Vector.VecUtil <> Vhead_nth thm
+R5618:5626 CoLoR.Util.Vector.VecUtil <> Vhead_nth thm
+R5647:5656 Coq.Arith.Lt <> lt_O_Sn syndef
+R5647:5656 Coq.Arith.Lt <> lt_O_Sn syndef
+sec 5685:5690 TropicalBasedInt.ABI Matrix
+var 5711:5711 TropicalBasedInt.ABI.Matrix m
+var 5713:5713 TropicalBasedInt.ABI.Matrix n
+var 5715:5715 TropicalBasedInt.ABI.Matrix p
+var 5725:5725 TropicalBasedInt.ABI.Matrix M
+var 5727:5728 TropicalBasedInt.ABI.Matrix M'
+var 5745:5745 TropicalBasedInt.ABI.Matrix N
+var 5747:5748 TropicalBasedInt.ABI.Matrix N'
+R5719:5721 Coq.Init.Datatypes <> nat ind
+R5732:5737 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M matrix def
+R5741:5741 CoLoR.MatrixInt.ATropicalBasedInt <> n var
+R5739:5739 CoLoR.MatrixInt.ATropicalBasedInt <> m var
+R5752:5757 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M matrix def
+R5761:5761 CoLoR.MatrixInt.ATropicalBasedInt <> p var
+R5759:5759 CoLoR.MatrixInt.ATropicalBasedInt <> n var
+syndef 5781:5783 TropicalBasedInt vge
+R5789:5796 CoLoR.Util.Vector.VecUtil <> Vforall2 def
+R5798:5799 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.OSRT ge defax
+syndef 5818:5820 TropicalBasedInt vgt
+R5826:5833 CoLoR.Util.Vector.VecUtil <> Vforall2 def
+R5835:5837 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx def
+syndef 5856:5858 TropicalBasedInt mge
+R5863:5868 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M mat_ge def
+syndef 5886:5888 TropicalBasedInt mgt
+R5894:5904 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M mat_forall2 def
+R5906:5908 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx def
+prf 5925:5946 TropicalBasedInt arctic_dot_product_mon
+R5972:5977 CoLoR.Util.Vector.VecUtil <> vector syndef
+R5981:5981 CoLoR.MatrixInt.ATropicalBasedInt <> i var
+R5979:5979 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.OSRT.SR.ES.Eq A defax
+R6002:6005 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R6014:6017 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R6033:6037 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.ABI ::x_'>_0'_x not
+R6018:6028 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M.VA.VA dot_product def
+R6032:6032 CoLoR.MatrixInt.ATropicalBasedInt <> w var
+R6030:6030 CoLoR.MatrixInt.ATropicalBasedInt <> v var
+R6038:6048 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M.VA.VA dot_product def
+R6053:6054 CoLoR.MatrixInt.ATropicalBasedInt <> w' var
+R6050:6051 CoLoR.MatrixInt.ATropicalBasedInt <> v' var
+R6006:6008 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt vge syndef
+R6012:6013 CoLoR.MatrixInt.ATropicalBasedInt <> w' var
+R6010:6010 CoLoR.MatrixInt.ATropicalBasedInt <> w var
+R5994:5996 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt vgt syndef
+R6000:6001 CoLoR.MatrixInt.ATropicalBasedInt <> v' var
+R5998:5998 CoLoR.MatrixInt.ATropicalBasedInt <> v var
+R6086:6096 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M.VA.VA dot_product def
+R6167:6181 CoLoR.MatrixInt.ATropicalBasedInt <> TropicalBasedInt.ABI.gtx_plus_compat var
+R6167:6181 CoLoR.MatrixInt.ATropicalBasedInt <> TropicalBasedInt.ABI.gtx_plus_compat var
+R6226:6230 CoLoR.Util.Vector.VecUtil <> Vtail syndef
+R6233:6237 CoLoR.Util.Vector.VecUtil <> Vcons syndef
+R6226:6230 CoLoR.Util.Vector.VecUtil <> Vtail syndef
+R6233:6237 CoLoR.Util.Vector.VecUtil <> Vcons syndef
+R6252:6264 CoLoR.Util.Vector.VecUtil <> Vforall2_tail thm
+R6252:6264 CoLoR.Util.Vector.VecUtil <> Vforall2_tail thm
+R6286:6298 CoLoR.Util.Vector.VecUtil <> Vforall2_tail thm
+R6286:6298 CoLoR.Util.Vector.VecUtil <> Vforall2_tail thm
+R6320:6334 CoLoR.MatrixInt.ATropicalBasedInt <> TropicalBasedInt.ABI.gtx_mult_compat var
+R6320:6334 CoLoR.MatrixInt.ATropicalBasedInt <> TropicalBasedInt.ABI.gtx_mult_compat var
+R6352:6356 CoLoR.Util.Vector.VecUtil <> Vhead syndef
+R6359:6363 CoLoR.Util.Vector.VecUtil <> Vcons syndef
+R6352:6356 CoLoR.Util.Vector.VecUtil <> Vhead syndef
+R6359:6363 CoLoR.Util.Vector.VecUtil <> Vcons syndef
+R6390:6398 CoLoR.Util.Vector.VecUtil <> Vhead_nth thm
+R6390:6398 CoLoR.Util.Vector.VecUtil <> Vhead_nth thm
+R6390:6398 CoLoR.Util.Vector.VecUtil <> Vhead_nth thm
+R6390:6398 CoLoR.Util.Vector.VecUtil <> Vhead_nth thm
+R6390:6398 CoLoR.Util.Vector.VecUtil <> Vhead_nth thm
+R6407:6423 CoLoR.Util.Vector.VecUtil <> Vforall2_elim_nth thm
+R6407:6423 CoLoR.Util.Vector.VecUtil <> Vforall2_elim_nth thm
+R6448:6456 CoLoR.Util.Vector.VecUtil <> Vhead_nth thm
+R6448:6456 CoLoR.Util.Vector.VecUtil <> Vhead_nth thm
+R6448:6456 CoLoR.Util.Vector.VecUtil <> Vhead_nth thm
+R6448:6456 CoLoR.Util.Vector.VecUtil <> Vhead_nth thm
+R6448:6456 CoLoR.Util.Vector.VecUtil <> Vhead_nth thm
+R6465:6481 CoLoR.Util.Vector.VecUtil <> Vforall2_elim_nth thm
+R6465:6481 CoLoR.Util.Vector.VecUtil <> Vforall2_elim_nth thm
+prf 6513:6531 TropicalBasedInt mat_arctic_mult_mon
+R6543:6546 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R6555:6567 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R6568:6570 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt mgt syndef
+R6585:6589 CoLoR.Util.Matrix.Matrix Matrix ::x_'<*>'_x not
+R6583:6584 CoLoR.MatrixInt.ATropicalBasedInt <> TropicalBasedInt.ABI.Matrix.M' var
+R6590:6591 CoLoR.MatrixInt.ATropicalBasedInt <> TropicalBasedInt.ABI.Matrix.N' var
+R6574:6578 CoLoR.Util.Matrix.Matrix Matrix ::x_'<*>'_x not
+R6573:6573 CoLoR.MatrixInt.ATropicalBasedInt <> TropicalBasedInt.ABI.Matrix.M var
+R6579:6579 CoLoR.MatrixInt.ATropicalBasedInt <> TropicalBasedInt.ABI.Matrix.N var
+R6547:6549 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt mge syndef
+R6553:6554 CoLoR.MatrixInt.ATropicalBasedInt <> TropicalBasedInt.ABI.Matrix.N' var
+R6551:6551 CoLoR.MatrixInt.ATropicalBasedInt <> TropicalBasedInt.ABI.Matrix.N var
+R6535:6537 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt mgt syndef
+R6541:6542 CoLoR.MatrixInt.ATropicalBasedInt <> TropicalBasedInt.ABI.Matrix.M' var
+R6539:6539 CoLoR.MatrixInt.ATropicalBasedInt <> TropicalBasedInt.ABI.Matrix.M var
+R6632:6642 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M mat_forall2 def
+R6670:6682 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M mat_mult_spec thm
+R6670:6682 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M mat_mult_spec thm
+R6670:6682 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M mat_mult_spec thm
+R6670:6682 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M mat_mult_spec thm
+R6670:6682 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M mat_mult_spec thm
+R6691:6712 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt arctic_dot_product_mon thm
+R6691:6712 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt arctic_dot_product_mon thm
+R6729:6746 CoLoR.Util.Vector.VecUtil <> Vforall2_intro_nth thm
+R6729:6746 CoLoR.Util.Vector.VecUtil <> Vforall2_intro_nth thm
+R6803:6820 CoLoR.Util.Vector.VecUtil <> Vforall2_intro_nth thm
+R6803:6820 CoLoR.Util.Vector.VecUtil <> Vforall2_intro_nth thm
+R6851:6863 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M get_elem_swap thm
+R6851:6863 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M get_elem_swap thm
+R6851:6863 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M get_elem_swap thm
+R6851:6863 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M get_elem_swap thm
+R6851:6863 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M get_elem_swap thm
+R6910:6915 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.ABI.Matrix <> sec
+prf 6929:6950 TropicalBasedInt mat_vec_prod_gt_compat
+R6969:6971 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt mat syndef
+R6998:7001 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R7010:7020 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R7021:7026 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt vec_gt def
+R7048:7059 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M mat_vec_prod def
+R7064:7065 CoLoR.MatrixInt.ATropicalBasedInt <> m' var
+R7061:7062 CoLoR.MatrixInt.ATropicalBasedInt <> M' var
+R7029:7040 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M mat_vec_prod def
+R7044:7044 CoLoR.MatrixInt.ATropicalBasedInt <> m var
+R7042:7042 CoLoR.MatrixInt.ATropicalBasedInt <> M var
+R7003:7007 CoLoR.Util.Vector.VecArith OrdVectorArith ::x_'>=v'_x not
+R7002:7002 CoLoR.MatrixInt.ATropicalBasedInt <> m var
+R7008:7009 CoLoR.MatrixInt.ATropicalBasedInt <> m' var
+R6987:6992 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt mat_gt def
+R6996:6997 CoLoR.MatrixInt.ATropicalBasedInt <> M' var
+R6994:6994 CoLoR.MatrixInt.ATropicalBasedInt <> M var
+R7102:7113 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M mat_vec_prod def
+R7116:7121 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt vec_gt def
+R7130:7147 CoLoR.Util.Vector.VecUtil <> Vforall2_intro_nth thm
+R7130:7147 CoLoR.Util.Vector.VecUtil <> Vforall2_intro_nth thm
+R7174:7185 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M Vnth_col_mat thm
+R7174:7185 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M Vnth_col_mat thm
+R7174:7185 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M Vnth_col_mat thm
+R7174:7185 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M Vnth_col_mat thm
+R7174:7185 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M Vnth_col_mat thm
+R7201:7219 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt mat_arctic_mult_mon thm
+R7201:7219 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt mat_arctic_mult_mon thm
+R7260:7278 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M vec_to_col_mat_spec thm
+R7260:7278 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M vec_to_col_mat_spec thm
+R7260:7278 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M vec_to_col_mat_spec thm
+R7260:7278 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M vec_to_col_mat_spec thm
+R7260:7278 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M vec_to_col_mat_spec thm
+R7293:7309 CoLoR.Util.Vector.VecUtil <> Vforall2_elim_nth thm
+R7293:7309 CoLoR.Util.Vector.VecUtil <> Vforall2_elim_nth thm
+prf 7337:7354 TropicalBasedInt mint_eval_mon_succ
+R7372:7380 CoLoR.Term.WithArity.AInterpretation <> valuation def
+R7382:7382 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt I syndef
+R7404:7407 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt mint syndef
+R7409:7409 CoLoR.MatrixInt.ATropicalBasedInt <> k var
+R7427:7437 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R7438:7445 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt succ_vec def
+R7467:7475 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI mint_eval def
+R7481:7483 CoLoR.MatrixInt.ATropicalBasedInt <> mi' var
+R7477:7479 CoLoR.MatrixInt.ATropicalBasedInt <> val var
+R7448:7456 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI mint_eval def
+R7462:7463 CoLoR.MatrixInt.ATropicalBasedInt <> mi var
+R7458:7460 CoLoR.MatrixInt.ATropicalBasedInt <> val var
+R7413:7419 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt mint_gt def
+R7424:7426 CoLoR.MatrixInt.ATropicalBasedInt <> mi' var
+R7421:7422 CoLoR.MatrixInt.ATropicalBasedInt <> mi var
+R7520:7527 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt succ_vec def
+R7536:7553 CoLoR.Util.Vector.VecUtil <> Vforall2_intro_nth thm
+R7536:7553 CoLoR.Util.Vector.VecUtil <> Vforall2_intro_nth thm
+R7589:7595 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx_mor inst
+R7589:7595 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx_mor inst
+R7604:7620 CoLoR.Util.Vector.VecUtil <> Vforall2_elim_nth thm
+R7631:7645 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI mint_eval_split thm
+R7604:7620 CoLoR.Util.Vector.VecUtil <> Vforall2_elim_nth thm
+R7631:7645 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI mint_eval_split thm
+R7631:7645 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI mint_eval_split thm
+R7666:7682 CoLoR.Util.Vector.VecUtil <> Vforall2_elim_nth thm
+R7666:7682 CoLoR.Util.Vector.VecUtil <> Vforall2_elim_nth thm
+R7693:7707 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI mint_eval_split thm
+R7693:7707 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI mint_eval_split thm
+R7693:7707 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI mint_eval_split thm
+R7731:7745 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M.VA.VA vector_plus_nth thm
+R7731:7745 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M.VA.VA vector_plus_nth thm
+R7731:7745 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M.VA.VA vector_plus_nth thm
+R7731:7745 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M.VA.VA vector_plus_nth thm
+R7731:7745 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M.VA.VA vector_plus_nth thm
+R7760:7774 CoLoR.MatrixInt.ATropicalBasedInt <> TropicalBasedInt.ABI.gtx_plus_compat var
+R7760:7774 CoLoR.MatrixInt.ATropicalBasedInt <> TropicalBasedInt.ABI.gtx_plus_compat var
+R7790:7806 CoLoR.Util.Vector.VecUtil <> Vforall2_elim_nth thm
+R7790:7806 CoLoR.Util.Vector.VecUtil <> Vforall2_elim_nth thm
+R7829:7843 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M.VA.VA add_vectors_nth thm
+R7829:7843 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M.VA.VA add_vectors_nth thm
+R7829:7843 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M.VA.VA add_vectors_nth thm
+R7829:7843 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M.VA.VA add_vectors_nth thm
+R7829:7843 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.Conf.M.VA.VA add_vectors_nth thm
+R7858:7878 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt Vfold_left_gtx_compat thm
+R7858:7878 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt Vfold_left_gtx_compat thm
+R7904:7911 CoLoR.Util.Vector.VecUtil <> Vnth_map thm
+R7915:7923 CoLoR.Util.Vector.VecUtil <> Vnth_map2 thm
+R7904:7911 CoLoR.Util.Vector.VecUtil <> Vnth_map thm
+R7904:7911 CoLoR.Util.Vector.VecUtil <> Vnth_map thm
+R7904:7911 CoLoR.Util.Vector.VecUtil <> Vnth_map thm
+R7904:7911 CoLoR.Util.Vector.VecUtil <> Vnth_map thm
+R7915:7923 CoLoR.Util.Vector.VecUtil <> Vnth_map2 thm
+R7915:7923 CoLoR.Util.Vector.VecUtil <> Vnth_map2 thm
+R7915:7923 CoLoR.Util.Vector.VecUtil <> Vnth_map2 thm
+R7915:7923 CoLoR.Util.Vector.VecUtil <> Vnth_map2 thm
+R7945:7948 CoLoR.Util.Vector.VecUtil <> Vnth def
+R7951:7956 CoLoR.Util.Vector.VecUtil <> Vbuild def
+R7971:7973 Coq.Init.Peano <> :nat_scope:x_'<'_x not
+R7970:7970 CoLoR.MatrixInt.ATropicalBasedInt <> i var
+R7984:7984 CoLoR.MatrixInt.ATropicalBasedInt <> i var
+R7945:7948 CoLoR.Util.Vector.VecUtil <> Vnth def
+R7951:7956 CoLoR.Util.Vector.VecUtil <> Vbuild def
+R7971:7973 Coq.Init.Peano <> :nat_scope:x_'<'_x not
+R7970:7970 CoLoR.MatrixInt.ATropicalBasedInt <> i var
+R7984:7984 CoLoR.MatrixInt.ATropicalBasedInt <> i var
+R8006:8022 CoLoR.Util.Vector.VecUtil <> Vforall2_elim_nth thm
+R8006:8022 CoLoR.Util.Vector.VecUtil <> Vforall2_elim_nth thm
+R8031:8052 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt mat_vec_prod_gt_compat thm
+R8031:8052 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt mat_vec_prod_gt_compat thm
+R8067:8083 CoLoR.Util.Vector.VecUtil <> Vforall2_elim_nth thm
+R8067:8083 CoLoR.Util.Vector.VecUtil <> Vforall2_elim_nth thm
+prf 8117:8133 TropicalBasedInt term_gt_incl_succ
+R8144:8147 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'<<'_x not
+R8137:8143 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt term_gt def
+R8148:8154 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt IR_succ syndef
+R8202:8216 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI mint_eval_equiv thm
+R8202:8216 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI mint_eval_equiv thm
+R8251:8254 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt succ def
+R8264:8271 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt succ_vec def
+R8320:8338 CoLoR.Util.Vector.VecUtil <> Vforall2_aux_Proper inst
+R8340:8346 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx_mor inst
+R8320:8338 CoLoR.Util.Vector.VecUtil <> Vforall2_aux_Proper inst
+R8340:8346 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx_mor inst
+R8320:8338 CoLoR.Util.Vector.VecUtil <> Vforall2_aux_Proper inst
+R8340:8346 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt gtx_mor inst
+R8375:8392 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt mint_eval_mon_succ thm
+R8375:8392 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt mint_eval_mon_succ thm
+def 8425:8429 TropicalBasedInt succ'
+R8434:8440 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt term_gt def
+def 8458:8466 TropicalBasedInt succ'_sub
+R8471:8487 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt term_gt_incl_succ thm
+def 8505:8513 TropicalBasedInt succ'_dec
+R8518:8528 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.MBI term_gt_dec thm
+R8538:8548 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt mint_gt_dec thm
+R8530:8536 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt mint_gt def
+R8558:8560 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt.ABI <> sec
+R8568:8583 CoLoR.MatrixInt.ATropicalBasedInt TropicalBasedInt <> mod

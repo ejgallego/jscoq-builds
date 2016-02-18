@@ -1,0 +1,30 @@
+DIGEST 07c70d26f7d25a6892191b36e81b9e66
+FCoLoR.Util.Multiset.MultisetNat
+R199:203 Coq.Arith.Arith <> <> lib
+R205:218 CoLoR.Util.Multiset.MultisetTheory <> <> lib
+R220:232 CoLoR.Util.Multiset.MultisetOrder <> <> lib
+R234:245 CoLoR.Util.Multiset.MultisetList <> <> lib
+R247:255 CoLoR.Util.Relation.RelExtras <> <> lib
+mod 266:268 <> Nat
+def 284:284 Nat A
+R289:291 Coq.Init.Datatypes <> nat ind
+R298:300 CoLoR.Util.Multiset.MultisetNat Nat <> mod
+R321:325 CoLoR.Util.Relation.RelExtras Eqset <> mod
+R330:338 CoLoR.Util.Relation.RelExtras Eqset_def <> modtype
+R340:342 CoLoR.Util.Multiset.MultisetNat Nat <> modtype
+mod 311:316 <> NatSet
+mod 353:362 <> NatSet_dec
+R388:393 CoLoR.Util.Multiset.MultisetNat NatSet <> modtype
+mod 382:383 <> NatSet_dec.Eq
+def 410:416 NatSet_dec eqA_dec
+R421:430 Coq.Arith.Peano_dec <> eq_nat_dec syndef
+R438:447 CoLoR.Util.Multiset.MultisetNat NatSet_dec <> mod
+R470:494 CoLoR.Util.Multiset.MultisetList MultisetList <> modtype
+R496:505 CoLoR.Util.Multiset.MultisetNat NatSet_dec <> modtype
+mod 458:465 <> MSetCore
+R537:559 CoLoR.Util.Multiset.MultisetTheory Multiset <> modtype
+R561:568 CoLoR.Util.Multiset.MultisetNat MSetCore <> modtype
+mod 523:532 <> MSetTheory
+R597:623 CoLoR.Util.Multiset.MultisetOrder MultisetOrder <> modtype
+R625:632 CoLoR.Util.Multiset.MultisetNat MSetCore <> modtype
+mod 586:592 <> MSetOrd

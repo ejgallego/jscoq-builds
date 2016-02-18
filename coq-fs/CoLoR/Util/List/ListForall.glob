@@ -1,0 +1,185 @@
+DIGEST aa73bd66656160cc2dbf066d11d9c37e
+FCoLoR.Util.List.ListForall
+R189:197 CoLoR.Util.Logic.LogicUtil <> <> lib
+R199:202 Coq.Lists.List <> <> lib
+sec 214:214 <> S
+var 229:229 S A
+var 240:240 S P
+R245:246 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R244:244 CoLoR.Util.List.ListForall <> A var
+def 264:270 <> lforall
+R277:280 Coq.Init.Datatypes <> list ind
+R282:282 CoLoR.Util.List.ListForall <> S.A var
+R303:303 CoLoR.Util.List.ListForall <> l var
+R316:318 Coq.Init.Datatypes <> nil constr
+R323:326 Coq.Init.Logic <> True ind
+R334:337 Coq.Init.Datatypes <> cons constr
+R349:352 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R346:346 CoLoR.Util.List.ListForall <> S.P var
+R353:359 CoLoR.Util.List.ListForall <> lforall def
+prf 377:386 <> lforall_eq
+R409:414 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R438:438 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R400:406 CoLoR.Util.List.ListForall <> lforall def
+R408:408 CoLoR.Util.List.ListForall <> l var
+R431:434 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R435:435 CoLoR.Util.List.ListForall <> S.P var
+R437:437 CoLoR.Util.List.ListForall <> x var
+R425:426 Coq.Lists.List <> In def
+R430:430 CoLoR.Util.List.ListForall <> l var
+R428:428 CoLoR.Util.List.ListForall <> x var
+prf 504:514 <> lforall_nil
+R518:524 CoLoR.Util.List.ListForall <> lforall def
+R526:528 Coq.Init.Datatypes <> nil constr
+prf 564:575 <> lforall_cons
+R609:612 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R616:619 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R613:613 CoLoR.Util.List.ListForall <> S.P var
+R615:615 CoLoR.Util.List.ListForall <> a var
+R620:626 CoLoR.Util.List.ListForall <> lforall def
+R628:628 CoLoR.Util.List.ListForall <> l var
+R591:597 CoLoR.Util.List.ListForall <> lforall def
+R600:603 Coq.Init.Datatypes <> cons constr
+R607:607 CoLoR.Util.List.ListForall <> l var
+R605:605 CoLoR.Util.List.ListForall <> a var
+prf 673:683 <> lforall_app
+R702:705 Coq.Init.Datatypes <> list ind
+R707:707 CoLoR.Util.List.ListForall <> S.A var
+R730:734 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R712:718 CoLoR.Util.List.ListForall <> lforall def
+R723:726 Coq.Init.Datatypes <> :list_scope:x_'++'_x not
+R721:722 CoLoR.Util.List.ListForall <> l1 var
+R727:728 CoLoR.Util.List.ListForall <> l2 var
+R745:748 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R735:741 CoLoR.Util.List.ListForall <> lforall def
+R743:744 CoLoR.Util.List.ListForall <> l1 var
+R749:755 CoLoR.Util.List.ListForall <> lforall def
+R757:758 CoLoR.Util.List.ListForall <> l2 var
+prf 813:822 <> lforall_in
+R847:850 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R857:860 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R861:861 CoLoR.Util.List.ListForall <> S.P var
+R863:863 CoLoR.Util.List.ListForall <> a var
+R851:852 Coq.Lists.List <> In def
+R856:856 CoLoR.Util.List.ListForall <> l var
+R854:854 CoLoR.Util.List.ListForall <> a var
+R838:844 CoLoR.Util.List.ListForall <> lforall def
+R846:846 CoLoR.Util.List.ListForall <> l var
+R917:918 Coq.Lists.List <> In def
+R922:924 Coq.Init.Datatypes <> nil constr
+R935:940 Coq.Lists.List <> in_nil thm
+R917:918 Coq.Lists.List <> In def
+R922:924 Coq.Init.Datatypes <> nil constr
+R935:940 Coq.Lists.List <> in_nil thm
+R981:986 Coq.Lists.List <> in_inv thm
+R981:986 Coq.Lists.List <> in_inv thm
+R1021:1027 CoLoR.Util.List.ListForall <> lforall def
+R1074:1085 CoLoR.Util.List.ListForall <> lforall_cons thm
+R1074:1085 CoLoR.Util.List.ListForall <> lforall_cons thm
+prf 1143:1155 <> lforall_intro
+R1169:1169 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1193:1197 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1198:1204 CoLoR.Util.List.ListForall <> lforall def
+R1206:1206 CoLoR.Util.List.ListForall <> l var
+R1186:1189 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1190:1190 CoLoR.Util.List.ListForall <> S.P var
+R1192:1192 CoLoR.Util.List.ListForall <> x var
+R1180:1181 Coq.Lists.List <> In def
+R1185:1185 CoLoR.Util.List.ListForall <> l var
+R1183:1183 CoLoR.Util.List.ListForall <> x var
+R1251:1251 Coq.Init.Logic <> I constr
+R1251:1251 Coq.Init.Logic <> I constr
+prf 1322:1333 <> lforall_incl
+R1361:1364 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1375:1378 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1379:1385 CoLoR.Util.List.ListForall <> lforall def
+R1387:1388 CoLoR.Util.List.ListForall <> l1 var
+R1365:1371 CoLoR.Util.List.ListForall <> lforall def
+R1373:1374 CoLoR.Util.List.ListForall <> l2 var
+R1351:1354 Coq.Lists.List <> incl def
+R1359:1360 CoLoR.Util.List.ListForall <> l2 var
+R1356:1357 CoLoR.Util.List.ListForall <> l1 var
+R1413:1425 CoLoR.Util.List.ListForall <> lforall_intro thm
+R1413:1425 CoLoR.Util.List.ListForall <> lforall_intro thm
+R1443:1452 CoLoR.Util.List.ListForall <> lforall_in thm
+R1443:1452 CoLoR.Util.List.ListForall <> lforall_in thm
+prf 1491:1509 <> forallb_imp_lforall
+R1527:1527 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1555:1559 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1578:1581 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1582:1588 CoLoR.Util.List.ListForall <> lforall def
+R1590:1590 CoLoR.Util.List.ListForall <> l var
+R1571:1573 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1560:1566 Coq.Lists.List <> forallb def
+R1570:1570 CoLoR.Util.List.ListForall <> l var
+R1568:1568 CoLoR.Util.List.ListForall <> f var
+R1574:1577 Coq.Init.Datatypes <> true constr
+R1548:1551 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1552:1552 CoLoR.Util.List.ListForall <> S.P var
+R1554:1554 CoLoR.Util.List.ListForall <> x var
+R1541:1543 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1538:1538 CoLoR.Util.List.ListForall <> f var
+R1540:1540 CoLoR.Util.List.ListForall <> x var
+R1544:1547 Coq.Init.Datatypes <> true constr
+R1721:1728 CoLoR.Util.Bool.BoolUtil <> <> lib
+R1739:1744 Coq.Setoids.Setoid <> <> lib
+prf 1754:1768 <> forallb_lforall
+R1782:1782 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1811:1817 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1846:1850 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R1839:1841 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1828:1834 Coq.Lists.List <> forallb def
+R1838:1838 CoLoR.Util.List.ListForall <> l var
+R1836:1836 CoLoR.Util.List.ListForall <> f var
+R1842:1845 Coq.Init.Datatypes <> true constr
+R1851:1857 CoLoR.Util.List.ListForall <> lforall def
+R1859:1859 CoLoR.Util.List.ListForall <> l var
+R1803:1807 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R1796:1798 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1793:1793 CoLoR.Util.List.ListForall <> f var
+R1795:1795 CoLoR.Util.List.ListForall <> x var
+R1799:1802 Coq.Init.Datatypes <> true constr
+R1808:1808 CoLoR.Util.List.ListForall <> S.P var
+R1810:1810 CoLoR.Util.List.ListForall <> x var
+R1919:1925 CoLoR.Util.Bool.BoolUtil <> andb_eq thm
+R1919:1925 CoLoR.Util.Bool.BoolUtil <> andb_eq thm
+R1919:1925 CoLoR.Util.Bool.BoolUtil <> andb_eq thm
+var 1959:1963 S P_dec
+R1977:1977 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R1981:1983 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R1988:1988 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R1978:1978 CoLoR.Util.List.ListForall <> S.P var
+R1980:1980 CoLoR.Util.List.ListForall <> x var
+R1984:1984 Coq.Init.Logic <> :type_scope:'~'_x not
+R1985:1985 CoLoR.Util.List.ListForall <> S.P var
+R1987:1987 CoLoR.Util.List.ListForall <> x var
+prf 1998:2008 <> lforall_dec
+R2022:2022 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R2032:2036 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R2047:2047 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R2023:2029 CoLoR.Util.List.ListForall <> lforall def
+R2031:2031 CoLoR.Util.List.ListForall <> l var
+R2037:2037 Coq.Init.Logic <> :type_scope:'~'_x not
+R2038:2044 CoLoR.Util.List.ListForall <> lforall def
+R2046:2046 CoLoR.Util.List.ListForall <> l var
+R2110:2114 CoLoR.Util.List.ListForall <> S.P_dec var
+R2110:2114 CoLoR.Util.List.ListForall <> S.P_dec var
+R2197:2197 CoLoR.Util.List.ListForall S <> sec
+R2220:2229 CoLoR.Util.List.ListForall <> lforall_in thm
+prf 2249:2259 <> lforall_imp
+R2291:2292 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2290:2290 CoLoR.Util.List.ListForall <> A var
+R2302:2302 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2325:2329 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2352:2355 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2356:2362 CoLoR.Util.List.ListForall <> lforall def
+R2367:2367 CoLoR.Util.List.ListForall <> l var
+R2364:2365 CoLoR.Util.List.ListForall <> P2 var
+R2340:2346 CoLoR.Util.List.ListForall <> lforall def
+R2351:2351 CoLoR.Util.List.ListForall <> l var
+R2348:2349 CoLoR.Util.List.ListForall <> P1 var
+R2317:2320 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2321:2322 CoLoR.Util.List.ListForall <> P2 var
+R2324:2324 CoLoR.Util.List.ListForall <> x var
+R2313:2314 CoLoR.Util.List.ListForall <> P1 var
+R2316:2316 CoLoR.Util.List.ListForall <> x var

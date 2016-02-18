@@ -1,0 +1,323 @@
+DIGEST 922ced0c32276f9996a223eda7e9b334
+FCoLoR.DP.AHDE
+R301:307 CoLoR.DP.ADecomp <> <> lib
+R309:322 CoLoR.Term.WithArity.ADuplicateSymb <> <> lib
+R324:327 CoLoR.Term.WithArity.ATrs <> <> lib
+R329:336 CoLoR.Util.List.ListUtil <> <> lib
+R338:343 CoLoR.Util.Relation.RelSub <> <> lib
+R345:351 CoLoR.Util.Relation.RelUtil <> <> lib
+R353:358 CoLoR.DP.AGraph <> <> lib
+R362:370 CoLoR.Util.Logic.LogicUtil <> <> lib
+R372:379 CoLoR.Util.Bool.BoolUtil <> <> lib
+R381:386 CoLoR.Term.WithArity.AShift <> <> lib
+R388:393 CoLoR.Util.Logic.EqUtil <> <> lib
+sec 520:527 <> prop_def
+var 540:542 prop_def Sig
+R546:554 CoLoR.Term.WithArity.ASignature <> Signature rec
+var 567:567 prop_def D
+R571:575 CoLoR.Term.WithArity.ATrs <> rules def
+R577:579 CoLoR.DP.AHDE <> prop_def.Sig var
+def 653:655 <> hde
+R673:676 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R666:667 Coq.Lists.List <> In def
+R672:672 CoLoR.DP.AHDE <> prop_def.D var
+R669:670 CoLoR.DP.AHDE <> r1 var
+R684:689 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R677:678 Coq.Lists.List <> In def
+R683:683 CoLoR.DP.AHDE <> prop_def.D var
+R680:681 CoLoR.DP.AHDE <> r2 var
+R696:698 CoLoR.Term.WithArity.ATrs <> rhs proj
+R700:701 CoLoR.DP.AHDE <> r1 var
+R715:717 CoLoR.Term.WithArity.ATerm <> Var constr
+R724:727 Coq.Init.Logic <> True ind
+R735:737 CoLoR.Term.WithArity.ATerm <> Fun constr
+R758:760 CoLoR.Term.WithArity.ATrs <> lhs proj
+R762:763 CoLoR.DP.AHDE <> r2 var
+R780:782 CoLoR.Term.WithArity.ATerm <> Var constr
+R789:792 Coq.Init.Logic <> True ind
+R804:806 CoLoR.Term.WithArity.ATerm <> Fun constr
+R816:816 Coq.Init.Logic <> :type_scope:x_'='_x not
+prf 843:856 <> hde_restricted
+R860:872 CoLoR.Util.Relation.RelSub <> is_restricted def
+R878:878 CoLoR.DP.AHDE <> prop_def.D var
+R874:876 CoLoR.DP.AHDE <> hde def
+R896:908 CoLoR.Util.Relation.RelSub <> is_restricted def
+R926:928 CoLoR.DP.AHDE <> hde def
+syndef 958:968 <> eq_rule_dec
+R975:985 CoLoR.Term.WithArity.ATrs <> eq_rule_dec def
+R987:989 CoLoR.DP.AHDE <> prop_def.Sig var
+syndef 1002:1012 <> eq_symb_dec
+R1019:1029 CoLoR.Term.WithArity.ASignature <> eq_symb_dec def
+R1031:1033 CoLoR.DP.AHDE <> prop_def.Sig var
+prf 1044:1050 <> hde_dec
+R1068:1068 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R1078:1082 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R1093:1093 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R1069:1071 CoLoR.DP.AHDE <> hde def
+R1076:1077 CoLoR.DP.AHDE <> r2 var
+R1073:1074 CoLoR.DP.AHDE <> r1 var
+R1083:1083 Coq.Init.Logic <> :type_scope:'~'_x not
+R1084:1086 CoLoR.DP.AHDE <> hde def
+R1091:1092 CoLoR.DP.AHDE <> r2 var
+R1088:1089 CoLoR.DP.AHDE <> r1 var
+R1119:1121 CoLoR.DP.AHDE <> hde def
+R1134:1139 Coq.Lists.List <> In_dec syndef
+R1156:1156 CoLoR.DP.AHDE <> prop_def.D var
+R1141:1151 CoLoR.DP.AHDE <> eq_rule_dec syndef
+R1134:1139 Coq.Lists.List <> In_dec syndef
+R1156:1156 CoLoR.DP.AHDE <> prop_def.D var
+R1141:1151 CoLoR.DP.AHDE <> eq_rule_dec syndef
+R1181:1186 Coq.Lists.List <> In_dec syndef
+R1203:1203 CoLoR.DP.AHDE <> prop_def.D var
+R1188:1198 CoLoR.DP.AHDE <> eq_rule_dec syndef
+R1181:1186 Coq.Lists.List <> In_dec syndef
+R1203:1203 CoLoR.DP.AHDE <> prop_def.D var
+R1188:1198 CoLoR.DP.AHDE <> eq_rule_dec syndef
+R1228:1230 CoLoR.Term.WithArity.ATrs <> rhs proj
+R1228:1230 CoLoR.Term.WithArity.ATrs <> rhs proj
+R1259:1261 CoLoR.Term.WithArity.ATrs <> lhs proj
+R1259:1261 CoLoR.Term.WithArity.ATrs <> lhs proj
+R1284:1294 CoLoR.DP.AHDE <> eq_symb_dec syndef
+R1284:1294 CoLoR.DP.AHDE <> eq_symb_dec syndef
+R1328:1335 CoLoR.DP.AHDE prop_def <> sec
+sec 1441:1452 <> prop_correct
+var 1465:1467 prop_correct Sig
+R1471:1479 CoLoR.Term.WithArity.ASignature <> Signature rec
+var 1493:1493 prop_correct R
+var 1495:1495 prop_correct D
+R1499:1503 CoLoR.Term.WithArity.ATrs <> rules def
+R1505:1507 CoLoR.DP.AHDE <> prop_correct.Sig var
+prf 1517:1547 <> int_red_hd_rules_graph_incl_hde
+R1583:1586 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'<<'_x not
+R1553:1566 CoLoR.DP.AGraph <> hd_rules_graph def
+R1582:1582 CoLoR.DP.AHDE <> prop_correct.D var
+R1578:1579 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'#' not
+R1569:1575 CoLoR.Term.WithArity.ATrs <> int_red def
+R1577:1577 CoLoR.DP.AHDE <> prop_correct.R var
+R1587:1589 CoLoR.DP.AHDE <> hde def
+R1591:1591 CoLoR.DP.AHDE <> prop_correct.D var
+R1609:1617 Coq.Relations.Relation_Definitions <> inclusion def
+R1702:1704 CoLoR.DP.AHDE <> hde def
+R1771:1793 CoLoR.Term.WithArity.ATrs <> int_red_rtc_preserve_hd thm
+R1771:1793 CoLoR.Term.WithArity.ATrs <> int_red_rtc_preserve_hd thm
+R1914:1925 CoLoR.DP.AHDE prop_correct <> sec
+sec 2051:2067 <> prop_mark_correct
+var 2080:2082 prop_mark_correct Sig
+R2086:2094 CoLoR.Term.WithArity.ASignature <> Signature rec
+syndef 2107:2110 <> Sig'
+R2116:2122 CoLoR.Term.WithArity.ADuplicateSymb <> dup_sig def
+R2124:2126 CoLoR.DP.AHDE <> prop_mark_correct.Sig var
+var 2140:2140 prop_mark_correct R
+var 2142:2142 prop_mark_correct D
+R2146:2150 CoLoR.Term.WithArity.ATrs <> rules def
+R2152:2155 CoLoR.DP.AHDE <> Sig' syndef
+var 2168:2174 prop_mark_correct int_hyp
+R2210:2212 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2178:2184 Coq.Lists.List <> forallb def
+R2209:2209 CoLoR.DP.AHDE <> prop_mark_correct.R var
+R2188:2202 CoLoR.Term.WithArity.ADuplicateSymb <> is_int_symb_lhs def
+R2204:2206 CoLoR.DP.AHDE <> prop_mark_correct.Sig var
+R2213:2216 Coq.Init.Datatypes <> true constr
+var 2228:2233 prop_mark_correct hd_hyp
+R2268:2270 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2237:2243 Coq.Lists.List <> forallb def
+R2267:2267 CoLoR.DP.AHDE <> prop_mark_correct.D var
+R2247:2260 CoLoR.Term.WithArity.ADuplicateSymb <> is_hd_symb_rhs def
+R2262:2264 CoLoR.DP.AHDE <> prop_mark_correct.Sig var
+R2271:2274 Coq.Init.Datatypes <> true constr
+prf 2284:2310 <> dup_hd_rules_graph_incl_hde
+R2340:2343 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'<<'_x not
+R2314:2327 CoLoR.DP.AGraph <> hd_rules_graph def
+R2339:2339 CoLoR.DP.AHDE <> prop_mark_correct.D var
+R2335:2336 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'#' not
+R2330:2332 CoLoR.Term.WithArity.ATrs <> red def
+R2334:2334 CoLoR.DP.AHDE <> prop_mark_correct.R var
+R2344:2346 CoLoR.DP.AHDE <> hde def
+R2348:2348 CoLoR.DP.AHDE <> prop_mark_correct.D var
+R2366:2374 Coq.Relations.Relation_Definitions <> inclusion def
+R2393:2423 CoLoR.DP.AHDE <> int_red_hd_rules_graph_incl_hde thm
+R2429:2429 CoLoR.DP.AHDE <> prop_mark_correct.D var
+R2427:2427 CoLoR.DP.AHDE <> prop_mark_correct.R var
+R2393:2423 CoLoR.DP.AHDE <> int_red_hd_rules_graph_incl_hde thm
+R2429:2429 CoLoR.DP.AHDE <> prop_mark_correct.D var
+R2427:2427 CoLoR.DP.AHDE <> prop_mark_correct.R var
+R2468:2481 Coq.Lists.List <> forallb_forall thm
+R2468:2481 Coq.Lists.List <> forallb_forall thm
+R2468:2481 Coq.Lists.List <> forallb_forall thm
+R2499:2504 CoLoR.DP.AHDE <> prop_mark_correct.hd_hyp var
+R2499:2504 CoLoR.DP.AHDE <> prop_mark_correct.hd_hyp var
+R2579:2592 CoLoR.DP.AGraph <> hd_rules_graph def
+R2647:2653 CoLoR.Term.WithArity.ASubstitution <> sub_fun thm
+R2647:2653 CoLoR.Term.WithArity.ASubstitution <> sub_fun thm
+R2647:2653 CoLoR.Term.WithArity.ASubstitution <> sub_fun thm
+R2662:2686 CoLoR.Term.WithArity.ADuplicateSymb <> dup_int_rules_int_red_rtc thm
+R2662:2686 CoLoR.Term.WithArity.ADuplicateSymb <> dup_int_rules_int_red_rtc thm
+R2711:2727 CoLoR.DP.AHDE prop_mark_correct <> sec
+sec 2861:2868 <> bool_def
+var 2881:2883 bool_def Sig
+R2887:2895 CoLoR.Term.WithArity.ASignature <> Signature rec
+var 2909:2909 bool_def D
+R2913:2917 CoLoR.Term.WithArity.ATrs <> rules def
+R2919:2921 CoLoR.DP.AHDE <> bool_def.Sig var
+def 2936:2940 <> hd_eq
+R2949:2952 CoLoR.Term.WithArity.ATerm <> term ind
+R2954:2956 CoLoR.DP.AHDE <> bool_def.Sig var
+R2970:2970 CoLoR.DP.AHDE <> u var
+R2981:2983 CoLoR.Term.WithArity.ATerm <> Var constr
+R2990:2993 Coq.Init.Datatypes <> true constr
+R2999:3001 CoLoR.Term.WithArity.ATerm <> Fun constr
+R3020:3020 CoLoR.DP.AHDE <> v var
+R3033:3035 CoLoR.Term.WithArity.ATerm <> Var constr
+R3042:3045 Coq.Init.Datatypes <> true constr
+R3053:3055 CoLoR.Term.WithArity.ATerm <> Fun constr
+R3064:3071 CoLoR.Term.WithArity.ASignature <> beq_symb proj
+R3168:3174 CoLoR.Util.List.ListDec <> <> lib
+syndef 3187:3189 <> mem
+R3195:3197 CoLoR.Util.List.ListDec <> mem def
+R3201:3208 CoLoR.Term.WithArity.ATrs <> beq_rule def
+R3210:3212 CoLoR.DP.AHDE <> bool_def.Sig var
+syndef 3226:3231 <> mem_ok
+R3237:3242 CoLoR.Util.List.ListDec <> mem_ok thm
+R3246:3256 CoLoR.Term.WithArity.ATrs <> beq_rule_ok thm
+R3258:3260 CoLoR.DP.AHDE <> bool_def.Sig var
+def 3277:3284 <> hde_bool
+R3317:3320 Coq.Init.Datatypes <> :bool_scope:x_'&&'_x not
+R3305:3308 Coq.Init.Datatypes <> :bool_scope:x_'&&'_x not
+R3297:3299 CoLoR.DP.AHDE <> mem syndef
+R3304:3304 CoLoR.DP.AHDE <> bool_def.D var
+R3301:3302 CoLoR.DP.AHDE <> r1 var
+R3309:3311 CoLoR.DP.AHDE <> mem syndef
+R3316:3316 CoLoR.DP.AHDE <> bool_def.D var
+R3313:3314 CoLoR.DP.AHDE <> r2 var
+R3321:3325 CoLoR.DP.AHDE <> hd_eq def
+R3337:3339 CoLoR.Term.WithArity.ATrs <> lhs proj
+R3341:3342 CoLoR.DP.AHDE <> r2 var
+R3328:3330 CoLoR.Term.WithArity.ATrs <> rhs proj
+R3332:3333 CoLoR.DP.AHDE <> r1 var
+prf 3353:3372 <> hde_bool_correct_aux
+R3397:3401 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R3388:3390 CoLoR.DP.AHDE <> hde def
+R3396:3396 CoLoR.DP.AHDE <> y var
+R3394:3394 CoLoR.DP.AHDE <> x var
+R3392:3392 CoLoR.DP.AHDE <> bool_def.D var
+R3402:3406 CoLoR.DP.ADecomp <> Graph def
+R3419:3419 CoLoR.DP.AHDE <> y var
+R3417:3417 CoLoR.DP.AHDE <> x var
+R3408:3415 CoLoR.DP.AHDE <> hde_bool def
+R3449:3451 CoLoR.DP.AHDE <> hde def
+R3454:3461 CoLoR.DP.AHDE <> hde_bool def
+R3464:3468 CoLoR.DP.AHDE <> hd_eq def
+R3471:3475 CoLoR.DP.ADecomp <> Graph def
+R3497:3502 CoLoR.DP.AHDE <> mem_ok syndef
+R3497:3502 CoLoR.DP.AHDE <> mem_ok syndef
+R3497:3502 CoLoR.DP.AHDE <> mem_ok syndef
+R3497:3502 CoLoR.DP.AHDE <> mem_ok syndef
+R3497:3502 CoLoR.DP.AHDE <> mem_ok syndef
+R3515:3517 CoLoR.Term.WithArity.ATrs <> rhs proj
+R3515:3517 CoLoR.Term.WithArity.ATrs <> rhs proj
+R3547:3556 CoLoR.Util.Bool.BoolUtil <> andb_eliml thm
+R3547:3556 CoLoR.Util.Bool.BoolUtil <> andb_eliml thm
+R3569:3578 CoLoR.Util.Bool.BoolUtil <> andb_elimr thm
+R3569:3578 CoLoR.Util.Bool.BoolUtil <> andb_elimr thm
+R3662:3669 CoLoR.Util.Logic.EqUtil <> beq_refl thm
+R3662:3669 CoLoR.Util.Logic.EqUtil <> beq_refl thm
+R3680:3690 CoLoR.Term.WithArity.ASignature <> beq_symb_ok proj
+R3692:3694 CoLoR.DP.AHDE <> bool_def.Sig var
+R3680:3690 CoLoR.Term.WithArity.ASignature <> beq_symb_ok proj
+R3692:3694 CoLoR.DP.AHDE <> bool_def.Sig var
+R3703:3711 CoLoR.Util.Bool.BoolUtil <> andb_elim thm
+R3703:3711 CoLoR.Util.Bool.BoolUtil <> andb_elim thm
+R3746:3754 CoLoR.Util.Bool.BoolUtil <> andb_elim thm
+R3746:3754 CoLoR.Util.Bool.BoolUtil <> andb_elim thm
+R3765:3773 CoLoR.Util.Bool.BoolUtil <> andb_elim thm
+R3765:3773 CoLoR.Util.Bool.BoolUtil <> andb_elim thm
+R3808:3816 CoLoR.Util.Bool.BoolUtil <> andb_elim thm
+R3808:3816 CoLoR.Util.Bool.BoolUtil <> andb_elim thm
+R3871:3879 CoLoR.Util.Bool.BoolUtil <> andb_elim thm
+R3871:3879 CoLoR.Util.Bool.BoolUtil <> andb_elim thm
+R3893:3903 CoLoR.Term.WithArity.ASignature <> beq_symb_ok proj
+R3893:3903 CoLoR.Term.WithArity.ASignature <> beq_symb_ok proj
+R3893:3903 CoLoR.Term.WithArity.ASignature <> beq_symb_ok proj
+R3933:3940 CoLoR.DP.AHDE bool_def <> sec
+sec 4046:4057 <> bool_correct
+var 4070:4072 bool_correct Sig
+R4076:4084 CoLoR.Term.WithArity.ASignature <> Signature rec
+var 4098:4098 bool_correct R
+var 4100:4100 bool_correct D
+R4104:4108 CoLoR.Term.WithArity.ATrs <> rules def
+R4110:4112 CoLoR.DP.AHDE <> bool_correct.Sig var
+prf 4122:4137 <> hde_bool_correct
+R4171:4174 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'<<'_x not
+R4141:4154 CoLoR.DP.AGraph <> hd_rules_graph def
+R4170:4170 CoLoR.DP.AHDE <> bool_correct.D var
+R4166:4167 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'#' not
+R4157:4163 CoLoR.Term.WithArity.ATrs <> int_red def
+R4165:4165 CoLoR.DP.AHDE <> bool_correct.R var
+R4175:4179 CoLoR.DP.ADecomp <> Graph def
+R4182:4189 CoLoR.DP.AHDE <> hde_bool def
+R4191:4191 CoLoR.DP.AHDE <> bool_correct.D var
+R4215:4217 CoLoR.DP.AHDE <> hde def
+R4219:4219 CoLoR.DP.AHDE <> bool_correct.D var
+R4215:4217 CoLoR.DP.AHDE <> hde def
+R4219:4219 CoLoR.DP.AHDE <> bool_correct.D var
+R4229:4259 CoLoR.DP.AHDE <> int_red_hd_rules_graph_incl_hde thm
+R4229:4259 CoLoR.DP.AHDE <> int_red_hd_rules_graph_incl_hde thm
+R4282:4301 CoLoR.DP.AHDE <> hde_bool_correct_aux thm
+R4282:4301 CoLoR.DP.AHDE <> hde_bool_correct_aux thm
+R4282:4301 CoLoR.DP.AHDE <> hde_bool_correct_aux thm
+syndef 4439:4442 <> Sig'
+R4448:4454 CoLoR.Term.WithArity.ADuplicateSymb <> dup_sig def
+R4456:4458 CoLoR.DP.AHDE <> bool_correct.Sig var
+syndef 4472:4473 <> R'
+R4479:4491 CoLoR.Term.WithArity.ADuplicateSymb <> dup_int_rules def
+R4493:4493 CoLoR.DP.AHDE <> bool_correct.R var
+var 4507:4509 bool_correct hyp
+R4545:4547 Coq.Init.Logic <> :type_scope:x_'='_x not
+R4513:4519 Coq.Lists.List <> forallb def
+R4543:4544 CoLoR.DP.AHDE <> R' syndef
+R4523:4535 CoLoR.Term.WithArity.ATrs <> is_notvar_lhs def
+R4537:4540 CoLoR.DP.AHDE <> Sig' syndef
+R4548:4551 Coq.Init.Datatypes <> true constr
+prf 4561:4581 <> hde_bool_mark_correct
+R4644:4649 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'<<'_x not
+R4587:4600 CoLoR.DP.AGraph <> hd_rules_graph def
+R4629:4640 CoLoR.Term.WithArity.ADuplicateSymb <> dup_hd_rules def
+R4642:4642 CoLoR.DP.AHDE <> bool_correct.D var
+R4624:4625 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'#' not
+R4603:4605 CoLoR.Term.WithArity.ATrs <> red def
+R4608:4620 CoLoR.Term.WithArity.ADuplicateSymb <> dup_int_rules def
+R4622:4622 CoLoR.DP.AHDE <> bool_correct.R var
+R4650:4654 CoLoR.DP.ADecomp <> Graph def
+R4657:4664 CoLoR.DP.AHDE <> hde_bool def
+R4667:4678 CoLoR.Term.WithArity.ADuplicateSymb <> dup_hd_rules def
+R4680:4680 CoLoR.DP.AHDE <> bool_correct.D var
+R4705:4707 CoLoR.DP.AHDE <> hde def
+R4710:4721 CoLoR.Term.WithArity.ADuplicateSymb <> dup_hd_rules def
+R4723:4723 CoLoR.DP.AHDE <> bool_correct.D var
+R4705:4707 CoLoR.DP.AHDE <> hde def
+R4710:4721 CoLoR.Term.WithArity.ADuplicateSymb <> dup_hd_rules def
+R4723:4723 CoLoR.DP.AHDE <> bool_correct.D var
+R4757:4776 CoLoR.DP.AHDE <> hde_bool_correct_aux thm
+R4757:4776 CoLoR.DP.AHDE <> hde_bool_correct_aux thm
+R4757:4776 CoLoR.DP.AHDE <> hde_bool_correct_aux thm
+R4829:4831 CoLoR.DP.AHDE <> hde def
+R4855:4865 CoLoR.Util.List.ListUtil <> in_map_elim thm
+R4855:4865 CoLoR.Util.List.ListUtil <> in_map_elim thm
+R4904:4914 CoLoR.Term.WithArity.ADuplicateSymb <> dup_hd_rule def
+R4967:4977 CoLoR.Util.List.ListUtil <> in_map_elim thm
+R4967:4977 CoLoR.Util.List.ListUtil <> in_map_elim thm
+R5016:5026 CoLoR.Term.WithArity.ADuplicateSymb <> dup_hd_rule def
+R5162:5166 CoLoR.Term.WithArity.AShift <> shift def
+R5184:5190 CoLoR.Term.WithArity.ASubstitution <> sub_fun thm
+R5184:5190 CoLoR.Term.WithArity.ASubstitution <> sub_fun thm
+R5184:5190 CoLoR.Term.WithArity.ASubstitution <> sub_fun thm
+R5184:5190 CoLoR.Term.WithArity.ASubstitution <> sub_fun thm
+R5184:5190 CoLoR.Term.WithArity.ASubstitution <> sub_fun thm
+R5184:5190 CoLoR.Term.WithArity.ASubstitution <> sub_fun thm
+R5209:5231 CoLoR.Term.WithArity.ADuplicateSymb <> rtc_red_dup_int_hd_symb thm
+R5233:5235 CoLoR.DP.AHDE <> bool_correct.hyp var
+R5209:5231 CoLoR.Term.WithArity.ADuplicateSymb <> rtc_red_dup_int_hd_symb thm
+R5233:5235 CoLoR.DP.AHDE <> bool_correct.hyp var
+R5268:5279 CoLoR.DP.AHDE bool_correct <> sec
+R5438:5453 CoLoR.DP.AHDE <> hde_bool_correct thm
+R5407:5427 CoLoR.DP.AHDE <> hde_bool_mark_correct thm

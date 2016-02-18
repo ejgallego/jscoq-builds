@@ -1,0 +1,166 @@
+DIGEST 507627653095f701013e85892b51cf52
+FCoLoR.Util.Function.FunUtil
+R213:221 CoLoR.Util.Logic.LogicUtil <> <> lib
+sec 350:358 <> functions
+var 375:375 functions A
+var 377:377 functions B
+var 388:388 functions f
+R393:396 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R397:397 CoLoR.Util.Function.FunUtil <> B var
+R392:392 CoLoR.Util.Function.FunUtil <> A var
+def 415:423 <> injective
+R449:452 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R454:456 Coq.Init.Logic <> :type_scope:x_'='_x not
+R453:453 CoLoR.Util.Function.FunUtil <> x var
+R457:457 CoLoR.Util.Function.FunUtil <> y var
+R443:445 Coq.Init.Logic <> :type_scope:x_'='_x not
+R440:440 CoLoR.Util.Function.FunUtil <> functions.f var
+R442:442 CoLoR.Util.Function.FunUtil <> x var
+R446:446 CoLoR.Util.Function.FunUtil <> functions.f var
+R448:448 CoLoR.Util.Function.FunUtil <> y var
+def 474:483 <> surjective
+R498:504 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R506:507 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R509:511 Coq.Init.Logic <> :type_scope:x_'='_x not
+R508:508 CoLoR.Util.Function.FunUtil <> y var
+R512:512 CoLoR.Util.Function.FunUtil <> functions.f var
+R514:514 CoLoR.Util.Function.FunUtil <> x var
+def 531:539 <> bijective
+R553:556 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R544:552 CoLoR.Util.Function.FunUtil <> injective def
+R557:566 CoLoR.Util.Function.FunUtil <> surjective def
+R574:582 CoLoR.Util.Function.FunUtil functions <> sec
+sec 703:706 <> comp
+var 723:723 comp A
+var 725:725 comp B
+var 727:727 comp C
+var 738:738 comp f
+var 751:751 comp g
+R743:746 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R747:747 CoLoR.Util.Function.FunUtil <> C var
+R742:742 CoLoR.Util.Function.FunUtil <> B var
+R756:759 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R760:760 CoLoR.Util.Function.FunUtil <> B var
+R755:755 CoLoR.Util.Function.FunUtil <> A var
+def 778:781 <> comp
+R788:788 CoLoR.Util.Function.FunUtil <> comp.f var
+R791:791 CoLoR.Util.Function.FunUtil <> comp.g var
+R793:793 CoLoR.Util.Function.FunUtil <> x var
+prf 806:813 <> inj_comp
+R828:831 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R843:846 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R847:855 CoLoR.Util.Function.FunUtil <> injective def
+R857:860 CoLoR.Util.Function.FunUtil <> comp def
+R832:840 CoLoR.Util.Function.FunUtil <> injective def
+R842:842 CoLoR.Util.Function.FunUtil <> comp.g var
+R817:825 CoLoR.Util.Function.FunUtil <> injective def
+R827:827 CoLoR.Util.Function.FunUtil <> comp.f var
+prf 960:972 <> inj_comp_elim
+R990:993 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R994:1002 CoLoR.Util.Function.FunUtil <> injective def
+R1004:1004 CoLoR.Util.Function.FunUtil <> comp.g var
+R976:984 CoLoR.Util.Function.FunUtil <> injective def
+R986:989 CoLoR.Util.Function.FunUtil <> comp def
+R1067:1070 CoLoR.Util.Function.FunUtil <> comp def
+prf 1106:1114 <> surj_comp
+R1130:1133 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1146:1149 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1150:1159 CoLoR.Util.Function.FunUtil <> surjective def
+R1161:1164 CoLoR.Util.Function.FunUtil <> comp def
+R1134:1143 CoLoR.Util.Function.FunUtil <> surjective def
+R1145:1145 CoLoR.Util.Function.FunUtil <> comp.g var
+R1118:1127 CoLoR.Util.Function.FunUtil <> surjective def
+R1129:1129 CoLoR.Util.Function.FunUtil <> comp.f var
+prf 1306:1319 <> surj_comp_elim
+R1338:1341 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1342:1351 CoLoR.Util.Function.FunUtil <> surjective def
+R1353:1353 CoLoR.Util.Function.FunUtil <> comp.f var
+R1323:1332 CoLoR.Util.Function.FunUtil <> surjective def
+R1334:1337 CoLoR.Util.Function.FunUtil <> comp def
+R1434:1434 CoLoR.Util.Function.FunUtil <> comp.g var
+R1434:1434 CoLoR.Util.Function.FunUtil <> comp.g var
+prf 1462:1469 <> bij_comp
+R1484:1487 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1499:1502 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1503:1511 CoLoR.Util.Function.FunUtil <> bijective def
+R1513:1516 CoLoR.Util.Function.FunUtil <> comp def
+R1488:1496 CoLoR.Util.Function.FunUtil <> bijective def
+R1498:1498 CoLoR.Util.Function.FunUtil <> comp.g var
+R1473:1481 CoLoR.Util.Function.FunUtil <> bijective def
+R1483:1483 CoLoR.Util.Function.FunUtil <> comp.f var
+R1566:1573 CoLoR.Util.Function.FunUtil <> inj_comp thm
+R1566:1573 CoLoR.Util.Function.FunUtil <> inj_comp thm
+R1586:1594 CoLoR.Util.Function.FunUtil <> surj_comp thm
+R1586:1594 CoLoR.Util.Function.FunUtil <> surj_comp thm
+R1613:1616 CoLoR.Util.Function.FunUtil comp <> sec
+R1633:1636 CoLoR.Util.Function.FunUtil <> comp def
+not 1626:1626 <> ::x_'o'_x
+R1824:1834 CoLoR.Util.Logic.EpsilonUtil <> <> lib
+sec 1846:1852 <> inverse
+var 1869:1869 inverse A
+var 1871:1871 inverse B
+var 1882:1882 inverse f
+var 1895:1900 inverse f_surj
+R1887:1890 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1891:1891 CoLoR.Util.Function.FunUtil <> B var
+R1886:1886 CoLoR.Util.Function.FunUtil <> A var
+R1904:1913 CoLoR.Util.Function.FunUtil <> surjective def
+R1915:1915 CoLoR.Util.Function.FunUtil <> f var
+def 1933:1939 <> inverse
+R1944:1947 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1948:1948 CoLoR.Util.Function.FunUtil <> inverse.A var
+R1943:1943 CoLoR.Util.Function.FunUtil <> inverse.B var
+R1980:1982 CoLoR.Util.Logic.EpsilonUtil <> cid syndef
+R1985:1990 CoLoR.Util.Function.FunUtil <> inverse.f_surj var
+R1980:1982 CoLoR.Util.Logic.EpsilonUtil <> cid syndef
+R1985:1990 CoLoR.Util.Function.FunUtil <> inverse.f_surj var
+prf 2033:2042 <> inverse_eq
+R2061:2063 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2048:2048 CoLoR.Util.Function.FunUtil <> inverse.f var
+R2051:2057 CoLoR.Util.Function.FunUtil <> inverse def
+R2059:2059 CoLoR.Util.Function.FunUtil <> y var
+R2064:2064 CoLoR.Util.Function.FunUtil <> y var
+R2084:2090 CoLoR.Util.Function.FunUtil <> inverse def
+R2103:2105 CoLoR.Util.Logic.EpsilonUtil <> cid syndef
+R2108:2113 CoLoR.Util.Function.FunUtil <> inverse.f_surj var
+R2103:2105 CoLoR.Util.Logic.EpsilonUtil <> cid syndef
+R2108:2113 CoLoR.Util.Function.FunUtil <> inverse.f_surj var
+prf 2149:2159 <> inj_inverse
+R2163:2171 CoLoR.Util.Function.FunUtil <> injective def
+R2173:2179 CoLoR.Util.Function.FunUtil <> inverse def
+R2217:2223 Coq.Init.Logic <> f_equal thm
+R2225:2225 CoLoR.Util.Function.FunUtil <> inverse.f var
+R2217:2223 Coq.Init.Logic <> f_equal thm
+R2225:2225 CoLoR.Util.Function.FunUtil <> inverse.f var
+R2243:2252 CoLoR.Util.Function.FunUtil <> inverse_eq thm
+R2243:2252 CoLoR.Util.Function.FunUtil <> inverse_eq thm
+R2243:2252 CoLoR.Util.Function.FunUtil <> inverse_eq thm
+R2243:2252 CoLoR.Util.Function.FunUtil <> inverse_eq thm
+R2243:2252 CoLoR.Util.Function.FunUtil <> inverse_eq thm
+R2277:2283 CoLoR.Util.Function.FunUtil inverse <> sec
+R2466:2474 CoLoR.Util.Function.FunUtil <> injective def
+R2478:2480 CoLoR.Util.Function.FunUtil <> ::x_'o'_x not
+R2466:2474 CoLoR.Util.Function.FunUtil <> injective def
+R2478:2480 CoLoR.Util.Function.FunUtil <> ::x_'o'_x not
+R2516:2524 CoLoR.Util.Function.FunUtil <> injective def
+R2527:2533 CoLoR.Util.Function.FunUtil <> inverse def
+R2516:2524 CoLoR.Util.Function.FunUtil <> injective def
+R2527:2533 CoLoR.Util.Function.FunUtil <> inverse def
+R2573:2581 CoLoR.Util.Function.FunUtil <> injective def
+R2573:2581 CoLoR.Util.Function.FunUtil <> injective def
+R2547:2557 CoLoR.Util.Function.FunUtil <> inj_inverse thm
+R2493:2500 CoLoR.Util.Function.FunUtil <> inj_comp thm
+R2641:2650 CoLoR.Util.Function.FunUtil <> surjective def
+R2654:2656 CoLoR.Util.Function.FunUtil <> ::x_'o'_x not
+R2641:2650 CoLoR.Util.Function.FunUtil <> surjective def
+R2654:2656 CoLoR.Util.Function.FunUtil <> ::x_'o'_x not
+R2694:2703 CoLoR.Util.Function.FunUtil <> surjective def
+R2694:2703 CoLoR.Util.Function.FunUtil <> surjective def
+R2669:2677 CoLoR.Util.Function.FunUtil <> surj_comp thm
+R2762:2770 CoLoR.Util.Function.FunUtil <> bijective def
+R2774:2776 CoLoR.Util.Function.FunUtil <> ::x_'o'_x not
+R2762:2770 CoLoR.Util.Function.FunUtil <> bijective def
+R2774:2776 CoLoR.Util.Function.FunUtil <> ::x_'o'_x not
+R2812:2820 CoLoR.Util.Function.FunUtil <> bijective def
+R2812:2820 CoLoR.Util.Function.FunUtil <> bijective def
+R2789:2796 CoLoR.Util.Function.FunUtil <> bij_comp thm

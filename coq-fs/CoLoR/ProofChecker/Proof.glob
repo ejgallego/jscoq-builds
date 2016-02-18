@@ -1,0 +1,30 @@
+DIGEST c677af944305c235f88dd117bb4f72ff
+FCoLoR.ProofChecker.Proof
+R207:212 Coq.ZArith.ZArith <> <> lib
+R214:217 Coq.Lists.List <> <> lib
+R219:228 CoLoR.Term.WithArity.ASignature <> <> lib
+sec 240:244 <> Proof
+var 257:259 Proof Sig
+R263:271 CoLoR.Term.WithArity.ASignature <> Signature rec
+def 516:521 <> trsInt
+R533:536 Coq.Init.Datatypes <> list ind
+R542:544 Coq.Init.Datatypes <> :type_scope:x_'*'_x not
+R539:541 CoLoR.ProofChecker.Proof <> Proof.Sig var
+R545:550 CoLoR.ProofChecker.Proof <> symInt var
+def 724:731 <> monomial
+R738:740 Coq.Init.Datatypes <> :type_scope:x_'*'_x not
+R737:737 Coq.Numbers.BinNums <> Z ind
+R741:744 Coq.Init.Datatypes <> list ind
+R746:748 Coq.Init.Datatypes <> nat ind
+def 863:872 <> polynomial
+R877:880 Coq.Init.Datatypes <> list ind
+R882:889 CoLoR.ProofChecker.Proof <> monomial def
+ind 903:918 <> TerminationProof
+constr 925:934 <> TP_PolyInt
+constr 987:1001 <> TP_ProblemEmpty
+R941:946 CoLoR.ProofChecker.Proof <> trsInt def
+R948:957 CoLoR.ProofChecker.Proof <> polynomial def
+R967:982 CoLoR.ProofChecker.Proof <> TerminationProof ind
+R984:984 CoLoR.ProofChecker.Proof <> TerminationProof ind
+R1002:1002 CoLoR.ProofChecker.Proof <> TerminationProof ind
+R1009:1013 CoLoR.ProofChecker.Proof Proof <> sec

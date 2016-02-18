@@ -1,0 +1,91 @@
+DIGEST 3dedfcccceb8f9ddc0f2331430fb30ca
+FCoLoR.RPO.VPrecedence
+R236:245 CoLoR.Term.Varyadic.VSignature <> <> lib
+R247:251 CoLoR.Term.Varyadic.VTerm <> <> lib
+R253:260 CoLoR.Util.Relation.RelMidex <> <> lib
+R262:269 CoLoR.Util.Relation.Preorder <> <> lib
+R271:276 Coq.Setoids.Setoid <> <> lib
+modtype 292:306 <> VPrecedenceType
+ax 322:324 VPrecedenceType Sig
+R328:336 CoLoR.Term.Varyadic.VSignature <> Signature rec
+syndef 351:354 VPrecedenceType term
+R360:363 CoLoR.Term.Varyadic.VTerm <> term ind
+R365:367 CoLoR.RPO.VPrecedence VPrecedenceType Sig defax
+syndef 382:386 VPrecedenceType terms
+R392:395 Coq.Init.Datatypes <> list ind
+R397:400 CoLoR.RPO.VPrecedence VPrecedenceType term syndef
+ax 417:419 VPrecedenceType leF
+R426:429 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R433:436 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R430:432 CoLoR.RPO.VPrecedence VPrecedenceType Sig defax
+R423:425 CoLoR.RPO.VPrecedence VPrecedenceType Sig defax
+def 554:556 VPrecedenceType ltF
+R561:563 CoLoR.Util.Relation.Preorder <> ltA def
+R569:571 CoLoR.RPO.VPrecedence VPrecedenceType leF defax
+R565:567 CoLoR.RPO.VPrecedence VPrecedenceType Sig defax
+def 587:589 VPrecedenceType eqF
+R594:596 CoLoR.Util.Relation.Preorder <> eqA def
+R602:604 CoLoR.RPO.VPrecedence VPrecedenceType leF defax
+R598:600 CoLoR.RPO.VPrecedence VPrecedenceType Sig defax
+ax 620:625 VPrecedenceType ltF_wf
+R629:640 Coq.Init.Wf <> well_founded def
+R642:644 CoLoR.RPO.VPrecedence VPrecedenceType ltF def
+ax 659:665 VPrecedenceType leF_dec
+R669:675 CoLoR.Util.Relation.RelMidex <> rel_dec def
+R677:679 CoLoR.RPO.VPrecedence VPrecedenceType leF defax
+ax 694:705 VPrecedenceType leF_preorder
+R709:716 Coq.Relations.Relation_Definitions <> preorder rec
+R722:724 CoLoR.RPO.VPrecedence VPrecedenceType leF defax
+R718:720 CoLoR.RPO.VPrecedence VPrecedenceType Sig defax
+R745:747 CoLoR.RPO.VPrecedence VPrecedenceType eqF def
+not 736:736 VPrecedenceType ::x_'=F='_x
+R780:782 CoLoR.RPO.VPrecedence VPrecedenceType ltF def
+not 772:772 VPrecedenceType ::x_'<F'_x
+R816:818 CoLoR.RPO.VPrecedence VPrecedenceType leF defax
+not 807:807 VPrecedenceType ::x_'<=F'_x
+R840:854 CoLoR.RPO.VPrecedence VPrecedenceType <> modtype
+R882:896 CoLoR.RPO.VPrecedence VPrecedenceType <> mod
+mod 865:875 <> VPrecedence
+R1039:1047 CoLoR.Util.Relation.RelExtras <> <> lib
+R1068:1072 CoLoR.Util.Relation.RelExtras Eqset <> mod
+mod 1060:1063 <> VPrecedence.Term
+def 1091:1091 VPrecedence.Term A
+R1096:1099 CoLoR.RPO.VPrecedence P term syndef
+def 1124:1126 VPrecedence.Term eqA
+R1131:1132 Coq.Init.Logic <> eq ind
+R1140:1143 CoLoR.RPO.VPrecedence P term syndef
+R1174:1176 CoLoR.RPO.VPrecedence VPrecedence.Term eqA def
+not 1160:1160 VPrecedence.Term ::x_'=A='_x
+inst 1212:1226 VPrecedence.Term eqA_Equivalence
+R1230:1240 Coq.Classes.RelationClasses <> Equivalence class
+R1242:1244 CoLoR.RPO.VPrecedence VPrecedence.Term eqA def
+R1285:1293 Coq.Classes.RelationClasses <> Reflexive class
+R1296:1304 Coq.Classes.RelationClasses <> Symmetric class
+R1307:1316 Coq.Classes.RelationClasses <> Transitive class
+R1332:1334 CoLoR.RPO.VPrecedence VPrecedence.Term eqA def
+R1366:1368 CoLoR.RPO.VPrecedence VPrecedence.Term eqA def
+R1408:1410 CoLoR.RPO.VPrecedence VPrecedence.Term eqA def
+R1453:1456 CoLoR.RPO.VPrecedence VPrecedence.Term <> mod
+R1481:1489 CoLoR.Util.Relation.RelExtras Eqset_dec <> mod
+mod 1469:1476 <> VPrecedence.Term_dec
+R1517:1520 CoLoR.RPO.VPrecedence VPrecedence.Term <> modtype
+mod 1511:1512 <> VPrecedence.Term_dec.Eq
+def 1539:1545 VPrecedence.Term_dec eqA_dec
+R1551:1561 CoLoR.Term.Varyadic.VTerm <> term_eq_dec def
+R1563:1565 CoLoR.RPO.VPrecedence P Sig defax
+R1575:1582 CoLoR.RPO.VPrecedence VPrecedence.Term_dec <> mod
+def 1696:1698 VPrecedence ltF
+R1703:1705 CoLoR.Util.Relation.Preorder <> ltA def
+R1711:1713 CoLoR.RPO.VPrecedence P leF defax
+R1707:1709 CoLoR.RPO.VPrecedence P Sig defax
+def 1729:1731 VPrecedence eqF
+R1736:1738 CoLoR.Util.Relation.Preorder <> eqA def
+R1744:1746 CoLoR.RPO.VPrecedence P leF defax
+R1740:1742 CoLoR.RPO.VPrecedence P Sig defax
+R1767:1769 CoLoR.RPO.VPrecedence VPrecedence eqF def
+not 1758:1758 VPrecedence ::x_'=F='_x
+R1802:1804 CoLoR.RPO.VPrecedence VPrecedence ltF def
+not 1794:1794 VPrecedence ::x_'<F'_x
+R1838:1840 CoLoR.RPO.VPrecedence P leF defax
+not 1829:1829 VPrecedence ::x_'<=F'_x
+R1862:1872 CoLoR.RPO.VPrecedence VPrecedence <> mod

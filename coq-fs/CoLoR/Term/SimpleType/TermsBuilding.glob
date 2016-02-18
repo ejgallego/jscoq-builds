@@ -1,0 +1,165 @@
+DIGEST 724c662e21de0e4e17764d60b513256d
+FCoLoR.Term.SimpleType.TermsBuilding
+R188:196 CoLoR.Util.Relation.RelExtras <> <> lib
+R198:207 CoLoR.Util.List.ListExtras <> <> lib
+R209:217 CoLoR.Util.Logic.LogicUtil <> <> lib
+R219:223 Coq.omega.Omega <> <> lib
+R234:247 CoLoR.Term.SimpleType.TermsActiveEnv <> <> lib
+R279:296 CoLoR.Term.SimpleType.TermsSig Signature <> mod
+mod 258:270 <> TermsBuilding
+R324:352 CoLoR.Term.SimpleType.TermsActiveEnv TermsActiveEnv <> modtype
+R354:356 CoLoR.Term.SimpleType.TermsBuilding Sig <> modtype
+mod 317:319 <> TermsBuilding.TAE
+rec 369:375 TermsBuilding appCond
+proj 394:397 TermsBuilding appL
+proj 411:414 TermsBuilding appR
+proj 428:432 TermsBuilding eqEnv
+proj 461:466 TermsBuilding typArr
+proj 499:503 TermsBuilding typOk
+R400:403 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD Term rec
+R417:420 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD Term rec
+R443:445 Coq.Init.Logic <> :type_scope:x_'='_x not
+R435:437 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD env proj
+R439:442 CoLoR.Term.SimpleType.TermsBuilding <> appL meth
+R446:448 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD env proj
+R450:453 CoLoR.Term.SimpleType.TermsBuilding <> appR meth
+R469:479 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD isArrowType def
+R482:485 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD type proj
+R487:490 CoLoR.Term.SimpleType.TermsBuilding <> appL meth
+R527:529 Coq.Init.Logic <> :type_scope:x_'='_x not
+R506:514 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD type_left def
+R517:520 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD type proj
+R522:525 CoLoR.Term.SimpleType.TermsBuilding <> appL meth
+R530:533 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD type proj
+R535:538 CoLoR.Term.SimpleType.TermsBuilding <> appR meth
+def 559:566 TermsBuilding buildApp
+R577:580 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R581:584 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD Term rec
+R570:576 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding appCond rec
+R810:815 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD buildT constr
+R818:821 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD TApp constr
+R810:815 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD buildT constr
+R818:821 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD TApp constr
+prf 862:875 TermsBuilding buildApp_isApp
+R889:893 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB isApp def
+R896:903 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding buildApp def
+R905:905 CoLoR.Term.SimpleType.TermsBuilding <> a var
+prf 1001:1012 TermsBuilding buildApp_Lok
+R1053:1055 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1026:1033 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB appBodyL def
+R1036:1049 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding buildApp_isApp thm
+R1051:1051 CoLoR.Term.SimpleType.TermsBuilding <> a var
+R1059:1062 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding appL proj
+R1056:1056 CoLoR.Term.SimpleType.TermsBuilding <> a var
+prf 1145:1156 TermsBuilding buildApp_Rok
+R1197:1199 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1170:1177 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB appBodyR def
+R1180:1193 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding buildApp_isApp thm
+R1195:1195 CoLoR.Term.SimpleType.TermsBuilding <> a var
+R1203:1206 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding appR proj
+R1200:1200 CoLoR.Term.SimpleType.TermsBuilding <> a var
+prf 1289:1304 TermsBuilding buildApp_preterm
+R1339:1341 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1322:1325 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD term proj
+R1328:1335 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding buildApp def
+R1337:1337 CoLoR.Term.SimpleType.TermsBuilding <> a var
+R1355:1358 CoLoR.Term.SimpleType.TermsDef TermsDef ::x_'@@'_x not
+R1342:1345 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD term proj
+R1350:1353 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding appL proj
+R1347:1347 CoLoR.Term.SimpleType.TermsBuilding <> a var
+R1359:1362 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD term proj
+R1367:1370 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding appR proj
+R1364:1364 CoLoR.Term.SimpleType.TermsBuilding <> a var
+prf 1453:1466 TermsBuilding buildApp_env_l
+R1496:1498 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1480:1482 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD env proj
+R1485:1492 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding buildApp def
+R1494:1494 CoLoR.Term.SimpleType.TermsBuilding <> a var
+R1499:1501 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD env proj
+R1506:1509 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding appL proj
+R1503:1503 CoLoR.Term.SimpleType.TermsBuilding <> a var
+prf 1592:1604 TermsBuilding buildApp_type
+R1639:1641 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1622:1625 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD type proj
+R1628:1635 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding buildApp def
+R1637:1637 CoLoR.Term.SimpleType.TermsBuilding <> a var
+R1642:1651 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD type_right def
+R1654:1657 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD type proj
+R1662:1665 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding appL proj
+R1659:1659 CoLoR.Term.SimpleType.TermsBuilding <> a var
+rec 1750:1756 TermsBuilding absCond
+proj 1774:1777 TermsBuilding absB
+proj 1790:1793 TermsBuilding absT
+proj 1812:1822 TermsBuilding envNotEmpty
+R1780:1783 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD Term rec
+R1796:1805 CoLoR.Term.SimpleType.TermsBuilding Sig.ST SimpleType ind
+R1833:1836 CoLoR.Term.SimpleType.TermsDef TermsDef ::x_'|='_x_':='_x not
+R1838:1841 CoLoR.Term.SimpleType.TermsDef TermsDef ::x_'|='_x_':='_x not
+R1825:1827 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD env proj
+R1829:1832 CoLoR.Term.SimpleType.TermsBuilding <> absB meth
+R1842:1845 CoLoR.Term.SimpleType.TermsBuilding <> absT meth
+def 1868:1875 TermsBuilding buildAbs
+R1886:1889 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1890:1893 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD Term rec
+R1879:1885 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding absCond rec
+R2046:2051 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD buildT constr
+R2054:2057 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD TAbs constr
+R2046:2051 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD buildT constr
+R2054:2057 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD TAbs constr
+prf 2105:2118 TermsBuilding buildAbs_isAbs
+R2131:2135 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB isAbs def
+R2138:2145 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding buildAbs def
+R2147:2147 CoLoR.Term.SimpleType.TermsBuilding <> a var
+prf 2265:2280 TermsBuilding buildAbs_absBody
+R2320:2322 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2294:2300 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB absBody def
+R2303:2316 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding buildAbs_isAbs thm
+R2318:2318 CoLoR.Term.SimpleType.TermsBuilding <> a var
+R2326:2329 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding absB proj
+R2323:2323 CoLoR.Term.SimpleType.TermsBuilding <> a var
+prf 2448:2463 TermsBuilding buildAbs_absType
+R2503:2505 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2477:2483 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB absType def
+R2486:2499 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding buildAbs_isAbs thm
+R2501:2501 CoLoR.Term.SimpleType.TermsBuilding <> a var
+R2509:2512 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding absT proj
+R2506:2506 CoLoR.Term.SimpleType.TermsBuilding <> a var
+R2626:2629 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD VarD def
+prf 2691:2702 TermsBuilding buildAbs_env
+R2732:2734 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2716:2718 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD env proj
+R2721:2728 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding buildAbs def
+R2730:2730 CoLoR.Term.SimpleType.TermsBuilding <> a var
+R2735:2738 Coq.Lists.List <> tail syndef
+R2741:2743 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD env proj
+R2748:2751 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding absB proj
+R2745:2745 CoLoR.Term.SimpleType.TermsBuilding <> a var
+def 2876:2883 TermsBuilding buildVar
+R2899:2899 CoLoR.Term.SimpleType.TermsDef TermsDef ::x_'|-'_x_':='_x not
+R2929:2933 CoLoR.Term.SimpleType.TermsDef TermsDef ::x_'|-'_x_':='_x not
+R2936:2939 CoLoR.Term.SimpleType.TermsDef TermsDef ::x_'|-'_x_':='_x not
+R2911:2914 Coq.Init.Datatypes <> :list_scope:x_'++'_x not
+R2900:2903 CoLoR.Util.List.ListExtras <> copy def
+R2907:2910 Coq.Init.Datatypes <> None constr
+R2905:2905 CoLoR.Term.SimpleType.TermsBuilding <> x var
+R2916:2920 CoLoR.Term.SimpleType.TermsDef TermsDef ::x_'[#]'_x not
+R2915:2915 CoLoR.Term.SimpleType.TermsBuilding <> A var
+R2921:2928 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD EmptyEnv def
+R2934:2934 CoLoR.Term.SimpleType.TermsDef TermsDef ::'%'_x not
+R2935:2935 CoLoR.Term.SimpleType.TermsBuilding <> x var
+R2940:2940 CoLoR.Term.SimpleType.TermsBuilding <> A var
+R2977:2980 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD VarD def
+R2995:3007 CoLoR.Util.List.ListUtil <> nth_app_right thm
+R2995:3007 CoLoR.Util.List.ListUtil <> nth_app_right thm
+R2995:3007 CoLoR.Util.List.ListUtil <> nth_app_right thm
+R2995:3007 CoLoR.Util.List.ListUtil <> nth_app_right thm
+R3068:3070 Coq.Init.Peano <> :nat_scope:x_'-'_x not
+R3068:3070 Coq.Init.Peano <> :nat_scope:x_'-'_x not
+prf 3122:3137 TermsBuilding buildVar_minimal
+R3153:3162 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE envMinimal def
+R3165:3170 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE.TE.TL.TB.TS.TD buildT constr
+R3173:3180 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding buildVar def
+R3184:3184 CoLoR.Term.SimpleType.TermsBuilding <> x var
+R3182:3182 CoLoR.Term.SimpleType.TermsBuilding <> A var
+R3218:3227 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding.TAE envMinimal def
+R3251:3263 CoLoR.Term.SimpleType.TermsBuilding TermsBuilding <> mod

@@ -1,3 +1,8 @@
+// CodeMirror, copyright (c) by Marijn Haverbeke and others
+// Distributed under an MIT license: http://codemirror.net/LICENSE
+
+// Coq mode created by Benoît Pin, Valentin Robert and others
+
 (function(mod) {
   if (typeof exports == "object" && typeof module == "object") // CommonJS
     mod(require("../../lib/codemirror"));
@@ -8,7 +13,7 @@
 })(function(CodeMirror) {
   "use strict";
 
-  CodeMirror.defineMode('coq', function(_config, parserConfig) {
+  CodeMirror.defineMode('coq', function(_config, _parserConfig) {
 
     var vernacular = [
       'About', 'Add', 'All', 'Arguments', 'Axiom',
@@ -99,7 +104,7 @@
     tactics.map(function(word){words[word] = 'tactic';});
     terminators.map(function(word){words[word] = 'terminator';});
     admitters.map(function(word){words[word] = 'keyword';});
-    
+
 //        'let': 'keyword',
 //        'print_endline': 'builtin',
 //        'true': 'atom',
@@ -244,3 +249,7 @@
   });
 
 });
+
+// Local Variables:
+// js-indent-level: 2
+// End:

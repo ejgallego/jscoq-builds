@@ -1,0 +1,334 @@
+DIGEST b6ae911505f36ac7623bcf0d5e45a6e5
+FCoLoR.Coccinelle.basis.ordered_set
+R786:791 Coq.Setoids.Setoid <> <> lib
+R809:817 Coq.Relations.Relations <> <> lib
+R835:839 Coq.Arith.Arith <> <> lib
+ind 853:856 <> comp
+constr 872:881 <> Equivalent
+constr 894:902 <> Less_than
+constr 915:926 <> Greater_than
+constr 939:950 <> Uncomparable
+R885:888 CoLoR.Coccinelle.basis.ordered_set <> comp ind
+R906:909 CoLoR.Coccinelle.basis.ordered_set <> comp ind
+R930:933 CoLoR.Coccinelle.basis.ordered_set <> comp ind
+R954:957 CoLoR.Coccinelle.basis.ordered_set <> comp ind
+modtype 973:973 <> S
+ax 987:987 S A
+ax 1007:1013 S eq_bool
+R1018:1021 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1023:1026 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1027:1030 Coq.Init.Datatypes <> bool ind
+R1022:1022 CoLoR.Coccinelle.basis.ordered_set S A defax
+R1017:1017 CoLoR.Coccinelle.basis.ordered_set S A defax
+ax 1043:1052 S eq_bool_ok
+R1076:1082 CoLoR.Coccinelle.basis.ordered_set S eq_bool defax
+R1087:1088 CoLoR.Coccinelle.basis.ordered_set <> a2 var
+R1084:1085 CoLoR.Coccinelle.basis.ordered_set <> a1 var
+R1095:1098 Coq.Init.Datatypes <> true constr
+R1105:1107 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1103:1104 CoLoR.Coccinelle.basis.ordered_set <> a1 var
+R1108:1109 CoLoR.Coccinelle.basis.ordered_set <> a2 var
+R1113:1117 Coq.Init.Datatypes <> false constr
+R1122:1123 Coq.Init.Logic <> :type_scope:'~'_x not
+R1126:1128 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1124:1125 CoLoR.Coccinelle.basis.ordered_set <> a1 var
+R1129:1130 CoLoR.Coccinelle.basis.ordered_set <> a2 var
+ax 1148:1148 S o
+R1152:1159 Coq.Relations.Relation_Definitions <> relation def
+R1161:1161 CoLoR.Coccinelle.basis.ordered_set S A defax
+ax 1174:1179 S o_bool
+R1184:1187 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1189:1192 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1193:1196 Coq.Init.Datatypes <> bool ind
+R1188:1188 CoLoR.Coccinelle.basis.ordered_set S A defax
+R1183:1183 CoLoR.Coccinelle.basis.ordered_set S A defax
+ax 1209:1217 S o_bool_ok
+R1241:1246 CoLoR.Coccinelle.basis.ordered_set S o_bool defax
+R1251:1252 CoLoR.Coccinelle.basis.ordered_set <> a2 var
+R1248:1249 CoLoR.Coccinelle.basis.ordered_set <> a1 var
+R1259:1262 Coq.Init.Datatypes <> true constr
+R1267:1267 CoLoR.Coccinelle.basis.ordered_set S o defax
+R1272:1273 CoLoR.Coccinelle.basis.ordered_set <> a2 var
+R1269:1270 CoLoR.Coccinelle.basis.ordered_set <> a1 var
+R1277:1281 Coq.Init.Datatypes <> false constr
+R1286:1287 Coq.Init.Logic <> :type_scope:'~'_x not
+R1288:1288 CoLoR.Coccinelle.basis.ordered_set S o defax
+R1293:1294 CoLoR.Coccinelle.basis.ordered_set <> a2 var
+R1290:1291 CoLoR.Coccinelle.basis.ordered_set <> a1 var
+ax 1311:1317 S o_proof
+R1321:1325 Coq.Relations.Relation_Definitions <> order rec
+R1329:1329 CoLoR.Coccinelle.basis.ordered_set S o defax
+R1327:1327 CoLoR.Coccinelle.basis.ordered_set S A defax
+ax 1342:1348 S o_total
+R1367:1367 CoLoR.Coccinelle.basis.ordered_set S A defax
+R1370:1370 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R1378:1382 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R1390:1390 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R1371:1371 CoLoR.Coccinelle.basis.ordered_set S o defax
+R1376:1377 CoLoR.Coccinelle.basis.ordered_set <> e2 var
+R1373:1374 CoLoR.Coccinelle.basis.ordered_set <> e1 var
+R1383:1383 CoLoR.Coccinelle.basis.ordered_set S o defax
+R1388:1389 CoLoR.Coccinelle.basis.ordered_set <> e1 var
+R1385:1386 CoLoR.Coccinelle.basis.ordered_set <> e2 var
+R1398:1398 CoLoR.Coccinelle.basis.ordered_set S <> modtype
+modtype 1414:1415 <> ES
+ax 1429:1429 ES A
+ax 1449:1452 ES eq_A
+R1456:1463 Coq.Relations.Relation_Definitions <> relation def
+R1465:1465 CoLoR.Coccinelle.basis.ordered_set ES A defax
+ax 1478:1484 ES eq_bool
+R1489:1492 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1494:1497 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1498:1501 Coq.Init.Datatypes <> bool ind
+R1493:1493 CoLoR.Coccinelle.basis.ordered_set ES A defax
+R1488:1488 CoLoR.Coccinelle.basis.ordered_set ES A defax
+ax 1514:1523 ES eq_bool_ok
+R1547:1553 CoLoR.Coccinelle.basis.ordered_set ES eq_bool defax
+R1558:1559 CoLoR.Coccinelle.basis.ordered_set <> a2 var
+R1555:1556 CoLoR.Coccinelle.basis.ordered_set <> a1 var
+R1566:1569 Coq.Init.Datatypes <> true constr
+R1574:1577 CoLoR.Coccinelle.basis.ordered_set ES eq_A defax
+R1582:1583 CoLoR.Coccinelle.basis.ordered_set <> a2 var
+R1579:1580 CoLoR.Coccinelle.basis.ordered_set <> a1 var
+R1587:1591 Coq.Init.Datatypes <> false constr
+R1596:1596 Coq.Init.Logic <> :type_scope:'~'_x not
+R1597:1600 CoLoR.Coccinelle.basis.ordered_set ES eq_A defax
+R1605:1606 CoLoR.Coccinelle.basis.ordered_set <> a2 var
+R1602:1603 CoLoR.Coccinelle.basis.ordered_set <> a1 var
+ax 1623:1630 ES eq_proof
+R1634:1644 Coq.Relations.Relation_Definitions <> equivalence rec
+R1648:1651 CoLoR.Coccinelle.basis.ordered_set ES eq_A defax
+R1646:1646 CoLoR.Coccinelle.basis.ordered_set ES A defax
+ax 1665:1665 ES o
+R1669:1676 Coq.Relations.Relation_Definitions <> relation def
+R1678:1678 CoLoR.Coccinelle.basis.ordered_set ES A defax
+ax 1691:1698 ES o_compat
+R1738:1741 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1753:1756 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1764:1767 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1768:1768 CoLoR.Coccinelle.basis.ordered_set ES o defax
+R1774:1776 CoLoR.Coccinelle.basis.ordered_set <> e2' var
+R1770:1772 CoLoR.Coccinelle.basis.ordered_set <> e1' var
+R1757:1757 CoLoR.Coccinelle.basis.ordered_set ES o defax
+R1762:1763 CoLoR.Coccinelle.basis.ordered_set <> e2 var
+R1759:1760 CoLoR.Coccinelle.basis.ordered_set <> e1 var
+R1742:1745 CoLoR.Coccinelle.basis.ordered_set ES eq_A defax
+R1750:1752 CoLoR.Coccinelle.basis.ordered_set <> e2' var
+R1747:1748 CoLoR.Coccinelle.basis.ordered_set <> e2 var
+R1727:1730 CoLoR.Coccinelle.basis.ordered_set ES eq_A defax
+R1735:1737 CoLoR.Coccinelle.basis.ordered_set <> e1' var
+R1732:1733 CoLoR.Coccinelle.basis.ordered_set <> e1 var
+ax 1789:1794 ES o_bool
+R1799:1802 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1804:1807 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1808:1811 Coq.Init.Datatypes <> bool ind
+R1803:1803 CoLoR.Coccinelle.basis.ordered_set ES A defax
+R1798:1798 CoLoR.Coccinelle.basis.ordered_set ES A defax
+ax 1824:1832 ES o_bool_ok
+R1856:1861 CoLoR.Coccinelle.basis.ordered_set ES o_bool defax
+R1866:1867 CoLoR.Coccinelle.basis.ordered_set <> a2 var
+R1863:1864 CoLoR.Coccinelle.basis.ordered_set <> a1 var
+R1874:1877 Coq.Init.Datatypes <> true constr
+R1882:1882 CoLoR.Coccinelle.basis.ordered_set ES o defax
+R1887:1888 CoLoR.Coccinelle.basis.ordered_set <> a2 var
+R1884:1885 CoLoR.Coccinelle.basis.ordered_set <> a1 var
+R1892:1896 Coq.Init.Datatypes <> false constr
+R1901:1902 Coq.Init.Logic <> :type_scope:'~'_x not
+R1903:1903 CoLoR.Coccinelle.basis.ordered_set ES o defax
+R1908:1909 CoLoR.Coccinelle.basis.ordered_set <> a2 var
+R1905:1906 CoLoR.Coccinelle.basis.ordered_set <> a1 var
+ax 1926:1932 ES o_proof
+R1936:1940 Coq.Relations.Relation_Definitions <> order rec
+R1944:1944 CoLoR.Coccinelle.basis.ordered_set ES o defax
+R1942:1942 CoLoR.Coccinelle.basis.ordered_set ES A defax
+ax 1957:1963 ES o_total
+R1982:1982 CoLoR.Coccinelle.basis.ordered_set ES A defax
+R1985:1985 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R1993:1997 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R2005:2005 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R1986:1986 CoLoR.Coccinelle.basis.ordered_set ES o defax
+R1991:1992 CoLoR.Coccinelle.basis.ordered_set <> e2 var
+R1988:1989 CoLoR.Coccinelle.basis.ordered_set <> e1 var
+R1998:1998 CoLoR.Coccinelle.basis.ordered_set ES o defax
+R2003:2004 CoLoR.Coccinelle.basis.ordered_set <> e1 var
+R2000:2001 CoLoR.Coccinelle.basis.ordered_set <> e2 var
+R2026:2029 CoLoR.Coccinelle.basis.ordered_set ES eq_A defax
+R2024:2024 CoLoR.Coccinelle.basis.ordered_set ES A defax
+R2026:2029 CoLoR.Coccinelle.basis.ordered_set ES eq_A defax
+R2024:2024 CoLoR.Coccinelle.basis.ordered_set ES A defax
+R2057:2066 Coq.Relations.Relation_Definitions <> equiv_refl proj
+R2072:2079 CoLoR.Coccinelle.basis.ordered_set ES eq_proof defax
+R2026:2029 CoLoR.Coccinelle.basis.ordered_set ES eq_A defax
+R2024:2024 CoLoR.Coccinelle.basis.ordered_set ES A defax
+R2106:2114 Coq.Relations.Relation_Definitions <> equiv_sym proj
+R2120:2127 CoLoR.Coccinelle.basis.ordered_set ES eq_proof defax
+R2026:2029 CoLoR.Coccinelle.basis.ordered_set ES eq_A defax
+R2024:2024 CoLoR.Coccinelle.basis.ordered_set ES A defax
+R2160:2170 Coq.Relations.Relation_Definitions <> equiv_trans proj
+R2176:2183 CoLoR.Coccinelle.basis.ordered_set ES eq_proof defax
+R2026:2029 CoLoR.Coccinelle.basis.ordered_set ES eq_A defax
+R2024:2024 CoLoR.Coccinelle.basis.ordered_set ES A defax
+R2057:2066 Coq.Relations.Relation_Definitions <> equiv_refl proj
+R2072:2079 CoLoR.Coccinelle.basis.ordered_set ES eq_proof defax
+R2106:2114 Coq.Relations.Relation_Definitions <> equiv_sym proj
+R2120:2127 CoLoR.Coccinelle.basis.ordered_set ES eq_proof defax
+R2160:2170 Coq.Relations.Relation_Definitions <> equiv_trans proj
+R2176:2183 CoLoR.Coccinelle.basis.ordered_set ES eq_proof defax
+R2199:2200 CoLoR.Coccinelle.basis.ordered_set ES <> modtype
+R2804:2804 CoLoR.Coccinelle.basis.ordered_set S <> mod
+R2825:2827 Coq.Init.Datatypes <> nat ind
+mod 2797:2799 <> Nat
+def 2842:2842 Nat A
+R2847:2849 Coq.Init.Datatypes <> nat ind
+def 2863:2863 Nat o
+R2867:2874 Coq.Relations.Relation_Definitions <> relation def
+R2876:2876 CoLoR.Coccinelle.basis.ordered_set Nat A def
+R2881:2882 Coq.Init.Peano <> le ind
+prf 2892:2898 Nat o_proof
+R2902:2906 Coq.Relations.Relation_Definitions <> order rec
+R2910:2910 CoLoR.Coccinelle.basis.ordered_set Nat o def
+R2908:2908 CoLoR.Coccinelle.basis.ordered_set Nat A def
+R2927:2927 CoLoR.Coccinelle.basis.ordered_set Nat o def
+R2956:2964 Coq.Relations.Relation_Definitions <> reflexive def
+R2980:2989 Coq.Relations.Relation_Definitions <> transitive def
+R3021:3028 Coq.Arith.Le <> le_trans syndef
+R3021:3028 Coq.Arith.Le <> le_trans syndef
+R3055:3067 Coq.Relations.Relation_Definitions <> antisymmetric def
+prf 3099:3103 Nat o_dec
+R3122:3122 CoLoR.Coccinelle.basis.ordered_set Nat A def
+R3125:3125 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R3133:3137 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R3147:3147 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R3126:3126 CoLoR.Coccinelle.basis.ordered_set Nat o def
+R3131:3132 CoLoR.Coccinelle.basis.ordered_set <> e2 var
+R3128:3129 CoLoR.Coccinelle.basis.ordered_set <> e1 var
+R3138:3139 Coq.Init.Logic <> :type_scope:'~'_x not
+R3140:3140 CoLoR.Coccinelle.basis.ordered_set Nat o def
+R3145:3146 CoLoR.Coccinelle.basis.ordered_set <> e2 var
+R3142:3143 CoLoR.Coccinelle.basis.ordered_set <> e1 var
+R3164:3164 CoLoR.Coccinelle.basis.ordered_set Nat o def
+R3343:3345 Coq.Init.Datatypes <> nat ind
+R3361:3364 Coq.Init.Datatypes <> bool ind
+R3380:3380 CoLoR.Coccinelle.basis.ordered_set <> m var
+R3377:3377 CoLoR.Coccinelle.basis.ordered_set <> n var
+R3391:3391 Coq.Init.Datatypes <> O constr
+R3394:3394 Coq.Init.Datatypes <> O constr
+R3399:3402 Coq.Init.Datatypes <> true constr
+R3409:3409 Coq.Init.Datatypes <> S constr
+R3417:3417 Coq.Init.Datatypes <> S constr
+R3426:3432 CoLoR.Coccinelle.basis.ordered_set <> eq_bool def
+R3453:3457 Coq.Init.Datatypes <> false constr
+R3380:3380 CoLoR.Coccinelle.basis.ordered_set <> m var
+R3377:3377 CoLoR.Coccinelle.basis.ordered_set <> n var
+R3391:3391 Coq.Init.Datatypes <> O constr
+R3394:3394 Coq.Init.Datatypes <> O constr
+R3399:3402 Coq.Init.Datatypes <> true constr
+R3409:3409 Coq.Init.Datatypes <> S constr
+R3417:3417 Coq.Init.Datatypes <> S constr
+R3426:3432 CoLoR.Coccinelle.basis.ordered_set <> eq_bool def
+R3453:3457 Coq.Init.Datatypes <> false constr
+R3380:3380 CoLoR.Coccinelle.basis.ordered_set <> m var
+R3377:3377 CoLoR.Coccinelle.basis.ordered_set <> n var
+R3391:3391 Coq.Init.Datatypes <> O constr
+R3394:3394 Coq.Init.Datatypes <> O constr
+R3399:3402 Coq.Init.Datatypes <> true constr
+R3409:3409 Coq.Init.Datatypes <> S constr
+R3417:3417 Coq.Init.Datatypes <> S constr
+R3426:3432 CoLoR.Coccinelle.basis.ordered_set <> eq_bool def
+R3453:3457 Coq.Init.Datatypes <> false constr
+prf 3473:3482 Nat eq_bool_ok
+R3506:3512 CoLoR.Coccinelle.basis.ordered_set Nat eq_bool def
+R3517:3518 CoLoR.Coccinelle.basis.ordered_set <> a2 var
+R3514:3515 CoLoR.Coccinelle.basis.ordered_set <> a1 var
+R3525:3528 Coq.Init.Datatypes <> true constr
+R3535:3537 Coq.Init.Logic <> :type_scope:x_'='_x not
+R3533:3534 CoLoR.Coccinelle.basis.ordered_set <> a1 var
+R3538:3539 CoLoR.Coccinelle.basis.ordered_set <> a2 var
+R3543:3547 Coq.Init.Datatypes <> false constr
+R3552:3552 Coq.Init.Logic <> :type_scope:'~'_x not
+R3555:3557 Coq.Init.Logic <> :type_scope:x_'='_x not
+R3553:3554 CoLoR.Coccinelle.basis.ordered_set <> a1 var
+R3558:3559 CoLoR.Coccinelle.basis.ordered_set <> a2 var
+R3678:3684 CoLoR.Coccinelle.basis.ordered_set Nat eq_bool def
+R3678:3684 CoLoR.Coccinelle.basis.ordered_set Nat eq_bool def
+R3834:3836 Coq.Init.Datatypes <> nat ind
+R3852:3855 Coq.Init.Datatypes <> bool ind
+R3871:3871 CoLoR.Coccinelle.basis.ordered_set <> m var
+R3868:3868 CoLoR.Coccinelle.basis.ordered_set <> n var
+R3882:3882 Coq.Init.Datatypes <> O constr
+R3890:3893 Coq.Init.Datatypes <> true constr
+R3900:3900 Coq.Init.Datatypes <> S constr
+R3908:3908 Coq.Init.Datatypes <> S constr
+R3917:3922 CoLoR.Coccinelle.basis.ordered_set <> o_bool def
+R3935:3935 Coq.Init.Datatypes <> S constr
+R3943:3943 Coq.Init.Datatypes <> O constr
+R3948:3952 Coq.Init.Datatypes <> false constr
+R3871:3871 CoLoR.Coccinelle.basis.ordered_set <> m var
+R3868:3868 CoLoR.Coccinelle.basis.ordered_set <> n var
+R3882:3882 Coq.Init.Datatypes <> O constr
+R3890:3893 Coq.Init.Datatypes <> true constr
+R3900:3900 Coq.Init.Datatypes <> S constr
+R3908:3908 Coq.Init.Datatypes <> S constr
+R3917:3922 CoLoR.Coccinelle.basis.ordered_set <> o_bool def
+R3935:3935 Coq.Init.Datatypes <> S constr
+R3943:3943 Coq.Init.Datatypes <> O constr
+R3948:3952 Coq.Init.Datatypes <> false constr
+R3871:3871 CoLoR.Coccinelle.basis.ordered_set <> m var
+R3868:3868 CoLoR.Coccinelle.basis.ordered_set <> n var
+R3882:3882 Coq.Init.Datatypes <> O constr
+R3890:3893 Coq.Init.Datatypes <> true constr
+R3900:3900 Coq.Init.Datatypes <> S constr
+R3908:3908 Coq.Init.Datatypes <> S constr
+R3917:3922 CoLoR.Coccinelle.basis.ordered_set <> o_bool def
+R3935:3935 Coq.Init.Datatypes <> S constr
+R3943:3943 Coq.Init.Datatypes <> O constr
+R3948:3952 Coq.Init.Datatypes <> false constr
+prf 3968:3976 Nat o_bool_ok
+R4000:4005 CoLoR.Coccinelle.basis.ordered_set Nat o_bool def
+R4010:4011 CoLoR.Coccinelle.basis.ordered_set <> a2 var
+R4007:4008 CoLoR.Coccinelle.basis.ordered_set <> a1 var
+R4018:4021 Coq.Init.Datatypes <> true constr
+R4026:4026 CoLoR.Coccinelle.basis.ordered_set Nat o def
+R4031:4032 CoLoR.Coccinelle.basis.ordered_set <> a2 var
+R4028:4029 CoLoR.Coccinelle.basis.ordered_set <> a1 var
+R4036:4040 Coq.Init.Datatypes <> false constr
+R4045:4046 Coq.Init.Logic <> :type_scope:'~'_x not
+R4047:4047 CoLoR.Coccinelle.basis.ordered_set Nat o def
+R4052:4053 CoLoR.Coccinelle.basis.ordered_set <> a2 var
+R4049:4050 CoLoR.Coccinelle.basis.ordered_set <> a1 var
+R4067:4067 CoLoR.Coccinelle.basis.ordered_set Nat o def
+R4112:4115 Coq.Init.Peano <> le_n constr
+R4112:4115 Coq.Init.Peano <> le_n constr
+R4124:4129 Coq.Arith.Le <> le_O_n syndef
+R4124:4129 Coq.Arith.Le <> le_O_n syndef
+R4188:4193 CoLoR.Coccinelle.basis.ordered_set Nat o_bool def
+R4188:4193 CoLoR.Coccinelle.basis.ordered_set Nat o_bool def
+R4217:4222 Coq.Arith.Le <> le_n_S thm
+R4217:4222 Coq.Arith.Le <> le_n_S thm
+R4261:4266 Coq.Arith.Le <> le_S_n thm
+R4261:4266 Coq.Arith.Le <> le_S_n thm
+prf 4293:4299 Nat o_total
+R4318:4318 CoLoR.Coccinelle.basis.ordered_set Nat A def
+R4321:4321 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R4329:4333 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R4341:4341 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R4322:4322 CoLoR.Coccinelle.basis.ordered_set Nat o def
+R4327:4328 CoLoR.Coccinelle.basis.ordered_set <> e2 var
+R4324:4325 CoLoR.Coccinelle.basis.ordered_set <> e1 var
+R4334:4334 CoLoR.Coccinelle.basis.ordered_set Nat o def
+R4339:4340 CoLoR.Coccinelle.basis.ordered_set <> e1 var
+R4336:4337 CoLoR.Coccinelle.basis.ordered_set <> e2 var
+R4366:4366 CoLoR.Coccinelle.basis.ordered_set Nat o def
+R4377:4377 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R4384:4386 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R4393:4393 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R4380:4381 Coq.Init.Peano <> :nat_scope:x_'<='_x not
+R4389:4390 Coq.Init.Peano <> :nat_scope:x_'>='_x not
+R4377:4377 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R4384:4386 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R4393:4393 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R4380:4381 Coq.Init.Peano <> :nat_scope:x_'<='_x not
+R4389:4390 Coq.Init.Peano <> :nat_scope:x_'>='_x not
+R4403:4411 Coq.Arith.Compare_dec <> le_ge_dec def
+R4403:4411 Coq.Arith.Compare_dec <> le_ge_dec def
+R4424:4426 CoLoR.Coccinelle.basis.ordered_set Nat <> mod

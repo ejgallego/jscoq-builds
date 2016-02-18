@@ -1,0 +1,290 @@
+DIGEST fbdff9a571b076546fff9ce62cd3efd4
+FCoLoR.Term.Varyadic.VSignature
+R214:222 CoLoR.Util.Logic.LogicUtil <> <> lib
+syndef 363:370 <> variable
+R375:377 Coq.Init.Datatypes <> nat ind
+constr 563:573 <> mkSignature
+rec 543:551 <> Signature
+proj 579:584 <> symbol
+proj 597:604 <> beq_symb
+proj 636:646 <> beq_symb_ok
+R614:617 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R624:627 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R628:631 Coq.Init.Datatypes <> bool ind
+R618:623 CoLoR.Term.Varyadic.VSignature <> symbol meth
+R608:613 CoLoR.Term.Varyadic.VSignature <> symbol meth
+R681:685 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R674:676 Coq.Init.Logic <> :type_scope:x_'='_x not
+R662:669 CoLoR.Term.Varyadic.VSignature <> beq_symb meth
+R673:673 CoLoR.Term.Varyadic.VSignature <> y var
+R671:671 CoLoR.Term.Varyadic.VSignature <> x var
+R677:680 Coq.Init.Datatypes <> true constr
+R687:689 Coq.Init.Logic <> :type_scope:x_'='_x not
+R686:686 CoLoR.Term.Varyadic.VSignature <> x var
+R690:690 CoLoR.Term.Varyadic.VSignature <> y var
+R715:725 CoLoR.Term.Varyadic.VSignature <> mkSignature constr
+R765:772 CoLoR.Term.Varyadic.VSignature <> beq_symb proj
+R798:808 CoLoR.Term.Varyadic.VSignature <> beq_symb_ok proj
+R835:840 CoLoR.Util.Logic.EqUtil <> <> lib
+R888:895 CoLoR.Term.Varyadic.VSignature <> beq_symb proj
+R904:914 CoLoR.Term.Varyadic.VSignature <> beq_symb_ok proj
+def 934:944 <> eq_symb_dec
+R953:959 CoLoR.Util.Logic.EqUtil <> dec_beq thm
+R963:973 CoLoR.Term.Varyadic.VSignature <> beq_symb_ok proj
+R975:977 CoLoR.Term.Varyadic.VSignature <> Sig var
+R1001:1011 CoLoR.Term.Varyadic.VSignature <> eq_symb_dec def
+modtype 1406:1408 <> SIG
+ax 1423:1425 SIG Sig
+R1429:1437 CoLoR.Term.Varyadic.VSignature SIG Signature rec
+R1444:1446 CoLoR.Term.Varyadic.VSignature SIG <> modtype
+R1485:1497 Coq.Structures.DecidableType <> <> lib
+R1527:1529 CoLoR.Term.Varyadic.VSignature SIG <> mod
+R1535:1547 Coq.Structures.DecidableType DecidableType <> mod
+mod 1507:1513 <> DecType
+def 1563:1563 DecType t
+R1569:1574 CoLoR.Term.Varyadic.VSignature DecType symbol proj
+R1576:1578 CoLoR.Term.Varyadic.VSignature S Sig defax
+def 1594:1595 DecType eq
+R1601:1602 Coq.Init.Logic <> eq ind
+R1604:1604 CoLoR.Term.Varyadic.VSignature DecType t def
+def 1620:1626 DecType eq_refl
+R1632:1638 CoLoR.Util.Logic.EqUtil <> eq_refl inst
+R1640:1640 CoLoR.Term.Varyadic.VSignature DecType t def
+def 1656:1661 DecType eq_sym
+R1667:1672 CoLoR.Util.Logic.EqUtil <> eq_sym inst
+R1674:1674 CoLoR.Term.Varyadic.VSignature DecType t def
+def 1690:1697 DecType eq_trans
+R1703:1710 CoLoR.Util.Logic.EqUtil <> eq_trans inst
+R1712:1712 CoLoR.Term.Varyadic.VSignature DecType t def
+def 1728:1733 DecType eq_dec
+R1738:1751 CoLoR.Util.Logic.EqUtil <> dec_beq thm
+R1755:1765 CoLoR.Term.Varyadic.VSignature DecType beq_symb_ok proj
+R1767:1769 CoLoR.Term.Varyadic.VSignature S Sig defax
+R1777:1783 CoLoR.Term.Varyadic.VSignature DecType <> mod
+R1825:1832 CoLoR.Util.List.ListUtil <> <> lib
+modtype 1847:1850 <> FSIG
+ax 1865:1867 FSIG Sig
+R1871:1879 CoLoR.Term.Varyadic.VSignature FSIG Signature rec
+ax 1894:1895 FSIG Fs
+R1899:1902 Coq.Init.Datatypes <> list ind
+R1904:1906 CoLoR.Term.Varyadic.VSignature FSIG Sig defax
+ax 1921:1925 FSIG Fs_ok
+R1939:1940 Coq.Lists.List <> In def
+R1944:1945 CoLoR.Term.Varyadic.VSignature FSIG Fs defax
+R1942:1942 CoLoR.Term.Varyadic.VSignature <> f var
+R1952:1955 CoLoR.Term.Varyadic.VSignature FSIG <> modtype
+modtype 2073:2076 <> WSIG
+ax 2091:2093 WSIG Sig
+R2097:2105 CoLoR.Term.Varyadic.VSignature WSIG Signature rec
+ax 2120:2125 WSIG weight
+R2132:2135 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2136:2138 Coq.Init.Datatypes <> nat ind
+R2129:2131 CoLoR.Term.Varyadic.VSignature WSIG Sig defax
+ax 2153:2162 WSIG weight_inj
+R2197:2200 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2202:2204 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2201:2201 CoLoR.Term.Varyadic.VSignature <> f var
+R2205:2205 CoLoR.Term.Varyadic.VSignature <> g var
+R2186:2188 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2178:2183 CoLoR.Term.Varyadic.VSignature WSIG weight defax
+R2185:2185 CoLoR.Term.Varyadic.VSignature <> f var
+R2189:2194 CoLoR.Term.Varyadic.VSignature WSIG weight defax
+R2196:2196 CoLoR.Term.Varyadic.VSignature <> g var
+R2212:2215 CoLoR.Term.Varyadic.VSignature WSIG <> modtype
+R2234:2240 CoLoR.Util.Nat.NatUtil <> <> lib
+R2242:2249 CoLoR.Util.Bool.BoolUtil <> <> lib
+sec 2261:2270 <> weight_inj
+var 2285:2287 weight_inj Sig
+R2291:2299 CoLoR.Term.Varyadic.VSignature <> Signature rec
+var 2313:2314 weight_inj Fs
+R2318:2321 Coq.Init.Datatypes <> list ind
+R2323:2325 CoLoR.Term.Varyadic.VSignature <> weight_inj.Sig var
+var 2339:2343 weight_inj Fs_ok
+R2357:2358 Coq.Lists.List <> In def
+R2362:2363 CoLoR.Term.Varyadic.VSignature <> weight_inj.Fs var
+R2360:2360 CoLoR.Term.Varyadic.VSignature <> f var
+var 2377:2382 weight_inj weight
+R2389:2392 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2393:2395 Coq.Init.Datatypes <> nat ind
+R2386:2388 CoLoR.Term.Varyadic.VSignature <> weight_inj.Sig var
+def 2412:2422 <> bweight_inj
+R2431:2437 Coq.Lists.List <> forallb def
+R2531:2532 CoLoR.Term.Varyadic.VSignature <> weight_inj.Fs var
+R2449:2455 Coq.Lists.List <> forallb def
+R2527:2528 CoLoR.Term.Varyadic.VSignature <> weight_inj.Fs var
+R2473:2477 Coq.Init.Datatypes <> implb def
+R2512:2519 CoLoR.Term.Varyadic.VSignature <> beq_symb proj
+R2523:2523 CoLoR.Term.Varyadic.VSignature <> g var
+R2521:2521 CoLoR.Term.Varyadic.VSignature <> f var
+R2480:2486 CoLoR.Util.Nat.NatUtil <> beq_nat def
+R2500:2505 CoLoR.Term.Varyadic.VSignature <> weight_inj.weight var
+R2507:2507 CoLoR.Term.Varyadic.VSignature <> g var
+R2489:2494 CoLoR.Term.Varyadic.VSignature <> weight_inj.weight var
+R2496:2496 CoLoR.Term.Varyadic.VSignature <> f var
+prf 2544:2557 <> bweight_inj_ok
+R2579:2588 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R2629:2629 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R2572:2574 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2561:2571 CoLoR.Term.Varyadic.VSignature <> bweight_inj def
+R2575:2578 Coq.Init.Datatypes <> true constr
+R2620:2623 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2625:2627 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2624:2624 CoLoR.Term.Varyadic.VSignature <> f var
+R2628:2628 CoLoR.Term.Varyadic.VSignature <> g var
+R2609:2611 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2601:2606 CoLoR.Term.Varyadic.VSignature <> weight_inj.weight var
+R2608:2608 CoLoR.Term.Varyadic.VSignature <> f var
+R2612:2617 CoLoR.Term.Varyadic.VSignature <> weight_inj.weight var
+R2619:2619 CoLoR.Term.Varyadic.VSignature <> g var
+R2653:2663 CoLoR.Term.Varyadic.VSignature <> bweight_inj def
+R2672:2689 CoLoR.Util.List.ListUtil <> forallb_ok_fintype thm
+R2672:2689 CoLoR.Util.List.ListUtil <> forallb_ok_fintype thm
+R2719:2736 CoLoR.Util.List.ListUtil <> forallb_ok_fintype thm
+R2719:2736 CoLoR.Util.List.ListUtil <> forallb_ok_fintype thm
+R2763:2767 Coq.Init.Datatypes <> implb def
+R2783:2789 CoLoR.Util.Nat.NatUtil <> beq_nat def
+R2803:2808 CoLoR.Term.Varyadic.VSignature <> weight_inj.weight var
+R2792:2797 CoLoR.Term.Varyadic.VSignature <> weight_inj.weight var
+R2783:2789 CoLoR.Util.Nat.NatUtil <> beq_nat def
+R2803:2808 CoLoR.Term.Varyadic.VSignature <> weight_inj.weight var
+R2792:2797 CoLoR.Term.Varyadic.VSignature <> weight_inj.weight var
+R2827:2836 CoLoR.Util.Nat.NatUtil <> beq_nat_ok thm
+R2839:2849 CoLoR.Term.Varyadic.VSignature <> beq_symb_ok proj
+R2827:2836 CoLoR.Util.Nat.NatUtil <> beq_nat_ok thm
+R2827:2836 CoLoR.Util.Nat.NatUtil <> beq_nat_ok thm
+R2839:2849 CoLoR.Term.Varyadic.VSignature <> beq_symb_ok proj
+R2839:2849 CoLoR.Term.Varyadic.VSignature <> beq_symb_ok proj
+R2872:2877 CoLoR.Util.Logic.EqUtil <> beq_ko thm
+R2879:2888 CoLoR.Util.Nat.NatUtil <> beq_nat_ok thm
+R2872:2877 CoLoR.Util.Logic.EqUtil <> beq_ko thm
+R2879:2888 CoLoR.Util.Nat.NatUtil <> beq_nat_ok thm
+R2872:2877 CoLoR.Util.Logic.EqUtil <> beq_ko thm
+R2879:2888 CoLoR.Util.Nat.NatUtil <> beq_nat_ok thm
+R2911:2920 CoLoR.Term.Varyadic.VSignature weight_inj <> sec
+R2943:2956 CoLoR.Term.Varyadic.VSignature <> bweight_inj_ok thm
+R3009:3022 CoLoR.Term.Varyadic.VSignature <> bweight_inj_ok thm
+R3208:3218 Coq.Structures.OrderedType <> <> lib
+R3249:3252 CoLoR.Term.Varyadic.VSignature WSIG <> mod
+R3258:3268 Coq.Structures.OrderedType OrderedType <> mod
+mod 3229:3235 <> OrdType
+R3283:3289 CoLoR.Term.Varyadic.VSignature DecType <> modtype
+R3291:3291 CoLoR.Term.Varyadic.VSignature S <> modtype
+def 3309:3310 OrdType lt
+R3327:3329 Coq.Init.Peano <> :nat_scope:x_'<'_x not
+R3319:3324 CoLoR.Term.Varyadic.VSignature S weight defax
+R3326:3326 CoLoR.Term.Varyadic.VSignature <> f var
+R3330:3335 CoLoR.Term.Varyadic.VSignature S weight defax
+R3337:3337 CoLoR.Term.Varyadic.VSignature <> g var
+prf 3349:3356 OrdType lt_trans
+R3380:3383 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3390:3393 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3394:3395 CoLoR.Term.Varyadic.VSignature OrdType lt def
+R3399:3399 CoLoR.Term.Varyadic.VSignature <> z var
+R3397:3397 CoLoR.Term.Varyadic.VSignature <> x var
+R3384:3385 CoLoR.Term.Varyadic.VSignature OrdType lt def
+R3389:3389 CoLoR.Term.Varyadic.VSignature <> z var
+R3387:3387 CoLoR.Term.Varyadic.VSignature <> y var
+R3374:3375 CoLoR.Term.Varyadic.VSignature OrdType lt def
+R3379:3379 CoLoR.Term.Varyadic.VSignature <> y var
+R3377:3377 CoLoR.Term.Varyadic.VSignature <> x var
+R3419:3420 CoLoR.Term.Varyadic.VSignature OrdType lt def
+prf 3452:3460 OrdType lt_not_eq
+R3482:3485 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3487:3490 Coq.Init.Logic <> :type_scope:x_'<>'_x not
+R3486:3486 CoLoR.Term.Varyadic.VSignature <> x var
+R3491:3491 CoLoR.Term.Varyadic.VSignature <> y var
+R3476:3477 CoLoR.Term.Varyadic.VSignature OrdType lt def
+R3481:3481 CoLoR.Term.Varyadic.VSignature <> y var
+R3479:3479 CoLoR.Term.Varyadic.VSignature <> x var
+R3511:3512 CoLoR.Term.Varyadic.VSignature OrdType lt def
+def 3564:3566 OrdType blt
+R3575:3581 CoLoR.Util.Nat.NatUtil <> bgt_nat def
+R3595:3600 CoLoR.Term.Varyadic.VSignature S weight defax
+R3602:3602 CoLoR.Term.Varyadic.VSignature <> f var
+R3584:3589 CoLoR.Term.Varyadic.VSignature S weight defax
+R3591:3591 CoLoR.Term.Varyadic.VSignature <> g var
+prf 3615:3620 OrdType blt_ok
+R3650:3654 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R3643:3645 Coq.Init.Logic <> :type_scope:x_'='_x not
+R3636:3638 CoLoR.Term.Varyadic.VSignature OrdType blt def
+R3642:3642 CoLoR.Term.Varyadic.VSignature <> g var
+R3640:3640 CoLoR.Term.Varyadic.VSignature <> f var
+R3646:3649 Coq.Init.Datatypes <> true constr
+R3655:3656 CoLoR.Term.Varyadic.VSignature OrdType lt def
+R3660:3660 CoLoR.Term.Varyadic.VSignature <> g var
+R3658:3658 CoLoR.Term.Varyadic.VSignature <> f var
+R3692:3694 CoLoR.Term.Varyadic.VSignature OrdType blt def
+R3697:3698 CoLoR.Term.Varyadic.VSignature OrdType lt def
+R3707:3716 CoLoR.Util.Nat.NatUtil <> bgt_nat_ok thm
+R3707:3716 CoLoR.Util.Nat.NatUtil <> bgt_nat_ok thm
+prf 3733:3740 OrdType lt_total
+R3780:3783 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3799:3802 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3810:3812 Coq.Init.Logic <> :type_scope:x_'='_x not
+R3803:3805 CoLoR.Term.Varyadic.VSignature OrdType blt def
+R3809:3809 CoLoR.Term.Varyadic.VSignature <> f var
+R3807:3807 CoLoR.Term.Varyadic.VSignature <> g var
+R3813:3816 Coq.Init.Datatypes <> true constr
+R3791:3793 Coq.Init.Logic <> :type_scope:x_'='_x not
+R3784:3786 CoLoR.Term.Varyadic.VSignature OrdType blt def
+R3790:3790 CoLoR.Term.Varyadic.VSignature <> g var
+R3788:3788 CoLoR.Term.Varyadic.VSignature <> f var
+R3794:3798 Coq.Init.Datatypes <> false constr
+R3772:3774 Coq.Init.Logic <> :type_scope:x_'='_x not
+R3760:3767 CoLoR.Term.Varyadic.VSignature OrdType beq_symb proj
+R3771:3771 CoLoR.Term.Varyadic.VSignature <> g var
+R3769:3769 CoLoR.Term.Varyadic.VSignature <> f var
+R3775:3779 Coq.Init.Datatypes <> false constr
+R3852:3854 CoLoR.Term.Varyadic.VSignature OrdType blt def
+R3869:3878 CoLoR.Util.Nat.NatUtil <> bgt_nat_ok thm
+R3881:3890 CoLoR.Util.Nat.NatUtil <> bgt_nat_ko thm
+R3894:3899 CoLoR.Util.Logic.EqUtil <> beq_ko thm
+R3903:3913 CoLoR.Term.Varyadic.VSignature OrdType beq_symb_ok proj
+R3915:3917 CoLoR.Term.Varyadic.VSignature S Sig defax
+R3869:3878 CoLoR.Util.Nat.NatUtil <> bgt_nat_ok thm
+R3869:3878 CoLoR.Util.Nat.NatUtil <> bgt_nat_ok thm
+R3881:3890 CoLoR.Util.Nat.NatUtil <> bgt_nat_ko thm
+R3881:3890 CoLoR.Util.Nat.NatUtil <> bgt_nat_ko thm
+R3894:3899 CoLoR.Util.Logic.EqUtil <> beq_ko thm
+R3903:3913 CoLoR.Term.Varyadic.VSignature OrdType beq_symb_ok proj
+R3915:3917 CoLoR.Term.Varyadic.VSignature S Sig defax
+R3894:3899 CoLoR.Util.Logic.EqUtil <> beq_ko thm
+R3903:3913 CoLoR.Term.Varyadic.VSignature OrdType beq_symb_ok proj
+R3915:3917 CoLoR.Term.Varyadic.VSignature S Sig defax
+R3944:3953 Coq.Arith.Peano_dec <> eq_nat_dec syndef
+R3967:3972 CoLoR.Term.Varyadic.VSignature S weight defax
+R3956:3961 CoLoR.Term.Varyadic.VSignature S weight defax
+R3944:3953 Coq.Arith.Peano_dec <> eq_nat_dec syndef
+R3967:3972 CoLoR.Term.Varyadic.VSignature S weight defax
+R3956:3961 CoLoR.Term.Varyadic.VSignature S weight defax
+R3988:3997 CoLoR.Term.Varyadic.VSignature S weight_inj defax
+R3988:3997 CoLoR.Term.Varyadic.VSignature S weight_inj defax
+def 4052:4058 OrdType compare
+R4074:4080 Coq.Structures.OrderedType <> Compare ind
+R4101:4101 CoLoR.Term.Varyadic.VSignature <> y var
+R4099:4099 CoLoR.Term.Varyadic.VSignature <> x var
+R4087:4094 Coq.Init.Logic <> eq ind
+R4096:4096 CoLoR.Term.Varyadic.VSignature OrdType t def
+R4082:4083 CoLoR.Term.Varyadic.VSignature OrdType lt def
+R4139:4146 CoLoR.Term.Varyadic.VSignature OrdType beq_symb proj
+R4139:4146 CoLoR.Term.Varyadic.VSignature OrdType beq_symb proj
+R4175:4185 CoLoR.Term.Varyadic.VSignature OrdType beq_symb_ok proj
+R4175:4185 CoLoR.Term.Varyadic.VSignature OrdType beq_symb_ok proj
+R4175:4185 CoLoR.Term.Varyadic.VSignature OrdType beq_symb_ok proj
+R4200:4201 Coq.Structures.OrderedType <> EQ constr
+R4200:4201 Coq.Structures.OrderedType <> EQ constr
+R4220:4222 CoLoR.Term.Varyadic.VSignature OrdType blt def
+R4220:4222 CoLoR.Term.Varyadic.VSignature OrdType blt def
+R4252:4257 CoLoR.Term.Varyadic.VSignature OrdType blt_ok thm
+R4252:4257 CoLoR.Term.Varyadic.VSignature OrdType blt_ok thm
+R4252:4257 CoLoR.Term.Varyadic.VSignature OrdType blt_ok thm
+R4273:4274 Coq.Structures.OrderedType <> LT constr
+R4273:4274 Coq.Structures.OrderedType <> LT constr
+R4292:4293 Coq.Structures.OrderedType <> GT constr
+R4292:4293 Coq.Structures.OrderedType <> GT constr
+R4307:4312 CoLoR.Term.Varyadic.VSignature OrdType blt_ok thm
+R4307:4312 CoLoR.Term.Varyadic.VSignature OrdType blt_ok thm
+R4307:4312 CoLoR.Term.Varyadic.VSignature OrdType blt_ok thm
+R4321:4328 CoLoR.Term.Varyadic.VSignature OrdType lt_total thm
+R4321:4328 CoLoR.Term.Varyadic.VSignature OrdType lt_total thm
+R4352:4358 CoLoR.Term.Varyadic.VSignature OrdType <> mod

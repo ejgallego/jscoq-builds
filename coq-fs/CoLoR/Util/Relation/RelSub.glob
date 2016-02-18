@@ -1,0 +1,171 @@
+DIGEST ea43cc66681651189a673e61d9bae2a7
+FCoLoR.Util.Relation.RelSub
+R177:186 CoLoR.Util.List.ListShrink <> <> lib
+R188:194 CoLoR.Util.Relation.RelUtil <> <> lib
+R196:203 CoLoR.Util.List.ListUtil <> <> lib
+R205:213 CoLoR.Util.Logic.LogicUtil <> <> lib
+sec 250:259 <> On_Rel_Gen
+var 274:274 On_Rel_Gen A
+sec 295:305 On_Rel_Gen restriction
+var 324:324 On_Rel_Gen.restriction R
+var 341:341 On_Rel_Gen.restriction l
+R328:335 Coq.Relations.Relation_Definitions <> relation def
+R337:337 CoLoR.Util.Relation.RelSub <> On_Rel_Gen.A var
+R345:348 Coq.Init.Datatypes <> list ind
+R350:350 CoLoR.Util.Relation.RelSub <> On_Rel_Gen.A var
+def 370:380 <> restriction
+R395:398 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R389:390 Coq.Lists.List <> In def
+R394:394 CoLoR.Util.Relation.RelSub <> On_Rel_Gen.restriction.l var
+R392:392 CoLoR.Util.Relation.RelSub <> x var
+R405:408 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R399:400 Coq.Lists.List <> In def
+R404:404 CoLoR.Util.Relation.RelSub <> On_Rel_Gen.restriction.l var
+R402:402 CoLoR.Util.Relation.RelSub <> y var
+R409:409 CoLoR.Util.Relation.RelSub <> On_Rel_Gen.restriction.R var
+R413:413 CoLoR.Util.Relation.RelSub <> y var
+R411:411 CoLoR.Util.Relation.RelSub <> x var
+def 432:444 <> is_restricted
+R466:469 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R476:479 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R470:471 Coq.Lists.List <> In def
+R475:475 CoLoR.Util.Relation.RelSub <> On_Rel_Gen.restriction.l var
+R473:473 CoLoR.Util.Relation.RelSub <> x var
+R480:481 Coq.Lists.List <> In def
+R485:485 CoLoR.Util.Relation.RelSub <> On_Rel_Gen.restriction.l var
+R483:483 CoLoR.Util.Relation.RelSub <> y var
+R461:461 CoLoR.Util.Relation.RelSub <> On_Rel_Gen.restriction.R var
+R465:465 CoLoR.Util.Relation.RelSub <> y var
+R463:463 CoLoR.Util.Relation.RelSub <> x var
+prf 499:514 <> incl_restriction
+R529:532 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'<<'_x not
+R518:528 CoLoR.Util.Relation.RelSub <> restriction def
+R533:533 CoLoR.Util.Relation.RelSub <> On_Rel_Gen.restriction.R var
+R555:565 CoLoR.Util.Relation.RelSub <> restriction def
+prf 605:619 <> restriction_dec
+R631:634 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R644:647 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R648:654 CoLoR.Util.Relation.RelMidex <> rel_dec def
+R656:666 CoLoR.Util.Relation.RelSub <> restriction def
+R635:641 CoLoR.Util.Relation.RelMidex <> rel_dec def
+R643:643 CoLoR.Util.Relation.RelSub <> On_Rel_Gen.restriction.R var
+R623:628 CoLoR.Util.Relation.RelMidex <> eq_dec def
+R630:630 CoLoR.Util.Relation.RelSub <> On_Rel_Gen.A var
+R694:704 CoLoR.Util.Relation.RelSub <> restriction def
+R759:764 Coq.Lists.List <> In_dec syndef
+R770:770 CoLoR.Util.Relation.RelSub <> On_Rel_Gen.restriction.l var
+R759:764 Coq.Lists.List <> In_dec syndef
+R770:770 CoLoR.Util.Relation.RelSub <> On_Rel_Gen.restriction.l var
+R784:789 Coq.Lists.List <> In_dec syndef
+R795:795 CoLoR.Util.Relation.RelSub <> On_Rel_Gen.restriction.l var
+R784:789 Coq.Lists.List <> In_dec syndef
+R795:795 CoLoR.Util.Relation.RelSub <> On_Rel_Gen.restriction.l var
+prf 918:934 <> restriction_midex
+R954:957 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R969:972 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R973:981 CoLoR.Util.Relation.RelMidex <> rel_midex def
+R983:993 CoLoR.Util.Relation.RelSub <> restriction def
+R958:966 CoLoR.Util.Relation.RelMidex <> rel_midex def
+R968:968 CoLoR.Util.Relation.RelSub <> On_Rel_Gen.restriction.R var
+R944:951 CoLoR.Util.Relation.RelMidex <> eq_midex def
+R953:953 CoLoR.Util.Relation.RelSub <> On_Rel_Gen.A var
+R1021:1031 CoLoR.Util.Relation.RelSub <> restriction def
+R1081:1088 CoLoR.Util.List.ListUtil <> In_midex thm
+R1094:1094 CoLoR.Util.Relation.RelSub <> On_Rel_Gen.restriction.l var
+R1081:1088 CoLoR.Util.List.ListUtil <> In_midex thm
+R1094:1094 CoLoR.Util.Relation.RelSub <> On_Rel_Gen.restriction.l var
+R1108:1115 CoLoR.Util.List.ListUtil <> In_midex thm
+R1121:1121 CoLoR.Util.Relation.RelSub <> On_Rel_Gen.restriction.l var
+R1108:1115 CoLoR.Util.List.ListUtil <> In_midex thm
+R1121:1121 CoLoR.Util.Relation.RelSub <> On_Rel_Gen.restriction.l var
+R1240:1250 CoLoR.Util.Relation.RelSub On_Rel_Gen.restriction <> sec
+prf 1262:1282 <> restriction_monotonic
+R1303:1310 Coq.Relations.Relation_Definitions <> relation def
+R1312:1312 CoLoR.Util.Relation.RelSub <> On_Rel_Gen.A var
+R1331:1334 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1351:1354 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'<<'_x not
+R1335:1345 CoLoR.Util.Relation.RelSub <> restriction def
+R1350:1350 CoLoR.Util.Relation.RelSub <> l var
+R1347:1348 CoLoR.Util.Relation.RelSub <> R' var
+R1355:1365 CoLoR.Util.Relation.RelSub <> restriction def
+R1371:1371 CoLoR.Util.Relation.RelSub <> l var
+R1367:1369 CoLoR.Util.Relation.RelSub <> R'' var
+R1324:1327 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'<<'_x not
+R1322:1323 CoLoR.Util.Relation.RelSub <> R' var
+R1328:1330 CoLoR.Util.Relation.RelSub <> R'' var
+R1391:1401 CoLoR.Util.Relation.RelSub <> restriction def
+prf 1453:1474 <> restricted_restriction
+R1490:1502 CoLoR.Util.Relation.RelSub <> is_restricted def
+R1522:1522 CoLoR.Util.Relation.RelSub <> l var
+R1505:1515 CoLoR.Util.Relation.RelSub <> restriction def
+R1519:1519 CoLoR.Util.Relation.RelSub <> l var
+R1517:1517 CoLoR.Util.Relation.RelSub <> R var
+R1542:1552 CoLoR.Util.Relation.RelSub <> restriction def
+R1555:1567 CoLoR.Util.Relation.RelSub <> is_restricted def
+prf 1591:1611 <> restricted_clos_trans
+R1648:1651 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1652:1664 CoLoR.Util.Relation.RelSub <> is_restricted def
+R1681:1681 CoLoR.Util.Relation.RelSub <> l var
+R1667:1676 Coq.Relations.Relation_Operators <> clos_trans ind
+R1678:1678 CoLoR.Util.Relation.RelSub <> R var
+R1631:1643 CoLoR.Util.Relation.RelSub <> is_restricted def
+R1647:1647 CoLoR.Util.Relation.RelSub <> l var
+R1645:1645 CoLoR.Util.Relation.RelSub <> R var
+R1701:1713 CoLoR.Util.Relation.RelSub <> is_restricted def
+prf 1774:1799 <> clos_trans_restricted_pair
+R1848:1851 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1868:1871 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1872:1872 CoLoR.Util.Relation.RelSub <> R var
+R1876:1876 CoLoR.Util.Relation.RelSub <> y var
+R1874:1874 CoLoR.Util.Relation.RelSub <> x var
+R1852:1861 Coq.Relations.Relation_Operators <> clos_trans ind
+R1867:1867 CoLoR.Util.Relation.RelSub <> y var
+R1865:1865 CoLoR.Util.Relation.RelSub <> x var
+R1863:1863 CoLoR.Util.Relation.RelSub <> R var
+R1821:1833 CoLoR.Util.Relation.RelSub <> is_restricted def
+R1839:1840 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+R1838:1838 CoLoR.Util.Relation.RelSub <> x var
+R1842:1843 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+R1841:1841 CoLoR.Util.Relation.RelSub <> y var
+R1844:1846 Coq.Init.Datatypes <> nil constr
+R1835:1835 CoLoR.Util.Relation.RelSub <> R var
+R1935:1955 CoLoR.Util.Relation.RelSub <> restricted_clos_trans thm
+R1935:1955 CoLoR.Util.Relation.RelSub <> restricted_clos_trans thm
+prf 2098:2127 <> clos_trans_restricted_pair_bis
+R2176:2179 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2196:2199 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2200:2200 CoLoR.Util.Relation.RelSub <> R var
+R2204:2204 CoLoR.Util.Relation.RelSub <> x var
+R2202:2202 CoLoR.Util.Relation.RelSub <> y var
+R2180:2189 Coq.Relations.Relation_Operators <> clos_trans ind
+R2195:2195 CoLoR.Util.Relation.RelSub <> x var
+R2193:2193 CoLoR.Util.Relation.RelSub <> y var
+R2191:2191 CoLoR.Util.Relation.RelSub <> R var
+R2149:2161 CoLoR.Util.Relation.RelSub <> is_restricted def
+R2167:2168 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+R2166:2166 CoLoR.Util.Relation.RelSub <> x var
+R2170:2171 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+R2169:2169 CoLoR.Util.Relation.RelSub <> y var
+R2172:2174 Coq.Init.Datatypes <> nil constr
+R2163:2163 CoLoR.Util.Relation.RelSub <> R var
+R2263:2283 CoLoR.Util.Relation.RelSub <> restricted_clos_trans thm
+R2263:2283 CoLoR.Util.Relation.RelSub <> restricted_clos_trans thm
+prf 2426:2447 <> clos_trans_restriction
+R2463:2470 Coq.Relations.Relation_Definitions <> relation def
+R2472:2472 CoLoR.Util.Relation.RelSub <> On_Rel_Gen.A var
+R2489:2492 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2493:2502 Coq.Relations.Relation_Operators <> clos_trans ind
+R2538:2538 CoLoR.Util.Relation.RelSub <> y var
+R2536:2536 CoLoR.Util.Relation.RelSub <> x var
+R2505:2515 CoLoR.Util.Relation.RelSub <> restriction def
+R2521:2524 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+R2520:2520 CoLoR.Util.Relation.RelSub <> x var
+R2526:2529 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+R2525:2525 CoLoR.Util.Relation.RelSub <> y var
+R2530:2532 Coq.Init.Datatypes <> nil constr
+R2517:2517 CoLoR.Util.Relation.RelSub <> R var
+R2484:2484 CoLoR.Util.Relation.RelSub <> R var
+R2488:2488 CoLoR.Util.Relation.RelSub <> y var
+R2486:2486 CoLoR.Util.Relation.RelSub <> x var
+R2579:2589 CoLoR.Util.Relation.RelSub <> restriction def
+R2616:2625 CoLoR.Util.Relation.RelSub On_Rel_Gen <> sec

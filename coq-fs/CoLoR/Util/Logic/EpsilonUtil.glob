@@ -1,0 +1,7 @@
+DIGEST eb1515909f6e8754288ee9a8b28f29e2
+FCoLoR.Util.Logic.EpsilonUtil
+R245:260 Coq.Logic.ClassicalEpsilon <> <> lib
+R274:308 Coq.Logic.ClassicalEpsilon <> constructive_indefinite_description prfax
+R274:308 Coq.Logic.ClassicalEpsilon <> constructive_indefinite_description prfax
+syndef 329:331 <> cid
+R336:370 Coq.Logic.ClassicalEpsilon <> constructive_indefinite_description prfax

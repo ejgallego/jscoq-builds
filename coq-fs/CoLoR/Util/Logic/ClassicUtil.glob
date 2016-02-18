@@ -1,0 +1,165 @@
+DIGEST 6f5d0d9f6c6519c1be7cbc362aa00348
+FCoLoR.Util.Logic.ClassicUtil
+R200:208 Coq.Logic.Classical <> <> lib
+R226:234 CoLoR.Util.Logic.LogicUtil <> <> lib
+R236:241 Coq.Setoids.Setoid <> <> lib
+prf 354:364 <> contraposee
+R380:380 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R389:393 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R395:398 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R399:399 CoLoR.Util.Logic.ClassicUtil <> Q var
+R394:394 CoLoR.Util.Logic.ClassicUtil <> P var
+R383:386 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R387:387 Coq.Init.Logic <> :type_scope:'~'_x not
+R388:388 CoLoR.Util.Logic.ClassicUtil <> P var
+R381:381 Coq.Init.Logic <> :type_scope:'~'_x not
+R382:382 CoLoR.Util.Logic.ClassicUtil <> Q var
+R424:427 Coq.Logic.Classical_Prop <> NNPP thm
+R424:427 Coq.Logic.Classical_Prop <> NNPP thm
+prf 466:492 <> not_forall_imply_exists_not
+R511:514 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R510:510 CoLoR.Util.Logic.ClassicUtil <> A var
+R540:543 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R544:550 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R552:553 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R554:554 Coq.Init.Logic <> :type_scope:'~'_x not
+R555:555 CoLoR.Util.Logic.ClassicUtil <> P var
+R557:557 CoLoR.Util.Logic.ClassicUtil <> x var
+R524:525 Coq.Init.Logic <> :type_scope:'~'_x not
+R539:539 Coq.Init.Logic <> :type_scope:'~'_x not
+R536:536 CoLoR.Util.Logic.ClassicUtil <> P var
+R538:538 CoLoR.Util.Logic.ClassicUtil <> x var
+R584:587 Coq.Logic.Classical_Prop <> NNPP thm
+R584:587 Coq.Logic.Classical_Prop <> NNPP thm
+R620:626 Coq.Logic.Classical_Prop <> classic prfax
+R620:626 Coq.Logic.Classical_Prop <> classic prfax
+R659:665 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R667:668 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R669:670 Coq.Init.Logic <> :type_scope:'~'_x not
+R673:673 CoLoR.Util.Logic.ClassicUtil <> x var
+R659:665 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R667:668 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R669:670 Coq.Init.Logic <> :type_scope:'~'_x not
+R673:673 CoLoR.Util.Logic.ClassicUtil <> x var
+R732:758 CoLoR.Util.Logic.ClassicUtil <> not_forall_imply_exists_not thm
+prf 774:786 <> not_forall_eq
+R814:817 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R813:813 CoLoR.Util.Logic.ClassicUtil <> A var
+R843:847 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R827:828 Coq.Init.Logic <> :type_scope:'~'_x not
+R842:842 Coq.Init.Logic <> :type_scope:'~'_x not
+R839:839 CoLoR.Util.Logic.ClassicUtil <> P var
+R841:841 CoLoR.Util.Logic.ClassicUtil <> x var
+R848:854 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R856:857 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R858:858 Coq.Init.Logic <> :type_scope:'~'_x not
+R859:859 CoLoR.Util.Logic.ClassicUtil <> P var
+R861:861 CoLoR.Util.Logic.ClassicUtil <> x var
+R885:911 CoLoR.Util.Logic.ClassicUtil <> not_forall_imply_exists_not thm
+R885:911 CoLoR.Util.Logic.ClassicUtil <> not_forall_imply_exists_not thm
+R920:946 CoLoR.Util.Logic.LogicUtil <> exists_not_imply_not_forall thm
+R920:946 CoLoR.Util.Logic.LogicUtil <> exists_not_imply_not_forall thm
+prf 961:968 <> imply_eq
+R991:991 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R998:1004 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R1012:1012 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R993:996 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R997:997 CoLoR.Util.Logic.ClassicUtil <> Q var
+R992:992 CoLoR.Util.Logic.ClassicUtil <> P var
+R1007:1010 Coq.Init.Logic <> :type_scope:x_'\/'_x not
+R1005:1005 Coq.Init.Logic <> :type_scope:'~'_x not
+R1006:1006 CoLoR.Util.Logic.ClassicUtil <> P var
+R1011:1011 CoLoR.Util.Logic.ClassicUtil <> Q var
+R1047:1053 Coq.Logic.Classical_Prop <> classic prfax
+R1047:1053 Coq.Logic.Classical_Prop <> classic prfax
+prf 1134:1143 <> not_not_eq
+R1167:1171 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R1164:1164 Coq.Init.Logic <> :type_scope:'~'_x not
+R1165:1165 Coq.Init.Logic <> :type_scope:'~'_x not
+R1166:1166 CoLoR.Util.Logic.ClassicUtil <> P var
+R1172:1172 CoLoR.Util.Logic.ClassicUtil <> P var
+R1196:1199 Coq.Logic.Classical_Prop <> NNPP thm
+R1196:1199 Coq.Logic.Classical_Prop <> NNPP thm
+prf 1243:1252 <> not_and_eq
+R1284:1288 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R1275:1276 Coq.Init.Logic <> :type_scope:'~'_x not
+R1283:1283 Coq.Init.Logic <> :type_scope:'~'_x not
+R1278:1281 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R1277:1277 CoLoR.Util.Logic.ClassicUtil <> P var
+R1282:1282 CoLoR.Util.Logic.ClassicUtil <> Q var
+R1291:1294 Coq.Init.Logic <> :type_scope:x_'\/'_x not
+R1289:1289 Coq.Init.Logic <> :type_scope:'~'_x not
+R1290:1290 CoLoR.Util.Logic.ClassicUtil <> P var
+R1295:1295 Coq.Init.Logic <> :type_scope:'~'_x not
+R1296:1296 CoLoR.Util.Logic.ClassicUtil <> Q var
+R1331:1337 Coq.Logic.Classical_Prop <> classic prfax
+R1331:1337 Coq.Logic.Classical_Prop <> classic prfax
+R1366:1367 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R1366:1367 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+prf 1465:1473 <> not_or_eq
+R1505:1509 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R1496:1497 Coq.Init.Logic <> :type_scope:'~'_x not
+R1504:1504 Coq.Init.Logic <> :type_scope:'~'_x not
+R1499:1502 Coq.Init.Logic <> :type_scope:x_'\/'_x not
+R1498:1498 CoLoR.Util.Logic.ClassicUtil <> P var
+R1503:1503 CoLoR.Util.Logic.ClassicUtil <> Q var
+R1512:1515 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R1510:1510 Coq.Init.Logic <> :type_scope:'~'_x not
+R1511:1511 CoLoR.Util.Logic.ClassicUtil <> P var
+R1516:1516 Coq.Init.Logic <> :type_scope:'~'_x not
+R1517:1517 CoLoR.Util.Logic.ClassicUtil <> Q var
+R1565:1566 Coq.Init.Logic <> :type_scope:x_'\/'_x not
+R1565:1566 Coq.Init.Logic <> :type_scope:x_'\/'_x not
+R1565:1566 Coq.Init.Logic <> :type_scope:x_'\/'_x not
+prf 1641:1652 <> not_imply_eq
+R1684:1688 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R1675:1676 Coq.Init.Logic <> :type_scope:'~'_x not
+R1683:1683 Coq.Init.Logic <> :type_scope:'~'_x not
+R1678:1681 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1682:1682 CoLoR.Util.Logic.ClassicUtil <> Q var
+R1677:1677 CoLoR.Util.Logic.ClassicUtil <> P var
+R1690:1693 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R1689:1689 CoLoR.Util.Logic.ClassicUtil <> P var
+R1694:1694 Coq.Init.Logic <> :type_scope:'~'_x not
+R1695:1695 CoLoR.Util.Logic.ClassicUtil <> Q var
+R1722:1729 CoLoR.Util.Logic.ClassicUtil <> imply_eq thm
+R1722:1729 CoLoR.Util.Logic.ClassicUtil <> imply_eq thm
+R1722:1729 CoLoR.Util.Logic.ClassicUtil <> imply_eq thm
+R1740:1748 CoLoR.Util.Logic.ClassicUtil <> not_or_eq thm
+R1740:1748 CoLoR.Util.Logic.ClassicUtil <> not_or_eq thm
+R1740:1748 CoLoR.Util.Logic.ClassicUtil <> not_or_eq thm
+R1759:1768 CoLoR.Util.Logic.ClassicUtil <> not_not_eq thm
+R1759:1768 CoLoR.Util.Logic.ClassicUtil <> not_not_eq thm
+R1759:1768 CoLoR.Util.Logic.ClassicUtil <> not_not_eq thm
+R1926:1932 CoLoR.Util.Function.FunUtil <> <> lib
+sec 1944:1946 <> sig
+var 1963:1963 sig A
+var 1974:1974 sig P
+R1979:1982 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1978:1978 CoLoR.Util.Logic.ClassicUtil <> A var
+prf 1999:2004 <> sig_eq
+R2021:2023 Coq.Init.Specif <> sig ind
+R2025:2025 CoLoR.Util.Logic.ClassicUtil <> sig.P var
+R2053:2057 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R2039:2041 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2028:2036 Coq.Init.Specif <> proj1_sig def
+R2038:2038 CoLoR.Util.Logic.ClassicUtil <> x var
+R2042:2050 Coq.Init.Specif <> proj1_sig def
+R2052:2052 CoLoR.Util.Logic.ClassicUtil <> y var
+R2059:2061 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2058:2058 CoLoR.Util.Logic.ClassicUtil <> x var
+R2062:2062 CoLoR.Util.Logic.ClassicUtil <> y var
+R2156:2172 Coq.Logic.Classical_Prop <> proof_irrelevance thm
+R2156:2172 Coq.Logic.Classical_Prop <> proof_irrelevance thm
+R2156:2172 Coq.Logic.Classical_Prop <> proof_irrelevance thm
+R2197:2203 Coq.Init.Logic <> f_equal thm
+R2207:2215 Coq.Init.Specif <> proj1_sig def
+R2197:2203 Coq.Init.Logic <> f_equal thm
+R2207:2215 Coq.Init.Specif <> proj1_sig def
+prf 2249:2261 <> inj_proj1_sig
+R2265:2273 CoLoR.Util.Function.FunUtil <> injective def
+R2276:2284 Coq.Init.Specif <> proj1_sig def
+R2290:2290 CoLoR.Util.Logic.ClassicUtil <> sig.P var
+R2325:2330 CoLoR.Util.Logic.ClassicUtil <> sig_eq thm
+R2325:2330 CoLoR.Util.Logic.ClassicUtil <> sig_eq thm
+R2348:2350 CoLoR.Util.Logic.ClassicUtil sig <> sec

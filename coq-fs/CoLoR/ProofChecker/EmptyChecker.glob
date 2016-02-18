@@ -1,0 +1,30 @@
+DIGEST 6372f48e5759cc30dab2fc96df374f40
+FCoLoR.ProofChecker.EmptyChecker
+R208:215 CoLoR.Util.List.ListUtil <> <> lib
+R217:223 CoLoR.ProofChecker.Problem <> <> lib
+R225:228 CoLoR.Term.WithArity.ATrs <> <> lib
+R230:231 CoLoR.Util.Relation.SN <> <> lib
+R233:241 CoLoR.Util.Logic.LogicUtil <> <> lib
+sec 278:288 <> EmptySolver
+var 303:305 EmptySolver Sig
+R309:317 CoLoR.Term.WithArity.ASignature <> Signature rec
+def 334:349 <> is_problem_empty
+R357:363 CoLoR.ProofChecker.Problem <> Problem ind
+R365:367 CoLoR.ProofChecker.EmptyChecker <> EmptySolver.Sig var
+R383:384 CoLoR.ProofChecker.EmptyChecker <> Pb var
+R397:404 CoLoR.ProofChecker.Problem <> FullTerm constr
+R411:418 CoLoR.Util.List.ListUtil <> is_empty def
+R428:434 CoLoR.ProofChecker.Problem <> RelTerm constr
+R443:450 CoLoR.Util.List.ListUtil <> is_empty def
+R460:469 CoLoR.ProofChecker.Problem <> RelTopTerm constr
+R478:485 CoLoR.Util.List.ListUtil <> is_empty def
+prf 507:518 <> empty_solver
+R551:554 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R555:561 CoLoR.ProofChecker.Problem <> Prob_WF def
+R563:564 CoLoR.ProofChecker.EmptyChecker <> Pb var
+R544:546 Coq.Init.Logic <> :type_scope:x_'='_x not
+R525:540 CoLoR.ProofChecker.EmptyChecker <> is_problem_empty def
+R542:543 CoLoR.ProofChecker.EmptyChecker <> Pb var
+R547:550 Coq.Init.Datatypes <> true constr
+R587:593 CoLoR.ProofChecker.Problem <> Prob_WF def
+R695:705 CoLoR.ProofChecker.EmptyChecker EmptySolver <> sec

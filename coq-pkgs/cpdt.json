@@ -1,7 +1,11 @@
-[
-  {
-    "pkg_id": [ "Cpdt" ],
-    "vo_files": [ "MoreSpecif.vo", "CpdtTactics.vo", "DepList.vo" ],
-    "cma_files": []
-  }
-]
+{
+  "desc": "cpdt",
+  "deps": [ "coq-reals" ],
+  "pkgs": [
+    {
+      "pkg_id": [ "Cpdt" ],
+      "vo_files": [ "MoreSpecif.vo", "CpdtTactics.vo", "DepList.vo" ],
+      "cma_files": []
+    }
+  ]
+}

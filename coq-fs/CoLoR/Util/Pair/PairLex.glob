@@ -1,0 +1,927 @@
+DIGEST 908af0f3aecc85118f0ca0a11564271e
+FCoLoR.Util.Pair.PairLex
+R261:269 CoLoR.Util.Logic.LogicUtil <> <> lib
+R271:277 CoLoR.Util.Relation.RelUtil <> <> lib
+R279:287 CoLoR.Util.Relation.RelExtras <> <> lib
+R289:294 Coq.Setoids.Setoid <> <> lib
+R296:304 Coq.Classes.Morphisms <> <> lib
+R306:311 Coq.Program.Basics <> <> lib
+sec 323:329 <> LexPair
+var 346:346 LexPair L
+var 357:357 LexPair R
+var 380:382 LexPair eqL
+var 399:413 LexPair eqL_Equivalence
+R386:393 Coq.Relations.Relation_Definitions <> relation def
+R395:395 CoLoR.Util.Pair.PairLex <> L var
+R417:427 Coq.Classes.RelationClasses <> Equivalence class
+R429:431 CoLoR.Util.Pair.PairLex <> eqL var
+R490:497 Coq.Setoids.Setoid <> Seq_refl def
+R506:520 CoLoR.Util.Pair.PairLex <> LexPair.eqL_Equivalence var
+R502:504 CoLoR.Util.Pair.PairLex <> LexPair.eqL var
+R500:500 CoLoR.Util.Pair.PairLex <> LexPair.L var
+R547:555 Coq.Setoids.Setoid <> Seq_trans def
+R563:577 CoLoR.Util.Pair.PairLex <> LexPair.eqL_Equivalence var
+R559:561 CoLoR.Util.Pair.PairLex <> LexPair.eqL var
+R557:557 CoLoR.Util.Pair.PairLex <> LexPair.L var
+R604:610 Coq.Setoids.Setoid <> Seq_sym def
+R620:634 CoLoR.Util.Pair.PairLex <> LexPair.eqL_Equivalence var
+R616:618 CoLoR.Util.Pair.PairLex <> LexPair.eqL var
+R614:614 CoLoR.Util.Pair.PairLex <> LexPair.L var
+var 659:661 LexPair eqR
+var 678:692 LexPair eqR_Equivalence
+R665:672 Coq.Relations.Relation_Definitions <> relation def
+R674:674 CoLoR.Util.Pair.PairLex <> LexPair.R var
+R696:706 Coq.Classes.RelationClasses <> Equivalence class
+R708:710 CoLoR.Util.Pair.PairLex <> eqR var
+R769:776 Coq.Setoids.Setoid <> Seq_refl def
+R785:799 CoLoR.Util.Pair.PairLex <> LexPair.eqR_Equivalence var
+R781:783 CoLoR.Util.Pair.PairLex <> LexPair.eqR var
+R779:779 CoLoR.Util.Pair.PairLex <> LexPair.R var
+R826:834 Coq.Setoids.Setoid <> Seq_trans def
+R842:856 CoLoR.Util.Pair.PairLex <> LexPair.eqR_Equivalence var
+R838:840 CoLoR.Util.Pair.PairLex <> LexPair.eqR var
+R836:836 CoLoR.Util.Pair.PairLex <> LexPair.R var
+R883:889 Coq.Setoids.Setoid <> Seq_sym def
+R899:913 CoLoR.Util.Pair.PairLex <> LexPair.eqR_Equivalence var
+R895:897 CoLoR.Util.Pair.PairLex <> LexPair.eqR var
+R893:893 CoLoR.Util.Pair.PairLex <> LexPair.R var
+var 937:939 LexPair gtL
+R943:950 Coq.Relations.Relation_Definitions <> relation def
+R952:952 CoLoR.Util.Pair.PairLex <> LexPair.L var
+def 969:971 <> ltL
+R976:981 Coq.Relations.Relation_Operators <> transp def
+R983:985 CoLoR.Util.Pair.PairLex <> LexPair.gtL var
+var 1000:1013 LexPair gtL_eqL_compat
+R1017:1022 Coq.Classes.Morphisms <> Proper class
+R1047:1049 CoLoR.Util.Pair.PairLex <> LexPair.gtL var
+R1028:1032 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R1025:1027 CoLoR.Util.Pair.PairLex <> LexPair.eqL var
+R1036:1040 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R1033:1035 CoLoR.Util.Pair.PairLex <> LexPair.eqL var
+R1041:1044 Coq.Program.Basics <> impl def
+def 1103:1106 <> AccL
+R1111:1113 Coq.Init.Wf <> Acc ind
+R1115:1117 CoLoR.Util.Pair.PairLex <> ltL def
+inst 1144:1152 <> gtL_morph
+R1156:1161 Coq.Classes.Morphisms <> Proper class
+R1185:1187 CoLoR.Util.Pair.PairLex <> LexPair.gtL var
+R1167:1171 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R1164:1166 CoLoR.Util.Pair.PairLex <> LexPair.eqL var
+R1175:1179 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R1172:1174 CoLoR.Util.Pair.PairLex <> LexPair.eqL var
+R1180:1182 Coq.Init.Logic <> iff def
+R1235:1248 CoLoR.Util.Pair.PairLex <> LexPair.gtL_eqL_compat var
+R1235:1248 CoLoR.Util.Pair.PairLex <> LexPair.gtL_eqL_compat var
+R1235:1248 CoLoR.Util.Pair.PairLex <> LexPair.gtL_eqL_compat var
+var 1273:1275 LexPair gtR
+R1279:1286 Coq.Relations.Relation_Definitions <> relation def
+R1288:1288 CoLoR.Util.Pair.PairLex <> LexPair.R var
+def 1305:1307 <> ltR
+R1312:1317 Coq.Relations.Relation_Operators <> transp def
+R1319:1321 CoLoR.Util.Pair.PairLex <> LexPair.gtR var
+var 1336:1349 LexPair gtR_eqR_compat
+R1352:1357 Coq.Classes.Morphisms <> Proper class
+R1382:1384 CoLoR.Util.Pair.PairLex <> LexPair.gtR var
+R1363:1367 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R1360:1362 CoLoR.Util.Pair.PairLex <> LexPair.eqR var
+R1371:1375 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R1368:1370 CoLoR.Util.Pair.PairLex <> LexPair.eqR var
+R1376:1379 Coq.Program.Basics <> impl def
+def 1438:1441 <> AccR
+R1446:1448 Coq.Init.Wf <> Acc ind
+R1450:1452 CoLoR.Util.Pair.PairLex <> ltR def
+inst 1479:1487 <> gtR_morph
+R1491:1496 Coq.Classes.Morphisms <> Proper class
+R1520:1522 CoLoR.Util.Pair.PairLex <> LexPair.gtR var
+R1502:1506 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R1499:1501 CoLoR.Util.Pair.PairLex <> LexPair.eqR var
+R1510:1514 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R1507:1509 CoLoR.Util.Pair.PairLex <> LexPair.eqR var
+R1515:1517 Coq.Init.Logic <> iff def
+R1570:1583 CoLoR.Util.Pair.PairLex <> LexPair.gtR_eqR_compat var
+R1570:1583 CoLoR.Util.Pair.PairLex <> LexPair.gtR_eqR_compat var
+R1570:1583 CoLoR.Util.Pair.PairLex <> LexPair.gtR_eqR_compat var
+def 1610:1613 <> pair
+R1620:1622 Coq.Init.Datatypes <> :type_scope:x_'*'_x not
+R1619:1619 CoLoR.Util.Pair.PairLex <> LexPair.L var
+R1623:1623 CoLoR.Util.Pair.PairLex <> LexPair.R var
+def 1646:1651 <> eqPair
+R1660:1663 CoLoR.Util.Pair.PairLex <> pair def
+R1688:1691 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R1669:1671 CoLoR.Util.Pair.PairLex <> LexPair.eqL var
+R1682:1684 Coq.Init.Datatypes <> fst def
+R1686:1686 CoLoR.Util.Pair.PairLex <> y var
+R1674:1676 Coq.Init.Datatypes <> fst def
+R1678:1678 CoLoR.Util.Pair.PairLex <> x var
+R1692:1694 CoLoR.Util.Pair.PairLex <> LexPair.eqR var
+R1705:1707 Coq.Init.Datatypes <> snd def
+R1709:1709 CoLoR.Util.Pair.PairLex <> y var
+R1697:1699 Coq.Init.Datatypes <> snd def
+R1701:1701 CoLoR.Util.Pair.PairLex <> x var
+ind 1808:1817 <> LexProd_Gt
+constr 1842:1844 <> GtL
+constr 1914:1916 <> GtR
+R1821:1828 Coq.Relations.Relation_Definitions <> relation def
+R1830:1833 CoLoR.Util.Pair.PairLex <> pair def
+R2007:2016 CoLoR.Util.Pair.PairLex <> LexProd_Gt ind
+R1873:1888 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1895:1900 CoLoR.Util.Pair.PairLex LexPair ::x_'>lex'_x not
+R1889:1889 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1891:1892 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1894:1894 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1890:1890 CoLoR.Util.Pair.PairLex <> a var
+R1893:1893 CoLoR.Util.Pair.PairLex <> b var
+R1901:1901 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1904:1905 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1908:1908 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1902:1903 CoLoR.Util.Pair.PairLex <> a' var
+R1906:1907 CoLoR.Util.Pair.PairLex <> b' var
+R1865:1867 CoLoR.Util.Pair.PairLex <> LexPair.gtL var
+R1871:1872 CoLoR.Util.Pair.PairLex <> a' var
+R1869:1869 CoLoR.Util.Pair.PairLex <> a var
+R1945:1948 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1957:1960 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1967:1972 CoLoR.Util.Pair.PairLex LexPair ::x_'>lex'_x not
+R1961:1961 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1963:1964 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1966:1966 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1962:1962 CoLoR.Util.Pair.PairLex <> a var
+R1965:1965 CoLoR.Util.Pair.PairLex <> b var
+R1973:1973 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1976:1977 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1980:1980 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1974:1975 CoLoR.Util.Pair.PairLex <> a' var
+R1978:1979 CoLoR.Util.Pair.PairLex <> b' var
+R1949:1951 CoLoR.Util.Pair.PairLex <> LexPair.gtR var
+R1955:1956 CoLoR.Util.Pair.PairLex <> b' var
+R1953:1953 CoLoR.Util.Pair.PairLex <> b var
+R1937:1939 CoLoR.Util.Pair.PairLex <> LexPair.eqL var
+R1943:1944 CoLoR.Util.Pair.PairLex <> a' var
+R1941:1941 CoLoR.Util.Pair.PairLex <> a var
+R2007:2016 CoLoR.Util.Pair.PairLex <> LexProd_Gt ind
+not 1992:1992 LexPair ::x_'>lex'_x
+def 2038:2047 <> LexProd_Lt
+R2052:2057 Coq.Relations.Relation_Operators <> transp def
+R2059:2068 CoLoR.Util.Pair.PairLex <> LexProd_Gt ind
+R2098:2107 CoLoR.Util.Pair.PairLex <> LexProd_Lt def
+not 2083:2083 LexPair ::x_'<lex'_x
+def 2143:2153 <> Acc_LexProd
+R2158:2160 Coq.Init.Wf <> Acc ind
+R2162:2171 CoLoR.Util.Pair.PairLex <> LexProd_Lt def
+R2189:2194 CoLoR.Util.Pair.PairLex <> eqPair def
+inst 2281:2298 <> eqPair_Equivalence
+R2302:2312 Coq.Classes.RelationClasses <> Equivalence class
+R2314:2319 CoLoR.Util.Pair.PairLex <> eqPair def
+inst 2506:2527 <> LexProd_Gt_morph_equiv
+R2535:2540 Coq.Classes.Morphisms <> Proper class
+R2570:2579 CoLoR.Util.Pair.PairLex <> LexProd_Gt ind
+R2549:2553 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R2543:2548 CoLoR.Util.Pair.PairLex <> eqPair def
+R2560:2564 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R2554:2559 CoLoR.Util.Pair.PairLex <> eqPair def
+R2565:2567 Coq.Init.Logic <> iff def
+prf 3023:3038 <> LexProd_Gt_morph
+R3057:3060 CoLoR.Util.Pair.PairLex <> pair def
+R3075:3082 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3098:3101 CoLoR.Util.Pair.PairLex <> pair def
+R3116:3119 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3130:3133 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3136:3141 CoLoR.Util.Pair.PairLex LexPair ::x_'>lex'_x not
+R3134:3135 CoLoR.Util.Pair.PairLex <> x2 var
+R3142:3143 CoLoR.Util.Pair.PairLex <> x4 var
+R3122:3127 CoLoR.Util.Pair.PairLex LexPair ::x_'>lex'_x not
+R3120:3121 CoLoR.Util.Pair.PairLex <> x1 var
+R3128:3129 CoLoR.Util.Pair.PairLex <> x3 var
+R3104:3109 CoLoR.Util.Pair.PairLex <> eqPair def
+R3114:3115 CoLoR.Util.Pair.PairLex <> x4 var
+R3111:3112 CoLoR.Util.Pair.PairLex <> x3 var
+R3063:3068 CoLoR.Util.Pair.PairLex <> eqPair def
+R3073:3074 CoLoR.Util.Pair.PairLex <> x2 var
+R3070:3071 CoLoR.Util.Pair.PairLex <> x1 var
+R3171:3175 Coq.Init.Logic <> proj1 thm
+R3178:3199 CoLoR.Util.Pair.PairLex <> LexProd_Gt_morph_equiv inst
+R3171:3175 Coq.Init.Logic <> proj1 thm
+R3178:3199 CoLoR.Util.Pair.PairLex <> LexProd_Gt_morph_equiv inst
+inst 3231:3246 <> LexProd_Lt_morph
+R3250:3255 Coq.Classes.Morphisms <> Proper class
+R3285:3294 CoLoR.Util.Pair.PairLex <> LexProd_Lt def
+R3264:3268 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R3258:3263 CoLoR.Util.Pair.PairLex <> eqPair def
+R3275:3279 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R3269:3274 CoLoR.Util.Pair.PairLex <> eqPair def
+R3280:3282 Coq.Init.Logic <> iff def
+R3318:3327 CoLoR.Util.Pair.PairLex <> LexProd_Lt def
+R3330:3335 Coq.Relations.Relation_Operators <> transp def
+inst 3469:3485 <> Acc_LexProd_morph
+R3489:3494 Coq.Classes.Morphisms <> Proper class
+R3513:3523 CoLoR.Util.Pair.PairLex <> Acc_LexProd def
+R3503:3507 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R3497:3502 CoLoR.Util.Pair.PairLex <> eqPair def
+R3508:3510 Coq.Init.Logic <> iff def
+sec 3994:4012 LexPair LexProd_StrictOrder
+var 4029:4034 LexPair.LexProd_StrictOrder gtL_so
+R4037:4048 CoLoR.Util.Relation.RelExtras <> strict_order rec
+R4050:4052 CoLoR.Util.Pair.PairLex <> LexPair.gtL var
+R4074:4083 CoLoR.Util.Relation.RelExtras <> sord_trans proj
+R4085:4090 CoLoR.Util.Pair.PairLex <> LexPair.LexProd_StrictOrder.gtL_so var
+R4119:4129 CoLoR.Util.Relation.RelExtras <> sord_irrefl proj
+R4131:4136 CoLoR.Util.Pair.PairLex <> LexPair.LexProd_StrictOrder.gtL_so var
+R4165:4180 CoLoR.Util.Relation.RelExtras <> so_not_symmetric thm
+R4182:4187 CoLoR.Util.Pair.PairLex <> LexPair.LexProd_StrictOrder.gtL_so var
+R4216:4224 CoLoR.Util.Relation.RelExtras <> so_strict thm
+R4248:4262 CoLoR.Util.Pair.PairLex <> LexPair.eqL_Equivalence var
+R4233:4246 CoLoR.Util.Pair.PairLex <> LexPair.gtL_eqL_compat var
+R4226:4231 CoLoR.Util.Pair.PairLex <> LexPair.LexProd_StrictOrder.gtL_so var
+var 4287:4292 LexPair.LexProd_StrictOrder gtR_so
+R4295:4306 CoLoR.Util.Relation.RelExtras <> strict_order rec
+R4308:4310 CoLoR.Util.Pair.PairLex <> LexPair.gtR var
+R4332:4341 CoLoR.Util.Relation.RelExtras <> sord_trans proj
+R4343:4348 CoLoR.Util.Pair.PairLex <> LexPair.LexProd_StrictOrder.gtR_so var
+R4377:4387 CoLoR.Util.Relation.RelExtras <> sord_irrefl proj
+R4389:4394 CoLoR.Util.Pair.PairLex <> LexPair.LexProd_StrictOrder.gtR_so var
+R4423:4438 CoLoR.Util.Relation.RelExtras <> so_not_symmetric thm
+R4440:4445 CoLoR.Util.Pair.PairLex <> LexPair.LexProd_StrictOrder.gtR_so var
+R4474:4482 CoLoR.Util.Relation.RelExtras <> so_strict thm
+R4506:4520 CoLoR.Util.Pair.PairLex <> LexPair.eqR_Equivalence var
+R4491:4504 CoLoR.Util.Pair.PairLex <> LexPair.gtR_eqR_compat var
+R4484:4489 CoLoR.Util.Pair.PairLex <> LexPair.LexProd_StrictOrder.gtR_so var
+prf 4542:4557 <> lexprod_irreflex
+R4580:4583 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R4584:4588 Coq.Init.Logic <> False ind
+R4573:4578 CoLoR.Util.Pair.PairLex LexPair ::x_'>lex'_x not
+R4572:4572 CoLoR.Util.Pair.PairLex <> a var
+R4579:4579 CoLoR.Util.Pair.PairLex <> a var
+R4656:4658 CoLoR.Util.Pair.PairLex <> LexPair.gtL var
+R4656:4658 CoLoR.Util.Pair.PairLex <> LexPair.gtL var
+R4698:4700 CoLoR.Util.Pair.PairLex <> LexPair.gtR var
+R4698:4700 CoLoR.Util.Pair.PairLex <> LexPair.gtR var
+prf 4744:4756 <> lexprod_trans
+R4782:4785 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R4794:4797 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R4799:4804 CoLoR.Util.Pair.PairLex LexPair ::x_'>lex'_x not
+R4798:4798 CoLoR.Util.Pair.PairLex <> a var
+R4805:4805 CoLoR.Util.Pair.PairLex <> c var
+R4787:4792 CoLoR.Util.Pair.PairLex LexPair ::x_'>lex'_x not
+R4786:4786 CoLoR.Util.Pair.PairLex <> b var
+R4793:4793 CoLoR.Util.Pair.PairLex <> c var
+R4775:4780 CoLoR.Util.Pair.PairLex LexPair ::x_'>lex'_x not
+R4774:4774 CoLoR.Util.Pair.PairLex <> a var
+R4781:4781 CoLoR.Util.Pair.PairLex <> b var
+R5098:5100 Coq.Init.Logic <> :type_scope:x_'='_x not
+R5154:5156 Coq.Init.Logic <> :type_scope:x_'='_x not
+R5098:5100 Coq.Init.Logic <> :type_scope:x_'='_x not
+R5098:5100 Coq.Init.Logic <> :type_scope:x_'='_x not
+R5098:5100 Coq.Init.Logic <> :type_scope:x_'='_x not
+R5098:5100 Coq.Init.Logic <> :type_scope:x_'='_x not
+R5154:5156 Coq.Init.Logic <> :type_scope:x_'='_x not
+R5154:5156 Coq.Init.Logic <> :type_scope:x_'='_x not
+R5154:5156 Coq.Init.Logic <> :type_scope:x_'='_x not
+R5154:5156 Coq.Init.Logic <> :type_scope:x_'='_x not
+R5233:5242 CoLoR.Util.Relation.RelExtras <> sord_trans proj
+R5244:5249 CoLoR.Util.Pair.PairLex <> LexPair.LexProd_StrictOrder.gtL_so var
+R5233:5242 CoLoR.Util.Relation.RelExtras <> sord_trans proj
+R5244:5249 CoLoR.Util.Pair.PairLex <> LexPair.LexProd_StrictOrder.gtL_so var
+R5556:5565 CoLoR.Util.Relation.RelExtras <> sord_trans proj
+R5567:5572 CoLoR.Util.Pair.PairLex <> LexPair.LexProd_StrictOrder.gtR_so var
+R5556:5565 CoLoR.Util.Relation.RelExtras <> sord_trans proj
+R5567:5572 CoLoR.Util.Pair.PairLex <> LexPair.LexProd_StrictOrder.gtR_so var
+prf 5661:5670 <> lexprod_so
+R5674:5685 CoLoR.Util.Relation.RelExtras <> strict_order rec
+R5687:5696 CoLoR.Util.Pair.PairLex <> LexProd_Gt ind
+R5724:5741 CoLoR.Util.Relation.RelExtras <> Build_strict_order constr
+R5757:5772 CoLoR.Util.Pair.PairLex <> lexprod_irreflex thm
+R5743:5755 CoLoR.Util.Pair.PairLex <> lexprod_trans thm
+R5724:5741 CoLoR.Util.Relation.RelExtras <> Build_strict_order constr
+R5757:5772 CoLoR.Util.Pair.PairLex <> lexprod_irreflex thm
+R5743:5755 CoLoR.Util.Pair.PairLex <> lexprod_trans thm
+R5792:5810 CoLoR.Util.Pair.PairLex LexPair.LexProd_StrictOrder <> sec
+sec 6071:6089 LexPair LexProd_WellFounded
+var 6108:6113 LexPair.LexProd_WellFounded wf_ltL
+var 6136:6141 LexPair.LexProd_WellFounded wf_ltR
+R6117:6128 Coq.Init.Wf <> well_founded def
+R6130:6132 CoLoR.Util.Pair.PairLex <> ltL def
+R6145:6156 Coq.Init.Wf <> well_founded def
+R6158:6160 CoLoR.Util.Pair.PairLex <> ltR def
+prf 6175:6184 <> lexprod_wf
+R6188:6199 Coq.Init.Wf <> well_founded def
+R6201:6210 CoLoR.Util.Pair.PairLex <> LexProd_Lt def
+R6238:6249 Coq.Init.Wf <> well_founded def
+R6344:6346 CoLoR.Util.Pair.PairLex <> ltL def
+R6374:6384 CoLoR.Util.Pair.PairLex <> Acc_LexProd def
+R6386:6386 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6388:6389 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6391:6391 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6387:6387 CoLoR.Util.Pair.PairLex <> A var
+R6390:6390 CoLoR.Util.Pair.PairLex <> B var
+R6307:6322 Coq.Init.Wf <> well_founded_ind thm
+R6344:6346 CoLoR.Util.Pair.PairLex <> ltL def
+R6374:6384 CoLoR.Util.Pair.PairLex <> Acc_LexProd def
+R6386:6386 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6388:6389 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6391:6391 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6387:6387 CoLoR.Util.Pair.PairLex <> A var
+R6390:6390 CoLoR.Util.Pair.PairLex <> B var
+R6307:6322 Coq.Init.Wf <> well_founded_ind thm
+R6472:6474 CoLoR.Util.Pair.PairLex <> ltR def
+R6492:6502 CoLoR.Util.Pair.PairLex <> Acc_LexProd def
+R6504:6504 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6506:6507 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6509:6509 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6508:6508 CoLoR.Util.Pair.PairLex <> B var
+R6437:6452 Coq.Init.Wf <> well_founded_ind thm
+R6472:6474 CoLoR.Util.Pair.PairLex <> ltR def
+R6492:6502 CoLoR.Util.Pair.PairLex <> Acc_LexProd def
+R6504:6504 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6506:6507 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6509:6509 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6508:6508 CoLoR.Util.Pair.PairLex <> B var
+R6437:6452 Coq.Init.Wf <> well_founded_ind thm
+R6638:6648 CoLoR.Util.Pair.PairLex <> Acc_LexProd def
+R6638:6648 CoLoR.Util.Pair.PairLex <> Acc_LexProd def
+R6741:6746 CoLoR.Util.Pair.PairLex <> eqPair def
+R6756:6756 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6758:6758 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6761:6761 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6748:6748 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6751:6751 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6754:6754 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6741:6746 CoLoR.Util.Pair.PairLex <> eqPair def
+R6756:6756 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6758:6758 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6761:6761 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6748:6748 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6751:6751 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6754:6754 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6785:6789 Coq.Init.Logic <> proj2 thm
+R6792:6808 CoLoR.Util.Pair.PairLex <> Acc_LexProd_morph inst
+R6785:6789 Coq.Init.Logic <> proj2 thm
+R6792:6808 CoLoR.Util.Pair.PairLex <> Acc_LexProd_morph inst
+R6871:6889 CoLoR.Util.Pair.PairLex LexPair.LexProd_WellFounded <> sec
+R6897:6903 CoLoR.Util.Pair.PairLex LexPair <> sec
+R6955:6957 CoLoR.Util.Relation.RelExtras Ord <> mod
+mod 6914:6931 <> LexicographicOrder
+R6987:6995 CoLoR.Util.Relation.RelExtras OrdLemmas <> modtype
+R6997:7001 CoLoR.Util.Pair.PairLex A_ord <> modtype
+mod 6978:6982 <> LexicographicOrder.A_ext
+R7029:7037 CoLoR.Util.Relation.RelExtras OrdLemmas <> modtype
+R7039:7043 CoLoR.Util.Pair.PairLex B_ord <> modtype
+mod 7020:7024 <> LexicographicOrder.B_ext
+syndef 7100:7100 LexicographicOrder L
+R7105:7113 CoLoR.Util.Pair.PairLex A_ord.S A defax
+syndef 7127:7127 LexicographicOrder R
+R7132:7140 CoLoR.Util.Pair.PairLex B_ord.S A defax
+syndef 7154:7156 LexicographicOrder eqL
+R7161:7171 CoLoR.Util.Pair.PairLex A_ord.S eqA defax
+syndef 7185:7187 LexicographicOrder eqR
+R7192:7202 CoLoR.Util.Pair.PairLex B_ord.S eqA defax
+syndef 7216:7218 LexicographicOrder gtL
+R7223:7231 CoLoR.Util.Pair.PairLex A_ord gtA defax
+syndef 7245:7247 LexicographicOrder gtR
+R7252:7260 CoLoR.Util.Pair.PairLex B_ord gtA defax
+syndef 7274:7276 LexicographicOrder ltL
+R7281:7289 CoLoR.Util.Pair.PairLex LexicographicOrder.A_ext ltA def
+syndef 7303:7305 LexicographicOrder ltR
+R7310:7318 CoLoR.Util.Pair.PairLex LexicographicOrder.B_ext ltA def
+def 7335:7338 LexicographicOrder pair
+R7343:7346 CoLoR.Util.Pair.PairLex LexicographicOrder pair def
+R7350:7350 CoLoR.Util.Pair.PairLex LexicographicOrder R syndef
+R7348:7348 CoLoR.Util.Pair.PairLex LexicographicOrder L syndef
+def 7367:7372 LexicographicOrder eqPair
+R7381:7384 CoLoR.Util.Pair.PairLex LexicographicOrder pair def
+R7390:7395 CoLoR.Util.Pair.PairLex LexicographicOrder eqPair def
+R7407:7407 CoLoR.Util.Pair.PairLex <> y var
+R7405:7405 CoLoR.Util.Pair.PairLex <> x var
+R7401:7403 CoLoR.Util.Pair.PairLex LexicographicOrder eqR syndef
+R7397:7399 CoLoR.Util.Pair.PairLex LexicographicOrder eqL syndef
+sec 7421:7426 LexicographicOrder Eq_dec
+var 7445:7451 LexicographicOrder.Eq_dec eqA_dec
+var 7510:7516 LexicographicOrder.Eq_dec eqB_dec
+R7468:7468 CoLoR.Util.Pair.PairLex LexicographicOrder L syndef
+R7471:7471 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R7479:7483 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R7492:7492 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R7472:7474 CoLoR.Util.Pair.PairLex LexicographicOrder eqL syndef
+R7478:7478 CoLoR.Util.Pair.PairLex <> y var
+R7476:7476 CoLoR.Util.Pair.PairLex <> x var
+R7484:7484 Coq.Init.Logic <> :type_scope:'~'_x not
+R7485:7487 CoLoR.Util.Pair.PairLex LexicographicOrder eqL syndef
+R7491:7491 CoLoR.Util.Pair.PairLex <> y var
+R7489:7489 CoLoR.Util.Pair.PairLex <> x var
+R7533:7533 CoLoR.Util.Pair.PairLex LexicographicOrder R syndef
+R7536:7536 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R7544:7548 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R7557:7557 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R7537:7539 CoLoR.Util.Pair.PairLex LexicographicOrder eqR syndef
+R7543:7543 CoLoR.Util.Pair.PairLex <> y var
+R7541:7541 CoLoR.Util.Pair.PairLex <> x var
+R7549:7549 Coq.Init.Logic <> :type_scope:'~'_x not
+R7550:7552 CoLoR.Util.Pair.PairLex LexicographicOrder eqR syndef
+R7556:7556 CoLoR.Util.Pair.PairLex <> y var
+R7554:7554 CoLoR.Util.Pair.PairLex <> x var
+prf 7572:7581 LexicographicOrder eqPair_dec
+R7598:7601 CoLoR.Util.Pair.PairLex LexicographicOrder pair def
+R7604:7604 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R7615:7619 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R7631:7631 Coq.Init.Specif <> :type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R7605:7610 CoLoR.Util.Pair.PairLex LexicographicOrder eqPair def
+R7614:7614 CoLoR.Util.Pair.PairLex <> y var
+R7612:7612 CoLoR.Util.Pair.PairLex <> x var
+R7620:7620 Coq.Init.Logic <> :type_scope:'~'_x not
+R7621:7626 CoLoR.Util.Pair.PairLex LexicographicOrder eqPair def
+R7630:7630 CoLoR.Util.Pair.PairLex <> y var
+R7628:7628 CoLoR.Util.Pair.PairLex <> x var
+R7678:7684 CoLoR.Util.Pair.PairLex <> LexicographicOrder.Eq_dec.eqA_dec var
+R7695:7697 Coq.Init.Datatypes <> fst def
+R7687:7689 Coq.Init.Datatypes <> fst def
+R7678:7684 CoLoR.Util.Pair.PairLex <> LexicographicOrder.Eq_dec.eqA_dec var
+R7695:7697 Coq.Init.Datatypes <> fst def
+R7687:7689 Coq.Init.Datatypes <> fst def
+R7720:7726 CoLoR.Util.Pair.PairLex <> LexicographicOrder.Eq_dec.eqB_dec var
+R7737:7739 Coq.Init.Datatypes <> snd def
+R7729:7731 Coq.Init.Datatypes <> snd def
+R7720:7726 CoLoR.Util.Pair.PairLex <> LexicographicOrder.Eq_dec.eqB_dec var
+R7737:7739 Coq.Init.Datatypes <> snd def
+R7729:7731 Coq.Init.Datatypes <> snd def
+R7872:7877 CoLoR.Util.Pair.PairLex LexicographicOrder.Eq_dec <> sec
+def 7894:7903 LexicographicOrder LexProd_Gt
+R7912:7921 CoLoR.Util.Pair.PairLex LexicographicOrder LexProd_Gt ind
+R7937:7937 CoLoR.Util.Pair.PairLex <> y var
+R7935:7935 CoLoR.Util.Pair.PairLex <> x var
+R7931:7933 CoLoR.Util.Pair.PairLex LexicographicOrder gtR syndef
+R7927:7929 CoLoR.Util.Pair.PairLex LexicographicOrder gtL syndef
+R7923:7925 CoLoR.Util.Pair.PairLex LexicographicOrder eqL syndef
+R7967:7976 CoLoR.Util.Pair.PairLex LexicographicOrder LexProd_Gt def
+not 7952:7952 LexicographicOrder ::x_'>lex'_x
+def 8012:8021 LexicographicOrder LexProd_Lt
+R8026:8031 Coq.Relations.Relation_Operators <> transp def
+R8033:8042 CoLoR.Util.Pair.PairLex LexicographicOrder LexProd_Gt def
+R8072:8081 CoLoR.Util.Pair.PairLex LexicographicOrder LexProd_Lt def
+not 8057:8057 LexicographicOrder ::x_'<lex'_x
+def 8117:8127 LexicographicOrder Acc_LexProd
+R8132:8134 Coq.Init.Wf <> Acc ind
+R8136:8145 CoLoR.Util.Pair.PairLex LexicographicOrder LexProd_Lt def
+R8226:8231 CoLoR.Util.Pair.PairLex LexicographicOrder eqPair def
+inst 8253:8270 LexicographicOrder eqPair_Equivalence
+R8274:8284 Coq.Classes.RelationClasses <> Equivalence class
+R8286:8291 CoLoR.Util.Pair.PairLex LexicographicOrder eqPair def
+R8301:8318 CoLoR.Util.Pair.PairLex LexicographicOrder eqPair_Equivalence inst
+R8344:8366 CoLoR.Util.Pair.PairLex B_ord.S eqA_Equivalence prfax
+R8320:8342 CoLoR.Util.Pair.PairLex A_ord.S eqA_Equivalence prfax
+inst 8453:8468 LexicographicOrder LexProd_Gt_morph
+R8472:8477 Coq.Classes.Morphisms <> Proper class
+R8507:8516 CoLoR.Util.Pair.PairLex LexicographicOrder LexProd_Gt def
+R8486:8490 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R8480:8485 CoLoR.Util.Pair.PairLex LexicographicOrder eqPair def
+R8497:8501 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R8491:8496 CoLoR.Util.Pair.PairLex LexicographicOrder eqPair def
+R8502:8504 Coq.Init.Logic <> iff def
+R8617:8619 CoLoR.Util.Pair.PairLex LexicographicOrder eqR syndef
+R8587:8602 CoLoR.Util.Pair.PairLex LexicographicOrder LexProd_Gt_morph thm
+R8617:8619 CoLoR.Util.Pair.PairLex LexicographicOrder eqR syndef
+R8587:8602 CoLoR.Util.Pair.PairLex LexicographicOrder LexProd_Gt_morph thm
+R8649:8654 CoLoR.Util.Pair.PairLex LexicographicOrder eqPair def
+R8649:8654 CoLoR.Util.Pair.PairLex LexicographicOrder eqPair def
+R8675:8680 CoLoR.Util.Pair.PairLex LexicographicOrder eqPair def
+R8675:8680 CoLoR.Util.Pair.PairLex LexicographicOrder eqPair def
+R8749:8751 CoLoR.Util.Pair.PairLex LexicographicOrder eqR syndef
+R8719:8734 CoLoR.Util.Pair.PairLex LexicographicOrder LexProd_Gt_morph thm
+R8749:8751 CoLoR.Util.Pair.PairLex LexicographicOrder eqR syndef
+R8719:8734 CoLoR.Util.Pair.PairLex LexicographicOrder LexProd_Gt_morph thm
+inst 8805:8820 LexicographicOrder LexProd_Lt_morph
+R8824:8829 Coq.Classes.Morphisms <> Proper class
+R8859:8868 CoLoR.Util.Pair.PairLex LexicographicOrder LexProd_Lt def
+R8838:8842 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R8832:8837 CoLoR.Util.Pair.PairLex LexicographicOrder eqPair def
+R8849:8853 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R8843:8848 CoLoR.Util.Pair.PairLex LexicographicOrder eqPair def
+R8854:8856 Coq.Init.Logic <> iff def
+R8892:8901 CoLoR.Util.Pair.PairLex LexicographicOrder LexProd_Lt def
+R8911:8916 Coq.Relations.Relation_Operators <> transp def
+inst 9054:9070 LexicographicOrder Acc_LexProd_morph
+R9074:9079 Coq.Classes.Morphisms <> Proper class
+R9098:9108 CoLoR.Util.Pair.PairLex LexicographicOrder Acc_LexProd def
+R9088:9092 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R9082:9087 CoLoR.Util.Pair.PairLex LexicographicOrder eqPair def
+R9093:9095 Coq.Init.Logic <> iff def
+R9171:9187 CoLoR.Util.Pair.PairLex LexicographicOrder Acc_LexProd_morph inst
+R9171:9187 CoLoR.Util.Pair.PairLex LexicographicOrder Acc_LexProd_morph inst
+R9246:9265 CoLoR.Util.Pair.PairLex A_ord gtA_eqA_compat prfax
+R9246:9265 CoLoR.Util.Pair.PairLex A_ord gtA_eqA_compat prfax
+R9274:9293 CoLoR.Util.Pair.PairLex B_ord gtA_eqA_compat prfax
+R9274:9293 CoLoR.Util.Pair.PairLex B_ord gtA_eqA_compat prfax
+R9559:9563 CoLoR.Util.Relation.RelExtras Poset <> mod
+R9586:9594 CoLoR.Util.Pair.PairLex A_ord.S A defax
+R9613:9617 CoLoR.Util.Pair.PairLex A_ord <> modtype
+R9634:9638 CoLoR.Util.Relation.RelExtras Poset <> mod
+R9661:9669 CoLoR.Util.Pair.PairLex B_ord.S A defax
+R9688:9692 CoLoR.Util.Pair.PairLex B_ord <> modtype
+mod 9524:9542 <> LexicographicOrder.LexProd_StrictOrder
+prf 9753:9768 LexicographicOrder.LexProd_StrictOrder lexprod_irreflex
+R9790:9793 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R9794:9798 Coq.Init.Logic <> False ind
+R9783:9788 CoLoR.Util.Pair.PairLex LexicographicOrder ::x_'>lex'_x not
+R9782:9782 CoLoR.Util.Pair.PairLex <> a var
+R9789:9789 CoLoR.Util.Pair.PairLex <> a var
+R9828:9843 CoLoR.Util.Pair.PairLex LexicographicOrder.LexProd_StrictOrder lexprod_irreflex thm
+R9855:9863 CoLoR.Util.Pair.PairLex pB gtA_so defax
+R9845:9853 CoLoR.Util.Pair.PairLex pA gtA_so defax
+R9828:9843 CoLoR.Util.Pair.PairLex LexicographicOrder.LexProd_StrictOrder lexprod_irreflex thm
+R9855:9863 CoLoR.Util.Pair.PairLex pB gtA_so defax
+R9845:9853 CoLoR.Util.Pair.PairLex pA gtA_so defax
+prf 9885:9897 LexicographicOrder.LexProd_StrictOrder lexprod_trans
+R9923:9926 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R9935:9938 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R9940:9945 CoLoR.Util.Pair.PairLex LexicographicOrder ::x_'>lex'_x not
+R9939:9939 CoLoR.Util.Pair.PairLex <> a var
+R9946:9946 CoLoR.Util.Pair.PairLex <> c var
+R9928:9933 CoLoR.Util.Pair.PairLex LexicographicOrder ::x_'>lex'_x not
+R9927:9927 CoLoR.Util.Pair.PairLex <> b var
+R9934:9934 CoLoR.Util.Pair.PairLex <> c var
+R9916:9921 CoLoR.Util.Pair.PairLex LexicographicOrder ::x_'>lex'_x not
+R9915:9915 CoLoR.Util.Pair.PairLex <> a var
+R9922:9922 CoLoR.Util.Pair.PairLex <> b var
+R9974:9983 CoLoR.Util.Pair.PairLex LexicographicOrder.LexProd_StrictOrder LexProd_Gt def
+R10001:10013 CoLoR.Util.Pair.PairLex LexicographicOrder.LexProd_StrictOrder lexprod_trans thm
+R10001:10013 CoLoR.Util.Pair.PairLex LexicographicOrder.LexProd_StrictOrder lexprod_trans thm
+prf 10053:10062 LexicographicOrder.LexProd_StrictOrder lexprod_so
+R10066:10077 CoLoR.Util.Relation.RelExtras <> strict_order rec
+R10079:10088 CoLoR.Util.Pair.PairLex LexicographicOrder.LexProd_StrictOrder LexProd_Gt def
+R10110:10127 CoLoR.Util.Relation.RelExtras <> Build_strict_order constr
+R10143:10158 CoLoR.Util.Pair.PairLex LexicographicOrder.LexProd_StrictOrder lexprod_irreflex thm
+R10129:10141 CoLoR.Util.Pair.PairLex LexicographicOrder.LexProd_StrictOrder lexprod_trans thm
+R10110:10127 CoLoR.Util.Relation.RelExtras <> Build_strict_order constr
+R10143:10158 CoLoR.Util.Pair.PairLex LexicographicOrder.LexProd_StrictOrder lexprod_irreflex thm
+R10129:10141 CoLoR.Util.Pair.PairLex LexicographicOrder.LexProd_StrictOrder lexprod_trans thm
+R10174:10192 CoLoR.Util.Pair.PairLex LexicographicOrder.LexProd_StrictOrder <> mod
+sec 10458:10476 LexicographicOrder LexProd_WellFounded
+var 10495:10500 LexicographicOrder.LexProd_WellFounded wf_ltL
+var 10523:10528 LexicographicOrder.LexProd_WellFounded wf_ltR
+R10504:10515 Coq.Init.Wf <> well_founded def
+R10517:10519 CoLoR.Util.Pair.PairLex LexicographicOrder ltL syndef
+R10532:10543 Coq.Init.Wf <> well_founded def
+R10545:10547 CoLoR.Util.Pair.PairLex LexicographicOrder ltR syndef
+prf 10562:10571 LexicographicOrder lexprod_wf
+R10575:10586 Coq.Init.Wf <> well_founded def
+R10588:10597 CoLoR.Util.Pair.PairLex LexicographicOrder LexProd_Lt def
+R10619:10628 CoLoR.Util.Pair.PairLex LexicographicOrder lexprod_wf thm
+R10619:10628 CoLoR.Util.Pair.PairLex LexicographicOrder lexprod_wf thm
+R10660:10678 CoLoR.Util.Pair.PairLex LexicographicOrder.LexProd_WellFounded <> sec
+R10698:10700 CoLoR.Util.Relation.RelExtras Ord <> mod
+mod 10691:10693 <> LexicographicOrder.Rel
+R10720:10724 CoLoR.Util.Relation.RelExtras Eqset <> mod
+mod 10715:10715 <> LexicographicOrder.Rel.S
+def 10744:10744 LexicographicOrder.Rel.S A
+R10749:10752 CoLoR.Util.Pair.PairLex LexicographicOrder.Rel.S pair def
+def 10772:10774 LexicographicOrder.Rel.S eqA
+R10779:10784 CoLoR.Util.Pair.PairLex LexicographicOrder.Rel.S eqPair def
+def 10804:10810 LexicographicOrder.Rel.S eqA_dec
+R10815:10824 CoLoR.Util.Pair.PairLex LexicographicOrder.Rel.S eqPair_dec thm
+def 10844:10858 LexicographicOrder.Rel.S eqA_Equivalence
+R10863:10880 CoLoR.Util.Pair.PairLex LexicographicOrder.Rel.S eqPair_Equivalence inst
+R10891:10891 CoLoR.Util.Pair.PairLex LexicographicOrder.Rel.S <> mod
+def 10910:10910 LexicographicOrder.Rel A
+R10915:10918 CoLoR.Util.Pair.PairLex LexicographicOrder.Rel pair def
+def 10937:10939 LexicographicOrder.Rel gtA
+R10944:10953 CoLoR.Util.Pair.PairLex LexicographicOrder.Rel LexProd_Gt def
+inst 10970:10983 LexicographicOrder.Rel gtA_eqA_compat
+R10987:10992 Coq.Classes.Morphisms <> Proper class
+R11021:11023 CoLoR.Util.Pair.PairLex LexicographicOrder.Rel gtA def
+R11000:11004 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R10995:10999 CoLoR.Util.Pair.PairLex LexicographicOrder.Rel.S eqA def
+R11010:11014 Coq.Classes.Morphisms ProperNotations :signature_scope:x_'==>'_x not
+R11005:11009 CoLoR.Util.Pair.PairLex LexicographicOrder.Rel.S eqA def
+R11015:11018 Coq.Program.Basics <> impl def
+R11113:11115 CoLoR.Util.Pair.PairLex LexicographicOrder.Rel <> mod
+R11123:11140 CoLoR.Util.Pair.PairLex LexicographicOrder <> mod
+R11197:11199 CoLoR.Util.Relation.RelExtras Ord <> mod
+mod 11151:11174 <> LexicographicOrderTriple
+R11221:11229 Coq.Init.Notations <> <> lib
+R11231:11248 Coq.Relations.Relation_Operators <> <> lib
+R11277:11285 CoLoR.Util.Relation.RelExtras OrdLemmas <> modtype
+R11287:11291 CoLoR.Util.Pair.PairLex A_ord <> modtype
+mod 11268:11272 <> LexicographicOrderTriple.A_ext
+R11319:11327 CoLoR.Util.Relation.RelExtras OrdLemmas <> modtype
+R11329:11333 CoLoR.Util.Pair.PairLex B_ord <> modtype
+mod 11310:11314 <> LexicographicOrderTriple.B_ext
+R11361:11369 CoLoR.Util.Relation.RelExtras OrdLemmas <> modtype
+R11371:11375 CoLoR.Util.Pair.PairLex C_ord <> modtype
+mod 11352:11356 <> LexicographicOrderTriple.C_ext
+syndef 11432:11432 LexicographicOrderTriple L
+R11437:11445 CoLoR.Util.Pair.PairLex A_ord.S A defax
+syndef 11459:11459 LexicographicOrderTriple M
+R11464:11472 CoLoR.Util.Pair.PairLex B_ord.S A defax
+syndef 11486:11486 LexicographicOrderTriple R
+R11491:11499 CoLoR.Util.Pair.PairLex C_ord.S A defax
+syndef 11513:11515 LexicographicOrderTriple eqL
+R11520:11530 CoLoR.Util.Pair.PairLex A_ord.S eqA defax
+syndef 11544:11546 LexicographicOrderTriple eqM
+R11551:11561 CoLoR.Util.Pair.PairLex B_ord.S eqA defax
+syndef 11575:11577 LexicographicOrderTriple eqR
+R11582:11592 CoLoR.Util.Pair.PairLex C_ord.S eqA defax
+syndef 11606:11608 LexicographicOrderTriple gtL
+R11613:11621 CoLoR.Util.Pair.PairLex A_ord gtA defax
+syndef 11635:11637 LexicographicOrderTriple gtM
+R11642:11650 CoLoR.Util.Pair.PairLex B_ord gtA defax
+syndef 11664:11666 LexicographicOrderTriple gtR
+R11671:11679 CoLoR.Util.Pair.PairLex C_ord gtA defax
+syndef 11693:11695 LexicographicOrderTriple ltL
+R11700:11708 CoLoR.Util.Pair.PairLex LexicographicOrderTriple.A_ext ltA def
+syndef 11722:11724 LexicographicOrderTriple ltM
+R11729:11737 CoLoR.Util.Pair.PairLex LexicographicOrderTriple.B_ext ltA def
+syndef 11751:11753 LexicographicOrderTriple ltR
+R11758:11766 CoLoR.Util.Pair.PairLex LexicographicOrderTriple.C_ext ltA def
+def 11783:11788 LexicographicOrderTriple triple
+R11799:11801 Coq.Init.Datatypes <> :type_scope:x_'*'_x not
+R11795:11797 Coq.Init.Datatypes <> :type_scope:x_'*'_x not
+R11794:11794 CoLoR.Util.Pair.PairLex LexicographicOrderTriple L syndef
+R11798:11798 CoLoR.Util.Pair.PairLex LexicographicOrderTriple M syndef
+R11802:11802 CoLoR.Util.Pair.PairLex LexicographicOrderTriple R syndef
+def 11819:11822 LexicographicOrderTriple fst3
+R11829:11834 CoLoR.Util.Pair.PairLex LexicographicOrderTriple triple def
+R11839:11839 CoLoR.Util.Pair.PairLex LexicographicOrderTriple L syndef
+R11844:11846 Coq.Init.Datatypes <> fst def
+R11849:11851 Coq.Init.Datatypes <> fst def
+R11853:11853 CoLoR.Util.Pair.PairLex <> t var
+def 11870:11873 LexicographicOrderTriple snd3
+R11880:11885 CoLoR.Util.Pair.PairLex LexicographicOrderTriple triple def
+R11890:11890 CoLoR.Util.Pair.PairLex LexicographicOrderTriple M syndef
+R11895:11897 Coq.Init.Datatypes <> snd def
+R11900:11902 Coq.Init.Datatypes <> fst def
+R11904:11904 CoLoR.Util.Pair.PairLex <> t var
+def 11921:11924 LexicographicOrderTriple trd3
+R11931:11936 CoLoR.Util.Pair.PairLex LexicographicOrderTriple triple def
+R11941:11941 CoLoR.Util.Pair.PairLex LexicographicOrderTriple R syndef
+R11946:11948 Coq.Init.Datatypes <> snd def
+R11950:11950 CoLoR.Util.Pair.PairLex <> t var
+R11968:11971 CoLoR.Util.Pair.PairLex LexicographicOrderTriple fst3 def
+R11973:11976 CoLoR.Util.Pair.PairLex LexicographicOrderTriple snd3 def
+R11978:11981 CoLoR.Util.Pair.PairLex LexicographicOrderTriple trd3 def
+R12004:12021 CoLoR.Util.Pair.PairLex LexicographicOrder <> modtype
+R12023:12027 CoLoR.Util.Pair.PairLex A_ord <> modtype
+R12029:12033 CoLoR.Util.Pair.PairLex B_ord <> modtype
+mod 11994:11999 <> LexicographicOrderTriple.LR_ord
+R12053:12070 CoLoR.Util.Pair.PairLex LexicographicOrder <> modtype
+R12072:12081 CoLoR.Util.Pair.PairLex LexicographicOrderTriple.LR_ord.Rel <> modtype
+R12083:12087 CoLoR.Util.Pair.PairLex C_ord <> modtype
+mod 12045:12048 <> LexicographicOrderTriple.Lex3
+def 12104:12114 LexicographicOrderTriple LexProd3_Gt
+R12118:12125 Coq.Relations.Relation_Definitions <> relation def
+R12127:12132 CoLoR.Util.Pair.PairLex LexicographicOrderTriple triple def
+R12137:12151 CoLoR.Util.Pair.PairLex LexicographicOrderTriple.Lex3 LexProd_Gt def
+def 12167:12177 LexicographicOrderTriple LexProd3_Lt
+R12181:12188 Coq.Relations.Relation_Definitions <> relation def
+R12190:12195 CoLoR.Util.Pair.PairLex LexicographicOrderTriple triple def
+R12200:12214 CoLoR.Util.Pair.PairLex LexicographicOrderTriple.Lex3 LexProd_Lt def
+R12245:12255 CoLoR.Util.Pair.PairLex LexicographicOrderTriple LexProd3_Gt def
+not 12229:12229 LexicographicOrderTriple ::x_'>lex3'_x
+R12304:12314 CoLoR.Util.Pair.PairLex LexicographicOrderTriple LexProd3_Lt def
+not 12288:12288 LexicographicOrderTriple ::x_'<lex3'_x
+sec 12347:12362 LexicographicOrderTriple Well_foundedness
+var 12381:12384 LexicographicOrderTriple.Well_foundedness WF_L
+var 12407:12410 LexicographicOrderTriple.Well_foundedness WF_M
+var 12447:12450 LexicographicOrderTriple.Well_foundedness WF_R
+R12388:12399 Coq.Init.Wf <> well_founded def
+R12401:12403 CoLoR.Util.Pair.PairLex LexicographicOrderTriple ltL syndef
+R12414:12425 Coq.Init.Wf <> well_founded def
+R12427:12429 CoLoR.Util.Pair.PairLex LexicographicOrderTriple ltM syndef
+R12454:12465 Coq.Init.Wf <> well_founded def
+R12467:12469 CoLoR.Util.Pair.PairLex LexicographicOrderTriple ltR syndef
+prf 12484:12493 LexicographicOrderTriple lexprod_wf
+R12497:12508 Coq.Init.Wf <> well_founded def
+R12510:12520 CoLoR.Util.Pair.PairLex LexicographicOrderTriple LexProd3_Lt def
+R12547:12561 CoLoR.Util.Pair.PairLex LexicographicOrderTriple.Lex3 lexprod_wf thm
+R12547:12561 CoLoR.Util.Pair.PairLex LexicographicOrderTriple.Lex3 lexprod_wf thm
+R12579:12595 CoLoR.Util.Pair.PairLex LexicographicOrderTriple.LR_ord lexprod_wf thm
+R12579:12595 CoLoR.Util.Pair.PairLex LexicographicOrderTriple.LR_ord lexprod_wf thm
+R12623:12638 CoLoR.Util.Pair.PairLex LexicographicOrderTriple.Well_foundedness <> sec
+prf 12650:12664 LexicographicOrderTriple LexProd3_Gt_inv
+R12711:12719 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R12728:12731 Coq.Init.Logic <> :type_scope:x_'\/'_x not
+R12720:12722 CoLoR.Util.Pair.PairLex LexicographicOrderTriple gtL syndef
+R12726:12727 CoLoR.Util.Pair.PairLex <> a' var
+R12724:12724 CoLoR.Util.Pair.PairLex <> a var
+R12732:12732 Coq.Init.Logic <> :type_scope:x_'\/'_x not
+R12753:12758 Coq.Init.Logic <> :type_scope:x_'\/'_x not
+R12791:12791 Coq.Init.Logic <> :type_scope:x_'\/'_x not
+R12741:12744 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R12733:12735 CoLoR.Util.Pair.PairLex LexicographicOrderTriple eqL syndef
+R12739:12740 CoLoR.Util.Pair.PairLex <> a' var
+R12737:12737 CoLoR.Util.Pair.PairLex <> a var
+R12745:12747 CoLoR.Util.Pair.PairLex LexicographicOrderTriple gtM syndef
+R12751:12752 CoLoR.Util.Pair.PairLex <> b' var
+R12749:12749 CoLoR.Util.Pair.PairLex <> b var
+R12767:12770 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R12759:12761 CoLoR.Util.Pair.PairLex LexicographicOrderTriple eqL syndef
+R12765:12766 CoLoR.Util.Pair.PairLex <> a' var
+R12763:12763 CoLoR.Util.Pair.PairLex <> a var
+R12779:12782 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R12771:12773 CoLoR.Util.Pair.PairLex LexicographicOrderTriple eqM syndef
+R12777:12778 CoLoR.Util.Pair.PairLex <> b' var
+R12775:12775 CoLoR.Util.Pair.PairLex <> b var
+R12783:12785 CoLoR.Util.Pair.PairLex LexicographicOrderTriple gtR syndef
+R12789:12790 CoLoR.Util.Pair.PairLex <> c' var
+R12787:12787 CoLoR.Util.Pair.PairLex <> c var
+R12692:12698 CoLoR.Util.Pair.PairLex LexicographicOrderTriple ::x_'>lex3'_x not
+R12683:12683 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R12685:12686 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R12688:12689 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R12691:12691 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R12684:12684 CoLoR.Util.Pair.PairLex <> a var
+R12687:12687 CoLoR.Util.Pair.PairLex <> b var
+R12690:12690 CoLoR.Util.Pair.PairLex <> c var
+R12699:12699 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R12702:12703 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R12706:12707 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R12710:12710 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R12700:12701 CoLoR.Util.Pair.PairLex <> a' var
+R12704:12705 CoLoR.Util.Pair.PairLex <> b' var
+R12708:12709 CoLoR.Util.Pair.PairLex <> c' var
+prf 12875:12884 LexicographicOrderTriple LexProd3_1
+R12911:12914 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R12924:12930 CoLoR.Util.Pair.PairLex LexicographicOrderTriple ::x_'>lex3'_x not
+R12915:12915 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R12917:12918 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R12920:12921 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R12923:12923 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R12916:12916 CoLoR.Util.Pair.PairLex <> a var
+R12919:12919 CoLoR.Util.Pair.PairLex <> b var
+R12922:12922 CoLoR.Util.Pair.PairLex <> c var
+R12931:12931 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R12934:12935 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R12938:12939 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R12942:12942 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R12932:12933 CoLoR.Util.Pair.PairLex <> a' var
+R12936:12937 CoLoR.Util.Pair.PairLex <> b' var
+R12940:12941 CoLoR.Util.Pair.PairLex <> c' var
+R12903:12905 CoLoR.Util.Pair.PairLex LexicographicOrderTriple gtL syndef
+R12909:12910 CoLoR.Util.Pair.PairLex <> a' var
+R12907:12907 CoLoR.Util.Pair.PairLex <> a var
+prf 13020:13029 LexicographicOrderTriple LexProd3_2
+R13060:13063 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R13072:13075 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R13085:13091 CoLoR.Util.Pair.PairLex LexicographicOrderTriple ::x_'>lex3'_x not
+R13076:13076 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13078:13079 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13081:13082 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13084:13084 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13077:13077 CoLoR.Util.Pair.PairLex <> a var
+R13080:13080 CoLoR.Util.Pair.PairLex <> b var
+R13083:13083 CoLoR.Util.Pair.PairLex <> c var
+R13092:13092 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13095:13096 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13099:13100 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13103:13103 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13093:13094 CoLoR.Util.Pair.PairLex <> a' var
+R13097:13098 CoLoR.Util.Pair.PairLex <> b' var
+R13101:13102 CoLoR.Util.Pair.PairLex <> c' var
+R13064:13066 CoLoR.Util.Pair.PairLex LexicographicOrderTriple gtM syndef
+R13070:13071 CoLoR.Util.Pair.PairLex <> b' var
+R13068:13068 CoLoR.Util.Pair.PairLex <> b var
+R13052:13054 CoLoR.Util.Pair.PairLex LexicographicOrderTriple eqL syndef
+R13058:13059 CoLoR.Util.Pair.PairLex <> a' var
+R13056:13056 CoLoR.Util.Pair.PairLex <> a var
+prf 13187:13196 LexicographicOrderTriple LexProd3_3
+R13227:13230 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R13239:13242 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R13251:13254 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R13264:13270 CoLoR.Util.Pair.PairLex LexicographicOrderTriple ::x_'>lex3'_x not
+R13255:13255 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13257:13258 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13260:13261 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13263:13263 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13256:13256 CoLoR.Util.Pair.PairLex <> a var
+R13259:13259 CoLoR.Util.Pair.PairLex <> b var
+R13262:13262 CoLoR.Util.Pair.PairLex <> c var
+R13271:13271 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13274:13275 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13278:13279 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13282:13282 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13272:13273 CoLoR.Util.Pair.PairLex <> a' var
+R13276:13277 CoLoR.Util.Pair.PairLex <> b' var
+R13280:13281 CoLoR.Util.Pair.PairLex <> c' var
+R13243:13245 CoLoR.Util.Pair.PairLex LexicographicOrderTriple gtR syndef
+R13249:13250 CoLoR.Util.Pair.PairLex <> c' var
+R13247:13247 CoLoR.Util.Pair.PairLex <> c var
+R13231:13233 CoLoR.Util.Pair.PairLex LexicographicOrderTriple eqM syndef
+R13237:13238 CoLoR.Util.Pair.PairLex <> b' var
+R13235:13235 CoLoR.Util.Pair.PairLex <> b var
+R13219:13221 CoLoR.Util.Pair.PairLex LexicographicOrderTriple eqL syndef
+R13225:13226 CoLoR.Util.Pair.PairLex <> a' var
+R13223:13223 CoLoR.Util.Pair.PairLex <> a var
+prf 13371:13381 LexicographicOrderTriple LexProd3_lt
+R13432:13435 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R13448:13454 CoLoR.Util.Pair.PairLex LexicographicOrderTriple ::x_'<lex3'_x not
+R13436:13436 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13439:13440 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13443:13444 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13447:13447 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13437:13438 CoLoR.Util.Pair.PairLex <> a' var
+R13441:13442 CoLoR.Util.Pair.PairLex <> b' var
+R13445:13446 CoLoR.Util.Pair.PairLex <> c' var
+R13455:13455 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13457:13458 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13460:13461 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13463:13463 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13456:13456 CoLoR.Util.Pair.PairLex <> a var
+R13459:13459 CoLoR.Util.Pair.PairLex <> b var
+R13462:13462 CoLoR.Util.Pair.PairLex <> c var
+R13413:13419 CoLoR.Util.Pair.PairLex LexicographicOrderTriple ::x_'>lex3'_x not
+R13404:13404 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13406:13407 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13409:13410 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13412:13412 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13405:13405 CoLoR.Util.Pair.PairLex <> a var
+R13408:13408 CoLoR.Util.Pair.PairLex <> b var
+R13411:13411 CoLoR.Util.Pair.PairLex <> c var
+R13420:13420 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13423:13424 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13427:13428 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13431:13431 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13421:13422 CoLoR.Util.Pair.PairLex <> a' var
+R13425:13426 CoLoR.Util.Pair.PairLex <> b' var
+R13429:13430 CoLoR.Util.Pair.PairLex <> c' var
+prf 13494:13506 LexicographicOrderTriple LexProd3_lt_1
+R13533:13536 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R13546:13552 CoLoR.Util.Pair.PairLex LexicographicOrderTriple ::x_'<lex3'_x not
+R13537:13537 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13539:13540 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13542:13543 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13545:13545 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13538:13538 CoLoR.Util.Pair.PairLex <> a var
+R13541:13541 CoLoR.Util.Pair.PairLex <> b var
+R13544:13544 CoLoR.Util.Pair.PairLex <> c var
+R13553:13553 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13556:13557 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13560:13561 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13564:13564 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13554:13555 CoLoR.Util.Pair.PairLex <> a' var
+R13558:13559 CoLoR.Util.Pair.PairLex <> b' var
+R13562:13563 CoLoR.Util.Pair.PairLex <> c' var
+R13525:13527 CoLoR.Util.Pair.PairLex LexicographicOrderTriple gtL syndef
+R13532:13532 CoLoR.Util.Pair.PairLex <> a var
+R13529:13530 CoLoR.Util.Pair.PairLex <> a' var
+R13595:13605 CoLoR.Util.Pair.PairLex LexicographicOrderTriple LexProd3_lt thm
+R13595:13605 CoLoR.Util.Pair.PairLex LexicographicOrderTriple LexProd3_lt thm
+R13614:13623 CoLoR.Util.Pair.PairLex LexicographicOrderTriple LexProd3_1 thm
+R13614:13623 CoLoR.Util.Pair.PairLex LexicographicOrderTriple LexProd3_1 thm
+prf 13649:13661 LexicographicOrderTriple LexProd3_lt_2
+R13692:13695 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R13704:13707 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R13717:13723 CoLoR.Util.Pair.PairLex LexicographicOrderTriple ::x_'<lex3'_x not
+R13708:13708 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13710:13711 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13713:13714 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13716:13716 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13709:13709 CoLoR.Util.Pair.PairLex <> a var
+R13712:13712 CoLoR.Util.Pair.PairLex <> b var
+R13715:13715 CoLoR.Util.Pair.PairLex <> c var
+R13724:13724 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13727:13728 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13731:13732 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13735:13735 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13725:13726 CoLoR.Util.Pair.PairLex <> a' var
+R13729:13730 CoLoR.Util.Pair.PairLex <> b' var
+R13733:13734 CoLoR.Util.Pair.PairLex <> c' var
+R13696:13698 CoLoR.Util.Pair.PairLex LexicographicOrderTriple gtM syndef
+R13703:13703 CoLoR.Util.Pair.PairLex <> b var
+R13700:13701 CoLoR.Util.Pair.PairLex <> b' var
+R13684:13686 CoLoR.Util.Pair.PairLex LexicographicOrderTriple eqL syndef
+R13691:13691 CoLoR.Util.Pair.PairLex <> a var
+R13688:13689 CoLoR.Util.Pair.PairLex <> a' var
+R13772:13782 CoLoR.Util.Pair.PairLex LexicographicOrderTriple LexProd3_lt thm
+R13772:13782 CoLoR.Util.Pair.PairLex LexicographicOrderTriple LexProd3_lt thm
+R13791:13800 CoLoR.Util.Pair.PairLex LexicographicOrderTriple LexProd3_2 thm
+R13791:13800 CoLoR.Util.Pair.PairLex LexicographicOrderTriple LexProd3_2 thm
+prf 13826:13838 LexicographicOrderTriple LexProd3_lt_3
+R13869:13872 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R13881:13884 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R13893:13896 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R13906:13912 CoLoR.Util.Pair.PairLex LexicographicOrderTriple ::x_'<lex3'_x not
+R13897:13897 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13899:13900 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13902:13903 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13905:13905 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13898:13898 CoLoR.Util.Pair.PairLex <> a var
+R13901:13901 CoLoR.Util.Pair.PairLex <> b var
+R13904:13904 CoLoR.Util.Pair.PairLex <> c var
+R13913:13913 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13916:13917 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13920:13921 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13924:13924 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13914:13915 CoLoR.Util.Pair.PairLex <> a' var
+R13918:13919 CoLoR.Util.Pair.PairLex <> b' var
+R13922:13923 CoLoR.Util.Pair.PairLex <> c' var
+R13885:13887 CoLoR.Util.Pair.PairLex LexicographicOrderTriple gtR syndef
+R13892:13892 CoLoR.Util.Pair.PairLex <> c var
+R13889:13890 CoLoR.Util.Pair.PairLex <> c' var
+R13873:13875 CoLoR.Util.Pair.PairLex LexicographicOrderTriple eqM syndef
+R13880:13880 CoLoR.Util.Pair.PairLex <> b var
+R13877:13878 CoLoR.Util.Pair.PairLex <> b' var
+R13861:13863 CoLoR.Util.Pair.PairLex LexicographicOrderTriple eqL syndef
+R13868:13868 CoLoR.Util.Pair.PairLex <> a var
+R13865:13866 CoLoR.Util.Pair.PairLex <> a' var
+R13970:13980 CoLoR.Util.Pair.PairLex LexicographicOrderTriple LexProd3_lt thm
+R13970:13980 CoLoR.Util.Pair.PairLex LexicographicOrderTriple LexProd3_lt thm
+R13989:13998 CoLoR.Util.Pair.PairLex LexicographicOrderTriple LexProd3_3 thm
+R13989:13998 CoLoR.Util.Pair.PairLex LexicographicOrderTriple LexProd3_3 thm
+R14022:14045 CoLoR.Util.Pair.PairLex LexicographicOrderTriple <> mod

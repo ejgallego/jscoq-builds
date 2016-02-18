@@ -1,0 +1,295 @@
+DIGEST 3635229e8759f2643413420c7263cba5
+FCoLoR.Term.WithArity.ASignature
+R213:218 CoLoR.Util.Logic.EqUtil <> <> lib
+R220:227 CoLoR.Util.List.ListUtil <> <> lib
+R229:237 CoLoR.Util.Logic.LogicUtil <> <> lib
+syndef 378:385 <> variable
+R390:392 Coq.Init.Datatypes <> nat ind
+constr 578:588 <> mkSignature
+rec 558:566 <> Signature
+proj 594:599 <> symbol
+proj 612:616 <> arity
+proj 637:644 <> beq_symb
+proj 676:686 <> beq_symb_ok
+R626:629 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R630:632 Coq.Init.Datatypes <> nat ind
+R620:625 CoLoR.Term.WithArity.ASignature <> symbol meth
+R654:657 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R664:667 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R668:671 Coq.Init.Datatypes <> bool ind
+R658:663 CoLoR.Term.WithArity.ASignature <> symbol meth
+R648:653 CoLoR.Term.WithArity.ASignature <> symbol meth
+R721:725 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R714:716 Coq.Init.Logic <> :type_scope:x_'='_x not
+R702:709 CoLoR.Term.WithArity.ASignature <> beq_symb meth
+R713:713 CoLoR.Term.WithArity.ASignature <> y var
+R711:711 CoLoR.Term.WithArity.ASignature <> x var
+R717:720 Coq.Init.Datatypes <> true constr
+R727:729 Coq.Init.Logic <> :type_scope:x_'='_x not
+R726:726 CoLoR.Term.WithArity.ASignature <> x var
+R730:730 CoLoR.Term.WithArity.ASignature <> y var
+R755:765 CoLoR.Term.WithArity.ASignature <> mkSignature constr
+R805:809 CoLoR.Term.WithArity.ASignature <> arity proj
+R835:842 CoLoR.Term.WithArity.ASignature <> beq_symb proj
+R868:878 CoLoR.Term.WithArity.ASignature <> beq_symb_ok proj
+R934:941 CoLoR.Term.WithArity.ASignature <> beq_symb proj
+R950:960 CoLoR.Term.WithArity.ASignature <> beq_symb_ok proj
+def 980:990 <> eq_symb_dec
+R999:1005 CoLoR.Util.Logic.EqUtil <> dec_beq thm
+R1009:1019 CoLoR.Term.WithArity.ASignature <> beq_symb_ok proj
+R1021:1023 CoLoR.Term.WithArity.ASignature <> Sig var
+R1047:1057 CoLoR.Term.WithArity.ASignature <> eq_symb_dec def
+modtype 1452:1454 <> SIG
+ax 1469:1471 SIG Sig
+R1475:1483 CoLoR.Term.WithArity.ASignature SIG Signature rec
+R1490:1492 CoLoR.Term.WithArity.ASignature SIG <> modtype
+R1531:1543 Coq.Structures.DecidableType <> <> lib
+R1573:1575 CoLoR.Term.WithArity.ASignature SIG <> mod
+R1581:1593 Coq.Structures.DecidableType DecidableType <> mod
+mod 1553:1559 <> DecType
+def 1609:1609 DecType t
+R1615:1620 CoLoR.Term.WithArity.ASignature DecType symbol proj
+R1622:1624 CoLoR.Term.WithArity.ASignature S Sig defax
+def 1640:1641 DecType eq
+R1647:1648 Coq.Init.Logic <> eq ind
+R1650:1650 CoLoR.Term.WithArity.ASignature DecType t def
+def 1666:1672 DecType eq_refl
+R1678:1684 CoLoR.Util.Logic.EqUtil <> eq_refl inst
+R1686:1686 CoLoR.Term.WithArity.ASignature DecType t def
+def 1702:1707 DecType eq_sym
+R1713:1718 CoLoR.Util.Logic.EqUtil <> eq_sym inst
+R1720:1720 CoLoR.Term.WithArity.ASignature DecType t def
+def 1736:1743 DecType eq_trans
+R1749:1756 CoLoR.Util.Logic.EqUtil <> eq_trans inst
+R1758:1758 CoLoR.Term.WithArity.ASignature DecType t def
+def 1774:1779 DecType eq_dec
+R1784:1797 CoLoR.Util.Logic.EqUtil <> dec_beq thm
+R1801:1811 CoLoR.Term.WithArity.ASignature DecType beq_symb_ok proj
+R1813:1815 CoLoR.Term.WithArity.ASignature S Sig defax
+R1823:1829 CoLoR.Term.WithArity.ASignature DecType <> mod
+modtype 1868:1871 <> FSIG
+ax 1886:1888 FSIG Sig
+R1892:1900 CoLoR.Term.WithArity.ASignature FSIG Signature rec
+ax 1915:1916 FSIG Fs
+R1920:1923 Coq.Init.Datatypes <> list ind
+R1925:1927 CoLoR.Term.WithArity.ASignature FSIG Sig defax
+ax 1942:1946 FSIG Fs_ok
+R1960:1961 Coq.Lists.List <> In def
+R1965:1966 CoLoR.Term.WithArity.ASignature FSIG Fs defax
+R1963:1963 CoLoR.Term.WithArity.ASignature <> f var
+R1973:1976 CoLoR.Term.WithArity.ASignature FSIG <> modtype
+modtype 2094:2097 <> WSIG
+ax 2112:2114 WSIG Sig
+R2118:2126 CoLoR.Term.WithArity.ASignature WSIG Signature rec
+ax 2141:2146 WSIG weight
+R2153:2156 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2157:2159 Coq.Init.Datatypes <> nat ind
+R2150:2152 CoLoR.Term.WithArity.ASignature WSIG Sig defax
+ax 2174:2183 WSIG weight_inj
+R2218:2221 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2223:2225 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2222:2222 CoLoR.Term.WithArity.ASignature <> f var
+R2226:2226 CoLoR.Term.WithArity.ASignature <> g var
+R2207:2209 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2199:2204 CoLoR.Term.WithArity.ASignature WSIG weight defax
+R2206:2206 CoLoR.Term.WithArity.ASignature <> f var
+R2210:2215 CoLoR.Term.WithArity.ASignature WSIG weight defax
+R2217:2217 CoLoR.Term.WithArity.ASignature <> g var
+R2233:2236 CoLoR.Term.WithArity.ASignature WSIG <> modtype
+R2255:2261 CoLoR.Util.Nat.NatUtil <> <> lib
+R2263:2270 CoLoR.Util.Bool.BoolUtil <> <> lib
+sec 2282:2291 <> weight_inj
+var 2306:2308 weight_inj Sig
+R2312:2320 CoLoR.Term.WithArity.ASignature <> Signature rec
+var 2334:2335 weight_inj Fs
+R2339:2342 Coq.Init.Datatypes <> list ind
+R2344:2346 CoLoR.Term.WithArity.ASignature <> weight_inj.Sig var
+var 2360:2364 weight_inj Fs_ok
+R2378:2379 Coq.Lists.List <> In def
+R2383:2384 CoLoR.Term.WithArity.ASignature <> weight_inj.Fs var
+R2381:2381 CoLoR.Term.WithArity.ASignature <> f var
+var 2398:2403 weight_inj weight
+R2410:2413 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2414:2416 Coq.Init.Datatypes <> nat ind
+R2407:2409 CoLoR.Term.WithArity.ASignature <> weight_inj.Sig var
+def 2433:2443 <> bweight_inj
+R2452:2458 Coq.Lists.List <> forallb def
+R2552:2553 CoLoR.Term.WithArity.ASignature <> weight_inj.Fs var
+R2470:2476 Coq.Lists.List <> forallb def
+R2548:2549 CoLoR.Term.WithArity.ASignature <> weight_inj.Fs var
+R2494:2498 Coq.Init.Datatypes <> implb def
+R2533:2540 CoLoR.Term.WithArity.ASignature <> beq_symb proj
+R2544:2544 CoLoR.Term.WithArity.ASignature <> g var
+R2542:2542 CoLoR.Term.WithArity.ASignature <> f var
+R2501:2507 CoLoR.Util.Nat.NatUtil <> beq_nat def
+R2521:2526 CoLoR.Term.WithArity.ASignature <> weight_inj.weight var
+R2528:2528 CoLoR.Term.WithArity.ASignature <> g var
+R2510:2515 CoLoR.Term.WithArity.ASignature <> weight_inj.weight var
+R2517:2517 CoLoR.Term.WithArity.ASignature <> f var
+prf 2565:2578 <> bweight_inj_ok
+R2600:2609 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R2650:2650 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R2593:2595 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2582:2592 CoLoR.Term.WithArity.ASignature <> bweight_inj def
+R2596:2599 Coq.Init.Datatypes <> true constr
+R2641:2644 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2646:2648 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2645:2645 CoLoR.Term.WithArity.ASignature <> f var
+R2649:2649 CoLoR.Term.WithArity.ASignature <> g var
+R2630:2632 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2622:2627 CoLoR.Term.WithArity.ASignature <> weight_inj.weight var
+R2629:2629 CoLoR.Term.WithArity.ASignature <> f var
+R2633:2638 CoLoR.Term.WithArity.ASignature <> weight_inj.weight var
+R2640:2640 CoLoR.Term.WithArity.ASignature <> g var
+R2674:2684 CoLoR.Term.WithArity.ASignature <> bweight_inj def
+R2693:2710 CoLoR.Util.List.ListUtil <> forallb_ok_fintype thm
+R2693:2710 CoLoR.Util.List.ListUtil <> forallb_ok_fintype thm
+R2740:2757 CoLoR.Util.List.ListUtil <> forallb_ok_fintype thm
+R2740:2757 CoLoR.Util.List.ListUtil <> forallb_ok_fintype thm
+R2784:2788 Coq.Init.Datatypes <> implb def
+R2804:2810 CoLoR.Util.Nat.NatUtil <> beq_nat def
+R2824:2829 CoLoR.Term.WithArity.ASignature <> weight_inj.weight var
+R2813:2818 CoLoR.Term.WithArity.ASignature <> weight_inj.weight var
+R2804:2810 CoLoR.Util.Nat.NatUtil <> beq_nat def
+R2824:2829 CoLoR.Term.WithArity.ASignature <> weight_inj.weight var
+R2813:2818 CoLoR.Term.WithArity.ASignature <> weight_inj.weight var
+R2848:2857 CoLoR.Util.Nat.NatUtil <> beq_nat_ok thm
+R2860:2870 CoLoR.Term.WithArity.ASignature <> beq_symb_ok proj
+R2848:2857 CoLoR.Util.Nat.NatUtil <> beq_nat_ok thm
+R2848:2857 CoLoR.Util.Nat.NatUtil <> beq_nat_ok thm
+R2860:2870 CoLoR.Term.WithArity.ASignature <> beq_symb_ok proj
+R2860:2870 CoLoR.Term.WithArity.ASignature <> beq_symb_ok proj
+R2893:2898 CoLoR.Util.Logic.EqUtil <> beq_ko thm
+R2900:2909 CoLoR.Util.Nat.NatUtil <> beq_nat_ok thm
+R2893:2898 CoLoR.Util.Logic.EqUtil <> beq_ko thm
+R2900:2909 CoLoR.Util.Nat.NatUtil <> beq_nat_ok thm
+R2893:2898 CoLoR.Util.Logic.EqUtil <> beq_ko thm
+R2900:2909 CoLoR.Util.Nat.NatUtil <> beq_nat_ok thm
+R2932:2941 CoLoR.Term.WithArity.ASignature weight_inj <> sec
+R2964:2977 CoLoR.Term.WithArity.ASignature <> bweight_inj_ok thm
+R3034:3047 CoLoR.Term.WithArity.ASignature <> bweight_inj_ok thm
+R3231:3241 Coq.Structures.OrderedType <> <> lib
+R3272:3275 CoLoR.Term.WithArity.ASignature WSIG <> mod
+R3281:3291 Coq.Structures.OrderedType OrderedType <> mod
+mod 3252:3258 <> OrdType
+R3306:3312 CoLoR.Term.WithArity.ASignature DecType <> modtype
+R3314:3314 CoLoR.Term.WithArity.ASignature S <> modtype
+def 3332:3333 OrdType lt
+R3350:3352 Coq.Init.Peano <> :nat_scope:x_'<'_x not
+R3342:3347 CoLoR.Term.WithArity.ASignature S weight defax
+R3349:3349 CoLoR.Term.WithArity.ASignature <> f var
+R3353:3358 CoLoR.Term.WithArity.ASignature S weight defax
+R3360:3360 CoLoR.Term.WithArity.ASignature <> g var
+prf 3372:3379 OrdType lt_trans
+R3403:3406 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3413:3416 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3417:3418 CoLoR.Term.WithArity.ASignature OrdType lt def
+R3422:3422 CoLoR.Term.WithArity.ASignature <> z var
+R3420:3420 CoLoR.Term.WithArity.ASignature <> x var
+R3407:3408 CoLoR.Term.WithArity.ASignature OrdType lt def
+R3412:3412 CoLoR.Term.WithArity.ASignature <> z var
+R3410:3410 CoLoR.Term.WithArity.ASignature <> y var
+R3397:3398 CoLoR.Term.WithArity.ASignature OrdType lt def
+R3402:3402 CoLoR.Term.WithArity.ASignature <> y var
+R3400:3400 CoLoR.Term.WithArity.ASignature <> x var
+R3442:3443 CoLoR.Term.WithArity.ASignature OrdType lt def
+prf 3475:3483 OrdType lt_not_eq
+R3505:3508 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3510:3513 Coq.Init.Logic <> :type_scope:x_'<>'_x not
+R3509:3509 CoLoR.Term.WithArity.ASignature <> x var
+R3514:3514 CoLoR.Term.WithArity.ASignature <> y var
+R3499:3500 CoLoR.Term.WithArity.ASignature OrdType lt def
+R3504:3504 CoLoR.Term.WithArity.ASignature <> y var
+R3502:3502 CoLoR.Term.WithArity.ASignature <> x var
+R3534:3535 CoLoR.Term.WithArity.ASignature OrdType lt def
+def 3587:3589 OrdType blt
+R3598:3604 CoLoR.Util.Nat.NatUtil <> bgt_nat def
+R3618:3623 CoLoR.Term.WithArity.ASignature S weight defax
+R3625:3625 CoLoR.Term.WithArity.ASignature <> f var
+R3607:3612 CoLoR.Term.WithArity.ASignature S weight defax
+R3614:3614 CoLoR.Term.WithArity.ASignature <> g var
+prf 3638:3643 OrdType blt_ok
+R3673:3677 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R3666:3668 Coq.Init.Logic <> :type_scope:x_'='_x not
+R3659:3661 CoLoR.Term.WithArity.ASignature OrdType blt def
+R3665:3665 CoLoR.Term.WithArity.ASignature <> g var
+R3663:3663 CoLoR.Term.WithArity.ASignature <> f var
+R3669:3672 Coq.Init.Datatypes <> true constr
+R3678:3679 CoLoR.Term.WithArity.ASignature OrdType lt def
+R3683:3683 CoLoR.Term.WithArity.ASignature <> g var
+R3681:3681 CoLoR.Term.WithArity.ASignature <> f var
+R3715:3717 CoLoR.Term.WithArity.ASignature OrdType blt def
+R3720:3721 CoLoR.Term.WithArity.ASignature OrdType lt def
+R3730:3739 CoLoR.Util.Nat.NatUtil <> bgt_nat_ok thm
+R3730:3739 CoLoR.Util.Nat.NatUtil <> bgt_nat_ok thm
+prf 3756:3763 OrdType lt_total
+R3803:3806 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3822:3825 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3833:3835 Coq.Init.Logic <> :type_scope:x_'='_x not
+R3826:3828 CoLoR.Term.WithArity.ASignature OrdType blt def
+R3832:3832 CoLoR.Term.WithArity.ASignature <> f var
+R3830:3830 CoLoR.Term.WithArity.ASignature <> g var
+R3836:3839 Coq.Init.Datatypes <> true constr
+R3814:3816 Coq.Init.Logic <> :type_scope:x_'='_x not
+R3807:3809 CoLoR.Term.WithArity.ASignature OrdType blt def
+R3813:3813 CoLoR.Term.WithArity.ASignature <> g var
+R3811:3811 CoLoR.Term.WithArity.ASignature <> f var
+R3817:3821 Coq.Init.Datatypes <> false constr
+R3795:3797 Coq.Init.Logic <> :type_scope:x_'='_x not
+R3783:3790 CoLoR.Term.WithArity.ASignature OrdType beq_symb proj
+R3794:3794 CoLoR.Term.WithArity.ASignature <> g var
+R3792:3792 CoLoR.Term.WithArity.ASignature <> f var
+R3798:3802 Coq.Init.Datatypes <> false constr
+R3875:3877 CoLoR.Term.WithArity.ASignature OrdType blt def
+R3892:3901 CoLoR.Util.Nat.NatUtil <> bgt_nat_ok thm
+R3904:3913 CoLoR.Util.Nat.NatUtil <> bgt_nat_ko thm
+R3917:3922 CoLoR.Util.Logic.EqUtil <> beq_ko thm
+R3926:3936 CoLoR.Term.WithArity.ASignature OrdType beq_symb_ok proj
+R3938:3940 CoLoR.Term.WithArity.ASignature S Sig defax
+R3892:3901 CoLoR.Util.Nat.NatUtil <> bgt_nat_ok thm
+R3892:3901 CoLoR.Util.Nat.NatUtil <> bgt_nat_ok thm
+R3904:3913 CoLoR.Util.Nat.NatUtil <> bgt_nat_ko thm
+R3904:3913 CoLoR.Util.Nat.NatUtil <> bgt_nat_ko thm
+R3917:3922 CoLoR.Util.Logic.EqUtil <> beq_ko thm
+R3926:3936 CoLoR.Term.WithArity.ASignature OrdType beq_symb_ok proj
+R3938:3940 CoLoR.Term.WithArity.ASignature S Sig defax
+R3917:3922 CoLoR.Util.Logic.EqUtil <> beq_ko thm
+R3926:3936 CoLoR.Term.WithArity.ASignature OrdType beq_symb_ok proj
+R3938:3940 CoLoR.Term.WithArity.ASignature S Sig defax
+R3967:3976 Coq.Arith.Peano_dec <> eq_nat_dec syndef
+R3990:3995 CoLoR.Term.WithArity.ASignature S weight defax
+R3979:3984 CoLoR.Term.WithArity.ASignature S weight defax
+R3967:3976 Coq.Arith.Peano_dec <> eq_nat_dec syndef
+R3990:3995 CoLoR.Term.WithArity.ASignature S weight defax
+R3979:3984 CoLoR.Term.WithArity.ASignature S weight defax
+R4011:4020 CoLoR.Term.WithArity.ASignature S weight_inj defax
+R4011:4020 CoLoR.Term.WithArity.ASignature S weight_inj defax
+def 4075:4081 OrdType compare
+R4097:4103 Coq.Structures.OrderedType <> Compare ind
+R4124:4124 CoLoR.Term.WithArity.ASignature <> y var
+R4122:4122 CoLoR.Term.WithArity.ASignature <> x var
+R4110:4117 Coq.Init.Logic <> eq ind
+R4119:4119 CoLoR.Term.WithArity.ASignature OrdType t def
+R4105:4106 CoLoR.Term.WithArity.ASignature OrdType lt def
+R4162:4169 CoLoR.Term.WithArity.ASignature OrdType beq_symb proj
+R4162:4169 CoLoR.Term.WithArity.ASignature OrdType beq_symb proj
+R4198:4208 CoLoR.Term.WithArity.ASignature OrdType beq_symb_ok proj
+R4198:4208 CoLoR.Term.WithArity.ASignature OrdType beq_symb_ok proj
+R4198:4208 CoLoR.Term.WithArity.ASignature OrdType beq_symb_ok proj
+R4223:4224 Coq.Structures.OrderedType <> EQ constr
+R4223:4224 Coq.Structures.OrderedType <> EQ constr
+R4243:4245 CoLoR.Term.WithArity.ASignature OrdType blt def
+R4243:4245 CoLoR.Term.WithArity.ASignature OrdType blt def
+R4275:4280 CoLoR.Term.WithArity.ASignature OrdType blt_ok thm
+R4275:4280 CoLoR.Term.WithArity.ASignature OrdType blt_ok thm
+R4275:4280 CoLoR.Term.WithArity.ASignature OrdType blt_ok thm
+R4296:4297 Coq.Structures.OrderedType <> LT constr
+R4296:4297 Coq.Structures.OrderedType <> LT constr
+R4315:4316 Coq.Structures.OrderedType <> GT constr
+R4315:4316 Coq.Structures.OrderedType <> GT constr
+R4330:4335 CoLoR.Term.WithArity.ASignature OrdType blt_ok thm
+R4330:4335 CoLoR.Term.WithArity.ASignature OrdType blt_ok thm
+R4330:4335 CoLoR.Term.WithArity.ASignature OrdType blt_ok thm
+R4344:4351 CoLoR.Term.WithArity.ASignature OrdType lt_total thm
+R4344:4351 CoLoR.Term.WithArity.ASignature OrdType lt_total thm
+R4375:4381 CoLoR.Term.WithArity.ASignature OrdType <> mod

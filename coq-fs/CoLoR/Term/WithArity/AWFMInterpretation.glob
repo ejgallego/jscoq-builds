@@ -1,0 +1,244 @@
+DIGEST ddd62e23405178c8977d6fb1dedb0f8b
+FCoLoR.Term.WithArity.AWFMInterpretation
+R241:255 CoLoR.Term.WithArity.AInterpretation <> <> lib
+R273:277 CoLoR.Term.WithArity.ATerm <> <> lib
+R279:285 CoLoR.Util.Relation.RelUtil <> <> lib
+R287:299 CoLoR.Term.WithArity.ASubstitution <> <> lib
+R301:312 CoLoR.Util.Function.NaryFunction <> <> lib
+R314:321 CoLoR.Term.WithArity.AContext <> <> lib
+R323:329 CoLoR.Util.Vector.VecUtil <> <> lib
+R331:332 CoLoR.Util.Relation.SN <> <> lib
+R336:338 Coq.Arith.Max <> <> lib
+R340:348 CoLoR.Term.WithArity.ARelation <> <> lib
+R350:358 CoLoR.Util.Logic.LogicUtil <> <> lib
+R360:364 Coq.omega.Omega <> <> lib
+sec 376:376 <> S
+var 391:393 S Sig
+R397:405 CoLoR.Term.WithArity.ASignature <> Signature rec
+syndef 420:423 <> term
+R429:432 CoLoR.Term.WithArity.ATerm <> term ind
+R434:436 CoLoR.Term.WithArity.AWFMInterpretation <> S.Sig var
+syndef 449:453 <> terms
+R459:464 CoLoR.Util.Vector.VecUtil <> vector syndef
+R466:469 CoLoR.Term.WithArity.AWFMInterpretation <> term syndef
+var 485:485 S I
+R489:502 CoLoR.Term.WithArity.AInterpretation <> interpretation rec
+R504:506 CoLoR.Term.WithArity.AWFMInterpretation <> S.Sig var
+sec 520:521 S IR
+var 538:538 S.IR R
+R542:549 Coq.Relations.Relation_Definitions <> relation def
+R551:551 CoLoR.Term.WithArity.AWFMInterpretation <> S.I var
+def 570:571 <> IR
+R575:582 Coq.Relations.Relation_Definitions <> relation def
+R584:587 CoLoR.Term.WithArity.AWFMInterpretation <> term syndef
+R622:622 CoLoR.Term.WithArity.AWFMInterpretation <> S.IR.R var
+R643:650 CoLoR.Term.WithArity.AInterpretation <> term_int def
+R657:657 CoLoR.Term.WithArity.AWFMInterpretation <> u var
+R652:655 CoLoR.Term.WithArity.AWFMInterpretation <> xint var
+R625:632 CoLoR.Term.WithArity.AInterpretation <> term_int def
+R639:639 CoLoR.Term.WithArity.AWFMInterpretation <> t var
+R634:637 CoLoR.Term.WithArity.AWFMInterpretation <> xint var
+prf 771:782 <> IR_reflexive
+R797:800 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R801:809 Coq.Relations.Relation_Definitions <> reflexive def
+R811:812 CoLoR.Term.WithArity.AWFMInterpretation <> IR def
+R786:794 Coq.Relations.Relation_Definitions <> reflexive def
+R796:796 CoLoR.Term.WithArity.AWFMInterpretation <> S.IR.R var
+R847:855 Coq.Relations.Relation_Definitions <> reflexive def
+R858:859 CoLoR.Term.WithArity.AWFMInterpretation <> IR def
+prf 888:900 <> IR_transitive
+R916:919 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R920:929 Coq.Relations.Relation_Definitions <> transitive def
+R931:932 CoLoR.Term.WithArity.AWFMInterpretation <> IR def
+R904:913 Coq.Relations.Relation_Definitions <> transitive def
+R915:915 CoLoR.Term.WithArity.AWFMInterpretation <> S.IR.R var
+R967:976 Coq.Relations.Relation_Definitions <> transitive def
+R979:980 CoLoR.Term.WithArity.AWFMInterpretation <> IR def
+prf 1048:1069 <> IR_substitution_closed
+R1073:1091 CoLoR.Term.WithArity.ARelation <> substitution_closed def
+R1093:1094 CoLoR.Term.WithArity.AWFMInterpretation <> IR def
+R1122:1127 Coq.Relations.Relation_Operators <> transp def
+R1130:1148 CoLoR.Term.WithArity.ARelation <> substitution_closed def
+R1151:1152 CoLoR.Term.WithArity.AWFMInterpretation <> IR def
+R1194:1211 CoLoR.Term.WithArity.ASubstitution <> substitution_lemma thm
+R1194:1211 CoLoR.Term.WithArity.ASubstitution <> substitution_lemma thm
+R1194:1211 CoLoR.Term.WithArity.ASubstitution <> substitution_lemma thm
+R1194:1211 CoLoR.Term.WithArity.ASubstitution <> substitution_lemma thm
+R1194:1211 CoLoR.Term.WithArity.ASubstitution <> substitution_lemma thm
+R1224:1227 CoLoR.Term.WithArity.ASubstitution <> beta def
+R1224:1227 CoLoR.Term.WithArity.ASubstitution <> beta def
+def 1265:1272 <> monotone
+R1287:1296 CoLoR.Util.Function.NaryFunction <> Vmonotone1 def
+R1309:1309 CoLoR.Term.WithArity.AWFMInterpretation <> S.IR.R var
+R1299:1302 CoLoR.Term.WithArity.AInterpretation <> fint proj
+R1306:1306 CoLoR.Term.WithArity.AWFMInterpretation <> f var
+R1304:1304 CoLoR.Term.WithArity.AWFMInterpretation <> S.I var
+prf 1323:1339 <> IR_context_closed
+R1351:1354 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1355:1368 CoLoR.Term.WithArity.ARelation <> context_closed def
+R1370:1371 CoLoR.Term.WithArity.AWFMInterpretation <> IR def
+R1343:1350 CoLoR.Term.WithArity.AWFMInterpretation <> monotone def
+R1399:1404 Coq.Relations.Relation_Operators <> transp def
+R1407:1420 CoLoR.Term.WithArity.ARelation <> context_closed def
+R1423:1424 CoLoR.Term.WithArity.AWFMInterpretation <> IR def
+R1554:1562 CoLoR.Util.Vector.VecUtil <> Vmap_cast thm
+R1565:1572 CoLoR.Util.Vector.VecUtil <> Vmap_app thm
+R1554:1562 CoLoR.Util.Vector.VecUtil <> Vmap_cast thm
+R1554:1562 CoLoR.Util.Vector.VecUtil <> Vmap_cast thm
+R1565:1572 CoLoR.Util.Vector.VecUtil <> Vmap_app thm
+R1565:1572 CoLoR.Util.Vector.VecUtil <> Vmap_app thm
+R1554:1562 CoLoR.Util.Vector.VecUtil <> Vmap_cast thm
+R1554:1562 CoLoR.Util.Vector.VecUtil <> Vmap_cast thm
+R1565:1572 CoLoR.Util.Vector.VecUtil <> Vmap_app thm
+R1565:1572 CoLoR.Util.Vector.VecUtil <> Vmap_app thm
+prf 1623:1627 <> IR_WF
+R1635:1638 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1639:1640 CoLoR.Util.Relation.SN <> WF def
+R1642:1643 CoLoR.Term.WithArity.AWFMInterpretation <> IR def
+R1631:1632 CoLoR.Util.Relation.SN <> WF def
+R1634:1634 CoLoR.Term.WithArity.AWFMInterpretation <> S.IR.R var
+R1690:1692 Coq.Init.Datatypes <> nat ind
+R1697:1704 CoLoR.Term.WithArity.AInterpretation <> some_elt proj
+R1706:1706 CoLoR.Term.WithArity.AWFMInterpretation <> S.I var
+R1690:1692 Coq.Init.Datatypes <> nat ind
+R1697:1704 CoLoR.Term.WithArity.AInterpretation <> some_elt proj
+R1706:1706 CoLoR.Term.WithArity.AWFMInterpretation <> S.I var
+R1723:1729 CoLoR.Util.Relation.SN <> WF_incl inst
+R1745:1745 CoLoR.Term.WithArity.AWFMInterpretation <> S.IR.R var
+R1767:1774 CoLoR.Term.WithArity.AInterpretation <> term_int def
+R1781:1782 CoLoR.Term.WithArity.AWFMInterpretation <> t2 var
+R1748:1755 CoLoR.Term.WithArity.AInterpretation <> term_int def
+R1762:1763 CoLoR.Term.WithArity.AWFMInterpretation <> t1 var
+R1723:1729 CoLoR.Util.Relation.SN <> WF_incl inst
+R1745:1745 CoLoR.Term.WithArity.AWFMInterpretation <> S.IR.R var
+R1767:1774 CoLoR.Term.WithArity.AInterpretation <> term_int def
+R1781:1782 CoLoR.Term.WithArity.AWFMInterpretation <> t2 var
+R1748:1755 CoLoR.Term.WithArity.AInterpretation <> term_int def
+R1762:1763 CoLoR.Term.WithArity.AWFMInterpretation <> t1 var
+R1801:1811 Coq.Program.Basics <> flip def
+R1814:1822 Coq.Relations.Relation_Definitions <> inclusion def
+R1838:1847 CoLoR.Util.Relation.SN <> WF_inverse thm
+R1850:1857 CoLoR.Term.WithArity.AInterpretation <> term_int def
+R1838:1847 CoLoR.Util.Relation.SN <> WF_inverse thm
+R1850:1857 CoLoR.Term.WithArity.AInterpretation <> term_int def
+prf 1889:1909 <> IR_reduction_ordering
+R1921:1924 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1929:1932 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1933:1950 CoLoR.Term.WithArity.ARelation <> reduction_ordering def
+R1952:1953 CoLoR.Term.WithArity.AWFMInterpretation <> IR def
+R1925:1926 CoLoR.Util.Relation.SN <> WF def
+R1928:1928 CoLoR.Term.WithArity.AWFMInterpretation <> S.IR.R var
+R1913:1920 CoLoR.Term.WithArity.AWFMInterpretation <> monotone def
+R1987:1991 CoLoR.Term.WithArity.AWFMInterpretation <> IR_WF thm
+R1987:1991 CoLoR.Term.WithArity.AWFMInterpretation <> IR_WF thm
+R2017:2038 CoLoR.Term.WithArity.AWFMInterpretation <> IR_substitution_closed thm
+R2017:2038 CoLoR.Term.WithArity.AWFMInterpretation <> IR_substitution_closed thm
+R2053:2069 CoLoR.Term.WithArity.AWFMInterpretation <> IR_context_closed thm
+R2053:2069 CoLoR.Term.WithArity.AWFMInterpretation <> IR_context_closed thm
+def 2210:2212 <> IR'
+R2216:2223 Coq.Relations.Relation_Definitions <> relation def
+R2225:2228 CoLoR.Term.WithArity.AWFMInterpretation <> term syndef
+R2260:2262 Coq.Init.Peano <> :nat_scope:x_'+'_x not
+R2263:2265 Coq.Arith.Max <> max syndef
+R2279:2284 CoLoR.Term.WithArity.ATerm <> maxvar def
+R2286:2286 CoLoR.Term.WithArity.AWFMInterpretation <> u var
+R2268:2273 CoLoR.Term.WithArity.ATerm <> maxvar def
+R2275:2275 CoLoR.Term.WithArity.AWFMInterpretation <> t var
+R2311:2316 CoLoR.Util.Vector.VecUtil <> vector syndef
+R2320:2320 CoLoR.Term.WithArity.AWFMInterpretation <> n var
+R2318:2318 CoLoR.Term.WithArity.AWFMInterpretation <> S.I var
+R2345:2354 CoLoR.Term.WithArity.AInterpretation <> val_of_vec def
+R2358:2358 CoLoR.Term.WithArity.AWFMInterpretation <> v var
+R2356:2356 CoLoR.Term.WithArity.AWFMInterpretation <> S.I var
+R2375:2375 CoLoR.Term.WithArity.AWFMInterpretation <> S.IR.R var
+R2396:2403 CoLoR.Term.WithArity.AInterpretation <> term_int def
+R2410:2410 CoLoR.Term.WithArity.AWFMInterpretation <> u var
+R2405:2408 CoLoR.Term.WithArity.AWFMInterpretation <> xint var
+R2378:2385 CoLoR.Term.WithArity.AInterpretation <> term_int def
+R2392:2392 CoLoR.Term.WithArity.AWFMInterpretation <> t var
+R2387:2390 CoLoR.Term.WithArity.AWFMInterpretation <> xint var
+prf 2425:2435 <> IR_incl_IR'
+R2441:2444 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'<<'_x not
+R2439:2440 CoLoR.Term.WithArity.AWFMInterpretation <> IR def
+R2445:2447 CoLoR.Term.WithArity.AWFMInterpretation <> IR' def
+R2475:2483 Coq.Relations.Relation_Definitions <> inclusion def
+R2486:2487 CoLoR.Term.WithArity.AWFMInterpretation <> IR def
+R2490:2492 CoLoR.Term.WithArity.AWFMInterpretation <> IR' def
+prf 2532:2542 <> IR'_incl_IR
+R2549:2552 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'<<'_x not
+R2546:2548 CoLoR.Term.WithArity.AWFMInterpretation <> IR' def
+R2553:2554 CoLoR.Term.WithArity.AWFMInterpretation <> IR def
+R2582:2590 Coq.Relations.Relation_Definitions <> inclusion def
+R2593:2594 CoLoR.Term.WithArity.AWFMInterpretation <> IR def
+R2597:2599 CoLoR.Term.WithArity.AWFMInterpretation <> IR' def
+R2620:2622 Coq.Arith.Max <> max syndef
+R2636:2641 CoLoR.Term.WithArity.ATerm <> maxvar def
+R2625:2630 CoLoR.Term.WithArity.ATerm <> maxvar def
+R2620:2622 Coq.Arith.Max <> max syndef
+R2636:2641 CoLoR.Term.WithArity.ATerm <> maxvar def
+R2625:2630 CoLoR.Term.WithArity.ATerm <> maxvar def
+R2670:2673 Coq.Init.Peano <> :nat_scope:x_'<='_x not
+R2662:2667 CoLoR.Term.WithArity.ATerm <> maxvar def
+R2670:2673 Coq.Init.Peano <> :nat_scope:x_'<='_x not
+R2662:2667 CoLoR.Term.WithArity.ATerm <> maxvar def
+R2694:2701 Coq.Arith.Max <> le_max_l def
+R2694:2701 Coq.Arith.Max <> le_max_l def
+R2726:2729 Coq.Init.Peano <> :nat_scope:x_'<='_x not
+R2718:2723 CoLoR.Term.WithArity.ATerm <> maxvar def
+R2726:2729 Coq.Init.Peano <> :nat_scope:x_'<='_x not
+R2718:2723 CoLoR.Term.WithArity.ATerm <> maxvar def
+R2750:2757 Coq.Arith.Max <> le_max_r def
+R2750:2757 Coq.Arith.Max <> le_max_r def
+R2789:2791 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2774:2781 CoLoR.Term.WithArity.AInterpretation <> term_int def
+R2792:2799 CoLoR.Term.WithArity.AInterpretation <> term_int def
+R2802:2805 CoLoR.Term.WithArity.AInterpretation <> fval def
+R2814:2814 Coq.Init.Peano <> :nat_scope:x_'+'_x not
+R2789:2791 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2774:2781 CoLoR.Term.WithArity.AInterpretation <> term_int def
+R2792:2799 CoLoR.Term.WithArity.AInterpretation <> term_int def
+R2802:2805 CoLoR.Term.WithArity.AInterpretation <> fval def
+R2814:2814 Coq.Init.Peano <> :nat_scope:x_'+'_x not
+R2835:2853 CoLoR.Term.WithArity.AInterpretation <> term_int_eq_fval_lt thm
+R2835:2853 CoLoR.Term.WithArity.AInterpretation <> term_int_eq_fval_lt thm
+R2904:2906 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2889:2896 CoLoR.Term.WithArity.AInterpretation <> term_int def
+R2907:2914 CoLoR.Term.WithArity.AInterpretation <> term_int def
+R2917:2920 CoLoR.Term.WithArity.AInterpretation <> fval def
+R2929:2929 Coq.Init.Peano <> :nat_scope:x_'+'_x not
+R2904:2906 Coq.Init.Logic <> :type_scope:x_'='_x not
+R2889:2896 CoLoR.Term.WithArity.AInterpretation <> term_int def
+R2907:2914 CoLoR.Term.WithArity.AInterpretation <> term_int def
+R2917:2920 CoLoR.Term.WithArity.AInterpretation <> fval def
+R2929:2929 Coq.Init.Peano <> :nat_scope:x_'+'_x not
+R2950:2968 CoLoR.Term.WithArity.AInterpretation <> term_int_eq_fval_lt thm
+R2950:2968 CoLoR.Term.WithArity.AInterpretation <> term_int_eq_fval_lt thm
+R3003:3006 CoLoR.Term.WithArity.AInterpretation <> fval def
+prf 3038:3046 <> IR_eq_IR'
+R3052:3055 CoLoR.Util.Relation.RelUtil <> ::x_'=='_x not
+R3050:3051 CoLoR.Term.WithArity.AWFMInterpretation <> IR def
+R3056:3058 CoLoR.Term.WithArity.AWFMInterpretation <> IR' def
+R3092:3102 CoLoR.Term.WithArity.AWFMInterpretation <> IR_incl_IR' thm
+R3092:3102 CoLoR.Term.WithArity.AWFMInterpretation <> IR_incl_IR' thm
+R3111:3121 CoLoR.Term.WithArity.AWFMInterpretation <> IR'_incl_IR thm
+R3111:3121 CoLoR.Term.WithArity.AWFMInterpretation <> IR'_incl_IR thm
+R3140:3141 CoLoR.Term.WithArity.AWFMInterpretation S.IR <> sec
+sec 3252:3260 S inclusion
+var 3278:3278 S.inclusion R
+var 3280:3281 S.inclusion R'
+R3285:3292 Coq.Relations.Relation_Definitions <> relation def
+R3294:3294 CoLoR.Term.WithArity.AWFMInterpretation <> S.I var
+prf 3308:3319 <> IR_inclusion
+R3330:3333 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3338:3341 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'<<'_x not
+R3334:3335 CoLoR.Term.WithArity.AWFMInterpretation <> IR def
+R3337:3337 CoLoR.Term.WithArity.AWFMInterpretation <> S.inclusion.R var
+R3342:3343 CoLoR.Term.WithArity.AWFMInterpretation <> IR def
+R3345:3346 CoLoR.Term.WithArity.AWFMInterpretation <> S.inclusion.R' var
+R3324:3327 CoLoR.Util.Relation.RelUtil <> :relation_scope:x_'<<'_x not
+R3323:3323 CoLoR.Term.WithArity.AWFMInterpretation <> S.inclusion.R var
+R3328:3329 CoLoR.Term.WithArity.AWFMInterpretation <> S.inclusion.R' var
+R3381:3389 Coq.Relations.Relation_Definitions <> inclusion def
+R3392:3393 CoLoR.Term.WithArity.AWFMInterpretation <> IR def
+R3439:3447 CoLoR.Term.WithArity.AWFMInterpretation S.inclusion <> sec
+R3455:3455 CoLoR.Term.WithArity.AWFMInterpretation S <> sec
