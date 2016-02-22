@@ -1,9 +1,0 @@
-DIGEST 7c83e933e33e0b00fb22feb3a5e9b7cc
-FCoLoR.Term.SimpleType.Terms
-R246:259 CoLoR.Term.SimpleType.TermsAlgebraic <> <> lib
-R283:300 CoLoR.Term.SimpleType.TermsSig Signature <> mod
-mod 270:274 <> Terms
-R327:355 CoLoR.Term.SimpleType.TermsAlgebraic TermsAlgebraic <> modtype
-R357:359 CoLoR.Term.SimpleType.Terms Sig <> modtype
-mod 321:322 <> Terms.TA
-R367:371 CoLoR.Term.SimpleType.Terms Terms <> mod

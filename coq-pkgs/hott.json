@@ -1,0 +1,38 @@
+{
+  "desc": "hott",
+  "deps": [],
+  "pkgs": [
+    {
+      "pkg_id": [ "HoTT" ],
+      "vo_files": [
+        "categories.vo", "Tests.vo", "FunextAxiom.vo", "EquivGroupoids.vo",
+        "Tactics.vo", "Pullback.vo", "HSet.vo", "Pointed.vo",
+        "Idempotents.vo", "ObjectClassifier.vo", "Utf8.vo", "DProp.vo",
+        "Basics.vo", "Factorization.vo", "TruncType.vo",
+        "UnivalenceImpliesFunext.vo", "NullHomotopy.vo",
+        "UnivalenceAxiom.vo", "Conjugation.vo", "HoTT.vo", "Constant.vo",
+        "HProp.vo", "Functorish.vo", "EquivalenceVarieties.vo",
+        "Fibrations.vo", "Misc.vo", "Types.vo", "Extensions.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Basics" ],
+      "vo_files": [
+        "Contractible.vo", "Equivalences.vo", "PathGroupoids.vo",
+        "Overture.vo", "FunextVarieties.vo", "Trunc.vo", "UniverseLevel.vo",
+        "Decidable.vo", "Notations.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Types" ],
+      "vo_files": [
+        "Paths.vo", "Forall.vo", "Sum.vo", "Prod.vo", "Universe.vo",
+        "Record.vo", "Equiv.vo", "Arrow.vo", "Unit.vo", "Wtype.vo",
+        "Empty.vo", "Sigma.vo", "Bool.vo"
+      ],
+      "cma_files": []
+    }
+  ]
+}
