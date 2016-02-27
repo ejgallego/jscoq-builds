@@ -27,8 +27,8 @@
         "gseries.vo", "commutator.vo", "all_solvable.vo", "abelian.vo",
         "finmodule.vo", "primitive_action.vo", "cyclic.vo",
         "jordanholder.vo", "maximal.vo", "alt.vo", "gfunctor.vo",
-        "nilpotent.vo", "burnside_app.vo", "extremal.vo", "center.vo",
-        "pgroup.vo", "extraspecial.vo", "frobenius.vo", "sylow.vo", "hall.vo"
+        "nilpotent.vo", "extremal.vo", "center.vo", "pgroup.vo",
+        "extraspecial.vo", "frobenius.vo", "sylow.vo", "hall.vo"
       ],
       "cma_files": []
     },

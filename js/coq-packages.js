@@ -1,114 +1,152 @@
-var PackagesManager;
+"use strict";
 
-(function(){
+class PackageManager {
 
-    "use strict";
+    constructor(panel, base_path) {
+        this.base_path = base_path;
+        this.panel   = panel;
+        this.bundles = {};
+    }
 
-    PackagesManager = function(panel) {
-        this.panel = panel;
+    addPackageInfo(pkg_info) {
 
-        var package_index_url = 'packages-index.json';
-        var req = new XMLHttpRequest();
-        req.open('GET', package_index_url);
-        req.send(null);
+        var div  = document.createElement('div');
+        var dsel = d3.select(div);
 
-        req.addEventListener('readystatechange',
-                             () => {
-                               if(req.readyState === 4 &&
-                                    (req.status === 200 || req.status === 304 || req.status === 0))
-                                    this.displayDefinitions(req);
-                             });
-    };
+        dsel.data([pkg_info]);
 
-    PackagesManager.prototype.setup = function() {
-        jsCoq.onPkgProgress = (evt) => {
-            var ce = new CustomEvent('pkgProgress', {detail:evt});
-            document.body.dispatchEvent(ce);
-        };
-    };
+        dsel.append('img')
+            .attr('src', this.base_path + 'images/dl.png')
+            .on('click', () => { this.startPackageDownload(); });
 
-    PackagesManager.prototype.displayDefinitions = function(req) {
-        var rows = d3.select(this.panel).selectAll('div')
-            .data(JSON.parse(req.responseText))
-            .enter()
-            .append('div');
+        dsel.append('span')
+            .text(d => d.desc);
 
-        var self = this;
-        rows.each(function () {
-            var row = d3.select(this);
-            row.append('img')
-                .attr('src', 'images/dl.png')
-                .on('click', () => {self.sendCoqPkg();});
+        this.panel.appendChild(div);
 
-            row.append('span')
-                .text(d => d.label);
-        });
-    };
+        var desc = pkg_info.desc;
+        var pkgs = pkg_info.pkgs;
+        var no_files = 0;
 
-    PackagesManager.prototype.sendCoqPkg = function() {
-        var row  = d3.select(d3.event.target.parentNode);
-        var dl  = new PackageDowloader(row, this.panel);
-        dl.download();
-    };
+        for(var i = 0; i < pkgs.length; i++)
+            no_files += pkgs[i].no_files;
 
-    var PackageDowloader = function(row, panel) {
+        pkg_info.loaded = 0;
+        pkg_info.total  = no_files;
+
+        this.bundles[desc] = { div: div, info: pkg_info };
+
+    }
+
+    // XXX [EG]: This needs to be tweaked, package loading could be
+    // externally initiated.
+    startPackageDownload() {
+
+        var row = d3.select(d3.event.target.parentNode);
+        jsCoq.add_pkg(row.datum().desc);
+
+    }
+
+    // In all the three cases below, evt = progressInfo
+    // bundle_name_    : string
+    // method pkg_name : string
+    // method loaded   : int
+    // method total    : int
+
+    onPkgLoadStart(evt) {
+
+        var div  = this.bundles[evt.bundle_name].div;
+        // var row  = d3.select(this.panel).selectAll('div')
+        //     .filter(pkg => pkg.desc === evt.bundle_name);
+
+        // Workaround, this is called at a finer granularity, add the
+        // bar only the first time.
+
+        if (! this.bundles[evt.bundle_name].bar ) {
+            var row  = d3.select(div);
+
+            var bar = row.append('div')
+                .attr('class', 'rel-pos')
+                .append('div')
+                .attr('class', 'progressbar');
+
+            var egg = bar
+                .append('img')
+                .attr('src', this.base_path + 'images/egg.png')
+                .attr('class', 'progress-egg');
+
+            this.bundles[evt.bundle_name].bar = bar;
+            this.bundles[evt.bundle_name].egg = egg;
+        }
+    }
+
+
+    onPkgProgress(evt) {
+
+        var info = this.bundles[evt.bundle_name].info;
+        var bar  = this.bundles[evt.bundle_name].bar;
+        var egg  = this.bundles[evt.bundle_name].egg;
+
+        var progress = ++info.loaded / info.total;
+        var angle    = (progress * 360 * 15) % 360;
+        egg.style('transform', 'rotate(' + angle + 'deg)');
+        bar.style('width', progress * 100 + '%');
+    }
+
+    onPkgLoad(evt) {
+
+        var info = this.bundles[evt.bundle_name].info;
+
+        // Workaround due to bad granularity
+        if (info.loaded === info.total) {
+
+            var div  = this.bundles[evt.bundle_name].div;
+            var row  = d3.select(div);
+
+            row.select('.rel-pos').remove();
+            row.select('img')
+                .attr('src', this.base_path + 'images/checked.png');
+        }
+    }
+}
+
+// EG: This will be useful once we move file downloading to javascript.
+// PackagesManager
+
+class PackageDowloader {
+
+    constructor(row, panel) {
         this.row = row;
         this.bar = null;
         this.egg = null;
-        this.bundle_name = row.datum().name;
+        this.bundle_name = row.datum().desc;
         this.panel = panel;
         this.progress = 0; // percent
-    };
+    }
 
-    PackageDowloader.prototype.download = function() {
-        this.row.select('img').on('click', null);
+    // This method setups the download handling.
+    download() {
+
+        // Allow re-download
+        // this.row.select('img').on('click', null);
+
         this.bar = this.row.append('div')
             .attr('class', 'rel-pos')
             .append('div')
             .attr('class', 'progressbar');
+
         this.egg = this.bar
             .append('img')
             .attr('src', 'images/egg.png')
             .attr('class', 'progress-egg');
 
-        var pkg_json_url = 'coq-pkgs/' + this.bundle_name + '.json';
-        var req = new XMLHttpRequest();
-        req.open('GET', pkg_json_url);
-        req.onreadystatechange = () => {
-            if (req.readyState === 4) {
-                if (req.status === 200 || req.status === 0)
-                    this._download(JSON.parse(req.responseText));
-                // XXX by design we could not access CoqPanel.log
-                // TODO: else log error message
-            }
-        };
-        req.send(null);
-    };
-
-    PackageDowloader.prototype._download = function(json) {
         var files_total_length = 0;
         var files_loaded_cpt = 0;
-        var pkgs = json.pkgs;
-
-        // XXX: Circular dependencies will kill us here.
-        var deps = json.deps;
-
-        if (deps) {
-            var deps_row = d3.select(this.panel).selectAll('div')
-            //                       ^^^^^^^^^^ ummm
-                .filter( pkg_row => deps.includes(pkg_row.name) );
-
-            deps_row.forEach( pkg_row =>
-                              {   // Pain XXX
-                                  if (pkg_row[0]) {
-                                      new PackageDowloader(d3.select(pkg_row[0]), this.panel)
-                                          .download(); }
-                              } );
-        }
+        var pkgs = this.row.datum().pkgs;
 
         // Proceed to the main download.
         for(var i = 0; i < pkgs.length; i++)
-            files_total_length += pkgs[i].vo_files.length + pkgs[i].cma_files.length;
+            files_total_length += pkgs[i].no_files;
 
         document.body.addEventListener('pkgProgress',
             (evt) => {
@@ -120,22 +158,23 @@ var PackagesManager;
                 }
             }
         );
-        jsCoq.add_pkg(this.bundle_name);
-    };
 
-    PackageDowloader.prototype.updateProgress = function() {
+        jsCoq.add_pkg(this.bundle_name);
+
+    }
+
+    updateProgress() {
         var angle = (this.progress * 360 * 15) % 360;
         this.egg.style('transform', 'rotate(' + angle + 'deg)');
         this.bar.style('width', this.progress * 100 + '%');
-    };
+    }
 
-    PackageDowloader.prototype.finishDownload = function() {
+    finishDownload() {
         this.row.select('.rel-pos').remove();
         this.row.select('img')
             .attr('src', 'images/checked.png');
-    };
-
-}());
+    }
+}
 
 // Local Variables:
 // js-indent-level: 4
