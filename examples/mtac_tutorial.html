@@ -887,8 +887,7 @@ Calculi and Applications, TLCA'05, pages 339-353, Berlin, Heidelberg,
        .then(loadJs("../external/CodeMirror/addon/runmode/colorize"))
        .then( function () {
            var coqInline = document.getElementsByClassName("inline-coq");
-           CodeMirror.colorize(coqInline);
-           return; })
+           CodeMirror.colorize(coqInline); })
        .then( function () {
            coq = new CoqManager (coqdoc_ids,
                                  { base_path: '../', init_pkgs: ['init', 'mtac'] }

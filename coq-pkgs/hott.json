@@ -1,0 +1,327 @@
+{
+  "desc": "hott",
+  "deps": [ "hott-init" ],
+  "pkgs": [
+    {
+      "pkg_id": [ "HoTT" ],
+      "vo_files": [
+        "Functorish.vo", "HoTT.vo", "Extensions.vo", "Factorization.vo",
+        "Utf8.vo", "NullHomotopy.vo", "UnivalenceImpliesFunext.vo",
+        "TruncType.vo", "Pullback.vo", "Fibrations.vo", "FunextAxiom.vo",
+        "Tests.vo", "UnivalenceAxiom.vo", "EquivGroupoids.vo",
+        "categories.vo", "Pointed.vo", "EquivalenceVarieties.vo",
+        "Conjugation.vo", "Basics.vo", "Idempotents.vo", "Tactics.vo",
+        "Misc.vo", "DProp.vo", "ObjectClassifier.vo", "HSet.vo",
+        "Constant.vo", "HProp.vo", "Types.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Algebra" ],
+      "vo_files": [ "ooAction.vo", "Aut.vo", "ooGroup.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Basics" ],
+      "vo_files": [
+        "PathGroupoids.vo", "Contractible.vo", "Overture.vo",
+        "Equivalences.vo", "Trunc.vo", "FunextVarieties.vo",
+        "UniverseLevel.vo", "Notations.vo", "Decidable.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories" ],
+      "vo_files": [
+        "ProductLaws.vo", "ExponentialLaws.vo", "Pseudofunctor.vo",
+        "DependentProduct.vo", "DiscreteCategory.vo",
+        "UniversalProperties.vo", "Comma.vo", "GroupoidCategory.vo",
+        "Utf8.vo", "CategoryOfGroupoids.vo", "NatCategory.vo",
+        "CategoryOfSections.vo", "Structure.vo",
+        "FundamentalPreGroupoidCategory.vo", "LaxComma.vo", "Functor.vo",
+        "IndiscreteCategory.vo", "HomotopyPreCategory.vo", "Yoneda.vo",
+        "NaturalTransformation.vo", "Limits.vo", "Cat.vo", "Grothendieck.vo",
+        "KanExtensions.vo", "Category.vo", "FunctorCategory.vo",
+        "SimplicialSets.vo", "Adjoint.vo", "DualFunctor.vo", "HomFunctor.vo",
+        "InitialTerminalCategory.vo", "ChainCategory.vo", "Notations.vo",
+        "SetCategory.vo", "PseudonaturalTransformation.vo", "Profunctor.vo",
+        "SemiSimplicialSets.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "Adjoint" ],
+      "vo_files": [
+        "UnitCounit.vo", "Functorial.vo", "UniversalMorphisms.vo", "Utf8.vo",
+        "Dual.vo", "UnitCounitCoercions.vo", "Hom.vo", "Composition.vo",
+        "HomCoercions.vo", "Core.vo", "Identity.vo", "Notations.vo",
+        "Paths.vo", "Pointwise.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "Adjoint", "Composition" ],
+      "vo_files": [
+        "LawsTactic.vo", "IdentityLaws.vo", "AssociativityLaw.vo", "Core.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "Adjoint", "Functorial" ],
+      "vo_files": [ "Laws.vo", "Parts.vo", "Core.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "Adjoint", "UniversalMorphisms" ],
+      "vo_files": [ "Core.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "Cat" ],
+      "vo_files": [ "Morphisms.vo", "Core.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "Category" ],
+      "vo_files": [
+        "Morphisms.vo", "Univalent.vo", "Utf8.vo", "Sigma.vo", "Prod.vo",
+        "Dual.vo", "Sum.vo", "Subcategory.vo", "Objects.vo", "Strict.vo",
+        "Core.vo", "Pi.vo", "Notations.vo", "Paths.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "Category", "Sigma" ],
+      "vo_files": [
+        "OnObjects.vo", "Univalent.vo", "Core.vo", "OnMorphisms.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "Category", "Subcategory" ],
+      "vo_files": [ "Wide.vo", "Full.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "CategoryOfSections" ],
+      "vo_files": [ "Core.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "Comma" ],
+      "vo_files": [
+        "Functorial.vo", "Utf8.vo", "Dual.vo", "InducedFunctors.vo",
+        "ProjectionFunctors.vo", "Core.vo", "Projection.vo", "Notations.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "ExponentialLaws" ],
+      "vo_files": [
+        "Law2.vo", "Law0.vo", "Law3.vo", "Tactics.vo", "Law1.vo", "Law4.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "ExponentialLaws", "Law1" ],
+      "vo_files": [ "Law.vo", "Functors.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "ExponentialLaws", "Law2" ],
+      "vo_files": [ "Law.vo", "Functors.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "ExponentialLaws", "Law3" ],
+      "vo_files": [ "Law.vo", "Functors.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "ExponentialLaws", "Law4" ],
+      "vo_files": [ "Law.vo", "Functors.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "Functor" ],
+      "vo_files": [
+        "Utf8.vo", "Prod.vo", "Dual.vo", "Sum.vo", "Composition.vo",
+        "Attributes.vo", "Core.vo", "Identity.vo", "Notations.vo",
+        "Paths.vo", "Pointwise.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "Functor", "Composition" ],
+      "vo_files": [ "Functorial.vo", "Laws.vo", "Core.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [
+        "HoTT", "categories", "Functor", "Composition", "Functorial"
+      ],
+      "vo_files": [ "Attributes.vo", "Core.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "Functor", "Prod" ],
+      "vo_files": [ "Functorial.vo", "Universal.vo", "Core.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "Functor", "Pointwise" ],
+      "vo_files": [ "Properties.vo", "Core.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "FunctorCategory" ],
+      "vo_files": [
+        "Functorial.vo", "Morphisms.vo", "Utf8.vo", "Dual.vo", "Core.vo",
+        "Notations.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "Grothendieck" ],
+      "vo_files": [ "ToCat.vo", "PseudofunctorToCat.vo", "ToSet.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "Grothendieck", "ToSet" ],
+      "vo_files": [ "Morphisms.vo", "Univalent.vo", "Core.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "GroupoidCategory" ],
+      "vo_files": [ "Morphisms.vo", "Dual.vo", "Core.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "InitialTerminalCategory" ],
+      "vo_files": [
+        "Functors.vo", "Core.vo", "Pseudofunctors.vo", "Notations.vo",
+        "NaturalTransformations.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "KanExtensions" ],
+      "vo_files": [ "Functors.vo", "Core.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "LaxComma" ],
+      "vo_files": [
+        "Utf8.vo", "CoreParts.vo", "CoreLaws.vo", "Core.vo", "Notations.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "Limits" ],
+      "vo_files": [ "Functors.vo", "Core.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "NaturalTransformation" ],
+      "vo_files": [
+        "Isomorphisms.vo", "Utf8.vo", "Prod.vo", "Dual.vo", "Sum.vo",
+        "Composition.vo", "Core.vo", "Identity.vo", "Notations.vo",
+        "Paths.vo", "Pointwise.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [
+        "HoTT", "categories", "NaturalTransformation", "Composition"
+      ],
+      "vo_files": [ "Functorial.vo", "Laws.vo", "Core.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "Profunctor" ],
+      "vo_files": [
+        "Utf8.vo", "Core.vo", "Identity.vo", "Notations.vo",
+        "Representable.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "Pseudofunctor" ],
+      "vo_files": [
+        "RewriteLaws.vo", "FromFunctor.vo", "Core.vo", "Identity.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "PseudonaturalTransformation" ],
+      "vo_files": [ "Core.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "SetCategory" ],
+      "vo_files": [ "Morphisms.vo", "Functors.vo", "Core.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "SetCategory", "Functors" ],
+      "vo_files": [ "SetProp.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "categories", "Structure" ],
+      "vo_files": [
+        "Utf8.vo", "Core.vo", "Notations.vo", "IdentityPrinciple.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Comodalities" ],
+      "vo_files": [ "CoreflectiveSubuniverse.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "hit" ],
+      "vo_files": [
+        "iso.vo", "quotient.vo", "TruncImpliesFunext.vo", "Join.vo",
+        "Connectedness.vo", "Truncations.vo", "Circle.vo", "Interval.vo",
+        "unique_choice.vo", "epi.vo", "Pushout.vo", "Flattening.vo", "V.vo",
+        "IntervalImpliesFunext.vo", "TwoSphere.vo", "Spheres.vo", "Coeq.vo",
+        "Suspension.vo", "FreeIntQuotient.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Modalities" ],
+      "vo_files": [
+        "Notnot.vo", "ReflectiveSubuniverse.vo", "Open.vo", "Closed.vo",
+        "Fracture.vo", "Modality.vo", "Nullification.vo", "Accessible.vo",
+        "Identity.vo", "Lex.vo", "Localization.vo", "Topological.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Spaces" ],
+      "vo_files": [
+        "BAut.vo", "Nat.vo", "Int.vo", "No.vo", "Finite.vo", "Cantor.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Tactics" ],
+      "vo_files": [
+        "RewriteModuloAssociativity.vo", "BinderApply.vo", "EvalIn.vo",
+        "EquivalenceInduction.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Types" ],
+      "vo_files": [
+        "Universe.vo", "Equiv.vo", "Empty.vo", "Unit.vo", "Bool.vo",
+        "Record.vo", "Forall.vo", "Sigma.vo", "Prod.vo", "Sum.vo",
+        "Wtype.vo", "Arrow.vo", "Paths.vo"
+      ],
+      "cma_files": []
+    }
+  ]
+}

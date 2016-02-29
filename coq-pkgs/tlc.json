@@ -5,18 +5,17 @@
     {
       "pkg_id": [ "TLC" ],
       "vo_files": [
-        "LibListSorted.vo", "LibStruct.vo", "LibProd.vo", "LibGraph.vo",
-        "LibFset.vo", "LibEnv.vo", "LibBool.vo", "LibAxioms.vo",
-        "LibCore.vo", "LibSum.vo", "LibReflect.vo", "LibOperation.vo",
-        "LibInt.vo", "LibTactics.vo", "LibRelation.vo", "LibVar.vo",
-        "LibFixDemos.vo", "LibTacticsDemos.vo", "LibEpsilon.vo",
-        "LibEqual.vo", "LibList.vo", "LibPrelude.vo", "LibString.vo",
-        "LibLogic.vo", "LibChoice.vo", "LibMin.vo", "LibMultiset.vo",
-        "LibOption.vo", "LibOrder.vo", "LibUnit.vo", "LibListZ.vo",
-        "LibNat.vo", "LibBag.vo", "LibFunc.vo", "LibWf.vo",
-        "LibExtractDemos.vo", "LibSet.vo", "LibFix.vo", "LibStream.vo",
-        "LibHeap.vo", "LibPer.vo", "LibOtherDemos.vo", "LibLN.vo",
-        "LibMap.vo"
+        "LibEpsilon.vo", "LibProd.vo", "LibFix.vo", "LibMap.vo", "LibWf.vo",
+        "LibLogic.vo", "LibLN.vo", "LibFset.vo", "LibReflect.vo",
+        "LibChoice.vo", "LibStream.vo", "LibGraph.vo", "LibOtherDemos.vo",
+        "LibVar.vo", "LibString.vo", "LibNat.vo", "LibFunc.vo",
+        "LibEqual.vo", "LibOperation.vo", "LibMultiset.vo", "LibListZ.vo",
+        "LibOption.vo", "LibRelation.vo", "LibAxioms.vo", "LibPer.vo",
+        "LibExtractDemos.vo", "LibSet.vo", "LibTactics.vo", "LibFixDemos.vo",
+        "LibBag.vo", "LibStruct.vo", "LibInt.vo", "LibOrder.vo", "LibSum.vo",
+        "LibCore.vo", "LibUnit.vo", "LibBool.vo", "LibTacticsDemos.vo",
+        "LibPrelude.vo", "LibMin.vo", "LibEnv.vo", "LibList.vo",
+        "LibListSorted.vo", "LibHeap.vo"
       ],
       "cma_files": []
     }
