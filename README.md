@@ -119,6 +119,8 @@ THE SOFTWARE.
 
 ### CPDT
 
+Upstream URL: http://adam.chlipala.net/cpdt/
+
 Most of it is non-free but distributable. We include here only the
 free files:
 
@@ -160,3 +162,59 @@ shipping it too.
  *   http://creativecommons.org/licenses/by-nc-nd/3.0/
  *)
 ````
+
+### CoLoR
+
+Upstream URL: http://color.inria.fr/
+
+````
+This software is governed by the CeCILL license under French law and
+abiding by the rules of distribution of free software. You can use,
+modify and/or redistribute the software under the terms of the CeCILL
+license as circulated by CEA, CNRS and INRIA at the following URL
+"http://www.cecill.info". A copy is provided with CoLoR in the files
+Licence_CeCILL_V2.1-en.txt (English) and Licence_CeCILL_V2.1-fr.txt
+(French).
+
+````
+
+### RelationAlgebra
+
+Upstream URL: http://perso.ens-lyon.fr/damien.pous/ra/
+
+````
+                   GNU LESSER GENERAL PUBLIC LICENSE
+                       Version 3, 29 June 2007
+
+````
+
+### Mtac
+
+Upstream URL: http://plv.mpi-sws.org/mtac/
+
+````
+The MIT License (MIT)
+
+Copyright (c) 2015 beta-ziliani
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+````
+
+
