@@ -362,7 +362,7 @@ class CoqManager {
             init_pkgs: ['init'],
             all_pkgs:  ['init', 'math-comp', 'mtac',
                         'coq-base', 'coq-arith', 'coq-reals',
-                        'coquelicot', 'flocq', 'tlc', 'sf', 'cpdt', 'color', 'relalg']
+                        'coquelicot', 'flocq', 'tlc', 'sf', 'cpdt', 'color', 'relalg', 'unimath']
         };
 
         this.options = copyOptions(options, this.options);
@@ -799,7 +799,7 @@ class CoqManager {
             if (0 <= idx) {
                 console.log("Going back to: " + idx + " " + this.sentences[idx].toString());
                 while (this.sentences.length > idx + 1) {
-                    this.goPrev(false);
+                    this.goPrev(true);
                 }
                 this.panel.show();
             } else { // We need to go next!
