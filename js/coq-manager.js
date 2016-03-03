@@ -69,11 +69,11 @@ class CoqPanel {
       </div> <!-- /#exits -->
       <span id="buttons">
         <img src="${base_path}/images/up.png" width="21" height="24"
-             alt="Up (Ctrl-P)" title="Up (Ctrl-P)" name="up"/>
+             alt="Up (Meta-P)" title="Up (Meta-P)" name="up"/>
         <img src="${base_path}/images/down.png" width="21" height="25"
-             alt="Down (Ctrl-N)" title="Down (Ctrl-N)" name="down"/>
+             alt="Down (Meta-N)" title="Down (Meta-N)" name="down"/>
         <img src="${base_path}/images/to-cursor.png" width="38" height="24"
-             alt="To cursor (Ctrl-Enter)" title="To cursor (Ctrl-Enter)" name="to-cursor"/>
+             alt="To cursor (Meta-Enter)" title="To cursor (Meta-Enter)" name="to-cursor"/>
       </span>
     </div> <!-- /#toolbar -->
     <div class="flex-container">
@@ -173,7 +173,6 @@ class CoqPanel {
         // TODO: Add diff/history of goals.
         // XXX: should send a message.
         this.proof.textContent = this.coq.goals();
-        // CodeMirror.colorize([this.proof]);
     }
 
     // Add a log event received from Coq.
@@ -310,6 +309,14 @@ class ProviderContainer {
         stm.sp.mark(stm, mark);
     }
 
+    cursorToStart(stm) {
+        stm.sp.cursorToStart(stm);
+    }
+
+    cursorToEnd(stm) {
+        stm.sp.cursorToEnd(stm);
+    }
+
     focus() {
         if (this.currentFocus)
             this.currentFocus.focus();
@@ -384,7 +391,7 @@ class CoqManager {
             setTimeout( () => {
                 this.goCursor();
                 // We must do one more back, as the one in the cursor is the invalid one!
-                this.goPrev();
+                this.goPrev(true);
             }, 100);
         };
 
@@ -583,6 +590,34 @@ class CoqManager {
         this.provider.focus();
     }
 
+    // Drops all the state!
+    reset() {
+
+        // Not yet initialized.
+        if(!this.sid) return;
+
+        var initial_sid;
+
+        if (this.options.prelude) {
+            initial_sid = this.sid[1];
+            this.sid    = [this.sid[0], this.sid[1]];
+        } else {
+            initial_sid = this.sid[0];
+            this.sid    = [this.sid[0]];
+        }
+
+        // Reset Coq.
+        this.coq.edit(initial_sid);
+
+        // Reset out sentences
+        this.sentences.forEach(function(stm) {
+            this.provider.mark(stm, "clear");
+        }, this);
+
+        this.sentences = [];
+
+    }
+
     toolbarClickHandler(evt) {
 
         this.provider.focus();
@@ -593,7 +628,7 @@ class CoqManager {
                 break;
 
             case 'up' :
-                this.goPrev();
+                this.goPrev(false);
                 break;
 
             case 'down' :
@@ -615,7 +650,36 @@ class CoqManager {
         }
     }
 
-    goPrev() {
+    process_special(text) {
+
+        var special;
+
+        if (special = text.match(/Comments \"(.*): (.+)\"./)) {
+            let cmd  = special[1];
+            let args = special[2];
+
+            switch (cmd) {
+
+            case 'pkgs':
+                let pkgs = args.split(' ');
+                console.log('Requested pkgs '); console.log(pkgs);
+
+                let pkg_panel = document.getElementById('packages-panel').parentNode;
+                pkg_panel.classList.remove('collapsed');
+
+                pkgs.forEach(this.coq.add_pkg,this);
+
+                return true;
+
+            default:
+                console.log("Unrecognized jscoq command");
+                return false;
+            }
+        }
+        return false;
+    }
+
+    goPrev(inPlace) {
 
         // If we didn't load the prelude, prevent unloading it to
         // workaround a bug in Coq.
@@ -628,6 +692,9 @@ class CoqManager {
 
         var stm = this.sentences.pop()
         this.provider.mark(stm, "clear");
+
+        if(!inPlace)
+            this.provider.cursorToStart(stm);
 
         // Tell coq to go back to the old state.
         this.sid.pop();
@@ -657,7 +724,11 @@ class CoqManager {
             this.currentFocus = next.sp;
             this.currentFocus.focus();
         }
-        // We should be fully event driven here...
+        // XXXX: We should be fully event driven here...
+
+        // process special jscoq commands, for now:
+        // Comment "pkg: list" will load packages.
+        this.process_special(next.text);
 
         // Two things can happen: a parsing error (thus we will never get a sid),
         // of a succesful parse, we get a sid.
@@ -683,10 +754,16 @@ class CoqManager {
 
                 // Print goals
                 this.panel.update();
+
+                if(update_focus)
+                    this.provider.cursorToEnd(next);
+
                 return true;
-            } else
+            } else {
                 // Cleanup was done in the onError handler.
                 return false;
+            }
+
         } else { // Parse/library loading error.
 
             this.provider.mark(next, "clear");
@@ -708,7 +785,7 @@ class CoqManager {
         if (0 <= idx) {
             console.log("Going back to: " + idx + " " + this.sentences[idx].toString());
             while (this.sentences.length > idx + 1) {
-                this.goPrev();
+                this.goPrev(false);
             }
         } else {}
     }
@@ -722,7 +799,7 @@ class CoqManager {
             if (0 <= idx) {
                 console.log("Going back to: " + idx + " " + this.sentences[idx].toString());
                 while (this.sentences.length > idx + 1) {
-                    this.goPrev();
+                    this.goPrev(false);
                 }
                 this.panel.show();
             } else { // We need to go next!
