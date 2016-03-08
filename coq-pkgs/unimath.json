@@ -6,65 +6,64 @@
     {
       "pkg_id": [ "UniMath", "CategoryTheory" ],
       "vo_files": [
-        "RightKanExtension.vo", "EndofunctorsMonoidal.vo",
-        "precategories.vo", "whiskering.vo", "HLevel_n_is_of_hlevel_Sn.vo",
-        "category_hset_structures.vo", "category_hset.vo",
-        "UnicodeNotations.vo", "slicecat.vo", "Monads.vo",
-        "PointedFunctorsComposition.vo", "total2_paths.vo",
-        "rezk_completion.vo", "precomp_fully_faithful.vo",
-        "AdjunctionHomTypesWeq.vo", "ProductPrecategory.vo",
-        "functor_categories.vo", "PointedFunctors.vo", "opp_precat.vo",
-        "FunctorAlgebras.vo", "sub_precategories.vo", "precomp_ess_surj.vo",
-        "equivalences.vo", "HorizontalComposition.vo", "yoneda.vo"
+        "PointedFunctorsComposition.vo", "slicecat.vo",
+        "HorizontalComposition.vo", "functor_categories.vo",
+        "category_hset.vo", "Monads.vo", "PointedFunctors.vo",
+        "precomp_fully_faithful.vo", "EndofunctorsMonoidal.vo",
+        "FunctorAlgebras.vo", "precomp_ess_surj.vo", "ProductPrecategory.vo",
+        "category_hset_structures.vo", "HLevel_n_is_of_hlevel_Sn.vo",
+        "equivalences.vo", "total2_paths.vo", "AdjunctionHomTypesWeq.vo",
+        "RightKanExtension.vo", "UnicodeNotations.vo", "rezk_completion.vo",
+        "yoneda.vo", "opp_precat.vo", "whiskering.vo",
+        "sub_precategories.vo", "precategories.vo"
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "UniMath", "CategoryTheory", "limits" ],
       "vo_files": [
-        "more_on_pullbacks.vo", "FunctorsPointwiseCoproduct.vo",
-        "products_as_colimit.vo", "cones.vo", "terminal_as_colimit.vo",
-        "pullbacks_as_colimits.vo", "initial_as_colimit.vo", "coproducts.vo",
-        "FunctorsPointwiseProduct.vo", "products.vo",
-        "coproducts_as_colimits.vo", "pullbacks.vo", "limits.vo",
-        "initial.vo", "terminal.vo"
+        "pullbacks.vo", "coproducts_as_colimits.vo", "more_on_pullbacks.vo",
+        "limits.vo", "terminal.vo", "terminal_as_colimit.vo", "products.vo",
+        "products_as_colimit.vo", "FunctorsPointwiseCoproduct.vo",
+        "initial.vo", "coproducts.vo", "FunctorsPointwiseProduct.vo",
+        "cones.vo", "initial_as_colimit.vo", "pullbacks_as_colimits.vo"
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "UniMath", "CategoryTheory", "colimits" ],
-      "vo_files": [ "colimits.vo", "polynomialfunctors.vo", "chains.vo" ],
+      "vo_files": [ "polynomialfunctors.vo", "colimits.vo", "chains.vo" ],
       "cma_files": []
     },
     { "pkg_id": [ "UniMath", "PAdics" ], "vo_files": [], "cma_files": [] },
     {
       "pkg_id": [ "UniMath", "Ktheory" ],
       "vo_files": [
-        "Equivalences.vo", "AbelianGroup.vo", "Tactics.vo",
-        "Precategories.vo", "Circle.vo", "GroupAction.vo", "Elements.vo",
-        "QuotientSet.vo", "DirectSum.vo", "MoreEquivalences.vo",
-        "Interval.vo", "Bifunctor.vo", "RawMatrix.vo",
-        "StandardCategories.vo", "Halfline.vo", "Magma.vo", "Utilities.vo",
-        "MetricTree.vo", "Integers.vo", "Monoid.vo", "Nat.vo", "Group.vo",
-        "Representation.vo", "AffineLine.vo", "AbelianMonoid.vo", "Test.vo"
+        "AbelianMonoid.vo", "Utilities.vo", "DirectSum.vo",
+        "Representation.vo", "Precategories.vo", "Circle.vo", "Interval.vo",
+        "Equivalences.vo", "MetricTree.vo", "Magma.vo", "Nat.vo",
+        "StandardCategories.vo", "RawMatrix.vo", "Tactics.vo",
+        "MoreEquivalences.vo", "AbelianGroup.vo", "GroupAction.vo",
+        "QuotientSet.vo", "Monoid.vo", "AffineLine.vo", "Bifunctor.vo",
+        "Integers.vo", "Group.vo", "Elements.vo", "Test.vo", "Halfline.vo"
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "UniMath", "Tactics" ],
       "vo_files": [
-        "Monoids_Tactics.vo", "Nat_Tactics.vo", "Groups_Tactics.vo",
-        "Abmonoids_Tactics.vo", "Utilities.vo"
+        "Utilities.vo", "Nat_Tactics.vo", "Groups_Tactics.vo",
+        "Abmonoids_Tactics.vo", "Monoids_Tactics.vo"
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "UniMath", "SubstitutionSystems" ],
       "vo_files": [
-        "SubstitutionSystems_Summary.vo", "Lam.vo",
-        "MonadsFromSubstitutionSystems.vo", "SubstitutionSystems.vo",
-        "Signatures.vo", "LamSignature.vo", "Notation.vo",
-        "GenMendlerIteration.vo", "LiftingInitial.vo", "SumOfSignatures.vo"
+        "SubstitutionSystems.vo", "LiftingInitial.vo", "Signatures.vo",
+        "LamSignature.vo", "GenMendlerIteration.vo", "Lam.vo", "Notation.vo",
+        "SumOfSignatures.vo", "MonadsFromSubstitutionSystems.vo",
+        "SubstitutionSystems_Summary.vo"
       ],
       "cma_files": []
     },
@@ -76,26 +75,26 @@
     {
       "pkg_id": [ "UniMath", "Foundations", "Basics" ],
       "vo_files": [
-        "Tests.vo", "PartC.vo", "PartD.vo", "PartA.vo", "Sets.vo",
-        "Propositions.vo", "UnivalenceAxiom.vo", "Preamble.vo", "PartB.vo"
+        "Tests.vo", "Propositions.vo", "UnivalenceAxiom.vo", "Preamble.vo",
+        "PartA.vo", "PartB.vo", "Sets.vo", "PartC.vo", "PartD.vo"
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "UniMath", "Foundations", "Combinatorics" ],
       "vo_files": [
-        "FiniteSets.vo", "Tests.vo", "StandardFiniteSets.vo",
-        "FiniteSequences.vo", "OrderedSets.vo"
+        "StandardFiniteSets.vo", "Tests.vo", "OrderedSets.vo",
+        "FiniteSequences.vo", "FiniteSets.vo"
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "UniMath", "Foundations", "Algebra" ],
       "vo_files": [
-        "IteratedBinaryOperations.vo", "Tests.vo", "Monoids_and_Groups.vo",
-        "Rigs_and_Rings.vo", "DivisionRig.vo", "Apartness.vo",
-        "ConstructiveStructures.vo", "BinaryOperations.vo",
-        "Domains_and_Fields.vo"
+        "DivisionRig.vo", "Tests.vo", "Apartness.vo",
+        "Domains_and_Fields.vo", "ConstructiveStructures.vo",
+        "IteratedBinaryOperations.vo", "BinaryOperations.vo",
+        "Rigs_and_Rings.vo", "Monoids_and_Groups.vo"
       ],
       "cma_files": []
     },
@@ -109,8 +108,8 @@
     {
       "pkg_id": [ "UniMath", "Dedekind" ],
       "vo_files": [
-        "Reals.vo", "NonnegativeRationals.vo", "Fields.vo", "Sets.vo",
-        "DecidableDedekindCuts.vo", "Complements.vo", "NonnegativeReals.vo"
+        "NonnegativeReals.vo", "Fields.vo", "NonnegativeRationals.vo",
+        "Complements.vo", "Reals.vo", "Sets.vo", "DecidableDedekindCuts.vo"
       ],
       "cma_files": []
     }

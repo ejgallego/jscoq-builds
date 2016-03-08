@@ -34,7 +34,12 @@ var COQ_LOG_LEVELS = {
     ERROR : 'error'
 };
 
+// Extra stuff... we better use jQuery.
+
 Array.prototype.last = function() { return this[this.length-1]; };
+String.prototype.trim = function() {
+  return this.replace(/^\s+|\s+$/g, "");
+};
 
 /***********************************************************************/
 /* The CoqPanel class contains the goal and the query buffer           */
@@ -181,9 +186,16 @@ class CoqPanel {
         d3.select(this.query)
             .append('div')
             .attr('class', level)
-            .html(text)
-            .node()
-            .scrollIntoView();
+            .html(text);
+            // .node()
+            // .scrollIntoView();
+
+        if (!this.scrollTimeout) {
+            this.scrollTimeout = setTimeout( () => {
+                this.query.scrollIntoView(false);
+                this.scrollTimeout = null;
+            }, 400 );
+        }
     }
 
     filterLog(level_select) {
@@ -395,6 +407,8 @@ class CoqManager {
             }, 100);
         };
 
+        this.waitForPkgs = [];
+
         var coq_script = this.options.base_path +
             (this.options.mock ? 'coq-js/jsmock' : 'coq-js/jscoq');
 
@@ -444,6 +458,21 @@ class CoqManager {
 
         this.coq.onBundleLoad = bundle_info => {
             this.packages.onBundleLoad(bundle_info);
+
+            // Reenable the IDE
+            if (this.waitForPkgs.length > 0) {
+
+                let name  = bundle_info.desc;
+                let index = this.waitForPkgs.indexOf(name);
+
+                if (index > -1) {
+                    this.waitForPkgs.splice(index, 1);
+                }
+
+                if (this.waitForPkgs.length === 0) {
+                    this.enable();
+                }
+            }
         };
 
         // Bind jsCoq events: package progress download.
@@ -495,10 +524,10 @@ class CoqManager {
                 msg = "Loaded Module: " + msg;
             }
 
-            if(level != COQ_LOG_LEVELS.DEBUG) {
-                msg = msg.replace(/(?:\r\n|\r|\n)/g, '<br />');
-                this.panel.log(msg, level);
-            }
+            // if(level != COQ_LOG_LEVELS.DEBUG) {
+            msg = msg.trim().replace(/(?:\r\n|\r|\n)/g, '<br />');
+            this.panel.log(msg, level);
+            // }
         };
 
         // Coq Init: At this point, the required libraries are loaded
@@ -584,10 +613,22 @@ class CoqManager {
         window.addEventListener('resize', evt => { this.panel.adjustWidth(); } );
 
         // Enable the buttons.
-        this.buttons.addEventListener('click', evt => { this.toolbarClickHandler(evt); } );
+        this.btnEventHandler = this.toolbarClickHandler.bind(this);
+        this.buttons.addEventListener('click', this.btnEventHandler);
         this.buttons.style.display = 'inline-block';
         this.buttons.style.opacity = 1;
         this.provider.focus();
+    }
+
+    // Disable the IDE.
+    disable() {
+        // Disable the buttons.
+        this.buttons.removeEventListener('click', this.btnEventHandler);
+        this.buttons.style.display = 'none';
+        this.buttons.style.opacity = 0;
+        this.panel.proof.textContent +=
+                "\n===> Waiting for Package load!\n";
+
     }
 
     // Drops all the state!
@@ -667,8 +708,15 @@ class CoqManager {
                 let pkg_panel = document.getElementById('packages-panel').parentNode;
                 pkg_panel.classList.remove('collapsed');
 
+                this.disable();
+                this.waitForPkgs = pkgs;
+
                 pkgs.forEach(this.coq.add_pkg,this);
 
+                return true;
+
+            case 'dump':
+                window.dumpCache();
                 return true;
 
             default:

@@ -6,38 +6,38 @@
       "pkg_id": [ "Coq", "syntax" ],
       "vo_files": [],
       "cma_files": [
-        "z_syntax_plugin.cma", "nat_syntax_plugin.cma",
-        "string_syntax_plugin.cma", "r_syntax_plugin.cma",
-        "numbers_syntax_plugin.cma", "ascii_syntax_plugin.cma"
+        "numbers_syntax_plugin.cma", "string_syntax_plugin.cma",
+        "r_syntax_plugin.cma", "z_syntax_plugin.cma",
+        "ascii_syntax_plugin.cma", "nat_syntax_plugin.cma"
       ]
     },
     {
       "pkg_id": [ "Coq", "Init" ],
       "vo_files": [
-        "Tactics.vo", "Logic_Type.vo", "Prelude.vo", "Logic.vo", "Specif.vo",
-        "Wf.vo", "Notations.vo", "Peano.vo", "Nat.vo", "Datatypes.vo"
+        "Prelude.vo", "Specif.vo", "Nat.vo", "Peano.vo", "Tactics.vo",
+        "Logic_Type.vo", "Notations.vo", "Logic.vo", "Wf.vo", "Datatypes.vo"
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Bool" ],
       "vo_files": [
-        "IfProp.vo", "DecBool.vo", "Sumbool.vo", "Zerob.vo", "Bvector.vo",
-        "Bool.vo", "BoolEq.vo"
+        "Bool.vo", "BoolEq.vo", "DecBool.vo", "Sumbool.vo", "Bvector.vo",
+        "Zerob.vo", "IfProp.vo"
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Program" ],
       "vo_files": [
-        "Equality.vo", "Tactics.vo", "Combinators.vo", "Program.vo",
-        "Basics.vo", "Subset.vo", "Utils.vo", "Wf.vo", "Syntax.vo"
+        "Program.vo", "Syntax.vo", "Subset.vo", "Combinators.vo", "Utils.vo",
+        "Equality.vo", "Basics.vo", "Tactics.vo", "Wf.vo"
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Unicode" ],
-      "vo_files": [ "Utf8_core.vo", "Utf8.vo" ],
+      "vo_files": [ "Utf8.vo", "Utf8_core.vo" ],
       "cma_files": []
     }
   ]
