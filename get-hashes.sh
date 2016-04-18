@@ -23,6 +23,8 @@ SF_TAR=~/external/coq/sf.tar.gz
 COLOR_DIR=~/external/coq/CoLoR-8.5
 HOTT_DIR=~/external/HoTT/
 UNIM_DIR=~/external/coq/UniMath/
+MC_DIR=~/external/coq/mirror-core/
+CEL_DIR=~/external/coq/coq-ext-lib/
 
 function get_build_name {
   COQH=`git --git-dir ${COQ_DIR}/.git log --pretty=format:"%h" -n 1`
@@ -46,5 +48,7 @@ get_hash "coquelicot" $CT_DIR
 get_hash "tlc"        $TLC_DIR
 get_hash "HoTT"       $HOTT_DIR
 get_hash "UniMath"    $UNIM_DIR
+get_hash "coq-ext-lib"  $CEL_DIR
+get_hash "mirror-core"  $MC_DIR
 get_svn  "color"      $COLOR_DIR
 get_date "sf"         $SF_TAR

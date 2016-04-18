@@ -92,6 +92,11 @@
       "cma_files": []
     },
     {
+      "pkg_id": [ "Coq", "Numbers", "Natural", "Peano" ],
+      "vo_files": [ "NPeano.vo" ],
+      "cma_files": []
+    },
+    {
       "pkg_id": [ "Coq", "Numbers", "Integer", "Abstract" ],
       "vo_files": [
         "ZSgnAbs.vo", "ZBase.vo", "ZParity.vo", "ZLcm.vo", "ZDivTrunc.vo",
