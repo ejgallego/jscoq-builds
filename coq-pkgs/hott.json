@@ -5,22 +5,16 @@
     {
       "pkg_id": [ "HoTT" ],
       "vo_files": [
-        "Functorish.vo", "HoTT.vo", "Extensions.vo", "Factorization.vo",
-        "Utf8.vo", "NullHomotopy.vo", "UnivalenceImpliesFunext.vo",
-        "TruncType.vo", "Pullback.vo", "Fibrations.vo", "FunextAxiom.vo",
-        "Tests.vo", "UnivalenceAxiom.vo", "EquivGroupoids.vo",
-        "categories.vo", "Pointed.vo", "EquivalenceVarieties.vo",
-        "Conjugation.vo", "Basics.vo", "Idempotents.vo", "Tactics.vo",
-        "Misc.vo", "DProp.vo", "ObjectClassifier.vo", "HSet.vo",
-        "Constant.vo", "HProp.vo", "Types.vo"
+        "Functorish.vo", "Extensions.vo", "Factorization.vo",
+        "NullHomotopy.vo", "UnivalenceImpliesFunext.vo", "TruncType.vo",
+        "Pullback.vo", "Fibrations.vo", "FunextAxiom.vo",
+        "UnivalenceAxiom.vo", "EquivGroupoids.vo", "EquivalenceVarieties.vo",
+        "Conjugation.vo", "Basics.vo", "Tactics.vo", "Misc.vo",
+        "ObjectClassifier.vo", "HSet.vo", "HProp.vo", "Types.vo"
       ],
       "cma_files": []
     },
-    {
-      "pkg_id": [ "HoTT", "Algebra" ],
-      "vo_files": [ "ooAction.vo", "Aut.vo", "ooGroup.vo" ],
-      "cma_files": []
-    },
+    { "pkg_id": [ "HoTT", "Algebra" ], "vo_files": [], "cma_files": [] },
     {
       "pkg_id": [ "HoTT", "Basics" ],
       "vo_files": [
@@ -36,16 +30,12 @@
         "ProductLaws.vo", "ExponentialLaws.vo", "Pseudofunctor.vo",
         "DependentProduct.vo", "DiscreteCategory.vo",
         "UniversalProperties.vo", "Comma.vo", "GroupoidCategory.vo",
-        "Utf8.vo", "CategoryOfGroupoids.vo", "NatCategory.vo",
-        "CategoryOfSections.vo", "Structure.vo",
-        "FundamentalPreGroupoidCategory.vo", "LaxComma.vo", "Functor.vo",
-        "IndiscreteCategory.vo", "HomotopyPreCategory.vo", "Yoneda.vo",
+        "CategoryOfGroupoids.vo", "NatCategory.vo", "CategoryOfSections.vo",
+        "Structure.vo", "LaxComma.vo", "IndiscreteCategory.vo",
         "NaturalTransformation.vo", "Limits.vo", "Cat.vo", "Grothendieck.vo",
         "KanExtensions.vo", "Category.vo", "FunctorCategory.vo",
-        "SimplicialSets.vo", "Adjoint.vo", "DualFunctor.vo", "HomFunctor.vo",
-        "InitialTerminalCategory.vo", "ChainCategory.vo", "Notations.vo",
-        "SetCategory.vo", "PseudonaturalTransformation.vo", "Profunctor.vo",
-        "SemiSimplicialSets.vo"
+        "DualFunctor.vo", "HomFunctor.vo", "InitialTerminalCategory.vo",
+        "SetCategory.vo", "PseudonaturalTransformation.vo", "Profunctor.vo"
       ],
       "cma_files": []
     },
@@ -53,9 +43,8 @@
       "pkg_id": [ "HoTT", "categories", "Adjoint" ],
       "vo_files": [
         "UnitCounit.vo", "Functorial.vo", "UniversalMorphisms.vo", "Utf8.vo",
-        "Dual.vo", "UnitCounitCoercions.vo", "Hom.vo", "Composition.vo",
-        "HomCoercions.vo", "Core.vo", "Identity.vo", "Notations.vo",
-        "Paths.vo", "Pointwise.vo"
+        "Dual.vo", "UnitCounitCoercions.vo", "Composition.vo", "Core.vo",
+        "Identity.vo", "Notations.vo", "Paths.vo", "Pointwise.vo"
       ],
       "cma_files": []
     },
@@ -145,22 +134,21 @@
     {
       "pkg_id": [ "HoTT", "categories", "Functor" ],
       "vo_files": [
-        "Utf8.vo", "Prod.vo", "Dual.vo", "Sum.vo", "Composition.vo",
-        "Attributes.vo", "Core.vo", "Identity.vo", "Notations.vo",
-        "Paths.vo", "Pointwise.vo"
+        "Prod.vo", "Dual.vo", "Sum.vo", "Core.vo", "Identity.vo", "Paths.vo",
+        "Pointwise.vo"
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "HoTT", "categories", "Functor", "Composition" ],
-      "vo_files": [ "Functorial.vo", "Laws.vo", "Core.vo" ],
+      "vo_files": [ "Laws.vo", "Core.vo" ],
       "cma_files": []
     },
     {
       "pkg_id": [
         "HoTT", "categories", "Functor", "Composition", "Functorial"
       ],
-      "vo_files": [ "Attributes.vo", "Core.vo" ],
+      "vo_files": [ "Core.vo" ],
       "cma_files": []
     },
     {
@@ -176,8 +164,7 @@
     {
       "pkg_id": [ "HoTT", "categories", "FunctorCategory" ],
       "vo_files": [
-        "Functorial.vo", "Morphisms.vo", "Utf8.vo", "Dual.vo", "Core.vo",
-        "Notations.vo"
+        "Functorial.vo", "Morphisms.vo", "Dual.vo", "Core.vo", "Notations.vo"
       ],
       "cma_files": []
     },
@@ -224,9 +211,8 @@
     {
       "pkg_id": [ "HoTT", "categories", "NaturalTransformation" ],
       "vo_files": [
-        "Isomorphisms.vo", "Utf8.vo", "Prod.vo", "Dual.vo", "Sum.vo",
-        "Composition.vo", "Core.vo", "Identity.vo", "Notations.vo",
-        "Paths.vo", "Pointwise.vo"
+        "Isomorphisms.vo", "Prod.vo", "Dual.vo", "Sum.vo", "Composition.vo",
+        "Core.vo", "Identity.vo", "Notations.vo", "Paths.vo", "Pointwise.vo"
       ],
       "cma_files": []
     },
@@ -274,36 +260,27 @@
       ],
       "cma_files": []
     },
-    {
-      "pkg_id": [ "HoTT", "Comodalities" ],
-      "vo_files": [ "CoreflectiveSubuniverse.vo" ],
-      "cma_files": []
-    },
+    { "pkg_id": [ "HoTT", "Comodalities" ], "vo_files": [], "cma_files": [] },
     {
       "pkg_id": [ "HoTT", "hit" ],
       "vo_files": [
-        "iso.vo", "quotient.vo", "TruncImpliesFunext.vo", "Join.vo",
-        "Connectedness.vo", "Truncations.vo", "Circle.vo", "Interval.vo",
-        "unique_choice.vo", "epi.vo", "Pushout.vo", "Flattening.vo", "V.vo",
-        "IntervalImpliesFunext.vo", "TwoSphere.vo", "Spheres.vo", "Coeq.vo",
-        "Suspension.vo", "FreeIntQuotient.vo"
+        "Interval.vo", "Flattening.vo", "IntervalImpliesFunext.vo",
+        "TwoSphere.vo", "Coeq.vo"
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "HoTT", "Modalities" ],
       "vo_files": [
-        "Notnot.vo", "ReflectiveSubuniverse.vo", "Open.vo", "Closed.vo",
-        "Fracture.vo", "Modality.vo", "Nullification.vo", "Accessible.vo",
-        "Identity.vo", "Lex.vo", "Localization.vo", "Topological.vo"
+        "Notnot.vo", "ReflectiveSubuniverse.vo", "Modality.vo",
+        "Nullification.vo", "Accessible.vo", "Lex.vo", "Localization.vo",
+        "Topological.vo"
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "HoTT", "Spaces" ],
-      "vo_files": [
-        "BAut.vo", "Nat.vo", "Int.vo", "No.vo", "Finite.vo", "Cantor.vo"
-      ],
+      "vo_files": [ "Int.vo", "Cantor.vo" ],
       "cma_files": []
     },
     {

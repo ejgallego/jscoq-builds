@@ -25,9 +25,9 @@
       "pkg_id": [ "mathcomp", "solvable" ],
       "vo_files": [
         "sylow.vo", "gseries.vo", "extraspecial.vo", "hall.vo",
-        "frobenius.vo", "commutator.vo", "gfunctor.vo", "extremal.vo",
-        "cyclic.vo", "finmodule.vo", "alt.vo", "pgroup.vo", "abelian.vo",
-        "all_solvable.vo", "center.vo", "jordanholder.vo",
+        "frobenius.vo", "burnside_app.vo", "commutator.vo", "gfunctor.vo",
+        "extremal.vo", "cyclic.vo", "finmodule.vo", "alt.vo", "pgroup.vo",
+        "abelian.vo", "all_solvable.vo", "center.vo", "jordanholder.vo",
         "primitive_action.vo", "maximal.vo", "nilpotent.vo"
       ],
       "cma_files": []
