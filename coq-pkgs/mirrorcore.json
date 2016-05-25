@@ -29,6 +29,14 @@
       "cma_files": []
     },
     {
+      "pkg_id": [ "MirrorCore", "Lambda", "Rewrite" ],
+      "vo_files": [
+        "Rewrite.vo", "Reduce.vo", "BottomUp.vo", "HintDbs.vo", "Tactic.vo",
+        "Respectful.vo", "Core.vo", "Repeat.vo"
+      ],
+      "cma_files": []
+    },
+    {
       "pkg_id": [ "MirrorCore", "MTypes" ],
       "vo_files": [
         "BaseType.vo", "MTypeUnify.vo", "ModularTypes.vo", "TSymOneOf.vo",
@@ -82,6 +90,15 @@
         "BoolView.vo", "ViewSum.vo", "ViewSumN.vo", "View.vo", "Ptrns.vo",
         "TypeView.vo", "StringView.vo", "ListView.vo", "FuncView.vo",
         "EqView.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "McExamples", "Cancel" ],
+      "vo_files": [
+        "MonoidSyntaxModular.vo", "MonoidSyntaxNoDec.vo", "LtacDemo.vo",
+        "RtacDemo.vo", "Monoid.vo", "MonoidSyntaxSimple.vo",
+        "MonoidSyntaxWithConst.vo"
       ],
       "cma_files": []
     }
