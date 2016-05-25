@@ -4,7 +4,7 @@
   "pkgs": [
     {
       "pkg_id": [ "Mtac" ],
-      "vo_files": [ "Hash.vo", "Mtactics.vo", "Mtac.vo" ],
+      "vo_files": [ "Mtactics.vo", "Mtac.vo", "Hash.vo" ],
       "cma_files": [ "mtac.cma" ]
     }
   ]

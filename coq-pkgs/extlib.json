@@ -9,48 +9,97 @@
     },
     {
       "pkg_id": [ "ExtLib", "Core" ],
-      "vo_files": [ "RelDec.vo", "EquivDec.vo", "CmpDec.vo", "Any.vo" ],
+      "vo_files": [
+        "EquivDec.vo", "RelDec.vo", "Any.vo", "CmpDec.vo", "Type.vo"
+      ],
       "cma_files": []
     },
-    { "pkg_id": [ "ExtLib", "Data" ], "vo_files": [], "cma_files": [] },
-    { "pkg_id": [ "ExtLib", "Data", "Eq" ], "vo_files": [], "cma_files": [] },
+    {
+      "pkg_id": [ "ExtLib", "Data" ],
+      "vo_files": [
+        "Eq.vo", "Fun.vo", "Option.vo", "Char.vo", "PreFun.vo", "Sum.vo",
+        "Pair.vo", "ListNth.vo", "HList.vo", "Fin.vo", "String.vo",
+        "Prop.vo", "Stream.vo", "Lazy.vo", "Positive.vo",
+        "ListFirstnSkipn.vo", "Tuple.vo", "Unit.vo", "SumN.vo", "POption.vo",
+        "N.vo", "Vector.vo", "Bool.vo", "List.vo", "LazyList.vo", "Z.vo",
+        "Checked.vo", "PPair.vo", "SigT.vo", "PList.vo", "Nat.vo",
+        "Member.vo"
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "ExtLib", "Data", "Eq" ],
+      "vo_files": [ "UIP_trans.vo" ],
+      "cma_files": []
+    },
     {
       "pkg_id": [ "ExtLib", "Data", "Graph" ],
-      "vo_files": [],
+      "vo_files": [
+        "GraphAlgos.vo", "BuildGraph.vo", "GraphAdjList.vo", "Graph.vo"
+      ],
       "cma_files": []
     },
     {
       "pkg_id": [ "ExtLib", "Data", "Map" ],
-      "vo_files": [],
+      "vo_files": [ "FMapAList.vo", "FMapTwoThreeK.vo", "FMapPositive.vo" ],
       "cma_files": []
     },
     {
       "pkg_id": [ "ExtLib", "Data", "Monads" ],
-      "vo_files": [],
+      "vo_files": [
+        "WriterMonad.vo", "FuelMonadLaws.vo", "OptionMonadLaws.vo",
+        "ReaderMonad.vo", "StateMonad.vo", "ContMonad.vo", "EitherMonad.vo",
+        "FuelMonad.vo", "ListMonad.vo", "IdentityMonadLaws.vo",
+        "OptionMonad.vo", "ReaderMonadLaws.vo", "IdentityMonad.vo"
+      ],
       "cma_files": []
     },
     {
       "pkg_id": [ "ExtLib", "Data", "Set" ],
-      "vo_files": [],
+      "vo_files": [ "ListSet.vo", "SetMap.vo", "TwoThreeTrees.vo" ],
       "cma_files": []
     },
-    { "pkg_id": [ "ExtLib", "Generic" ], "vo_files": [], "cma_files": [] },
+    {
+      "pkg_id": [ "ExtLib", "Generic" ],
+      "vo_files": [ "Data.vo", "DerivingData.vo", "Func.vo", "Ind.vo" ],
+      "cma_files": []
+    },
     {
       "pkg_id": [ "ExtLib", "Programming" ],
-      "vo_files": [],
+      "vo_files": [
+        "With.vo", "Le.vo", "Extras.vo", "Injection.vo", "Show.vo", "Eqv.vo"
+      ],
       "cma_files": []
     },
-    { "pkg_id": [ "ExtLib", "Recur" ], "vo_files": [], "cma_files": [] },
-    { "pkg_id": [ "ExtLib", "Relations" ], "vo_files": [], "cma_files": [] },
+    {
+      "pkg_id": [ "ExtLib", "Recur" ],
+      "vo_files": [ "GenRec.vo", "Facts.vo", "Relation.vo", "Measure.vo" ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "ExtLib", "Relations" ],
+      "vo_files": [ "Compose.vo", "TransitiveClosure.vo" ],
+      "cma_files": []
+    },
     {
       "pkg_id": [ "ExtLib", "Structures" ],
-      "vo_files": [ "Proper.vo", "EqDep.vo" ],
+      "vo_files": [
+        "BinOps.vo", "Maps.vo", "Foldable.vo", "FunctorLaws.vo",
+        "MonadCont.vo", "MonadFix.vo", "Applicative.vo", "MonadWriter.vo",
+        "Monads.vo", "MonadZero.vo", "MonadPlus.vo", "Functor.vo", "Sets.vo",
+        "Identity.vo", "CoMonad.vo", "Monad.vo", "MonadTrans.vo",
+        "Reducible.vo", "MonadState.vo", "Traversable.vo", "Proper.vo",
+        "MonadExc.vo", "CoFunctor.vo", "EqDep.vo", "MonadLaws.vo",
+        "MonadReader.vo", "Monoid.vo"
+      ],
       "cma_files": []
     },
     {
       "pkg_id": [ "ExtLib", "Tactics" ],
       "vo_files": [
-        "EqDep.vo", "Forward.vo", "Injection.vo", "Consider.vo", "Cases.vo"
+        "Forward.vo", "BoolTac.vo", "Equality.vo", "TypeTac.vo",
+        "Injection.vo", "Cases.vo", "Parametric.vo", "EqDep.vo", "Reify.vo",
+        "Consider.vo", "MonadTac.vo"
       ],
       "cma_files": []
     }
