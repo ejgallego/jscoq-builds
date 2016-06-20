@@ -1,7 +1,44 @@
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
 // Distributed under an MIT license: http://codemirror.net/LICENSE
 
-// Coq mode created by Benoît Pin, Valentin Robert and others
+// Coq mode created by Valentin Robert, Benoît Pin, Emilio J. Gallego
+// Arias, and others
+
+/************************************************************************/
+/*  v      *      CodeMirror Mode for the Coq Proof Assistant           */
+/* <O___,, *         Specialized to jsCoq - Copyright 2016              */
+/*   \VV/  **************************************************************/
+/*    //   *      This file is distributed under the terms of the       */
+/*         *                      MIT license                           */
+/************************************************************************/
+
+/************************************************************************/
+/* General information: the mode provides only a tokenizer, completion  */
+/* and other advanced CM features are TODO.                             */
+/*                                                                      */
+/* New tokens declared:                                                 */
+/*                                                                      */
+/* - statementend: Dot ending a Coq statement has been detected         */
+/* - tactic: Coq tactic                                                 */
+/*                                                                      */
+/* BUGS:                                                                */
+/*                                                                      */
+/*   MUST be fixed before submitting upstream.                          */
+/*                                                                      */
+/* - Braces handling doesn't always work. Example: brace starting a     */
+/*   line.                                                              */
+/*                                                                      */
+/*   I suggest we use the regular expressions used by CoqIDE/emacs      */
+/*   thus a small rewrite is needed.                                    */
+/*                                                                      */
+/* TODO:                                                                */
+/*                                                                      */
+/* - Rebase before submission                                           */
+/* - comment addon                                                      */
+/* - indent                                                             */
+/* - completion                                                         */
+/*                                                                      */
+/************************************************************************/
 
 (function(mod) {
   if (typeof exports == "object" && typeof module == "object") // CommonJS
@@ -99,16 +136,19 @@
       'Admitted'
     ];
 
+    // Map assigning each keyword a category.
     var words = {};
-    vernacular.map(function(word){words[word] = 'builtin';});
-    gallina.map(function(word){words[word] = 'keyword';});
-    tactics.map(function(word){words[word] = 'tactic';});
-    terminators.map(function(word){words[word] = 'terminator';});
-    admitters.map(function(word){words[word] = 'keyword';});
 
-//        'let': 'keyword',
-//        'print_endline': 'builtin',
-//        'true': 'atom',
+    // We map
+    // - gallina keywords -> CM keywords
+    // - vernaculars      -> CM builtins
+    // - admitters        -> CM keywords XXX
+    gallina    .map(function(word){words[word] = 'keyword';});
+    admitters  .map(function(word){words[word] = 'keyword';});
+    vernacular .map(function(word){words[word] = 'builtin';});
+
+    tactics    .map(function(word){words[word] = 'tactic';});
+    terminators.map(function(word){words[word] = 'terminator';});
 
     function tokenBase(stream, state) {
       if(stream.sol()) {

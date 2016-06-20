@@ -5,54 +5,54 @@
     {
       "pkg_id": [ "Coq", "Logic" ],
       "vo_files": [
-        "Description.vo", "Eqdep_dec.vo", "Berardi.vo", "Hurkens.vo",
-        "FunctionalExtensionality.vo", "ProofIrrelevance.vo",
-        "IndefiniteDescription.vo", "RelationalChoice.vo",
-        "ExtensionalityFacts.vo", "ClassicalFacts.vo", "JMeq.vo",
-        "Classical_Prop.vo", "WKL.vo", "EqdepFacts.vo", "Diaconescu.vo",
-        "Epsilon.vo", "WeakFan.vo", "ClassicalUniqueChoice.vo", "FinFun.vo",
-        "ChoiceFacts.vo", "Decidable.vo", "SetIsType.vo", "Eqdep.vo",
-        "ClassicalEpsilon.vo", "ClassicalChoice.vo",
-        "ClassicalDescription.vo", "ProofIrrelevanceFacts.vo",
-        "ConstructiveEpsilon.vo", "Classical.vo", "Classical_Pred_Type.vo"
+        "Classical_Pred_Type.vo", "Classical_Prop.vo", "ChoiceFacts.vo",
+        "ClassicalFacts.vo", "WKL.vo", "FinFun.vo", "WeakFan.vo",
+        "Epsilon.vo", "Berardi.vo", "ClassicalDescription.vo",
+        "ClassicalEpsilon.vo", "FunctionalExtensionality.vo",
+        "Description.vo", "ClassicalUniqueChoice.vo",
+        "ExtensionalityFacts.vo", "Eqdep_dec.vo", "ProofIrrelevanceFacts.vo",
+        "JMeq.vo", "Diaconescu.vo", "ConstructiveEpsilon.vo",
+        "ProofIrrelevance.vo", "Classical.vo", "Eqdep.vo",
+        "IndefiniteDescription.vo", "ClassicalChoice.vo", "SetIsType.vo",
+        "EqdepFacts.vo", "RelationalChoice.vo", "Hurkens.vo", "Decidable.vo"
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Program" ],
       "vo_files": [
-        "Equality.vo", "Tactics.vo", "Combinators.vo", "Program.vo",
-        "Basics.vo", "Subset.vo", "Utils.vo", "Wf.vo", "Syntax.vo"
+        "Program.vo", "Syntax.vo", "Subset.vo", "Combinators.vo", "Utils.vo",
+        "Equality.vo", "Basics.vo", "Tactics.vo", "Wf.vo"
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Classes" ],
       "vo_files": [
-        "CEquivalence.vo", "SetoidClass.vo", "RelationClasses.vo",
-        "EquivDec.vo", "Equivalence.vo", "Morphisms_Relations.vo",
-        "CMorphisms.vo", "SetoidTactics.vo", "Morphisms.vo",
-        "RelationPairs.vo", "DecidableClass.vo", "Init.vo",
-        "CRelationClasses.vo", "Morphisms_Prop.vo", "SetoidDec.vo"
+        "SetoidClass.vo", "Morphisms.vo", "SetoidDec.vo",
+        "Morphisms_Relations.vo", "SetoidTactics.vo", "RelationClasses.vo",
+        "CRelationClasses.vo", "Morphisms_Prop.vo", "DecidableClass.vo",
+        "EquivDec.vo", "CEquivalence.vo", "Equivalence.vo", "CMorphisms.vo",
+        "Init.vo", "RelationPairs.vo"
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Structures" ],
       "vo_files": [
-        "DecidableType.vo", "OrdersTac.vo", "OrdersLists.vo",
-        "EqualitiesFacts.vo", "OrdersEx.vo", "OrderedType.vo",
-        "OrderedTypeAlt.vo", "Equalities.vo", "OrderedTypeEx.vo",
-        "Orders.vo", "OrdersAlt.vo", "DecidableTypeEx.vo",
-        "GenericMinMax.vo", "OrdersFacts.vo"
+        "EqualitiesFacts.vo", "OrderedTypeEx.vo", "GenericMinMax.vo",
+        "Orders.vo", "OrdersAlt.vo", "OrdersFacts.vo", "OrdersEx.vo",
+        "Equalities.vo", "OrderedTypeAlt.vo", "OrdersTac.vo",
+        "OrderedType.vo", "OrdersLists.vo", "DecidableTypeEx.vo",
+        "DecidableType.vo"
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Relations" ],
       "vo_files": [
-        "Relation_Operators.vo", "Operators_Properties.vo", "Relations.vo",
-        "Relation_Definitions.vo"
+        "Relation_Definitions.vo", "Relations.vo", "Operators_Properties.vo",
+        "Relation_Operators.vo"
       ],
       "cma_files": []
     },
@@ -64,69 +64,67 @@
     {
       "pkg_id": [ "Coq", "Lists" ],
       "vo_files": [
-        "ListSet.vo", "ListTactics.vo", "Streams.vo", "List.vo",
-        "ListDec.vo", "SetoidPermutation.vo", "StreamMemo.vo",
-        "SetoidList.vo"
+        "StreamMemo.vo", "SetoidPermutation.vo", "ListDec.vo", "List.vo",
+        "Streams.vo", "ListSet.vo", "SetoidList.vo", "ListTactics.vo"
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Vectors" ],
       "vo_files": [
-        "VectorEq.vo", "Fin.vo", "VectorSpec.vo", "VectorDef.vo", "Vector.vo"
+        "VectorDef.vo", "VectorEq.vo", "VectorSpec.vo", "Vector.vo", "Fin.vo"
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Sets" ],
       "vo_files": [
-        "Relations_3_facts.vo", "Finite_sets_facts.vo", "Permut.vo",
-        "Relations_1_facts.vo", "Multiset.vo", "Relations_1.vo",
-        "Partial_Order.vo", "Finite_sets.vo", "Powerset_Classical_facts.vo",
-        "Relations_2.vo", "Ensembles.vo", "Infinite_sets.vo", "Uniset.vo",
-        "Powerset_facts.vo", "Constructive_sets.vo", "Cpo.vo",
-        "Relations_2_facts.vo", "Classical_sets.vo", "Powerset.vo",
-        "Integers.vo", "Relations_3.vo", "Image.vo"
+        "Relations_1.vo", "Relations_3.vo", "Cpo.vo", "Permut.vo",
+        "Infinite_sets.vo", "Relations_2.vo", "Relations_1_facts.vo",
+        "Finite_sets_facts.vo", "Powerset_Classical_facts.vo", "Image.vo",
+        "Constructive_sets.vo", "Uniset.vo", "Relations_2_facts.vo",
+        "Ensembles.vo", "Multiset.vo", "Powerset.vo", "Finite_sets.vo",
+        "Powerset_facts.vo", "Integers.vo", "Classical_sets.vo",
+        "Relations_3_facts.vo", "Partial_Order.vo"
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Sorting" ],
       "vo_files": [
-        "Sorted.vo", "PermutSetoid.vo", "PermutEq.vo", "Mergesort.vo",
-        "Heap.vo", "Sorting.vo", "Permutation.vo"
+        "Mergesort.vo", "PermutEq.vo", "Sorting.vo", "PermutSetoid.vo",
+        "Permutation.vo", "Heap.vo", "Sorted.vo"
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "FSets" ],
       "vo_files": [
-        "FMapFacts.vo", "FSetToFiniteSet.vo", "FMapAVL.vo", "FMapList.vo",
-        "FSetAVL.vo", "FSetBridge.vo", "FSetEqProperties.vo", "FMaps.vo",
-        "FSetInterface.vo", "FSetFacts.vo", "FSets.vo", "FSetDecide.vo",
-        "FMapWeakList.vo", "FSetList.vo", "FSetCompat.vo", "FSetPositive.vo",
-        "FMapPositive.vo", "FSetProperties.vo", "FSetWeakList.vo",
-        "FMapInterface.vo", "FMapFullAVL.vo"
+        "FMapFacts.vo", "FSetCompat.vo", "FMapFullAVL.vo", "FSetDecide.vo",
+        "FSetAVL.vo", "FSetFacts.vo", "FMaps.vo", "FSetEqProperties.vo",
+        "FSetPositive.vo", "FSetProperties.vo", "FMapWeakList.vo",
+        "FSetInterface.vo", "FMapInterface.vo", "FMapPositive.vo",
+        "FMapList.vo", "FMapAVL.vo", "FSetWeakList.vo", "FSets.vo",
+        "FSetList.vo", "FSetToFiniteSet.vo", "FSetBridge.vo"
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "MSets" ],
       "vo_files": [
-        "MSetEqProperties.vo", "MSetToFiniteSet.vo", "MSetProperties.vo",
-        "MSetFacts.vo", "MSetList.vo", "MSetRBT.vo", "MSetPositive.vo",
-        "MSetAVL.vo", "MSetDecide.vo", "MSetGenTree.vo", "MSets.vo",
-        "MSetWeakList.vo", "MSetInterface.vo"
+        "MSetList.vo", "MSetInterface.vo", "MSetFacts.vo", "MSetWeakList.vo",
+        "MSetPositive.vo", "MSets.vo", "MSetDecide.vo", "MSetToFiniteSet.vo",
+        "MSetEqProperties.vo", "MSetGenTree.vo", "MSetProperties.vo",
+        "MSetRBT.vo", "MSetAVL.vo"
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Wellfounded" ],
       "vo_files": [
-        "Disjoint_Union.vo", "Inclusion.vo", "Lexicographic_Product.vo",
-        "Lexicographic_Exponentiation.vo", "Wellfounded.vo",
-        "Transitive_Closure.vo", "Inverse_Image.vo", "Union.vo",
-        "Well_Ordering.vo"
+        "Lexicographic_Product.vo", "Inclusion.vo", "Inverse_Image.vo",
+        "Lexicographic_Exponentiation.vo", "Transitive_Closure.vo",
+        "Union.vo", "Well_Ordering.vo", "Wellfounded.vo", "Disjoint_Union.vo"
       ],
       "cma_files": []
     },

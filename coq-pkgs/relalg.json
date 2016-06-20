@@ -5,21 +5,21 @@
     {
       "pkg_id": [ "RelationAlgebra" ],
       "vo_files": [
-        "dfa.vo", "atoms.vo", "paterson.vo", "denum.vo", "move.vo",
-        "lattice.vo", "rmx.vo", "powerfix.vo", "ugregex_dec.vo",
-        "ordinal.vo", "positives.vo", "kat_completeness.vo", "matrix_ext.vo",
-        "boolean.vo", "sups.vo", "kat_untyping.vo", "sums.vo", "level.vo",
-        "normalisation.vo", "kat_tac.vo", "imp.vo", "monoid.vo", "traces.vo",
-        "relalg.vo", "rewriting.vo", "ka_completeness.vo", "lang.vo",
-        "common.vo", "ugregex.vo", "factors.vo", "kleene.vo", "rel.vo",
-        "glang.vo", "matrix.vo", "lsyntax.vo", "untyping.vo", "gregex.vo",
-        "lset.vo", "compiler_opts.vo", "bmx.vo", "kat.vo", "regex.vo",
-        "syntax.vo", "pair.vo", "kat_reification.vo", "nfa.vo", "prop.vo",
-        "comparisons.vo"
+        "bmx.vo", "matrix_ext.vo", "glang.vo", "sups.vo", "positives.vo",
+        "kat_untyping.vo", "ka_completeness.vo", "gregex.vo", "rel.vo",
+        "kat.vo", "common.vo", "ugregex_dec.vo", "ordinal.vo", "atoms.vo",
+        "boolean.vo", "lset.vo", "prop.vo", "ugregex.vo", "level.vo",
+        "denum.vo", "rewriting.vo", "untyping.vo", "comparisons.vo",
+        "dfa.vo", "compiler_opts.vo", "imp.vo", "factors.vo", "lsyntax.vo",
+        "syntax.vo", "nfa.vo", "powerfix.vo", "monoid.vo", "rmx.vo",
+        "regex.vo", "lattice.vo", "lang.vo", "kat_completeness.vo",
+        "sums.vo", "matrix.vo", "traces.vo", "pair.vo", "relalg.vo",
+        "kat_reification.vo", "move.vo", "kat_tac.vo", "kleene.vo",
+        "normalisation.vo", "paterson.vo"
       ],
       "cma_files": [
-        "ra_common.cmo", "ra_fold.cmo", "ra_reification.cmo", "mrewrite.cmo",
-        "kat_reification.cma"
+        "mrewrite.cmo", "ra_common.cmo", "ra_reification.cmo",
+        "kat_reification.cma", "ra_fold.cmo"
       ]
     }
   ]

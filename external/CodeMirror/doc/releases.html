@@ -30,9 +30,71 @@
 
   <h2>Version 5.x</h2>
 
+  <p class="rel">20-05-2016: <a href="http://codemirror.net/codemirror-5.15.2.zip">Version 5.15.2</a>:</p>
+
+  <ul class="rel-note">
+    <li>Fix a critical document corruption bug that occurs when a document is gradually grown.</li>
+  </ul>
+
+  <p class="rel">20-05-2016: <a href="http://codemirror.net/codemirror-5.15.0.zip">Version 5.15.0</a>:</p>
+
+  <ul class="rel-note">
+    <li>Fix bug that caused the selection to reset when focusing the editor in contentEditable input mode.</li>
+    <li>Fix issue where not all ASCII control characters were being replaced by placeholders.</li>
+    <li>Remove the assumption that all modes have a <code>startState</code> method from several wrapping modes.</li>
+    <li>Fix issue where the editor would complain about overlapping collapsed ranges when there weren't any.</li>
+    <li>Optimize document tree building when loading or pasting huge chunks of content.</li>
+    <li>Explicitly bind Ctrl-O on OS X to make that binding (“open line”) act as expected.</li>
+    <li>Pasting <a href="http://codemirror.net/doc/manual.html#option_lineWiseCopyCut">linewise-copied</a> content when there is no selection now inserts the lines above the current line.</li>
+    <li><a href="http://codemirror.net/mode/markdown/">markdown mode</a>: Fix several issues in matching link targets.</li>
+    <li><a href="http://codemirror.net/mode/clike/">clike mode</a>: Improve indentation of C++ template declarations.</li>
+    <li><a href="http://codemirror.net/mode/javascript/">javascript mode</a>: Support <code>async</code>/<code>await</code> and improve support for TypeScript type syntax.</li>
+  </ul>
+
+  <p class="rel">20-04-2016: <a href="http://codemirror.net/codemirror-5.14.0.zip">Version 5.14.0</a>:</p>
+
+  <ul class="rel-note">
+    <li><a href="http://codemirror.net/doc/manual.html#posFromIndex"><code>posFromIndex</code></a> and <a href="http://codemirror.net/doc/manual.html#indexFromPos"><code>indexFromPos</code></a> now take <a href="http://codemirror.net/doc/manual.html#option_lineSeparator"><code>lineSeparator</code></a> into account</li>
+    <li><a href="http://codemirror.net/demo/vim.html">vim bindings</a>: Only call <code>.save()</code> when it is actually available</li>
+    <li><a href="http://codemirror.net/doc/manual.html#addon_comment">comment addon</a>: Be careful not to mangle multi-line strings</li>
+    <li><a href="http://codemirror.net/mode/python/index.html">Python mode</a>: Improve distinguishing of decorators from <code>@</code> operators</li>
+    <li><a href="http://codemirror.net/doc/manual.html#findMarks"><code>findMarks</code></a>: No longer return marks that touch but don't overlap given range</li>
+    <li><a href="http://codemirror.net/demo/vim.html">vim bindings</a>: Add yank command</li>
+    <li><a href="http://codemirror.net/doc/manual.html#addon_match-highlighter">match-highlighter addon</a>: Add <code>trim</code> option to disable ignoring of whitespace</li>
+    <li><a href="http://codemirror.net/mode/powershell/index.html">PowerShell mode</a>: Added</li>
+    <li><a href="http://codemirror.net/mode/yacas/index.html">Yacas mode</a>: Added</li>
+    <li><a href="http://codemirror.net/mode/webidl/index.html">Web IDL mode</a>: Added</li>
+    <li><a href="http://codemirror.net/mode/sas/index.html">SAS mode</a>: Added</li>
+    <li><a href="http://codemirror.net/mode/mbox/index.html">mbox mode</a>: Added</li>
+    <li>Full <a href="https://github.com/codemirror/CodeMirror/compare/5.13.4...5.14.0">list of patches</a></li>
+  </ul>
+
+  <p class="rel">21-03-2016: <a href="http://codemirror.net/codemirror-5.13.2.zip">Version 5.13.2</a>:</p>
+
+  <ul class="rel-note">
+    <li>Solves a problem where the gutter would sometimes not extend all the way to the end of the document.</li>
+  </ul>
+
+  <p class="rel">21-03-2016: <a href="http://codemirror.net/codemirror-5.13.zip">Version 5.13</a>:</p>
+
+  <ul class="rel-note">
+    <li>New DOM event forwarded: <a href="http://codemirror.net/doc/manual.html#event_dom"><code>&quot;dragleave&quot;</code></a>.</li>
+    <li><a href="http://codemirror.net/mode/protobuf/index.html">protobuf mode</a>: Newly added.</li>
+    <li>Fix problem where <a href="http://codemirror.net/doc/manual.html#findMarks"><code>findMarks</code></a> sometimes failed to find multi-line marks.</li>
+    <li>Fix crash that showed up when atomic ranges and bidi text were combined.</li>
+    <li><a href="http://codemirror.net/demo/complete.html">show-hint addon</a>: Completion widgets no longer close when the line indented or dedented.</li>
+    <li><a href="http://codemirror.net/demo/merge.html">merge addon</a>: Fix bug when merging chunks at the end of the file.</li>
+    <li><a href="http://codemirror.net/doc/manual.html#addon_placeholder">placeholder addon</a>: No longer gets confused by <a href="http://codemirror.net/doc/manual.html#swapDoc"><code>swapDoc</code></a>.</li>
+    <li><a href="http://codemirror.net/doc/manual.html#addon_simplescrollbars">simplescrollbars addon</a>: Fix invalid state when deleting at end of document.</li>
+    <li><a href="http://codemirror.net/mode/clike/index.html">clike mode</a>: No longer gets confused when a comment starts after an operator.</li>
+    <li><a href="http://codemirror.net/mode/markdown/index.html">markdown mode</a>: Now supports CommonMark-style flexible list indentation.</li>
+    <li><a href="http://codemirror.net/mode/dylan/index.html">dylan mode</a>: Several improvements and fixes.</li>
+    <li>Full <a href="https://github.com/codemirror/CodeMirror/compare/5.12.0...5.13.0">list of patches</a></li>
+  </ul>
+
   <p class="rel">19-02-2016: <a href="http://codemirror.net/codemirror-5.12.zip">Version 5.12</a>:</p>
 
-  <ul>
+  <ul class="rel-note">
     <li><a href="http://codemirror.net/demo/vim.html">Vim bindings</a>: Ctrl-Q is now an alias for Ctrl-V.</li>
     <li><a href="http://codemirror.net/demo/vim.html">Vim bindings</a>: The Vim API now exposes an <code>unmap</code> method to unmap bindings.</li>
     <li><a href="http://codemirror.net/demo/activeline.html">active-line addon</a>: This addon can now style the active line's gutter.</li>
@@ -55,7 +117,7 @@
 
   <p class="rel">20-01-2016: <a href="http://codemirror.net/codemirror-5.11.zip">Version 5.11</a>:</p>
 
-  <ul>
+  <ul class="rel-note">
     <li>New modes: <a href="../mode/jsx/index.html">JSX</a>, <a href="../mode/haskell-literate/index.html">literate Haskell</a></li>
     <li>The editor now forwards more <a href="manual.html#event_dom">DOM events</a>: <code>cut</code>, <code>copy</code>, <code>paste</code>, and <code>touchstart</code>. It will also forward <code>mousedown</code> for drag events</li>
     <li>Fixes a bug where bookmarks next to collapsed spans were not rendered</li>
@@ -169,7 +231,7 @@
     asynchronous mode</li>
     <li>Fix backspace binding in <a href="../demo/sublime.html">Sublime bindings</a></li>
     <li>Change the way IME is handled in the <code>"textarea"</code> <a href="manual.html#option_inputStyle">input style</a></li>
-    
+
     <li>New modes: <a href="../mode/mumps/index.html">MUMPS</a>, <a href="../mode/handlebars/index.html">Handlebars</a></li>
     <li>Rewritten modes: <a href="../mode/django/index.html">Django</a>, <a href="../mode/z80/index.html">Z80</a></li>
     <li>New theme: <a href="../demo/theme.html#liquibyte">Liquibyte</a></li>
@@ -623,7 +685,7 @@
     <li>Further improvements to the <a href="../demo/vim.html">vim mode</a>.</li>
     <li>Full <a href="https://github.com/codemirror/CodeMirror/compare/v3.01...v3.1">list of patches</a>.</li>
   </ul>
-  
+
 
   <p class="rel">25-01-2013: <a href="http://codemirror.net/codemirror-3.02.zip">Version 3.02</a>:</p>
 
@@ -663,7 +725,7 @@
     <li>Work around Safari segfault when dragging.</li>
     <li>Full <a href="https://github.com/codemirror/CodeMirror/compare/v3.0rc2...v3.0">list of patches</a>.</li>
   </ul>
-  
+
   <p class="rel">20-11-2012: <a href="http://codemirror.net/codemirror-3.0rc2.zip">Version 3.0, release candidate 2</a>:</p>
 
   <ul class="rel-note">
