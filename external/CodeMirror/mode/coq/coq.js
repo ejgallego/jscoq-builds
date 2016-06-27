@@ -150,41 +150,49 @@
     tactics    .map(function(word){words[word] = 'tactic';});
     terminators.map(function(word){words[word] = 'terminator';});
 
-    function tokenBase(stream, state) {
-      if(stream.sol()) {
-        state.logicalsol = true; // logicalsol: only \s caracters seen from sol
-      }
-      if(stream.eol())
-        state.logicalsol = false;
+    /*
+      Coq mode defines the following state variables:
 
+      - begin_sentence: only \s caracters seen from the last sentence.
+
+      - commentLevel [:int] = Level of nested comments.
+
+      - tokenize [:func] = current active tokenizer. We provide 4 main ones:
+
+        + tokenBase: Main parser, it reads the next character and
+          setups the next tokenizer. In particular it takes care of
+          braces. It doesn't properly analyze the sentences and
+          bracketing.
+
+        + tokenStatementEnd: Called when a dot is found in tokenBase,
+          it looks ahead on the string and returns statement end.
+
+        + tokenString: Takes care of escaping.
+
+        + tokenComment: Takes care of nested comments.
+
+     */
+
+    /*
+      Codemirror lexing functions:
+
+      - eat(s) = eat next char if s
+      - eatWhile(s) = eat s until fails
+      - match(regexp) => return array of matches and optionally eat
+
+     */
+    function tokenBase(stream, state) {
+
+      // If any space in the input, return null.
       if(stream.eatSpace())
         return null;
 
       var ch = stream.next();
 
-      if(state.logicalsol) {
-        if(/[\*\-\+]/.test(ch)) {
-          state.logicalsol = false;
-          return 'bullet';
-        }
-        if(/[\{\}]/.test(ch)) {
-          state.logicalsol = false;
-          return 'brace';
-        }
-        if(!(/\s/.test(ch)))
-          state.logicalsol = false;
-      }
+      if(state.begin_sentence && (/[-*+{}]/.test(ch)))
+        return 'coq-bullet';
 
-      if(ch === '.') {
-        state.tokenize = tokenStatementEnd;
-        return state.tokenize(stream, state);
-      }
-
-      if (ch === '"') {
-        state.tokenize = tokenString;
-        return state.tokenize(stream, state);
-      }
-
+      // Preserve begin sentence after comment.
       if (ch === '(') {
         if (stream.peek() === '*') {
           stream.next();
@@ -192,7 +200,29 @@
           state.tokenize = tokenComment;
           return state.tokenize(stream, state);
         }
+        state.begin_sentence = false;
         return 'parenthesis';
+      }
+
+      if( ! (/\s/.test(ch)) ) {
+        state.begin_sentence = false;
+      }
+
+      if(ch === '.') {
+        // Parse .. specially.
+        if(stream.peek() !== '.') {
+          state.tokenize = tokenStatementEnd;
+          return state.tokenize(stream, state);
+        } else {
+          stream.next();
+          return 'operator';
+        }
+
+      }
+
+      if (ch === '"') {
+        state.tokenize = tokenString;
+        return state.tokenize(stream, state);
       }
 
       if(ch === ')')
@@ -229,6 +259,7 @@
       stream.eatWhile(/\w/);
       var cur = stream.current();
       return words.hasOwnProperty(cur) ? words[cur] : 'variable';
+
     }
 
     function tokenString(stream, state) {
@@ -268,19 +299,24 @@
 
     function tokenStatementEnd(stream, state) {
       state.tokenize = tokenBase;
-      if(stream.eol() || stream.match(/\s/, false))
+
+      if(stream.eol() || stream.match(/\s/, false)) {
+        state.begin_sentence = true;
         return 'statementend';
+      }
     }
 
     return {
       startState: function() {
-        return {tokenize: tokenBase, commentLevel: 0};
+        return {begin_sentence: true, tokenize: tokenBase, commentLevel: 0};
       },
+
       token: function(stream, state) {
         return state.tokenize(stream, state);
       },
+
       blockCommentStart: "(*",
-      blockCommentEnd: "*)",
+      blockCommentEnd  : "*)",
       lineComment: null
     };
   });
