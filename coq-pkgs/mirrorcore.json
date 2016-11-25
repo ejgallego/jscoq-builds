@@ -2,105 +2,20 @@
   "desc": "mirrorcore",
   "deps": [ "plugin-utils", "extlib" ],
   "pkgs": [
-    {
-      "pkg_id": [ "MirrorCore" ],
-      "vo_files": [
-        "EnvI.vo", "Simple.vo", "Lemma.vo", "Generic.vo", "ExprSem.vo",
-        "OpenT.vo", "VarsToUVars.vo", "CtxLogic.vo", "LemmaApply.vo",
-        "UnifyI.vo", "ExprDAs.vo", "Instantiate.vo", "ExprProp.vo",
-        "SymI.vo", "SubstI.vo", "VariablesI.vo", "AbsAppI.vo", "ExprI.vo",
-        "SubstituteI.vo", "TypesI.vo"
-      ],
-      "cma_files": [ "reify_Lambda_plugin.cma" ]
-    },
-    {
-      "pkg_id": [ "MirrorCore", "Lambda" ],
-      "vo_files": [
-        "ExprVariables.vo", "Ptrns.vo", "ExprSubst.vo", "Lemma.vo",
-        "ExprCore.vo", "Rtac.vo", "TypedFoldLazy.vo", "TypedFoldEager.vo",
-        "ExprDFacts.vo", "ExprD.vo", "ExprDI.vo", "RewriteStrat.vo",
-        "Red.vo", "ExprDsimul.vo", "PolyInst.vo", "ExprLift.vo",
-        "ExprUnify_simul.vo", "ExprUnify_simple.vo", "FoldApp.vo",
-        "TypedFoldApp.vo", "AutoSetoidRewriteRtac.vo", "RedAll.vo",
-        "StrongFoldApp.vo", "Reify.vo", "Expr.vo", "AppN.vo",
-        "ExprUnify_common.vo", "ExprSubstitute.vo", "ExprTac.vo",
-        "RewriteRelations.vo", "Polymorphic.vo", "ExprUnify.vo"
-      ],
-      "cma_files": []
-    },
+    { "pkg_id": [ "MirrorCore" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "MirrorCore", "Lambda" ], "vo_files": [], "cma_files": [] },
     {
       "pkg_id": [ "MirrorCore", "Lambda", "Rewrite" ],
-      "vo_files": [
-        "Rewrite.vo", "Tactic.vo", "HintDbs.vo", "Reduce.vo", "Repeat.vo",
-        "Respectful.vo", "Core.vo", "BottomUp.vo"
-      ],
+      "vo_files": [],
       "cma_files": []
     },
-    {
-      "pkg_id": [ "MirrorCore", "MTypes" ],
-      "vo_files": [
-        "TSymOneOf.vo", "ModularTypes.vo", "ListType.vo", "TSyms.vo",
-        "BaseType.vo", "MTypeUnify.vo", "ProdType.vo", "GenericTypes.vo"
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "MirrorCore", "Reify" ],
-      "vo_files": [ "Patterns.vo", "Reify.vo" ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "MirrorCore", "RTac" ],
-      "vo_files": [
-        "ThenK.vo", "First.vo", "Idtac.vo", "SpecLemmas.vo", "Auto.vo",
-        "RTac.vo", "CoreK.vo", "RunOnGoals.vo", "Intro.vo", "AtGoal.vo",
-        "Simplify.vo", "SolveK.vo", "runTacK.vo", "Apply.vo", "IsSolved.vo",
-        "Try.vo", "Solve.vo", "Minify.vo", "RunOnGoals_list.vo", "Reduce.vo",
-        "Ctx.vo", "Assumption.vo", "Instantiate.vo", "Interface.vo",
-        "Repeat.vo", "Then.vo", "Rec.vo", "Core.vo", "IdtacK.vo", "Fail.vo",
-        "BIMap.vo", "EApply.vo"
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "MirrorCore", "Subst" ],
-      "vo_files": [ "UVarMap.vo", "FMapSubst.vo" ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "MirrorCore", "syms" ],
-      "vo_files": [
-        "SymOneOf.vo", "SymEnv.vo", "SymSum.vo", "SymSimple.vo",
-        "SymPolyEnv.vo", "SymProd.vo"
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "MirrorCore", "Util" ],
-      "vo_files": [
-        "Quant.vo", "SemiDec.vo", "Nat.vo", "Compat.vo", "Iteration.vo",
-        "Forwardy.vo", "HListBuild.vo", "ListMapT.vo", "Approx.vo"
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "MirrorCore", "Views" ],
-      "vo_files": [
-        "Ptrns.vo", "Ptrns2.vo", "FuncView.vo", "View.vo", "BoolView.vo",
-        "StringView.vo", "ProdView.vo", "EqView.vo", "TypeView.vo",
-        "ViewSum.vo", "ApplicativeView.vo", "ViewSumN.vo", "NatView.vo",
-        "ListView.vo"
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "McExamples", "Cancel" ],
-      "vo_files": [
-        "MonoidSyntaxSimple.vo", "MonoidSyntaxModular.vo", "LtacDemo.vo",
-        "MonoidSyntaxWithConst.vo", "MonoidSyntaxNoDec.vo", "Monoid.vo",
-        "RtacDemo.vo"
-      ],
-      "cma_files": []
-    }
+    { "pkg_id": [ "MirrorCore", "MTypes" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "MirrorCore", "Reify" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "MirrorCore", "RTac" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "MirrorCore", "Subst" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "MirrorCore", "syms" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "MirrorCore", "Util" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "MirrorCore", "Views" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "McExamples", "Cancel" ], "vo_files": [], "cma_files": [] }
   ]
 }

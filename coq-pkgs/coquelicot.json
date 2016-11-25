@@ -5,7 +5,30 @@
     {
       "pkg_id": [ "Coquelicot" ],
       "vo_files": [
-        "Markov.vo", "Compactness.vo", "Iter.vo", "Rcomplements.vo"
+        [ "Rbar.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Coquelicot.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "RInt_analysis.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Complex.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Iter.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Markov.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "KHInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "RInt_gen.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "PSeries.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Lim_seq.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ElemFct.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Derive_2d.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "AutoDerive.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "RInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Compactness.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Equiv.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Continuity.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rcomplements.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "SF_seq.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Derive.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Series.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Seq_fct.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Lub.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Hierarchy.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     }

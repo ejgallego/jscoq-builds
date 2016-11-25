@@ -1,0 +1,19 @@
+.PHONY: all clean sync
+
+SF_VO=$(wildcard *.v)
+SF_HTML:=$(SF_VO:.v=.html)
+
+UDOC=~/research/udoc/udoc.byte
+
+%.html: %.v $(UDOC)
+	$(UDOC) $< -o $@
+
+all: $(SF_HTML)
+
+clean:
+	rm -rf $(SF_HTML)
+
+sync: all
+	rsync -avzp . --delete --exclude=.git --exclude jscoq /home/egallego/x80/rhino-coq/examples/sf/
+
+# for i in Stlc Equiv Maps Types SmallStep Stlc LibTactics Sub References; do sed -i 's/Import $i/Import SF.$i/g' *.v; done

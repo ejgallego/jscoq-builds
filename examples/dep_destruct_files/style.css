@@ -1,0 +1,41 @@
+a {
+    text-decoration: underline;
+}
+a:link {
+    color: #000000;
+}
+a:visited {
+    color: #000000;
+}
+
+.date-inline {
+    color: grey;
+}
+
+.right {
+    float: right;
+}
+
+.tt {
+    font-family: monospace;
+}
+
+ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+ul.nav li {
+    display: inline;
+}
+
+ul.nav a {
+    text-decoration: none;
+    padding-right: 2em;
+}
+
+.sc {
+    font-variant: small-caps;
+}

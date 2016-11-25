@@ -2,106 +2,39 @@
   "desc": "extlib",
   "deps": [ "coq-reals" ],
   "pkgs": [
-    {
-      "pkg_id": [ "ExtLib" ],
-      "vo_files": [ "Tactics.vo", "ExtLib.vo" ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "ExtLib", "Core" ],
-      "vo_files": [
-        "RelDec.vo", "EquivDec.vo", "CmpDec.vo", "Type.vo", "Any.vo"
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "ExtLib", "Data" ],
-      "vo_files": [
-        "Lazy.vo", "String.vo", "Unit.vo", "Fun.vo", "Bool.vo", "PList.vo",
-        "Checked.vo", "Eq.vo", "Prop.vo", "PreFun.vo", "Pair.vo",
-        "POption.vo", "Vector.vo", "Sum.vo", "N.vo", "HList.vo", "Nat.vo",
-        "Option.vo", "List.vo", "Tuple.vo", "Stream.vo", "Char.vo",
-        "LazyList.vo", "SigT.vo", "SumN.vo", "Fin.vo", "ListFirstnSkipn.vo",
-        "Z.vo", "Member.vo", "PPair.vo", "Positive.vo", "ListNth.vo"
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "ExtLib", "Data", "Eq" ],
-      "vo_files": [ "UIP_trans.vo" ],
-      "cma_files": []
-    },
+    { "pkg_id": [ "ExtLib" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "ExtLib", "Core" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "ExtLib", "Data" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "ExtLib", "Data", "Eq" ], "vo_files": [], "cma_files": [] },
     {
       "pkg_id": [ "ExtLib", "Data", "Graph" ],
-      "vo_files": [
-        "BuildGraph.vo", "GraphAlgos.vo", "Graph.vo", "GraphAdjList.vo"
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "ExtLib", "Data", "Map" ],
-      "vo_files": [ "FMapTwoThreeK.vo", "FMapPositive.vo", "FMapAList.vo" ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "ExtLib", "Data", "Monads" ],
-      "vo_files": [
-        "OptionMonad.vo", "ContMonad.vo", "ReaderMonad.vo",
-        "ReaderMonadLaws.vo", "EitherMonad.vo", "FuelMonadLaws.vo",
-        "IdentityMonadLaws.vo", "IdentityMonad.vo", "FuelMonad.vo",
-        "ListMonad.vo", "OptionMonadLaws.vo", "WriterMonad.vo",
-        "StateMonad.vo"
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "ExtLib", "Data", "Set" ],
-      "vo_files": [ "TwoThreeTrees.vo", "ListSet.vo", "SetMap.vo" ],
+      "vo_files": [],
       "cma_files": []
     },
-    {
-      "pkg_id": [ "ExtLib", "Generic" ],
-      "vo_files": [ "Data.vo", "Ind.vo", "Func.vo", "DerivingData.vo" ],
-      "cma_files": []
-    },
+    { "pkg_id": [ "ExtLib", "Generic" ], "vo_files": [], "cma_files": [] },
     {
       "pkg_id": [ "ExtLib", "Programming" ],
-      "vo_files": [
-        "Eqv.vo", "Le.vo", "With.vo", "Show.vo", "Injection.vo", "Extras.vo"
-      ],
+      "vo_files": [],
       "cma_files": []
     },
-    {
-      "pkg_id": [ "ExtLib", "Recur" ],
-      "vo_files": [ "Measure.vo", "Relation.vo", "GenRec.vo", "Facts.vo" ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "ExtLib", "Relations" ],
-      "vo_files": [ "TransitiveClosure.vo", "Compose.vo" ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "ExtLib", "Structures" ],
-      "vo_files": [
-        "CoFunctor.vo", "CoMonad.vo", "MonadFix.vo", "MonadPlus.vo",
-        "Monads.vo", "Monad.vo", "Applicative.vo", "Functor.vo",
-        "FunctorLaws.vo", "MonadWriter.vo", "Traversable.vo", "Proper.vo",
-        "MonadReader.vo", "EqDep.vo", "Sets.vo", "Maps.vo", "Monoid.vo",
-        "BinOps.vo", "MonadCont.vo", "MonadZero.vo", "MonadExc.vo",
-        "Identity.vo", "MonadLaws.vo", "Foldable.vo", "MonadTrans.vo",
-        "MonadState.vo", "Reducible.vo"
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "ExtLib", "Tactics" ],
-      "vo_files": [
-        "Parametric.vo", "MonadTac.vo", "Equality.vo", "EqDep.vo",
-        "Forward.vo", "TypeTac.vo", "Reify.vo", "Injection.vo", "BoolTac.vo",
-        "Consider.vo", "Cases.vo"
-      ],
-      "cma_files": []
-    }
+    { "pkg_id": [ "ExtLib", "Recur" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "ExtLib", "Relations" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "ExtLib", "Structures" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "ExtLib", "Tactics" ], "vo_files": [], "cma_files": [] }
   ]
 }

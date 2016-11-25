@@ -13,15 +13,15 @@ function get_svn {
 }
 
 JSCOQ_DIR=~/research/jscoq/
-COQ_DIR=~/external/coq-git-32/
-MC_DIR=~/external/coq/math-comp/
-CM_DIR=${JSCOQ_DIR}/external/CodeMirror
+COQ_DIR=~/external/coq-v8.6+32bit/
+MC_DIR=~/external/coq/math-comp-32/
+CM_DIR=${JSCOQ_DIR}/ui-external/CodeMirror
 FLOCQ_DIR=~/external/coq/flocq/
 CT_DIR=~/external/coq/coquelicot/
 TLC_DIR=~/external/coq/tlc/
 SF_TAR=~/external/coq/sf.tar.gz
 COLOR_DIR=~/external/coq/CoLoR-8.5
-HOTT_DIR=~/external/HoTT/
+HOTT_DIR=~/external/coq/HoTT/
 UNIM_DIR=~/external/coq/UniMath/
 MC_DIR=~/external/coq/mirror-core/
 CEL_DIR=~/external/coq/coq-ext-lib/

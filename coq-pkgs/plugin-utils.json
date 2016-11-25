@@ -2,10 +2,6 @@
   "desc": "plugin-utils",
   "deps": [],
   "pkgs": [
-    {
-      "pkg_id": [ "PluginUtils" ],
-      "vo_files": [ "PluginUtils.vo" ],
-      "cma_files": [ "plugin_utils.cmo" ]
-    }
+    { "pkg_id": [ "PluginUtils" ], "vo_files": [], "cma_files": [] }
   ]
 }

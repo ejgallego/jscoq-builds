@@ -1,11 +1,5 @@
 {
   "desc": "mtac",
   "deps": [ "coq-arith" ],
-  "pkgs": [
-    {
-      "pkg_id": [ "Mtac" ],
-      "vo_files": [ "Hash.vo", "Mtactics.vo", "Mtac.vo" ],
-      "cma_files": [ "mtac.cma" ]
-    }
-  ]
+  "pkgs": [ { "pkg_id": [ "Mtac" ], "vo_files": [], "cma_files": [] } ]
 }

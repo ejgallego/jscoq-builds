@@ -2,44 +2,22 @@
   "desc": "color",
   "deps": [ "coq-reals" ],
   "pkgs": [
-    {
-      "pkg_id": [ "CoLoR", "Filter" ],
-      "vo_files": [ "AFilterBool.vo", "AFilterPerm.vo", "AProj.vo" ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "CoLoR", "RPO" ],
-      "vo_files": [
-        "VRPO_Status.vo", "VPrecedence.vo", "VRPO_Results.vo",
-        "VRPO_Prover.vo", "VLPO.vo", "VRPO_Type.vo", "VMPO.vo"
-      ],
-      "cma_files": []
-    },
+    { "pkg_id": [ "CoLoR", "Filter" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "CoLoR", "RPO" ], "vo_files": [], "cma_files": [] },
     { "pkg_id": [ "CoLoR", "Coccinelle" ], "vo_files": [], "cma_files": [] },
     {
       "pkg_id": [ "CoLoR", "Coccinelle", "list_extensions" ],
-      "vo_files": [
-        "more_list.vo", "dickson.vo", "list_sort.vo", "list_permut.vo",
-        "math_permut.vo", "list_set.vo", "equiv_list.vo",
-        "weaved_relation.vo"
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Coccinelle", "term_orderings" ],
-      "vo_files": [
-        "modular_dp.vo", "isubterm_dp.vo", "subterm_dp.vo",
-        "usable_rules_dp.vo", "rpo.vo", "graph_dp.vo", "inner_dp.vo",
-        "interp.vo", "term_o.vo", "igraph_dp.vo", "matrix.vo", "dp.vo"
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Coccinelle", "basis" ],
-      "vo_files": [
-        "more_logic.vo", "decidable_set.vo", "terminaison.vo",
-        "TransClosure.vo", "ordered_set.vo", "closure.vo"
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
@@ -49,271 +27,147 @@
     },
     {
       "pkg_id": [ "CoLoR", "Coccinelle", "examples", "cime_trace" ],
-      "vo_files": [
-        "Newman.vo", "closure_extension.vo", "rewriting.vo",
-        "ring_extention.vo", "arith_extension.vo", "or_ext_generated.vo",
-        "equational_extension.vo", "order_extension.vo", "dp_extension.vo",
-        "rpo_extension.vo", "more_list_extention.vo", "term_extension.vo"
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Coccinelle", "ac_matching" ],
-      "vo_files": [
-        "matching_well_founded.vo", "matching.vo", "matching_well_formed.vo",
-        "ac.vo", "matching_algo.vo", "matching_sound.vo",
-        "matching_complete.vo", "cf_eq_ac.vo"
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Coccinelle", "term_algebra" ],
-      "vo_files": [
-        "equational_theory_spec.vo", "rwr_strategies.vo", "term_spec.vo",
-        "term.vo", "equational_theory.vo"
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Coccinelle", "unification" ],
-      "vo_files": [ "free_unif.vo", "unification.vo" ],
+      "vo_files": [],
       "cma_files": []
     },
-    {
-      "pkg_id": [ "CoLoR", "NonTermin" ],
-      "vo_files": [
-        "SLoop.vo", "ALoop.vo", "SModLoop.vo", "AModLoop.vo", "AVarCond.vo"
-      ],
-      "cma_files": []
-    },
+    { "pkg_id": [ "CoLoR", "NonTermin" ], "vo_files": [], "cma_files": [] },
     { "pkg_id": [ "CoLoR", "Term" ], "vo_files": [], "cma_files": [] },
     {
       "pkg_id": [ "CoLoR", "Term", "Lambda" ],
-      "vo_files": [
-        "LAlpha.vo", "LAlphaAlt.vo", "LComp.vo", "LCompRewrite.vo",
-        "LCompClos.vo", "LSystemT.vo", "LBeta.vo", "LTerm.vo", "LEta.vo",
-        "LCompSimple.vo", "LSimple.vo", "LCompInt.vo", "LCall.vo", "LSubs.vo"
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Term", "SimpleType" ],
-      "vo_files": [
-        "TermsAlgebraic.vo", "TermsConv.vo", "TermsActiveEnv.vo",
-        "TermsSubst.vo", "TermsLifting.vo", "TermsEta.vo", "TermsDef.vo",
-        "TermsBuilding.vo", "TermsManip.vo", "TermsTyping.vo",
-        "TermsBeta.vo", "TermsSubstConv.vo", "TermsPos.vo", "TermsRed.vo",
-        "TermsSig.vo", "Terms.vo", "TermsEnv.vo"
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Term", "String" ],
-      "vo_files": [ "SContext.vo", "SReverse.vo", "Srs.vo" ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Term", "Varyadic" ],
-      "vo_files": [
-        "VContext.vo", "VSignature.vo", "VSubstitution.vo", "VTrs.vo",
-        "VTerm.vo"
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Term", "WithArity" ],
-      "vo_files": [
-        "AWFMInterpretation.vo", "ARules.vo", "AInfSeq.vo", "AMonAlg.vo",
-        "ABterm.vo", "AMatching.vo", "ADuplicateSymb.vo", "ASubterm.vo",
-        "MonAlgChecker.vo", "ATrsNorm.vo", "AInterpretation.vo", "ACalls.vo",
-        "AUnary.vo", "ABinary.vo", "ASN.vo", "ARenCap.vo",
-        "ASubstitution.vo", "ATerm.vo", "ARelation.vo", "ACompat.vo",
-        "AMorphism.vo", "ACap.vo", "APosition.vo", "AShift.vo", "AReduct.vo",
-        "AContext.vo", "ASignature.vo", "ANotvar.vo", "AVariables.vo",
-        "ATrs.vo", "AUnif.vo", "ADepRel.vo"
-      ],
+      "vo_files": [],
       "cma_files": []
     },
-    {
-      "pkg_id": [ "CoLoR", "HORPO" ],
-      "vo_files": [
-        "Computability.vo", "HorpoExNonTrans.vo", "HorpoExMap.vo",
-        "Horpo.vo", "HorpoComp.vo", "HorpoWf.vo"
-      ],
-      "cma_files": []
-    },
+    { "pkg_id": [ "CoLoR", "HORPO" ], "vo_files": [], "cma_files": [] },
     {
       "pkg_id": [ "CoLoR", "ProofChecker" ],
-      "vo_files": [
-        "Problem.vo", "EmptyChecker.vo", "Proof.vo", "IntBasedChecker.vo",
-        "ProofChecker.vo"
-      ],
+      "vo_files": [],
       "cma_files": []
     },
-    {
-      "pkg_id": [ "CoLoR", "MatrixInt" ],
-      "vo_files": [
-        "AMatrixBasedInt.vo", "AArcticInt.vo", "ATropicalBasedInt.vo",
-        "ATropicalInt.vo", "AArcticBZInt.vo", "AMatrixInt.vo",
-        "AArcticBasedInt.vo", "ABigMatrixInt.vo"
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "CoLoR", "SemLab" ],
-      "vo_files": [ "ARootLab.vo", "ASemLab.vo", "AFlatCont.vo" ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "CoLoR", "Conversion" ],
-      "vo_files": [
-        "Coccinelle.vo", "ATerm_of_String.vo", "VTerm_of_ATerm.vo",
-        "String_of_ATerm.vo", "AReverse.vo"
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "CoLoR", "DP" ],
-      "vo_files": [
-        "ADPUnif.vo", "ASCCUnion.vo", "AGraph.vo", "ADP.vo", "ADPGraph.vo",
-        "AHDE.vo", "ADecomp.vo"
-      ],
-      "cma_files": []
-    },
+    { "pkg_id": [ "CoLoR", "MatrixInt" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "CoLoR", "SemLab" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "CoLoR", "Conversion" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "CoLoR", "DP" ], "vo_files": [], "cma_files": [] },
     { "pkg_id": [ "CoLoR", "Util" ], "vo_files": [], "cma_files": [] },
     {
       "pkg_id": [ "CoLoR", "Util", "Multiset" ],
-      "vo_files": [
-        "MultisetCore.vo", "MultisetListOrder.vo", "MultisetList.vo",
-        "MultisetNat.vo", "MultisetTheory.vo", "MultisetOrder.vo"
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "Vector" ],
-      "vo_files": [
-        "VecFilterPerm.vo", "VecFilter.vo", "VecUtil.vo", "VecMax.vo",
-        "VecBool.vo", "VecArith.vo", "VecOrd.vo"
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "Pair" ],
-      "vo_files": [ "PairUtil.vo", "PairLex.vo" ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "FSet" ],
-      "vo_files": [ "FSetUtil.vo" ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "Integer" ],
-      "vo_files": [ "BigZUtil.vo", "ZUtil.vo" ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "FMap" ],
-      "vo_files": [ "FMapUtil.vo" ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "Matrix" ],
-      "vo_files": [ "Matrix.vo" ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "Logic" ],
-      "vo_files": [
-        "ClassicUtil.vo", "EpsilonUtil.vo", "DepChoice.vo",
-        "DepChoicePrf.vo", "EqUtil.vo", "LogicUtil.vo", "IotaUtil.vo"
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "Polynom" ],
-      "vo_files": [
-        "Polynom.vo", "MonotonePolynom.vo", "PositivePolynom.vo"
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "Option" ],
-      "vo_files": [ "OptUtil.vo" ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "FGraph" ],
-      "vo_files": [ "FGraph.vo", "TransClos.vo" ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "Function" ],
-      "vo_files": [ "FunUtil.vo", "NaryFunction.vo" ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "List" ],
-      "vo_files": [
-        "ListOccur.vo", "ListLex.vo", "ListDec.vo", "ListUtil.vo",
-        "ListPermutation.vo", "ListNodup.vo", "ListExtras.vo", "SortUtil.vo",
-        "ListShrink.vo", "ListSort.vo", "ListForall.vo", "ListMax.vo"
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "Relation" ],
-      "vo_files": [
-        "Total.vo", "AdjMat.vo", "RelSub.vo", "RelDec.vo", "NotSN.vo",
-        "SCC.vo", "InfSeq.vo", "Tarski.vo", "AccUtil.vo", "OrdUtil.vo",
-        "Path.vo", "SCCTopoOrdering.vo", "RelUtil.vo", "RelExtras.vo",
-        "Lexico.vo", "RedLength.vo", "NotSN_IS.vo", "RelMidex.vo", "SN.vo",
-        "Cycle.vo", "Union.vo", "Iter.vo", "Preorder.vo", "SCC_dec.vo",
-        "GDomainBij.vo"
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "Bool" ],
-      "vo_files": [ "BoolUtil.vo" ],
+      "vo_files": [],
       "cma_files": []
     },
-    {
-      "pkg_id": [ "CoLoR", "Util", "Nat" ],
-      "vo_files": [
-        "BigNUtil.vo", "BoundNat.vo", "NatUtil.vo", "LeastNat.vo", "Log2.vo"
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "CoLoR", "Util", "Set" ],
-      "vo_files": [ "FinSet.vo", "InfSet.vo", "Ramsey.vo", "SetUtil.vo" ],
-      "cma_files": []
-    },
+    { "pkg_id": [ "CoLoR", "Util", "Nat" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "CoLoR", "Util", "Set" ], "vo_files": [], "cma_files": [] },
     {
       "pkg_id": [ "CoLoR", "Util", "Algebra" ],
-      "vo_files": [ "OrdSemiRing.vo", "SemiRing.vo" ],
+      "vo_files": [],
       "cma_files": []
     },
-    {
-      "pkg_id": [ "CoLoR", "PolyInt" ],
-      "vo_files": [ "PolyChecker.vo", "APolyInt_MA.vo", "APolyInt.vo" ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "CoLoR", "SubtermCrit" ],
-      "vo_files": [ "ASimpleProj.vo" ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "CoLoR", "MPO" ],
-      "vo_files": [ "VMpo.vo" ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "CoLoR", "MannaNess" ],
-      "vo_files": [ "ARedPair.vo", "AMannaNess.vo" ],
-      "cma_files": []
-    }
+    { "pkg_id": [ "CoLoR", "PolyInt" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "CoLoR", "SubtermCrit" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "CoLoR", "MPO" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "CoLoR", "MannaNess" ], "vo_files": [], "cma_files": [] }
   ]
 }

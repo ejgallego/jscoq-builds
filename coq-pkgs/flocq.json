@@ -4,17 +4,65 @@
   "pkgs": [
     {
       "pkg_id": [ "Coq", "romega" ],
-      "vo_files": [ "ROmega.vo", "ReflOmegaCore.vo" ],
-      "cma_files": [ "romega_plugin.cma", "romega_plugin.cmo" ]
+      "vo_files": [
+        [ "ReflOmegaCore.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ROmega.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ],
+      "cma_files": [
+        [ "romega_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ]
     },
     {
       "pkg_id": [ "Flocq", "Core" ],
       "vo_files": [
-        "Fcore_float_prop.vo", "Fcore_FLX.vo", "Fcore_rnd.vo",
-        "Fcore_defs.vo", "Fcore_digits.vo", "Fcore_rnd_ne.vo",
-        "Fcore_FTZ.vo", "Fcore_generic_fmt.vo", "Fcore_FLT.vo",
-        "Fcore_Zaux.vo", "Fcore_Raux.vo", "Fcore.vo", "Fcore_FIX.vo",
-        "Fcore_ulp.vo"
+        [ "Fcore_float_prop.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fcore_rnd.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fcore_FTZ.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fcore_generic_fmt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fcore_FLT.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fcore_Raux.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fcore_ulp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fcore_FIX.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fcore_defs.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fcore_rnd_ne.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fcore_Zaux.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fcore_digits.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fcore_FLX.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fcore.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "Flocq", "Appli" ],
+      "vo_files": [
+        [ "Fappli_double_round.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fappli_rnd_odd.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fappli_IEEE_bits.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fappli_IEEE.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "Flocq", "Calc" ],
+      "vo_files": [
+        [ "Fcalc_sqrt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fcalc_ops.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fcalc_bracket.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fcalc_div.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fcalc_round.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fcalc_digits.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ],
+      "cma_files": []
+    },
+    { "pkg_id": [ "Flocq", "Translate" ], "vo_files": [], "cma_files": [] },
+    {
+      "pkg_id": [ "Flocq", "Prop" ],
+      "vo_files": [
+        [ "Fprop_Sterbenz.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fprop_relative.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fprop_plus_error.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fprop_mult_error.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fprop_div_sqrt_error.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     }

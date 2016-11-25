@@ -1,0 +1,482 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0055)http://homes.cs.washington.edu/~jrw12/dep-destruct.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="James Wilcox">
+  <meta name="date" content="2014-09-14">
+  <title>Dependent Case Analysis in Coq without Axioms</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="../ui-external/bootstrap.min.css" />
+  <link rel="stylesheet" href="./dep_destruct_files/style.css" type="text/css">
+  <link rel="stylesheet" href="./dep_destruct_files/blog-post.css" type="text/css">
+  <script type="text/javascript" src="./dep_destruct_files/jquery-2.1.1.js"></script>
+  <link rel="stylesheet" href="./dep_destruct_files/jquery-ui.min.css">
+
+  <script type="text/javascript" src="./dep_destruct_files/jquery-ui.min.js"></script>
+
+<body id="body">
+<div id="ide-wrapper">
+<div id="code-wrapper">
+<div id="document">
+<div id="header">
+<h1 class="title">Dependent Case Analysis in Coq without Axioms</h1>
+<h2 class="author">James Wilcox</h2>
+<h3 class="date">September 14, 2014</h3>
+</div>
+<blockquote>
+  <p><em>This post shows how to get around the limitations of the <code>destruct</code> tactic when doing case analysis on dependent types, without resorting to <code>dependent destruction</code>, which relies on additional axioms.</em></p>
+</blockquote>
+<p>New users of Coq, especially those who have worked in Agda or another dependently typed programming language, sometimes wonder why programs written in Coq don't take (more) advantage of the dependent type system to enforce invariants. It turns out it's more of a pain to use dependent types in your Coq programs than it is in Agda. This is partially due to foundational reasons (Agda uses the K axiom to make pattern matching easier), but it's also due to purely superficial annoyances on the Coq side.</p>
+<p><a href="http://dougwoos.com/">Doug</a> summed up his opinion of dependently typed programming in Coq like this:</p>
+<blockquote>
+<blockquote>
+<p>Coq has this really powerful type system, but... don't use it.<br><span class="right date-inline">—Doug ('s Dad)</span><br></p>
+</blockquote>
+</blockquote>
+<p>
+  On the other hand, it's hard to resist using a feature that's
+  there. If you do use dependent types in your programs, you may have
+  run into trouble with pattern matching or reasoning by case analysis
+  over these types. There are ways to get around these problems, but
+  the most common ones require assuming extra axioms.
+</p>
+<p>
+  The other day in the freenode IRC channel for Coq, user <code>osa1</code> asked
+  about defining and reasoning about the cardinality of types. Similar
+  to how it might be done in math, he defined a type to have
+  cardinality <code>n</code> if there was a bijection between that type and <code>Fin n</code>, the type with exactly <code>n</code> elements. <code>osa1</code> was
+  working through a (seemingly) simple example and got stuck. He
+  needed to do case analysis on a term of type <code>Fin 2</code> but couldn't get it to work. In the process of discussing this example, I came up with a kind of design pattern for implementing case analysis on dependent types without assuming any axioms.
+</p>
+
+<p>
+  In this post we'll walk through a proof that the booleans have
+  cardinality 2. I know, pretty impressive, right? First we'll prove
+  it using the <code>dependent destruction</code> tactic, which uses an axiom that is a strict extension of Coq's underlying theory. Then, we'll show how to do it "by hand" in a way that doesn't rely on any extra assumptions. Finally, I'll give another quick example and a hand-wavy description my design pattern for dependent case analysis without axioms.</p>
+
+<p>
+This post is generated from a Coq source file via a hacky python
+script and <code>pandoc</code>. You can view the <a href="http://homes.cs.washington.edu/~jrw12/dep-destruct.v">original source</a> if you want to step through the proofs in Coq. The source also contains a link to the python script. Finally, there's also a <a href="http://homes.cs.washington.edu/~jrw12/dep-destruct-clean.v">version of the source</a> with all the blog text and typesetting commands removed, for easy stepping.</p>
+<h2 id="cardinalities-of-sets">Cardinalities of sets</h2>
+
+<p>As discussed above, we're going to define cardinalities in terms of the type <code>Fin n</code>, which we define as follows.</p>
+
+<!-- JSCOQ -->
+<textarea id="u1">
+Inductive Fin : nat -> Set :=
+    F1 : forall n : nat, Fin (S n)
+  | FS : forall n : nat, Fin n -> Fin (S n).</textarea>
+
+<p>
+  <code>Fin n</code> is a set with <code>n</code> elements, namely: <code>F1</code>, <code>FS F1</code>, ..., <code>FS (FS (... F1))</code>. <a href="http://homes.cs.washington.edu/~jrw12/dep-destruct.html#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
+<p>We now formalize the statement "A has cardinality n" a la <code>osa1</code>.</p>
+
+<!-- JSCOQ -->
+<textarea id="u2">
+Definition cardinality (n : nat) (A : Type) : Prop :=
+  exists (f : A -> Fin n) (g : Fin n -> A),
+          (forall x, g (f x) = x) /\
+          (forall y, f (g y) = y).</textarea>
+
+<p>The definition takes the two directions of the bijection and proofs that the two are inverses.</p>
+<p>As a simple use of this definition, let's prove that the booleans have cardinality 2. We're going to need functions <code>bool -&gt; Fin 2</code> and <code>Fin 2 -&gt; bool</code>. The first direction is easy.</p>
+
+<!-- JSCOQ -->
+<textarea id="u3">
+Definition bool_to_Fin_2 (x : bool) : Fin 2 :=
+  if x then FS _ (F1 _) else F1 _.</textarea>
+
+<p>The other direction is almost as easy.</p>
+
+<!-- JSCOQ -->
+<textarea id="u4">
+Definition Fin_2_to_bool (y : Fin 2) : bool :=
+  match y with
+        | F1 _ => false
+        | FS _ (F1 _) => true
+        | _ => false (* bogus! *)
+  end.</textarea>
+
+<p>This may look like a strange definition. Since <code>y</code> has type <code>Fin 2</code>, there are only two possibilities, either <code>y</code> is <code>F1</code> or <code>FS F1</code>, right? Well, yes, but no. It is true (and provable in Coq) that this is the case, but Coq's pattern matching will not give this fact to you automatically. It is possible to convince Coq that the last case is impossible, but for now we take a simpler approach. We just supply a bogus value in the impossible case. We know that this case can never happen, so the value we put there doesn't matter as long as it type checks. In fact, during a proof by case analysis <code>y</code>, we will be able to show that the third case is impossible.</p>
+<p>Here's the main theorem. (Pro tip: you can hover over a tactic to see the state of the goal before and after the tactic runs. Use this to step through the proofs in your browser as they are discussed.)</p>
+
+<!-- JSCOQ -->
+<textarea id="u5">
+Theorem bool_cardinality_2 :
+      cardinality 2 bool.
+Proof.
+  unfold cardinality.
+  exists bool_to_Fin_2.
+  exists Fin_2_to_bool.</textarea>
+
+<p>Here we just unfold the definition of cardinality and provide the two directions of the bijection. Next, we're asked to prove that they are in fact inverses.</p>
+
+<!-- JSCOQ -->
+<textarea id="u6">
+  split; intros.</textarea>
+
+<p>In the first direction, everything is easy (just like in defining <code>bool_to_Fin_2</code>).</p>
+
+<!-- JSCOQ -->
+<textarea id="u7">
+  - destruct x; auto.</textarea>
+
+<p>In the second direction, things are more difficult.</p>
+
+<p>Looking at the goal, we want to do case analysis on <code>y</code>, but a simple <code>destruct</code> won't work.</p>
+
+<textarea id="u8">
+  - destruct y.
+  (* Remove destruct y to continue *)
+</textarea>
+
+<p>
+  This error is rather inscrutable, but the gist is that Coq's heuristic for doing case analysis has failed because the dependency in the types is too complicated (note: pretty much any dependency is too much dependency, recall Doug's Dad's wisdom).</p>
+<p>When Coq performs a case analysis, it first abstracts over all indices. You may have seen this manifest as a loss of information when using <code>destruct</code> on predicates (try destructing <code>even 3</code> for example: it just deletes the hypothesis!), or when doing induction on a predicate with concrete indices (try proving <code>forall n, even (2*n+1) -&gt; False</code> by induction on the hypothesis (not the <code>nat</code>) -- you'll be stuck!). Coq essentially forgets the concrete values of the indices. When trying to induct on such a hypothesis, one solution is to replace each concrete index with a new variable together with a constraint that forces the variable to be equal to the correct concrete value. <code>destruct</code> does something similar: when given a term of some inductive type with concrete index values, it first replaces the concrete values with new variables. It doesn't add the equality constraints (but <code>inversion</code> does). The error here is about abstracting out the indices. You can't just go replacing concrete values with arbitrary variables and hope that things still type check. It's just a heuristic.</p>
+<p>Getting back to the point, the error stems from the fact that <code>destruct</code> replaces 2 with a new variable, say <code>n</code>. At which point <code>y</code> has type <code>Fin n</code>. But we pass <code>y</code> into the function <code>Fin_2_to_bool</code>, which requires an argument of type <code>Fin 2</code>. Thus the goal is ill typed, just like Coq said.</p>
+<p>So what should we do? One option is to not use dependent types. Another (as suggested by CPDT, for example) is to use the <code>dependent destruction</code> tactic, which comes from the <code>Program</code> module.</p>
+
+<!-- JSCOQ -->
+<textarea id="u9">
+Require Import Coq.Program.Program.
+  - dependent destruction y.
+    + reflexivity.</textarea>
+
+<p>This does exactly what we want! It gives us two goals, in the first case, <code>y</code> has been substituted out for <code>F1</code>, while in the second it has become <code>FS y</code> (confusingly reusing the variable name <code>y</code>). The first case goes through easily by computation. In the second case, we just want to case analyze <code>y</code> again.</p>
+
+<!-- JSCOQ -->
+<textarea id="u10">
+    + dependent destruction y.
+      * reflexivity.</textarea>
+
+<p>More progress! We easily deal with another case (where the argument to <code>Fin_2_to_bool</code> is <code>FS F1</code>). But we are given one final case. This corresponds to the third case of the match when we defined <code>Fin_2_to_bool</code>. <code>reflexivity</code> won't work, since <code>bool_to_Fin_2</code> never returns <code>FS (FS F1)</code>. Instead, we can finish by showing that this case is actually impossible. We have an inhabitant of <code>Fin 0</code> in the context. But the set with 0 elements is uninhabited. <code>inversion</code> derives the necessary contradiction</p>
+
+<!-- JSCOQ -->
+<textarea id="u11">
+     * inversion y.
+Qed.</textarea>
+
+<p>This works just fine. However, <code>dependent destruction</code> is a little too good to be true. Let's ask Coq to print the assumptions (ie, axioms) used in the proof of <code>bool_cardinality_2</code>.</p>
+
+<!-- JSCOQ -->
+<textarea id="u99">
+Print Assumptions bool_cardinality_2.</textarea>
+
+<p>We see that our proof relies on the axiom <code>JMeq_eq</code>. This states that <a href="http://strictlypositive.org/obseqnow.pdf">heterogeneous equality</a> implies the usual propositional equality.</p>
+<p>Heterogeneous equality (aka John Major equality, hence the name <code>JMeq</code> in Coq) lets one state equalities between terms of different types. This sounds strange, but it turns out to be very convenient, especially when you have a lot of dependent types floating around. It eliminates a lot of uses of <code>eq_rect</code> and generally makes things nice. Elimination of heterogeneous equalities is implemented in Coq using <code>JMeq_eq</code>.</p>
+<p>How did we manage to use heterogeneous equality in our proof? It turns out that the implementation of <code>dependent destruction</code> uses it internally. Let's take another crack at proving <code>bool_cardinality_2</code> and see if we can avoid this axiom. We'll just look at the part of the proof that required <code>dependent destruction</code>.<a href="http://homes.cs.washington.edu/~jrw12/dep-destruct.html#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a></p>
+
+<!-- JSCOQ -->
+<textarea id="u12">
+Lemma bool_to_Fin_2__Fin_2_to_bool__id :
+  forall y, bool_to_Fin_2 (Fin_2_to_bool y) = y.
+Proof.
+  intros.</textarea>
+
+<p>Here we are back at the fateful spot where we want to do case analysis on <code>y</code>. Remember that <code>destruct</code> errors out and <code>inversion</code> doesn't do what we want. Both of these tactics correspond to pattern matches in Gallina, and the trick we're going to use is to write our own matches (and more importantly, match annotations) to do the case analysis and carry the information we need.</p>
+<p>As a first attempt, we can try to do a simple match on <code>y</code>. (If you haven't seen <code>refine</code> before, it's a handy tactic that lets you "sketch" a proof term, using underscores to leave holes that will be filled in later. Below, the underscores on the left of the match arrow (<code>=&gt;</code>) are "don't care" patterns, while underscores to the right of the arrow are holes for <code>refine</code>.)</p>
+
+<!-- JSCOQ -->
+<textarea id="u13">
+refine (match y with
+                | F1 _ => _
+                | FS _ _ => _
+end).</textarea>
+
+<p>This gives us two subgoals, which is the number we expect. But they aren't the subgoals we expect. They're a mess! This is an example of Coq's <code>match</code> annotation inference being a little too smart (or not smart enough?) for its own good. To clean things up and see what's going on, let's explicitly give a <code>return</code> annotation.</p>
+
+<!-- JSCOQ -->
+<textarea id="u14">
+refine (match y as y' return bool_to_Fin_2 (Fin_2_to_bool y) = y with
+                | F1 _ => _
+                | FS _ _ => _
+end).</textarea>
+
+<p>
+  All I did was give a new name (<code>y'</code>) to the discriminee (the thing being matched on) and then copy-paste the type of the goal into the <code>return</code> slot. <code>y</code> and <code>y'</code> are secretly two names for the same thing, but Coq will automatically refine the type of <code>y'</code> based on what case of the match it's in. This sounds like a good thing, and it can be, but in this case Coq will refine the type from <code>Fin 2</code> to <code>Fin n</code> where <code>n</code> is a new variable. Thus, if we replace <code>y</code> with <code>y'</code> in the <code>return</code> annotation,
+  it won't type check, similar to the problem with <code>destruct</code> that was described above. So in this case we just stick with the unrefined <code>y</code>.</p>
+<p>Anyway, this generates two reasonable looking subgoals. The first corresponds to the case where <code>y = F1</code>, and the second to <code>y = FS F1</code>. However, we don't have enough information to proceed. We'd like Coq to generate equalities describing what <code>y</code> must be in each case. This is common when writing your own matches. To have Coq generate this equality, we use something called the "convoy pattern". The convoy pattern works by adding things to the <code>return</code> annotation. Coq automatically refines the type given in the <code>return</code> annotation based on what case of the match you're in. This will let us prove our equality.</p>
+
+<p>Remember that Coq will automatically change <code>y'</code> to correspond to the current case of the match, so to state that <code>y = F1</code> in the first case and <code>y = FS</code> in the second case, we just say <code>y = y'</code>. Let's give it a try.</p>
+
+<!-- JSCOQ -->
+<textarea id="u15">
+refine (match y as y'
+          return y = y' ->
+          bool_to_Fin_2 (Fin_2_to_bool y) = y
+        with
+        | F1 _    => _
+        | FS _ _ => _
+end _).</textarea>
+
+<p>This would work if the type of <code>y</code> wasn't dependent. As it is, though, <code>y</code> has type <code>Fin 2</code> while <code>y'</code> has type <code>Fin n</code> after refinement introduces a new variable <code>n</code>. Since these two types aren't equal, we can't even state that the terms are equal.</p>
+<p>This is exactly where <code>dependent destruction</code> would use heterogeneous equality. Because heterogeneous equality does not require the types to be equal in order to state an equality between terms.</p>
+<p>Instead, we'll further extend the <code>return</code> annotation to generate an equality <code>n = 2</code> and then explicitly transport one of the terms across this equality at the type level (<code>Fin n = Fin 2</code>) to state the desired term-level equality (<code>y' = y</code>).</p>
+
+<!-- JSCOQ -->
+<textarea id="u16">
+refine (match y as y' in Fin n return forall pf : n = 2,
+        eq_rect n Fin y' 2 pf = y ->
+        bool_to_Fin_2 (Fin_2_to_bool y) = y with
+| F1 _ => _
+| FS _ _ => _
+end eq_refl eq_refl).</textarea>
+
+<p>That's an epic <code>match</code> annotation. First, we add the clause <code>in Fin n</code> to bind a name for the index to <code>Fin</code>. Then, in the <code>return</code>, we take a proof that <code>n = 2</code> and a proof that <code>y'</code> (which has type <code>Fin n</code>) transported across the equality <code>n = 2</code> is equal to <code>y</code>. Finally, we return the same goal as before.</p>
+<p>The <code>return</code> type of the <code>match</code> is a function of two arguments (proofs of the two equalities). The first of which asks us to prove <code>n = 2</code>. Coq automatically refines this to <code>2 = 2</code> since the discriminee (<code>y</code>) has type <code>Fin 2</code>. So we can give <code>eq_refl</code> for the first proof. The second proof is only a bit more complicated: once we've given <code>eq_refl</code> for the first proof, the type simplifies to <code>y = y</code>, so we can again give <code>eq_refl</code>. This leaves us to fill in the two branches of the match.</p>
+<p>With the new equalities in context, we now have enough information to finish the first case.</p>
+
+<!-- JSCOQ -->
+<textarea id="u17">
+- intros.
+  inversion pf.
+  subst.
+  rewrite <- Eqdep_dec.eq_rect_eq_dec by apply eq_nat_dec.
+  reflexivity.</textarea>
+
+<p>The main trick here is to use decidable equality of the natural numbers to get rid of the <code>eq_rect</code>. This is the insight that makes the whole technique work. Decidable equality on a type means, in the language of HoTT, that the type is an h-Set. Thus there are provably no non-refl paths, and so the transports can be eliminated. The rest of the proof is easy now that we have all the necessary information in our context.</p>
+<p>The second case starts out just the same.</p>
+
+<!-- JSCOQ -->
+<textarea id="u18">
+- intros.
+  inversion pf.
+  subst.
+  rewrite <- Eqdep_dec.eq_rect_eq_dec by apply eq_nat_dec.
+  simpl.</textarea>
+
+<p>
+  We're left wanting to do another case analysis, this time on <code>f</code>. The
+  same technique will work again, but instead of copy-pasting, let's
+  take a step back and implement a general solution.
+</p>
+<h2 id="a-case-analysis-tactic-for-fin">A case analysis tactic for <code>Fin</code></h2>
+<p>
+  Our goal is to use the technique we just saw to define an analogue
+  to <code>dependent destruction</code>, but without relying on any axioms and specialized to <code>Fin</code>. We'll first prove a lemma that feels kind of like an induction principle, except it doesn't give an induction hypothesis. A destruction principle, perhaps.</p>
+
+<!-- JSCOQ -->
+<textarea id="u19">
+Lemma fin_case : forall n
+      (P : Fin (S n) -> Type),
+      (P (F1 _))             ->
+      (forall x, P (FS _ x)) ->
+      (forall x, P x).</textarea>
+
+<p>
+  The lemma takes a natural number <code>n</code> and predicate <code>P</code> on <code>Fin (S n)</code> and gives sufficient conditions to prove that <code>P</code> holds for all <code>x : Fin (S n)</code>.<a href="http://homes.cs.washington.edu/~jrw12/dep-destruct.html#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> In particular, it takes a proof that <code>P</code> holds on <code>F1</code> and that, forall <code>x : Fin n</code>, <code>P</code> holds on <code>FS x</code>. Intuitively, these are indeed sufficient. Let's prove it.</p>
+
+<!-- JSCOQ -->
+<textarea id="u20">
+Proof.
+intros.
+refine (match x as x' in Fin n'
+              return forall pf : n' = S n,
+              eq_rect n' Fin x' (S n) pf = x ->
+P x with
+| F1 _ => _
+| FS _ _ => _
+end eq_refl eq_refl).
+- intros.
+  inversion pf.
+  subst.
+  rewrite <- Eqdep_dec.eq_rect_eq_dec by apply eq_nat_dec.
+  auto.
+- intros.
+  inversion pf.
+  subst.
+  rewrite <- Eqdep_dec.eq_rect_eq_dec by apply eq_nat_dec.
+  auto.
+Qed.</textarea>
+
+<p>We use the same flavor of <code>match</code> annotation as before and are again left with three cases. In each case we simplify by getting rid of the transport using decidable equality as before. The first two cases follow from the two hypotheses of the lemma, and the proof of the last equality is trivial.</p>
+<p>Let's now use our lemma to complete and cleanup the proof of the eloquently named <code>bool_to_Fin_2__Fin_2_to_bool__id</code>.</p>
+
+<!-- JSCOQ -->
+<textarea id="u21">
+Lemma bool_to_Fin_2__Fin_2_to_bool__id : forall y,
+      bool_to_Fin_2 (Fin_2_to_bool y) = y.
+Proof.
+  intros.</textarea>
+
+<p>At this point we want to destruct <code>y</code> using our new <code>fin_case</code> lemma. If we try that directly, we don't get quite what we hoped for.</p>
+
+<!-- JSCOQ -->
+<textarea id="u22">
+  apply fin_case.</textarea>
+
+<p>The problem is that the conclusion of <code>fin_case</code> is the very general <code>P x</code>. We're asking Coq to come up with a predicate <code>P : Fin (S n) -&gt; Type</code> and a term <code>x : Fin (S n)</code> such that the goal is <code>P x</code>. Coq decides to take the second occurrence of <code>y</code> as the argument of the predicate. Thus <code>fin_case</code> only destructs that occurrence.</p>
+<p>To get the desired result, we need to guide Coq towards choosing the right predicate that destructs both occurrences of <code>y</code>. One way to achieve this is using a <code>with (P := fun x =&gt; ...)</code> clause to apply. Another way that involves less typing is the <code>pattern</code> tactic, which "beta expands" the goal with respect to some term, thus factoring the goal into <code>P</code> applied to <code>x</code>. Once the goal has been rewritten in this way, Coq chooses the correct predicate for <code>fin_case</code>.</p>
+
+<!-- JSCOQ -->
+<textarea id="u23">
+  pattern y.
+  apply fin_case.</textarea>
+
+<p>
+  This time the case analysis works as expected. We are left with two
+  cases, the first of which is trivial.
+</p>
+
+
+<!-- JSCOQ -->
+<textarea id="u24">
+- reflexivity.</textarea>
+
+<p>In the second case, we do another case analysis to consider <code>FS F1</code>.</p>
+
+<!-- JSCOQ -->
+<textarea id="u25">
+- intros.
+  pattern x.
+  apply fin_case.
+  + reflexivity.</textarea>
+
+<p>Finally, we are given the absurd case with an inhabit of <code>Fin 0</code>.</p>
+
+<!-- JSCOQ -->
+<textarea id="u26">
++ intros.
+  inversion x0.
+Qed.</textarea>
+
+<p>
+  As a last cleanup pass, we can wrap up the
+  <code>pattern ...; apply fin_case</code> sequence in a custom
+  tactic. The final proof is identical to the <code>dependent destruction</code> proof, and it 100% axiom-free!
+</p>
+
+<!-- JSCOQ -->
+<textarea id="u27">
+Ltac fin_dep_destruct v :=
+  pattern v; apply fin_case; clear v; intros.
+
+Lemma bool_to_Fin_2__Fin_2_to_bool__id' :
+      forall y, bool_to_Fin_2 (Fin_2_to_bool y) = y.
+Proof.
+intros.
+fin_dep_destruct y.
+- reflexivity.
+- fin_dep_destruct x.
+  + reflexivity.
+  + inversion x.
+Qed.
+
+Print Assumptions bool_to_Fin_2__Fin_2_to_bool__id'.</textarea>
+
+<!-- JSCOQ -->
+<p>
+A few final notes. First, this tactic will not properly destruct a
+term that appears in hypotheses as well. The fix would be to <code>revert</code> those hypotheses before using <code>pattern</code>. This could even be achieved with a relatively low level of pain using additional Ltac hacking, but I won't go into that here. Exercise for the reader! Second, note that <code>fin_case</code> is similar to the lemma <code>caseS</code> in the standard library (the only difference being where <code>n</code> is quantified).<a href="http://homes.cs.washington.edu/~jrw12/dep-destruct.html#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a> There's even a recursive (inductive) version, called <code>rectS</code> that
+essentially implements a dependent form of induction. I actually
+developed this trick independently, but it's not at all surprising
+that such a thing already existed. What <em>is</em> surprising to me is that no readers of the first version of this post pointed out <code>caseS</code>!</p>
+
+<h2 id="another-example-and-a-design-pattern-for-dependent-case-analysis-without-axioms">Another Example and a Design Pattern for Dependent Case Analysis without Axioms</h2>
+
+<p>We've seen how to implement dependent case analysis for <code>Fin</code>, but what about in general? As far as I can tell, the same basic trick works: prove a "destruction principle" for your type, which takes a hypothesis proving the goal on each constructor of the type. The tricky bit is giving a type to the predicate <code>P</code>. In the case of <code>Fin</code>, both constructors return elements of <code>Fin (S n)</code>. Importantly, the indices from both cases unify. This allowed us to give <code>P</code> type <code>Fin (S n) -&gt; Type</code>,
+which simplified things. When the indices from different constructors
+don't unify, the statement of the case lemma is more complicated, and
+requires explicit transports to make it typecheck.</p>
+
+<p>I've worked this out in detail for an example from CPDT: the constant folding example from the <a href="http://adam.chlipala.net/cpdt/html/ProgLang.html">ProgLang Chapter</a> using the first order representation of syntax. In this situation, we have a types <code>type</code> and <code>term</code> that represent the types and expressions in the object language. The <code>member</code> family encodes dependent deBruijn indices for variable names. The <code>cfold</code> transformation (not shown below) implements constant folding, which we want to prove sound. The proof of its soundness requires case analysis on some <code>term</code>s, for which CPDT uses a variant of <code>dependent destruction</code>. Using the techniques from this post, we can eliminate the reliance on axioms.</p>
+<p>Here is the relevant code in a standalone snippet. See the book for more details and the actual proof of soundness. I won't explain it in detail, but hopefully <code>term_case</code> will
+help people looking to implement their own axiom-less dependent case
+analysis lemmas. (I also left out the cute hover contexts because the
+proof isn't that interesting).</p>
+
+<!-- JSCOQ -->
+<textarea id="u28">
+Set Implicit Arguments.
+Inductive type : Type :=  Nat : type | Func : type -> type -> type.
+  
+Require Import List.
+Import ListNotations.
+  
+Inductive member (A : Type) (elm : A) : list A -> Type :=
+      HFirst : forall ls : list A, member elm (elm :: ls)
+    | HNext : forall (x : A) (ls : list A),
+              member elm ls -> member elm (x :: ls).
+  
+Inductive term : list type -> type -> Type :=
+    Var : forall (G : list type) (t : type), member t G -> term G t
+  | Const : forall G : list type, nat -> term G Nat
+  | Plus : forall G : list type, term G Nat -> term G Nat -> term G Nat
+  | Abs : forall (G : list type) (dom ran : type),
+            term (dom :: G) ran -> term G (Func dom ran)
+  | App : forall (G : list type) (dom ran : type),
+            term G (Func dom ran) -> term G dom -> term G ran
+  | Let : forall (G : list type) (t1 t2 : type),
+            term G t1 -> term (t1 :: G) t2 -> term G t2.
+  
+Lemma ty_eq_dec :
+forall x y : type, {x = y} + {x <> y}.
+Proof.
+    decide equality.
+Qed.
+
+Lemma term_case :
+forall G t (P : term G t -> Type),
+      (forall p, P (Var p)) ->
+      (forall n (pf : t = Nat),
+          P (eq_rect Nat _ (Const G n) t (eq_sym pf))) ->
+      (forall e1 e2 (pf : t = Nat),
+          P (eq_rect Nat _ (Plus e1 e2) t (eq_sym pf))) ->
+      (forall dom ran (pf : t = Func dom ran) b,
+          P (eq_rect (Func dom ran) _ (Abs b) _ (eq_sym pf))) ->
+      (forall dom e1 e2, P (App (dom:=dom) e1 e2)) ->
+      (forall ty1 e1 e2, P (Let (t1:=ty1) e1 e2)) ->
+forall e, P e.
+Proof.
+intros.
+destruct e eqn:?; auto.
+- specialize (X0 n eq_refl). 
+  auto.
+- specialize (X1 t0_1 t0_2 eq_refl). 
+  auto.
+- specialize (X2 dom ran eq_refl t0). 
+  auto.
+Qed.</textarea>
+
+<p>The <code>term_case</code> lemma follows the same pattern as <code>fin_case</code>: one hypothesis for each constructor. It is complicated by the fact that <code>term</code> has two indices instead of just 1 (but the use of <code>G</code> is simple enough that it doesn't require special handling) and the fact that the constructors do not return indices that unify (the <code>type</code> index is different in each case). Thus to state the hypotheses, we have to use extra transports (ie, <code>eq_rect</code>s). The proof of the lemma is easy after using simplification based on decidable equality. We also had to prove that equality on <code>type</code> is decidable. Again, that is the key to this whole approach: <strong>if your indices have a type with decidable equality, you don't need <code>JMeq</code> to get dependent case analysis.</strong></p>
+<p>At this point we could define a custom tactic to call <code>pattern</code> and <code>term_case</code>, just as we did with <code>fin_case</code>, but I'll leave those out because they are virtually identical. The proof of <code>cfold_sound</code> (which you can find in the book) now goes through by replacing <code>dependent destruction</code> with applications of <code>term_case</code>.</p>
+<p><span style="color: gray">Last updated: January 13, 2016</span></p>
+
+<div class="footnotes">
+  <hr>
+  <ol>
+    <li id="fn1"><p>There's another standard definition of <code>Fin</code> as a Coq <code>Fixpoint</code> from <code>nat</code> to <code>Type</code>. This <code>Fixpoint</code> encoding is often easier to work with because Coq can perform type-level computation. In fact, this encoding would make the example in this post straightforward to define and would not require <code>dependent destruction</code> or any other trickery. But that's not the point! The point is that one does not always have such an encoding to work with, so it's useful to have techniques that work with the inductive definitions. This is just a simple example.<a href="http://homes.cs.washington.edu/~jrw12/dep-destruct.html#fnref1">↩</a></p></li>
+    <li id="fn2"><p>There is some debate in the proof assistant community about whether axioms like <code>JMeq</code> should be used in verification efforts. According to CPDT, <code>JMeq</code> has been proven (on paper) to be a consistent extension of Coq's type theory. I tend to come down on the side of using whatever axioms you want if it helps you be productive. Clearly there are trade-offs here. And in any case, it's nice to know that you can avoid this axiom in the common case (of index types with decidable equality) with a little extra work.<a href="http://homes.cs.washington.edu/~jrw12/dep-destruct.html#fnref2">↩</a></p></li>
+    <li id="fn3"><p>Because both constructors of the <code>Fin</code> type return terms of type <code>Fin (S n)</code>, it simplifies the statement of the lemma to give <code>P</code> type <code>Fin (S n) -&gt; Type</code> instead of the more natural (?) <code>Fin n -&gt; Type</code>. For more complex inductive type families where the index is not constant across all constructors, this simplification isn't possible, and a different technique is needed. We'll see that in the example at the end of the post.</p>
+      <p>Finally, note that this simplification can make it harder to actually use <code>fin_case</code>. Before you apply it, you need to know that your element of <code>Fin</code> is at index <code>S n</code> for some <code>n</code>. This is always the case for <code>Fin</code> (since <code>Fin 0</code> is uninhabited), but you might expect <code>fin_case</code> (or the helper tactic defined below) to do it for you. Extending the tactic to do so is a good exercise!<a href="http://homes.cs.washington.edu/~jrw12/dep-destruct.html#fnref3">↩</a></p></li>
+    <li id="fn4"><p>The proof term for <code>caseS</code> is interesting (read: way better than mine). It uses a similarly complicated <code>match</code> annotation, but one that avoids the need for decidable equality or <code>eq_rect</code>. I haven't fully explored how that technique would generalize to non-<code>Fin</code> types, but I expect the results would be cleaner.<a href="http://homes.cs.washington.edu/~jrw12/dep-destruct.html#fnref4">↩</a></p></li>
+  </ol>
+</div>
+</div>
+</div>
+</div>
+
+<script src="../ui-js/jscoq-loader.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+ var jscoq_ids  = ['u1','u2','u3','u4','u5','u6','u7','u8','u9','u10','u11', 'u99', 'u12','u13','u14','u15','u16','u17','u18','u19','u20','u21','u22','u23','u24','u25','u26','u27','u28'];
+
+ var jscoq_opts = {
+     prelude:   true,
+     mock:      false,
+     base_path: '../',
+     wrapper_id: 'ide-wrapper',
+     init_pkgs: ['init', 'coq-reals']
+ };
+
+ /* Global reference */
+ var coq;
+
+ loadJsCoq(jscoq_opts.base_path)
+                     .then( () => coq = new CoqManager(jscoq_ids, jscoq_opts) );
+</script>
+
+</body>
+</html>

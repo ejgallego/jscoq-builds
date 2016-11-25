@@ -1,23 +1,5 @@
 {
   "desc": "tlc",
   "deps": [ "coq-reals" ],
-  "pkgs": [
-    {
-      "pkg_id": [ "TLC" ],
-      "vo_files": [
-        "LibEpsilon.vo", "LibProd.vo", "LibFix.vo", "LibMap.vo", "LibWf.vo",
-        "LibLogic.vo", "LibLN.vo", "LibFset.vo", "LibReflect.vo",
-        "LibChoice.vo", "LibStream.vo", "LibGraph.vo", "LibOtherDemos.vo",
-        "LibVar.vo", "LibString.vo", "LibNat.vo", "LibFunc.vo",
-        "LibEqual.vo", "LibOperation.vo", "LibMultiset.vo", "LibListZ.vo",
-        "LibOption.vo", "LibRelation.vo", "LibAxioms.vo", "LibPer.vo",
-        "LibExtractDemos.vo", "LibSet.vo", "LibTactics.vo", "LibFixDemos.vo",
-        "LibBag.vo", "LibStruct.vo", "LibInt.vo", "LibOrder.vo", "LibSum.vo",
-        "LibCore.vo", "LibUnit.vo", "LibBool.vo", "LibTacticsDemos.vo",
-        "LibPrelude.vo", "LibMin.vo", "LibEnv.vo", "LibList.vo",
-        "LibListSorted.vo", "LibHeap.vo"
-      ],
-      "cma_files": []
-    }
-  ]
+  "pkgs": [ { "pkg_id": [ "TLC" ], "vo_files": [], "cma_files": [] } ]
 }
