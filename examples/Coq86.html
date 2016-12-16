@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
-    <link rel="stylesheet" href="../ui-external/bootstrap.min.css" />
+    <link rel="stylesheet" href="jscoq/ui-external/bootstrap.min.css" />
 
     <title>Use Coq in Your Browser: The Js Coq Theorem Prover Online IDE!</title>
   </head>
@@ -13,287 +13,121 @@
   <div id="code-wrapper">
   <div id="document">
 
-<div><textarea id='coq-ta-1'>
-</textarea></div>
 <div><p>
-This file introduces the new features of Coq 8.6 </div>
+This file introduces some of the new features of Coq 8.6 </div>
 <div><textarea id='coq-ta-2'>
-
 From Coq Require Import Arith List Omega Bool Program.Tactics.
-
 </textarea></div>
 <div><p>
-Fine grained error-reporting and error processing, in structured scripts <p>
- Multi-goal, multi-success typeclasses eauto engine </div>
+<h1>
+ Multi-goal, multi-success typeclasses eauto engine
+</h1>
+</div>
 <div><textarea id='coq-ta-3'>
+(* See Coq86typeclasses for a more detailed demonstration. *)
 
-Module Typeclasses.
-  Module Backtracking.
-    Class A := { foo : nat }.
-
-    Instance A_1 : A | 2 := { foo := 42 }.
-    Instance A_0 : A | 1 := { foo := 0 }.
-    Lemma aeq (a : A) : foo = foo.
-      reflexivity.
-    Qed.
+Class pred (n : nat) : Prop := {}.
+Instance pred0 : pred 0 := {}.
 </textarea></div>
 <div><p>
-Declare <tt>eq</tt> as a class so that typeclass resolution considers it </div>
+pred1 has priority over pred0 </div>
 <div><textarea id='coq-ta-4'>
-    Existing Class eq.
-
+Instance pred1 : pred 1 := {}.
+Class pred2 (n : nat) : Prop := {}.
 </textarea></div>
 <div><p>
-A_0 has priority, but its foo field is not equal to 42 </div>
+There is not <tt>pred2 1</tt> instance </div>
 <div><textarea id='coq-ta-5'>
-    Arguments foo A : clear implicits.
-    Example find42 : exists n, n = 42.
-    Proof.
-      eexists. etransitivity.
+Instance pred20 : pred2 0 := {}.
+
+Goal exists x : nat, pred x /\ pred2 x.
+  eexists. split.
 </textarea></div>
 <div><p>
-<tt>notypeclasses refine</tt> does not run typeclass resolution, so we can
-          see what typeclass constraints are necessary.
-          ?<tt>a</tt> declares an evar a of type A </div>
+The resolution can backtrack across goals, </div>
 <div><textarea id='coq-ta-6'>
-      notypeclasses refine (@aeq ?[a]).
+  Set Typeclasses Debug.
 </textarea></div>
 <div><p>
-We find A_0 </div>
+Here using two different calls to resolution on two different
+      goals, using the multiple successes of the first call to find
+      pred0 </div>
 <div><textarea id='coq-ta-7'>
-      typeclasses eauto.
+  all:[> typeclasses eauto .. ].
+  Undo.
 </textarea></div>
 <div><p>
-This can't work as <tt>foo A_0 = 0</tt> </div>
+Here using a multi-goal call </div>
 <div><textarea id='coq-ta-8'>
-      Fail reflexivity.
-      Undo 2.
-      (* Without multiple successes it fails as it finds A_0 again but cannot backtrack on it
-         (<tt>once</tt> prevents backtracking) *)
-      Set Typeclasses Debug.
-      Fail all:((once (typeclasses eauto))
-                + apply eq_refl).
-      (* It does backtrack if other goals fail *)
-      all:[> typeclasses eauto + reflexivity .. ].
-      Show Proof.
-    Qed.
+  all:typeclasses eauto.
+  Show Proof.
+Qed.
 
-    Hint Extern 0 (_ = _) => reflexivity : equality.
-
-    Goal exists n, n = 42.
-      eexists. etransitivity.
-      notypeclasses refine (@aeq ?[a]).
-      typeclasses eauto.
-      Fail reflexivity.
-      Undo 2.
-
-      (* Does backtrack between individual goals *)
-      Set Typeclasses Debug.
-      all:(typeclasses eauto with typeclass_instances equality).
-    Qed.
-
-    Unset Typeclasses Debug.
-
-  End Backtracking.
-
-  Module HintCut.
 </textarea></div>
 <div><p>
-Hint Cuts </div>
+<h1>
+ Goal selectors
+</h1>
+</div>
 <div><textarea id='coq-ta-9'>
 
-    Hint Resolve 100 eq_sym eq_trans : core.
-    Goal forall x y z : nat, x = y -> z = y -> x = z.
-    Proof.
-      intros.
-    (* Fail Timeout 1 typeclasses eauto with core. *)
-    Abort.
-
+Goal exists n : nat, pred n /\ pred2 n /\ True.
+  eexists.
+  split; [|split].
 </textarea></div>
 <div><p>
-These proof search paths are automatically discarded </div>
+Applies the multi-goal tactic to the list of goals </div>
 <div><textarea id='coq-ta-10'>
-    Hint Cut [(_)* eq_sym eq_sym] : core.
-    Hint Cut [_* eq_trans eq_trans] : core.
-    Hint Cut [_* eq_trans eq_sym eq_trans] : core.
-
-    Goal forall x y z : nat, x = y -> z = y -> x = z.
-    Proof.
-      intros.
-      typeclasses eauto with core.
-    Qed.
+  1-2:typeclasses eauto.
+  exact I.
+  Undo 2.
+  2-3:cycle 1.
+  1,3:typeclasses eauto.
+  (* Same result, selection of non-contiguous range *)
+  exact I.
+Qed.
 
 </textarea></div>
 <div><p>
-Useful for hierarchies </div>
+<h1>
+ Irrefutable patterns in binders
+</h1>
+</div>
 <div><textarea id='coq-ta-11'>
-    Module Hierarchies.
 
-      Class A := mkA { data : nat }.
-      Class B := mkB { aofb :> A }.
+Module IrrefutablePatterns.
 
-      Existing Instance mkB.
+  Definition fst {A B} '((a, b) : _ * B) : A := a.
+  Definition snd {A B} '((a, b) : A * B) := b.
 
-      Definition makeB (a : A) : B := _.
-      Definition makeA (a : B) : A := _.
+  Record myrec := makemy { somebool : bool; somenat : nat }.
 
-      (* Fail Timeout 1 Definition makeA' : A := _. *)
+  Lemma eta_my : forall '(makemy b n), b = true \/ b = false.
+    intros [[|] n]; auto.
+  Qed.
+
+  Definition map_pair (l : list (nat * nat)) : list nat :=
+    map (fun '(pair x _) => x) l.
+
+End IrrefutablePatterns.
 
 </textarea></div>
 <div><p>
-Both the constructor and the projections can be declared as instances
-          without leading to divergence </div>
+<h1>
+ Keyed Unification
+</h1>
+</div>
 <div><textarea id='coq-ta-12'>
-      Hint Cut [_* mkB aofb] : typeclass_instances.
-      Fail Definition makeA' : A := _.
-      Fail Definition makeB' : B := _.
-    End Hierarchies.
-  End HintCut.
-
-  Module HintModes.
-</textarea></div>
-<div><p>
-Hint modes </div>
-<div><textarea id='coq-ta-13'>
-
-    Class Equality (A : Type) := { eqp : A -> A -> Prop }.
-
-    Check (eqp 0%nat 0).
-
-    Instance nat_equality : Equality nat := { eqp := eq }.
-
-    Instance default_equality A : Equality A | 1000 :=
-      { eqp := eq }.
-
-    Check (eqp 0%nat 0).
-
-    (* Defaulting *)
-    Check (fun x y => eqp x y).
-    (* No more defaulting, reduce "trigger-happiness" *)
-    Definition ambiguous x y := eqp x y.
-
-</textarea></div>
-<div><p>
-This says that to start resolution for an Equality t constraint,
-        t's head must <em>not</em> be an evar </div>
-<div><textarea id='coq-ta-14'>
-    Hint Mode Equality ! : typeclass_instances.
-    Fail Definition ambiguous' x y := eqp x y.
-    Definition nonambiguous (x y : nat) := eqp x y.
-
-</textarea></div>
-<div><p>
-Typical looping instances with defaulting: </div>
-<div><textarea id='coq-ta-15'>
-    Definition flip {A B C} (f : A -> B -> C) := fun x y => f y x.
-
-    Class SomeProp {A : Type} (f : A -> A -> A) :=
-      { prf : forall x y, f x y = f x y }.
-
-</textarea></div>
-<div><p>
-This is dangerous as <tt>flip f</tt> is unifiable with an evar or even
-        a term with a deep evar. </div>
-<div><textarea id='coq-ta-16'>
-    Instance propflip (A : Type) (f : A -> A -> A) :
-      SomeProp f -> SomeProp (flip f).
-    Proof.
-      intros []. constructor. reflexivity.
-    Qed.
-
-</textarea></div>
-<div><p>
-This applies propflip indefinitely </div>
-<div><textarea id='coq-ta-17'>
-    (* Fail Timeout 1 Check prf. *)
-
-</textarea></div>
-<div><p>
-Now we ask for the indexes of the typeclass to be evar free to
-        trigger resolution </div>
-<div><textarea id='coq-ta-18'>
-    Hint Mode SomeProp + + : typeclass_instances.
-
-</textarea></div>
-<div><p>
-No resolution done </div>
-<div><textarea id='coq-ta-19'>
-    Check prf.
-</textarea></div>
-<div><p>
-We have enough info to trigger propflip </div>
-<div><textarea id='coq-ta-20'>
-    Check (fun H : SomeProp plus => _ : SomeProp (flip plus)).
-  End HintModes.
-
-</textarea></div>
-<div><p>
-Iterative deepening / breadth-first search </div>
-<div><textarea id='coq-ta-21'>
-
-  Module IterativeDeepening.
-
-    Class A := {}.
-    Class B := {}.
-    Class C := {}.
-
-    Instance: B -> A | 0 := {}.
-    Instance: C -> A | 0 := {}.
-    Instance: C -> B -> A | 0 := {}.
-    Instance: A -> A | 0 := {}.
-
-    Goal C -> A.
-      intros.
-</textarea></div>
-<div><p>
-This diverges in depth-first search </div>
-<div><textarea id='coq-ta-22'>
-      (* Fail Timeout 1 typeclasses eauto. *)
-</textarea></div>
-<div><p>
-In breadth-first search (implemented by iterative deepening) </div>
-<div><textarea id='coq-ta-23'>
-      Set Typeclasses Iterative Deepening.
-</textarea></div>
-<div><p>
-It fails at depth 1 </div>
-<div><textarea id='coq-ta-24'>
-      Fail typeclasses eauto 1.
-</textarea></div>
-<div><p>
-Succeeds at depth 2 </div>
-<div><textarea id='coq-ta-25'>
-      typeclasses eauto 2.
-      Undo.
-</textarea></div>
-<div><p>
-Or any other depth </div>
-<div><textarea id='coq-ta-26'>
-      typeclasses eauto.
-    Qed.
-
-  End IterativeDeepening.
-End Typeclasses.
-
-</textarea></div>
-<div><p>
-Goal selectors <p>
- Warnings <p>
- Irrefutable patterns <p>
- Ltacprof <p>
- Cleaner generic arguments <p>
- Keyed Unification </div>
-<div><textarea id='coq-ta-27'>
 
 Module KeyedUnification.
 </textarea></div>
 <div><p>
 The purpose of Keyed Unification is to allow <tt>rewrite</tt> to see subterms to rewrite
-      up to controlable reduction. The strategy is to match the lhs or rhs of the lemma
+      up to controlable reduction. The strategy is to match the lhs or rhs of the lemma 
       with a subterm in the goal or hypothesis, by finding an applicative subterm whose
-      head is equivalent to the head in the lemma and the use full unification on the
+      head is equivalent to the head in the lemma and the use full unification on the 
       arguments, whether they are closed or not. </div>
-<div><textarea id='coq-ta-28'>
+<div><textarea id='coq-ta-13'>
   Set Keyed Unification.
 
   Section foo.
@@ -309,14 +143,14 @@ The purpose of Keyed Unification is to allow <tt>rewrite</tt> to see subterms to
 </textarea></div>
 <div><p>
 Found no subterm matching <quote>g 0</quote> in the current goal. </div>
-<div><textarea id='coq-ta-29'>
+<div><textarea id='coq-ta-14'>
     Abort.
 
     Declare Equivalent Keys @g @f.
 </textarea></div>
 <div><p>
 Now f and g are considered equivalent heads for subterm selection </div>
-<div><textarea id='coq-ta-30'>
+<div><textarea id='coq-ta-15'>
     Goal f 0 = 0.
     Proof.
       rewrite lem.
@@ -325,166 +159,61 @@ Now f and g are considered equivalent heads for subterm selection </div>
 
     Print Equivalent Keys.
   End foo.
-
-  Definition G {A} (f : A -> A -> A) (x : A) := f x x.
-
-  Lemma list_foo A (l : list A) : G (@app A) (l ++ nil) = G (@app A) l.
-  Proof. unfold G; rewrite app_nil_r; reflexivity. Qed.
-
-  (* Bundled version of a magma *)
-  Structure magma := Magma { b_car :> Type; op : b_car -> b_car -> b_car }.
-  Arguments op {_} _ _.
-
-  (* Instance for lists *)
-  Canonical Structure list_magma A := Magma (list A) (@app A).
-
-  (* Basically like list_foo, but now uses the op projection instead of app for
-     the argument of G *)
-  Lemma test1 A (l : list A) : G op (l ++ nil) = G op l.
-
-    (* Ensure that conversion of terms with evars is allowed once a keyed candidate unifier is found *)
-    rewrite -> list_foo.
-    reflexivity.
-  Qed.
-
-  (* Basically like list_foo, but now uses the op projection for everything *)
-  Lemma test2 A (l : list A) : G op (op l nil) = G op l.
-  Proof.
-    rewrite ->list_foo.
-    reflexivity.
-  Qed.
-
 End KeyedUnification.
 
 </textarea></div>
 <div><p>
 Unification constraint handling </div>
-<div><textarea id='coq-ta-31'>
+<div><textarea id='coq-ta-16'>
 
 Module UnifConstraints.
 
 </textarea></div>
 <div><p>
-This option governs the automating solving of remaining unification constraints
-      at each <quote>.</quote>. Unification can use heuristics to solve these remaining constraints. </div>
-<div><textarea id='coq-ta-32'>
+This option governs the automated solving of remaining unification constraints
+at each ".". Unification can use heuristics to solve these remaining constraints.
+</div>
+<div><textarea id='coq-ta-17'>
   Set Solve Unification Constraints. (* The default *)
 
   Goal forall n : nat, True /\ True /\ True \/ n = n.
 </textarea></div>
 <div><p>
 This higher-order unification constraint does not have a unique solution. </div>
-<div><textarea id='coq-ta-33'>
+<div><textarea id='coq-ta-18'>
     intros n. Fail refine (nat_rect _ _ _ n).
     Unset Solve Unification Constraints.
 </textarea></div>
 <div><p>
 This lets the constraint float. </div>
-<div><textarea id='coq-ta-34'>
+<div><textarea id='coq-ta-19'>
     refine (nat_rect _ _ _ n).
 </textarea></div>
 <div><p>
 This forces constraint solving, here failing </div>
-<div><textarea id='coq-ta-35'>
+<div><textarea id='coq-ta-20'>
     Fail solve_constraints.
 </textarea></div>
 <div><p>
 If we remove the spurious dependency of the predicate on <tt>n</tt>: </div>
-<div><textarea id='coq-ta-36'>
+<div><textarea id='coq-ta-21'>
     Undo 2.
     simple refine (nat_rect _ _ _ n). (* simple refine does not shelve dependent subgoals *)
-    clear n. intros n. (* We must use an intro here to let the unifier solve
+    Set Printing Existential Instances.
+    clear n. intros n. (* We must use an intro here to let the unifier solve 
                           the higher-order problem *)
     solve_constraints.
     all:simpl.
   Admitted.
 End UnifConstraints.
-
-</textarea></div>
-<div><p>
-Compatibility options <p>
- The options to make code compatible with Coq 8.5 are the following
-  (loaded by -compat 8.5).
-<p>
- We use some deprecated options in this file, so we disable the
-    corresponding warning, to silence the build of this file. </div>
-<div><textarea id='coq-ta-37'>
-(* Local Set Warnings "-deprecated-option". *)
-
-(* In 8.5, "intros <tt>|</tt>", taken e.g. on a goal "A\/B->C", does not
-   behave as "intros <tt>H|H</tt>" but leave instead hypotheses quantified in
-   the goal, here producing subgoals A->C and B->C. *)
-
-Global Unset Bracketing Last Introduction Pattern.
-
-</textarea></div>
-<div><p>
-Subst has some irregularities </div>
-<div><textarea id='coq-ta-38'>
-
-Global Unset Regular Subst Tactic.
-
-</textarea></div>
-<div><p>
-Injection does not ?? </div>
-<div><textarea id='coq-ta-39'>
-Global Unset Structural Injection.
-
-</textarea></div>
-<div><p>
-<tt>abstract</tt>ed proofs and Program obligations were not shrinked.
-  Shrinking removes abstractions by unused variables in these cases </div>
-<div><textarea id='coq-ta-40'>
-Global Unset Shrink Abstract.
-Global Unset Shrink Obligations.
-
-</textarea></div>
-<div><p>
-Refolding was used not only by <tt>cbn</tt> but also during unification,
-  resulting in blowups sometimes. </div>
-<div><textarea id='coq-ta-41'>
-Global Set Refolding Reduction.
-
-</textarea></div>
-<div><p>
-The resolution algorithm for type classes has changed. </div>
-<div><textarea id='coq-ta-42'>
-Global Set Typeclasses Legacy Resolution.
-
-</textarea></div>
-<div><p>
-The resolution algorithm tried to limit introductions (and hence
-  eta-expansions). Can be very expensive as well </div>
-<div><textarea id='coq-ta-43'>
-Global Set Typeclasses Limit Intros.
-
-</textarea></div>
-<div><p>
-The unification strategy for typeclasses eauto has changed,
-  Filtered Unification is not on by default in 8.6 though. </div>
-<div><textarea id='coq-ta-44'>
-Global Unset Typeclasses Filtered Unification.
-
-</textarea></div>
-<div><p>
-Allow silently letting unification constraints float after a <quote>.</quote>, now
-  disallowed by default (one gets unification errors instead) </div>
-<div><textarea id='coq-ta-45'>
-Global Unset Solve Unification Constraints.
 </textarea></div>
 <script type="text/javascript">
- var coqdoc_ids = ['coq-ta-1',  'coq-ta-2',  'coq-ta-3',  'coq-ta-4', 
+ var coqdoc_ids = ['coq-ta-2',  'coq-ta-3',  'coq-ta-4', 
                   'coq-ta-5',  'coq-ta-6',  'coq-ta-7',  'coq-ta-8', 
                   'coq-ta-9',  'coq-ta-10',  'coq-ta-11',  'coq-ta-12', 
                   'coq-ta-13',  'coq-ta-14',  'coq-ta-15',  'coq-ta-16', 
                   'coq-ta-17',  'coq-ta-18',  'coq-ta-19',  'coq-ta-20', 
-                  'coq-ta-21',  'coq-ta-22',  'coq-ta-23',  'coq-ta-24', 
-                  'coq-ta-25',  'coq-ta-26',  'coq-ta-27',  'coq-ta-28', 
-                  'coq-ta-29',  'coq-ta-30',  'coq-ta-31',  'coq-ta-32', 
-                  'coq-ta-33',  'coq-ta-34',  'coq-ta-35',  'coq-ta-36', 
-                  'coq-ta-37',  'coq-ta-38',  'coq-ta-39',  'coq-ta-40', 
-                  'coq-ta-41',  'coq-ta-42',  'coq-ta-43',  'coq-ta-44', 
-                  'coq-ta-45'];
+                  'coq-ta-21'];
 </script>
   </div> <!-- /#document     -->
   </div> <!-- /#code-wrapper -->
