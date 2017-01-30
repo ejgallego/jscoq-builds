@@ -3,14 +3,14 @@ L="Rdefinitions",J="R",K="Reals",I="Coq",j=ac.jsoo_runtime,d=j.caml_new_string,H
 e(a,b){return a.length==1?a(b):j.caml_call_gen(a,[b])}function
 a(a,b,c){return a.length==2?a(b,c):j.caml_call_gen(a,[b,c])}function
 ab(a,b,c,d,e){return a.length==4?a(b,c,d,e):j.caml_call_gen(a,[b,c,d,e])}var
-i=j.caml_get_global_data(),w=d("r_syntax_plugin"),b=i.Bigint,c=i.Globnames,p=i.Names,v=i.Util,N=i.Loc,O=i.Libnames,M=i.Notation;e(i.Mltop[12],w);var
-m=[248,d("R_syntax.Non_closed_number"),j.caml_fresh_oo_id(0)],P=[0,d(I),[0,d(K),[0,d(L),0]]],R=d(J),S=d(J),U=d("R1"),V=d("R0"),W=d("Ropp"),X=d("Rplus"),Y=d("Rmult"),_=[0,d(I),[0,d(K),[0,d(L),0]]],$=d("R_scope");function
-x(b){var
-c=a(v[17][14],p[1][5],b);return e(p[5][4],c)}var
-g=x(P),Q=e(p[1][5],R),y=a(O[17],g,Q);function
+i=j.caml_get_global_data(),v=d("r_syntax_plugin"),b=i.Bigint,c=i.Globnames,p=i.Names,x=i.Util,X=i.Loc,O=i.Libnames,$=i.Notation;e(i.Mltop[12],v);var
+m=[248,d("R_syntax.Non_closed_number"),j.caml_fresh_oo_id(0)],M=[0,d(I),[0,d(K),[0,d(L),0]]],P=d(J),Q=d(J),S=d("R1"),T=d("R0"),U=d("Ropp"),V=d("Rplus"),W=d("Rmult"),Z=[0,d(I),[0,d(K),[0,d(L),0]]],_=d("R_scope");function
+w(b){var
+c=a(x[17][14],p[1][5],b);return e(p[5][4],c)}var
+g=w(M),N=e(p[1][5],P),y=a(O[17],g,N);function
 k(d,b){var
 f=e(p[1][5],b);return a(c[27],d,f)}var
-z=k(g,S),f=[1,k(g,U)],q=[1,k(g,V)],r=[1,k(g,W)],h=[1,k(g,X)],n=[1,k(g,Y)],l=e(b[11],b[6]),A=e(b[9],l),B=e(b[11],l),T=[1,z];function
+z=k(g,Q),f=[1,k(g,S)],q=[1,k(g,T)],r=[1,k(g,U)],h=[1,k(g,V)],n=[1,k(g,W)],l=e(b[11],b[6]),A=e(b[9],l),B=e(b[11],l),R=[1,z];function
 s(c,d){return a(b[17],b[6],d)?[0,[0,c,f,0]]:[4,c,[0,[0,c,h,0]],[0,[0,[0,c,f,0]],[0,s(c,e(b[10],d)),0]]]}function
 t(c,d){var
 j=[0,[0,c,f,0]],k=s(c,l);function
@@ -73,6 +73,6 @@ i=f[1];if(a(c[5],g[1][2],r)){var
 h=u(i);if(a(b[17],h,b[5]))throw m;return e(b[22],h)}}}}return u(d)}function
 E(a){try{var
 b=[0,D(a)];return b}catch(a){a=aa(a);if(a===m)return 0;throw a}}function
-F(a){return[0,[0,N[4],a,0]]}var
-Z=[0,a(v[17][12],F,[0,r,[0,q,[0,h,[0,n,[0,f,0]]]]]),E,0];ab(M[13],$,[0,y,_],C,Z);var
-G=[0,w,m,x,g,y,k,z,T,f,q,r,h,n,l,A,B,s,t,C,u,D,E,F];H(20,G,"R_syntax_plugin.R_syntax");H(21,[0,G],"R_syntax_plugin");return});
+F(a){return[0,[0,X[4],a,0]]}var
+Y=[0,a(x[17][12],F,[0,r,[0,q,[0,h,[0,n,[0,f,0]]]]]),E,0];ab($[13],_,[0,y,Z],C,Y);var
+G=[0,v,m,w,g,y,k,z,R,f,q,r,h,n,l,A,B,s,t,C,u,D,E,F];H(20,G,"R_syntax_plugin.R_syntax");H(21,[0,G],"R_syntax_plugin");return});
