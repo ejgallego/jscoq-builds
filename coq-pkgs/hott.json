@@ -2,64 +2,9 @@
   "desc": "hott",
   "deps": [ "hott-init" ],
   "pkgs": [
-    {
-      "pkg_id": [ "HoTT" ],
-      "vo_files": [
-        [ "Functorish.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "HoTT.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Extensions.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Factorization.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Utf8.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "NullHomotopy.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "UnivalenceImpliesFunext.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "TruncType.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Pullback.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Fibrations.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "FunextAxiom.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Tests.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "UnivalenceAxiom.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "EquivGroupoids.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Pointed.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "EquivalenceVarieties.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Categories.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Conjugation.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Basics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Idempotents.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Tactics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Misc.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "DProp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ObjectClassifier.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "HSet.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Constant.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "HProp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Types.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "HoTT", "Algebra" ],
-      "vo_files": [
-        [ "ooAction.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Aut.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ooGroup.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "HoTT", "Basics" ],
-      "vo_files": [
-        [ "PathGroupoids.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Contractible.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Overture.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Equivalences.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Trunc.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "FunextVarieties.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "UniverseLevel.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Notations.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Decidable.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
+    { "pkg_id": [ "HoTT" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "HoTT", "Algebra" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "HoTT", "Basics" ], "vo_files": [], "cma_files": [] },
     { "pkg_id": [ "HoTT", "categories" ], "vo_files": [], "cma_files": [] },
     {
       "pkg_id": [ "HoTT", "categories", "Adjoint" ],
@@ -245,98 +190,11 @@
       "vo_files": [],
       "cma_files": []
     },
-    {
-      "pkg_id": [ "HoTT", "Comodalities" ],
-      "vo_files": [
-        [ "CoreflectiveSubuniverse.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "HoTT", "HIT" ],
-      "vo_files": [
-        [ "iso.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "quotient.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "TruncImpliesFunext.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Join.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Connectedness.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Truncations.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Circle.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Interval.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "unique_choice.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "epi.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Pushout.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Flattening.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "V.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "IntervalImpliesFunext.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "TwoSphere.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Spheres.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Coeq.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Suspension.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "FreeIntQuotient.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "HoTT", "Modalities" ],
-      "vo_files": [
-        [ "Notnot.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ReflectiveSubuniverse.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Open.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Closed.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Fracture.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Modality.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Nullification.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Accessible.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Identity.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Lex.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Localization.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Topological.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "HoTT", "Spaces" ],
-      "vo_files": [
-        [ "BAut.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Nat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Int.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "No.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Finite.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Cantor.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "HoTT", "Tactics" ],
-      "vo_files": [
-        [
-          "RewriteModuloAssociativity.vo", "d41d8cd98f00b204e9800998ecf8427e"
-        ],
-        [ "BinderApply.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "EvalIn.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "EquivalenceInduction.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "HoTT", "Types" ],
-      "vo_files": [
-        [ "Universe.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Equiv.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Empty.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Unit.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Bool.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Record.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Forall.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Sigma.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Prod.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Sum.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Wtype.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Arrow.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Paths.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    }
+    { "pkg_id": [ "HoTT", "Comodalities" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "HoTT", "HIT" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "HoTT", "Modalities" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "HoTT", "Spaces" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "HoTT", "Tactics" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "HoTT", "Types" ], "vo_files": [], "cma_files": [] }
   ]
 }

@@ -46,6 +46,7 @@
       "vo_files": [
         [ "sylow.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "gseries.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "extraspecial.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "hall.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "frobenius.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "commutator.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
@@ -56,7 +57,9 @@
         [ "alt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "pgroup.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "abelian.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "all_solvable.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "center.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "jordanholder.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "primitive_action.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "maximal.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "nilpotent.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
