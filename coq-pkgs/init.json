@@ -3,6 +3,13 @@
   "deps": [],
   "pkgs": [
     {
+      "pkg_id": [ "Coq", "ltac" ],
+      "vo_files": [ [ "Ltac.vo", "d41d8cd98f00b204e9800998ecf8427e" ] ],
+      "cma_files": [
+        [ "ltac_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ]
+    },
+    {
       "pkg_id": [ "Coq", "syntax" ],
       "vo_files": [],
       "cma_files": [
@@ -45,7 +52,6 @@
         [ "ExtrHaskellNatInteger.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "ExtrOcamlNatInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "ExtrHaskellZInteger.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Extraction.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "ExtrHaskellNatInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "ExtrOcamlZBigInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "ExtrHaskellNatNum.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
@@ -62,10 +68,7 @@
     },
     {
       "pkg_id": [ "Coq", "funind" ],
-      "vo_files": [
-        [ "Recdef.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "FunInd.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [ [ "Recdef.vo", "d41d8cd98f00b204e9800998ecf8427e" ] ],
       "cma_files": [
         [ "recdef_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ]

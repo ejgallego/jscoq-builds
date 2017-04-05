@@ -2,71 +2,22 @@
   "desc": "color",
   "deps": [ "coq-reals" ],
   "pkgs": [
-    {
-      "pkg_id": [ "CoLoR", "Filter" ],
-      "vo_files": [
-        [ "AFilterBool.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AFilterPerm.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AProj.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "CoLoR", "RPO" ],
-      "vo_files": [
-        [ "VRPO_Status.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "VPrecedence.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "VRPO_Results.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "VRPO_Prover.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "VLPO.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "VRPO_Type.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "VMPO.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
+    { "pkg_id": [ "CoLoR", "Filter" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "CoLoR", "RPO" ], "vo_files": [], "cma_files": [] },
     { "pkg_id": [ "CoLoR", "Coccinelle" ], "vo_files": [], "cma_files": [] },
     {
       "pkg_id": [ "CoLoR", "Coccinelle", "list_extensions" ],
-      "vo_files": [
-        [ "more_list.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "dickson.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "list_sort.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "list_permut.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "math_permut.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "list_set.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "equiv_list.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "weaved_relation.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Coccinelle", "term_orderings" ],
-      "vo_files": [
-        [ "modular_dp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "isubterm_dp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "subterm_dp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "usable_rules_dp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "rpo.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "graph_dp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "inner_dp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "interp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "term_o.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "igraph_dp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "matrix.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "dp.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Coccinelle", "basis" ],
-      "vo_files": [
-        [ "more_logic.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "decidable_set.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "terminaison.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "TransClosure.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ordered_set.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "closure.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
@@ -76,448 +27,147 @@
     },
     {
       "pkg_id": [ "CoLoR", "Coccinelle", "examples", "cime_trace" ],
-      "vo_files": [
-        [ "Newman.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "closure_extension.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "rewriting.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ring_extention.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "arith_extension.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "or_ext_generated.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "equational_extension.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "order_extension.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "dp_extension.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "rpo_extension.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "more_list_extention.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "term_extension.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Coccinelle", "ac_matching" ],
-      "vo_files": [
-        [ "matching_well_founded.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "matching.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "matching_well_formed.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ac.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "matching_algo.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "matching_sound.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "matching_complete.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "cf_eq_ac.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Coccinelle", "term_algebra" ],
-      "vo_files": [
-        [ "equational_theory_spec.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "rwr_strategies.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "term_spec.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "term.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "equational_theory.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Coccinelle", "unification" ],
-      "vo_files": [
-        [ "free_unif.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "unification.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
-    {
-      "pkg_id": [ "CoLoR", "NonTermin" ],
-      "vo_files": [
-        [ "SLoop.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ALoop.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "SModLoop.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AModLoop.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AVarCond.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
+    { "pkg_id": [ "CoLoR", "NonTermin" ], "vo_files": [], "cma_files": [] },
     { "pkg_id": [ "CoLoR", "Term" ], "vo_files": [], "cma_files": [] },
     {
       "pkg_id": [ "CoLoR", "Term", "Lambda" ],
-      "vo_files": [
-        [ "LAlpha.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "LAlphaAlt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "LComp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "LCompRewrite.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "LCompClos.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "LSystemT.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "LBeta.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "LTerm.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "LEta.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "LCompSimple.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "LSimple.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "LCompInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "LCall.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "LSubs.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Term", "SimpleType" ],
-      "vo_files": [
-        [ "TermsAlgebraic.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "TermsConv.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "TermsActiveEnv.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "TermsSubst.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "TermsLifting.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "TermsEta.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "TermsDef.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "TermsBuilding.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "TermsManip.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "TermsTyping.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "TermsBeta.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "TermsSubstConv.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "TermsPos.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "TermsRed.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "TermsSig.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Terms.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "TermsEnv.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Term", "String" ],
-      "vo_files": [
-        [ "SContext.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "SReverse.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Srs.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Term", "Varyadic" ],
-      "vo_files": [
-        [ "VContext.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "VSignature.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "VSubstitution.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "VTrs.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "VTerm.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Term", "WithArity" ],
-      "vo_files": [
-        [ "AWFMInterpretation.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ARules.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AInfSeq.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AMonAlg.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ABterm.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AMatching.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ADuplicateSymb.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ASubterm.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "MonAlgChecker.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ATrsNorm.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AInterpretation.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ACalls.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AUnary.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ABinary.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ASN.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ARenCap.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ASubstitution.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ATerm.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ARelation.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ACompat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AMorphism.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ACap.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "APosition.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AShift.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AReduct.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AContext.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ASignature.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ANotvar.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AVariables.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ATrs.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AUnif.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ADepRel.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
-    {
-      "pkg_id": [ "CoLoR", "HORPO" ],
-      "vo_files": [
-        [ "Computability.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "HorpoExNonTrans.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "HorpoExMap.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Horpo.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "HorpoComp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "HorpoWf.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
+    { "pkg_id": [ "CoLoR", "HORPO" ], "vo_files": [], "cma_files": [] },
     {
       "pkg_id": [ "CoLoR", "ProofChecker" ],
-      "vo_files": [
-        [ "Problem.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "EmptyChecker.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Proof.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "IntBasedChecker.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ProofChecker.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
-    {
-      "pkg_id": [ "CoLoR", "MatrixInt" ],
-      "vo_files": [
-        [ "AMatrixBasedInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AArcticInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ATropicalBasedInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ATropicalInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AArcticBZInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AMatrixInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AArcticBasedInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ABigMatrixInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "CoLoR", "SemLab" ],
-      "vo_files": [
-        [ "ARootLab.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ASemLab.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AFlatCont.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "CoLoR", "Conversion" ],
-      "vo_files": [
-        [ "Coccinelle.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ATerm_of_String.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "VTerm_of_ATerm.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "String_of_ATerm.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AReverse.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "CoLoR", "DP" ],
-      "vo_files": [
-        [ "ADPUnif.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ASCCUnion.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AGraph.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ADP.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ADPGraph.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AHDE.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ADecomp.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
+    { "pkg_id": [ "CoLoR", "MatrixInt" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "CoLoR", "SemLab" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "CoLoR", "Conversion" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "CoLoR", "DP" ], "vo_files": [], "cma_files": [] },
     { "pkg_id": [ "CoLoR", "Util" ], "vo_files": [], "cma_files": [] },
     {
       "pkg_id": [ "CoLoR", "Util", "Multiset" ],
-      "vo_files": [
-        [ "MultisetCore.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "MultisetListOrder.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "MultisetList.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "MultisetNat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "MultisetTheory.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "MultisetOrder.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "Vector" ],
-      "vo_files": [
-        [ "VecFilterPerm.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "VecFilter.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "VecUtil.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "VecMax.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "VecBool.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "VecArith.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "VecOrd.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "Pair" ],
-      "vo_files": [
-        [ "PairUtil.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "PairLex.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "FSet" ],
-      "vo_files": [ [ "FSetUtil.vo", "d41d8cd98f00b204e9800998ecf8427e" ] ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "Integer" ],
-      "vo_files": [
-        [ "BigZUtil.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ZUtil.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "FMap" ],
-      "vo_files": [ [ "FMapUtil.vo", "d41d8cd98f00b204e9800998ecf8427e" ] ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "Matrix" ],
-      "vo_files": [ [ "Matrix.vo", "d41d8cd98f00b204e9800998ecf8427e" ] ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "Logic" ],
-      "vo_files": [
-        [ "ClassicUtil.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "EpsilonUtil.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "DepChoice.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "DepChoicePrf.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "EqUtil.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "LogicUtil.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "IotaUtil.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "Polynom" ],
-      "vo_files": [
-        [ "Polynom.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "MonotonePolynom.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "PositivePolynom.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "Option" ],
-      "vo_files": [ [ "OptUtil.vo", "d41d8cd98f00b204e9800998ecf8427e" ] ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "FGraph" ],
-      "vo_files": [
-        [ "FGraph.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "TransClos.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "Function" ],
-      "vo_files": [
-        [ "FunUtil.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "NaryFunction.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "List" ],
-      "vo_files": [
-        [ "ListOccur.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ListLex.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ListDec.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ListUtil.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ListPermutation.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ListNodup.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ListExtras.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "SortUtil.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ListShrink.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ListSort.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ListMax.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "Relation" ],
-      "vo_files": [
-        [ "Total.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AdjMat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "RelSub.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "RelDec.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "NotSN.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "SCC.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "InfSeq.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Tarski.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AccUtil.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "OrdUtil.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Path.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "SCCTopoOrdering.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "RelUtil.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "RelExtras.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Lexico.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "RedLength.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "NotSN_IS.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "RelMidex.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "SN.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Cycle.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Union.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Iter.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Preorder.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "SCC_dec.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "GDomainBij.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
     {
       "pkg_id": [ "CoLoR", "Util", "Bool" ],
-      "vo_files": [ [ "BoolUtil.vo", "d41d8cd98f00b204e9800998ecf8427e" ] ],
+      "vo_files": [],
       "cma_files": []
     },
-    {
-      "pkg_id": [ "CoLoR", "Util", "Nat" ],
-      "vo_files": [
-        [ "BigNUtil.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "BoundNat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "NatUtil.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "LeastNat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Log2.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "CoLoR", "Util", "Set" ],
-      "vo_files": [
-        [ "FinSet.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "InfSet.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Ramsey.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "SetUtil.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
+    { "pkg_id": [ "CoLoR", "Util", "Nat" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "CoLoR", "Util", "Set" ], "vo_files": [], "cma_files": [] },
     {
       "pkg_id": [ "CoLoR", "Util", "Algebra" ],
-      "vo_files": [
-        [ "OrdSemiRing.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "SemiRing.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
-    {
-      "pkg_id": [ "CoLoR", "PolyInt" ],
-      "vo_files": [
-        [ "PolyChecker.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "APolyInt_MA.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "APolyInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "CoLoR", "SubtermCrit" ],
-      "vo_files": [
-        [ "ASimpleProj.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "CoLoR", "MPO" ],
-      "vo_files": [ [ "VMpo.vo", "d41d8cd98f00b204e9800998ecf8427e" ] ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "CoLoR", "MannaNess" ],
-      "vo_files": [
-        [ "ARedPair.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "AMannaNess.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    }
+    { "pkg_id": [ "CoLoR", "PolyInt" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "CoLoR", "SubtermCrit" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "CoLoR", "MPO" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "CoLoR", "MannaNess" ], "vo_files": [], "cma_files": [] }
   ]
 }

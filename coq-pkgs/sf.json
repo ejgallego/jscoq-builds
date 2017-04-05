@@ -1,52 +1,5 @@
 {
   "desc": "sf",
   "deps": [ "coq-reals" ],
-  "pkgs": [
-    {
-      "pkg_id": [ "SF" ],
-      "vo_files": [
-        [ "Equiv.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Symbols.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "MoreStlc.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Postscript.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Stlc.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Auto.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Poly.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Rel.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Norm.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Smallstep.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "PE.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Lists.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "HoareAsLogic.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ImpParser.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ProofObjects.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Hoare.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Sub.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ImpCEvalFun.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Records.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Bib.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "StlcProp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "UseAuto.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Basics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Tactics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Imp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Induction.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "UseTactics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "IndPrinciples.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Hoare2.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "SfLib.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "References.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Extraction.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Maps.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "LibTactics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "IndProp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Preface.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "RecordSub.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Types.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Logic.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Typechecking.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    }
-  ]
+  "pkgs": [ { "pkg_id": [ "SF" ], "vo_files": [], "cma_files": [] } ]
 }
