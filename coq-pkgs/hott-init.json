@@ -6,8 +6,8 @@
       "pkg_id": [ "Coq", "syntax" ],
       "vo_files": [],
       "cma_files": [
+        [ "int31_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "ascii_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "numbers_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "nat_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "string_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "z_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],

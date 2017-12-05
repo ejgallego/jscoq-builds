@@ -13,9 +13,13 @@ function get_svn {
 }
 
 JSCOQ_DIR=~/research/jscoq/
-COQ_DIR=~/external/coq-v8.6+32bit/
-MC_DIR=~/external/coq/math-comp-32/
+JSCOQ_ADDONS=${JSCOQ_DIR}/coq-external
+COQ_DIR=${JSCOQ_ADDONS}/coq-v8.7+32bit/
+MC_DIR=${JSCOQ_ADDONS}/math-comp/
+ELPI_DIR=${JSCOQ_ADDONS}/elpi/
+IRIS_DIR=${JSCOQ_ADDONS}/iris/
 CM_DIR=${JSCOQ_DIR}/ui-external/CodeMirror
+
 FLOCQ_DIR=~/external/coq/flocq/
 CT_DIR=~/external/coq/coquelicot/
 TLC_DIR=~/external/coq/tlc/
@@ -43,12 +47,14 @@ get_hash "coq"        $COQ_DIR
 get_hash "jscoq"      $JSCOQ_DIR
 get_hash "CodeMirror" $CM_DIR
 get_hash "math-comp"  $MC_DIR
-get_hash "flocq"      $FLOCQ_DIR
-get_hash "coquelicot" $CT_DIR
-get_hash "tlc"        $TLC_DIR
-get_hash "HoTT"       $HOTT_DIR
-get_hash "UniMath"    $UNIM_DIR
-get_hash "coq-ext-lib"  $CEL_DIR
-get_hash "mirror-core"  $MC_DIR
-get_svn  "color"      $COLOR_DIR
-get_date "sf"         $SF_TAR
+get_hash "elpi"       $ELPI_DIR
+get_hash "iris"       $IRIS_DIR
+#get_hash "flocq"      $FLOCQ_DIR
+#get_hash "coquelicot" $CT_DIR
+#get_hash "tlc"        $TLC_DIR
+#get_hash "HoTT"       $HOTT_DIR
+#get_hash "UniMath"    $UNIM_DIR
+#get_hash "coq-ext-lib"  $CEL_DIR
+#get_hash "mirror-core"  $MC_DIR
+#get_svn  "color"      $COLOR_DIR
+#get_date "sf"         $SF_TAR

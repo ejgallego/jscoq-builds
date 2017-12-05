@@ -1,0 +1,42 @@
+{
+  "desc": "elpi",
+  "deps": [],
+  "pkgs": [
+    {
+      "pkg_id": [ "elpi" ],
+      "vo_files": [ [ "elpi.vo", "d41d8cd98f00b204e9800998ecf8427e" ] ],
+      "cma_files": [
+        [ "elpi_plugin.cma", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ]
+    },
+    {
+      "pkg_id": [ "elpi", "ltac" ],
+      "vo_files": [
+        [ "injection.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "discriminate.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ],
+      "cma_files": []
+    },
+    { "pkg_id": [ "elpi", "test" ], "vo_files": [], "cma_files": [] },
+    {
+      "pkg_id": [ "elpi", "tutorial" ],
+      "vo_files": [
+        [ "coq_elpi.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "elpi_lang.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "elpi", "derive" ],
+      "vo_files": [
+        [ "isK.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "projK.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "param2.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "eq.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "eqOK.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "param1.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ],
+      "cma_files": []
+    }
+  ]
+}

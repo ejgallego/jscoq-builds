@@ -20,6 +20,7 @@
         [ "PropExtensionalityFacts.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "Berardi.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "ClassicalDescription.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "PropFacts.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "ClassicalEpsilon.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "FunctionalExtensionality.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "Description.vo", "d41d8cd98f00b204e9800998ecf8427e" ],

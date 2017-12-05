@@ -1,10 +1,17 @@
 // The CoqLayoutClassic class.
-// Copyright (C) 2015-2017 Mines ParisTech/ARMINES
+// (c) 2015-2016 Mines ParisTech/ARMINES
 //
 // This class provides a plugabble side panel with proof and query
 // buffers.
 
 "use strict";
+
+var COQ_LOG_LEVELS = {
+    DEBUG : 'debug',
+    INFO  : 'info',
+    WARN  : 'warn',
+    ERROR : 'error'
+};
 
 /***********************************************************************/
 /* The CoqLayout class contains the goal, query, and packages buffer   */
@@ -56,11 +63,10 @@ class CoqLayoutClassic {
         <div class="caption">
           Messages
           <select name="msg_filter">
-            <option value="0">Error</option>
-            <option value="1">Warning</option>
-            <option value="2">Notice</option>
-            <option value="3" selected="selected">Info</option>
-            <option value="4">Debug</option>
+            <option value="3">error</option>
+            <option value="2">warn</option>
+            <option value="1" selected="selected">info</option>
+            <option value="0">debug</option>
           </select>
         </div>
         <div class="content" id="query-panel"></div>
@@ -69,12 +75,12 @@ class CoqLayoutClassic {
         <div class="caption">Packages</div>
         <div id="packages-panel" class="content"></div>
       </div>
-    </div>`;
+    </div>`
 
         return html;
     }
 
-    // We first initialize the providers.
+    // Reference to the jsCoq object.
     constructor(options) {
 
         // Our reference to the IDE, goal display & query buffer.
@@ -89,7 +95,7 @@ class CoqLayoutClassic {
         // UI setup.
         this.proof    = document.getElementById('goal-text');
         this.query    = document.getElementById('query-panel');
-        this.packages = document.getElementById('packages-panel');
+        this.packages = document.getElementById('packages-panel')
         this.buttons  = document.getElementById('buttons');
 
         // XXXXXXX: This has to be fixed.
@@ -102,8 +108,27 @@ class CoqLayoutClassic {
             .on('change', () => this.filterLog(d3.event.target));
     }
 
+    adjustWidth() {
+
+        setTimeout(() => {
+
+            // Set Printing Width... Far from perfect (XXX: Update on resize)
+            var pxSize  = parseFloat(getComputedStyle(this.query)['font-size']);
+
+            // A correction of almost 2.0 is needed here ... !!!
+            var emWidth = Math.floor(this.query.offsetWidth / pxSize * 1.65);
+            console.log("Setting printing width to: " + emWidth );
+
+            // XXX: What if the panel is toogled from the start...!
+            // Shoud send a message.
+            this.coq.set_printing_width(emWidth);
+        }, 500);
+    }
+
     show() {
         this.ide.classList.remove('toggled');
+        // XXX: This will fail if coq is not loaded...
+        this.adjustWidth();
     }
 
     hide() {
@@ -129,14 +154,12 @@ class CoqLayoutClassic {
     update_goals(str) {
         // TODO: Add diff/history of goals.
         // XXX: should send a message.
-        this.proof.innerHTML = str;
+        this.proof.textContent = str;
     }
 
     // Add a log event received from Coq.
     log(text, level) {
 
-        // Levels are taken from Coq itself:
-        //   | Debug | Info | Notice | Warning | Error
         d3.select(this.query)
             .append('div')
             .attr('class', level)
@@ -158,14 +181,11 @@ class CoqLayoutClassic {
         var length = level_select.getElementsByTagName('option').length;
         var min_log_level = parseInt(level_select.value, 10);
         var i;
-
         // XXXX!
-        console.log('setting lvl', min_log_level);
-        for(i = 0 ; i <= min_log_level ; i++)
-            this.log_css_rules[i].style.display = 'block';
-
-        for(i = min_log_level+1 ; i < length ; i++)
+        for(i=0 ; i < min_log_level ; i++)
             this.log_css_rules[i].style.display = 'none';
+        for(i=min_log_level ; i < length ; i++)
+            this.log_css_rules[i].style.display = 'block';
     }
 
     // Execute a query to Coq

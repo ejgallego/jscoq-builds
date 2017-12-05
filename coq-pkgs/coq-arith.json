@@ -152,8 +152,7 @@
       "vo_files": [
         [ "NaryFunctions.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "NumPrelude.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "BinNums.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "BigNumPrelude.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "BinNums.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     },
