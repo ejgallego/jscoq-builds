@@ -4,44 +4,123 @@
   "pkgs": [
     {
       "pkg_id": [ "Coq", "fourier" ],
-      "vo_files": [ "Fourier_util.vo", "Fourier.vo" ],
-      "cma_files": [ "fourier_plugin.cma", "fourier_plugin.cmo" ]
+      "vo_files": [
+        [ "Fourier.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fourier_util.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ],
+      "cma_files": [
+        [ "fourier_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ]
     },
     {
       "pkg_id": [ "Coq", "omega" ],
       "vo_files": [
-        "OmegaLemmas.vo", "OmegaPlugin.vo", "OmegaTactic.vo", "Omega.vo",
-        "PreOmega.vo"
+        [ "OmegaPlugin.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "OmegaTactic.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "OmegaLemmas.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Omega.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "PreOmega.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
-      "cma_files": [ "omega_plugin.cmo", "omega_plugin.cma" ]
+      "cma_files": [
+        [ "omega_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ]
     },
     {
       "pkg_id": [ "Coq", "micromega" ],
       "vo_files": [
-        "QMicromega.vo", "Psatz.vo", "RingMicromega.vo", "RMicromega.vo",
-        "Tauto.vo", "Env.vo", "EnvRing.vo", "VarMap.vo", "ZCoeff.vo",
-        "OrderedRing.vo", "ZMicromega.vo", "Lia.vo", "Refl.vo"
+        [ "Lqa.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Lra.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Env.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "MExtraction.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ZCoeff.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Lia.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "RingMicromega.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "OrderedRing.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ZMicromega.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Refl.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Tauto.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "EnvRing.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "RMicromega.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Psatz.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "VarMap.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "QMicromega.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
-      "cma_files": [ "micromega_plugin.cmo", "micromega_plugin.cma" ]
+      "cma_files": [
+        [ "micromega_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ]
+    },
+    {
+      "pkg_id": [ "Coq", "nsatz" ],
+      "vo_files": [ [ "Nsatz.vo", "d41d8cd98f00b204e9800998ecf8427e" ] ],
+      "cma_files": [
+        [ "nsatz_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ]
     },
     {
       "pkg_id": [ "Coq", "Reals" ],
       "vo_files": [
-        "Ranalysis2.vo", "Rcomplete.vo", "R_sqrt.vo", "Rbase.vo",
-        "NewtonInt.vo", "Rtrigo_def.vo", "AltSeries.vo", "ROrderedType.vo",
-        "Ranalysis1.vo", "Cos_rel.vo", "Exp_prop.vo", "Rfunctions.vo",
-        "Rseries.vo", "Cos_plus.vo", "SplitAbsolu.vo", "Rpow_def.vo",
-        "Ratan.vo", "SeqSeries.vo", "Rtopology.vo", "Rbasic_fun.vo",
-        "DiscrR.vo", "Rtrigo_alt.vo", "RiemannInt.vo", "MVT.vo", "RList.vo",
-        "ArithProp.vo", "RIneq.vo", "Rderiv.vo", "Ranalysis5.vo",
-        "Ranalysis4.vo", "Ranalysis_reg.vo", "Rpower.vo", "Binomial.vo",
-        "SeqProp.vo", "Integration.vo", "Reals.vo", "Rdefinitions.vo",
-        "Rsqrt_def.vo", "Rlogic.vo", "R_sqr.vo", "R_Ifp.vo", "Rprod.vo",
-        "Ranalysis3.vo", "Alembert.vo", "PartSum.vo", "Rtrigo1.vo",
-        "Cauchy_prod.vo", "Rsigma.vo", "Rtrigo_reg.vo", "Machin.vo",
-        "RiemannInt_SF.vo", "SplitRmult.vo", "Rgeom.vo", "Rtrigo.vo",
-        "Ranalysis.vo", "Raxioms.vo", "Rtrigo_calc.vo", "Sqrt_reg.vo",
-        "PSeries_reg.vo", "Rminmax.vo", "Rlimit.vo", "Rtrigo_fun.vo"
+        [ "Reals.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rderiv.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "R_Ifp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Ranalysis3.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rtopology.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rtrigo_def.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rtrigo_fun.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rdefinitions.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rlimit.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rtrigo.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rbasic_fun.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Sqrt_reg.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Binomial.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Exp_prop.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Alembert.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Machin.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "PartSum.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Cauchy_prod.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rminmax.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "RIneq.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Cos_plus.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Ratan.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rbase.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rfunctions.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "R_sqrt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ArithProp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ROrderedType.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Ranalysis4.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rtrigo_alt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "RiemannInt_SF.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "RList.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rpow_def.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Ranalysis1.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Ranalysis2.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "DiscrR.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Integration.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Ranalysis.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Cos_rel.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "SeqSeries.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rseries.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rsqrt_def.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rcomplete.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "SeqProp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "MVT.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "PSeries_reg.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "R_sqr.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "SplitRmult.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "RiemannInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NewtonInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rtrigo1.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Ranalysis5.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rtrigo_calc.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rlogic.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "AltSeries.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rprod.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Ranalysis_reg.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rgeom.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rpower.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Raxioms.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rsigma.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rtrigo_reg.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "SplitAbsolu.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     }

@@ -1,29 +1,31 @@
-(function(a){"use strict";var
-s="String",o=250,i=246,F="string",E="Strings",D="Coq",f=a.jsoo_runtime,b=f.caml_new_string,n=f.caml_obj_tag,C=f.caml_register_global,P=f.caml_wrap_exception;function
-g(a,b){return a.length==1?a(b):f.caml_call_gen(a,[b])}function
-h(a,b,c){return a.length==2?a(b,c):f.caml_call_gen(a,[b,c])}function
-O(a,b,c,d){return a.length==3?a(b,c,d):f.caml_call_gen(a,[b,c,d])}function
-Q(a,b,c,d,e){return a.length==4?a(b,c,d,e):f.caml_call_gen(a,[b,c,d,e])}var
-e=f.caml_get_global_data(),v=b("string_syntax_plugin"),m=[0,b(D),[0,b(E),[0,b(s),0]]],j=e.CamlinternalLazy,u=e.Globnames,p=e.Buffer,k=e.Ascii_syntax_plugin,t=e.Loc,I=e.Char,H=e.Coqlib,G=e.Notation;g(e.Mltop[12],v);var
-l=[248,b("String_syntax.Non_closed_string"),f.caml_fresh_oo_id(0)],w=h(k[1][5],m,b(F)),q=h(k[1][4],m,b(F)),x=[3,[0,[0,q,0],1]],y=[3,[0,[0,q,0],2]],L=b("EmptyString"),K=b(s),J=b("String interpretation"),M=[0,b(D),[0,b(E),[0,b(s),0]]],N=b("string_scope");function
-r(a){return O(H[1],J,m,a)}var
-c=[i,function(a){return r(K)}],d=[i,function(a){return r(L)}];function
-z(e,b){var
-q=f.caml_ml_string_length(b);function
-l(a){if(a===q){var
-m=n(d),r=0,s=o===m?d[1]:i===m?g(j[2],d):d;return[0,[0,e,s,r]]}var
-t=[0,l(a+1|0),0],p=n(c),u=[0,h(k[1][13],e,f.caml_string_get(b,a)),t],v=0,w=o===p?c[1]:i===p?g(j[2],c):c;return[4,e,[0,[0,e,w,v]],u]}return l(0)}function
-A(a){try{var
-m=g(p[1],16),b=function(a){var
-b=a;for(;;){switch(b[0]){case
+(function(S){"use strict";var
+s="String",o=250,h=246,E="string",D="Strings",C="Coq",b=S.jsoo_runtime,a=b.caml_new_string,n=b.caml_obj_tag,B=b.caml_register_global,Q=b.caml_wrap_exception;function
+g(a,c){return a.length==1?a(c):b.caml_call_gen(a,[c])}function
+c(a,c,d){return a.length==2?a(c,d):b.caml_call_gen(a,[c,d])}function
+P(a,c,d,e){return a.length==3?a(c,d,e):b.caml_call_gen(a,[c,d,e])}function
+R(a,c,d,e,f){return a.length==4?a(c,d,e,f):b.caml_call_gen(a,[c,d,e,f])}var
+f=b.caml_get_global_data(),t=a("string_syntax_plugin"),k=[0,a(C),[0,a(D),[0,a(s),0]]],m=f.CamlinternalLazy,z=f.Globnames,r=f.Buffer,l=f.Ascii_syntax_plugin,i=f.CAst,J=f.Char,G=f.Coqlib,O=f.Notation;g(f.Mltop[12],t);var
+j=[248,a("String_syntax.Non_closed_string"),b.caml_fresh_oo_id(0)],u=c(l[1][5],k,a(E)),p=c(l[1][4],k,a(E)),v=[3,[0,[0,p,0],1]],w=[3,[0,[0,p,0],2]],I=a("EmptyString"),H=a(s),F=a("String interpretation"),M=[0,a(C),[0,a(D),[0,a(s),0]]],N=a("string_scope");function
+q(a){return P(G[1],F,k,a)}var
+d=[h,function(a){return q(H)}],e=[h,function(a){return q(I)}];function
+x(a,j){var
+r=b.caml_ml_string_length(j);function
+k(f){if(f===r){var
+p=n(e),s=0,t=o===p?e[1]:h===p?g(m[2],e):e;return c(i[1],a,[0,t,s])}var
+u=[0,k(f+1|0),0],v=b.caml_string_get(j,f),q=n(d),w=[0,c(l[1][13],a,v),u],x=0,y=o===q?d[1]:h===q?g(m[2],d):d,z=[4,c(i[1],a,[0,y,x]),w];return c(i[1],a,z)}return k(0)}function
+y(a){try{var
+i=g(r[1],16),b=function(u){var
+k=u;for(;;){var
+a=k[1];switch(a[0]){case
 0:var
-q=n(d),v=o===q?d[1]:i===q?g(j[2],d):d;if(h(u[5],b[1][2],v))return[0,g(p[2],m)];break;case
+p=n(e),v=a[1],w=o===p?e[1]:h===p?g(m[2],e):e;if(c(z[5],v,w))return[0,g(r[2],i)];break;case
 4:var
-r=b[2];if(0===r[0]){var
-e=b[3];if(e){var
-f=e[2];if(f)if(!f[2]){var
-s=n(c),w=o===s?c[1]:i===s?g(j[2],c):c;if(h(u[5],r[1][2],w)){var
-t=g(k[1][15],e[1]);if(t){var
-x=g(I[1],t[1]);h(p[10],m,x);var
-b=f[1];continue}throw l}}}}break}throw l}}(a);return b}catch(f){f=P(f);if(f===l)return 0;throw f}}Q(G[14],N,[0,w,M],z,[0,[0,[0,[0,t[4],y,0]],[0,[0,[0,t[4],x,0]],0]],A,1]);var
-B=[0,v,l,m,w,q,x,y,r,c,d,z,A];C(19,B,"String_syntax_plugin.String_syntax");C(20,[0,B],"String_syntax_plugin");return}(function(){return this}()));
+q=a[1][1];if(0===q[0]){var
+b=a[2];if(b){var
+f=b[2];if(f)if(!f[2]){var
+s=n(d),x=f[1],y=b[1],A=q[1],B=o===s?d[1]:h===s?g(m[2],d):d;if(c(z[5],A,B)){var
+t=g(l[1][15],y);if(t){var
+C=g(J[1],t[1]);c(r[10],i,C);var
+k=x;continue}throw j}}}}break}throw j}}(a);return b}catch(a){a=Q(a);if(a===j)return 0;throw a}}var
+K=[0,c(i[1],0,[0,v,0]),0],L=[0,[0,c(i[1],0,[0,w,0]),K],y,1];R(O[15],N,[0,u,M],x,L);var
+A=[0,t,j,k,u,p,v,w,q,d,e,x,y];B(19,A,"String_syntax_plugin.String_syntax");B(20,[0,A],"String_syntax_plugin");return});

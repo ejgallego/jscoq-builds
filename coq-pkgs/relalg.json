@@ -2,25 +2,6 @@
   "desc": "relalg",
   "deps": [ "coq-arith" ],
   "pkgs": [
-    {
-      "pkg_id": [ "RelationAlgebra" ],
-      "vo_files": [
-        "bmx.vo", "matrix_ext.vo", "glang.vo", "sups.vo", "positives.vo",
-        "kat_untyping.vo", "ka_completeness.vo", "gregex.vo", "rel.vo",
-        "kat.vo", "common.vo", "ugregex_dec.vo", "ordinal.vo", "atoms.vo",
-        "boolean.vo", "lset.vo", "prop.vo", "ugregex.vo", "level.vo",
-        "denum.vo", "rewriting.vo", "untyping.vo", "comparisons.vo",
-        "dfa.vo", "compiler_opts.vo", "imp.vo", "factors.vo", "lsyntax.vo",
-        "syntax.vo", "nfa.vo", "powerfix.vo", "monoid.vo", "rmx.vo",
-        "regex.vo", "lattice.vo", "lang.vo", "kat_completeness.vo",
-        "sums.vo", "matrix.vo", "traces.vo", "pair.vo", "relalg.vo",
-        "kat_reification.vo", "move.vo", "kat_tac.vo", "kleene.vo",
-        "normalisation.vo", "paterson.vo"
-      ],
-      "cma_files": [
-        "mrewrite.cmo", "ra_common.cmo", "ra_reification.cmo",
-        "kat_reification.cma", "ra_fold.cmo"
-      ]
-    }
+    { "pkg_id": [ "RelationAlgebra" ], "vo_files": [], "cma_files": [] }
   ]
 }

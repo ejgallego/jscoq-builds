@@ -5,41 +5,52 @@
     {
       "pkg_id": [ "mathcomp", "algebra" ],
       "vo_files": [
-        "ssrnum.vo", "ssralg.vo", "poly.vo", "polydiv.vo", "intdiv.vo",
-        "polyXY.vo", "mxpoly.vo", "zmodp.vo", "ssrint.vo", "all_algebra.vo",
-        "interval.vo", "finalg.vo", "mxalgebra.vo", "fraction.vo",
-        "vector.vo", "matrix.vo", "ring_quotient.vo", "rat.vo"
+        [ "rat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "finalg.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ring_quotient.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "fraction.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "vector.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "zmodp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "poly.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "interval.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "mxalgebra.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "polydiv.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ssrnum.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ssralg.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "matrix.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ssrint.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "intdiv.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "mxpoly.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "polyXY.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "all_algebra.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "mathcomp", "fingroup" ],
       "vo_files": [
-        "quotient.vo", "presentation.vo", "gproduct.vo", "action.vo",
-        "morphism.vo", "fingroup.vo", "automorphism.vo", "perm.vo",
-        "all_fingroup.vo"
+        [ "morphism.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "all_fingroup.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "gproduct.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "action.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "perm.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "fingroup.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "presentation.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "quotient.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "automorphism.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     },
+    { "pkg_id": [ "mathcomp", "solvable" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "mathcomp", "field" ], "vo_files": [], "cma_files": [] },
     {
-      "pkg_id": [ "mathcomp", "solvable" ],
-      "vo_files": [
-        "sylow.vo", "gseries.vo", "extraspecial.vo", "hall.vo",
-        "frobenius.vo", "burnside_app.vo", "commutator.vo", "gfunctor.vo",
-        "extremal.vo", "cyclic.vo", "finmodule.vo", "alt.vo", "pgroup.vo",
-        "abelian.vo", "all_solvable.vo", "center.vo", "jordanholder.vo",
-        "primitive_action.vo", "maximal.vo", "nilpotent.vo"
-      ],
+      "pkg_id": [ "mathcomp", "character" ],
+      "vo_files": [],
       "cma_files": []
     },
     {
-      "pkg_id": [ "mathcomp", "field" ],
-      "vo_files": [
-        "algC.vo", "algnum.vo", "galois.vo", "closed_field.vo",
-        "countalg.vo", "fieldext.vo", "falgebra.vo", "finfield.vo",
-        "all_field.vo", "separable.vo", "algebraics_fundamentals.vo",
-        "cyclotomic.vo"
-      ],
+      "pkg_id": [ "mathcomp", "odd_order" ],
+      "vo_files": [],
       "cma_files": []
     }
   ]

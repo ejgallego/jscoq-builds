@@ -1,22 +1,28 @@
-(function(a){"use strict";var
-f=a.jsoo_runtime,d=f.caml_new_string,s=f.caml_register_global,E=f.caml_wrap_exception;function
-c(a,b){return a.length==1?a(b):f.caml_call_gen(a,[b])}function
-i(a,b,c){return a.length==2?a(b,c):f.caml_call_gen(a,[b,c])}function
-F(a,b,c,d,e){return a.length==4?a(b,c,d,e):f.caml_call_gen(a,[b,c,d,e])}var
-b=f.caml_get_global_data(),n=d("nat_syntax_plugin"),g=b.Coqlib,m=b.Globnames,h=b.Bigint,e=b.Pp,l=b.Loc,u=b.Feedback,v=b.Errors,t=b.Notation;c(b.Mltop[12],n);var
-o=c(h[3],5e3),w=d("limits and on the command executed)."),x=d("may vary from 5000 to 70000 depending on your system "),y=d("working with large numbers in nat (observed threshold "),z=d("Stack overflow or segmentation fault happens when "),A=d("Cannot interpret a negative number as a number of type nat"),B=d("nat_of_int"),C=d("Nat_syntax.Non_closed_number"),D=d("nat_scope");function
-p(a,b){if(c(h[20],b)){if(i(h[16],o,b)){var
-k=c(e[26],w),l=c(e[26],x),m=c(e[26],y),n=c(e[26],z),p=i(e[14],n,m),q=i(e[14],p,l),r=i(e[14],q,k);c(u[13],r)}var
-j=[0,[0,a,g[23],0]],d=b,s=[0,[0,a,g[24],0]];for(;;){if(f.caml_notequal(d,h[5])){var
-j=[4,a,s,[0,j,0]],d=c(h[10],d);continue}return j}}var
-t=[0,a,B,c(e[1],A)];return c(v[8],t)}var
-j=[248,C,f.caml_fresh_oo_id(0)];function
-k(a){switch(a[0]){case
-0:if(i(m[5],a[1][2],g[23]))return h[5];break;case
+(function(M){"use strict";var
+c=M.jsoo_runtime,b=c.caml_new_string,t=c.caml_register_global,L=c.caml_wrap_exception;function
+d(a,b){return a.length==1?a(b):c.caml_call_gen(a,[b])}function
+a(a,b,d){return a.length==2?a(b,d):c.caml_call_gen(a,[b,d])}function
+K(a,b,d,e){return a.length==3?a(b,d,e):c.caml_call_gen(a,[b,d,e])}function
+s(a,b,d,e,f){return a.length==4?a(b,d,e,f):c.caml_call_gen(a,[b,d,e,f])}var
+e=c.caml_get_global_data(),l=b("nat_syntax_plugin"),g=e.Coqlib,p=e.Globnames,h=e.Bigint,i=e.CAst,f=e.Pp,E=e.CErrors,B=e.CWarnings,J=e.Notation;d(e.Mltop[12],l);var
+m=d(h[3],5e3),C=b("Cannot interpret a negative number as a number of type nat"),D=[0,b("nat_of_int")],v=b("limits and on the command executed)."),w=b("may vary from 5000 to 70000 depending on your system "),x=b("working with large numbers in nat (observed threshold "),y=b("Stack overflow or segmentation fault happens when "),z=b("numbers"),A=b("large-nat"),F=b("Nat_syntax.Non_closed_number"),I=b("nat_scope");function
+u(j){var
+b=d(f[22],v),c=d(f[22],w),e=d(f[22],x),g=d(f[22],y),h=a(f[12],g,e),i=a(f[12],h,c);return a(f[12],i,b)}var
+n=s(B[2],A,z,0,u);function
+o(b,e){if(d(h[20],e)){if(a(h[16],m,e))a(n,0,0);var
+l=a(i[1],b,[0,g[21],0]),k=l,j=e,o=a(i[1],b,[0,g[22],0]);for(;;){if(c.caml_notequal(j,h[5])){var
+p=d(h[10],j),k=a(i[1],b,[4,o,[0,k,0]]),j=p;continue}return k}}var
+q=d(f[3],C);return K(E[6],b,D,q)}var
+j=[248,F,c.caml_fresh_oo_id(0)];function
+k(b){function
+c(b){switch(b[0]){case
+0:if(a(p[5],b[1],g[21]))return h[5];break;case
 4:var
-d=a[2];if(0===d[0]){var
-b=a[3];if(b)if(!b[2])if(i(m[5],d[1][2],g[24])){var
-e=k(b[1]);return c(h[9],e)}}break}throw j}function
+e=b[1][1];if(0===e[0]){var
+c=b[2];if(c)if(!c[2]){var
+f=c[1];if(a(p[5],e[1],g[22])){var
+i=k(f);return d(h[9],i)}}}break}throw j}return a(i[5],c,b)}function
 q(a){try{var
-b=[0,k(a)];return b}catch(f){f=E(f);if(f===j)return 0;throw f}}F(t[13],D,[0,g[19],g[18]],p,[0,[0,[0,[0,l[4],g[24],0]],[0,[0,[0,l[4],g[23],0]],0]],q,1]);var
-r=[0,n,o,p,j,k,q];s(18,r,"Nat_syntax_plugin.Nat_syntax");s(19,[0,r],"Nat_syntax_plugin");return}(function(){return this}()));
+b=[0,k(a)];return b}catch(a){a=L(a);if(a===j)return 0;throw a}}var
+G=[0,a(i[1],0,[0,g[21],0]),0],H=[0,[0,a(i[1],0,[0,g[22],0]),G],q,1];s(J[14],I,[0,g[17],g[14]],o,H);var
+r=[0,l,m,n,o,j,k,q];t(20,r,"Nat_syntax_plugin.Nat_syntax");t(21,[0,r],"Nat_syntax_plugin");return});

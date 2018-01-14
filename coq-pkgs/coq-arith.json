@@ -5,104 +5,231 @@
     {
       "pkg_id": [ "Coq", "setoid_ring" ],
       "vo_files": [
-        "BinList.vo", "Field.vo", "Ncring_tac.vo", "Field_tac.vo",
-        "InitialRing.vo", "Ring.vo", "Rings_R.vo", "ArithRing.vo",
-        "Ring_theory.vo", "Ring_base.vo", "Rings_Z.vo", "Rings_Q.vo",
-        "Ncring_initial.vo", "Integral_domain.vo", "Ncring_polynom.vo",
-        "Algebra_syntax.vo", "RealField.vo", "Cring.vo", "Ncring.vo",
-        "ZArithRing.vo", "Field_theory.vo", "NArithRing.vo", "Ring_tac.vo",
-        "Ring_polynom.vo"
+        [ "Ncring_tac.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Cring.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Ncring_polynom.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Field_theory.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Field.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Ring_theory.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Ring.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Ring_base.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rings_R.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Ncring.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ZArithRing.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rings_Z.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NArithRing.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rings_Q.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Integral_domain.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Field_tac.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ArithRing.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "BinList.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Algebra_syntax.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Ring_tac.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "RealField.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Ncring_initial.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "InitialRing.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Ring_polynom.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
-      "cma_files": [ "newring_plugin.cma", "newring_plugin.cmo" ]
+      "cma_files": [
+        [ "newring_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ]
     },
     {
       "pkg_id": [ "Coq", "Arith" ],
       "vo_files": [
-        "Le.vo", "Plus.vo", "Bool_nat.vo", "Even.vo", "Factorial.vo",
-        "Wf_nat.vo", "Max.vo", "Lt.vo", "Between.vo", "Arith_base.vo",
-        "Min.vo", "Minus.vo", "PeanoNat.vo", "Arith.vo", "Div2.vo",
-        "EqNat.vo", "Mult.vo", "Peano_dec.vo", "Gt.vo", "Euclid.vo",
-        "Compare_dec.vo", "Compare.vo"
+        [ "Euclid.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Compare_dec.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Peano_dec.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Factorial.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Compare.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Between.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Div2.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Arith.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Min.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Max.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Bool_nat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "PeanoNat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Arith_base.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Le.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Mult.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Wf_nat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Minus.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Even.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "EqNat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Plus.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Gt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Lt.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "NArith" ],
       "vo_files": [
-        "Nsqrt_def.vo", "Ndist.vo", "Ndigits.vo", "Ndec.vo", "BinNat.vo",
-        "Nnat.vo", "Ndiv_def.vo", "BinNatDef.vo", "NArith.vo", "Ngcd_def.vo"
+        [ "BinNat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Ngcd_def.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Ndiv_def.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "BinNatDef.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Ndec.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Ndist.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Nnat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NArith.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Ndigits.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Nsqrt_def.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "PArith" ],
       "vo_files": [
-        "POrderedType.vo", "BinPosDef.vo", "Pnat.vo", "BinPos.vo",
-        "PArith.vo"
+        [ "POrderedType.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "BinPos.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "PArith.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "BinPosDef.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Pnat.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "ZArith" ],
       "vo_files": [
-        "Zpow_facts.vo", "ZArith_dec.vo", "Zpow_def.vo", "Zdiv.vo",
-        "Zmisc.vo", "BinInt.vo", "Zmax.vo", "Zminmax.vo", "Zsqrt_compat.vo",
-        "BinIntDef.vo", "Znat.vo", "Zgcd_alt.vo", "Zpow_alt.vo", "Zorder.vo",
-        "Zcomplements.vo", "Zcompare.vo", "ZArith_base.vo", "auxiliary.vo",
-        "ZArith.vo", "Int.vo", "Zeven.vo", "Zpower.vo", "Znumtheory.vo",
-        "Zabs.vo", "Zwf.vo", "Zbool.vo", "Zhints.vo", "Zquot.vo",
-        "Zlogarithm.vo", "Zeuclid.vo", "Wf_Z.vo", "Zdigits.vo", "Zmin.vo"
+        [ "Zmax.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Zeuclid.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Zminmax.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Zpow_alt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Zcompare.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Zpower.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "BinInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Zwf.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Zhints.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Zorder.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ZArith_base.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Int.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Zmin.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Zpow_def.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Wf_Z.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Zcomplements.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Zquot.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Zlogarithm.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Znat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "auxiliary.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Znumtheory.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Zdigits.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Zabs.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ZArith_dec.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Zmisc.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Zdiv.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Zbool.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "BinIntDef.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ZArith.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Zsqrt_compat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Zeven.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Zgcd_alt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Zpow_facts.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "QArith" ],
       "vo_files": [
-        "QArith_base.vo", "QOrderedType.vo", "Qminmax.vo", "Qpower.vo",
-        "Qreals.vo", "Qcabs.vo", "Qring.vo", "QArith.vo", "Qround.vo",
-        "Qfield.vo", "Qcanon.vo", "Qreduction.vo", "Qabs.vo"
+        [ "Qabs.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Qring.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Qreduction.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Qround.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Qcabs.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Qminmax.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Qreals.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Qfield.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "QArith.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "QArith_base.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "QOrderedType.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Qpower.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Qcanon.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Numbers" ],
       "vo_files": [
-        "NaryFunctions.vo", "NumPrelude.vo", "BinNums.vo", "BigNumPrelude.vo"
+        [ "NumPrelude.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NaryFunctions.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "BinNums.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Numbers", "NatInt" ],
       "vo_files": [
-        "NZProperties.vo", "NZGcd.vo", "NZPow.vo", "NZMul.vo", "NZDiv.vo",
-        "NZOrder.vo", "NZAddOrder.vo", "NZBase.vo", "NZSqrt.vo",
-        "NZAxioms.vo", "NZAdd.vo", "NZLog.vo", "NZParity.vo",
-        "NZMulOrder.vo", "NZDomain.vo", "NZBits.vo"
+        [ "NZAxioms.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NZBits.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NZDomain.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NZDiv.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NZMul.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NZPow.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NZMulOrder.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NZSqrt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NZGcd.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NZOrder.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NZProperties.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NZLog.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NZAdd.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NZAddOrder.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NZParity.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NZBase.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Numbers", "Natural", "Abstract" ],
       "vo_files": [
-        "NAddOrder.vo", "NOrder.vo", "NLcm.vo", "NSub.vo", "NAxioms.vo",
-        "NProperties.vo", "NMaxMin.vo", "NIso.vo", "NSqrt.vo", "NParity.vo",
-        "NGcd.vo", "NBase.vo", "NBits.vo", "NAdd.vo", "NMulOrder.vo",
-        "NLog.vo", "NDiv.vo", "NDefOps.vo", "NPow.vo", "NStrongRec.vo"
+        [ "NIso.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NAxioms.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NDefOps.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NParity.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NSqrt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NBase.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NSub.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NPow.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NMaxMin.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NMulOrder.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NProperties.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NOrder.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NGcd.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NDiv.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NAdd.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NBits.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NAddOrder.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NLog.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NLcm.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NStrongRec.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Numbers", "Natural", "Peano" ],
-      "vo_files": [ "NPeano.vo" ],
+      "vo_files": [ [ "NPeano.vo", "d41d8cd98f00b204e9800998ecf8427e" ] ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Numbers", "Integer", "Abstract" ],
       "vo_files": [
-        "ZSgnAbs.vo", "ZBase.vo", "ZParity.vo", "ZLcm.vo", "ZDivTrunc.vo",
-        "ZLt.vo", "ZMaxMin.vo", "ZBits.vo", "ZProperties.vo", "ZMul.vo",
-        "ZAxioms.vo", "ZDivEucl.vo", "ZAddOrder.vo", "ZMulOrder.vo",
-        "ZAdd.vo", "ZDivFloor.vo", "ZGcd.vo", "ZPow.vo"
+        [ "ZMaxMin.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ZProperties.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ZParity.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ZBits.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ZMul.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ZBase.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ZAddOrder.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ZPow.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ZDivEucl.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ZDivFloor.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ZAxioms.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ZMulOrder.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ZAdd.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ZSgnAbs.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ZLt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ZLcm.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ZGcd.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ZDivTrunc.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     }

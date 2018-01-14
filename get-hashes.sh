@@ -12,16 +12,21 @@ function get_svn {
   echo "+ ${1}: rev `svnversion ${2}`"
 }
 
+SERAPI_DIR=~/research/coq-serapi/
 JSCOQ_DIR=~/research/jscoq/
-COQ_DIR=~/external/coq-git-32/
-MC_DIR=~/external/coq/math-comp/
-CM_DIR=${JSCOQ_DIR}/external/CodeMirror
+JSCOQ_ADDONS=${JSCOQ_DIR}/coq-external
+COQ_DIR=${JSCOQ_ADDONS}/coq-v8.7+32bit/
+MC_DIR=${JSCOQ_ADDONS}/math-comp/
+ELPI_DIR=${JSCOQ_ADDONS}/elpi/
+IRIS_DIR=${JSCOQ_ADDONS}/iris/
+CM_DIR=${JSCOQ_DIR}/ui-external/CodeMirror
+
 FLOCQ_DIR=~/external/coq/flocq/
 CT_DIR=~/external/coq/coquelicot/
 TLC_DIR=~/external/coq/tlc/
 SF_TAR=~/external/coq/sf.tar.gz
 COLOR_DIR=~/external/coq/CoLoR-8.5
-HOTT_DIR=~/external/HoTT/
+HOTT_DIR=~/external/coq/HoTT/
 UNIM_DIR=~/external/coq/UniMath/
 MC_DIR=~/external/coq/mirror-core/
 CEL_DIR=~/external/coq/coq-ext-lib/
@@ -29,7 +34,8 @@ CEL_DIR=~/external/coq/coq-ext-lib/
 function get_build_name {
   COQH=`git --git-dir ${COQ_DIR}/.git log --pretty=format:"%h" -n 1`
   JSCOQH=`git --git-dir ${JSCOQ_DIR}/.git log --pretty=format:"%h" -n 1`
-  echo "Build: $JSCOQH/$COQH"
+  SERAPIH=`git --git-dir ${SERAPI_DIR}/.git log --pretty=format:"%h" -n 1`
+  echo "Build: $SERAPIH/$JSCOQH/$COQH"
   echo
 }
 
@@ -41,14 +47,17 @@ get_build_name
 
 get_hash "coq"        $COQ_DIR
 get_hash "jscoq"      $JSCOQ_DIR
+get_hash "serapi"     $SERAPI_DIR
 get_hash "CodeMirror" $CM_DIR
 get_hash "math-comp"  $MC_DIR
-get_hash "flocq"      $FLOCQ_DIR
-get_hash "coquelicot" $CT_DIR
-get_hash "tlc"        $TLC_DIR
-get_hash "HoTT"       $HOTT_DIR
-get_hash "UniMath"    $UNIM_DIR
-get_hash "coq-ext-lib"  $CEL_DIR
-get_hash "mirror-core"  $MC_DIR
-get_svn  "color"      $COLOR_DIR
-get_date "sf"         $SF_TAR
+get_hash "elpi"       $ELPI_DIR
+get_hash "iris"       $IRIS_DIR
+#get_hash "flocq"      $FLOCQ_DIR
+#get_hash "coquelicot" $CT_DIR
+#get_hash "tlc"        $TLC_DIR
+#get_hash "HoTT"       $HOTT_DIR
+#get_hash "UniMath"    $UNIM_DIR
+#get_hash "coq-ext-lib"  $CEL_DIR
+#get_hash "mirror-core"  $MC_DIR
+#get_svn  "color"      $COLOR_DIR
+#get_date "sf"         $SF_TAR

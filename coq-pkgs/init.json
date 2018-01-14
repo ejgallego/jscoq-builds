@@ -3,87 +3,165 @@
   "deps": [],
   "pkgs": [
     {
-      "pkg_id": [ "Coq", "syntax" ],
-      "vo_files": [],
+      "pkg_id": [ "Coq", "ltac" ],
+      "vo_files": [ [ "Ltac.vo", "d41d8cd98f00b204e9800998ecf8427e" ] ],
       "cma_files": [
-        "numbers_syntax_plugin.cma", "string_syntax_plugin.cma",
-        "r_syntax_plugin.cma", "ascii_syntax_plugin.cmo",
-        "numbers_syntax_plugin.cmo", "z_syntax_plugin.cma",
-        "nat_syntax_plugin.cmo", "string_syntax_plugin.cmo",
-        "ascii_syntax_plugin.cma", "z_syntax_plugin.cmo",
-        "nat_syntax_plugin.cma", "r_syntax_plugin.cmo"
+        [ "tauto_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ltac_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ]
     },
     {
-      "pkg_id": [ "Coq", "decl_mode" ],
+      "pkg_id": [ "Coq", "syntax" ],
       "vo_files": [],
-      "cma_files": [ "decl_mode_plugin.cmo", "decl_mode_plugin.cma" ]
+      "cma_files": [
+        [ "string_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "nat_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "r_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "int31_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "z_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ascii_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ]
     },
+    { "pkg_id": [ "Coq", "decl_mode" ], "vo_files": [], "cma_files": [] },
     {
       "pkg_id": [ "Coq", "cc" ],
       "vo_files": [],
-      "cma_files": [ "cc_plugin.cma", "cc_plugin.cmo" ]
+      "cma_files": [
+        [ "cc_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ]
     },
     {
       "pkg_id": [ "Coq", "firstorder" ],
       "vo_files": [],
-      "cma_files": [ "ground_plugin.cmo", "ground_plugin.cma" ]
+      "cma_files": [
+        [ "ground_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ]
     },
     {
       "pkg_id": [ "Coq", "extraction" ],
       "vo_files": [
-        "ExtrHaskellZNum.vo", "ExtrHaskellString.vo", "ExtrHaskellBasic.vo",
-        "ExtrOcamlBigIntConv.vo", "ExtrHaskellNatInteger.vo",
-        "ExtrOcamlNatInt.vo", "ExtrHaskellZInteger.vo",
-        "ExtrHaskellNatInt.vo", "ExtrOcamlZBigInt.vo",
-        "ExtrHaskellNatNum.vo", "ExtrOcamlNatBigInt.vo",
-        "ExtrOcamlIntConv.vo", "ExtrOcamlZInt.vo", "ExtrOcamlBasic.vo",
-        "ExtrHaskellZInt.vo", "ExtrOcamlString.vo"
+        [ "ExtrHaskellZInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ExtrOcamlNatInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ExtrHaskellZNum.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ExtrOcamlBasic.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ExtrOcamlIntConv.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ExtrHaskellNatNum.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ExtrOcamlBigIntConv.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ExtrHaskellNatInteger.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ExtrOcamlString.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Extraction.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ExtrHaskellBasic.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ExtrOcamlZBigInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ExtrHaskellString.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ExtrHaskellNatInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ExtrOcamlZInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ExtrOcamlNatBigInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ExtrHaskellZInteger.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
-      "cma_files": [ "extraction_plugin.cma", "extraction_plugin.cmo" ]
+      "cma_files": [
+        [ "extraction_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ]
     },
     {
       "pkg_id": [ "Coq", "funind" ],
-      "vo_files": [ "Recdef.vo" ],
-      "cma_files": [ "recdef_plugin.cmo", "recdef_plugin.cma" ]
+      "vo_files": [
+        [ "Recdef.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "FunInd.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ],
+      "cma_files": [
+        [ "recdef_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ]
     },
     {
       "pkg_id": [ "Coq", "quote" ],
-      "vo_files": [ "Quote.vo" ],
-      "cma_files": [ "quote_plugin.cmo", "quote_plugin.cma" ]
+      "vo_files": [ [ "Quote.vo", "d41d8cd98f00b204e9800998ecf8427e" ] ],
+      "cma_files": [
+        [ "quote_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ]
     },
     {
       "pkg_id": [ "Coq", "Init" ],
       "vo_files": [
-        "Prelude.vo", "Tauto.vo", "Specif.vo", "Nat.vo", "Peano.vo",
-        "Tactics.vo", "Logic_Type.vo", "Notations.vo", "Logic.vo", "Wf.vo",
-        "Datatypes.vo"
+        [ "Nat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Wf.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Peano.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Datatypes.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Tactics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Logic_Type.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Logic.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Tauto.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Notations.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Specif.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Prelude.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Bool" ],
       "vo_files": [
-        "Bool.vo", "BoolEq.vo", "DecBool.vo", "Sumbool.vo", "Bvector.vo",
-        "Zerob.vo", "IfProp.vo"
+        [ "Sumbool.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Zerob.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Bvector.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "DecBool.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Bool.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "IfProp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "BoolEq.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Unicode" ],
-      "vo_files": [ "Utf8.vo", "Utf8_core.vo" ],
+      "vo_files": [
+        [ "Utf8_core.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Utf8.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ],
       "cma_files": []
+    },
+    {
+      "pkg_id": [ "Coq", "ssrmatching" ],
+      "vo_files": [
+        [ "ssrmatching.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ],
+      "cma_files": [
+        [ "ssrmatching_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ]
+    },
+    {
+      "pkg_id": [ "Coq", "ssr" ],
+      "vo_files": [
+        [ "ssreflect.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ssrfun.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ssrbool.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ],
+      "cma_files": [
+        [ "ssreflect_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ]
     },
     {
       "pkg_id": [ "mathcomp", "ssreflect" ],
       "vo_files": [
-        "seq.vo", "prime.vo", "ssreflect.vo", "choice.vo", "div.vo",
-        "binomial.vo", "bigop.vo", "init.vo", "ssrbool.vo", "path.vo",
-        "fingraph.vo", "generic_quotient.vo", "tuple.vo", "eqtype.vo",
-        "fintype.vo", "finset.vo", "all_ssreflect.vo", "ssrnat.vo",
-        "ssrmatching.vo", "finfun.vo", "ssrfun.vo"
+        [ "all_ssreflect.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "div.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "bigop.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "seq.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ssrnat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "generic_quotient.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "finset.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "path.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "eqtype.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "fintype.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "binomial.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ssreflect.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "finfun.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ssrnotations.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "fingraph.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "tuple.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ssrfun.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "prime.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "choice.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ssrbool.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
-      "cma_files": [ "ssreflect.cma" ]
+      "cma_files": []
     }
   ]
 }

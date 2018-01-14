@@ -191,7 +191,7 @@
       "cma_files": []
     },
     { "pkg_id": [ "HoTT", "Comodalities" ], "vo_files": [], "cma_files": [] },
-    { "pkg_id": [ "HoTT", "hit" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "HoTT", "HIT" ], "vo_files": [], "cma_files": [] },
     { "pkg_id": [ "HoTT", "Modalities" ], "vo_files": [], "cma_files": [] },
     { "pkg_id": [ "HoTT", "Spaces" ], "vo_files": [], "cma_files": [] },
     { "pkg_id": [ "HoTT", "Tactics" ], "vo_files": [], "cma_files": [] },

@@ -1,21 +1,5 @@
 {
   "desc": "sf",
   "deps": [ "coq-reals" ],
-  "pkgs": [
-    {
-      "pkg_id": [ "SF" ],
-      "vo_files": [
-        "Equiv.vo", "Symbols.vo", "MoreStlc.vo", "Postscript.vo", "Stlc.vo",
-        "Auto.vo", "Poly.vo", "Rel.vo", "Norm.vo", "Smallstep.vo", "PE.vo",
-        "Lists.vo", "HoareAsLogic.vo", "ImpParser.vo", "ProofObjects.vo",
-        "Hoare.vo", "Sub.vo", "ImpCEvalFun.vo", "Records.vo", "Bib.vo",
-        "StlcProp.vo", "UseAuto.vo", "Basics.vo", "Tactics.vo", "Imp.vo",
-        "Induction.vo", "UseTactics.vo", "IndPrinciples.vo", "Hoare2.vo",
-        "SfLib.vo", "References.vo", "Extraction.vo", "Maps.vo",
-        "LibTactics.vo", "IndProp.vo", "Preface.vo", "RecordSub.vo",
-        "Types.vo", "Logic.vo", "Typechecking.vo"
-      ],
-      "cma_files": []
-    }
-  ]
+  "pkgs": [ { "pkg_id": [ "SF" ], "vo_files": [], "cma_files": [] } ]
 }

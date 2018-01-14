@@ -4,19 +4,18 @@
   "pkgs": [
     {
       "pkg_id": [ "Coq", "romega" ],
-      "vo_files": [ "ROmega.vo", "ReflOmegaCore.vo" ],
-      "cma_files": [ "romega_plugin.cma", "romega_plugin.cmo" ]
-    },
-    {
-      "pkg_id": [ "Flocq", "Core" ],
       "vo_files": [
-        "Fcore_float_prop.vo", "Fcore_FLX.vo", "Fcore_rnd.vo",
-        "Fcore_defs.vo", "Fcore_digits.vo", "Fcore_rnd_ne.vo",
-        "Fcore_FTZ.vo", "Fcore_generic_fmt.vo", "Fcore_FLT.vo",
-        "Fcore_Zaux.vo", "Fcore_Raux.vo", "Fcore.vo", "Fcore_FIX.vo",
-        "Fcore_ulp.vo"
+        [ "ReflOmegaCore.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ROmega.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
-      "cma_files": []
-    }
+      "cma_files": [
+        [ "romega_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ]
+    },
+    { "pkg_id": [ "Flocq", "Core" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "Flocq", "Appli" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "Flocq", "Calc" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "Flocq", "Translate" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "Flocq", "Prop" ], "vo_files": [], "cma_files": [] }
   ]
 }

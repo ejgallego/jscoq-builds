@@ -1,13 +1,5 @@
 {
   "desc": "coquelicot",
   "deps": [ "coq-reals" ],
-  "pkgs": [
-    {
-      "pkg_id": [ "Coquelicot" ],
-      "vo_files": [
-        "Markov.vo", "Compactness.vo", "Iter.vo", "Rcomplements.vo"
-      ],
-      "cma_files": []
-    }
-  ]
+  "pkgs": [ { "pkg_id": [ "Coquelicot" ], "vo_files": [], "cma_files": [] } ]
 }
