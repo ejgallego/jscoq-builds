@@ -92,7 +92,8 @@
         [ "Tauto.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "Notations.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "Specif.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Prelude.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "Prelude.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Decimal.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     },

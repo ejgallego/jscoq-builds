@@ -33,6 +33,7 @@
         [ "sorting.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "relations.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "functions.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "namespaces.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "finite.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "zmap.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "collections.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
@@ -42,6 +43,7 @@
         [ "fin_maps.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "orders.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "hlist.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "nat_cancel.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "hashset.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "fin.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "nmap.vo", "d41d8cd98f00b204e9800998ecf8427e" ]

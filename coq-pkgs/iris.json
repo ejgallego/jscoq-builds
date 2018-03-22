@@ -64,7 +64,6 @@
         [ "cancelable_invariants.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "core.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "fancy_updates.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "namespaces.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "auth.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "fractional.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "fancy_updates_from_vs.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
@@ -77,6 +76,7 @@
     {
       "pkg_id": [ "iris", "heap_lang" ],
       "vo_files": [
+        [ "total_adequacy.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "tactics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "lang.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "adequacy.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
@@ -94,11 +94,15 @@
     {
       "pkg_id": [ "iris", "program_logic" ],
       "vo_files": [
+        [ "total_lifting.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "hoare.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "total_adequacy.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "total_weakestpre.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "ectx_language.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "ownp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "language.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "weakestpre.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "total_ectx_lifting.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "adequacy.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "ectxi_language.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "ectx_lifting.vo", "d41d8cd98f00b204e9800998ecf8427e" ],

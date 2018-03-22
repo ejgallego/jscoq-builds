@@ -152,7 +152,13 @@
       "vo_files": [
         [ "NumPrelude.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "NaryFunctions.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "BinNums.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "DecimalPos.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "DecimalNat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "DecimalZ.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "DecimalN.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "DecimalString.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "BinNums.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "DecimalFacts.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     },

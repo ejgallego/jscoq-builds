@@ -15,7 +15,7 @@ function get_svn {
 SERAPI_DIR=~/research/coq-serapi/
 JSCOQ_DIR=~/research/jscoq/
 JSCOQ_ADDONS=${JSCOQ_DIR}/coq-external
-COQ_DIR=${JSCOQ_ADDONS}/coq-v8.7+32bit/
+COQ_DIR=${JSCOQ_ADDONS}/coq-v8.8+32bit/
 MC_DIR=${JSCOQ_ADDONS}/math-comp/
 ELPI_DIR=${JSCOQ_ADDONS}/elpi/
 IRIS_DIR=${JSCOQ_ADDONS}/iris/
@@ -50,7 +50,7 @@ get_hash "jscoq"      $JSCOQ_DIR
 get_hash "serapi"     $SERAPI_DIR
 get_hash "CodeMirror" $CM_DIR
 get_hash "math-comp"  $MC_DIR
-get_hash "elpi"       $ELPI_DIR
+#get_hash "elpi"       $ELPI_DIR
 get_hash "iris"       $IRIS_DIR
 #get_hash "flocq"      $FLOCQ_DIR
 #get_hash "coquelicot" $CT_DIR
