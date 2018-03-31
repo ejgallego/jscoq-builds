@@ -1,0 +1,27 @@
+{
+  "desc": "ltac2",
+  "deps": [],
+  "pkgs": [
+    {
+      "pkg_id": [ "Ltac2" ],
+      "vo_files": [
+        [ "Init.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Std.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Pattern.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Message.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Ltac2.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "String.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Constr.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Int.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Ident.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Control.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Notations.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Array.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fresh.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ],
+      "cma_files": [
+        [ "ltac2_plugin.cma", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ]
+    }
+  ]
+}

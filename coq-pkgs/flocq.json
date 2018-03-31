@@ -5,8 +5,8 @@
     {
       "pkg_id": [ "Coq", "romega" ],
       "vo_files": [
-        [ "ROmega.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ReflOmegaCore.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "ReflOmegaCore.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ROmega.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": [
         [ "romega_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
