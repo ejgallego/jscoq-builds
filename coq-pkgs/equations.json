@@ -1,0 +1,31 @@
+{
+  "desc": "equations",
+  "deps": [ "coq-reals" ],
+  "pkgs": [
+    {
+      "pkg_id": [ "Equations" ],
+      "vo_files": [
+        [ "OpaqueEquations.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Init.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Below.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "HSets.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "DepElim.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Fin.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Signature.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "EqDec.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "NoConfusion.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Classes.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Equations.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "FunctionalInduction.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Subterm.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "HSetInstances.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "TransparentEquations.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "DepElimDec.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "EqDecInstances.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ],
+      "cma_files": [
+        [ "equations_plugin.cma", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ]
+    }
+  ]
+}

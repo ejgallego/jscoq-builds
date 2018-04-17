@@ -6,64 +6,65 @@
       "pkg_id": [ "Coq", "syntax" ],
       "vo_files": [],
       "cma_files": [
-        [ "int31_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ascii_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "nat_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "string_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "nat_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "r_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "int31_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "z_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "r_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "ascii_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ]
     },
     {
       "pkg_id": [ "Coq", "Init" ],
       "vo_files": [
-        [ "Prelude.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Tauto.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Specif.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "Nat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Wf.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "Peano.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Datatypes.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "Tactics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "Logic_Type.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Notations.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "Logic.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Wf.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Datatypes.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "Tauto.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Notations.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Specif.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Prelude.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Decimal.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Bool" ],
       "vo_files": [
-        [ "Bool.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "BoolEq.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "DecBool.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "Sumbool.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Bvector.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "Zerob.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "IfProp.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "Bvector.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "DecBool.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Bool.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "IfProp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "BoolEq.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Program" ],
       "vo_files": [
+        [ "Wf.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "Program.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "Syntax.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Subset.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Tactics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "Combinators.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Basics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "Utils.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
         [ "Equality.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Basics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Tactics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Wf.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "Subset.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Unicode" ],
       "vo_files": [
-        [ "Utf8.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Utf8_core.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "Utf8_core.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Utf8.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     }

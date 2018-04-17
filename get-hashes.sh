@@ -14,7 +14,7 @@ function get_svn {
 
 JSCOQ_DIR=~/research/jscoq/
 JSCOQ_ADDONS=${JSCOQ_DIR}/coq-external
-COQ_DIR=${JSCOQ_ADDONS}/coq-v8.7+32bit/
+COQ_DIR=${JSCOQ_ADDONS}/coq-v8.8+32bit/
 MC_DIR=${JSCOQ_ADDONS}/math-comp/
 ELPI_DIR=${JSCOQ_ADDONS}/elpi/
 IRIS_DIR=${JSCOQ_ADDONS}/iris/
