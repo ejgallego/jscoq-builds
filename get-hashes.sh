@@ -14,10 +14,11 @@ function get_svn {
 
 JSCOQ_DIR=~/research/jscoq/
 JSCOQ_ADDONS=${JSCOQ_DIR}/coq-external
-COQ_DIR=${JSCOQ_ADDONS}/coq-v8.8+32bit/
+COQ_DIR=${JSCOQ_ADDONS}/coq-v8.9+32bit/
 MC_DIR=${JSCOQ_ADDONS}/math-comp/
 ELPI_DIR=${JSCOQ_ADDONS}/elpi/
 IRIS_DIR=${JSCOQ_ADDONS}/iris/
+LTAC2_DIR=${JSCOQ_ADDONS}/ltac2/
 CM_DIR=${JSCOQ_DIR}/ui-external/CodeMirror
 
 FLOCQ_DIR=~/external/coq/flocq/
@@ -27,7 +28,7 @@ SF_TAR=~/external/coq/sf.tar.gz
 COLOR_DIR=~/external/coq/CoLoR-8.5
 HOTT_DIR=~/external/coq/HoTT/
 UNIM_DIR=~/external/coq/UniMath/
-MC_DIR=~/external/coq/mirror-core/
+# MC_DIR=~/external/coq/mirror-core/
 CEL_DIR=~/external/coq/coq-ext-lib/
 
 function get_build_name {
@@ -45,10 +46,11 @@ get_build_name
 
 get_hash "coq"        $COQ_DIR
 get_hash "jscoq"      $JSCOQ_DIR
-get_hash "CodeMirror" $CM_DIR
+# get_hash "CodeMirror" $CM_DIR
 get_hash "math-comp"  $MC_DIR
 get_hash "elpi"       $ELPI_DIR
 get_hash "iris"       $IRIS_DIR
+get_hash "ltac2"      $LTAC2_DIR
 #get_hash "flocq"      $FLOCQ_DIR
 #get_hash "coquelicot" $CT_DIR
 #get_hash "tlc"        $TLC_DIR

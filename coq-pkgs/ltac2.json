@@ -5,22 +5,22 @@
     {
       "pkg_id": [ "Ltac2" ],
       "vo_files": [
-        [ "Init.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Std.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Pattern.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Message.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Ltac2.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "String.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Constr.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Int.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Ident.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Control.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Notations.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Array.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Fresh.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "Array.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "Message.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "Constr.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "Init.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "Fresh.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "Ident.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "Std.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "Control.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "Ltac2.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "String.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "Pattern.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "Int.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "Notations.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ]
       ],
       "cma_files": [
-        [ "ltac2_plugin.cma", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "ltac2_plugin.cma", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ]
       ]
     }
   ]

@@ -5,27 +5,36 @@
     {
       "pkg_id": [ "Equations" ],
       "vo_files": [
-        [ "OpaqueEquations.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Init.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Below.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "HSets.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "DepElim.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Fin.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Signature.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "EqDec.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "NoConfusion.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Classes.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Equations.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "FunctionalInduction.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Subterm.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "HSetInstances.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "TransparentEquations.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "DepElimDec.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "EqDecInstances.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "Tactics.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "Fin.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "Init.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "Telescopes.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "Signature.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "TransparentEquations.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "Equations.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "Loader.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "OpaqueEquations.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "Below.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ]
       ],
       "cma_files": [
-        [ "equations_plugin.cma", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "equations_plugin.cma", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ]
       ]
+    },
+    {
+      "pkg_id": [ "Equations", "Prop" ],
+      "vo_files": [
+        [ "Tactics.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "EqDecInstances.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "Classes.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "EqDec.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "Subterm.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "Logic.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "FunctionalInduction.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "NoConfusion.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "Constants.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "DepElim.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ]
+      ],
+      "cma_files": []
     }
   ]
 }

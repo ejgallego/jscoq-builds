@@ -5,11 +5,11 @@
     {
       "pkg_id": [ "Coq", "romega" ],
       "vo_files": [
-        [ "ReflOmegaCore.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ROmega.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "ROmega.vo", "Ô\u001dŒÙ\u0000²\u0004é€\t˜ìøB~" ],
+        [ "ReflOmegaCore.vo", "Ô\u001dŒÙ\u0000²\u0004é€\t˜ìøB~" ]
       ],
       "cma_files": [
-        [ "romega_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "romega_plugin.cmo", "Ô\u001dŒÙ\u0000²\u0004é€\t˜ìøB~" ]
       ]
     },
     { "pkg_id": [ "Flocq", "Core" ], "vo_files": [], "cma_files": [] },

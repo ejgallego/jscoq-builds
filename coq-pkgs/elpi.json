@@ -2,10 +2,58 @@
   "desc": "elpi",
   "deps": [],
   "pkgs": [
-    { "pkg_id": [ "elpi" ], "vo_files": [], "cma_files": [] },
-    { "pkg_id": [ "elpi", "ltac" ], "vo_files": [], "cma_files": [] },
+    {
+      "pkg_id": [ "elpi" ],
+      "vo_files": [
+        [ "derive.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "elpi.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ]
+      ],
+      "cma_files": [
+        [ "elpi_plugin.cma", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ]
+      ]
+    },
+    {
+      "pkg_id": [ "elpi", "ltac" ],
+      "vo_files": [
+        [ "injection.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "discriminate.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ]
+      ],
+      "cma_files": []
+    },
     { "pkg_id": [ "elpi", "test" ], "vo_files": [], "cma_files": [] },
-    { "pkg_id": [ "elpi", "tutorial" ], "vo_files": [], "cma_files": [] },
-    { "pkg_id": [ "elpi", "derive" ], "vo_files": [], "cma_files": [] }
+    {
+      "pkg_id": [ "elpi", "tutorial" ],
+      "vo_files": [
+        [ "demo_command.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "demo_memoization.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "demo_derive.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "demo_tactic.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "demo_CoqPL2018.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "elpi_lang.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "coq_elpi.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "elpi", "derive" ],
+      "vo_files": [
+        [ "map.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "param2.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "param1P.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "induction.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "invert.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "eq.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "projK.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "isK.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "param1.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "eqcorrect.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "cast.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "eqOK.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "bcongr.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "idx2inv.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
+        [ "eqK.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ]
+      ],
+      "cma_files": []
+    }
   ]
 }
