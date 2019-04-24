@@ -1,0 +1,51 @@
+{
+  "desc": "lf",
+  "deps": [ "coq-reals" ],
+  "pkgs": [
+    {
+      "pkg_id": [ "LF" ],
+      "vo_files": [
+        [ "Tactics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Bib.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ImpCEvalFunTest.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ImpParser.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Basics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "IndPrinciples.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ImpParserTest.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "BasicsTest.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "PrefaceTest.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ExtractionTest.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "AutoTest.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "MapsTest.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ProofObjectsTest.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Extraction.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Imp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "IndProp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Preface.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ProofObjects.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "IndPrinciplesTest.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "RelTest.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Rel.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "IndPropTest.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Induction.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Poly.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "BibTest.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "LogicTest.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Maps.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Lists.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "TacticsTest.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ImpCEvalFun.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ListsTest.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Logic.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Auto.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ImpTest.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "PostscriptTest.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "InductionTest.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "PolyTest.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Postscript.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+      ],
+      "cma_files": []
+    }
+  ],
+  "archive": "lf.coq-pkg"
+}

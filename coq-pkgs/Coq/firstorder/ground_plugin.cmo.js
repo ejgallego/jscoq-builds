@@ -1,5 +1,5 @@
 function(ek){"use strict";var
-aI="Firstorder",y=108,be="already done",aG="firstorder_using",bp=",",bh=250,bd="gintuition",aE=246,bo=119,aH="l",bg=113,bn="with",_="t",bc="Depth",an="firstorder",$=143,bm="ground_plugin",am=100,aF=109,bl="Solver",bk=248,aD="using",bj="-----",bf=103,M=146,bi="reversible in 1st order mode",al=129,t=ek.jsoo_runtime,F=t.caml_check_bound,ba=t.caml_fresh_oo_id,e=t.caml_new_string,bb=t.caml_obj_tag,J=t.caml_register_global,v=t.caml_wrap_exception;function
+aI="Firstorder",bf="already done",aG="firstorder_using",bp=",",aF=246,be="gintuition",$=143,bi=119,y=108,aH="l",aE=109,bh=103,an=129,bo="with",_="t",bd="Depth",bg=113,am="firstorder",bn="ground_plugin",bm="Solver",aD="using",bl="-----",bk=248,M=146,bj="reversible in 1st order mode",al=100,bc=250,t=ek.jsoo_runtime,F=t.caml_check_bound,ba=t.caml_fresh_oo_id,e=t.caml_new_string,bb=t.caml_obj_tag,J=t.caml_register_global,v=t.caml_wrap_exception;function
 a(a,b){return a.length==1?a(b):t.caml_call_gen(a,[b])}function
 b(a,b,c){return a.length==2?a(b,c):t.caml_call_gen(a,[b,c])}function
 g(a,b,c,d){return a.length==3?a(b,c,d):t.caml_call_gen(a,[b,c,d])}function
@@ -8,7 +8,7 @@ z(a,b,c,d,e,f){return a.length==5?a(b,c,d,e,f):t.caml_call_gen(a,[b,c,d,e,f])}fu
 L(a,b,c,d,e,f,g){return a.length==6?a(b,c,d,e,f,g):t.caml_call_gen(a,[b,c,d,e,f,g])}function
 ej(a,b,c,d,e,f,g,h){return a.length==7?a(b,c,d,e,f,g,h):t.caml_call_gen(a,[b,c,d,e,f,g,h])}function
 ei(a,b,c,d,e,f,g,h,i){return a.length==8?a(b,c,d,e,f,g,h,i):t.caml_call_gen(a,[b,c,d,e,f,g,h,i])}var
-f=t.caml_get_global_data(),ak=e(bm),aZ=[0,e(bm),e("auto_with")],N=f.Constr,j=f.Util,O=f.Context,d=f.EConstr,x=f.Termops,ae=f.Hipattern,aa=f.Global,ab=f.Inductiveops,S=f.Reductionops,ao=f.CClosure,A=f.Names,T=f.Int,C=f.Not_found,w=f.Stdlib__queue,av=f.Evd,l=f.Pp,ax=f.Ppconstr,ai=f.Printer,aw=f.Hints,P=f.Stdlib,W=f.CErrors,ah=f.Typing,aP=f.Globnames,U=f.Option,at=f.Heap,aS=f.CamlinternalLazy,h=f.Tactics,o=f.Tacmach,c=f.Tacticals,i=f.Proofview,r=f.Ltac_plugin,aX=f.Feedback,aW=f.Stdlib__list,m=f.Genarg,I=f.Stdarg,a4=f.Vernac_classifier,aY=f.Goptions,a5=f.Vernacentries,a_=f.Genintern,aB=f.Geninterp,E=f.Pcoq,Z=f.CLexer,aJ=[0,1],ap=[0,ao[13]],bs=e("Formula.Is_atom"),bu=[0,0,[0,0,0]],bv=e("_"),bx=e("Unify.UFAIL"),bW=e(" : "),bX=e("| "),bY=e(bj),bZ=e(bj),bS=e(" : No such Hint database"),bT=e("Firstorder: "),bL=[0,0],bF=[0,0],bE=[0,0],cm=e("iff"),cn=e("not"),ci=[0,e("Init"),[0,e("Logic"),0]],cj=e("User"),cf=e(bi),b7=e("No link"),b5=e("No axiom link"),b3=[0,e("plugins/firstorder/rules.ml"),61,7],b1=e("Not the expected number of hyps."),cz=e("not implemented ... yet"),cx=e("Untypable instance, maybe higher-order non-prenex quantification"),cw=e(be),cy=e(be),cs=e("can't happen."),ct=e("x"),cB=[0,0],cC=e(bi),dd=e('Deprecated syntax; use "," as separator'),c5=e("Firstorder solver tactic is "),cF=[0,e(aI),[0,e(bc),0]],cG=e("Firstorder Depth"),cJ=[0,e("Congruence"),[0,e(bc),0]],cK=e("Congruence Depth"),cQ=e("Firstorder default solver"),cV=[0,e(_)],cW=e(bl),cX=e(aI),cY=e("Set"),c2=e("Firstorder_Set_Solver"),c6=[0,e("Print"),[0,e(aI),[0,e(bl),0]]],c_=e("Firstorder_Print_Solver"),c$=e("GTauto failed"),de=e("deprecated"),df=e("firstorder-deprecated-syntax"),dh=e(aG),dq=e(aG),dv=e(aD),dy=e(bp),dB=e(bp),dE=e(aD),dK=e(aD),dP=e(aG),dS=e("l'"),dT=e(bn),dV=e(aH),dX=e(_),dY=e(an),d1=e(aH),d2=e(bn),d4=e(_),d5=e(an),d8=e(aH),d_=e(_),d$=e(an),eb=e(an),ee=e(_),ef=e(bd),eh=e(bd),by=f.Assert_failure,bV=f.Constrextern,ck=f.Coqlib,cl=f.UnivGen,b0=f.Control,cv=f.Evarutil,cA=f.Classops,cU=f.Locality,cM=f.Auto,cD=f.Mltop,cP=f.Loc,dg=f.CWarnings;function
+f=t.caml_get_global_data(),ak=e(bn),aZ=[0,e(bn),e("auto_with")],N=f.Constr,j=f.Util,O=f.Context,d=f.EConstr,x=f.Termops,ae=f.Hipattern,aa=f.Global,ab=f.Inductiveops,S=f.Reductionops,ao=f.CClosure,A=f.Names,T=f.Int,C=f.Not_found,w=f.Stdlib__queue,av=f.Evd,l=f.Pp,ax=f.Ppconstr,ai=f.Printer,aw=f.Hints,P=f.Stdlib,W=f.CErrors,ah=f.Typing,aP=f.Globnames,U=f.Option,at=f.Heap,aS=f.CamlinternalLazy,h=f.Tactics,o=f.Tacmach,c=f.Tacticals,i=f.Proofview,r=f.Ltac_plugin,aX=f.Feedback,aW=f.Stdlib__list,m=f.Genarg,I=f.Stdarg,a4=f.Vernac_classifier,aY=f.Goptions,a5=f.Vernacentries,a_=f.Genintern,aB=f.Geninterp,E=f.Pcoq,Z=f.CLexer,aJ=[0,1],ap=[0,ao[13]],bs=e("Formula.Is_atom"),bu=[0,0,[0,0,0]],bv=e("_"),bx=e("Unify.UFAIL"),bW=e(" : "),bX=e("| "),bY=e(bl),bZ=e(bl),bS=e(" : No such Hint database"),bT=e("Firstorder: "),bL=[0,0],bF=[0,0],bE=[0,0],cm=e("iff"),cn=e("not"),ci=[0,e("Init"),[0,e("Logic"),0]],cj=e("User"),cf=e(bj),b7=e("No link"),b5=e("No axiom link"),b3=[0,e("plugins/firstorder/rules.ml"),61,7],b1=e("Not the expected number of hyps."),cz=e("not implemented ... yet"),cx=e("Untypable instance, maybe higher-order non-prenex quantification"),cw=e(bf),cy=e(bf),cs=e("can't happen."),ct=e("x"),cB=[0,0],cC=e(bj),dd=e('Deprecated syntax; use "," as separator'),c5=e("Firstorder solver tactic is "),cF=[0,e(aI),[0,e(bd),0]],cG=e("Firstorder Depth"),cJ=[0,e("Congruence"),[0,e(bd),0]],cK=e("Congruence Depth"),cQ=e("Firstorder default solver"),cV=[0,e(_)],cW=e(bm),cX=e(aI),cY=e("Set"),c2=e("Firstorder_Set_Solver"),c6=[0,e("Print"),[0,e(aI),[0,e(bm),0]]],c_=e("Firstorder_Print_Solver"),c$=e("GTauto failed"),de=e("deprecated"),df=e("firstorder-deprecated-syntax"),dh=e(aG),dq=e(aG),dv=e(aD),dy=e(bp),dB=e(bp),dE=e(aD),dK=e(aD),dP=e(aG),dS=e("l'"),dT=e(bo),dV=e(aH),dX=e(_),dY=e(am),d1=e(aH),d2=e(bo),d4=e(_),d5=e(am),d8=e(aH),d_=e(_),d$=e(am),eb=e(am),ee=e(_),ef=e(be),eh=e(be),by=f.Assert_failure,bV=f.Constrextern,ck=f.Coqlib,cl=f.UnivGen,b0=f.Control,cv=f.Evarutil,cA=f.Classops,cU=f.Locality,cM=f.Auto,cD=f.Mltop,cP=f.Loc,dg=f.CWarnings;function
 bq(h,g,f,e,d,c){var
 a=b(h,f,e);return 0===a?b(g,d,c):a}function
 br(j,i,h,g,f,e,d,c){var
@@ -86,7 +86,7 @@ h=1;break;case
 3:var
 h=2;break;case
 4:var
-x=F(ac(g,f,0,l[1],l[2]),0)[1],y=a(j[17][aF],x),h=[0,p,a(O[1][1][3],y),r];break;case
+x=F(ac(g,f,0,l[1],l[2]),0)[1],y=a(j[17][aE],x),h=[0,p,a(O[1][1][3],y),r];break;case
 5:var
 h=4;break;default:throw[0,R,l[1]]}var
 s=[1,h]}else{var
@@ -125,8 +125,8 @@ G=[bk,bx,ba(0)];function
 aM(a){return b(d[y][1],-1,a)}function
 ar(e,c){function
 f(b){var
-c=b[1];return[0,c,a(d[al][1],b[2])]}var
-g=b(j[17][69],f,e),h=a(d[al][1],c),i=b(x[45],g,h);return a(d[8],i)}function
+c=b[1];return[0,c,a(d[an][1],b[2])]}var
+g=b(j[17][69],f,e),h=a(d[an][1],c),i=b(x[45],g,h);return a(d[8],i)}function
 as(f,W,V){var
 i=a(w[2],0),p=[0,0];function
 s(c,a){var
@@ -266,17 +266,17 @@ switch(b[0]){case
 c=b[2];if(typeof
 c==="number")return 0;else
 switch(c[0]){case
-0:return am;case
+0:return al;case
 1:return 80;case
 2:return 70;case
 3:return-20;case
 4:return 50;default:return-10}}}var
 d=a[1];if(typeof
 d==="number")switch(d){case
-0:return am;case
+0:return al;case
 1:return 40;case
 2:return-15;case
-3:return-50;default:return am}return-29}var
+3:return-50;default:return al}return-29}var
 bC=[0,function(b,a){var
 c=aO(a[3]);return aO(b[3])-c|0}],bD=[0,function(c,a){var
 e=a[2],f=c[2],d=b(aP[17][1],c[1],a[1]);if(0===d){var
@@ -342,7 +342,7 @@ f=a(aw[30],i[7]);switch(f[0]){case
 2:case
 3:var
 h=f[1][1][1];try{var
-j=b(x[bf],c,h)[1],k=g(ah[1],e,c,h);d[1]=au(e,c,2,j,k,d[1]);var
+j=b(x[bh],c,h)[1],k=g(ah[1],e,c,h);d[1]=au(e,c,2,j,k,d[1]);var
 l=0;return l}catch(a){a=v(a);if(a===C)return 0;throw a}default:return 0}}function
 k(d,c,a){return b(j[17][11],i,a)}function
 m(d){try{var
@@ -352,7 +352,7 @@ bU(c){function
 e(g,f,e){var
 c=a(aa[2],0),h=a(av[17],c),i=a(d[8],g),j=z(bV[6],0,0,c,h,i),k=a(l[14],0),m=a(ax[20],j),n=a(l[3],bW),o=b(l[37],ai[58],f),p=a(l[3],bX),q=b(l[12],p,o),r=b(l[12],q,n),s=b(l[12],r,m),t=b(l[12],s,k);return b(l[12],t,e)}var
 f=a(l[3],bY),h=a(l[7],0),i=g(k[11],e,c,h),j=a(l[14],0),m=a(l[3],bZ),n=b(l[12],m,j),o=b(l[12],n,i),p=b(l[12],o,f);return b(l[24],0,p)}var
-q=[0,[0,k[1],k[2],k[3],k[4],k[5],k[6],k[7],k[8],k[9],k[10],k[11],k[12],k[13],k[14],k[15],k[16],k[17],k[18],k[19],k[20],k[21],k[22],k[23],k[24]],V,ag,aQ,K,bG,bH,bI,au,bJ,bK,bM,bN,bQ,bR,bU];J(bf,q,"Ground_plugin.Sequent");function
+q=[0,[0,k[1],k[2],k[3],k[4],k[5],k[6],k[7],k[8],k[9],k[10],k[11],k[12],k[13],k[14],k[15],k[16],k[17],k[18],k[19],k[20],k[21],k[22],k[23],k[24]],V,ag,aQ,K,bG,bH,bI,au,bJ,bK,bM,bN,bQ,bR,bU];J(bh,q,"Ground_plugin.Sequent");function
 u(t,m,k,s){function
 c(c){a(b0[3],0);var
 u=a(i[67][3],c),d=a(o[42][5],c),e=a(o[42][4],c);function
@@ -386,9 +386,9 @@ j=a(c[66][61],f);return b(i[72][1],j,g)}var
 j=a(c[66][61],e);return b(i[72][1],j,g)}return b(i[72][1],j,o)}var
 s=[0,b(i[72][1],i[55],r),p],t=a(c[66][22],s);return g(c[66][27],t,n,k)}function
 b8(d,b,a){var
-e=u(0,1,b,a);return g(c[66][27],h[bo],e,d)}function
+e=u(0,1,b,a);return g(c[66][27],h[bi],e,d)}function
 b9(f,e,d){var
-g=u(0,1,e,d),i=[0,a(c[66][34],g)],j=b(h[aF],0,i);return b(c[66][12],j,f)}function
+g=u(0,1,e,d),i=[0,a(c[66][34],g)],j=b(h[aE],0,i);return b(c[66][12],j,f)}function
 b_(f,e,d){var
 i=u(1,1,e,d),j=a(c[66][34],i),k=b(c[66][3],h[17],j),l=b(c[66][12],k,f),m=u(1,1,e,d);return g(c[66][27],h[16],m,l)}function
 b$(l,k,d,j,f){function
@@ -436,17 +436,17 @@ i=a(o[42][12],g),e=b(j[17][7],i,0),k=[0,f,[0,a(d[10],e)]],l=a(d[21],k),m=a(h[75]
 w=a(c[66][61],g),x=[0,b(i[72][1],w,v),t],y=[0,a(c[66][22],[0,h[16],x]),n],z=a(h[$],l),A=b(c[66][21],z,y);return b(c[66][12],A,k)}function
 aR(b){var
 c=g(ck[2],cj,ci,b);return a(cl[21],c)}var
-H=[aE,function(e){var
+H=[aF,function(e){var
 b=aR(cm),c=[0,[0,0,[1,a(N[66],b)[1]]],0],d=aR(cn);return[0,[0,0,[1,a(N[66],d)[1]]],c]}];function
 co(e){var
 f=a(o[42][12],e);function
 g(d){var
-c=bb(H),e=[0,d,1],f=bh===c?H[1]:aE===c?a(aS[2],H):H;return b(h[69],f,e)}var
-d=bb(H),j=b(c[66][23],g,f),k=bh===d?H[1]:aE===d?a(aS[2],H):H,l=a(h[68],k);return b(i[72][2],l,j)}var
+c=bb(H),e=[0,d,1],f=bc===c?H[1]:aF===c?a(aS[2],H):H;return b(h[69],f,e)}var
+d=bb(H),j=b(c[66][23],g,f),k=bc===d?H[1]:aF===d?a(aS[2],H):H,l=a(h[68],k);return b(i[72][2],l,j)}var
 s=[0,u,b2,D,b4,b6,b8,b9,b_,b$,ca,cb,cc,cd,ce,cg,ch,a(i[67][9],co)];J(112,s,"Ground_plugin.Rules");function
 cp(e,c){function
 f(e,c){var
-f=a(d[al][1],c),g=a(d[al][1],e);return b(N[80],g,f)}if(0===e[0]){var
+f=a(d[an][1],c),g=a(d[an][1],e);return b(N[80],g,f)}if(0===e[0]){var
 g=e[1],h=g[1],j=e[2],k=g[2];if(0===c[0]){var
 i=c[1],l=c[2],m=i[2],o=i[1],p=function(b,a){return b-a|0},q=function(b,a){return b-a|0},r=b(n[3],q,p);return L(b(n[4],r,f),o,h,j,l,k,m)}return 0===h?1:-1}var
 s=e[1];return 0===c[0]?0===c[1][1]?-1:1:f(s,c[1])}function
@@ -508,7 +508,7 @@ var
 E=g(ah[1],i,c,v),F=g(S[28],i,c,E),t=b(d[71],c,F)[1],G=t?t[1]:aV,p=G;function
 x(b){return a(d[9],f-b|0)}var
 z=b(j[17][56],f,x),B=b(d[y][4],z,u),o=f,m=A[1][10][1],e=i,l=c,k=0;for(;;){if(0===o)return[0,l,k,B];var
-q=g(h[13],m,p,e),r=ei(cv[7],0,0,0,0,0,e,l,av[116]),s=[0,[0,q],r[2][1]],C=r[1],D=b(d[aF],s,e),o=o-1|0,m=b(A[1][10][4],q,m),e=D,l=C,k=[0,s,k];continue}}var
+q=g(h[13],m,p,e),r=ei(cv[7],0,0,0,0,0,e,l,av[116]),s=[0,[0,q],r[2][1]],C=r[1],D=b(d[aE],s,e),o=o-1|0,m=b(A[1][10][4],q,m),e=D,l=C,k=[0,s,k];continue}}var
 Q=[0,aU,aT,function(f,e,r,k){function
 m(m){var
 t=aT(a(o[42][4],m),f,k);function
@@ -632,11 +632,11 @@ H=_}var
 ac=b(s[4],k[4],k);return b(c[66][12],ac,H)}return a(i[67][9],d)}var
 u=a(i[67][3],m),w=a(aW[1],u);return a(k,function(a){var
 b=0;function
-c(a){return B(b,a)}return p(s[1],w,1,c,a)})}return a(i[67][9],d)}];J(bo,ay,"Ground_plugin.Ground");a(cD[10],ak);var
+c(a){return B(b,a)}return p(s[1],w,1,c,a)})}return a(i[67][9],d)}];J(bi,ay,"Ground_plugin.Ground");a(cD[10],ak);var
 X=[0,3];function
 cE(a){return a?(X[1]=b(P[6],a[1],0),0):(X[1]=3,0)}var
 cH=[0,0,cG,cF,function(a){return[0,X[1]]},cE];b(aY[3],0,cH);var
-az=[0,am];function
+az=[0,al];function
 cI(a){return a?(az[1]=b(P[6],a[1],0),0):(az[1]=0,0)}var
 cL=[0,1,cK,cJ,function(a){return[0,az[1]]},cI];b(aY[3],0,cL);var
 cN=[0,aZ,0],cO=[0,function(b,a){return p(cM[14],0,0,0,0)}];g(r[4][16],0,aZ,cO);var

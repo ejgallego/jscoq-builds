@@ -1,5 +1,6 @@
 {
   "desc": "tlc",
   "deps": [ "coq-reals" ],
-  "pkgs": [ { "pkg_id": [ "TLC" ], "vo_files": [], "cma_files": [] } ]
+  "pkgs": [ { "pkg_id": [ "TLC" ], "vo_files": [], "cma_files": [] } ],
+  "archive": "tlc.coq-pkg"
 }

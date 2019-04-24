@@ -1,5 +1,5 @@
 function(S){"use strict";var
-u="String",o=250,h=246,K="string",J="Strings",I="Coq",c=S.jsoo_runtime,a=c.caml_new_string,n=c.caml_obj_tag,H=c.caml_register_global,R=c.caml_wrap_exception;function
+u="String",h=246,K="string",J="Strings",o=250,I="Coq",c=S.jsoo_runtime,a=c.caml_new_string,n=c.caml_obj_tag,H=c.caml_register_global,R=c.caml_wrap_exception;function
 b(a,b){return a.length==1?a(b):c.caml_call_gen(a,[b])}function
 d(a,b,d){return a.length==2?a(b,d):c.caml_call_gen(a,[b,d])}function
 G(a,b,d,e){return a.length==3?a(b,d,e):c.caml_call_gen(a,[b,d,e])}var

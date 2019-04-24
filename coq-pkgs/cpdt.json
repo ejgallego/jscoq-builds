@@ -1,5 +1,6 @@
 {
   "desc": "cpdt",
   "deps": [ "coq-reals" ],
-  "pkgs": [ { "pkg_id": [ "Cpdt" ], "vo_files": [], "cma_files": [] } ]
+  "pkgs": [ { "pkg_id": [ "Cpdt" ], "vo_files": [], "cma_files": [] } ],
+  "archive": "cpdt.coq-pkg"
 }

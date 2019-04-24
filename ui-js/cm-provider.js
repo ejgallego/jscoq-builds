@@ -34,7 +34,8 @@ class CmCoqProvider {
               keyMap            : "emacs",
               extraKeys: {
                   'Tab': 'indentMore',
-                  'Shift-Tab': 'indentLess'
+                  'Shift-Tab': 'indentLess',
+                  'Ctrl-Space': 'autocomplete'
               }
             };
 
@@ -63,6 +64,9 @@ class CmCoqProvider {
         this.onTipOut = () => {};
 
         this.editor.on('beforeChange', (cm, evt) => this.onCMChange(cm, evt) );
+
+        this.editor.on('cursorActivity', (cm) => 
+            cm.operation(() => this._adjustWidgetsInSelection()));
 
         // Handle mouse hover events
         var editor_element = $(this.editor.getWrapperElement());
@@ -226,6 +230,26 @@ class CmCoqProvider {
         }
     }
 
+    /**
+     * Final hack: adjust class of widget when active selection is manipulated
+     * by mark-selection addon.
+     */
+    _adjustWidgetsInSelection() {
+        var editor = this.editor,
+            sel_className = 'CodeMirror-selectedtext';
+
+        // Clear any previously marked widgets
+        $(editor.getWrapperElement()).find(`.CodeMirror-widget.${sel_className}`)
+            .removeClass(sel_className);
+
+        // Locate selection mark and adjust widgets contain therein
+        var selmark = editor.findMarksAt(editor.getCursor())
+            .filter(m => m.className == sel_className)[0], selmark_at;
+
+        if (selmark && (selmark_at = selmark.find()))
+            this._markWidgetsAsWell(selmark_at.from, selmark_at.to, selmark);
+    }
+
     getCursor() {
         return this.editor.getCursor();
     }
@@ -308,10 +332,14 @@ class CmCoqProvider {
         return undefined;
     }
 
-    // If a mark is present, request contextual information.
+    /**
+     * Highlights the sentence mark under the mouse cursor and emits
+     * onMouseEnter/onMouseLeave when the active mark changes.
+     * @param {MouseEvent} evt event object
+     */
     onCMMouseMove(evt) {
 
-        var mark = this._markFromElement(evt.target);
+        var mark = evt.buttons ? null : this._markFromElement(evt.target);
 
         if (mark && this.hover.indexOf(mark) > -1) return;
 
@@ -336,7 +364,10 @@ class CmCoqProvider {
         }
     }
 
-    // Notification of leaving the mark.
+    /**
+     * De-highlights and emits onMouseLeave when leaving the active mark.
+     * @param {MouseEvent} evt event object
+     */
     onCMMouseLeave(evt) {
         if (this.hover.length > 0) {
             for (let m of this.hover)

@@ -5,114 +5,529 @@
     {
       "pkg_id": [ "Coq", "Lists" ],
       "vo_files": [
-        [ "ListDec.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Streams.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "StreamMemo.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "List.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "ListTactics.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "SetoidPermutation.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "SetoidList.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "ListSet.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ]
+        [ "ListDec.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Streams.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "StreamMemo.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "List.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ListTactics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "SetoidPermutation.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "SetoidList.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "ListSet.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Vectors" ],
       "vo_files": [
-        [ "Fin.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "VectorEq.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "VectorSpec.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "VectorDef.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Vector.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ]
+        [ "Fin.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "VectorEq.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "VectorSpec.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "VectorDef.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Vector.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Sets" ],
       "vo_files": [
-        [ "Integers.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Powerset_Classical_facts.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Constructive_sets.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Ensembles.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Cpo.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Infinite_sets.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Relations_3.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Powerset.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Relations_3_facts.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Classical_sets.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Multiset.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Relations_1.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Relations_2.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Partial_Order.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Powerset_facts.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Finite_sets.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Uniset.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Image.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Relations_2_facts.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Finite_sets_facts.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Relations_1_facts.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Permut.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ]
+        [ "Integers.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Powerset_Classical_facts.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Constructive_sets.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Ensembles.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Cpo.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Infinite_sets.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Relations_3.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Powerset.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Relations_3_facts.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Classical_sets.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Multiset.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Relations_1.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Relations_2.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Partial_Order.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Powerset_facts.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Finite_sets.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Uniset.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Image.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Relations_2_facts.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Finite_sets_facts.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Relations_1_facts.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Permut.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "FSets" ],
       "vo_files": [
-        [ "FSetFacts.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "FMapFacts.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "FSetBridge.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "FSetInterface.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "FMapWeakList.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "FSetAVL.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "FSetEqProperties.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "FSets.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "FMapPositive.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "FSetCompat.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "FSetProperties.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "FSetToFiniteSet.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "FSetWeakList.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "FSetPositive.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "FMapFullAVL.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "FSetList.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "FMapInterface.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "FMapAVL.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "FMapList.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "FSetDecide.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "FMaps.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ]
+        [ "FSetFacts.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "FMapFacts.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "FSetBridge.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "FSetInterface.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "FMapWeakList.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "FSetAVL.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "FSetEqProperties.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "FSets.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "FMapPositive.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "FSetCompat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "FSetProperties.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "FSetToFiniteSet.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "FSetWeakList.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "FSetPositive.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "FMapFullAVL.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "FSetList.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "FMapInterface.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "FMapAVL.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "FMapList.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "FSetDecide.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "FMaps.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "MSets" ],
       "vo_files": [
-        [ "MSetProperties.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "MSetToFiniteSet.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "MSetRBT.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "MSetPositive.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "MSetWeakList.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "MSetEqProperties.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "MSetFacts.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "MSetDecide.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "MSetInterface.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "MSetList.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "MSetGenTree.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "MSetAVL.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "MSets.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ]
+        [ "MSetProperties.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "MSetToFiniteSet.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "MSetRBT.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "MSetPositive.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "MSetWeakList.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "MSetEqProperties.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "MSetFacts.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "MSetDecide.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "MSetInterface.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "MSetList.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "MSetGenTree.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "MSetAVL.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "MSets.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Sorting" ],
       "vo_files": [
-        [ "Sorted.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "PermutSetoid.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Mergesort.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Permutation.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Sorting.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "Heap.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ],
-        [ "PermutEq.vo", "ﾔ\u001d雇十u0000ｲ\u0004騾\t們~" ]
+        [ "Sorted.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "PermutSetoid.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Mergesort.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Permutation.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Sorting.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "Heap.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
+        [ "PermutEq.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
       ],
       "cma_files": []
     }
-  ]
+  ],
+  "archive": "coq-collections.coq-pkg",
+  "modDeps": {
+    "Coq.Lists.ListDec": [ "Coq.Lists.List", "Coq.Logic.Decidable" ],
+    "Coq.Lists.StreamMemo": [ "Coq.Logic.Eqdep_dec", "Coq.Lists.Streams" ],
+    "Coq.Lists.List": [
+      "Coq.Setoids.Setoid",
+      "Coq.Arith.PeanoNat",
+      "Coq.Arith.Le",
+      "Coq.Arith.Gt",
+      "Coq.Arith.Minus",
+      "Coq.Bool.Bool",
+      "Coq.Arith.Lt"
+    ],
+    "Coq.Lists.ListTactics": [ "Coq.PArith.BinPos", "Coq.Lists.List" ],
+    "Coq.Lists.SetoidPermutation": [ "Coq.Sorting.Permutation", "Coq.Lists.SetoidList" ],
+    "Coq.Lists.SetoidList": [
+      "Coq.Lists.List",
+      "Coq.Sorting.Sorted",
+      "Coq.Setoids.Setoid",
+      "Coq.Program.Basics",
+      "Coq.Classes.Morphisms"
+    ],
+    "Coq.Lists.ListSet": [ "Coq.Lists.List" ],
+    "Coq.Vectors.Fin": [ "Coq.Arith.Arith_base" ],
+    "Coq.Vectors.VectorEq": [ "Coq.Vectors.VectorDef", "Coq.Vectors.VectorSpec" ],
+    "Coq.Vectors.VectorSpec": [ "Coq.Vectors.Fin", "Coq.Vectors.VectorDef" ],
+    "Coq.Vectors.VectorDef": [ "Coq.Arith.Arith_base", "Coq.Vectors.Fin" ],
+    "Coq.Vectors.Vector": [
+      "Coq.Vectors.Fin",
+      "Coq.Vectors.VectorDef",
+      "Coq.Vectors.VectorSpec",
+      "Coq.Vectors.VectorEq"
+    ],
+    "Coq.Sets.Integers": [
+      "Coq.Sets.Finite_sets",
+      "Coq.Sets.Constructive_sets",
+      "Coq.Logic.Classical",
+      "Coq.Sets.Classical_sets",
+      "Coq.Sets.Powerset",
+      "Coq.Sets.Powerset_facts",
+      "Coq.Sets.Powerset_Classical_facts",
+      "Coq.Arith.Gt",
+      "Coq.Arith.Lt",
+      "Coq.Arith.Le",
+      "Coq.Sets.Finite_sets_facts",
+      "Coq.Sets.Image",
+      "Coq.Sets.Infinite_sets",
+      "Coq.Arith.Compare_dec",
+      "Coq.Sets.Relations_1",
+      "Coq.Sets.Partial_Order",
+      "Coq.Sets.Cpo"
+    ],
+    "Coq.Sets.Powerset_Classical_facts": [
+      "Coq.Sets.Ensembles",
+      "Coq.Sets.Constructive_sets",
+      "Coq.Sets.Relations_1",
+      "Coq.Sets.Relations_1_facts",
+      "Coq.Sets.Partial_Order",
+      "Coq.Sets.Cpo",
+      "Coq.Sets.Powerset",
+      "Coq.Sets.Powerset_facts",
+      "Coq.Logic.Classical",
+      "Coq.Sets.Classical_sets"
+    ],
+    "Coq.Sets.Constructive_sets": [ "Coq.Sets.Ensembles" ],
+    "Coq.Sets.Cpo": [ "Coq.Sets.Ensembles", "Coq.Sets.Relations_1", "Coq.Sets.Partial_Order" ],
+    "Coq.Sets.Infinite_sets": [
+      "Coq.Sets.Finite_sets",
+      "Coq.Sets.Constructive_sets",
+      "Coq.Logic.Classical",
+      "Coq.Sets.Classical_sets",
+      "Coq.Sets.Powerset",
+      "Coq.Sets.Powerset_facts",
+      "Coq.Sets.Powerset_Classical_facts",
+      "Coq.Arith.Gt",
+      "Coq.Arith.Lt",
+      "Coq.Arith.Le",
+      "Coq.Sets.Finite_sets_facts",
+      "Coq.Sets.Image"
+    ],
+    "Coq.Sets.Relations_3": [ "Coq.Sets.Relations_1", "Coq.Sets.Relations_2" ],
+    "Coq.Sets.Powerset": [
+      "Coq.Sets.Ensembles",
+      "Coq.Sets.Relations_1",
+      "Coq.Sets.Relations_1_facts",
+      "Coq.Sets.Partial_Order",
+      "Coq.Sets.Cpo"
+    ],
+    "Coq.Sets.Relations_3_facts": [
+      "Coq.Sets.Relations_1",
+      "Coq.Sets.Relations_1_facts",
+      "Coq.Sets.Relations_2",
+      "Coq.Sets.Relations_2_facts",
+      "Coq.Sets.Relations_3"
+    ],
+    "Coq.Sets.Classical_sets": [
+      "Coq.Sets.Ensembles",
+      "Coq.Sets.Constructive_sets",
+      "Coq.Logic.Classical"
+    ],
+    "Coq.Sets.Multiset": [ "Coq.Sets.Permut", "Coq.Setoids.Setoid", "Coq.Arith.Plus" ],
+    "Coq.Sets.Relations_2": [ "Coq.Sets.Relations_1" ],
+    "Coq.Sets.Partial_Order": [ "Coq.Sets.Ensembles", "Coq.Sets.Relations_1" ],
+    "Coq.Sets.Powerset_facts": [
+      "Coq.Sets.Ensembles",
+      "Coq.Sets.Constructive_sets",
+      "Coq.Sets.Relations_1",
+      "Coq.Sets.Relations_1_facts",
+      "Coq.Sets.Partial_Order",
+      "Coq.Sets.Cpo",
+      "Coq.Sets.Powerset"
+    ],
+    "Coq.Sets.Finite_sets": [ "Coq.Sets.Ensembles", "Coq.Sets.Constructive_sets" ],
+    "Coq.Sets.Uniset": [ "Coq.Bool.Bool", "Coq.Sets.Permut" ],
+    "Coq.Sets.Image": [
+      "Coq.Sets.Finite_sets",
+      "Coq.Sets.Constructive_sets",
+      "Coq.Logic.Classical",
+      "Coq.Sets.Classical_sets",
+      "Coq.Sets.Powerset",
+      "Coq.Sets.Powerset_facts",
+      "Coq.Sets.Powerset_Classical_facts",
+      "Coq.Arith.Gt",
+      "Coq.Arith.Lt",
+      "Coq.Arith.Le",
+      "Coq.Sets.Finite_sets_facts"
+    ],
+    "Coq.Sets.Relations_2_facts": [
+      "Coq.Sets.Relations_1",
+      "Coq.Sets.Relations_1_facts",
+      "Coq.Sets.Relations_2"
+    ],
+    "Coq.Sets.Finite_sets_facts": [
+      "Coq.Sets.Finite_sets",
+      "Coq.Sets.Constructive_sets",
+      "Coq.Logic.Classical",
+      "Coq.Sets.Classical_sets",
+      "Coq.Sets.Powerset",
+      "Coq.Sets.Powerset_facts",
+      "Coq.Sets.Powerset_Classical_facts",
+      "Coq.Arith.Gt",
+      "Coq.Arith.Lt"
+    ],
+    "Coq.Sets.Relations_1_facts": [ "Coq.Sets.Relations_1" ],
+    "Coq.FSets.FSetFacts": [ "Coq.Structures.DecidableTypeEx", "Coq.FSets.FSetInterface" ],
+    "Coq.FSets.FMapFacts": [
+      "Coq.Bool.Bool",
+      "Coq.Structures.DecidableType",
+      "Coq.Structures.DecidableTypeEx",
+      "Coq.Structures.OrderedType",
+      "Coq.Classes.Morphisms",
+      "Coq.FSets.FMapInterface"
+    ],
+    "Coq.FSets.FSetBridge": [ "Coq.FSets.FSetInterface" ],
+    "Coq.FSets.FSetInterface": [
+      "Coq.Bool.Bool",
+      "Coq.Structures.OrderedType",
+      "Coq.Structures.DecidableType"
+    ],
+    "Coq.FSets.FMapWeakList": [ "Coq.funind.FunInd", "Coq.FSets.FMapInterface" ],
+    "Coq.FSets.FSetAVL": [
+      "Coq.FSets.FSetInterface",
+      "Coq.ZArith.ZArith",
+      "Coq.ZArith.Int",
+      "Coq.FSets.FSetCompat",
+      "Coq.MSets.MSetAVL",
+      "Coq.Structures.Orders",
+      "Coq.Structures.OrdersAlt"
+    ],
+    "Coq.FSets.FSetEqProperties": [
+      "Coq.FSets.FSetProperties",
+      "Coq.Bool.Zerob",
+      "Coq.Bool.Sumbool",
+      "Coq.omega.Omega",
+      "Coq.Structures.DecidableTypeEx"
+    ],
+    "Coq.FSets.FSets": [
+      "Coq.Structures.OrderedType",
+      "Coq.Structures.OrderedTypeEx",
+      "Coq.Structures.OrderedTypeAlt",
+      "Coq.Structures.DecidableType",
+      "Coq.Structures.DecidableTypeEx",
+      "Coq.FSets.FSetInterface",
+      "Coq.FSets.FSetBridge",
+      "Coq.FSets.FSetFacts",
+      "Coq.FSets.FSetDecide",
+      "Coq.FSets.FSetProperties",
+      "Coq.FSets.FSetEqProperties",
+      "Coq.FSets.FSetWeakList",
+      "Coq.FSets.FSetList",
+      "Coq.FSets.FSetPositive",
+      "Coq.FSets.FSetAVL"
+    ],
+    "Coq.FSets.FMapPositive": [
+      "Coq.Bool.Bool",
+      "Coq.Structures.OrderedType",
+      "Coq.ZArith.ZArith",
+      "Coq.Structures.OrderedTypeEx",
+      "Coq.FSets.FMapInterface"
+    ],
+    "Coq.FSets.FSetCompat": [
+      "Coq.FSets.FSetInterface",
+      "Coq.FSets.FSetFacts",
+      "Coq.MSets.MSetInterface",
+      "Coq.MSets.MSetFacts"
+    ],
+    "Coq.FSets.FSetProperties": [
+      "Coq.FSets.FSetInterface",
+      "Coq.Structures.DecidableTypeEx",
+      "Coq.FSets.FSetFacts",
+      "Coq.FSets.FSetDecide"
+    ],
+    "Coq.FSets.FSetToFiniteSet": [
+      "Coq.Sets.Ensembles",
+      "Coq.Sets.Finite_sets",
+      "Coq.FSets.FSetInterface",
+      "Coq.FSets.FSetProperties",
+      "Coq.Structures.OrderedTypeEx",
+      "Coq.Structures.DecidableTypeEx"
+    ],
+    "Coq.FSets.FSetWeakList": [
+      "Coq.FSets.FSetInterface",
+      "Coq.Structures.Equalities",
+      "Coq.FSets.FSetCompat",
+      "Coq.MSets.MSetWeakList"
+    ],
+    "Coq.FSets.FSetPositive": [
+      "Coq.Bool.Bool",
+      "Coq.PArith.BinPos",
+      "Coq.Structures.OrderedType",
+      "Coq.Structures.OrderedTypeEx",
+      "Coq.FSets.FSetInterface"
+    ],
+    "Coq.FSets.FMapFullAVL": [
+      "Coq.funind.FunInd",
+      "Coq.funind.Recdef",
+      "Coq.FSets.FMapInterface",
+      "Coq.FSets.FMapList",
+      "Coq.ZArith.ZArith",
+      "Coq.ZArith.Int",
+      "Coq.FSets.FMapAVL",
+      "Coq.micromega.Lia"
+    ],
+    "Coq.FSets.FSetList": [
+      "Coq.FSets.FSetInterface",
+      "Coq.FSets.FSetCompat",
+      "Coq.MSets.MSetList",
+      "Coq.Structures.Orders",
+      "Coq.Structures.OrdersAlt"
+    ],
+    "Coq.FSets.FMapInterface": [
+      "Coq.Bool.Bool",
+      "Coq.Structures.DecidableType",
+      "Coq.Structures.OrderedType"
+    ],
+    "Coq.FSets.FMapAVL": [
+      "Coq.funind.FunInd",
+      "Coq.FSets.FMapInterface",
+      "Coq.FSets.FMapList",
+      "Coq.ZArith.ZArith",
+      "Coq.ZArith.Int"
+    ],
+    "Coq.FSets.FMapList": [ "Coq.funind.FunInd", "Coq.FSets.FMapInterface" ],
+    "Coq.FSets.FSetDecide": [
+      "Coq.Logic.Decidable",
+      "Coq.Setoids.Setoid",
+      "Coq.Structures.DecidableTypeEx",
+      "Coq.FSets.FSetFacts",
+      "Coq.FSets.FSetInterface"
+    ],
+    "Coq.FSets.FMaps": [
+      "Coq.Structures.OrderedType",
+      "Coq.Structures.OrderedTypeEx",
+      "Coq.Structures.OrderedTypeAlt",
+      "Coq.Structures.DecidableType",
+      "Coq.Structures.DecidableTypeEx",
+      "Coq.FSets.FMapInterface",
+      "Coq.FSets.FMapPositive",
+      "Coq.FSets.FMapFacts",
+      "Coq.FSets.FMapWeakList",
+      "Coq.FSets.FMapList"
+    ],
+    "Coq.MSets.MSetProperties": [
+      "Coq.MSets.MSetInterface",
+      "Coq.Structures.DecidableTypeEx",
+      "Coq.Structures.OrdersLists",
+      "Coq.MSets.MSetFacts",
+      "Coq.MSets.MSetDecide"
+    ],
+    "Coq.MSets.MSetToFiniteSet": [
+      "Coq.Sets.Ensembles",
+      "Coq.Sets.Finite_sets",
+      "Coq.MSets.MSetInterface",
+      "Coq.MSets.MSetProperties",
+      "Coq.Structures.OrdersEx"
+    ],
+    "Coq.MSets.MSetRBT": [
+      "Coq.MSets.MSetGenTree",
+      "Coq.Bool.Bool",
+      "Coq.Lists.List",
+      "Coq.PArith.BinPos",
+      "Coq.PArith.Pnat",
+      "Coq.Setoids.Setoid",
+      "Coq.Lists.SetoidList",
+      "Coq.Arith.PeanoNat"
+    ],
+    "Coq.MSets.MSetPositive": [
+      "Coq.Bool.Bool",
+      "Coq.PArith.BinPos",
+      "Coq.Structures.Orders",
+      "Coq.Structures.OrdersEx",
+      "Coq.MSets.MSetInterface"
+    ],
+    "Coq.MSets.MSetWeakList": [ "Coq.MSets.MSetInterface" ],
+    "Coq.MSets.MSetEqProperties": [
+      "Coq.MSets.MSetProperties",
+      "Coq.Bool.Zerob",
+      "Coq.Bool.Sumbool",
+      "Coq.omega.Omega",
+      "Coq.Structures.DecidableTypeEx"
+    ],
+    "Coq.MSets.MSetFacts": [ "Coq.Structures.DecidableTypeEx", "Coq.MSets.MSetInterface" ],
+    "Coq.MSets.MSetDecide": [
+      "Coq.Logic.Decidable",
+      "Coq.Setoids.Setoid",
+      "Coq.Structures.DecidableTypeEx",
+      "Coq.MSets.MSetFacts",
+      "Coq.MSets.MSetInterface"
+    ],
+    "Coq.MSets.MSetInterface": [
+      "Coq.Bool.Bool",
+      "Coq.Lists.SetoidList",
+      "Coq.Classes.RelationClasses",
+      "Coq.Classes.Morphisms",
+      "Coq.Classes.RelationPairs",
+      "Coq.Structures.Equalities",
+      "Coq.Structures.Orders",
+      "Coq.Structures.OrdersFacts"
+    ],
+    "Coq.MSets.MSetList": [
+      "Coq.MSets.MSetInterface",
+      "Coq.Structures.OrdersFacts",
+      "Coq.Structures.OrdersLists",
+      "Coq.Logic.Eqdep_dec"
+    ],
+    "Coq.MSets.MSetGenTree": [
+      "Coq.funind.FunInd",
+      "Coq.Structures.Orders",
+      "Coq.Structures.OrdersFacts",
+      "Coq.MSets.MSetInterface",
+      "Coq.Arith.PeanoNat"
+    ],
+    "Coq.MSets.MSetAVL": [
+      "Coq.funind.FunInd",
+      "Coq.MSets.MSetInterface",
+      "Coq.MSets.MSetGenTree",
+      "Coq.ZArith.BinInt",
+      "Coq.ZArith.Int"
+    ],
+    "Coq.MSets.MSets": [
+      "Coq.Structures.Orders",
+      "Coq.Structures.OrdersEx",
+      "Coq.Structures.OrdersAlt",
+      "Coq.Structures.Equalities",
+      "Coq.MSets.MSetInterface",
+      "Coq.MSets.MSetFacts",
+      "Coq.MSets.MSetDecide",
+      "Coq.MSets.MSetProperties",
+      "Coq.MSets.MSetEqProperties",
+      "Coq.MSets.MSetWeakList",
+      "Coq.MSets.MSetList",
+      "Coq.MSets.MSetPositive",
+      "Coq.MSets.MSetAVL"
+    ],
+    "Coq.Sorting.Sorted": [ "Coq.Lists.List", "Coq.Relations.Relations", "Coq.Sets.Relations_1" ],
+    "Coq.Sorting.PermutSetoid": [
+      "Coq.omega.Omega",
+      "Coq.Relations.Relations",
+      "Coq.Sets.Multiset",
+      "Coq.Lists.SetoidList",
+      "Coq.Sorting.Permutation"
+    ],
+    "Coq.Sorting.Mergesort": [
+      "Coq.Lists.List",
+      "Coq.Setoids.Setoid",
+      "Coq.Sorting.Permutation",
+      "Coq.Sorting.Sorted",
+      "Coq.Structures.Orders"
+    ],
+    "Coq.Sorting.Permutation": [
+      "Coq.Lists.List",
+      "Coq.Setoids.Setoid",
+      "Coq.Arith.Compare_dec",
+      "Coq.Classes.Morphisms",
+      "Coq.Logic.FinFun"
+    ],
+    "Coq.Sorting.Sorting": [ "Coq.Sorting.Sorted", "Coq.Sorting.Mergesort" ],
+    "Coq.Sorting.Heap": [
+      "Coq.Lists.List",
+      "Coq.Sets.Multiset",
+      "Coq.Sorting.PermutSetoid",
+      "Coq.Relations.Relations",
+      "Coq.Sorting.Sorting"
+    ],
+    "Coq.Sorting.PermutEq": [
+      "Coq.Relations.Relations",
+      "Coq.Setoids.Setoid",
+      "Coq.Lists.SetoidList",
+      "Coq.Lists.List",
+      "Coq.Sets.Multiset",
+      "Coq.Sorting.PermutSetoid",
+      "Coq.Sorting.Permutation",
+      "Coq.omega.Omega"
+    ]
+  }
 }

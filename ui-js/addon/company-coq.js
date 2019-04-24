@@ -170,6 +170,7 @@ class Markup {
 // Builtin tactics are copied from coq-mode.
 // TODO: order tactics most common first rather than alphabetically.
 var vocab = {
+    locals: {lemmas: [], tactics: []},  /* keep locals before globals */
     globals: {
         lemmas: [],
         tactics: [
@@ -221,10 +222,6 @@ class AutoComplete {
         this.kinds = kinds;
 
         this.max_matches = 100;  // threshold to prevent UI slowdown
-
-        this.extraKeys = {
-            Alt: (cm) => { this.hintZoom(cm); }
-        };
     }
 
     attach(cm) {
@@ -237,10 +234,10 @@ class AutoComplete {
     hint(cm, _options, family) {
         var cur = cm.getCursor(), 
             [token, token_start, token_end] = this._adjustToken(cur, cm.getTokenAt(cur)),
-            match = /^\w/.exec(token.string) ? token.string : undefined;
+            match = token.string.trim();
     
         // Build completion list
-        var matching = match ? this._matches(match, family) : [];
+        var matching = this._matches(match, family);
 
         if (matching.length === 0) {
             cm.closeHint();
@@ -278,23 +275,39 @@ class AutoComplete {
      * characters.
      * @param {CodeMirror} cm editor instance
      * @param {ChangeEvent} evt document modification object
+     *   (if omitted, shows hints unconditionally)
      */
     senseContext(cm, evt) {
-        if (!cm.state.completionActive && this._isInsertAtCursor(cm, evt)) {
+        if (!evt || !cm.state.completionActive && this._isInsertAtCursor(cm, evt)) {
             var cur = cm.getCursor(), token = cm.getTokenAt(cur),
-                is_head = token.state.is_head,
+                is_head = token.state.is_head || token.state.begin_sentence,
                 kind = token.state.sentence_kind;
 
-            if ((is_head || kind === 'tactic' || kind === 'terminator') && 
-                /^[a-zA-Z_]./.exec(token.string)) {
+            if (!evt || ((is_head || kind === 'tactic' || kind === 'terminator') &&
+                         /^[a-zA-Z_]./.exec(token.string))) {
                 var hint = is_head ? this.tacticHint : this.lemmaHint;
-                cm.showHint({
-                    hint: (cm, options) => hint.call(this, cm, options), 
-                    completeSingle: false, 
-                    extraKeys: this.extraKeys
-                });
+                requestAnimationFrame(() =>
+                    cm.showHint({
+                        hint: (cm, options) => hint.call(this, cm, options),
+                        completeSingle: false
+                    }));
             }
         }
+    }
+
+    /**
+     * Called by 'showHint' on 'autocomplete' command.
+     * (There is some overlap with senseContext functionality, but seems
+     * unavoidable.)
+     * @param {CodeMirror} cm editor instance
+     * @param {object} options showHint options object
+     */
+    getCompletions(cm, options) {
+        var cur = cm.getCursor(), token = cm.getTokenAt(cur),
+            is_head = token.state.is_head || token.state.begin_sentence;
+
+        var hint = is_head ? this.tacticHint : this.lemmaHint;
+        return hint.call(this, cm, options);
     }
 
     _isInsertAtCursor(cm, evt) {
@@ -442,6 +455,11 @@ class CompanyCoq {
         return this;
     }
 
+    static hint(cm, options) {
+        if (cm.company_coq)
+            return cm.company_coq.completion.getCompletions(cm, options);
+    }
+
     static mkEmptyScope() {
         return { lemmas: [], tactics: [] };
     }
@@ -471,6 +489,10 @@ class CompanyCoq {
             if (cm.options.mode['company-coq'])
                 cm.company_coq = new CompanyCoq().attach(cm);
         });
+
+        CodeMirror.registerGlobalHelper("hint", "company-coq",
+            (mode, cm) => mode.name === 'coq' && !!cm.company_coq, 
+            CompanyCoq.hint);
     }
 }
 

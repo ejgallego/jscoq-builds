@@ -1,5 +1,5 @@
 function(j$){"use strict";var
-bd=104,cz=",",K='"',cy="field_mod",r=250,cx="(",cw="constants",aM="Field_tac",ce="with carrier ",cu="postprocess tactic",cv="Init",aL="field",ct="InitialRing",m=246,cd="decidable",cq="Pphi_pow",cr='Using setoid "',cs="tactic recognizing constants",cp="l",co="postprocess",bc="gen_phiZ",aN="setoid",cn="ring_mod",C="]",cc="preprocess",a_="power_tac",cm="Print",bb="power",cl="Ring_polynom",ba="protect_fv",ak="Ring",cb='and "',ca=103,b$="morphism",a9="plugins/setoid_ring/newring.ml",ck="field_lookup",cj=107,$="Coq",b9="lH",b_="closed",a$="x",b8="ring_lookup",b7="f",a8="ring",b5="map",b6="preprocess tactic",B="[",ci='and morphisms "',b4="and equivalence relation ",b3=")",b1="field_mods",b2=":",aK="t",b0="abstract",aJ="sign",bZ="PEeval",aI="div",a7="newring_plugin",cg="Add",ch="completeness",a5="id",a6="IDphi",cf="ring_mods",bX=129,bY="Pphi_dev",J=j$.jsoo_runtime,G=J.caml_check_bound,b=J.caml_new_string,q=J.caml_obj_tag,aH=J.caml_register_global,A=J.caml_wrap_exception;function
+cz=",",K='"',cy="field_mod",cx="(",cw="constants",aM="Field_tac",cc=107,cd="with carrier ",cu="postprocess tactic",cv="Init",aL="field",ct="InitialRing",cb="decidable",cq="Pphi_pow",cr='Using setoid "',cs="tactic recognizing constants",cp="l",co="postprocess",bd="gen_phiZ",aN="setoid",cn="ring_mod",cm=129,C="]",ca="preprocess",a_="power_tac",cl="Print",bc="power",ck="Ring_polynom",bb="protect_fv",ak="Ring",b$='and "',b_="morphism",a9="plugins/setoid_ring/newring.ml",cj="field_lookup",$="Coq",b8="lH",b9="closed",ba="x",b7="ring_lookup",b6="f",a8="ring",m=246,b4="map",b5="preprocess tactic",B="[",ci='and morphisms "',a$=104,b3="and equivalence relation ",b2=")",ch=103,b0="field_mods",b1=":",aK="t",bZ="abstract",aJ="sign",bY="PEeval",aI="div",a7="newring_plugin",cf="Add",cg="completeness",a5="id",a6="IDphi",ce="ring_mods",r=250,bX="Pphi_dev",J=j$.jsoo_runtime,G=J.caml_check_bound,b=J.caml_new_string,q=J.caml_obj_tag,aH=J.caml_register_global,A=J.caml_wrap_exception;function
 a(a,b){return a.length==1?a(b):J.caml_call_gen(a,[b])}function
 c(a,b,c){return a.length==2?a(b,c):J.caml_call_gen(a,[b,c])}function
 e(a,b,c,d){return a.length==3?a(b,c,d):J.caml_call_gen(a,[b,c,d])}function
@@ -7,12 +7,12 @@ P(a,b,c,d,e){return a.length==4?a(b,c,d,e):J.caml_call_gen(a,[b,c,d,e])}function
 F(a,b,c,d,e,f){return a.length==5?a(b,c,d,e,f):J.caml_call_gen(a,[b,c,d,e,f])}function
 j_(a,b,c,d,e,f,g,h){return a.length==7?a(b,c,d,e,f,g,h):J.caml_call_gen(a,[b,c,d,e,f,g,h])}var
 f=J.caml_get_global_data(),bi=[0,b(a7),b("closed_term")],bp=[0,b(a7),b("get_res")],br=[0,[0,b($),[0,b("Setoids"),[0,b("Setoid"),0]]],[0,[0,b($),[0,b("Lists"),[0,b("List"),0]]],[0,[0,b($),[0,b(cv),[0,b("Datatypes"),0]]],[0,[0,b($),[0,b(cv),[0,b("Logic"),0]]],0]]]],an=b("setoid_ring"),aj=b(a7),X=f.Constr,h=f.Util,Q=f.CClosure,ae=f.Termops,al=f.Globnames,H=f.Not_found,i=f.EConstr,bO=f.Tacmach,s=f.Proofview,g=f.Ltac_plugin,O=f.Coqlib,aa=f.Global,l=f.Names,x=f.Stdlib,bK=f.Lib,p=f.CamlinternalLazy,aU=f.UnivGen,y=f.Mod_subst,U=f.Libnames,_=f.Retyping,bx=f.Reductionops,d=f.Pp,W=f.CErrors,D=f.Printer,aS=f.Assert_failure,aw=f.Typing,aT=f.Option,Y=f.Evarutil,bE=f.Smartlocate,I=f.Loc,ad=f.Feedback,bA=f.Flags,v=f.Stdarg,j=f.Genarg,af=f.Evd,bm=f.Univops,bn=f.Declare,bl=f.Constrintern,bh=f.Tactics,at=f.Summary,au=f.Libobject,aF=f.Vernac_classifier,bS=f.Pfedit,E=f.Ppconstr,n=f.Pcoq,k=f.CLexer,bT=f.Vernacentries,be=[0],cE=f.Esubst,c1=f.CAst,c3=f.Refiner,cU=f.Environ,cV=f.Goal,cQ=f.DAst,cM=f.Tacticals,fL=f.Redexpr,gD=f.Mltop;aH(272,be,"Newring_plugin.Newring_ast");var
-gB=[0,0,0],gC=[0,0,0],gq=b("field kind"),gr=b(cs),gs=b(b6),gt=b(cu),gu=b(aN),gv=b(bb),gw=b(aJ),gx=b(aI),gy=b("infinite property"),gg=[0,b(aM),0],gh=[0,0,0],gi=b("field_lemmas"),gj=b("_field_lemma1"),gk=b("_field_lemma2"),gl=b("_field_lemma3"),gm=b("_field_lemma4"),gn=b("_lemma5"),gp=[22,0],go=[22,0],gf=b("field inverse should be declared as a morphism"),f2=b("arguments of field_simplify do not have all the same type"),f3=[0,b(aL)],f1=[0,b(aM),0],f4=b(K),f5=b(K),f6=b("cannot find a declared field structure over"),f7=[0,b(aL)],f8=[0,b(a9),856,12],fW=[0,1],fX=[0,0],fV=b("bad field structure"),eY=[0,0,0],eZ=[0,0,0],eO=b("ring kind"),eP=b(cs),eQ=b(b6),eR=b(cu),eS=b(aN),eT=b(bb),eU=b(aJ),eV=b(aI),eN=b(" cannot be set twice"),eH=[0,b("Ring_base"),0],eI=b("ring_lemmas"),eJ=b("_ring_lemma1"),eK=b("_ring_lemma2"),eM=[22,0],eL=[22,0],eF=[0,1],eG=[0,0],eE=b("bad ring structure"),en=b("ring addition should be declared as a morphism"),eo=b("ring multiplication should be declared as a morphism"),ep=b("ring opposite should be declared as a morphism"),eq=b(K),er=b(cb),es=b(K),et=b(K),eu=b('",'),ev=b(ci),ew=b(K),ex=b(cr),ey=b(K),ez=b(cb),eA=b(K),eB=b(ci),eC=b(K),eD=b(cr),ej=b("cannot find setoid relation"),d7=b("arguments of ring_simplify do not have all the same type"),d8=[0,b(a8)],d9=b(K),d_=b(K),d$=b("cannot find a declared ring structure over"),ea=[0,b(a8)],eb=[0,b(a9),354,12],dn=[0,b(cl),0],dm=b("newring"),dh=b(ak),dg=b(ak),dc=b("ring: cannot find relation (not closed)"),db=b("ring: cannot find relation"),c5=b(ak),c4=b(ak),c2=b(a$),c0=b(a$),cY=b(a$),cW=b("Ring.exec_tactic: anomaly"),cS=[2,1],cT=[0,1],cP=b(aK),cR=b(aK),cL=[0,b(a9),116,7],cG=b("not found"),cH=b("map "),cI=[0,b("lookup_map")],cD=b("dummy"),cB=b("global_head_of_constr."),c6=b("Build_Setoid_Theory"),c8=b("None"),c9=b("Some"),c_=b("eq"),c$=b("cons"),da=b("nil"),dd=b($),de=[0,[0,b("Ring_theory"),0],[0,[0,b(cl),0],[0,[0,b("Ring_tac"),0],[0,[0,b(ct),0],[0,[0,b(aM),0],[0,[0,b("Field_theory"),0],0]]]]]],di=[0,b($),0],dj=b(ct),dp=b("almost_ring_theory"),dq=b("Eqsth"),ds=b("Eq_ext"),du=b("Eq_s_ext"),dw=b("ring_theory"),dx=b("mk_reqe"),dz=b("semi_ring_theory"),dA=b("mk_seqe"),dC=b("Abstract"),dD=b("Computational"),dF=b("Morphism"),dH=b("inv_morph_nothing"),dI=b("mkhypo"),dK=b("hypo"),dN=b(bZ),dQ=b(cq),dT=b(bY),dW=b(bc),dZ=b(a6),d3=b(a8),d4=b("ring-tac-carrier-table"),d5=b("ring-tac-name-table"),ed=b("tactic-new-ring-theory"),e1=[0,b($),0],e2=b(aM),e7=b("FEeval"),e_=b(bZ),fb=b(cq),fe=b(bY),fh=b("display_pow_linear"),fk=b("display_linear"),fn=b(bc),fq=b(a6),fu=b(aL),fx=b("PCond"),fA=b(bc),fD=b(a6),fH=b("field_cond"),fI=b(aL),fK=b("simpl_field_expr"),fM=b("almost_field_theory"),fN=b("field_theory"),fO=b("semi_field_theory"),fP=b("AF_AR"),fR=b("F_R"),fT=b("SF_SR"),fY=b("field-tac-carrier-table"),fZ=b("field-tac-name-table"),f_=b("tactic-new-field-theory"),jG=b(b4),jH=b(ce),jF=b("The following field structures have been declared:"),je=b(ch),iM=b(b4),iN=b(ce),iL=b("The following ring structures have been declared:"),hn=[0,0],gR=b(b0),gS=b(cd),gT=b(b$),gU=b(C),gV=b(B),gW=b(cw),gX=b(C),gY=b(B),gZ=b(b_),g0=b(C),g1=b(B),g2=b(cc),g3=b(C),g4=b(B),g5=b(co),g6=b(aN),g7=b(C),g8=b(B),g9=b(a_),g_=b(C),g$=b(B),ha=b(a_),hb=b(aJ),hc=b(aI),gG=b(b5),gH=b(ba),gK=b(a5),gL=b("in"),gN=b(b5),gO=b(ba),gQ=b(ba),hd=b(cn),hf=b(cn),hk=b(cd),ho=b(b0),hs=b(b$),hv=b(C),hy=b(B),hA=b(cw),hD=b(C),hG=b(B),hI=b(b_),hL=b(C),hO=b(B),hQ=b(cc),hT=b(C),hW=b(B),hY=b(co),h3=b(aN),h7=b(aJ),h_=b(C),ib=b(B),ie=b(bb),ii=b(C),il=b(B),ip=b(a_),it=b(aI),iw=b(cf),iy=b(cf),iC=b(b3),iE=b(cz),iG=b(cx),iO=[0,b(cm),[0,b("Rings"),0]],iS=[0,b(cp)],iU=[0,b(aK)],iV=b(b2),iX=[0,b(a5)],iY=b(ak),iZ=b(cg),i3=b("AddSetoidRing"),i6=b("lrt"),i7=b(C),i9=b(b9),i_=b(B),ja=b(b7),jb=b(b8),jd=b(b8),jf=b(cy),jh=b(cy),jn=b(ch),jq=b(b1),js=b(b1),jw=b(b3),jy=b(cz),jA=b(cx),jI=[0,b(cm),[0,b("Fields"),0]],jM=[0,b(cp)],jO=[0,b(aK)],jP=b(b2),jR=[0,b(a5)],jS=b("Field"),jT=b(cg),jX=b("AddSetoidField"),j0=b("lt"),j1=b(C),j3=b(b9),j4=b(B),j6=b(b7),j7=b(ck),j9=b(ck);function
+gB=[0,0,0],gC=[0,0,0],gq=b("field kind"),gr=b(cs),gs=b(b5),gt=b(cu),gu=b(aN),gv=b(bc),gw=b(aJ),gx=b(aI),gy=b("infinite property"),gg=[0,b(aM),0],gh=[0,0,0],gi=b("field_lemmas"),gj=b("_field_lemma1"),gk=b("_field_lemma2"),gl=b("_field_lemma3"),gm=b("_field_lemma4"),gn=b("_lemma5"),gp=[22,0],go=[22,0],gf=b("field inverse should be declared as a morphism"),f2=b("arguments of field_simplify do not have all the same type"),f3=[0,b(aL)],f1=[0,b(aM),0],f4=b(K),f5=b(K),f6=b("cannot find a declared field structure over"),f7=[0,b(aL)],f8=[0,b(a9),856,12],fW=[0,1],fX=[0,0],fV=b("bad field structure"),eY=[0,0,0],eZ=[0,0,0],eO=b("ring kind"),eP=b(cs),eQ=b(b5),eR=b(cu),eS=b(aN),eT=b(bc),eU=b(aJ),eV=b(aI),eN=b(" cannot be set twice"),eH=[0,b("Ring_base"),0],eI=b("ring_lemmas"),eJ=b("_ring_lemma1"),eK=b("_ring_lemma2"),eM=[22,0],eL=[22,0],eF=[0,1],eG=[0,0],eE=b("bad ring structure"),en=b("ring addition should be declared as a morphism"),eo=b("ring multiplication should be declared as a morphism"),ep=b("ring opposite should be declared as a morphism"),eq=b(K),er=b(b$),es=b(K),et=b(K),eu=b('",'),ev=b(ci),ew=b(K),ex=b(cr),ey=b(K),ez=b(b$),eA=b(K),eB=b(ci),eC=b(K),eD=b(cr),ej=b("cannot find setoid relation"),d7=b("arguments of ring_simplify do not have all the same type"),d8=[0,b(a8)],d9=b(K),d_=b(K),d$=b("cannot find a declared ring structure over"),ea=[0,b(a8)],eb=[0,b(a9),354,12],dn=[0,b(ck),0],dm=b("newring"),dh=b(ak),dg=b(ak),dc=b("ring: cannot find relation (not closed)"),db=b("ring: cannot find relation"),c5=b(ak),c4=b(ak),c2=b(ba),c0=b(ba),cY=b(ba),cW=b("Ring.exec_tactic: anomaly"),cS=[2,1],cT=[0,1],cP=b(aK),cR=b(aK),cL=[0,b(a9),116,7],cG=b("not found"),cH=b("map "),cI=[0,b("lookup_map")],cD=b("dummy"),cB=b("global_head_of_constr."),c6=b("Build_Setoid_Theory"),c8=b("None"),c9=b("Some"),c_=b("eq"),c$=b("cons"),da=b("nil"),dd=b($),de=[0,[0,b("Ring_theory"),0],[0,[0,b(ck),0],[0,[0,b("Ring_tac"),0],[0,[0,b(ct),0],[0,[0,b(aM),0],[0,[0,b("Field_theory"),0],0]]]]]],di=[0,b($),0],dj=b(ct),dp=b("almost_ring_theory"),dq=b("Eqsth"),ds=b("Eq_ext"),du=b("Eq_s_ext"),dw=b("ring_theory"),dx=b("mk_reqe"),dz=b("semi_ring_theory"),dA=b("mk_seqe"),dC=b("Abstract"),dD=b("Computational"),dF=b("Morphism"),dH=b("inv_morph_nothing"),dI=b("mkhypo"),dK=b("hypo"),dN=b(bY),dQ=b(cq),dT=b(bX),dW=b(bd),dZ=b(a6),d3=b(a8),d4=b("ring-tac-carrier-table"),d5=b("ring-tac-name-table"),ed=b("tactic-new-ring-theory"),e1=[0,b($),0],e2=b(aM),e7=b("FEeval"),e_=b(bY),fb=b(cq),fe=b(bX),fh=b("display_pow_linear"),fk=b("display_linear"),fn=b(bd),fq=b(a6),fu=b(aL),fx=b("PCond"),fA=b(bd),fD=b(a6),fH=b("field_cond"),fI=b(aL),fK=b("simpl_field_expr"),fM=b("almost_field_theory"),fN=b("field_theory"),fO=b("semi_field_theory"),fP=b("AF_AR"),fR=b("F_R"),fT=b("SF_SR"),fY=b("field-tac-carrier-table"),fZ=b("field-tac-name-table"),f_=b("tactic-new-field-theory"),jG=b(b3),jH=b(cd),jF=b("The following field structures have been declared:"),je=b(cg),iM=b(b3),iN=b(cd),iL=b("The following ring structures have been declared:"),hn=[0,0],gR=b(bZ),gS=b(cb),gT=b(b_),gU=b(C),gV=b(B),gW=b(cw),gX=b(C),gY=b(B),gZ=b(b9),g0=b(C),g1=b(B),g2=b(ca),g3=b(C),g4=b(B),g5=b(co),g6=b(aN),g7=b(C),g8=b(B),g9=b(a_),g_=b(C),g$=b(B),ha=b(a_),hb=b(aJ),hc=b(aI),gG=b(b4),gH=b(bb),gK=b(a5),gL=b("in"),gN=b(b4),gO=b(bb),gQ=b(bb),hd=b(cn),hf=b(cn),hk=b(cb),ho=b(bZ),hs=b(b_),hv=b(C),hy=b(B),hA=b(cw),hD=b(C),hG=b(B),hI=b(b9),hL=b(C),hO=b(B),hQ=b(ca),hT=b(C),hW=b(B),hY=b(co),h3=b(aN),h7=b(aJ),h_=b(C),ib=b(B),ie=b(bc),ii=b(C),il=b(B),ip=b(a_),it=b(aI),iw=b(ce),iy=b(ce),iC=b(b2),iE=b(cz),iG=b(cx),iO=[0,b(cl),[0,b("Rings"),0]],iS=[0,b(cp)],iU=[0,b(aK)],iV=b(b1),iX=[0,b(a5)],iY=b(ak),iZ=b(cf),i3=b("AddSetoidRing"),i6=b("lrt"),i7=b(C),i9=b(b8),i_=b(B),ja=b(b6),jb=b(b7),jd=b(b7),jf=b(cy),jh=b(cy),jn=b(cg),jq=b(b0),js=b(b0),jw=b(b2),jy=b(cz),jA=b(cx),jI=[0,b(cl),[0,b("Fields"),0]],jM=[0,b(cp)],jO=[0,b(aK)],jP=b(b1),jR=[0,b(a5)],jS=b("Field"),jT=b(cf),jX=b("AddSetoidField"),j0=b("lt"),j1=b(C),j3=b(b8),j4=b(B),j6=b(b6),j7=b(cj),j9=b(cj);function
 L(b){var
 c=a(d[3],b);return e(W[6],0,0,c)}function
 cA(b,f){var
 g=c(i[83],b,f)[1];try{var
-j=c(ae[ca],b,g)[1];return j}catch(b){b=A(b);if(b===H){var
+j=c(ae[ch],b,g)[1];return j}catch(b){b=A(b);if(b===H){var
 h=a(d[3],cB);return e(W[3],0,0,h)}throw b}}function
 cC(b){try{var
 c=a(al[16],b);return c}catch(b){b=A(b);if(b===H)return[0,a(l[1][6],cD)];throw b}}function
@@ -32,7 +32,7 @@ b=c(h[15][52][22],f,aO[1]);return b}catch(b){b=A(b);if(b===H){var
 g=a(d[3],cG),i=a(d[20],f),j=a(d[3],cH),k=c(d[12],j,i),l=c(d[12],k,g);return e(W[6],0,cI,l)}throw b}}function
 aQ(h,g,f,b){function
 j(a){return c(Y[12],f,a)}var
-k=a(i[bX][1],b),l=a(Q[22],0),m=e(Q[43],[0,j],Q[8],g),n=c(cF(h),f,b);function
+k=a(i[cm][1],b),l=a(Q[22],0),m=e(Q[43],[0,j],Q[8],g),n=c(cF(h),f,b);function
 d(c,f){var
 b=a(X[26],f);if(6===b[0]){var
 h=b[2],i=b[1],j=d(c+1|0,b[3]),k=[0,i,d(c,h),j];return a(X[10],k)}var
@@ -44,7 +44,7 @@ cK(b,a){var
 c=[0,[0,a,0]],d=2,f=[0,function(a,c,d){return aQ(b,a,c,d)},d];return e(bh[49],0,f,c)}function
 aR(a,e,b){var
 f=b;for(;;)try{var
-l=c(ae[ca],a,f)[1],m=c(al[21][3],l,e);return m}catch(b){b=A(b);if(b===H){var
+l=c(ae[ch],a,f)[1],m=c(al[21][3],l,e);return m}catch(b){b=A(b);if(b===H){var
 d=c(i[3],a,f);switch(d[0]){case
 5:var
 f=d[1];continue;case
@@ -193,7 +193,7 @@ f=q(w),n=r===f?w[1]:m===f?a(p[2],w):w,g=c(Y[9],b[1],n),j=g[2];b[1]=g[1];var
 o=t(b,ah,[0,j]);function
 s(c,a){return t(b,ag,[0,j,ax(d,b,c),a])}var
 u=e(h[17][16],s,l,o),k=e(aw[9],d,b[1],u),v=k[2];b[1]=k[1];var
-x=a(i[bX][1],v);return c(Y[41],b[1],x)}function
+x=a(i[cm][1],v);return c(Y[41],b[1],x)}function
 bG(o,b,e){var
 f=q(w),s=r===f?w[1]:m===f?a(p[2],w):w,i=c(Y[9],b[1],s),j=i[2];b[1]=i[1];if(e){var
 k=e[1],d=k[1],u=k[2];if(0===d[0])var
@@ -376,15 +376,15 @@ b=K[2],S=b.length-1-8|0;if(2<S>>>0)var
 j=0;else{var
 N=K[1];switch(S){case
 0:var
-T=b[1],U=b[2],V=b[3],W=b[4],Y=b[5],$=b[6],ab=b[7],ac=b[8],ad=q(aA),aO=r===ad?aA[1]:m===ad?a(p[2],aA):aA;if(e(ae[bd],d[1],aO,N))var
+T=b[1],U=b[2],V=b[3],W=b[4],Y=b[5],$=b[6],ab=b[7],ac=b[8],ad=q(aA),aO=r===ad?aA[1]:m===ad?a(p[2],aA):aA;if(e(ae[a$],d[1],aO,N))var
 f=[0,fW,T,U,V,W,Y,0,0,$,ab,ac,t(d,fU,[0,T,U,V,W,Y,$,ab,ac,s])],j=1;else
 var
 j=0;break;case
 1:var
 j=0;break;default:var
-y=b[1],z=b[2],A=b[3],B=b[4],C=b[5],D=b[6],E=b[7],H=b[8],I=b[9],J=b[10],af=q(ay),aP=r===af?ay[1]:m===af?a(p[2],ay):ay;if(e(ae[bd],d[1],aP,N))var
+y=b[1],z=b[2],A=b[3],B=b[4],C=b[5],D=b[6],E=b[7],H=b[8],I=b[9],J=b[10],af=q(ay),aP=r===af?ay[1]:m===af?a(p[2],ay):ay;if(e(ae[a$],d[1],aP,N))var
 f=[0,0,y,z,A,B,C,[0,D],[0,E],H,I,J,t(d,fQ,[0,y,z,A,B,C,D,E,H,I,J,s])],j=1;else{var
-ag=q(az),aQ=r===ag?az[1]:m===ag?a(p[2],az):az;if(e(ae[bd],d[1],aQ,N))var
+ag=q(az),aQ=r===ag?az[1]:m===ag?a(p[2],az):az;if(e(ae[a$],d[1],aQ,N))var
 f=[0,fX,y,z,A,B,C,[0,D],[0,E],H,I,J,t(d,fS,[0,y,z,A,B,C,D,E,H,I,J,s])],j=1;else
 var
 j=0}}}}else
@@ -397,7 +397,7 @@ b=a(l[6][4],gi);return e(l[13][1],[0,e4],l[5][6],b)}],aq=bq(k,d[1],9,aM,a2),w=aq
 a7=[0,e(i[5],0,v,aL[1])],a8=[0,G(o,8)[9],a7],ar=a(X[13],a8);else
 var
 ar=G(o,7)[8];var
-a9=a(l[1][8],n),a_=Z(c(x[17],a9,gj),w,a3),a$=a(l[1][8],n),ba=Z(c(x[17],a$,gk),w,a4),bb=a(l[1][8],n),bc=Z(c(x[17],bb,gl),w,a5),be=a(l[1][8],n),bf=Z(c(x[17],be,gm),w,a6),bg=a(l[1][8],n),bh=Z(c(x[17],bg,gn),w,ar),bi=bD(k,v,R,aW,[0,aV,aU,ak,aj,ai],aK),bj=aJ?a(g[9][3],aJ[1]):gp,bl=aI?a(g[9][3],aI[1]):go,bm=e(i[5],0,v,Q),bn=a(gd,[0,bm,e(i[5],0,v,P),bi,aY,a_,ba,bc,bf,bh,bj,bl]);c(bK[6],n,bn);return 0}function
+a9=a(l[1][8],n),a_=Z(c(x[17],a9,gj),w,a3),ba=a(l[1][8],n),bb=Z(c(x[17],ba,gk),w,a4),bc=a(l[1][8],n),bd=Z(c(x[17],bc,gl),w,a5),be=a(l[1][8],n),bf=Z(c(x[17],be,gm),w,a6),bg=a(l[1][8],n),bh=Z(c(x[17],bg,gn),w,ar),bi=bD(k,v,R,aW,[0,aV,aU,ak,aj,ai],aK),bj=aJ?a(g[9][3],aJ[1]):gp,bl=aI?a(g[9][3],aI[1]):go,bm=e(i[5],0,v,Q),bn=a(gd,[0,bm,e(i[5],0,v,P),bi,aY,a_,bb,bd,bf,bh,bj,bl]);c(bK[6],n,bn);return 0}function
 gA(a){var
 b=z(a[2]),c=V(a[3]),d=V(a[4]),e=z(a[5]),f=z(a[7]),g=z(a[6]),h=z(a[8]),i=z(a[9]),j=V([28,[0,gB,a[10]]]);return[0,b,[0,c,[0,d,[0,e,[0,f,[0,g,[0,h,[0,i,[0,j,[0,V([28,[0,gC,a[11]]]),0]]]]]]]]]]}var
 N=[0,cK,cJ,eW,aY,e0,gz,a0,function(K,J,I,G){function
@@ -480,7 +480,7 @@ f=a?a[1]:0;e(N[3],d,c,f);return b}var
 iT=[1,iS,[4,[5,a(j[16],aE)]],0],iW=[0,iV,[1,iU,[5,a(j[16],v[11])],iT]],i0=[0,[0,0,[0,iZ,[0,iY,[1,iX,[5,a(j[16],v[7])],iW]]],iR,iQ],iP],i1=0,i2=[0,function(a){return aF[4]}];P(bT[10],i3,i2,i1,i0);var
 i4=0;function
 i5(e,d,c,f){var
-b=a(h[17][cj],c);return P(N[5],e,d,b[2],b[1])}var
+b=a(h[17][cc],c);return P(N[5],e,d,b[2],b[1])}var
 i8=[0,i7,[1,[0,[5,a(j[16],v[11])]],i6,0]],i$=[0,i_,[1,[2,[5,a(j[16],v[11])]],i9,i8]],jc=[0,[0,[0,jb,[1,[6,a(j[16],g[2][8]),0],ja,i$]],i5],i4];F(g[10][8],aj,jd,0,0,jc);function
 a2(b){if(0===b[0])return aC(b[1]);var
 e=c(d[32],E[20],b[1]),f=a(d[3],je);return c(d[12],f,e)}var
@@ -504,6 +504,6 @@ f=a?a[1]:0;e(N[6],d,c,f);return b}var
 jN=[1,jM,[4,[5,a(j[16],aG)]],0],jQ=[0,jP,[1,jO,[5,a(j[16],v[11])],jN]],jU=[0,[0,0,[0,jT,[0,jS,[1,jR,[5,a(j[16],v[7])],jQ]]],jL,jK],jJ],jV=0,jW=[0,function(a){return aF[4]}];P(bT[10],jX,jW,jV,jU);var
 jY=0;function
 jZ(e,d,c,f){var
-b=a(h[17][cj],c);return P(N[8],e,d,b[2],b[1])}var
+b=a(h[17][cc],c);return P(N[8],e,d,b[2],b[1])}var
 j2=[0,j1,[1,[0,[5,a(j[16],v[11])]],j0,0]],j5=[0,j4,[1,[2,[5,a(j[16],v[11])]],j3,j2]],j8=[0,[0,[0,j7,[1,[5,a(j[16],g[2][8])],j6,j5]],jZ],jY];F(g[10][8],aj,j9,0,0,j8);var
 bW=[0,aj,aC,a1,aD,bQ,aE,bR,a2,a3,a4,bU,aG,bV];aH(330,bW,"Newring_plugin.G_newring");aH(331,[0,be,N,bW],"Newring_plugin");return}

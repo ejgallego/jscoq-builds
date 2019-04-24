@@ -92,9 +92,7 @@
       "cma_files": []
     },
     {
-      "pkg_id": [
-        "HoTT", "categories", "Functor", "Composition", "Functorial"
-      ],
+      "pkg_id": [ "HoTT", "categories", "Functor", "Composition", "Functorial" ],
       "vo_files": [],
       "cma_files": []
     },
@@ -154,9 +152,7 @@
       "cma_files": []
     },
     {
-      "pkg_id": [
-        "HoTT", "categories", "NaturalTransformation", "Composition"
-      ],
+      "pkg_id": [ "HoTT", "categories", "NaturalTransformation", "Composition" ],
       "vo_files": [],
       "cma_files": []
     },
@@ -196,5 +192,6 @@
     { "pkg_id": [ "HoTT", "Spaces" ], "vo_files": [], "cma_files": [] },
     { "pkg_id": [ "HoTT", "Tactics" ], "vo_files": [], "cma_files": [] },
     { "pkg_id": [ "HoTT", "Types" ], "vo_files": [], "cma_files": [] }
-  ]
+  ],
+  "archive": "hott.coq-pkg"
 }

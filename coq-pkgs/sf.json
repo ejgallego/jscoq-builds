@@ -1,5 +1,0 @@
-{
-  "desc": "sf",
-  "deps": [ "coq-reals" ],
-  "pkgs": [ { "pkg_id": [ "SF" ], "vo_files": [], "cma_files": [] } ]
-}

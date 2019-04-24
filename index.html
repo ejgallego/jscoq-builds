@@ -26,9 +26,9 @@
       any contribution you are extremely welcome! We await your
       feedback at <a href="https://github.com/ejgallego/jscoq">github</a>.
     </p>
+    <h5>Saving your own proof scripts:</h5>
     <p>
-      The current version requires Chrome >= 48 or Firefox >=
-      45. Below, we provide an example of JsCoq, go to <a href="https://x80.org/collacoq/">CollaCoq</a> if
+      Please go to <a href="https://x80.org/collacoq/">CollaCoq</a> if
       you want a page with Save/Load capabilities.
     </h4>
 
@@ -134,10 +134,12 @@ Qed.</textarea>
     var jscoq_ids  = ['addnC', 'prime_above1', 'prime_above2', 'prime_above3', 'prime_above4' ];
     var jscoq_opts = {
         prelude:   false,
+        implicit_libs: false,
         base_path: './',
+        editor: { mode: { 'company-coq': true }, keyMap: 'default' },
         init_pkgs: ['init'],
-        all_pkgs:  ['init', 'math-comp', 'iris', 'elpi', 'equations', 'ltac2', 'stdpp', 
-                    'coq-base', 'coq-collections', 'coq-arith', 'coq-reals', 'sf', 'cpdt']
+        all_pkgs:  ['init', 'math-comp', 'iris', 'elpi', 'equations', 'ltac2', 'stdpp',
+                    'coq-base', 'coq-collections', 'coq-arith', 'coq-reals', 'lf', 'plf', 'cpdt']
     };
 
     /* Global reference */

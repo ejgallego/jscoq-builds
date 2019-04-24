@@ -1,5 +1,5 @@
 function(bE){"use strict";var
-ax="in",K="f",v=250,aw="lc",ar="[",j=246,q="quote",av="]",n="Quote",au="c",aq="plugins/quote/quote.ml",at="using",E=129,as="k",i=bE.jsoo_runtime,ap=i.caml_check_bound,c=i.caml_new_string,u=i.caml_obj_tag,Y=i.caml_register_global,W=i.caml_wrap_exception;function
+ax="in",j=246,K="f",aw="lc",ar="[",q="quote",E=129,av="]",n="Quote",au="c",aq="plugins/quote/quote.ml",at="using",v=250,as="k",i=bE.jsoo_runtime,ap=i.caml_check_bound,c=i.caml_new_string,u=i.caml_obj_tag,Y=i.caml_register_global,W=i.caml_wrap_exception;function
 a(a,b){return a.length==1?a(b):i.caml_call_gen(a,[b])}function
 b(a,b,c){return a.length==2?a(b,c):i.caml_call_gen(a,[b,c])}function
 g(a,b,c,d){return a.length==3?a(b,c,d):i.caml_call_gen(a,[b,c,d])}function
