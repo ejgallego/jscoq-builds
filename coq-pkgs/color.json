@@ -73,7 +73,11 @@
       "cma_files": []
     },
     { "pkg_id": [ "CoLoR", "HORPO" ], "vo_files": [], "cma_files": [] },
-    { "pkg_id": [ "CoLoR", "ProofChecker" ], "vo_files": [], "cma_files": [] },
+    {
+      "pkg_id": [ "CoLoR", "ProofChecker" ],
+      "vo_files": [],
+      "cma_files": []
+    },
     { "pkg_id": [ "CoLoR", "MatrixInt" ], "vo_files": [], "cma_files": [] },
     { "pkg_id": [ "CoLoR", "SemLab" ], "vo_files": [], "cma_files": [] },
     { "pkg_id": [ "CoLoR", "Conversion" ], "vo_files": [], "cma_files": [] },
@@ -89,20 +93,36 @@
       "vo_files": [],
       "cma_files": []
     },
-    { "pkg_id": [ "CoLoR", "Util", "Pair" ], "vo_files": [], "cma_files": [] },
-    { "pkg_id": [ "CoLoR", "Util", "FSet" ], "vo_files": [], "cma_files": [] },
+    {
+      "pkg_id": [ "CoLoR", "Util", "Pair" ],
+      "vo_files": [],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "CoLoR", "Util", "FSet" ],
+      "vo_files": [],
+      "cma_files": []
+    },
     {
       "pkg_id": [ "CoLoR", "Util", "Integer" ],
       "vo_files": [],
       "cma_files": []
     },
-    { "pkg_id": [ "CoLoR", "Util", "FMap" ], "vo_files": [], "cma_files": [] },
+    {
+      "pkg_id": [ "CoLoR", "Util", "FMap" ],
+      "vo_files": [],
+      "cma_files": []
+    },
     {
       "pkg_id": [ "CoLoR", "Util", "Matrix" ],
       "vo_files": [],
       "cma_files": []
     },
-    { "pkg_id": [ "CoLoR", "Util", "Logic" ], "vo_files": [], "cma_files": [] },
+    {
+      "pkg_id": [ "CoLoR", "Util", "Logic" ],
+      "vo_files": [],
+      "cma_files": []
+    },
     {
       "pkg_id": [ "CoLoR", "Util", "Polynom" ],
       "vo_files": [],
@@ -123,13 +143,21 @@
       "vo_files": [],
       "cma_files": []
     },
-    { "pkg_id": [ "CoLoR", "Util", "List" ], "vo_files": [], "cma_files": [] },
+    {
+      "pkg_id": [ "CoLoR", "Util", "List" ],
+      "vo_files": [],
+      "cma_files": []
+    },
     {
       "pkg_id": [ "CoLoR", "Util", "Relation" ],
       "vo_files": [],
       "cma_files": []
     },
-    { "pkg_id": [ "CoLoR", "Util", "Bool" ], "vo_files": [], "cma_files": [] },
+    {
+      "pkg_id": [ "CoLoR", "Util", "Bool" ],
+      "vo_files": [],
+      "cma_files": []
+    },
     { "pkg_id": [ "CoLoR", "Util", "Nat" ], "vo_files": [], "cma_files": [] },
     { "pkg_id": [ "CoLoR", "Util", "Set" ], "vo_files": [], "cma_files": [] },
     {
@@ -141,6 +169,5 @@
     { "pkg_id": [ "CoLoR", "SubtermCrit" ], "vo_files": [], "cma_files": [] },
     { "pkg_id": [ "CoLoR", "MPO" ], "vo_files": [], "cma_files": [] },
     { "pkg_id": [ "CoLoR", "MannaNess" ], "vo_files": [], "cma_files": [] }
-  ],
-  "archive": "color.coq-pkg"
+  ]
 }

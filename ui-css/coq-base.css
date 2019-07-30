@@ -16,7 +16,7 @@ body {
   font-family: Helvetica, Geneva, Swiss, Arial, SunSans-Regular, sans-serif;
   line-height: normal;
   font-size: 11pt;
-  overscroll-behavior: none;
+  overscroll-behavior-y: none;
 }
 
 a, a:link, a:visited, a:active {
@@ -24,46 +24,36 @@ a, a:link, a:visited, a:active {
 }
 
 #ide-wrapper {
-  /*padding-left: 0;*/
   padding-right: 45%;
-  /*transition: all 0.5s ease;*/
+  transition: padding 0.5s ease;
   height: 100vh;
   margin-right: auto;
   margin-left: auto;
-  overscroll-behavior: none;
 }
 
 #ide-wrapper.toggled {
   padding-right: 0px;
 }
 
+#ide-wrapper #document {
+  max-width: 51em;
+}
+
 .on-hold * {
   cursor: progress !important;
 }
 
-#code-wrapper {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  margin-left: 0px;
-  padding-right: 45%;
-  transition: padding-right 0.5s ease;
-  overscroll-behavior: none;
-}
-
-#code-wrapper > div:first-child:last-child {
-  height: 100%;
-  overflow: auto;
-}
-
-#code-wrapper .CodeMirror span[role=presentation] {
+#ide-wrapper .CodeMirror span[role=presentation] {
   line-height: 12px;  /* because some characters are too tall (due to alternative font glyph rendering) */
   font-family: monospace, times, Arial Unicode MS;
 }
 
-#ide-wrapper.toggled #code-wrapper {
-  padding-right: 0;
+#ide-wrapper.coq-crosshair .CodeMirror-lines {
+  cursor: crosshair;
+}
+
+#ide-wrapper .CodeMirror-crosshair {
+  cursor: text; /* overrides CodeMirror (normally set when Alt is held) */
 }
 
 #script-panel {
@@ -79,14 +69,14 @@ a, a:link, a:visited, a:active {
 }
 
 #panel-wrapper {
+  top: 0;
   right: 0;
   padding: 0;
   position: fixed;
   width: 45%;
   height: 100%;
-  transition: all 0.5s ease;
-  z-index: 6;
-  /* border-left: 1px solid #222; */
+  transition: width 0.5s ease;
+  z-index: 20;  /* notice: CodeMirror-dialog is at index 15 */
 }
 
 #ide-wrapper.toggled #panel-wrapper {
@@ -97,14 +87,13 @@ a, a:link, a:visited, a:active {
 .flex-container {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 35px);
+  height: calc(100% - 36px);  /* 36px = height of toolbar */
   overflow: hidden;
 }
 
 .flex-panel {
   display: flex;
   flex-direction: column;
-  border: 1px solid #9f9f9f;
   flex: 1000 1;
   overflow: hidden;
   transition: flex 0.5s ease-in-out;
@@ -112,7 +101,6 @@ a, a:link, a:visited, a:active {
 
 .flex-panel > .caption {
   flex-shrink: 0;
-  background: #c4c4c4;
   font-size: 11px;
   height: 20px;
   padding: 3px 10px 0 10px;
@@ -148,7 +136,7 @@ a, a:link, a:visited, a:active {
   /*transition: opacity 0.5s ease-in-out;*/
   font-family: monospace;
   overflow: auto;
-  overscroll-behavior-y: contain;
+  overscroll-behavior: contain;
 }
 
 .flex-panel.collapsed {
@@ -158,11 +146,7 @@ a, a:link, a:visited, a:active {
 .flex-panel.collapsed > .caption:after {
   transform: none;
 }
-/*
-.flex-panel.collapsed > .content {
-  opacity: 0;
-}
-*/
+
 #goal-panel {
   flex: 2000 1;
   position: relative;
@@ -170,6 +154,41 @@ a, a:link, a:visited, a:active {
 
 #goal-panel.collapsed {
   flex: 1 1000 20px;
+}
+
+#goal-panel p {
+  margin: 0;
+}
+
+#goal-panel p.splash-above {
+  margin-top: 0.2em;
+  margin-left: 0.5em;
+}
+
+#goal-panel div.splash-middle {
+  text-align: center;
+  margin: 1em 0;
+  line-height: 0;
+}
+
+#goal-panel div.splash-middle div.splash-image {
+  display: inline-block;
+  width: 150px;
+  height: 63px;
+  background-size: 300px;
+  background-image: url(../ui-images/jscoq-splash.png);
+}
+
+#goal-panel div.splash-middle div.wait {
+  background-position-x: -150px;
+}
+
+#goal-panel div.splash-middle div.splash-image img {
+  width: 100%;
+}
+
+#goal-panel p.system {
+  margin: 0.75em 0; 
 }
 
 #goal-text {
@@ -199,7 +218,7 @@ a, a:link, a:visited, a:active {
   border-bottom: 1px solid #ddd;
   position: relative;
   overflow: hidden;
-  /*height: 36px;*/
+  height: 36px;
 }
 
 #toolbar .exits {
@@ -221,9 +240,20 @@ a, a:link, a:visited, a:active {
   transition: opacity 120ms linear;
 }
 
-#at-github {
-  height: 24px;
+.link-to-github {
+  word-spacing: -2px; /* aren't we picky */
+}
+
+.link-to-github::after {
+  content: "";
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  background: url(../ui-images/github.png);
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
   vertical-align: middle;
+  margin-left: .3em;
   padding-bottom: 5px;
   box-sizing: content-box;
 }
@@ -234,16 +264,49 @@ a, a:link, a:visited, a:active {
   padding-left: 2em;
   transition: opacity 500ms ease;
   vertical-align: middle;
-}
-
-#buttons.disabled {
-  opacity: 0.15;
-}
-
-#buttons img {
-  margin: 0 2px;
   margin-top: 5px;
+}
+
+#buttons button {
+  background: none;
+  border: none;
+  width: 20px;
+  height: 20px;
+  background-size: 100%;
+  vertical-align: middle;
   cursor: pointer;
+  transition: opacity 1s ease;
+}
+
+#buttons button:disabled {
+  opacity: 0.15;
+  cursor: default;
+}
+
+#buttons button:active {
+  opacity: 0.8;
+}
+
+#buttons button:focus {
+  outline: none;
+  transition: none;
+}
+
+#buttons button[name=up] {
+  background-image: url(../ui-images/up.png);
+}
+#buttons button[name=down] {
+  background-image: url(../ui-images/down.png);
+}
+#buttons button[name=to-cursor] {
+  background-image: url(../ui-images/to-cursor.png);
+  width: 25px;
+  height: 25px;
+}
+#buttons button[name=reset] {
+  background-image: url(../ui-images/reset.png);
+  width: 25px;
+  height: 25px;
 }
 
 /* overloads */
@@ -251,15 +314,23 @@ a, a:link, a:visited, a:active {
   height: 100%;
 }
 
-/* Proper  */
-#code-wrapper {
+.CodeMirror-dialog {
+  padding: .75em;
 }
+
+.CodeMirror-dialog a.dialog-link {
+  cursor: pointer;
+  text-decoration: underline;
+  font-family: sans-serif;
+  font-size: 80%;
+  padding-left: 2em;
+}
+
+/* Proper  */
 
 #document {
   margin: auto;
   position: relative;
-  padding: auto;
-  width: 51em;
   padding: 15px;
 }
 
@@ -337,18 +408,42 @@ div.Pp_box[data-mode="horizontal"] {
   display: block;
 }
 
-#goal-text p.num-goals {
+#goal-text p.num-goals,
+#goal-text p.no-goals {
   margin-top: .2em;
   margin-bottom: 1em;
+  white-space: normal;
 }
 
 #goal-text .coq-env {
   padding-left: 1.25em;
 }
 
+#goal-text p.aside {
+  white-space: normal;
+  color: #777;
+}
+
+#goal-text p.num-goals + p.aside {
+  margin-top: -1em;
+  margin-bottom: 1em;
+}
+
 .coq-hypothesis > label::after {
+  content: ",";
+  margin-right: 0.25em;
+}
+
+.coq-hypothesis > label:last-of-type::after,
+.coq-hypothesis > span.def::after {
   content: ":";
   margin: 0 .5em;
+}
+
+.coq-hypothesis.coq-has-def > label:last-of-type::after {
+  content: ":=";
+  margin: 0 .5em;
+  color: #777;
 }
 
 .coq-env hr {
@@ -380,12 +475,13 @@ div.Pp_box[data-mode="horizontal"] {
 
 #goal-panel div.contextual-info {
   position: absolute;
-  bottom: 2px;
-  left: 3px;
+  bottom: 0;
+  left: 0;
   background: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid rgba(0,0,0,0.25);
   font-family: monospace;
   font-size: 9pt;
-  border-top: 1px solid rgba(0,0,0,0.25);
+  padding: 0 0.75em 2px 3px;
   white-space: pre-wrap;
   max-height: 60%;
   overflow-y: auto;
@@ -421,4 +517,21 @@ div.hint-package {
   width: 0;
   overflow: hidden;
   font-size: 1pt;
+}
+
+/* Printing options */
+
+@media print {
+  #hide-panel { display: none; }
+  a.link-to-github { display: none; }
+
+  .flex-panel:not(.collapsed) .caption {
+    border-bottom: 1px dashed #ccc;
+  }
+
+  #panel-wrapper {
+    position: absolute;  /* prevents panel reoccurring on every page */
+    height: calc(100% - 2px);  /* otherwise border does not show... */
+    border-bottom: 1px solid #aaa;
+  }
 }

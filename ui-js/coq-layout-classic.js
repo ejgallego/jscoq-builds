@@ -9,6 +9,12 @@
 /***********************************************************************/
 /* The CoqLayout class contains the goal, query, and packages buffer   */
 /***********************************************************************/
+
+/**
+ * Classical layout: a right panel containing a toolbar with buttons at the 
+ * top, and a main area divided vertically into three collapsible panes.
+ * Also shows a power button that hides or shows the panel.
+ */
 class CoqLayoutClassic {
 
     html(base_path) {
@@ -30,7 +36,7 @@ class CoqLayoutClassic {
         <i>js+</i><!--
         --><a href="https://coq.inria.fr"><!--
           --><img src="https://coq.inria.fr/files/barron_logo.png" alt="Coq" height="35" style="vertical-align: middle">
-        <a>
+        </a>
         <!-- 
         <a href="http://feever.fr/" target="_blank">
           <img src="${base_path}/ui-images/feever-logo.png" alt="FEEVER Logo" height="34" width="67"
@@ -38,17 +44,14 @@ class CoqLayoutClassic {
         </a>
         -->
       </div> <!-- /.exits -->
-      <span id="buttons" class="disabled">
-        <img src="${base_path}/ui-images/up.png" width="21" height="24"
-             alt="Up (Meta-P)" title="Up (Meta-P)" name="up"/>
-        <img src="${base_path}/ui-images/down.png" width="21" height="25"
-             alt="Down (Meta-N)" title="Down (Meta-N)" name="down"/>
-        <img src="${base_path}/ui-images/to-cursor.png" width="38" height="24"
-             alt="To cursor (Meta-Enter)" title="To cursor (Meta-Enter)" name="to-cursor"/>
+      <span id="buttons">
+        <button name="up"          alt="Up (Meta-P)"             title="Up (Meta-P)"></button><!--
+     --><button name="down"        alt="Down (Meta-N)"           title="Down (Meta-N)"></button>
+        <button name="to-cursor"   alt="To cursor (Meta-Enter)"  title="To cursor (Meta-Enter)"></button>
+        <button name="reset"       alt="Reset worker"            title="Reset worker"></button>
       </span>
       <div class="exits right">
-        <a href="https://github.com/ejgallego/jscoq">Readme @ 
-        <img src="https://github.com/favicon.ico" id="at-github"></a>
+        <a href="https://github.com/ejgallego/jscoq" class="link-to-github">Readme @</a>
       </div> <!-- /.exits -->
     </div> <!-- /#toolbar -->
     <div class="flex-container">
@@ -79,8 +82,16 @@ class CoqLayoutClassic {
         return html;
     }
 
-    // We first initialize the providers.
+    /**
+     * Initializes the UI layout.
+     * @param {object} options jsCoq options; used keys are:
+     *   - wrapper_id: element id of the IDE container
+     *   - base_path: URL for the root directory of jsCoq
+     *   - theme: jsCoq theme to use for the panel ('light' or 'dark')
+     */
     constructor(options) {
+
+        this.options = options;
 
         // Our reference to the IDE, goal display & query buffer.
         this.ide   = document.getElementById(options.wrapper_id);
@@ -88,6 +99,9 @@ class CoqLayoutClassic {
         this.panel = document.createElement('div');
         this.panel.id = 'panel-wrapper';
         this.panel.innerHTML = this.html(options.base_path);
+
+        if (options.theme)
+            this.panel.classList.add(`jscoq-theme-${options.theme}`);
 
         this.ide.appendChild(this.panel);
 
@@ -103,13 +117,18 @@ class CoqLayoutClassic {
         this.panel.querySelector('#hide-panel')
             .addEventListener('click', evt => this.toggle() );
 
+        this._setButtons(false); // starts disabled
+
         this.onAction = evt => {};
+        this.buttons.addEventListener('click', evt => this.onAction(evt));
 
         // Configure log
         this.log_levels = ['Error', 'Warning', 'Notice', 'Info', 'Debug']
         $(this.panel).find('select[name=msg_filter]')
             .change(ev => this.filterLog(parseInt(ev.target.value)));
         this.filterLog(3); // Info
+
+        this._preloadImages();
     }
 
     show() {
@@ -133,18 +152,56 @@ class CoqLayoutClassic {
         }
     }
 
+    splash(version_info, msg, mode='wait') {
+        var above = $(this.proof).find('.splash-above'), 
+            image = $(this.proof).find('.splash-image'), 
+            below = $(this.proof).find('.splash-below');
+
+        var overlay = `${this.options.base_path}/ui-images/${mode}.gif`;
+
+        if (!(above.length && image.length && below.length)) {
+            $(this.proof).empty().append(
+                above = $('<p>').addClass('splash-above'),
+                $('<div>').addClass('splash-middle').append(
+                    image = $('<div>').append($('<img>'))
+                ),
+                below = $('<p>').addClass('splash-below')
+            )
+        }
+
+        if (version_info) above.text(version_info);
+        if (msg)          below.text(msg);
+        
+        image[0].classList = [];
+        image.addClass(['splash-image', mode]);
+        var img = image.find('img');
+        if (img.attr('src') !== overlay) img.attr('src', overlay);
+    }
+
+    /**
+     * Shows a notice in the main goal pane (reserved for important messages,
+     * such as during startup).
+     * @param {string} msg message text
+     */
+    systemNotification(msg) {
+        $(this.proof).append($('<p>').addClass('system').text(msg));
+    }
+
+    _setButtons(enabled) {
+        $(this.buttons).find('button').attr('disabled', !enabled);
+        enabled ? this.buttons.classList.remove('disabled') 
+                : this.buttons.classList.add('disabled');
+    }
+
     toolbarOn() {
         // Enable the button actions and show them.
-        this.btnEventHandler = (evt) => this.onAction(evt);
-        this.buttons.addEventListener('click', this.btnEventHandler);
-        this.buttons.classList.remove('disabled');
+        this._setButtons(true);
         this.ide.classList.remove('on-hold');
     }
 
     toolbarOff() {
         // Disable the button actions and dim them.
-        this.buttons.removeEventListener('click', this.btnEventHandler);
-        this.buttons.classList.add('disabled');
+        this._setButtons(false);
         this.ide.classList.add('on-hold');
     }
 
@@ -232,11 +289,6 @@ class CoqLayoutClassic {
         return level <= this.log_level;
     }
 
-    // Execute a query to Coq
-    query(query) {
-        return true;
-    }
-
     panelClickHandler(evt) {
 
         var target = evt.target;
@@ -261,6 +313,18 @@ class CoqLayoutClassic {
 
                 panel.classList.add('collapsed');
             }
+        }
+    }
+
+    /**
+     * Auxiliary function to improve UX by preloading images.
+     */
+    _preloadImages() {
+        var imgs_dir = `${this.options.base_path}/ui-images`,
+            img_fns = ['jscoq-splash.png', 'egg.png'];
+
+        for (let fn of img_fns) {
+            new Image().src = `${imgs_dir}/${fn}`;
         }
     }
 }

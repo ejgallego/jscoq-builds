@@ -4,836 +4,210 @@
   "pkgs": [
     {
       "pkg_id": [ "Coq", "Numbers", "Natural", "Peano" ],
-      "vo_files": [ [ "NPeano.vo", "d41d8cd98f00b204e9800998ecf8427e" ] ],
+      "vo_files": [ [ "NPeano.vo", null ] ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Numbers", "Integer", "Abstract" ],
       "vo_files": [
-        [ "ZBits.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ZMaxMin.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ZMul.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ZLcm.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ZPow.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ZLt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ZMulOrder.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ZProperties.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ZDivTrunc.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ZParity.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ZSgnAbs.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ZDivFloor.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ZDivEucl.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ZGcd.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ZAxioms.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ZAddOrder.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ZBase.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ZAdd.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "ZBits.vo", null ],
+        [ "ZMaxMin.vo", null ],
+        [ "ZMul.vo", null ],
+        [ "ZLcm.vo", null ],
+        [ "ZPow.vo", null ],
+        [ "ZLt.vo", null ],
+        [ "ZMulOrder.vo", null ],
+        [ "ZProperties.vo", null ],
+        [ "ZDivTrunc.vo", null ],
+        [ "ZParity.vo", null ],
+        [ "ZSgnAbs.vo", null ],
+        [ "ZDivFloor.vo", null ],
+        [ "ZDivEucl.vo", null ],
+        [ "ZGcd.vo", null ],
+        [ "ZAxioms.vo", null ],
+        [ "ZAddOrder.vo", null ],
+        [ "ZBase.vo", null ],
+        [ "ZAdd.vo", null ]
       ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "Coq", "Numbers", "Cyclic", "Abstract" ],
+      "vo_files": [
+        [ "DoubleType.vo", null ],
+        [ "CyclicAxioms.vo", null ],
+        [ "NZCyclic.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "Coq", "Numbers", "Cyclic", "Int31" ],
+      "vo_files": [
+        [ "Int31.vo", null ],
+        [ "Ring31.vo", null ],
+        [ "Cyclic31.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "Coq", "Numbers", "Cyclic", "Int63" ],
+      "vo_files": [
+        [ "Int63.vo", null ],
+        [ "Cyclic63.vo", null ],
+        [ "Ring63.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "Coq", "Numbers", "Cyclic", "ZModulo" ],
+      "vo_files": [ [ "ZModulo.vo", null ] ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "setoid_ring" ],
       "vo_files": [
-        [ "ArithRing.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Rings_Z.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ZArithRing.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Field_theory.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "NArithRing.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Integral_domain.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Ncring_polynom.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Ring_polynom.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Ncring_initial.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Rings_R.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "BinList.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Rings_Q.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Ncring_tac.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Ring.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Algebra_syntax.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Field.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Field_tac.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Cring.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "RealField.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Ring_base.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Ring_theory.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Ncring.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Ring_tac.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "InitialRing.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "ArithRing.vo", null ],
+        [ "Rings_Z.vo", null ],
+        [ "ZArithRing.vo", null ],
+        [ "Field_theory.vo", null ],
+        [ "NArithRing.vo", null ],
+        [ "Integral_domain.vo", null ],
+        [ "Ncring_polynom.vo", null ],
+        [ "Ring_polynom.vo", null ],
+        [ "Ncring_initial.vo", null ],
+        [ "Rings_R.vo", null ],
+        [ "BinList.vo", null ],
+        [ "Rings_Q.vo", null ],
+        [ "Ncring_tac.vo", null ],
+        [ "Ring.vo", null ],
+        [ "Algebra_syntax.vo", null ],
+        [ "Field.vo", null ],
+        [ "Field_tac.vo", null ],
+        [ "Cring.vo", null ],
+        [ "RealField.vo", null ],
+        [ "Ring_base.vo", null ],
+        [ "Ring_theory.vo", null ],
+        [ "Ncring.vo", null ],
+        [ "Ring_tac.vo", null ],
+        [ "InitialRing.vo", null ]
       ],
-      "cma_files": [ [ "newring_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ] ]
+      "cma_files": [ [ "newring_plugin.cma", null ] ]
     },
     {
       "pkg_id": [ "Coq", "Arith" ],
       "vo_files": [
-        [ "Arith_base.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Peano_dec.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Euclid.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Max.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Compare.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Bool_nat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Factorial.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Arith.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Even.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Div2.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "EqNat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Min.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Between.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Mult.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "Arith_base.vo", null ],
+        [ "Peano_dec.vo", null ],
+        [ "Euclid.vo", null ],
+        [ "Max.vo", null ],
+        [ "Compare.vo", null ],
+        [ "Bool_nat.vo", null ],
+        [ "Factorial.vo", null ],
+        [ "Arith.vo", null ],
+        [ "Even.vo", null ],
+        [ "Div2.vo", null ],
+        [ "EqNat.vo", null ],
+        [ "Min.vo", null ],
+        [ "Between.vo", null ],
+        [ "Mult.vo", null ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "NArith" ],
       "vo_files": [
-        [ "BinNatDef.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Ndigits.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Ngcd_def.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "NArith.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "BinNat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Ndist.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Nsqrt_def.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Nnat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Ndec.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Ndiv_def.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "BinNatDef.vo", null ],
+        [ "Ndigits.vo", null ],
+        [ "Ngcd_def.vo", null ],
+        [ "NArith.vo", null ],
+        [ "BinNat.vo", null ],
+        [ "Ndist.vo", null ],
+        [ "Nsqrt_def.vo", null ],
+        [ "Nnat.vo", null ],
+        [ "Ndec.vo", null ],
+        [ "Ndiv_def.vo", null ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "PArith" ],
       "vo_files": [
-        [ "BinPos.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "BinPosDef.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "POrderedType.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "PArith.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Pnat.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "BinPos.vo", null ],
+        [ "BinPosDef.vo", null ],
+        [ "POrderedType.vo", null ],
+        [ "PArith.vo", null ],
+        [ "Pnat.vo", null ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "ZArith" ],
       "vo_files": [
-        [ "Zpow_facts.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ZArith_base.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Zgcd_alt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Zpower.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ZArith_dec.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Zquot.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Wf_Z.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Zorder.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Zdigits.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Zcompare.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "BinIntDef.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Zeven.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Zdiv.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Zeuclid.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ZArith.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Zlogarithm.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Znumtheory.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Zpow_alt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Zpow_def.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Zhints.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Zsqrt_compat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Zwf.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Zminmax.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Zmin.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "auxiliary.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Znat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "BinInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Zcomplements.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Int.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Zmisc.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Zmax.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Zabs.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Zbool.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "Zpow_facts.vo", null ],
+        [ "ZArith_base.vo", null ],
+        [ "Zgcd_alt.vo", null ],
+        [ "Zpower.vo", null ],
+        [ "ZArith_dec.vo", null ],
+        [ "Zquot.vo", null ],
+        [ "Wf_Z.vo", null ],
+        [ "Zorder.vo", null ],
+        [ "Zdigits.vo", null ],
+        [ "Zcompare.vo", null ],
+        [ "BinIntDef.vo", null ],
+        [ "Zeven.vo", null ],
+        [ "Zdiv.vo", null ],
+        [ "Zeuclid.vo", null ],
+        [ "ZArith.vo", null ],
+        [ "Zlogarithm.vo", null ],
+        [ "Znumtheory.vo", null ],
+        [ "Zpow_alt.vo", null ],
+        [ "Zpow_def.vo", null ],
+        [ "Zhints.vo", null ],
+        [ "Zsqrt_compat.vo", null ],
+        [ "Zwf.vo", null ],
+        [ "Zminmax.vo", null ],
+        [ "Zmin.vo", null ],
+        [ "auxiliary.vo", null ],
+        [ "Znat.vo", null ],
+        [ "BinInt.vo", null ],
+        [ "Zcomplements.vo", null ],
+        [ "Int.vo", null ],
+        [ "Zmisc.vo", null ],
+        [ "Zmax.vo", null ],
+        [ "Zabs.vo", null ],
+        [ "Zbool.vo", null ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "QArith" ],
       "vo_files": [
-        [ "Qreduction.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Qabs.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Qcanon.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "QArith.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Qfield.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "QArith_base.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Qring.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Qminmax.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "QOrderedType.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Qpower.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Qcabs.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Qreals.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Qround.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "Qreduction.vo", null ],
+        [ "Qabs.vo", null ],
+        [ "Qcanon.vo", null ],
+        [ "QArith.vo", null ],
+        [ "Qfield.vo", null ],
+        [ "QArith_base.vo", null ],
+        [ "Qring.vo", null ],
+        [ "Qminmax.vo", null ],
+        [ "QOrderedType.vo", null ],
+        [ "Qpower.vo", null ],
+        [ "Qcabs.vo", null ],
+        [ "Qreals.vo", null ],
+        [ "Qround.vo", null ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "omega" ],
       "vo_files": [
-        [ "OmegaLemmas.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Omega.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "OmegaPlugin.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "PreOmega.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "OmegaTactic.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "OmegaLemmas.vo", null ],
+        [ "Omega.vo", null ],
+        [ "OmegaPlugin.vo", null ],
+        [ "PreOmega.vo", null ],
+        [ "OmegaTactic.vo", null ]
       ],
-      "cma_files": [ [ "omega_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ] ]
+      "cma_files": [ [ "omega_plugin.cma", null ] ]
     }
-  ],
-  "archive": "coq-arith.coq-pkg",
-  "modDeps": {
-    "Coq.Numbers.Natural.Peano.NPeano": [
-      "Coq.Arith.PeanoNat",
-      "Coq.Arith.Even",
-      "Coq.Numbers.Natural.Abstract.NAxioms"
-    ],
-    "Coq.Numbers.Integer.Abstract.ZBits": [
-      "Coq.Bool.Bool",
-      "Coq.Numbers.Integer.Abstract.ZAxioms",
-      "Coq.Numbers.Integer.Abstract.ZMulOrder",
-      "Coq.Numbers.Integer.Abstract.ZPow",
-      "Coq.Numbers.Integer.Abstract.ZDivFloor",
-      "Coq.Numbers.Integer.Abstract.ZSgnAbs",
-      "Coq.Numbers.Integer.Abstract.ZParity",
-      "Coq.Numbers.NatInt.NZLog"
-    ],
-    "Coq.Numbers.Integer.Abstract.ZMaxMin": [
-      "Coq.Numbers.Integer.Abstract.ZAxioms",
-      "Coq.Numbers.Integer.Abstract.ZMulOrder",
-      "Coq.Structures.GenericMinMax"
-    ],
-    "Coq.Numbers.Integer.Abstract.ZMul": [ "Coq.Numbers.Integer.Abstract.ZAdd" ],
-    "Coq.Numbers.Integer.Abstract.ZLcm": [
-      "Coq.Numbers.Integer.Abstract.ZAxioms",
-      "Coq.Numbers.Integer.Abstract.ZMulOrder",
-      "Coq.Numbers.Integer.Abstract.ZSgnAbs",
-      "Coq.Numbers.Integer.Abstract.ZGcd",
-      "Coq.Numbers.Integer.Abstract.ZDivTrunc",
-      "Coq.Numbers.Integer.Abstract.ZDivFloor"
-    ],
-    "Coq.Numbers.Integer.Abstract.ZPow": [
-      "Coq.Bool.Bool",
-      "Coq.Numbers.Integer.Abstract.ZAxioms",
-      "Coq.Numbers.Integer.Abstract.ZMulOrder",
-      "Coq.Numbers.Integer.Abstract.ZParity",
-      "Coq.Numbers.Integer.Abstract.ZSgnAbs",
-      "Coq.Numbers.NatInt.NZPow"
-    ],
-    "Coq.Numbers.Integer.Abstract.ZLt": [ "Coq.Numbers.Integer.Abstract.ZMul" ],
-    "Coq.Numbers.Integer.Abstract.ZMulOrder": [ "Coq.Numbers.Integer.Abstract.ZAddOrder" ],
-    "Coq.Numbers.Integer.Abstract.ZProperties": [
-      "Coq.Numbers.Integer.Abstract.ZAxioms",
-      "Coq.Numbers.Integer.Abstract.ZMaxMin",
-      "Coq.Numbers.Integer.Abstract.ZSgnAbs",
-      "Coq.Numbers.Integer.Abstract.ZParity",
-      "Coq.Numbers.Integer.Abstract.ZPow",
-      "Coq.Numbers.Integer.Abstract.ZDivTrunc",
-      "Coq.Numbers.Integer.Abstract.ZDivFloor",
-      "Coq.Numbers.Integer.Abstract.ZGcd",
-      "Coq.Numbers.Integer.Abstract.ZLcm",
-      "Coq.Numbers.NatInt.NZLog",
-      "Coq.Numbers.NatInt.NZSqrt",
-      "Coq.Numbers.Integer.Abstract.ZBits"
-    ],
-    "Coq.Numbers.Integer.Abstract.ZDivTrunc": [
-      "Coq.Numbers.Integer.Abstract.ZAxioms",
-      "Coq.Numbers.Integer.Abstract.ZMulOrder",
-      "Coq.Numbers.Integer.Abstract.ZSgnAbs",
-      "Coq.Numbers.NatInt.NZDiv"
-    ],
-    "Coq.Numbers.Integer.Abstract.ZParity": [
-      "Coq.Bool.Bool",
-      "Coq.Numbers.Integer.Abstract.ZMulOrder",
-      "Coq.Numbers.NatInt.NZParity"
-    ],
-    "Coq.Numbers.Integer.Abstract.ZSgnAbs": [ "Coq.Numbers.Integer.Abstract.ZMulOrder" ],
-    "Coq.Numbers.Integer.Abstract.ZDivFloor": [
-      "Coq.Numbers.Integer.Abstract.ZAxioms",
-      "Coq.Numbers.Integer.Abstract.ZMulOrder",
-      "Coq.Numbers.Integer.Abstract.ZSgnAbs",
-      "Coq.Numbers.NatInt.NZDiv"
-    ],
-    "Coq.Numbers.Integer.Abstract.ZDivEucl": [
-      "Coq.Numbers.Integer.Abstract.ZAxioms",
-      "Coq.Numbers.Integer.Abstract.ZMulOrder",
-      "Coq.Numbers.Integer.Abstract.ZSgnAbs",
-      "Coq.Numbers.NatInt.NZDiv"
-    ],
-    "Coq.Numbers.Integer.Abstract.ZGcd": [
-      "Coq.Numbers.Integer.Abstract.ZAxioms",
-      "Coq.Numbers.Integer.Abstract.ZMulOrder",
-      "Coq.Numbers.Integer.Abstract.ZSgnAbs",
-      "Coq.Numbers.NatInt.NZGcd"
-    ],
-    "Coq.Numbers.Integer.Abstract.ZAxioms": [
-      "Coq.Numbers.NatInt.NZAxioms",
-      "Coq.Bool.Bool",
-      "Coq.Numbers.NatInt.NZParity",
-      "Coq.Numbers.NatInt.NZPow",
-      "Coq.Numbers.NatInt.NZSqrt",
-      "Coq.Numbers.NatInt.NZLog",
-      "Coq.Numbers.NatInt.NZGcd",
-      "Coq.Numbers.NatInt.NZDiv",
-      "Coq.Numbers.NatInt.NZBits"
-    ],
-    "Coq.Numbers.Integer.Abstract.ZAddOrder": [ "Coq.Numbers.Integer.Abstract.ZLt" ],
-    "Coq.Numbers.Integer.Abstract.ZBase": [
-      "Coq.Logic.Decidable",
-      "Coq.Numbers.Integer.Abstract.ZAxioms",
-      "Coq.Numbers.NatInt.NZProperties"
-    ],
-    "Coq.Numbers.Integer.Abstract.ZAdd": [ "Coq.Numbers.Integer.Abstract.ZBase" ],
-    "Coq.setoid_ring.ArithRing": [
-      "Coq.Arith.Mult",
-      "Coq.NArith.BinNat",
-      "Coq.NArith.Nnat",
-      "Coq.setoid_ring.Ring"
-    ],
-    "Coq.setoid_ring.Rings_Z": [
-      "Coq.setoid_ring.Cring",
-      "Coq.setoid_ring.Integral_domain",
-      "Coq.setoid_ring.Ncring_initial",
-      "Coq.omega.Omega"
-    ],
-    "Coq.setoid_ring.ZArithRing": [ "Coq.setoid_ring.Ring", "Coq.ZArith.ZArith_base", "Coq.ZArith.Zpow_def" ],
-    "Coq.setoid_ring.Field_theory": [ "Coq.setoid_ring.Ring", "Coq.ZArith.ZArith_base" ],
-    "Coq.setoid_ring.NArithRing": [ "Coq.setoid_ring.Ring", "Coq.PArith.BinPos", "Coq.NArith.BinNat" ],
-    "Coq.setoid_ring.Integral_domain": [ "Coq.setoid_ring.Cring" ],
-    "Coq.setoid_ring.Ncring_polynom": [
-      "Coq.Setoids.Setoid",
-      "Coq.setoid_ring.BinList",
-      "Coq.PArith.BinPos",
-      "Coq.NArith.BinNat",
-      "Coq.ZArith.BinInt",
-      "Coq.setoid_ring.Ring_polynom",
-      "Coq.setoid_ring.Ncring"
-    ],
-    "Coq.setoid_ring.Ring_polynom": [
-      "Coq.Setoids.Setoid",
-      "Coq.Classes.Morphisms",
-      "Coq.setoid_ring.BinList",
-      "Coq.PArith.BinPos",
-      "Coq.NArith.BinNat",
-      "Coq.ZArith.BinInt",
-      "Coq.setoid_ring.Ring_theory"
-    ],
-    "Coq.setoid_ring.Ncring_initial": [
-      "Coq.ZArith.ZArith_base",
-      "Coq.ZArith.Zpow_def",
-      "Coq.ZArith.BinInt",
-      "Coq.NArith.BinNat",
-      "Coq.Setoids.Setoid",
-      "Coq.setoid_ring.BinList",
-      "Coq.PArith.BinPos",
-      "Coq.setoid_ring.Ncring",
-      "Coq.setoid_ring.Ncring_polynom"
-    ],
-    "Coq.setoid_ring.Rings_R": [
-      "Coq.setoid_ring.Cring",
-      "Coq.setoid_ring.Integral_domain",
-      "Coq.Reals.Reals",
-      "Coq.setoid_ring.RealField"
-    ],
-    "Coq.setoid_ring.BinList": [ "Coq.PArith.BinPos", "Coq.Lists.List" ],
-    "Coq.setoid_ring.Rings_Q": [
-      "Coq.setoid_ring.Cring",
-      "Coq.setoid_ring.Integral_domain",
-      "Coq.QArith.QArith"
-    ],
-    "Coq.setoid_ring.Ncring_tac": [
-      "Coq.Lists.List",
-      "Coq.Setoids.Setoid",
-      "Coq.PArith.BinPos",
-      "Coq.setoid_ring.BinList",
-      "Coq.ZArith.Znumtheory",
-      "Coq.Classes.Morphisms",
-      "Coq.Bool.Bool",
-      "Coq.ZArith.ZArith",
-      "Coq.setoid_ring.Algebra_syntax",
-      "Coq.setoid_ring.Ncring",
-      "Coq.setoid_ring.Ncring_polynom",
-      "Coq.setoid_ring.Ncring_initial"
-    ],
-    "Coq.setoid_ring.Ring": [
-      "Coq.Bool.Bool",
-      "Coq.setoid_ring.Ring_theory",
-      "Coq.setoid_ring.Ring_base",
-      "Coq.setoid_ring.InitialRing",
-      "Coq.setoid_ring.Ring_tac"
-    ],
-    "Coq.setoid_ring.Field": [ "Coq.setoid_ring.Field_theory", "Coq.setoid_ring.Field_tac" ],
-    "Coq.setoid_ring.Field_tac": [
-      "Coq.setoid_ring.Ring_tac",
-      "Coq.setoid_ring.BinList",
-      "Coq.setoid_ring.Ring_polynom",
-      "Coq.setoid_ring.InitialRing",
-      "Coq.setoid_ring.Field_theory"
-    ],
-    "Coq.setoid_ring.Cring": [
-      "Coq.Lists.List",
-      "Coq.Setoids.Setoid",
-      "Coq.PArith.BinPos",
-      "Coq.setoid_ring.BinList",
-      "Coq.ZArith.Znumtheory",
-      "Coq.Classes.Morphisms",
-      "Coq.Bool.Bool",
-      "Coq.ZArith.ZArith_base",
-      "Coq.setoid_ring.Algebra_syntax",
-      "Coq.setoid_ring.Ncring",
-      "Coq.setoid_ring.Ncring_initial",
-      "Coq.setoid_ring.Ncring_tac"
-    ],
-    "Coq.setoid_ring.RealField": [
-      "Coq.NArith.Nnat",
-      "Coq.setoid_ring.ArithRing",
-      "Coq.setoid_ring.Ring",
-      "Coq.setoid_ring.Field",
-      "Coq.Reals.Rdefinitions",
-      "Coq.Reals.Rpow_def",
-      "Coq.Reals.Raxioms"
-    ],
-    "Coq.setoid_ring.Ring_base": [
-      "Coq.quote.Quote",
-      "Coq.setoid_ring.Ring_theory",
-      "Coq.setoid_ring.Ring_tac",
-      "Coq.setoid_ring.InitialRing"
-    ],
-    "Coq.setoid_ring.Ring_theory": [
-      "Coq.Setoids.Setoid",
-      "Coq.Classes.Morphisms",
-      "Coq.PArith.BinPos",
-      "Coq.NArith.BinNat"
-    ],
-    "Coq.setoid_ring.Ncring": [
-      "Coq.Setoids.Setoid",
-      "Coq.PArith.BinPos",
-      "Coq.NArith.BinNat",
-      "Coq.Classes.Morphisms",
-      "Coq.Bool.Bool",
-      "Coq.ZArith.ZArith_base",
-      "Coq.setoid_ring.Algebra_syntax"
-    ],
-    "Coq.setoid_ring.Ring_tac": [
-      "Coq.Setoids.Setoid",
-      "Coq.PArith.BinPos",
-      "Coq.setoid_ring.Ring_polynom",
-      "Coq.setoid_ring.BinList",
-      "Coq.Lists.ListTactics",
-      "Coq.setoid_ring.InitialRing",
-      "Coq.quote.Quote"
-    ],
-    "Coq.setoid_ring.InitialRing": [
-      "Coq.ZArith.Zbool",
-      "Coq.ZArith.BinInt",
-      "Coq.NArith.BinNat",
-      "Coq.Setoids.Setoid",
-      "Coq.setoid_ring.Ring_theory",
-      "Coq.setoid_ring.Ring_polynom"
-    ],
-    "Coq.Arith.Arith_base": [
-      "Coq.Arith.PeanoNat",
-      "Coq.Arith.Le",
-      "Coq.Arith.Lt",
-      "Coq.Arith.Plus",
-      "Coq.Arith.Gt",
-      "Coq.Arith.Minus",
-      "Coq.Arith.Mult",
-      "Coq.Arith.Between",
-      "Coq.Arith.Peano_dec",
-      "Coq.Arith.Compare_dec",
-      "Coq.Arith.Factorial",
-      "Coq.Arith.EqNat",
-      "Coq.Arith.Wf_nat"
-    ],
-    "Coq.Arith.Peano_dec": [
-      "Coq.Logic.Decidable",
-      "Coq.Arith.PeanoNat",
-      "Coq.Logic.Eqdep_dec",
-      "Coq.Arith.Le",
-      "Coq.Arith.Lt"
-    ],
-    "Coq.Arith.Euclid": [ "Coq.Arith.Mult", "Coq.Arith.Compare_dec", "Coq.Arith.Wf_nat" ],
-    "Coq.Arith.Max": [ "Coq.Arith.PeanoNat" ],
-    "Coq.Arith.Compare": [
-      "Coq.Arith.Arith_base",
-      "Coq.Arith.Peano_dec",
-      "Coq.Arith.Compare_dec",
-      "Coq.Arith.Wf_nat",
-      "Coq.Arith.Min",
-      "Coq.Arith.Max"
-    ],
-    "Coq.Arith.Bool_nat": [ "Coq.Arith.Compare_dec", "Coq.Arith.Peano_dec", "Coq.Bool.Sumbool" ],
-    "Coq.Arith.Factorial": [ "Coq.Arith.PeanoNat", "Coq.Arith.Plus", "Coq.Arith.Mult", "Coq.Arith.Lt" ],
-    "Coq.Arith.Arith": [ "Coq.Arith.Arith_base", "Coq.setoid_ring.ArithRing" ],
-    "Coq.Arith.Even": [ "Coq.Arith.PeanoNat" ],
-    "Coq.Arith.Div2": [ "Coq.Arith.PeanoNat", "Coq.Arith.Even" ],
-    "Coq.Arith.EqNat": [ "Coq.Arith.PeanoNat" ],
-    "Coq.Arith.Min": [ "Coq.Arith.PeanoNat" ],
-    "Coq.Arith.Between": [ "Coq.Arith.Le", "Coq.Arith.Lt" ],
-    "Coq.Arith.Mult": [
-      "Coq.Arith.PeanoNat",
-      "Coq.Arith.Plus",
-      "Coq.Arith.Minus",
-      "Coq.Arith.Le",
-      "Coq.Arith.Lt"
-    ],
-    "Coq.NArith.BinNatDef": [ "Coq.Numbers.BinNums", "Coq.PArith.BinPos" ],
-    "Coq.NArith.Ndigits": [
-      "Coq.Bool.Bool",
-      "Coq.Classes.Morphisms",
-      "Coq.Setoids.Setoid",
-      "Coq.Bool.Bvector",
-      "Coq.PArith.BinPos",
-      "Coq.NArith.BinNat",
-      "Coq.Arith.PeanoNat",
-      "Coq.PArith.Pnat",
-      "Coq.NArith.Nnat"
-    ],
-    "Coq.NArith.Ngcd_def": [ "Coq.PArith.BinPos", "Coq.NArith.BinNat" ],
-    "Coq.NArith.NArith": [
-      "Coq.Numbers.BinNums",
-      "Coq.PArith.BinPos",
-      "Coq.NArith.BinNat",
-      "Coq.NArith.Nnat",
-      "Coq.NArith.Ndiv_def",
-      "Coq.NArith.Nsqrt_def",
-      "Coq.NArith.Ngcd_def",
-      "Coq.NArith.Ndigits",
-      "Coq.setoid_ring.NArithRing"
-    ],
-    "Coq.NArith.BinNat": [
-      "Coq.Numbers.BinNums",
-      "Coq.PArith.BinPos",
-      "Coq.Classes.RelationClasses",
-      "Coq.Classes.Morphisms",
-      "Coq.Setoids.Setoid",
-      "Coq.Structures.Equalities",
-      "Coq.Structures.OrdersFacts",
-      "Coq.Structures.GenericMinMax",
-      "Coq.Bool.Bool",
-      "Coq.Numbers.Natural.Abstract.NAxioms",
-      "Coq.Numbers.Natural.Abstract.NMaxMin",
-      "Coq.Numbers.Natural.Abstract.NProperties",
-      "Coq.NArith.BinNatDef"
-    ],
-    "Coq.NArith.Ndist": [
-      "Coq.Arith.Arith",
-      "Coq.Arith.Min",
-      "Coq.PArith.BinPos",
-      "Coq.NArith.BinNat",
-      "Coq.NArith.Ndigits"
-    ],
-    "Coq.NArith.Nsqrt_def": [ "Coq.NArith.BinNat" ],
-    "Coq.NArith.Nnat": [
-      "Coq.PArith.BinPos",
-      "Coq.NArith.BinNat",
-      "Coq.Arith.PeanoNat",
-      "Coq.PArith.Pnat"
-    ],
-    "Coq.NArith.Ndec": [
-      "Coq.Bool.Bool",
-      "Coq.Bool.Sumbool",
-      "Coq.Arith.Arith",
-      "Coq.PArith.BinPos",
-      "Coq.NArith.BinNat",
-      "Coq.PArith.Pnat",
-      "Coq.NArith.Nnat",
-      "Coq.NArith.Ndigits"
-    ],
-    "Coq.NArith.Ndiv_def": [ "Coq.NArith.BinNat" ],
-    "Coq.PArith.BinPos": [
-      "Coq.Numbers.BinNums",
-      "Coq.Logic.Eqdep_dec",
-      "Coq.Logic.EqdepFacts",
-      "Coq.Classes.RelationClasses",
-      "Coq.Classes.Morphisms",
-      "Coq.Setoids.Setoid",
-      "Coq.Structures.Equalities",
-      "Coq.Structures.Orders",
-      "Coq.Structures.OrdersFacts",
-      "Coq.Structures.GenericMinMax",
-      "Coq.Arith.Le",
-      "Coq.Arith.Plus",
-      "Coq.PArith.BinPosDef"
-    ],
-    "Coq.PArith.BinPosDef": [ "Coq.Numbers.BinNums" ],
-    "Coq.PArith.POrderedType": [
-      "Coq.PArith.BinPos",
-      "Coq.Structures.Equalities",
-      "Coq.Structures.Orders",
-      "Coq.Structures.OrdersTac"
-    ],
-    "Coq.PArith.PArith": [
-      "Coq.Numbers.BinNums",
-      "Coq.PArith.BinPos",
-      "Coq.PArith.Pnat",
-      "Coq.PArith.POrderedType"
-    ],
-    "Coq.PArith.Pnat": [ "Coq.PArith.BinPos", "Coq.Arith.PeanoNat" ],
-    "Coq.ZArith.Zpow_facts": [
-      "Coq.ZArith.ZArith_base",
-      "Coq.setoid_ring.ZArithRing",
-      "Coq.ZArith.Zcomplements",
-      "Coq.ZArith.Zdiv",
-      "Coq.ZArith.Znumtheory",
-      "Coq.ZArith.Zpower"
-    ],
-    "Coq.ZArith.ZArith_base": [
-      "Coq.Numbers.BinNums",
-      "Coq.PArith.BinPos",
-      "Coq.NArith.BinNat",
-      "Coq.ZArith.BinInt",
-      "Coq.ZArith.Zcompare",
-      "Coq.ZArith.Zorder",
-      "Coq.ZArith.Zeven",
-      "Coq.ZArith.Zminmax",
-      "Coq.ZArith.Zmin",
-      "Coq.ZArith.Zmax",
-      "Coq.ZArith.Zabs",
-      "Coq.ZArith.Znat",
-      "Coq.ZArith.auxiliary",
-      "Coq.ZArith.ZArith_dec",
-      "Coq.ZArith.Zbool",
-      "Coq.ZArith.Zmisc",
-      "Coq.ZArith.Wf_Z",
-      "Coq.ZArith.Zhints"
-    ],
-    "Coq.ZArith.Zgcd_alt": [
-      "Coq.ZArith.ZArith_base",
-      "Coq.setoid_ring.ZArithRing",
-      "Coq.ZArith.Zdiv",
-      "Coq.ZArith.Znumtheory",
-      "Coq.omega.Omega"
-    ],
-    "Coq.ZArith.Zpower": [
-      "Coq.Arith.Wf_nat",
-      "Coq.ZArith.ZArith_base",
-      "Coq.omega.Omega",
-      "Coq.ZArith.Zcomplements",
-      "Coq.ZArith.Zpow_def"
-    ],
-    "Coq.ZArith.ZArith_dec": [
-      "Coq.Bool.Sumbool",
-      "Coq.ZArith.BinInt",
-      "Coq.ZArith.Zorder",
-      "Coq.ZArith.Zcompare"
-    ],
-    "Coq.ZArith.Zquot": [
-      "Coq.NArith.Nnat",
-      "Coq.ZArith.ZArith_base",
-      "Coq.micromega.Lia",
-      "Coq.setoid_ring.ZArithRing",
-      "Coq.ZArith.Zdiv",
-      "Coq.Classes.Morphisms"
-    ],
-    "Coq.ZArith.Wf_Z": [
-      "Coq.ZArith.BinInt",
-      "Coq.ZArith.Zcompare",
-      "Coq.ZArith.Zorder",
-      "Coq.ZArith.Znat",
-      "Coq.ZArith.Zmisc",
-      "Coq.Arith.Wf_nat"
-    ],
-    "Coq.ZArith.Zorder": [
-      "Coq.PArith.BinPos",
-      "Coq.ZArith.BinInt",
-      "Coq.Logic.Decidable",
-      "Coq.ZArith.Zcompare",
-      "Coq.Arith.Arith_base"
-    ],
-    "Coq.ZArith.Zdigits": [
-      "Coq.Bool.Bvector",
-      "Coq.ZArith.ZArith",
-      "Coq.ZArith.Zpower",
-      "Coq.omega.Omega"
-    ],
-    "Coq.ZArith.Zcompare": [
-      "Coq.PArith.BinPos",
-      "Coq.ZArith.BinInt",
-      "Coq.Arith.Lt",
-      "Coq.Arith.Gt",
-      "Coq.Arith.Plus",
-      "Coq.Arith.Mult"
-    ],
-    "Coq.ZArith.BinIntDef": [ "Coq.Numbers.BinNums", "Coq.PArith.BinPos", "Coq.NArith.BinNat" ],
-    "Coq.ZArith.Zeven": [ "Coq.ZArith.BinInt" ],
-    "Coq.ZArith.Zdiv": [
-      "Coq.ZArith.ZArith_base",
-      "Coq.ZArith.Zbool",
-      "Coq.omega.Omega",
-      "Coq.setoid_ring.ZArithRing",
-      "Coq.ZArith.Zcomplements",
-      "Coq.Setoids.Setoid",
-      "Coq.Classes.Morphisms",
-      "Coq.Arith.PeanoNat"
-    ],
-    "Coq.ZArith.Zeuclid": [
-      "Coq.Classes.Morphisms",
-      "Coq.ZArith.BinInt",
-      "Coq.Numbers.Integer.Abstract.ZDivEucl"
-    ],
-    "Coq.ZArith.ZArith": [
-      "Coq.ZArith.ZArith_base",
-      "Coq.ZArith.Zpow_def",
-      "Coq.ZArith.Zcomplements",
-      "Coq.ZArith.Zpower",
-      "Coq.ZArith.Zdiv",
-      "Coq.ZArith.Zlogarithm"
-    ],
-    "Coq.ZArith.Zlogarithm": [
-      "Coq.ZArith.ZArith_base",
-      "Coq.omega.Omega",
-      "Coq.ZArith.Zcomplements",
-      "Coq.ZArith.Zpower"
-    ],
-    "Coq.ZArith.Znumtheory": [
-      "Coq.ZArith.ZArith_base",
-      "Coq.setoid_ring.ZArithRing",
-      "Coq.ZArith.Zcomplements",
-      "Coq.ZArith.Zdiv",
-      "Coq.Arith.Wf_nat"
-    ],
-    "Coq.ZArith.Zpow_alt": [ "Coq.ZArith.BinInt" ],
-    "Coq.ZArith.Zpow_def": [ "Coq.ZArith.BinInt", "Coq.setoid_ring.Ring_theory" ],
-    "Coq.ZArith.Zhints": [
-      "Coq.ZArith.BinInt",
-      "Coq.ZArith.Zorder",
-      "Coq.ZArith.Zmin",
-      "Coq.ZArith.Zabs",
-      "Coq.ZArith.Zcompare",
-      "Coq.ZArith.Znat",
-      "Coq.ZArith.auxiliary",
-      "Coq.ZArith.Zmisc",
-      "Coq.ZArith.Wf_Z"
-    ],
-    "Coq.ZArith.Zsqrt_compat": [
-      "Coq.setoid_ring.ZArithRing",
-      "Coq.omega.Omega",
-      "Coq.ZArith.ZArith_base"
-    ],
-    "Coq.ZArith.Zwf": [ "Coq.ZArith.ZArith_base", "Coq.Arith.Wf_nat", "Coq.omega.Omega" ],
-    "Coq.ZArith.Zminmax": [
-      "Coq.Structures.Orders",
-      "Coq.ZArith.BinInt",
-      "Coq.ZArith.Zcompare",
-      "Coq.ZArith.Zorder"
-    ],
-    "Coq.ZArith.Zmin": [ "Coq.ZArith.BinInt", "Coq.ZArith.Zcompare", "Coq.ZArith.Zorder" ],
-    "Coq.ZArith.auxiliary": [
-      "Coq.Arith.Arith_base",
-      "Coq.ZArith.BinInt",
-      "Coq.ZArith.Zorder",
-      "Coq.Logic.Decidable",
-      "Coq.Arith.Peano_dec",
-      "Coq.Arith.Compare_dec"
-    ],
-    "Coq.ZArith.Znat": [
-      "Coq.Arith.Arith_base",
-      "Coq.PArith.BinPos",
-      "Coq.ZArith.BinInt",
-      "Coq.NArith.BinNat",
-      "Coq.PArith.Pnat",
-      "Coq.NArith.Nnat"
-    ],
-    "Coq.ZArith.BinInt": [
-      "Coq.Numbers.BinNums",
-      "Coq.PArith.BinPos",
-      "Coq.PArith.Pnat",
-      "Coq.NArith.BinNat",
-      "Coq.Bool.Bool",
-      "Coq.Structures.Equalities",
-      "Coq.Structures.GenericMinMax",
-      "Coq.Structures.OrdersFacts",
-      "Coq.Numbers.Integer.Abstract.ZAxioms",
-      "Coq.Numbers.Integer.Abstract.ZProperties",
-      "Coq.ZArith.BinIntDef"
-    ],
-    "Coq.ZArith.Zcomplements": [
-      "Coq.setoid_ring.ZArithRing",
-      "Coq.ZArith.ZArith_base",
-      "Coq.omega.Omega",
-      "Coq.Arith.Wf_nat",
-      "Coq.Lists.List"
-    ],
-    "Coq.ZArith.Int": [ "Coq.ZArith.BinInt" ],
-    "Coq.ZArith.Zmisc": [
-      "Coq.Arith.Wf_nat",
-      "Coq.ZArith.BinInt",
-      "Coq.ZArith.Zcompare",
-      "Coq.ZArith.Zorder",
-      "Coq.Bool.Bool"
-    ],
-    "Coq.ZArith.Zmax": [ "Coq.ZArith.BinInt", "Coq.ZArith.Zcompare", "Coq.ZArith.Zorder" ],
-    "Coq.ZArith.Zabs": [
-      "Coq.Arith.Arith_base",
-      "Coq.PArith.BinPos",
-      "Coq.ZArith.BinInt",
-      "Coq.ZArith.Zcompare",
-      "Coq.ZArith.Zorder",
-      "Coq.ZArith.Znat",
-      "Coq.ZArith.ZArith_dec"
-    ],
-    "Coq.ZArith.Zbool": [
-      "Coq.ZArith.BinInt",
-      "Coq.ZArith.Zeven",
-      "Coq.ZArith.Zorder",
-      "Coq.ZArith.Zcompare",
-      "Coq.ZArith.ZArith_dec",
-      "Coq.Bool.Sumbool"
-    ],
-    "Coq.QArith.Qreduction": [ "Coq.QArith.QArith_base", "Coq.ZArith.Znumtheory" ],
-    "Coq.QArith.Qabs": [ "Coq.QArith.QArith", "Coq.QArith.Qreduction" ],
-    "Coq.QArith.Qcanon": [
-      "Coq.setoid_ring.Field",
-      "Coq.QArith.QArith",
-      "Coq.ZArith.Znumtheory",
-      "Coq.Logic.Eqdep_dec"
-    ],
-    "Coq.QArith.QArith": [ "Coq.QArith.QArith_base", "Coq.QArith.Qring", "Coq.QArith.Qreduction" ],
-    "Coq.QArith.Qfield": [
-      "Coq.setoid_ring.Field",
-      "Coq.QArith.QArith_base",
-      "Coq.setoid_ring.NArithRing"
-    ],
-    "Coq.QArith.QArith_base": [
-      "Coq.ZArith.ZArith",
-      "Coq.setoid_ring.ZArithRing",
-      "Coq.Classes.Morphisms",
-      "Coq.Setoids.Setoid",
-      "Coq.Bool.Bool"
-    ],
-    "Coq.QArith.Qring": [ "Coq.QArith.Qfield" ],
-    "Coq.QArith.Qminmax": [
-      "Coq.QArith.QArith_base",
-      "Coq.Structures.Orders",
-      "Coq.QArith.QOrderedType",
-      "Coq.Structures.GenericMinMax"
-    ],
-    "Coq.QArith.QOrderedType": [
-      "Coq.QArith.QArith_base",
-      "Coq.Structures.Equalities",
-      "Coq.Structures.Orders",
-      "Coq.Structures.OrdersTac"
-    ],
-    "Coq.QArith.Qpower": [ "Coq.ZArith.Zpow_facts", "Coq.QArith.Qfield", "Coq.QArith.Qreduction" ],
-    "Coq.QArith.Qcabs": [ "Coq.QArith.Qabs", "Coq.QArith.Qcanon" ],
-    "Coq.QArith.Qreals": [ "Coq.Reals.Rbase", "Coq.QArith.QArith_base" ],
-    "Coq.QArith.Qround": [ "Coq.QArith.QArith" ],
-    "Coq.omega.OmegaLemmas": [ "Coq.ZArith.BinInt", "Coq.ZArith.Znat" ],
-    "Coq.omega.Omega": [
-      "Coq.ZArith.ZArith_base",
-      "Coq.omega.OmegaLemmas",
-      "Coq.omega.PreOmega",
-      "Coq.ZArith.Zhints"
-    ],
-    "Coq.omega.OmegaPlugin": [ "Coq.ZArith.ZArith_base", "Coq.omega.OmegaLemmas", "Coq.omega.PreOmega" ],
-    "Coq.omega.PreOmega": [
-      "Coq.Arith.Arith",
-      "Coq.Arith.Max",
-      "Coq.Arith.Min",
-      "Coq.ZArith.BinInt",
-      "Coq.NArith.BinNat",
-      "Coq.ZArith.Znat",
-      "Coq.NArith.Nnat"
-    ],
-    "Coq.omega.OmegaTactic": [ "Coq.ZArith.ZArith_base", "Coq.omega.OmegaLemmas", "Coq.omega.PreOmega" ]
-  }
+  ]
 }

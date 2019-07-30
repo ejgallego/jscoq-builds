@@ -87,7 +87,11 @@ class CmCoqProvider {
     }
 
     focus() {
-        this.editor.focus();
+        var dialog_input = this.editor.getWrapperElement()
+            .querySelector('.CodeMirror-dialog');
+        // If a dialog is open, editor.focus() will close it,
+        // leading to poor UX.
+        if (!dialog_input) this.editor.focus();
     }
 
     // If prev == null then get the first.
@@ -185,6 +189,17 @@ class CmCoqProvider {
         }
     }
 
+    /**
+     * Removes all sentence marks
+     */
+    retract() {
+        for (let mark of this.editor.getAllMarks()) {
+            if (mark.stm) {
+                this.mark(mark.stm, 'clear');
+            }
+        }
+    }
+
     markWithClass(stm, className) {
         var doc = this.editor.getDoc();
 
@@ -255,26 +270,12 @@ class CmCoqProvider {
     }
 
     cursorLess(c1, c2) {
-
         return (c1.line < c2.line ||
                 (c1.line === c2.line && c1.ch < c2.ch));
     }
 
-    cursorToStart(stm) {
-
-        var doc = this.editor.getDoc();
-        var csr = doc.getCursor();
-
-        if (this.cursorLess(csr, stm.end))
-            doc.setCursor(stm.start);
-    }
-
     cursorToEnd(stm) {
-        var doc = this.editor.getDoc();
-        var csr = doc.getCursor();
-
-        if (this.cursorLess(csr, stm.end))
-            doc.setCursor(stm.end);
+        this.editor.setCursor(stm.end);
     }
 
     /**
@@ -379,7 +380,7 @@ class CmCoqProvider {
 
     keyHandler(evt) {
         /* re-issue mouse enter when modifier key is pressed or released */
-        if (this.hover[0] && (evt.key === 'Meta' || evt.key === 'Alt'))
+        if (this.hover[0] && (evt.key === 'Ctrl'))
             this.onMouseEnter(this.hover[0].stm, evt);
     }
 
@@ -410,8 +411,12 @@ class CmCoqProvider {
         return next;
     }
 
+    // ================
+    // Persistence Part
+    // ================
+
     load(text, filename, dirty=false) {
-        if (this.autosave && this.dirty) saveLocal();
+        if (this.autosave && this.dirty) this.saveLocal();
 
         this.editor.setValue(text);
         this.filename = filename;
@@ -441,7 +446,9 @@ class CmCoqProvider {
         }
     }
 
-    saveLocal() {
+    saveLocal(filename) {
+        if (filename) this.filename = filename;
+
         if (this.filename) {
             var file_store = this.getLocalFileStore();
             file_store.setItem(this.filename, this.editor.getValue());
@@ -468,6 +475,68 @@ class CmCoqProvider {
         return CmCoqProvider.file_store;
     }
 
+    // Save/load UI
+
+    openLocalDialog() {
+        var span = this._makeFileDialog("Open file: "),
+            a = $('<a>').addClass('dialog-link').text('From disk...')
+                        .mousedown(ev => ev.preventDefault())
+                        .click(() => this.openFileDialog());
+
+        span.append(a);
+
+        this.editor.openDialog(span[0], sel => this.openLocal(sel));
+    }
+
+    openFileDialog() {
+        var input = $('<input>').attr('type', 'file');
+        input.change(() => {
+            if (input[0].files[0]) this.openFile(input[0].files[0]);
+        });
+        input.click();
+    }
+
+    saveLocalDialog() {
+        var span = this._makeFileDialog("Save file: ");
+
+        this.editor.openDialog(span[0], sel => this.saveLocal(sel), 
+                               {value: this.filename});
+    }
+
+    _makeFileDialog(text) {
+        var list_id = 'cm-provider-local-files',
+            input = $('<input>').attr('list', list_id),
+            list = $('<datalist>').attr('id', list_id);
+        
+        this.getLocalFileStore().keys().then((keys) => {
+            for (let key of keys) {
+                list.append($('<option>').val(key));
+            }
+        });
+
+        this._setupTabCompletion(input, list);
+
+        return $('<span>').text(text).append(input, list);
+    }
+
+    _setupTabCompletion(input, list) {
+        input.keydown(ev => { if (ev.key === 'Tab') {
+            this._complete(input, list);
+            ev.preventDefault(); ev.stopPropagation(); } 
+        });
+    }
+
+    _complete(input, list) {
+        var value = input.val();
+
+        if (value) {
+            var match = list.children('option').get()
+                            .find(o => o.value.includes(value));
+            if (match) {
+                input.val(match.value);
+            }
+        }
+    }
 }
 
 // Local Variables:

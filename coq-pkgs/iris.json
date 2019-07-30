@@ -3,168 +3,27 @@
   "deps": [ "stdpp" ],
   "pkgs": [
     { "pkg_id": [ "iris" ], "vo_files": [], "cma_files": [] },
-    {
-      "pkg_id": [ "iris", "algebra" ],
-      "vo_files": [
-        [ "local_updates.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "big_op.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "excl.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "agree.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "sts.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "gmultiset.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "deprecated.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "functions.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "frac_auth.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "auth.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "monoid.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "updates.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "vector.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "cmra.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "gset.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "coPset.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "csum.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "proofmode_classes.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ufrac.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "cofe_solver.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "frac.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "gmap.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "cmra_big_op.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ofe.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "dra.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "base.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "list.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "iris", "base_logic" ],
-      "vo_files": [
-        [ "bi.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "proofmode.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "derived.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "upred.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "base_logic.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "bupd_alt.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
+    { "pkg_id": [ "iris", "algebra" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "iris", "base_logic" ], "vo_files": [], "cma_files": [] },
     {
       "pkg_id": [ "iris", "base_logic", "lib" ],
-      "vo_files": [
-        [ "saved_prop.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "invariants.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "fancy_updates.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "sts.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "fancy_updates_from_vs.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "cancelable_invariants.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "auth.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "wsat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "na_invariants.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "gen_heap.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "viewshifts.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "boxes.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "iprop.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "own.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "proph_map.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
-    {
-      "pkg_id": [ "iris", "heap_lang" ],
-      "vo_files": [
-        [ "notation.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "lifting.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "proofmode.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "adequacy.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "total_adequacy.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "tactics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "metatheory.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "lang.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
+    { "pkg_id": [ "iris", "heap_lang" ], "vo_files": [], "cma_files": [] },
     {
       "pkg_id": [ "iris", "base_lang", "lib" ],
       "vo_files": [],
       "cma_files": []
     },
-    {
-      "pkg_id": [ "iris", "bi" ],
-      "vo_files": [
-        [ "derived_connectives.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "big_op.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "notation.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "weakestpre.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "plainly.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "monpred.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "derived_laws_bi.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "bi.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "updates.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "tactics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "embedding.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "derived_laws_sbi.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "telescopes.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "interface.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
-    {
-      "pkg_id": [ "iris", "bi", "lib" ],
-      "vo_files": [
-        [ "fractional.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "laterable.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "fixpoint.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "atomic.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "core.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "counterexamples.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
+    { "pkg_id": [ "iris", "bi" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "iris", "bi", "lib" ], "vo_files": [], "cma_files": [] },
     {
       "pkg_id": [ "iris", "program_logic" ],
-      "vo_files": [
-        [ "hoare.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "weakestpre.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "lifting.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ectxi_language.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "total_lifting.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "adequacy.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "total_adequacy.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "language.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ectx_lifting.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "total_weakestpre.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ownp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "atomic.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "total_ectx_lifting.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ectx_language.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     },
-    {
-      "pkg_id": [ "iris", "proofmode" ],
-      "vo_files": [
-        [ "notation.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "frame_instances.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "intro_patterns.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "environments.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "monpred.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "sel_patterns.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "spec_patterns.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "modalities.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "classes.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "class_instances_sbi.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "tactics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "reduction.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "tokens.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "class_instances_bi.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ltac_tactics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "modality_instances.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "coq_tactics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "base.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": []
-    },
+    { "pkg_id": [ "iris", "proofmode" ], "vo_files": [], "cma_files": [] },
     { "pkg_id": [ "iris", "tests" ], "vo_files": [], "cma_files": [] }
-  ],
-  "archive": "iris.coq-pkg"
+  ]
 }

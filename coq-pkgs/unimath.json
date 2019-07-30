@@ -26,7 +26,11 @@
       "vo_files": [],
       "cma_files": []
     },
-    { "pkg_id": [ "UniMath", "Foundations" ], "vo_files": [], "cma_files": [] },
+    {
+      "pkg_id": [ "UniMath", "Foundations" ],
+      "vo_files": [],
+      "cma_files": []
+    },
     {
       "pkg_id": [ "UniMath", "Foundations", "Basics" ],
       "vo_files": [],
@@ -48,6 +52,5 @@
       "cma_files": []
     },
     { "pkg_id": [ "UniMath", "Dedekind" ], "vo_files": [], "cma_files": [] }
-  ],
-  "archive": "unimath.coq-pkg"
+  ]
 }

@@ -17,6 +17,7 @@ Array.prototype.flatten  = function() { return [].concat.apply([], this); };
 Array.prototype.findLast = function(p) { var r; for (let i = this.length; i > 0; )
                                                     if (p(r = this[--i])) return r; }
 Array.prototype.equals   = function(other) {
+    if (other === this) return true;
     if (!other || this.length != other.length) return false;
     for (var i = 0, l=this.length; i < l; i++) {
         let te = this[i], oe = other[i];
@@ -29,6 +30,9 @@ Object.defineProperty(Array.prototype, "last",     {enumerable: false});
 Object.defineProperty(Array.prototype, "flatten",  {enumerable: false});
 Object.defineProperty(Array.prototype, "findLast", {enumerable: false});
 Object.defineProperty(Array.prototype, "equals",   {enumerable: false});
+
+if (typeof navigator !== 'undefined')
+    navigator.isMac = /Mac/.test(navigator.platform);
 
 
 /***********************************************************************/
@@ -120,6 +124,10 @@ class ProviderContainer {
         stm.sp.highlight(stm, flag);
     }
 
+    retract() {
+        for (let sp of this.snippets) sp.retract();
+    }
+
     // Focus and movement-related operations.
 
     // Get the point of the current focused element.
@@ -191,14 +199,17 @@ class CoqManager {
             prelude: true,
             debug:   true,
             wrapper_id: 'ide-wrapper',
-            base_path:  "./",
-            pkg_path: "../coq-pkgs/",  // this is awkward: package path is relative to the worker location (coq-js)
+            theme:      'light',
+            base_path:   "./",
+            pkg_path:    "../coq-pkgs/",  // this is awkward: package path is relative to the worker location (coq-js)
             implicit_libs: false,
             init_pkgs: ['init'],
             all_pkgs:  ['init', 'math-comp',
                         'coq-base', 'coq-collections', 'coq-arith', 'coq-reals', 'elpi', 'equations', 'ltac2',
                         'coquelicot', 'flocq', 'lf', 'plf', 'cpdt', 'color' ],
-            editor: { /* codemirror options */ }
+            file_dialog: false,
+            coq:       { /* Coq option values */ },
+            editor:    { /* codemirror options */ }
             // Disabled on 8.6
             // 'coquelicot', 'flocq', 'tlc', 'sf', 'cpdt', 'color', 'relalg', 'unimath',
             // 'plugin-utils', 'extlib', 'mirrorcore']
@@ -211,6 +222,7 @@ class CoqManager {
 
         // Setup the Panel UI.
         this.layout = new CoqLayoutClassic(this.options);
+        this.layout.splash();
         this.layout.onAction = this.toolbarClickHandler.bind(this);
 
         this.setupDragDrop();
@@ -238,6 +250,7 @@ class CoqManager {
         // Keybindings setup
         // XXX: This should go in the panel init.
         document.addEventListener('keydown', evt => this.keyHandler(evt), true);
+        $(document).on('keydown keyup', evt => this.modifierKeyHandler(evt));
 
         // Panel setup 2: packages panel.
         // XXX: In the future this may also manage the downloads.
@@ -252,26 +265,23 @@ class CoqManager {
 
         // This is a sid-based index of processed statements.
         this.doc = {
-            number_adds:        0,
+            fresh_id:           2,
             sentences:         [],
             stm_id:            [],
             goals:             []
         };
 
-        // XXX: Initial sentence == hack
+        // Initial sentence. (It's a hack.)
         let  dummyProvider = { mark : function() {},
                                getNext: function() { return null; },
-                               focus: function() { return null; }
+                               focus: function() { return null; },
+                               cursorToEnd: function() { return null; }
                              };
-        this.doc.stm_id[1] = { text: "dummy sentence", coq_sid: 1, sp: dummyProvider, executed: true };
+        this.doc.stm_id[1] = { text: "dummy sentence", coq_sid: 1, sp: dummyProvider, phase: Phases.PROCESSED };
         this.doc.sentences = [this.doc.stm_id[1]];
 
         this.error = [];
-        this.goTarget = null;
         this.navEnabled = false;
-
-        // XXX: Hack
-        this.waitForPkgs = [];
 
         // The fun starts: Load the set of packages.
         this.coq.infoPkg(this.packages.pkg_root_path, this.options.all_pkgs);
@@ -284,13 +294,8 @@ class CoqManager {
 
         provider.onInvalidate = stm => {
 
-            // If we have an error mark we need to clear it.
-            let stm_err_idx = this.error.indexOf(stm);
-
-            if (stm_err_idx >= 0) {
-                provider.mark(stm, "clear");
-                this.error.splice(stm_err_idx, 1);
-                return;
+            if (stm.phase === Phases.ERROR) {
+                this.clearErrors();
             }
             else if (stm.coq_sid) {
                 this.coq.cancel(stm.coq_sid);
@@ -298,7 +303,7 @@ class CoqManager {
         };
 
         provider.onMouseEnter = (stm, ev) => {
-            if (stm.coq_sid && ev.altKey) {
+            if (stm.coq_sid && ev.ctrlKey) {
                 if (this.doc.goals[stm.coq_sid] !== undefined)
                     this.updateGoals(this.doc.goals[stm.coq_sid]);
                 else
@@ -354,7 +359,7 @@ class CoqManager {
         this.coq.inspectPromise(0, ["CurrentFile"])
         .then(bunch => {
             CodeMirror.CompanyCoq.loadSymbols(
-                { lemmas: bunch.map(CoqIdentifier.ofKerName) },
+                { lemmas: bunch.map(fp => CoqIdentifier.ofFullPath(fp)) },
                 'locals', /*replace_existing=*/true)
         });
     }
@@ -380,13 +385,11 @@ class CoqManager {
             this.layout.log(msg, 'Info');
     }
 
-    // The first state is ready.
+    /**
+     * Called when the first state is ready.
+     */
     coqReady(sid) {
-
-        this.layout.proof.append(document.createTextNode(
-            "\nCoq worker is ready with sid = " + sid.toString() + "\n"));
-            /* init libraries have already been loaded by now */
-
+        this.layout.splash(this.version_info, "Coq worker is ready.", 'ready');
         this.enable();
     }
 
@@ -412,9 +415,9 @@ class CoqManager {
             return;
         }
 
-        if (!stm.executed) {
-            stm.executed = true;
-            this.provider.mark(stm, "ok");
+        if (stm.phase !== Phases.PROCESSED && stm.phase !== Phases.ERROR) {
+            stm.phase = Phases.PROCESSED;
+            this.provider.mark(stm, 'ok');
 
             // Get goals and active definitions
             if (nsid == this.doc.sentences.last().coq_sid) {
@@ -422,6 +425,8 @@ class CoqManager {
                 this.updateLocalSymbols();
             }
         }
+
+        this.work();
     }
 
     feedMessage(sid, lvl, loc, msg) {
@@ -456,20 +461,12 @@ class CoqManager {
         if(this.options.debug)
             console.log('adding: ', nsid, loc);
 
-        // XXX Rewrite, the sentence could have vanished...
-        let cur_stm = this.doc.stm_id[nsid], exec = false;
+        let stm = this.doc.stm_id[nsid];
 
-        if (this.goTarget) {
-            exec = !this.goNext(false, this.goTarget);
-            if (exec)
-                this.goTarget = null;
-        } else {
-            exec = true;
-        }
+        if (stm)
+            stm.phase = Phases.ADDED;
 
-        if (exec && !cur_stm.executed) {
-            this.coq.exec(nsid);
-        }
+        this.work();
     }
 
     // Gets a request to load packages
@@ -514,40 +511,15 @@ class CoqManager {
         if(this.options.debug)
             console.log('cancelling', sids);
 
-        sids.forEach(function (sid) {
-
+        for (let sid of sids) {
             let stm_to_cancel = this.doc.stm_id[sid];
-            let stm_err_idx   = this.error.indexOf(stm_to_cancel);
 
-            if (stm_err_idx >= 0) {
-                // Do not clear the mark, to keep the error indicator.
-            } else {
-                let stm_idx = this.doc.sentences.indexOf(stm_to_cancel);
-
-                // Not already cancelled.
-                if (stm_idx >= 0) {
-
-                    this.doc.stm_id[sid] = null;
-                    this.doc.goals[sid]  = null;
-                    stm_to_cancel.coq_sid = null;
-
-                    this.doc.sentences.splice(stm_idx, 1);
-
-                    this.provider.mark(stm_to_cancel, "clear");
-                }
+            if (stm_to_cancel) {
+                this.truncate(stm_to_cancel);
             }
-
-        }, this);
-
-        // Update goals
-        var stm = this.doc.sentences.last(),
-            hgoals = this.doc.goals[stm.coq_sid];
-        if (hgoals) {
-            this.updateGoals(hgoals);
         }
-        else if (stm.executed) {
-            this.coq.goals(stm.coq_sid); // no goals fetched for current statement, ask worker
-        }
+
+        this.refreshGoals();
     }
 
     coqGoalInfo(sid, goals) {
@@ -556,10 +528,13 @@ class CoqManager {
 
             var hgoals = this.pprint.goals2DOM(goals);
 
+            // Preprocess pretty-printed output
+            if (this.company_coq) {
+                this.contextual_info.pinIdentifiers(hgoals);
+                this.company_coq.markup.applyToDOM(hgoals[0]);
+            }
 
             this.doc.goals[sid] = hgoals;
-            // Don't update goals on trasient when go to point.
-            // if(!this.goTarget)
             this.updateGoals(hgoals);
         }
     }
@@ -589,19 +564,7 @@ class CoqManager {
     }
 
     coqLibLoaded(bname) {
-
         this.packages.onBundleLoad(bname);
-
-        var wait_pkgs = this.waitForPkgs,
-            loaded_pkgs = this.packages.loaded_pkgs;
-
-        if (wait_pkgs.length > 0) {
-            if (wait_pkgs.every(x => loaded_pkgs.indexOf(x) > -1)) {
-                this.enable();
-                this.packages.collapse();
-                this.waitForPkgs = [];
-            }
-        }
     }
 
     coqCoqExn(loc, sids, msg) {
@@ -630,14 +593,14 @@ class CoqManager {
     // the corresponding JS-version (not to speak of types)
     coqCoqInfo(info) {
 
-        this.layout.proof.textContent = info;
+        this.version_info = info;
 
         var pkgs = this.options.init_pkgs;
 
-        if (pkgs.length > 0)
-            this.layout.proof.textContent +=
-                  "\nPlease wait for the libraries to load, thanks!"
-                + "\n(If you are having trouble, try cleaning your browser's cache.)\n";
+        this.layout.splash(info,
+            pkgs.length == 0 ? undefined : 
+              "Loading libraries. Please wait.\n"
+            + "(If you are having trouble, try cleaning your browser's cache.)");
 
         this.packages.waitFor(pkgs)
         .then(() => this.packages.loadDeps(pkgs))
@@ -650,111 +613,84 @@ class CoqManager {
 
         this.packages.collapse();
 
-        this.layout.proof.append(document.createTextNode(
-            "\n===> JsCoq filesystem initialized successfully!\n" +
-            "===> Loaded packages [" + this.options.init_pkgs.join(', ') + "] \n"));
+        this.layout.systemNotification(
+            "===> JsCoq filesystem initialized successfully!\n" +
+            `===> Loaded packages [${this.options.init_pkgs.join(', ')}]`);
 
-        // XXXXXX: Critical point
-        var load_lib = [];
+        // Set startup parameters
+        let init_opts = {implicit_libs: this.options.implicit_libs, stm_debug: false,
+                         coq_options: this._parseOptions(this.options.coq || {})},
+            load_path = this.packages.getLoadPath(),
+            load_lib = this.options.prelude ? [["Coq", "Init", "Prelude"]] : [];
 
-        if (this.options.prelude) {
-            load_lib.push(["Coq", "Init", "Prelude"]);
-        }
-
-        let set_opts = {implicit_libs: this.options.implicit_libs, stm_debug: false},
-            load_path = this.packages.getLoadPath();
-
-        this.coq.init(set_opts, load_lib, load_path);
+        this.coq.init(init_opts, load_lib, load_path);
         // Almost done!
+    }
+
+    /**
+     * Creates a JSON-able version of the startup Coq options.
+     * E.g. {'Default Timeout': 10}  -->  [[['Default'm 'Timeout'], ['IntValue', 10]]]
+     * @param {object} coq_options option name to value dictionary
+     */
+    _parseOptions(coq_options) {
+        function makeValue(value) {
+            if      (Array.isArray(value))       return value;
+            else if (typeof value === 'number')  return ['IntValue', value];
+            else if (typeof value === 'string')  return ['StringValue', value];
+            else if (typeof value === 'boolean') return ['BoolValue', value]
+
+            throw new Error(`invalid option value ${value}`);
+        }
+        return Object.entries(coq_options)
+                     .map(([k, v]) => [k.split(/\s+/), makeValue(v)]);
     }
 
     goPrev(update_focus) {
 
-        // XXX: Optimization, in case of error, but incorrect in the
-        // new general framework.
+        // There may be cases where there is more than one sentence with
+        // an error, but then we probably want to retract all of them anyway.
         if (this.error.length > 0) {
-            this.provider.mark(this.error.pop(), "clear");
-            return;
+            this.clearErrors();
+            return true;
         }
 
-        if (this.goTarget) return;
+        // Prevent canceling the init state
+        if (this.doc.sentences.length <= 1) { return false; }
 
-        // If we didn't load the prelude, prevent unloading it to
-        // workaround a bug in Coq.
-        if (this.doc.sentences.length <= 1) return;
+        var last_stm = this.doc.sentences.pop();
+        this.cancel(last_stm);
 
-        var cur_stm  = this.doc.sentences.last();
-        var prev_stm = this.doc.sentences[this.doc.sentences.length - 2];
+        if(update_focus) this.focus(this.doc.sentences.last());
 
-        if(update_focus && prev_stm) {
-            this.currentFocus = prev_stm.sp;
-            this.currentFocus.focus();
-            this.provider.cursorToStart(cur_stm);
-        }
-
-        // Cancel the sentence
-        let stm_idx       = this.doc.sentences.indexOf(cur_stm);
-        this.doc.sentences.splice(stm_idx, 1);
-
-        this.doc.stm_id[cur_stm.coq_sid] = null;
-        this.doc.goals[cur_stm.coq_sid]  = null;
-        this.provider.mark(cur_stm, "clear");
-        this.coq.cancel(cur_stm.coq_sid);
-        cur_stm.coq_sid = null;
+        return true;
     }
 
     // Return if we had success.
     goNext(update_focus, until) {
 
-        if (this.goTarget && !until) return false;
-
         this.clearErrors();
 
-        let cur_stm = this.doc.sentences.last();
-        let cur_sid = cur_stm.coq_sid;
+        let last_stm = this.doc.sentences.last(),
+            next_stm = this.provider.getNext(last_stm, until);
 
-        let next_stm = this.provider.getNext(cur_stm, until);
-
-        // We are the the end
+        // We have reached the end
         if(!next_stm) { return false; }
 
-        let next_sid = cur_sid+1;
-        next_stm.coq_sid = next_sid;
-        next_stm.executed = false;
-
+        next_stm.phase = Phases.PENDING;
         this.doc.sentences.push(next_stm);
-        this.doc.stm_id[next_sid] = next_stm;
 
-        // XXX: Hack to avoid sending comments. Is this still valid?
-        if(next_stm.is_comment) {
-            this.provider.mark(next_stm, "ok");
-            return true;
-        } else {
-            this.provider.mark(next_stm, "processing");
-        }
+        this.provider.mark(next_stm, 'processing');
 
-        // We focus the new snippet.
-        if(update_focus) {
-            this.currentFocus = next_stm.sp;
-            this.currentFocus.focus();
-            this.provider.cursorToEnd(next_stm);
-        }
+        if(update_focus) this.focus(next_stm);
 
-        // process special jscoq commands, for now:
-        // Comment "pkg: list" will load packages.
-        this.process_special(next_stm.text);
-        this.coq.add(cur_sid, next_sid, next_stm.text);
-
-        // Avoid stack overflows by doing a commit every 24
-        // sentences, due to the STM co-tail recursive traversal bug?
-        let so_threshold = 24;
-        if( (++this.doc.number_adds % so_threshold) === 0 )
-            this.coq.exec(next_sid);
+        this.work();
 
         return true;
     }
 
     goCursor() {
+
+        this.clearErrors();
 
         var cur = this.provider.getAtPoint();
 
@@ -766,15 +702,110 @@ class CoqManager {
                 console.warn("in goCursor(): stm not registered");
             }
         } else {
-            this.goTarget = this.provider.getCursor();
-            this.goNext(false, this.goTarget);
+            var here = this.provider.getCursor();
+            while (this.goNext(false, here));
         }
+    }
+
+    /**
+     * Focus the snippet containing the stm and place the cursor at
+     * the end of the sentence.
+     */
+    focus(stm) {
+        this.currentFocus = stm.sp;
+        this.currentFocus.focus();
+        this.provider.cursorToEnd(stm);
+    }
+
+    /**
+     * Document processing state machine.
+     * Synchronizes the managers document (this.doc) with the Stm document
+     * held by the worker.
+     * That means, PENDING sentences are added and ADDED sentences are executed.
+     */
+    work() {
+        var tip = null, latest_ready_stm = null;
+
+        for (let stm of this.doc.sentences) {
+            switch (stm.phase) {
+            case Phases.PROCESSED:
+                tip = stm.coq_sid; break;
+            case Phases.ADDED:
+                latest_ready_stm = stm;
+                tip = stm.coq_sid;
+                break; // only actually execute if nothing else remains to add
+            case Phases.ADDING:
+            case Phases.PROCESSING:
+                return;  // still waiting for worker; can't make progress
+            case Phases.PENDING:
+                if (!tip) throw new Error('internal error'); // inconsistent
+                this.add(stm, tip);
+                return;
+            }
+        }
+
+        // TODO Don't queue too many sentences at once in order to avoid
+        //   stack overflow in Stm
+        if (latest_ready_stm) {
+            latest_ready_stm.phase = Phases.PROCESSING;
+            this.coq.exec(latest_ready_stm.coq_sid);
+        }
+    }
+
+    async add(stm, tip) {
+        stm.phase = Phases.ADDING;
+
+        await this.process_special(stm.text);
+
+        stm.coq_sid = this.doc.fresh_id++;
+        this.doc.stm_id[stm.coq_sid] = stm;
+        this.coq.add(tip, stm.coq_sid, stm.text);
+
+        this.provider.mark(stm, 'processing');  // in case it was un-marked
+    }
+
+    cancel(stm) {
+        switch (stm.phase) {
+        case Phases.ADDING:
+        case Phases.ADDED:
+        case Phases.PROCESSING:
+        case Phases.PROCESSED:
+            this.coq.cancel(stm.coq_sid);
+            break;
+        }
+
+        this.cancelled(stm);
+    }
+
+    cancelled(stm) {
+        delete this.doc.stm_id[stm.coq_sid];
+        delete stm.coq_sid;
+
+        this.provider.mark(stm, 'clear');
+    }
+    
+    /**
+     * Removes all the sentences from stm to the end of the document.
+     * If stm as an error sentence, leave the sentence itself (so that the
+     * error mark remains visible), and remove all following sentences.
+     */
+    truncate(stm) {
+        let stm_index = this.doc.sentences.indexOf(stm);
+
+        if (stm.phase === Phases.ERROR) {
+            // Do not clear the mark, to keep the error indicator.
+            stm_index++;
+        }
+        
+        for (let follow of this.doc.sentences.slice(stm_index)) {
+            this.cancelled(follow);
+        }
+
+        this.doc.sentences.splice(stm_index);
     }
 
     // Error handler.
     handleError(sid, loc, msg) {
-
-        this.goTarget = null;  // first of all, stop any pending additions
 
         let err_stm = this.doc.stm_id[sid];
 
@@ -784,79 +815,120 @@ class CoqManager {
         // forcing on parsing.
         if(!err_stm) return;
 
-        // this.error will prevent the cancel handler from
+        this.clearErrors();   // only display a single error at a time
+
+        // Phases.ERROR will prevent the cancel handler from
         // clearing the mark.
+        err_stm.phase = Phases.ERROR;
         this.error.push(err_stm);
 
-        let stm_idx       = this.doc.sentences.indexOf(err_stm);
+        this.provider.mark(err_stm, 'error');
 
-        // The stm was not deleted!
-        if (stm_idx >= 0) {
-            this.doc.sentences.splice(stm_idx, 1);
-
-            this.doc.stm_id[sid] = null;
-            this.doc.goals[sid]  = null;
-
-            this.provider.mark(err_stm, "error");
-
-            this.coq.cancel(sid);
-        }
+        this.truncate(err_stm);
+        this.coq.cancel(sid);
     }
 
     clearErrors() {
-        for (let err of this.error) {
-            this.provider.mark(err, "clear");
-        }
+        // Cancel all error sentences AND remove them from doc.sentences
+        // (yes, it's a filter with side effects)
+        this.doc.sentences = this.doc.sentences.filter(stm => {
+            if (stm.phase === Phases.ERROR) {
+                this.cancel(stm);
+                return false;
+            }
+            return true;
+        });
+
         this.error = [];
     }
 
-    // Drops all the state!
+    /**
+     * Drops all the state and re-launches the worker.
+     * Loaded packages are reloaded (but obviously not Require'd) by the
+     * package manager.
+     * @returns {Promise} resolves after 'init' command has been issued.
+     */
     reset() {
+        this.layout.update_goals($('<b>').text('Coq worker reset.'));
+        this.disable();
+        this.provider.retract();
 
-        // Reset out sentences
-        this.doc.sentences.forEach(function(stm) {
-            this.provider.mark(stm, "clear");
-        }, this);
+        var dummy_sentence = this.doc.sentences[0];
+        this.doc.sentences = [dummy_sentence];
+        this.doc.stm_id = [, dummy_sentence];
 
-        // this.doc.sentences = [];
-        // XXX Kill worker
+        this.error = [];
+
+        this.coq.restart();
+
+        // Reload packages and init
+        var pkgs = this.packages.loaded_pkgs.slice();
+        this.packages.reset();
+        return this.packages.loadDeps(pkgs).then(() => this.coqInit());
     }
 
-    // Keyboard handling
+    /**
+     * Key bindings event handler.
+     * @param {KeyboardEvent} e a keydown event
+     */
     keyHandler(e) {
 
-        if (e.keyCode === 119) // F8
-            this.layout.toggle();
+        // Poor-man's keymap
+        let key = ((navigator.isMac ? e.metaKey : e.ctrlKey) ? '^' : '') + 
+                  (e.altKey ? '_' : '') + (e.shiftKey ? '+' : '') + e.code;
 
-        // All other keybindings are prefixed by alt.
-        if (!e.altKey) return true;
+        // Navigation keybindings
+        const goCursor = () => this.goCursor(),
+              goNext   = () => this.goNext(true),
+              goPrev   = () => this.goPrev(true),
+              toggle   = () => this.layout.toggle();
+        const nav_bindings = {
+            '_Enter':     goCursor, '_ArrowRight': goCursor,
+            '_ArrowDown': goNext,
+            '_ArrowUp':   goPrev,
+            'F8': toggle
+        };
+        if (!navigator.isMac) {
+            Object.assign(nav_bindings, {
+                '_KeyN': goNext,
+                '_KeyP': goPrev
+            }); /* Alt-N and Alt-P create accent characters on Mac */
+        }
 
-        // When navigation is disabled, suppress keystrokes
-        if (!this.navEnabled && [13, 39, 78, 40, 80, 38].indexOf(e.keyCode) > -1) {
+        var op = nav_bindings[key];
+        if (op) {
             e.preventDefault();
             e.stopPropagation();
+            if (this.navEnabled) op();
             return true;
         }
 
-        switch (e.keyCode) {
-            case 13: // ENTER
-            case 39: // Right arrow
-                this.goCursor();
+        // File keybindings
+        if (this.options.file_dialog) {
+            const file_bindings = {
+                '^KeyO':   () => sp.openLocalDialog(),
+                '^_KeyO':  () => sp.openFileDialog(),
+                '^KeyS':   () => sp.saveLocal(),
+                '^+KeyS':  () => sp.saveLocalDialog()
+            };
+
+            var sp = this.provider.currentFocus || this.provider.snippets[0],
+                op = file_bindings[key];
+            if (sp && op) {
                 e.preventDefault();
                 e.stopPropagation();
-                break;
-            case 78: // N
-            case 40: // Down arrow
-                this.goNext(true);
-                e.preventDefault();
-                e.stopPropagation();
-                break;
-            case 80: // P
-            case 38: // Up arrow
-                this.goPrev(true);
-                e.preventDefault();
-                e.stopPropagation();
-                break;
+                op();
+                return true;
+            }
+        }
+    }
+
+    modifierKeyHandler(evt) {
+        if (evt.key === 'Control') {
+            if (evt.ctrlKey)
+                this.layout.ide.classList.add('coq-crosshair');
+            else
+                this.layout.ide.classList.remove('coq-crosshair');
         }
     }
 
@@ -871,8 +943,8 @@ class CoqManager {
     disable() {
         this.navEnabled = false;
         this.layout.toolbarOff();
-        this.layout.proof.append(document.createTextNode(
-                "\n===> Waiting for Package load!\n"));
+        this.layout.systemNotification(
+                "===> Waiting for package(s) to load.");
     }
 
     toolbarClickHandler(evt) {
@@ -891,16 +963,16 @@ class CoqManager {
         case 'down' :
             this.goNext(true);
             break;
+
+        case 'reset':
+            this.reset();
+            break;
         }
     }
 
     updateGoals(html) {
         if (html) {
             this.layout.update_goals(html);
-            if (this.company_coq) {
-                this.contextual_info.pinIdentifiers();
-                this.company_coq.markup.applyToDOM(this.layout.proof);
-            }
             this.pprint.adjustBreaks($(this.layout.proof));
             /* Notice: in Pp-formatted text, line breaks are handled by
              * FormatPrettyPrint rather than by the layout.
@@ -908,6 +980,39 @@ class CoqManager {
         }
     }
 
+    updateGoalsFor(stm) {
+        var hgoals = this.doc.goals[stm.coq_sid];
+        if (hgoals) {
+            this.updateGoals(hgoals);
+        }
+        else if (stm.phase === Phases.PROCESSED) {
+            // no goals fetched for current sentence, ask worker
+            this.coq.goals(stm.coq_sid);
+        }
+        // otherwise: do nothing until this sentence is eventually executed,
+        //   at which points its goals will be shown.
+    }
+
+    /**
+     * Show the proof state for the latest non-error sentence.
+     */
+    refreshGoals() {
+        var s = this.doc.sentences.findLast(stm => stm.phase !== Phases.ERROR);
+        if (s)
+            this.updateGoalsFor(s);
+    }
+
+    /**
+     * Process special comments that are used as directives to jsCoq itself.
+     * 
+     * E.g.
+     *   Comments "pkgs: space-delimited list of packages".
+     * 
+     * Loads packages using the package manager and only then continues to
+     * process the document.
+     * 
+     * @param {string} text sentence text
+     */
     process_special(text) {
 
         var special;
@@ -919,19 +1024,16 @@ class CoqManager {
             switch (cmd) {
 
             case 'pkgs':
-                let pkgs = args.split(' ');
-                console.log('Requested pkgs '); console.log(pkgs);
+                let pkgs = args.split(/\s+/);
+                console.log('Requested pkgs: ', pkgs);
 
                 this.packages.expand();
-
                 this.disable();
-                this.waitForPkgs = pkgs;
-
-                for (let pkg of pkgs) {
-                    this.packages.startPackageDownload(pkg);
-                }
-
-                return true;
+    
+                return this.packages.loadDeps(pkgs).then(() => {
+                    this.packages.collapse(); 
+                    this.enable();
+                });
 
             default:
                 console.log("Unrecognized jscoq command");
@@ -941,6 +1043,15 @@ class CoqManager {
         return false;
     }
 }
+
+
+// enum
+const Phases = {
+    PENDING: 'pending',
+    ADDING: 'adding',         ADDED: 'added',
+    PROCESSING: 'processing', PROCESSED: 'processed',
+    ERROR: 'error'
+};
 
 
 class CoqContextualInfo {
@@ -988,6 +1099,7 @@ class CoqContextualInfo {
 
     onMouseDown(evt)  {
         this.showFor(evt.target, evt.altKey);
+        this.stick(evt.target);
         this.is_sticky = true;
         evt.stopPropagation();
     }
@@ -1043,7 +1155,7 @@ class CoqContextualInfo {
     }
 
     hide() {
-        this.container.find('.contextual-focus').removeClass('contextual-focus');
+        this.unstick();
         this.el.hide();
         this.is_visible = false;
         this.is_sticky = false;
@@ -1058,6 +1170,15 @@ class CoqContextualInfo {
 
     hideCancel() {
         this.request_hide = false;
+    }
+
+    stick(dom) {
+        this.unstick();
+        $(dom).addClass('contextual-focus');        
+    }
+
+    unstick() {
+        this.container.find('.contextual-focus').removeClass('contextual-focus');        
     }
 
     /**
@@ -1116,11 +1237,16 @@ class CoqIdentifier {
 
     toString() { return [...this.prefix, this.label].join('.'); }
 
+    equals(other) {
+        return other instanceof CoqIdentifier &&
+            this.prefix.equals(other.prefix) && this.label === other.label;
+    }
+
     /**
      * Constructs an identifier from a Coq Names.KerName.t.
-     * @param {array} param0 serialized form of KerName (from SearchResults).
+     * @param {array} param0 serialized form of KerName.
      */
-    static ofKerName([kername, modpath, dirpath, label]) {
+    static ofKerName([kername, modpath, label]) {
         /**/ console.assert(kername === 'KerName') /**/
         var modsuff = [];
         while (modpath[0] == 'MPdot') {
@@ -1128,8 +1254,26 @@ class CoqIdentifier {
             modpath = modpath[1];
         }
         /**/ console.assert(modpath[0] === 'MPfile'); /**/
-        return new CoqIdentifier(modpath[1].slice().reverse()
-                                 .concat(modsuff).concat(dirpath), label);
+        /**/ console.assert(modpath[1][0] === 'DirPath'); /**/
+        return new CoqIdentifier(
+            modpath[1][1].slice().reverse().map(this._idToString).concat(modsuff),
+            this._idToString(label));
+    }
+
+    /**
+     * Constructs an identifier from a Libnames.full_path.
+     * @param {array} fp serialized form of full_path (from SearchResults).
+     */
+    static ofFullPath(fp) {
+        /**/ console.assert(fp.dirpath[0] === 'DirPath') /**/
+        return new CoqIdentifier(
+            fp.dirpath[1].slice().reverse().map(this._idToString),
+            this._idToString(fp.basename));
+    }
+
+    static _idToString(id) {
+        /**/ console.assert(id[0] === 'Id') /**/
+        return id[1];
     }
 
     dequalify(dirpaths) {

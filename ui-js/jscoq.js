@@ -10,10 +10,12 @@ class CoqWorker {
         this.routes = [this.observers];
         this.sids = [, new Future()];
 
+        this._worker_script = scriptPath || (CoqWorker.scriptDir + "../coq-js/jscoq_worker.js");
+
         // Create actual worker. Ideally, CoqWorker would extend
         // Worker, but this is not supported at the moment.
-        this.worker = worker || new Worker(scriptPath || (CoqWorker.scriptDir + "jscoq_worker.js"))
-        this.worker.onmessage = evt => this.coq_handler(evt);
+        this.worker = worker || new Worker(this._worker_script)
+        this.worker.onmessage = this._handler = evt => this.coq_handler(evt);
 
         if (typeof window !== 'undefined')
             window.addEventListener('unload', () => this.worker.terminate());
@@ -73,6 +75,12 @@ class CoqWorker {
         return rid;
     }
 
+    getOpt(option_name) {
+        if (typeof option_name === 'string')
+            option_name = option_name.split(/\s+/);
+        this.sendCommand(["GetOpt", option_name]);
+    }
+
     loadPkg(base_path, pkg) {
         this.sendCommand(["LoadPkg", base_path, pkg]);
     }
@@ -85,7 +93,7 @@ class CoqWorker {
         this.sendCommand(["ReassureLoadPath", load_path]);
     }
 
-    put(filename, content) {
+    put(filename, content, transferOwnership=false) {
         /* Access ArrayBuffer behind Node.js Buffer */
         if (content.buffer) {
             content = (content.byteOffset === 0 && 
@@ -99,14 +107,25 @@ class CoqWorker {
         if(this.options.debug) {
             console.debug("Posting file: ", msg);
         }
-        this.worker.postMessage(msg, [content]);
-        /* Notice: ownership of the 'content' buffer is transferred to the worker
-         * (for efficiency)
+        this.worker.postMessage(msg, transferOwnership ? [content] : []);
+        /* Notice: when transferOwnership is true, the 'content' buffer is
+         * transferred to the worker (for efficiency);
+         * it becomes unusable in the original context.
          */
     }
 
     register(filename) {
         this.sendCommand(["Register", filename]);
+    }
+
+    restart() {
+        this.sids = [, new Future()];
+
+        this.worker.terminate();  // kill!
+
+        // Recreate worker
+        this.worker = new Worker(this._worker_script);
+        this.worker.onmessage = this._handler = evt => this.coq_handler(evt);
     }
 
     // Promise-based APIs
@@ -136,6 +155,14 @@ class CoqWorker {
         this.routes[rid] = [pfr];
         pfr.atexit = () => { delete this.routes[rid]; };
         return pfr.promise;
+    }
+
+    spawn() {
+        return new CoqWorker(null, this.worker);
+    }
+
+    join(child) {
+        this.worker.onmessage = this._handler;
     }
 
     // Internal event handling
@@ -276,7 +303,7 @@ if (typeof document !== 'undefined' && document.currentScript)
     CoqWorker.scriptDir = document.currentScript.attributes.src.value.replace(/[^/]*$/, '');
 
 if (typeof module !== 'undefined')
-    module.exports = {CoqWorker}
+    module.exports = {CoqWorker, Future, PromiseFeedbackRoute}
 
 // Local Variables:
 // js-indent-level: 4

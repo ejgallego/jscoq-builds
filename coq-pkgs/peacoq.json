@@ -1,6 +1,5 @@
 {
   "desc": "peacoq",
   "deps": [ "init" ],
-  "pkgs": [ { "pkg_id": [ "PeaCoq" ], "vo_files": [], "cma_files": [] } ],
-  "archive": "peacoq.coq-pkg"
+  "pkgs": [ { "pkg_id": [ "PeaCoq" ], "vo_files": [], "cma_files": [] } ]
 }

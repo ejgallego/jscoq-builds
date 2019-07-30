@@ -68,7 +68,7 @@ class FormatPrettyPrint {
 
         // ["Pp_tag", tag, content]
         case "Pp_tag":
-            return $('<span>').addClass(ct).append(this.pp2DOM(pp[2]));
+            return this._wrapTrimmed(this.pp2DOM(pp[2]), $('<span>').addClass(ct));
 
         // ["Pp_force_newline"]
         case "Pp_force_newline":
@@ -184,7 +184,7 @@ class FormatPrettyPrint {
     pp2Text(msg, state) {
 
         // Elements are ...
-        if (msg.constructor !== Array) {
+        if (!Array.isArray(msg)) {
             return msg;
         }
 
@@ -270,26 +270,51 @@ class FormatPrettyPrint {
     /**
      * Formats the current proof state.
      * @param {object} goals a record of proof goals 
-     *                       ({fg_goals, bg_goals, given_up_goals, shelved_goals})
+     *                       ({goals, stack, shelf, given_up})
      */
     goals2DOM(goals) {
-        console.log(goals);
-        if (goals.fg_goals.length == 0) {
-            return $(document.createTextNode("No more goals"));
+        var ngoals = goals.goals.length,
+            on_stack = this.flatLength(goals.stack),
+            on_shelf = goals.shelf.length,
+            given_up = goals.given_up.length;
+
+        function aside(msg) {
+            var p = $('<p>').addClass('aside');
+            return (typeof msg === 'string') ? p.text(msg) : p.append(msg);
+        }
+
+        if (ngoals === 0) {
+            /* Empty goals; choose the appropriate message to display */
+            let msg = on_stack ? "This subproof is complete, but there are some unfocused goals."
+                    : (on_shelf ? "All the remaining goals are on the shelf."
+                        : "No more goals."),
+                bullet_notice = goals.bullet ? [this.pp2DOM(goals.bullet)] : [],
+                given_up_notice = given_up ? 
+                    [`(${given_up} goal${given_up > 1 ? 's were' : ' was'} admitted.)`] : [],
+                notices = bullet_notice.concat(given_up_notice);
+
+            return $('<div>').append(
+                $('<p>').addClass('no-goals').text(msg),
+                notices.map(aside)
+            );
         } 
         else {
-            let ngoals = goals.fg_goals.length;
-            let head = $('<p>').addClass('num-goals')
-                .text(ngoals === 1 ? `1 goal.` : `${ngoals} goals`);
+            /* Construct a display of all the subgoals (first is focused) */
+            let head = ngoals === 1 ? `1 goal` : `${ngoals} goals`,
+                notices = on_shelf ? [`(shelved: ${on_shelf})`] : [];
 
-            let focused_goal = this.goal2DOM(goals.fg_goals[0]);
+            let focused_goal = this.goal2DOM(goals.goals[0]);
 
-            let pending_goals = goals.fg_goals.slice(1).map((goal, i) =>
+            let pending_goals = goals.goals.slice(1).map((goal, i) =>
                 $('<div>').addClass('coq-subgoal-pending')
                     .append($('<label>').text(i + 2))
                     .append(this.pp2DOM(goal.ty)));
 
-            return $('<div>').append(head, focused_goal, pending_goals);
+            return $('<div>').append(
+                $('<p>').addClass('num-goals').text(head),
+                notices.map(aside),
+                focused_goal, pending_goals
+            );
         }
     }
 
@@ -299,12 +324,29 @@ class FormatPrettyPrint {
      * @param {object} goal current goal record ({name, hyp, ty})
      */
     goal2DOM(goal) {
-        let hyps = goal.hyp.reverse().map(h => 
-            $('<div>').addClass('coq-hypothesis')
-                .append($('<label>').text(h[0]))
-                .append(this.pp2DOM(h[2])));
+        let mklabel = (id) =>
+                $('<label>').text(this.constructor._idToString(id)),
+            mkdef = (pp) =>
+                $('<span>').addClass('def').append(this.pp2DOM(pp));
+
+        let hyps = goal.hyp.reverse().map(([h_names, h_def, h_type]) =>
+            $('<div>').addClass(['coq-hypothesis', h_def && 'coq-has-def'])
+                .append(h_names.map(mklabel))
+                .append(h_def && mkdef(h_def))
+                .append(this.pp2DOM(h_type)));
         let ty = this.pp2DOM(goal.ty);
         return $('<div>').addClass('coq-env').append(hyps, $('<hr/>'), ty);
+    }
+
+    static _idToString(id) { // this is, unfortunately, duplicated from CoqManager :/
+        /**/ console.assert(id[0] === 'Id') /**/
+        return id[1];
+    }
+
+    flatLength(l) {
+        return Array.isArray(l) 
+            ? l.map(x => this.flatLength(x)).reduce((x,y) => x + y, 0)
+            : 1;
     }
 
     adjustBox(jdom) {
@@ -339,6 +381,34 @@ class FormatPrettyPrint {
 
         if (jdom.children().length == 0)
             jdom.addClass("text-only");
+    }
+
+    /**
+     * Auxiliary method that wraps a node with an element, but excludes
+     * leading and trailing spaces. These are attached outside the wrapper.
+     * 
+     * So _wrapTrimmed(" ab", <span>) becomes " "<span>"ab"</span>.
+     */
+    _wrapTrimmed(jdom, wrapper_jdom) {
+        if (jdom.length === 0) return wrapper_jdom;  // degenerate case
+
+        var first = jdom[0], last = jdom[jdom.length - 1],
+            lead, trail;
+
+        if (first.nodeType === Node.TEXT_NODE) {
+            lead = first.nodeValue.match(/^\s*/)[0];
+            first.nodeValue = first.nodeValue.substring(lead.length);
+        }
+
+        if (last.nodeType === Node.TEXT_NODE) { // note: it can be the same node
+            trail = last.nodeValue.match(/\s*$/);
+            last.nodeValue = last.nodeValue.substring(0, trail.index);
+            trail = trail[0];
+        }
+
+        return $([lead && document.createTextNode(lead),
+                  wrapper_jdom.append(jdom)[0], 
+                  trail && document.createTextNode(trail)].filter(x => x));
     }
 
 }

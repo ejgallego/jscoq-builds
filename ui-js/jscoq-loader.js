@@ -22,7 +22,7 @@ var loadJs = function(js) {
     };
 };
 
-var loadJsCoq;
+var loadJsCoq, JsCoq;
 
 (function(){
 
@@ -32,21 +32,25 @@ var loadJsCoq;
         link.href  = css+'.css';
         link.type  = "text/css";
         link.rel   = "stylesheet";
-        link.media = "screen";
 
         document.head.appendChild(link);
     };
 
+    var scriptDir = (typeof document !== 'undefined' && document.currentScript) ?
+        document.currentScript.attributes.src.value.replace(/[^/]*$/, '') : undefined;
 
     // In order for jsCoq to work we need to load:
-    // - Codemirror CSS [core+theme+coq]
-    // - Codemirror JS  [core+coq+emacs]
-    // - D3
+    // - Codemirror CSS [core + themes]
+    // - Codemirror JS  [core + emacs keymap + addons]
+    // - Codemirror custom modes and addons [coq + company-coq + tex-input]
+    // - jQuery
+    // - JSZip
+    // - localForage
     // - jsCoq = cm-provider + coq-packages + coq-manager
 
     loadJsCoq = function(base_path, node_modules_path) {
 
-        base_path = base_path || "./";
+        base_path = base_path || JsCoq.base_path;
         if (/[^/]$/.exec(base_path)) base_path += "/";
 
         node_modules_path = node_modules_path || base_path + "node_modules/";
@@ -54,17 +58,20 @@ var loadJsCoq;
 
         loadCss(node_modules_path + 'codemirror/lib/codemirror');
         loadCss(node_modules_path + 'codemirror/theme/blackboard');
-        loadCss(node_modules_path + 'codemirror/theme/blackboard');
+        loadCss(node_modules_path + 'codemirror/theme/darcula');
         loadCss(node_modules_path + 'codemirror/addon/hint/show-hint');
+        loadCss(node_modules_path + 'codemirror/addon/dialog/dialog');
         loadCss(base_path + 'ui-css/coq-log');
         loadCss(base_path + 'ui-css/coq-base');
         loadCss(base_path + 'ui-css/coq-light');
+        loadCss(base_path + 'ui-css/coq-dark');
 
         var files = [node_modules_path + 'codemirror/lib/codemirror',
                      node_modules_path + 'codemirror/keymap/emacs',
                      node_modules_path + 'codemirror/addon/selection/mark-selection',
                      node_modules_path + 'codemirror/addon/edit/matchbrackets',
                      node_modules_path + 'codemirror/addon/hint/show-hint',
+                     node_modules_path + 'codemirror/addon/dialog/dialog',
                      node_modules_path + 'jquery/dist/jquery.min',
                      node_modules_path + 'jszip/dist/jszip.min',
                      node_modules_path + 'localforage/dist/localforage.min',
@@ -81,6 +88,34 @@ var loadJsCoq;
         return files.reduce(function(prom, file) {
             return prom.then(loadJs(file));
         }, Promise.resolve());
+    };
+
+    JsCoq = {
+        base_path: scriptDir ? `${scriptDir}../` : "./",
+
+        load(base_path, node_modules_path) {
+            return loadJsCoq(base_path, node_modules_path);
+        },
+
+        start(...args) {
+            var base_path = undefined, node_modules_path = undefined,
+                jscoq_ids = ['ide-wrapper'], jscoq_opts = {};
+            
+            if (typeof args[0] === 'string') base_path = args.shift();
+            if (typeof args[0] === 'string') node_modules_path = args.shift();
+            if (Array.isArray(args[0])) jscoq_ids = args.shift();
+            if (args[0]) jscoq_opts = args.shift();
+
+            if (args.length > 0) console.warn('too many arguments to JsCoq.start()');
+
+            // Umm.
+            jscoq_opts.base_path = jscoq_opts.base_path || base_path || JsCoq.base_path;
+            base_path = base_path || jscoq_opts.base_path || JsCoq.base_path;
+
+            return this.load(base_path, node_modules_path).then(() =>
+                new CoqManager(jscoq_ids, jscoq_opts)
+            );
+        }
     };
 
 })();

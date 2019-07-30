@@ -4,261 +4,96 @@
   "pkgs": [
     {
       "pkg_id": [ "Coq", "ltac" ],
-      "vo_files": [ [ "Ltac.vo", "d41d8cd98f00b204e9800998ecf8427e" ] ],
+      "vo_files": [ [ "Ltac.vo", null ] ],
       "cma_files": [
-        [ "ltac_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "tauto_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "tauto_plugin.cma", null ],
+        [ "ltac_plugin.cma", null ]
       ]
     },
     {
       "pkg_id": [ "Coq", "syntax" ],
       "vo_files": [],
       "cma_files": [
-        [ "numeral_notation_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "int31_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "r_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ascii_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "string_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "int63_syntax_plugin.cma", null ],
+        [ "numeral_notation_plugin.cma", null ],
+        [ "string_notation_plugin.cma", null ],
+        [ "r_syntax_plugin.cma", null ]
       ]
     },
     {
       "pkg_id": [ "Coq", "cc" ],
       "vo_files": [],
-      "cma_files": [ [ "cc_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ] ]
+      "cma_files": [ [ "cc_plugin.cma", null ] ]
     },
     {
       "pkg_id": [ "Coq", "firstorder" ],
       "vo_files": [],
-      "cma_files": [ [ "ground_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ] ]
+      "cma_files": [ [ "ground_plugin.cma", null ] ]
     },
     {
-      "pkg_id": [ "Coq", "extraction" ],
+      "pkg_id": [ "Coq", "btauto" ],
       "vo_files": [
-        [ "ExtrHaskellZInteger.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ExtrHaskellNatInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ExtrHaskellZInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ExtrOcamlZInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ExtrHaskellNatNum.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ExtrOcamlZBigInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Extraction.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ExtrHaskellBasic.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ExtrOcamlIntConv.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ExtrHaskellZNum.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ExtrOcamlString.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ExtrHaskellString.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ExtrOcamlNatInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ExtrOcamlNatBigInt.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ExtrHaskellNatInteger.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ExtrOcamlBasic.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ExtrOcamlBigIntConv.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "Algebra.vo", null ],
+        [ "Btauto.vo", null ],
+        [ "Reflect.vo", null ]
       ],
-      "cma_files": [ [ "extraction_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ] ]
-    },
-    {
-      "pkg_id": [ "Coq", "funind" ],
-      "vo_files": [
-        [ "Recdef.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "FunInd.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": [ [ "recdef_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ] ]
-    },
-    {
-      "pkg_id": [ "Coq", "quote" ],
-      "vo_files": [ [ "Quote.vo", "d41d8cd98f00b204e9800998ecf8427e" ] ],
-      "cma_files": [ [ "quote_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ] ]
+      "cma_files": [ [ "btauto_plugin.cma", null ] ]
     },
     {
       "pkg_id": [ "Coq", "Init" ],
       "vo_files": [
-        [ "Tactics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Peano.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Specif.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Prelude.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Wf.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Nat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Logic.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Decimal.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Datatypes.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Tauto.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Notations.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Logic_Type.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "Tactics.vo", null ],
+        [ "Peano.vo", null ],
+        [ "Specif.vo", null ],
+        [ "Prelude.vo", null ],
+        [ "Wf.vo", null ],
+        [ "Nat.vo", null ],
+        [ "Logic.vo", null ],
+        [ "Decimal.vo", null ],
+        [ "Datatypes.vo", null ],
+        [ "Tauto.vo", null ],
+        [ "Byte.vo", null ],
+        [ "Notations.vo", null ],
+        [ "Logic_Type.vo", null ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Bool" ],
       "vo_files": [
-        [ "DecBool.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Sumbool.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "BoolEq.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Bool.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "IfProp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Bvector.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Zerob.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "DecBool.vo", null ],
+        [ "Sumbool.vo", null ],
+        [ "BoolEq.vo", null ],
+        [ "Bool.vo", null ],
+        [ "IfProp.vo", null ],
+        [ "Bvector.vo", null ],
+        [ "Zerob.vo", null ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Unicode" ],
-      "vo_files": [
-        [ "Utf8.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Utf8_core.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [ [ "Utf8.vo", null ], [ "Utf8_core.vo", null ] ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "ssrmatching" ],
-      "vo_files": [ [ "ssrmatching.vo", "d41d8cd98f00b204e9800998ecf8427e" ] ],
-      "cma_files": [ [ "ssrmatching_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ] ]
+      "vo_files": [ [ "ssrmatching.vo", null ] ],
+      "cma_files": [ [ "ssrmatching_plugin.cma", null ] ]
     },
     {
       "pkg_id": [ "Coq", "ssr" ],
       "vo_files": [
-        [ "ssrfun.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ssrbool.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ssreflect.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "ssrfun.vo", null ],
+        [ "ssrbool.vo", null ],
+        [ "ssreflect.vo", null ]
       ],
-      "cma_files": [ [ "ssreflect_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ] ]
+      "cma_files": [ [ "ssreflect_plugin.cma", null ] ]
     },
     {
       "pkg_id": [ "mathcomp", "ssreflect" ],
-      "vo_files": [
-        [ "prime.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "binomial.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "generic_quotient.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ssrmatching.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "fingraph.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "eqtype.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "path.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ssrfun.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ssrnotations.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "tuple.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ssrbool.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "div.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "finset.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "finfun.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ssreflect.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "choice.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "fintype.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "all_ssreflect.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "seq.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "bigop.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ssrnat.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [],
       "cma_files": []
     }
-  ],
-  "archive": "init.coq-pkg",
-  "modDeps": {
-    "Coq.extraction.ExtrHaskellZInteger": [
-      "Coq.extraction.Extraction",
-      "Coq.ZArith.ZArith",
-      "Coq.extraction.ExtrHaskellZNum"
-    ],
-    "Coq.extraction.ExtrHaskellNatInt": [
-      "Coq.extraction.Extraction",
-      "Coq.Arith.Arith",
-      "Coq.extraction.ExtrHaskellNatNum"
-    ],
-    "Coq.extraction.ExtrHaskellZInt": [
-      "Coq.extraction.Extraction",
-      "Coq.ZArith.ZArith",
-      "Coq.extraction.ExtrHaskellZNum"
-    ],
-    "Coq.extraction.ExtrOcamlZInt": [
-      "Coq.extraction.Extraction",
-      "Coq.ZArith.ZArith",
-      "Coq.NArith.NArith",
-      "Coq.extraction.ExtrOcamlBasic"
-    ],
-    "Coq.extraction.ExtrHaskellNatNum": [ "Coq.extraction.Extraction", "Coq.Arith.Arith", "Coq.Arith.EqNat" ],
-    "Coq.extraction.ExtrOcamlZBigInt": [
-      "Coq.extraction.Extraction",
-      "Coq.ZArith.ZArith",
-      "Coq.NArith.NArith",
-      "Coq.extraction.ExtrOcamlBasic"
-    ],
-    "Coq.extraction.ExtrHaskellBasic": [ "Coq.extraction.Extraction" ],
-    "Coq.extraction.ExtrOcamlIntConv": [ "Coq.extraction.Extraction", "Coq.Arith.Arith", "Coq.ZArith.ZArith" ],
-    "Coq.extraction.ExtrHaskellZNum": [ "Coq.extraction.Extraction", "Coq.ZArith.ZArith", "Coq.Arith.EqNat" ],
-    "Coq.extraction.ExtrOcamlString": [ "Coq.extraction.Extraction", "Coq.Strings.Ascii", "Coq.Strings.String" ],
-    "Coq.extraction.ExtrHaskellString": [ "Coq.extraction.Extraction", "Coq.Strings.Ascii", "Coq.Strings.String" ],
-    "Coq.extraction.ExtrOcamlNatInt": [
-      "Coq.extraction.Extraction",
-      "Coq.Arith.Arith",
-      "Coq.Arith.Even",
-      "Coq.Arith.Div2",
-      "Coq.Arith.EqNat",
-      "Coq.Arith.Euclid",
-      "Coq.extraction.ExtrOcamlBasic"
-    ],
-    "Coq.extraction.ExtrOcamlNatBigInt": [
-      "Coq.extraction.Extraction",
-      "Coq.Arith.Arith",
-      "Coq.Arith.Even",
-      "Coq.Arith.Div2",
-      "Coq.Arith.EqNat",
-      "Coq.Arith.Euclid",
-      "Coq.extraction.ExtrOcamlBasic"
-    ],
-    "Coq.extraction.ExtrHaskellNatInteger": [
-      "Coq.extraction.Extraction",
-      "Coq.Arith.Arith",
-      "Coq.extraction.ExtrHaskellNatNum"
-    ],
-    "Coq.extraction.ExtrOcamlBasic": [ "Coq.extraction.Extraction" ],
-    "Coq.extraction.ExtrOcamlBigIntConv": [ "Coq.extraction.Extraction", "Coq.Arith.Arith", "Coq.ZArith.ZArith" ],
-    "Coq.funind.Recdef": [
-      "Coq.funind.FunInd",
-      "Coq.Arith.PeanoNat",
-      "Coq.Arith.Compare_dec",
-      "Coq.Arith.Wf_nat"
-    ],
-    "Coq.funind.FunInd": [ "Coq.extraction.Extraction" ],
-    "Coq.Init.Tactics": [ "Coq.Init.Notations", "Coq.Init.Logic", "Coq.Init.Specif" ],
-    "Coq.Init.Peano": [
-      "Coq.Init.Notations",
-      "Coq.Init.Datatypes",
-      "Coq.Init.Logic",
-      "Coq.Init.Nat"
-    ],
-    "Coq.Init.Specif": [ "Coq.Init.Notations", "Coq.Init.Datatypes", "Coq.Init.Logic" ],
-    "Coq.Init.Prelude": [
-      "Coq.Init.Notations",
-      "Coq.Init.Logic",
-      "Coq.Init.Logic_Type",
-      "Coq.Init.Datatypes",
-      "Coq.Init.Specif",
-      "Coq.Init.Decimal",
-      "Coq.Init.Nat",
-      "Coq.Init.Peano",
-      "Coq.Init.Wf",
-      "Coq.Init.Tactics",
-      "Coq.Init.Tauto"
-    ],
-    "Coq.Init.Wf": [ "Coq.Init.Notations", "Coq.Init.Logic", "Coq.Init.Datatypes" ],
-    "Coq.Init.Nat": [
-      "Coq.Init.Notations",
-      "Coq.Init.Logic",
-      "Coq.Init.Datatypes",
-      "Coq.Init.Decimal"
-    ],
-    "Coq.Init.Logic": [ "Coq.Init.Notations" ],
-    "Coq.Init.Datatypes": [ "Coq.Init.Notations", "Coq.Init.Logic" ],
-    "Coq.Init.Tauto": [ "Coq.Init.Notations", "Coq.Init.Datatypes", "Coq.Init.Logic" ],
-    "Coq.Init.Logic_Type": [ "Coq.Init.Datatypes", "Coq.Init.Logic" ],
-    "Coq.Bool.BoolEq": [ "Coq.Bool.Bool" ],
-    "Coq.Bool.IfProp": [ "Coq.Bool.Bool" ],
-    "Coq.Bool.Bvector": [
-      "Coq.Bool.Bool",
-      "Coq.Bool.Sumbool",
-      "Coq.Vectors.Vector",
-      "Coq.Arith.Minus"
-    ],
-    "Coq.Bool.Zerob": [ "Coq.Arith.Arith", "Coq.Bool.Bool" ],
-    "Coq.Unicode.Utf8": [ "Coq.Unicode.Utf8_core" ],
-    "Coq.ssr.ssrfun": [ "Coq.ssr.ssreflect" ],
-    "Coq.ssr.ssrbool": [ "Coq.Bool.Bool", "Coq.ssr.ssreflect", "Coq.ssr.ssrfun" ],
-    "Coq.ssr.ssreflect": [ "Coq.Bool.Bool", "Coq.ssrmatching.ssrmatching" ]
-  }
+  ]
 }

@@ -17,6 +17,5 @@
     { "pkg_id": [ "MirrorCore", "Util" ], "vo_files": [], "cma_files": [] },
     { "pkg_id": [ "MirrorCore", "Views" ], "vo_files": [], "cma_files": [] },
     { "pkg_id": [ "McExamples", "Cancel" ], "vo_files": [], "cma_files": [] }
-  ],
-  "archive": "mirrorcore.coq-pkg"
+  ]
 }

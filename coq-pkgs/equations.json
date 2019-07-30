@@ -2,16 +2,7 @@
   "desc": "equations",
   "deps": [ "coq-reals" ],
   "pkgs": [
-    {
-      "pkg_id": [ "Equations" ],
-      "vo_files": [
-        [ "Tactics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Init.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Signature.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Equations.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
-      "cma_files": [ [ "equations_plugin.cma", "d41d8cd98f00b204e9800998ecf8427e" ] ]
-    }
-  ],
-  "archive": "equations.coq-pkg"
+    { "pkg_id": [ "Equations" ], "vo_files": [], "cma_files": [] },
+    { "pkg_id": [ "Equations", "Prop" ], "vo_files": [], "cma_files": [] }
+  ]
 }

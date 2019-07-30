@@ -6,67 +6,63 @@
       "pkg_id": [ "Coq", "syntax" ],
       "vo_files": [],
       "cma_files": [
-        [ "numeral_notation_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "int31_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "r_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "ascii_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "string_syntax_plugin.cmo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "int63_syntax_plugin.cma", null ],
+        [ "numeral_notation_plugin.cma", null ],
+        [ "string_notation_plugin.cma", null ],
+        [ "r_syntax_plugin.cma", null ]
       ]
     },
     {
       "pkg_id": [ "Coq", "Init" ],
       "vo_files": [
-        [ "Tactics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Peano.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Specif.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Prelude.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Wf.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Nat.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Logic.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Decimal.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Datatypes.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Tauto.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Notations.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Logic_Type.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "Tactics.vo", null ],
+        [ "Peano.vo", null ],
+        [ "Specif.vo", null ],
+        [ "Prelude.vo", null ],
+        [ "Wf.vo", null ],
+        [ "Nat.vo", null ],
+        [ "Logic.vo", null ],
+        [ "Decimal.vo", null ],
+        [ "Datatypes.vo", null ],
+        [ "Tauto.vo", null ],
+        [ "Byte.vo", null ],
+        [ "Notations.vo", null ],
+        [ "Logic_Type.vo", null ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Bool" ],
       "vo_files": [
-        [ "DecBool.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Sumbool.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "BoolEq.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Bool.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "IfProp.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Bvector.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Zerob.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "DecBool.vo", null ],
+        [ "Sumbool.vo", null ],
+        [ "BoolEq.vo", null ],
+        [ "Bool.vo", null ],
+        [ "IfProp.vo", null ],
+        [ "Bvector.vo", null ],
+        [ "Zerob.vo", null ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Program" ],
       "vo_files": [
-        [ "Tactics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Basics.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Wf.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Subset.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Combinators.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Equality.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Utils.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Program.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Syntax.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
+        [ "Tactics.vo", null ],
+        [ "Basics.vo", null ],
+        [ "Wf.vo", null ],
+        [ "Subset.vo", null ],
+        [ "Combinators.vo", null ],
+        [ "Equality.vo", null ],
+        [ "Utils.vo", null ],
+        [ "Program.vo", null ],
+        [ "Syntax.vo", null ]
       ],
       "cma_files": []
     },
     {
       "pkg_id": [ "Coq", "Unicode" ],
-      "vo_files": [
-        [ "Utf8.vo", "d41d8cd98f00b204e9800998ecf8427e" ],
-        [ "Utf8_core.vo", "d41d8cd98f00b204e9800998ecf8427e" ]
-      ],
+      "vo_files": [ [ "Utf8.vo", null ], [ "Utf8_core.vo", null ] ],
       "cma_files": []
     }
-  ],
-  "archive": "hott-init.coq-pkg"
+  ]
 }

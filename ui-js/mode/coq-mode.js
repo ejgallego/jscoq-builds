@@ -137,6 +137,11 @@
       'Admitted'
     ];
 
+    const lex_operators =   /* multi-character operators */
+      /=+>|:=|<:|<<:|:>|-+>|<-+>?|\\\/|\/\\|>=|<=+|<>|\+\+|::|\|\||&&|\.\./;
+      
+    const lex_brackets = /\.\(|\{\||\|\}|`\{|`\(/;
+
     // Map assigning each keyword a category.
     var words = {};
 
@@ -196,12 +201,21 @@
       if(stream.eatSpace())
         return null;
 
-      if (stream.match(/[-=<]>|<-|[<>]=|\\\/|\/\\/)) return 'operator';
+      if (stream.match(lex_operators)) {
+        state.begin_sentence = false;
+        return 'operator';
+      }
+
+      //if (stream.match(lex_brackets))  return 'bracket';
+      // ^ skipped, for the time being, because matchbracket does not support
+      //   multi-character brackets.
+
+      if (at_sentence_start) {
+        if (stream.match(/[-*+{}]/)) return 'coq-bullet';
+        if (stream.match(/\d+\s*:/)) return 'coq-focus';
+      }
 
       var ch = stream.next();
-
-      if(at_sentence_start && (/[-*+{}]/.test(ch)))
-        return 'coq-bullet';
 
       // Preserve begin sentence after comment.
       if (ch === '(') {
@@ -220,15 +234,8 @@
       }
 
       if(ch === '.') {
-        // Parse .. specially.
-        if(stream.peek() !== '.') {
-          state.tokenize = tokenStatementEnd;
-          return state.tokenize(stream, state);
-        } else {
-          stream.next();
-          return 'operator';
-        }
-
+        state.tokenize = tokenStatementEnd;
+        return state.tokenize(stream, state);
       }
 
       if (ch === '"') {
@@ -257,13 +264,20 @@
         return 'bracket';
       }
 
-      stream.eatWhile(/\w/);
+      /* Identifier or keyword*/
+      if (/\w/.test(ch))
+        stream.eatWhile(/[\w']/);
+
       var cur = stream.current(),
           kind = words[cur] || 'variable';
 
       if (at_sentence_start) {
         state.sentence_kind = kind;
         state.is_head = true;
+      }
+      else if (kind === 'tactic' && state.sentence_kind === 'builtin') {
+        /* tactics should not occur in vernac (unless "ltac:" is used?) */
+        kind = 'variable';
       }
 
       return kind;

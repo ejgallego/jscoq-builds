@@ -34,13 +34,15 @@ class Markup {
     constructor() {
         this.special_tokens = {};
         this.special_patterns = [];
+        this.reserved = {tokens: [], types: ['comment']};
         this.className = 'markup';
     }
     
     attach(cm) {
         this.cm = cm;
-        this.applyToDocument();
-        cm.on('change', () => this.applyToDocument());
+        this.work = new WorkQueue(cm);
+        cm.on('change', (cm, change_obj) => this._flush(change_obj));
+        cm.on('renderLine', (cm, ln, el) => this._rescan(ln));
     }
 
     applyToDocument() {
@@ -51,6 +53,9 @@ class Markup {
     applyToLine(line) {
         this.clearFromLine(line);
         for (let tok of this.cm.getLineTokens(line)) {
+            if ((this.reserved.types || []).includes(tok.type) ||
+                (this.reserved.tokens || []).includes(tok.string)) continue;
+
             if (this.special_tokens.hasOwnProperty(tok.string)) {
                 let lit = this.special_tokens[tok.string],
                     from = {line, ch: tok.start},
@@ -77,6 +82,9 @@ class Markup {
                 }
             }
         }
+
+        if (this.cm.display.maxLine && 
+            this.cm.display.maxLine.lineNo() === line) this._maxLineHack();
     }
 
     clearFromLine(line) {
@@ -84,6 +92,47 @@ class Markup {
             to = {line, ch: this.cm.getLine(line).length};
         for (let mark of this.cm.findMarks(from, to, m => m.owner == this))
             mark.clear();
+    }
+
+    _flush(change_obj) {
+        for (let ln = change_obj.from.line; ln <= change_obj.to.line; ln++) {
+            let lineh = this.cm.getLineHandle(ln);
+            if (lineh) delete lineh._cc_recorded_styles;
+        }
+
+        if (this.cm.display.maxLine) {
+            var mx = this.cm.display.maxLine.lineNo();
+            if (mx >= change_obj.from.line && 
+                mx <= change_obj.to.line) this._maxLineHack();
+        }
+    }
+
+    _rescan(ln) {
+        if (!ln.styles.equals(ln._cc_recorded_styles)) {
+            ln._cc_recorded_styles = ln.styles;
+            this.work.enqueue(() => this.applyToLine(ln.lineNo()));
+        }
+    }
+
+    /**
+     * (internal) This is needed to prevent a scrolling bug in CodeMirror 5.47.
+     * CodeMirror saves the line that has the maximal length and updates the
+     * sizerWidth to its total width.
+     * Since replacedWith widgets effectively shrinks the line, this results in
+     * underscrolling in many cases.
+     */
+    _maxLineHack() {
+        var display = this.cm.display, curOp = this.cm.curOp;
+        const CLEARANCE = 3;  /* space added to the right, in characters */
+        display.maxLineChanged = false;
+        if (curOp) {
+            curOp.updateMaxLine = false;
+            curOp.adjustWidthTo = (display.maxLine.text.length + CLEARANCE) *
+                                  this.cm.defaultCharWidth();
+            // Force the size using the actual character count.
+            // May result in too much horizontal scrolling, but that is
+            // better than the alternative.
+        }
     }
 
     applyToDOM(dom) {
@@ -144,7 +193,7 @@ class Markup {
     }
 
     tokenize(s) {
-        return s.split(/(\s+)/).filter(s => s);
+        return s.split(/(\w+)/).filter(s => s);
     }
 
     /**
@@ -167,49 +216,29 @@ class Markup {
 
 }
 
-// Builtin tactics are copied from coq-mode.
-// TODO: order tactics most common first rather than alphabetically.
-var vocab = {
-    locals: {lemmas: [], tactics: []},  /* keep locals before globals */
-    globals: {
-        lemmas: [],
-        tactics: [
-            /* Terminators */
-            'assumption',
-            'by',
-            'contradiction',
-            'discriminate',
-            'easy',
-            'exact',
-            'now',
-            'omega',
-            'reflexivity',
-            'tauto',
-            /* Other tactics */
-            'after', 'apply', 'assert', 'auto', 'autorewrite',
-            'case', 'change', 'clear', 'compute', 'congruence', 'constructor',
-            'congr', 'cut', 'cutrewrite',
-            'dependent', 'destruct',
-            'eapply', 'eassumption', 'eauto', 'econstructor', 'elim', 'exists',
-            'field', 'firstorder', 'fold', 'fourier',
-            'generalize',
-            'have', 'hnf',
-            'induction', 'injection', 'instantiate', 'intro', 'intros', 'inversion',
-            'left',
-            'move',
-            'pattern', 'pose',
-            'refine', 'remember', 'rename', 'repeat', 'replace', 'revert', 'rewrite',
-            'right', 'ring',
-            'set', 'simpl', 'specialize', 'split', 'subst', 'suff', 'symmetry',
-            'transitivity', 'trivial', 'try',
-            'unfold', 'unlock', 'using',
-            'vm_compute',
-            'where', 'wlog'
-        ]
+/**
+ * Auxiliary class for Markup.
+ * Bunches update tasks and performs them in a CodeMirror operation.
+ */
+class WorkQueue {
+    constructor(cm) { this.cm = cm; this.tasks = []; this.primed = false; }
+    enqueue(task) { 
+        this.tasks.push(task); 
+        if (!this.primed) this._engage();
     }
-};
+    _engage() {
+        this.primed = true;
+        requestAnimationFrame(() => this.cm.operation(() => {
+            try     { for (let t of this.tasks) t(); }
+            finally { this.primed = false; this.tasks = []; this._cleanup(); }
+        }));
+    }
+    _cleanup() {
+    }
+}
 
-var kinds = {lemmas: 'lemma', tactics: 'tactic'};
+
+var vocab_kinds = {lemmas: 'lemma', tactics: 'tactic'};
 
 
 /**
@@ -218,8 +247,8 @@ var kinds = {lemmas: 'lemma', tactics: 'tactic'};
 class AutoComplete {
 
     constructor() {
-        this.vocab = vocab;
-        this.kinds = kinds;
+        this.vocab = {};
+        this.kinds = vocab_kinds;
 
         this.max_matches = 100;  // threshold to prevent UI slowdown
     }
@@ -375,7 +404,7 @@ class AutoComplete {
 class ObserveIdentifier {
 
     constructor() {
-        this.vocab = vocab;
+        this.vocab = {};
         this._makeVocabIndex();
     }
 
@@ -417,6 +446,71 @@ class ObserveIdentifier {
 
 }
 
+/* -- Configuration Section -- */
+
+const special_tokens = {
+        '->': '→', '<-': '←', '<->': '↔', '=>': '⇒', '|-': '⊢',
+        '/\\': '∧', '\\/': '∨',
+        '<=': '≤', '>=': '≥', '<>': '≠',
+        'fun': 'λ', 'forall': '∀', 'exists': '∃', 
+        'Real': 'ℝ', 'nat': 'ℕ', 'Prop': 'ℙ'
+    },
+    index_sub =      (mo) => [{from: 1, to: mo[0].length, className: 'company-coq-sub'}],
+    underscore_sub = (mo) => [{from: 0, to: 2, replacedWith: $('<span>')[0]},
+                              {from: 2, to: mo[0].length, className: 'company-coq-sub'}],
+    special_patterns = [
+        {re: /[^\d_](\d+)$/,   make: index_sub},
+        {re: /(__)([^_].*)$/,  make: underscore_sub}
+    ],
+    reserved = {
+        tokens: ['Int31', 'Int63', 'Utf8', 'Coq88', 'Coq89', 'Coq810'],
+        types:  ['comment', 'tactic']
+    };
+
+// Builtin tactics are copied from coq-mode.
+// TODO: order tactics most common first rather than alphabetically.
+const vocab = {
+    locals: {lemmas: [], tactics: []},  /* keep locals before globals */
+    globals: {
+        lemmas: [],
+        tactics: [
+            /* Terminators */
+            'assumption',
+            'by',
+            'contradiction',
+            'discriminate',
+            'easy',
+            'exact',
+            'now',
+            'omega',
+            'reflexivity',
+            'tauto',
+            /* Other tactics */
+            'after', 'apply', 'assert', 'auto', 'autorewrite',
+            'case', 'change', 'clear', 'compute', 'congruence', 'constructor',
+            'congr', 'cut', 'cutrewrite',
+            'dependent', 'destruct',
+            'eapply', 'eassumption', 'eauto', 'econstructor', 'elim', 'exists',
+            'field', 'firstorder', 'fold', 'fourier',
+            'generalize',
+            'have', 'hnf',
+            'induction', 'injection', 'instantiate', 'intro', 'intros', 'inversion',
+            'left',
+            'move',
+            'pattern', 'pose',
+            'refine', 'remember', 'rename', 'repeat', 'replace', 'revert', 'rewrite',
+            'right', 'ring',
+            'set', 'simpl', 'specialize', 'split', 'subst', 'suff', 'symmetry',
+            'transitivity', 'trivial', 'try',
+            'unfold', 'unlock', 'using',
+            'vm_compute',
+            'where', 'wlog'
+        ]
+    }
+};
+
+/* --                       -- */
+
 /**
  * Main CompanyCoq entry point.
  * - Creates markup and configures it with specific tokens.
@@ -425,26 +519,16 @@ class ObserveIdentifier {
 class CompanyCoq {
 
     constructor() {
-        this.special_tokens = {
-            '->': '→', '<-': '←', '<->': '↔', '=>': '⇒', '|-': '⊢',
-            '/\\': '∧', '\\/': '∨',
-            '<=': '≤', '>=': '≥', '<>': '≠',
-            'fun': 'λ', 'forall': '∀', 'exists': '∃', 
-            'Real': 'ℝ', 'nat': 'ℕ', 'Prop': 'ℙ'
-        };
-        this.special_patterns = [
-            {re: /[^\d_](\d+)$/,   make: (mo) => [{from: 1, to: mo[0].length, className: 'company-coq-sub'}]},
-            {re: /(__)([^_].*)$/,  make: (mo) => [{from: 0, to: 2, replacedWith: $('<span>')[0]},
-                                                  {from: 2, to: mo[0].length, className: 'company-coq-sub'}]}
-        ];
-
         this.markup = new Markup();
         this.completion = new AutoComplete();
         this.observe = ObserveIdentifier.instance;
 
-        this.markup.special_tokens = this.special_tokens;
-        this.markup.special_patterns = this.special_patterns;
+        this.markup.special_tokens = special_tokens;
+        this.markup.special_patterns = special_patterns;
+        this.markup.reserved = reserved;
         this.markup.className = 'company-coq';
+
+        this.completion.vocab = CompanyCoq.vocab;
     }
 
     attach(cm) {
@@ -481,8 +565,9 @@ class CompanyCoq {
 
     static init() {
         CompanyCoq.vocab = vocab;
-        CompanyCoq.kinds = kinds;
+        CompanyCoq.kinds = vocab_kinds;
         ObserveIdentifier.instance = new ObserveIdentifier(); // singleton
+        ObserveIdentifier.instance.vocab = vocab;
         CodeMirror.CompanyCoq = CompanyCoq;
 
         CodeMirror.defineInitHook(cm => {
