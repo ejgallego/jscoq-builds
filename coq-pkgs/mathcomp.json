@@ -1,0 +1,138 @@
+{
+  "desc": "mathcomp",
+  "deps": [],
+  "pkgs": [
+    { "pkg_id": [ "mathcomp" ], "vo_files": [], "cma_files": [] },
+    {
+      "pkg_id": [ "mathcomp", "algebra" ],
+      "vo_files": [
+        [ "all_algebra.vo", "" ],
+        [ "countalg.vo", "" ],
+        [ "finalg.vo", "" ],
+        [ "fraction.vo", "" ],
+        [ "intdiv.vo", "" ],
+        [ "interval.vo", "" ],
+        [ "matrix.vo", "" ],
+        [ "mxalgebra.vo", "" ],
+        [ "mxpoly.vo", "" ],
+        [ "poly.vo", "" ],
+        [ "polydiv.vo", "" ],
+        [ "polyXY.vo", "" ],
+        [ "rat.vo", "" ],
+        [ "ring_quotient.vo", "" ],
+        [ "ssralg.vo", "" ],
+        [ "ssrint.vo", "" ],
+        [ "ssrnum.vo", "" ],
+        [ "vector.vo", "" ],
+        [ "zmodp.vo", "" ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "mathcomp", "all" ],
+      "vo_files": [ [ "all.vo", "" ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "mathcomp", "character" ],
+      "vo_files": [
+        [ "all_character.vo", "" ],
+        [ "character.vo", "" ],
+        [ "classfun.vo", "" ],
+        [ "inertia.vo", "" ],
+        [ "integral_char.vo", "" ],
+        [ "mxabelem.vo", "" ],
+        [ "mxrepresentation.vo", "" ],
+        [ "vcharacter.vo", "" ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "mathcomp", "field" ],
+      "vo_files": [
+        [ "algC.vo", "" ],
+        [ "algebraics_fundamentals.vo", "" ],
+        [ "algnum.vo", "" ],
+        [ "all_field.vo", "" ],
+        [ "closed_field.vo", "" ],
+        [ "cyclotomic.vo", "" ],
+        [ "falgebra.vo", "" ],
+        [ "fieldext.vo", "" ],
+        [ "finfield.vo", "" ],
+        [ "galois.vo", "" ],
+        [ "separable.vo", "" ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "mathcomp", "fingroup" ],
+      "vo_files": [
+        [ "action.vo", "" ],
+        [ "all_fingroup.vo", "" ],
+        [ "automorphism.vo", "" ],
+        [ "fingroup.vo", "" ],
+        [ "gproduct.vo", "" ],
+        [ "morphism.vo", "" ],
+        [ "perm.vo", "" ],
+        [ "presentation.vo", "" ],
+        [ "quotient.vo", "" ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "mathcomp", "solvable" ],
+      "vo_files": [
+        [ "abelian.vo", "" ],
+        [ "all_solvable.vo", "" ],
+        [ "alt.vo", "" ],
+        [ "burnside_app.vo", "" ],
+        [ "center.vo", "" ],
+        [ "commutator.vo", "" ],
+        [ "cyclic.vo", "" ],
+        [ "extraspecial.vo", "" ],
+        [ "extremal.vo", "" ],
+        [ "finmodule.vo", "" ],
+        [ "frobenius.vo", "" ],
+        [ "gfunctor.vo", "" ],
+        [ "gseries.vo", "" ],
+        [ "hall.vo", "" ],
+        [ "jordanholder.vo", "" ],
+        [ "maximal.vo", "" ],
+        [ "nilpotent.vo", "" ],
+        [ "pgroup.vo", "" ],
+        [ "primitive_action.vo", "" ],
+        [ "sylow.vo", "" ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "mathcomp", "ssreflect" ],
+      "vo_files": [
+        [ "all_ssreflect.vo", "" ],
+        [ "bigop.vo", "" ],
+        [ "binomial.vo", "" ],
+        [ "choice.vo", "" ],
+        [ "div.vo", "" ],
+        [ "eqtype.vo", "" ],
+        [ "finfun.vo", "" ],
+        [ "fingraph.vo", "" ],
+        [ "finset.vo", "" ],
+        [ "fintype.vo", "" ],
+        [ "generic_quotient.vo", "" ],
+        [ "order.vo", "" ],
+        [ "path.vo", "" ],
+        [ "prime.vo", "" ],
+        [ "seq.vo", "" ],
+        [ "ssrbool.vo", "" ],
+        [ "ssreflect.vo", "" ],
+        [ "ssrfun.vo", "" ],
+        [ "ssrmatching.vo", "" ],
+        [ "ssrnat.vo", "" ],
+        [ "ssrnotations.vo", "" ],
+        [ "tuple.vo", "" ]
+      ],
+      "cma_files": []
+    }
+  ],
+  "archive": "mathcomp.coq-pkg"
+}

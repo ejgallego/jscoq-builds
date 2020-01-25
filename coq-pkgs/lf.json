@@ -1,5 +1,52 @@
 {
   "desc": "lf",
   "deps": [ "coq-reals" ],
-  "pkgs": [ { "pkg_id": [ "LF" ], "vo_files": [], "cma_files": [] } ]
+  "pkgs": [
+    {
+      "pkg_id": [ "LF" ],
+      "vo_files": [
+        [ "AltAutoTest.vo", null ],
+        [ "Tactics.vo", null ],
+        [ "Bib.vo", null ],
+        [ "ImpCEvalFunTest.vo", null ],
+        [ "ImpParser.vo", null ],
+        [ "Basics.vo", null ],
+        [ "IndPrinciples.vo", null ],
+        [ "ImpParserTest.vo", null ],
+        [ "BasicsTest.vo", null ],
+        [ "PrefaceTest.vo", null ],
+        [ "ExtractionTest.vo", null ],
+        [ "AutoTest.vo", null ],
+        [ "MapsTest.vo", null ],
+        [ "ProofObjectsTest.vo", null ],
+        [ "Extraction.vo", null ],
+        [ "Imp.vo", null ],
+        [ "IndProp.vo", null ],
+        [ "Preface.vo", null ],
+        [ "ProofObjects.vo", null ],
+        [ "IndPrinciplesTest.vo", null ],
+        [ "AltAuto.vo", null ],
+        [ "RelTest.vo", null ],
+        [ "Rel.vo", null ],
+        [ "IndPropTest.vo", null ],
+        [ "Induction.vo", null ],
+        [ "Poly.vo", null ],
+        [ "BibTest.vo", null ],
+        [ "LogicTest.vo", null ],
+        [ "Maps.vo", null ],
+        [ "Lists.vo", null ],
+        [ "TacticsTest.vo", null ],
+        [ "ImpCEvalFun.vo", null ],
+        [ "ListsTest.vo", null ],
+        [ "Logic.vo", null ],
+        [ "Auto.vo", null ],
+        [ "ImpTest.vo", null ],
+        [ "PostscriptTest.vo", null ],
+        [ "InductionTest.vo", null ],
+        [ "PolyTest.vo", null ],
+        [ "Postscript.vo", null ]
+      ],
+      "cma_files": []
+    }
+  ]
 }

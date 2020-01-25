@@ -10,6 +10,7 @@
         [ "Eqdep.vo", null ],
         [ "ProofIrrelevance.vo", null ],
         [ "PropFacts.vo", null ],
+        [ "HLevels.vo", null ],
         [ "EqdepFacts.vo", null ],
         [ "Decidable.vo", null ],
         [ "FinFun.vo", null ],
@@ -224,6 +225,8 @@
         [ "ExtrHaskellString.vo", null ],
         [ "ExtrOcamlNatInt.vo", null ],
         [ "ExtrOcamlNatBigInt.vo", null ],
+        [ "ExtrOCamlInt63.vo", null ],
+        [ "ExtrOCamlFloats.vo", null ],
         [ "ExtrHaskellNatInteger.vo", null ],
         [ "ExtrOcamlBasic.vo", null ],
         [ "ExtrOcamlBigIntConv.vo", null ]

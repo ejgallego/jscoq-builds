@@ -17,7 +17,8 @@
         [ "int63_syntax_plugin.cma", null ],
         [ "numeral_notation_plugin.cma", null ],
         [ "string_notation_plugin.cma", null ],
-        [ "r_syntax_plugin.cma", null ]
+        [ "r_syntax_plugin.cma", null ],
+        [ "float_syntax_plugin.cma", null ]
       ]
     },
     {
@@ -84,6 +85,9 @@
     {
       "pkg_id": [ "Coq", "ssr" ],
       "vo_files": [
+        [ "ssrclasses.vo", null ],
+        [ "ssrunder.vo", null ],
+        [ "ssrsetoid.vo", null ],
         [ "ssrfun.vo", null ],
         [ "ssrbool.vo", null ],
         [ "ssreflect.vo", null ]
@@ -91,8 +95,56 @@
       "cma_files": [ [ "ssreflect_plugin.cma", null ] ]
     },
     {
+      "pkg_id": [ "Ltac2" ],
+      "vo_files": [
+        [ "Array.vo", null ],
+        [ "Message.vo", null ],
+        [ "Constr.vo", null ],
+        [ "Env.vo", null ],
+        [ "Bool.vo", null ],
+        [ "Ltac1.vo", null ],
+        [ "Init.vo", null ],
+        [ "Fresh.vo", null ],
+        [ "Ident.vo", null ],
+        [ "List.vo", null ],
+        [ "Std.vo", null ],
+        [ "Control.vo", null ],
+        [ "Ltac2.vo", null ],
+        [ "Char.vo", null ],
+        [ "Option.vo", null ],
+        [ "String.vo", null ],
+        [ "Pattern.vo", null ],
+        [ "Int.vo", null ],
+        [ "Notations.vo", null ]
+      ],
+      "cma_files": [ [ "ltac2_plugin.cma", null ] ]
+    },
+    {
       "pkg_id": [ "mathcomp", "ssreflect" ],
-      "vo_files": [],
+      "vo_files": [
+        [ "prime.vo", null ],
+        [ "binomial.vo", null ],
+        [ "generic_quotient.vo", null ],
+        [ "ssrmatching.vo", null ],
+        [ "fingraph.vo", null ],
+        [ "eqtype.vo", null ],
+        [ "path.vo", null ],
+        [ "ssrfun.vo", null ],
+        [ "ssrnotations.vo", null ],
+        [ "tuple.vo", null ],
+        [ "ssrbool.vo", null ],
+        [ "div.vo", null ],
+        [ "finset.vo", null ],
+        [ "finfun.vo", null ],
+        [ "ssreflect.vo", null ],
+        [ "choice.vo", null ],
+        [ "fintype.vo", null ],
+        [ "all_ssreflect.vo", null ],
+        [ "seq.vo", null ],
+        [ "bigop.vo", null ],
+        [ "order.vo", null ],
+        [ "ssrnat.vo", null ]
+      ],
       "cma_files": []
     }
   ]

@@ -204,8 +204,8 @@ class CoqManager {
             pkg_path:    "../coq-pkgs/",  // this is awkward: package path is relative to the worker location (coq-js)
             implicit_libs: false,
             init_pkgs: ['init'],
-            all_pkgs:  ['init', 'math-comp',
-                        'coq-base', 'coq-collections', 'coq-arith', 'coq-reals', 'elpi', 'equations', 'ltac2',
+            all_pkgs:  ['init', 'mathcomp',
+                        'coq-base', 'coq-collections', 'coq-arith', 'coq-reals', 'elpi', 'equations',
                         'coquelicot', 'flocq', 'lf', 'plf', 'cpdt', 'color' ],
             file_dialog: false,
             coq:       { /* Coq option values */ },
@@ -228,16 +228,12 @@ class CoqManager {
         this.setupDragDrop();
 
         // Setup the Coq worker.
-        this.coq           = new CoqWorker(this.options.base_path + 'coq-js/jscoq_worker.js');
+        this.coq           = new CoqWorker(this.options.base_path + 'coq-js/jscoq_worker.bc.js');
         this.coq.options   = this.options;
         this.coq.observers.push(this);
 
         // Setup pretty printer for feedback and goals
         this.pprint = new FormatPrettyPrint();
-
-        // Setup contextual info bar
-        this.contextual_info = new CoqContextualInfo($(this.layout.proof).parent(),
-                                                     this.coq, this.pprint);
 
         // Setup company-coq
         if (this.options.editor.mode && this.options.editor.mode['company-coq'])
@@ -246,6 +242,10 @@ class CoqManager {
         // Setup autocomplete
         this.loadSymbolsFrom(this.options.base_path + 'ui-js/symbols/init.symb.json');
         this.loadSymbolsFrom(this.options.base_path + 'ui-js/symbols/coq-arith.symb.json');
+
+        // Setup contextual info bar
+        this.contextual_info = new CoqContextualInfo($(this.layout.proof).parent(),
+                                                     this.coq, this.pprint, this.company_coq);
 
         // Keybindings setup
         // XXX: This should go in the panel init.
@@ -283,8 +283,15 @@ class CoqManager {
         this.error = [];
         this.navEnabled = false;
 
-        // The fun starts: Load the set of packages.
-        this.coq.infoPkg(this.packages.pkg_root_path, this.options.all_pkgs);
+        // The fun starts: commence loading packages (asynchronously)
+        (async () => {
+            try {
+                await this.coq.when_created;
+                this.coq.interruptSetup();
+                this.coq.infoPkg(this.packages.pkg_root_path, this.options.all_pkgs);
+            }
+            catch (err) { this.handleLaunchFailure(err); }
+        })();
     }
 
     // Provider setup
@@ -707,6 +714,13 @@ class CoqManager {
         }
     }
 
+    interruptRequest() {
+        // Avoid spurious interrupts by only requesting an interrupt
+        // if there are still sentences being processed
+        if (this.doc.sentences.some(x => x.phase == Phases.PROCESSING))
+            this.coq.interrupt();
+    }
+
     /**
      * Focus the snippet containing the stm and place the cursor at
      * the end of the sentence.
@@ -828,6 +842,20 @@ class CoqManager {
         this.coq.cancel(sid);
     }
 
+    /**
+     * Handles a critial error during worker load/launch.
+     * Typically, failure to fetch the jscoq_worker script.
+     * @param {Error} err load error
+     */
+    handleLaunchFailure(err) {
+        this.layout.log("Failed to start jsCoq worker.", 'Error');
+        if (typeof window !== 'undefined' && window.location.protocol === 'file:') {
+            this.layout.log($('<span>').html(
+                "(Serving from local file;\n" +
+                "has <i>--allow-file-access-from-files</i> been set?)"), 'Info');
+        }
+    }
+
     clearErrors() {
         // Cancel all error sentences AND remove them from doc.sentences
         // (yes, it's a filter with side effects)
@@ -878,15 +906,17 @@ class CoqManager {
                   (e.altKey ? '_' : '') + (e.shiftKey ? '+' : '') + e.code;
 
         // Navigation keybindings
-        const goCursor = () => this.goCursor(),
-              goNext   = () => this.goNext(true),
-              goPrev   = () => this.goPrev(true),
-              toggle   = () => this.layout.toggle();
+        const goCursor  = () => this.goCursor(),
+              goNext    = () => this.goNext(true),
+              goPrev    = () => this.goPrev(true),
+              toggle    = () => this.layout.toggle(),
+              interrupt = () => this.interruptRequest();
         const nav_bindings = {
             '_Enter':     goCursor, '_ArrowRight': goCursor,
             '_ArrowDown': goNext,
             '_ArrowUp':   goPrev,
-            'F8': toggle
+            'F8': toggle,
+            'Escape': interrupt
         };
         if (!navigator.isMac) {
             Object.assign(nav_bindings, {
@@ -962,6 +992,10 @@ class CoqManager {
 
         case 'down' :
             this.goNext(true);
+            break;
+
+        case 'interrupt':
+            this.interruptRequest();
             break;
 
         case 'reset':
@@ -1059,11 +1093,13 @@ class CoqContextualInfo {
      * @param {jQuery} container <div> element to show info in
      * @param {CoqWorker} coq jsCoq worker for querying types and definitions
      * @param {FormatPrettyPrint} pprint formatter for Pp data
+     * @param {CompanyCoq} company_coq (optional) further beautification
      */
-    constructor(container, coq, pprint) {
+    constructor(container, coq, pprint, company_coq) {
         this.container = container;
         this.coq = coq;
         this.pprint = pprint;
+        this.company_coq = company_coq;
         this.el = $('<div>').addClass('contextual-info').hide();
         this.is_visible = false;
         this.is_sticky = false;
@@ -1201,7 +1237,19 @@ class CoqContextualInfo {
     }
 
     formatMessages(msgs) {
-        return msgs.map(feedback => this.pprint.pp2HTML(feedback.msg)).join("<hr/>");
+        var ppmsgs = msgs.map(feedback => this.pprint.pp2DOM(feedback.msg)),
+            frag = $(document.createDocumentFragment());
+
+        for (let e of ppmsgs) {
+            if (frag.children().length > 0) frag.append($('<hr/>'));
+            frag.append(e);
+        }
+
+        if (this.company_coq) {
+            this.company_coq.markup.applyToDOM(frag[0]);
+        }
+
+        return frag;
     }
 
     formatName(name) {

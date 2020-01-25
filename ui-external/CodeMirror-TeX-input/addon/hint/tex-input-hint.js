@@ -48,19 +48,25 @@
     { text: "\\models", symbol: "⊧" },
     { text: "\\oplus",  symbol: "⊕" },
     { text: "\\otimes", symbol: "⊗" },
+    { text: "\\omega",  symbol: "ω" },
     { text: "\\pi",     symbol: "π" },
     { text: "\\phi",    symbol: "φ" },
     { text: "\\psi",    symbol: "ψ" },
     { text: "\\rrbracket", symbol: "〛"},
     { text: "\\sigma",  symbol: "σ" },
     { text: "\\times",  symbol: "×" },
+    { text: "\\theta",  symbol: "θ" },
     { text: "\\to",     symbol: "→" },
     { text: "\\vdash",  symbol: "⊢" },
     { text: "\\Delta",  symbol: "Δ" },
     { text: "\\Gamma",  symbol: "Γ" },
     { text: "\\Lambda", symbol: "Λ" },
+    { text: "\\Omega",  symbol: "Ω" },
     { text: "\\Pi",     symbol: "Π" },
-    { text: "\\Sigma",  symbol: "Σ" }
+    { text: "\\Phi",    symbol: "Φ" },
+    { text: "\\Psi",    symbol: "Ψ" },
+    { text: "\\Sigma",  symbol: "Σ" },
+    { text: "\\Theta",  symbol: "Θ" }
   ];
 
   /* How our TeX-style completion works:
@@ -111,9 +117,10 @@
       }
     });
 
-    return { list: rList,
-             from: matchStart,
-             to:   matchEnd
+    return { list:  rList,
+             from:  matchStart,
+             to:    matchEnd,
+             eager: true
            }
   };
 
@@ -136,11 +143,11 @@
 
         var cA = cm.state.completionActive;
 
-        if (cA) {
+        if (cA && cA.data.eager) {
           cA.widget.pick();
-          // XXX: Ummmm, not if I want this... maybe make a parameter?
-          cm.replaceSelection(" ");
-        } } };
+        }
+        return CodeMirror.Pass;  // fall through to default handler
+      } };
 
       var cmplOpt = cm.getOption("hintOptions");
 

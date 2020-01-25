@@ -2,10 +2,45 @@
   "desc": "elpi",
   "deps": [],
   "pkgs": [
-    { "pkg_id": [ "elpi" ], "vo_files": [], "cma_files": [] },
-    { "pkg_id": [ "elpi", "ltac" ], "vo_files": [], "cma_files": [] },
+    {
+      "pkg_id": [ "elpi" ],
+      "vo_files": [ [ "derive.vo", null ], [ "elpi.vo", null ] ],
+      "cma_files": [ [ "elpi_plugin.cma", null ] ]
+    },
+    {
+      "pkg_id": [ "elpi", "ltac" ],
+      "vo_files": [ [ "injection.vo", null ], [ "discriminate.vo", null ] ],
+      "cma_files": []
+    },
     { "pkg_id": [ "elpi", "test" ], "vo_files": [], "cma_files": [] },
-    { "pkg_id": [ "elpi", "tutorial" ], "vo_files": [], "cma_files": [] },
-    { "pkg_id": [ "elpi", "derive" ], "vo_files": [], "cma_files": [] }
+    {
+      "pkg_id": [ "elpi", "tutorial" ],
+      "vo_files": [ [ "elpi_lang.vo", null ], [ "coq_elpi.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "elpi", "derive" ],
+      "vo_files": [
+        [ "map.vo", null ],
+        [ "param2.vo", null ],
+        [ "induction.vo", null ],
+        [ "invert.vo", null ],
+        [ "param1_functor.vo", null ],
+        [ "param1_inhab.vo", null ],
+        [ "eq.vo", null ],
+        [ "projK.vo", null ],
+        [ "isK.vo", null ],
+        [ "param1.vo", null ],
+        [ "eqcorrect.vo", null ],
+        [ "param1_congr.vo", null ],
+        [ "cast.vo", null ],
+        [ "eqOK.vo", null ],
+        [ "param1_trivial.vo", null ],
+        [ "bcongr.vo", null ],
+        [ "idx2inv.vo", null ],
+        [ "eqK.vo", null ]
+      ],
+      "cma_files": []
+    }
   ]
 }

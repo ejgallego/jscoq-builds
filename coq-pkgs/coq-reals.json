@@ -10,8 +10,11 @@
     {
       "pkg_id": [ "Coq", "micromega" ],
       "vo_files": [
+        [ "Ztac.vo", null ],
         [ "Fourier_util.vo", null ],
         [ "ZMicromega.vo", null ],
+        [ "ZifyBool.vo", null ],
+        [ "ZifyInst.vo", null ],
         [ "Env.vo", null ],
         [ "Lra.vo", null ],
         [ "MExtraction.vo", null ],
@@ -20,17 +23,24 @@
         [ "Fourier.vo", null ],
         [ "VarMap.vo", null ],
         [ "RingMicromega.vo", null ],
+        [ "Zify.vo", null ],
+        [ "ZifyPow.vo", null ],
         [ "Refl.vo", null ],
         [ "EnvRing.vo", null ],
         [ "Lqa.vo", null ],
         [ "DeclConstant.vo", null ],
         [ "OrderedRing.vo", null ],
+        [ "ZifyClasses.vo", null ],
         [ "QMicromega.vo", null ],
         [ "Psatz.vo", null ],
+        [ "ZifyComparison.vo", null ],
         [ "Tauto.vo", null ],
         [ "ZCoeff.vo", null ]
       ],
-      "cma_files": [ [ "micromega_plugin.cma", null ] ]
+      "cma_files": [
+        [ "zify_plugin.cma", null ],
+        [ "micromega_plugin.cma", null ]
+      ]
     },
     {
       "pkg_id": [ "Coq", "nsatz" ],
@@ -57,6 +67,7 @@
         [ "Rsigma.vo", null ],
         [ "Ranalysis.vo", null ],
         [ "Rtrigo1.vo", null ],
+        [ "ConstructiveCauchyReals.vo", null ],
         [ "Ranalysis1.vo", null ],
         [ "Rtrigo_reg.vo", null ],
         [ "MVT.vo", null ],
@@ -65,12 +76,16 @@
         [ "Rlimit.vo", null ],
         [ "Rtrigo.vo", null ],
         [ "Binomial.vo", null ],
+        [ "ConstructiveRcomplete.vo", null ],
         [ "Integration.vo", null ],
         [ "Rtopology.vo", null ],
         [ "Sqrt_reg.vo", null ],
+        [ "ClassicalDedekindReals.vo", null ],
+        [ "ConstructiveRealsMorphisms.vo", null ],
         [ "Ranalysis3.vo", null ],
         [ "RList.vo", null ],
         [ "Rtrigo_def.vo", null ],
+        [ "ConstructiveCauchyRealsMult.vo", null ],
         [ "AltSeries.vo", null ],
         [ "Rtrigo_fun.vo", null ],
         [ "Ranalysis2.vo", null ],
@@ -84,6 +99,7 @@
         [ "Rminmax.vo", null ],
         [ "SplitAbsolu.vo", null ],
         [ "R_Ifp.vo", null ],
+        [ "ConstructiveRealsLUB.vo", null ],
         [ "Cos_plus.vo", null ],
         [ "SeqSeries.vo", null ],
         [ "RiemannInt.vo", null ],
@@ -93,16 +109,31 @@
         [ "Runcountable.vo", null ],
         [ "Rpow_def.vo", null ],
         [ "Rbase.vo", null ],
+        [ "ConstructiveReals.vo", null ],
         [ "Rprod.vo", null ],
         [ "ArithProp.vo", null ],
         [ "Ranalysis5.vo", null ],
         [ "Rfunctions.vo", null ],
         [ "Exp_prop.vo", null ],
+        [ "Rregisternames.vo", null ],
         [ "Rseries.vo", null ],
         [ "SplitRmult.vo", null ],
         [ "Rderiv.vo", null ],
         [ "Rpower.vo", null ],
         [ "Rsqrt_def.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "Coq", "Floats" ],
+      "vo_files": [
+        [ "PrimFloat.vo", null ],
+        [ "FloatOps.vo", null ],
+        [ "SpecFloat.vo", null ],
+        [ "FloatLemmas.vo", null ],
+        [ "FloatClass.vo", null ],
+        [ "FloatAxioms.vo", null ],
+        [ "Floats.vo", null ]
       ],
       "cma_files": []
     }

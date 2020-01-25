@@ -1,5 +1,11 @@
 {
   "desc": "dsp",
-  "deps": [ "math-comp" ],
-  "pkgs": [ { "pkg_id": [ "Dsp" ], "vo_files": [], "cma_files": [] } ]
+  "deps": [ "mathcomp" ],
+  "pkgs": [
+    {
+      "pkg_id": [ "Dsp" ],
+      "vo_files": [ [ "dspsupport.vo", null ] ],
+      "cma_files": []
+    }
+  ]
 }

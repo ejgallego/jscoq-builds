@@ -9,7 +9,8 @@
         [ "int63_syntax_plugin.cma", null ],
         [ "numeral_notation_plugin.cma", null ],
         [ "string_notation_plugin.cma", null ],
-        [ "r_syntax_plugin.cma", null ]
+        [ "r_syntax_plugin.cma", null ],
+        [ "float_syntax_plugin.cma", null ]
       ]
     },
     {
